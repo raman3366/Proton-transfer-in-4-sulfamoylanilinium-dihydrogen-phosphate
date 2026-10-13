@@ -1,0 +1,30 @@
+{
+ "comment": "Gate G-R on the rented machine, third file (md/GR.md section 6.6; md/PLAN.md, 6 Oct 2026, 1:09 PM IST, point 1; check paper/audit/research/md_gr_check_2026-10-06.json, finding 1). gr_relax_Rx_cont: the quantum-chemical relaxation from the R-like placement, which task gr_relax_Rx stopped at step 16 at the first change of sign of the signed volume at N2 (planar nitrogen, not converged), is continued from that geometry to convergence, with the frozen atoms held exactly (md/qm/gr/queue_vm_relax2.json). Same level as before. 7 CPUs and 7 threads. It waits for gr_relax_X: with qm_hess (16 CPUs) running there are 7 CPUs for one relaxation only (16 + 7 + 7 = 30 of 24), and without this dependency a restart of the runner (this file comes before tasks_initial.json in the order of the list) could start both relaxations before qm_hess and keep qm_hess waiting. It also waits for gr_relax_Rx, which is done now, for the case of a restart of the runner while this task runs: the runner then tests gr_relax_Rx again, finds its file in state running and runs it once more (it continues the same relaxation from the same files); without this dependency both tasks would run the same relaxation at once. Its test holds only when the run has CONVERGED (state done); a change of sign does not end it. To stop it at its next step and let the runner start it again: touch /root/cqc-sfa-md/qm/gr/STOP. To end it: queue.py cancel gr_relax_Rx_cont.",
+ "env": {
+  "REPO": "/root/workspace/cqc-4-sulfamoylanilinium-dihydrogen-phosphate",
+  "MD": "/root/workspace/cqc-4-sulfamoylanilinium-dihydrogen-phosphate/md",
+  "QMPY": "/root/cqc-sfa-tools/env/bin/python",
+  "GR_BULK": "/root/cqc-sfa-md/qm/gr",
+  "GR_SMALL": "/root/workspace/cqc-4-sulfamoylanilinium-dihydrogen-phosphate/md/qm/gr"
+ },
+ "tasks": [
+  {
+   "id": "gr_relax_Rx_cont",
+   "title": "(g6) gate G-R part B: the relaxation from Rx continued from step 16 to convergence, zinc and imidazoles held exactly, B3LYP-D3(BJ)/6-31G*, geomeTRIC; never stopped at a change of sign at N2; every step records energy, signed volume and angles at N2, Zn-N2-S-C4 and the distance from the end of the relaxation from X",
+   "cwd": "$REPO",
+   "resources": "cpu:7",
+   "depends_on": [
+    "gr_relax_Rx",
+    "gr_relax_X"
+   ],
+   "max_attempts": 4,
+   "retry_delay_s": 30,
+   "stop_grace_s": 30,
+   "command": [
+    "rm -f \"$GR_BULK/STOP\"",
+    "\"$QMPY\" \"$MD/qm/gr_queue.py\" relax \"$GR_SMALL/queue_vm_relax2.json\" Rx"
+   ],
+   "success_test": "python3 \"$MD/gpu/queue.py\" json \"$GR_SMALL/relax/qm_Rx.json\" state=done"
+  }
+ ]
+}

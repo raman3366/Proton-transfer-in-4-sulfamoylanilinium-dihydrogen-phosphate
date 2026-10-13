@@ -1,0 +1,38 @@
+source oldff/leaprc.ff14SB
+source leaprc.water.tip3p
+addAtomTypes {
+        { "M1"  "Zn" "sp3" }
+        { "Y1"  "N" "sp3" }
+        { "Y2"  "N" "sp3" }
+        { "Y3"  "N" "sp3" }
+        { "Y4"  "N" "sp3" }
+}
+HD1 = loadmol2 HD1.mol2
+HD2 = loadmol2 HD2.mol2
+HE1 = loadmol2 HE1.mol2
+ZN1 = loadmol2 ZN1.mol2
+SN1 = loadmol2 SN1.mol2
+loadamberparams sfa_anion_gaff2.frcmod
+loadamberparams sfa_anion_repair.frcmod
+loadamberparams frcmod.ions1lm_126_tip3p
+loadamberparams CA2_mcpbpy.frcmod
+mol = loadpdb CA2_mcpbpy.pdb
+bond mol.93.NE2 mol.260.ZN
+bond mol.95.NE2 mol.260.ZN
+bond mol.118.ND1 mol.260.ZN
+bond mol.260.ZN mol.261.N2
+bond mol.92.C mol.93.N
+bond mol.93.C mol.94.N
+bond mol.94.C mol.95.N
+bond mol.95.C mol.96.N
+bond mol.117.C mol.118.N
+bond mol.118.C mol.119.N
+savepdb mol CA2_dry.pdb
+saveamberparm mol CA2_dry.prmtop CA2_dry.inpcrd
+solvatebox mol TIP3PBOX 10.0
+addions mol Na+ 0
+addions mol Cl- 0
+savepdb mol CA2_solv.pdb
+saveamberparm mol CA2_solv.prmtop CA2_solv.inpcrd
+quit
+ 

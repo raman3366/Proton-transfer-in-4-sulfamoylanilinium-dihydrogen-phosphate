@@ -1,0 +1,37 @@
+source leaprc.protein.ff14SB
+source leaprc.gaff2
+source leaprc.water.tip3p
+addAtomTypes {
+    { "M1" "Zn" "sp3" }
+    { "Y1" "N" "sp3" }
+    { "Y2" "N" "sp3" }
+    { "Y3" "N" "sp3" }
+    { "Y4" "N" "sp3" }
+}
+HD1 = loadmol2 /tmp/claude-0/-root-workspace-cqc-4-sulfamoylanilinium-dihydrogen-phosphate/82cc65d7-a11f-4d60-91ee-436dc9534941/scratchpad/mdprep/zinc/after_qm_test/mcpb/HD1.mol2
+HD2 = loadmol2 /tmp/claude-0/-root-workspace-cqc-4-sulfamoylanilinium-dihydrogen-phosphate/82cc65d7-a11f-4d60-91ee-436dc9534941/scratchpad/mdprep/zinc/after_qm_test/mcpb/HD2.mol2
+HE1 = loadmol2 /tmp/claude-0/-root-workspace-cqc-4-sulfamoylanilinium-dihydrogen-phosphate/82cc65d7-a11f-4d60-91ee-436dc9534941/scratchpad/mdprep/zinc/after_qm_test/mcpb/HE1.mol2
+ZN1 = loadmol2 /tmp/claude-0/-root-workspace-cqc-4-sulfamoylanilinium-dihydrogen-phosphate/82cc65d7-a11f-4d60-91ee-436dc9534941/scratchpad/mdprep/zinc/after_qm_test/mcpb/ZN1.mol2
+SN1 = loadmol2 /tmp/claude-0/-root-workspace-cqc-4-sulfamoylanilinium-dihydrogen-phosphate/82cc65d7-a11f-4d60-91ee-436dc9534941/scratchpad/mdprep/zinc/after_qm_test/mcpb/SN1.mol2
+loadamberparams /tmp/claude-0/-root-workspace-cqc-4-sulfamoylanilinium-dihydrogen-phosphate/82cc65d7-a11f-4d60-91ee-436dc9534941/scratchpad/mdprep/zinc/after_qm_test/mcpb/sfa_anion_gaff2.frcmod
+loadamberparams /tmp/claude-0/-root-workspace-cqc-4-sulfamoylanilinium-dihydrogen-phosphate/82cc65d7-a11f-4d60-91ee-436dc9534941/scratchpad/mdprep/zinc/after_qm_test/mcpb/sfa_anion_repair.frcmod
+loadamberparams /tmp/claude-0/-root-workspace-cqc-4-sulfamoylanilinium-dihydrogen-phosphate/82cc65d7-a11f-4d60-91ee-436dc9534941/scratchpad/mdprep/zinc/after_qm_test/mcpb/CA2_mcpbpy.frcmod
+sys = loadpdb /root/cqc-sfa-md/systems/_selftest_bonded_synthetic/bonded/X/build/assembly.pdb
+bond sys.93.NE2 sys.260.ZN
+bond sys.95.NE2 sys.260.ZN
+bond sys.118.ND1 sys.260.ZN
+bond sys.260.ZN sys.261.N2
+bond sys.92.C sys.93.N
+bond sys.93.C sys.94.N
+bond sys.94.C sys.95.N
+bond sys.95.C sys.96.N
+bond sys.117.C sys.118.N
+bond sys.118.C sys.119.N
+check sys
+charge sys
+saveamberparm sys /root/cqc-sfa-md/systems/_selftest_bonded_synthetic/bonded/X/build/dry.prmtop /root/cqc-sfa-md/systems/_selftest_bonded_synthetic/bonded/X/build/dry.inpcrd
+solvateOct sys TIP3PBOX 10.0
+charge sys
+saveamberparm sys /root/cqc-sfa-md/systems/_selftest_bonded_synthetic/bonded/X/build/stage1.prmtop /root/cqc-sfa-md/systems/_selftest_bonded_synthetic/bonded/X/build/stage1.inpcrd
+savepdb sys /root/cqc-sfa-md/systems/_selftest_bonded_synthetic/bonded/X/build/stage1.pdb
+quit

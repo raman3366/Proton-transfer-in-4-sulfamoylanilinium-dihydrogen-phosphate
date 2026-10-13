@@ -1,0 +1,123 @@
+{
+  "case": "sfa_pair_pcm_d3",
+  "scan_dir": "/home/ubuntu/cqc-sfa/molecules/sfa/results/sfa_pair_pcm_d3/scan",
+  "n_points": 8,
+  "n_unconverged": 1,
+  "reference": {
+    "chain": "A",
+    "index": 0,
+    "kind": "anchor",
+    "E_Ha": -1536.1106472215747
+  },
+  "level": {
+    "xc": "b3lyp",
+    "disp": "d3bj",
+    "basis": "6-311++G(d,p)",
+    "environment": "IEF-PCM water (eps=78.3553)",
+    "grid_level": 4,
+    "pcm_lebedev_order": 29,
+    "density_fitting": true,
+    "n_basis": 445
+  },
+  "lower_envelope": [
+    {
+      "d_N1_H1A_A": 1.0984582687191042,
+      "E_rel_kcal": 0.0,
+      "delta_A": -0.38314567557451773,
+      "d_P_O5_A": 1.51973883183419,
+      "chain": "A",
+      "index": 0
+    },
+    {
+      "d_N1_H1A_A": 1.1499999999999997,
+      "E_rel_kcal": 0.27294834594313466,
+      "delta_A": -0.24339363608618303,
+      "d_P_O5_A": 1.5249813823326743,
+      "chain": "A",
+      "index": 1
+    },
+    {
+      "d_N1_H1A_A": 1.2500000000000002,
+      "E_rel_kcal": 0.7232962125676407,
+      "delta_A": 0.004860772251263912,
+      "d_P_O5_A": 1.5367471912898127,
+      "chain": "A",
+      "index": 2
+    },
+    {
+      "d_N1_H1A_A": 1.350000000000077,
+      "E_rel_kcal": 0.5871679972628473,
+      "delta_A": 0.2087848681973885,
+      "d_P_O5_A": 1.5487596643140125,
+      "chain": "B",
+      "index": 3
+    },
+    {
+      "d_N1_H1A_A": 1.4500000000000453,
+      "E_rel_kcal": 0.04589964103617448,
+      "delta_A": 0.36804648931128026,
+      "d_P_O5_A": 1.557878744400566,
+      "chain": "B",
+      "index": 2
+    },
+    {
+      "d_N1_H1A_A": 1.550000000000076,
+      "E_rel_kcal": -0.4384630454871137,
+      "delta_A": 0.5041652611013234,
+      "d_P_O5_A": 1.5649543417131082,
+      "chain": "B",
+      "index": 1
+    },
+    {
+      "d_N1_H1A_A": 1.6305409733237812,
+      "E_rel_kcal": -0.5421592935448669,
+      "delta_A": 0.604140403547835,
+      "d_P_O5_A": 1.569688697979636,
+      "chain": "B",
+      "index": 0
+    }
+  ],
+  "envelope_minima": [
+    {
+      "d_N1_H1A_A": 1.0984582687191042,
+      "E_rel_kcal": 0.0,
+      "proton_on": "N",
+      "at_scan_edge": false
+    },
+    {
+      "d_N1_H1A_A": 1.6305409733237812,
+      "E_rel_kcal": -0.5421592935448669,
+      "proton_on": "O",
+      "at_scan_edge": false
+    }
+  ],
+  "envelope_maxima": [
+    {
+      "d_N1_H1A_A": 1.2500000000000002,
+      "E_rel_kcal": 0.7232962125676407
+    }
+  ],
+  "hysteresis_A_minus_B_kcal": {
+    "1.350": 0.013634591113469124
+  },
+  "max_abs_hysteresis_kcal": 0.013634591113469124,
+  "anchors": {
+    "A": {
+      "proton_on": "N",
+      "d_N1_H1A_A": 1.0984582687191042,
+      "E_rel_kcal": 0.0,
+      "converged": true,
+      "stopped_early": null,
+      "minimum_on_expected_side": true
+    },
+    "B": {
+      "proton_on": "O",
+      "d_N1_H1A_A": 1.6305409733237812,
+      "E_rel_kcal": -0.5421592935448669,
+      "converged": true,
+      "stopped_early": null,
+      "minimum_on_expected_side": true
+    }
+  },
+  "note": "Energies are electronic (no ZPE); see dft/zpe_barrier.py.  envelope_minima/maxima are the discrete stationary points of the lower envelope at the 0.10 A grid resolution."
+}

@@ -1,0 +1,130 @@
+{
+ "comment": "The nine production runs (md/PLAN.md stage S5; entry of 6 Oct 2026, 9:15 PM IST, point 2; md/PRODUCTION.md) with the primary zinc set 2e, empirical (MCPB.py step 2e), systems $SYS/bonded_2e/X, N, R, terms at N2 as built. One after another in the order X1 N1 R1, X2 N2 R2, X3 N3 R3: each waits for the one before it, so the chain stops at the first run that fails; X1 waits for the validation run X0_2e, whose gate G-V was judged on the Pi before this file was added. Each run: full protocol of md/protocol.json, 100 ns in segments of 5 ns, --resume, so a run that was stopped goes on from its last complete segment. Time limit of one attempt: 6 hours (a run takes about 3 hours); a run that reaches it is ended and continued by the next attempt.",
+ "env": {
+  "MD": "/root/workspace/cqc-4-sulfamoylanilinium-dihydrogen-phosphate/md",
+  "PY": "/root/cqc-sfa-tools/md/bin/python",
+  "SYS": "/root/cqc-sfa-md/systems",
+  "RUNS": "/root/cqc-sfa-md/runs"
+ },
+ "tasks": [
+  {
+   "id": "X1",
+   "title": "production run X1: 100 ns from start X, replica 1, zinc set 2e (primary), terms at N2 as built",
+   "cwd": "$RUNS",
+   "resources": "gpu",
+   "depends_on": [
+    "X0_2e",
+    "preflight_speed",
+    "preflight_interrupt"
+   ],
+   "stop_grace_s": 120,
+   "timeout_s": 21600,
+   "command": "\"$PY\" \"$MD/run_md.py\" --system \"$SYS/bonded_2e/X\" --out \"$RUNS/bonded_2e/X1\" --run-id X1 --platform CUDA --stage all --prod-ns 100 --segment-ns 5 --resume",
+   "success_test": "python3 \"$MD/gpu/queue.py\" json \"$RUNS/bonded_2e/X1/manifest.json\" run_id=X1 status=complete production.complete=true production.completed_ns=100 test_only=false"
+  },
+  {
+   "id": "N1",
+   "title": "production run N1: 100 ns from start N, replica 1, zinc set 2e (primary), terms at N2 as built",
+   "cwd": "$RUNS",
+   "resources": "gpu",
+   "depends_on": [
+    "X1"
+   ],
+   "stop_grace_s": 120,
+   "timeout_s": 21600,
+   "command": "\"$PY\" \"$MD/run_md.py\" --system \"$SYS/bonded_2e/N\" --out \"$RUNS/bonded_2e/N1\" --run-id N1 --platform CUDA --stage all --prod-ns 100 --segment-ns 5 --resume",
+   "success_test": "python3 \"$MD/gpu/queue.py\" json \"$RUNS/bonded_2e/N1/manifest.json\" run_id=N1 status=complete production.complete=true production.completed_ns=100 test_only=false"
+  },
+  {
+   "id": "R1",
+   "title": "production run R1: 100 ns from start R, replica 1, zinc set 2e (primary), terms at N2 as built",
+   "cwd": "$RUNS",
+   "resources": "gpu",
+   "depends_on": [
+    "N1"
+   ],
+   "stop_grace_s": 120,
+   "timeout_s": 21600,
+   "command": "\"$PY\" \"$MD/run_md.py\" --system \"$SYS/bonded_2e/R\" --out \"$RUNS/bonded_2e/R1\" --run-id R1 --platform CUDA --stage all --prod-ns 100 --segment-ns 5 --resume",
+   "success_test": "python3 \"$MD/gpu/queue.py\" json \"$RUNS/bonded_2e/R1/manifest.json\" run_id=R1 status=complete production.complete=true production.completed_ns=100 test_only=false"
+  },
+  {
+   "id": "X2",
+   "title": "production run X2: 100 ns from start X, replica 2, zinc set 2e (primary), terms at N2 as built",
+   "cwd": "$RUNS",
+   "resources": "gpu",
+   "depends_on": [
+    "R1"
+   ],
+   "stop_grace_s": 120,
+   "timeout_s": 21600,
+   "command": "\"$PY\" \"$MD/run_md.py\" --system \"$SYS/bonded_2e/X\" --out \"$RUNS/bonded_2e/X2\" --run-id X2 --platform CUDA --stage all --prod-ns 100 --segment-ns 5 --resume",
+   "success_test": "python3 \"$MD/gpu/queue.py\" json \"$RUNS/bonded_2e/X2/manifest.json\" run_id=X2 status=complete production.complete=true production.completed_ns=100 test_only=false"
+  },
+  {
+   "id": "N2",
+   "title": "production run N2: 100 ns from start N, replica 2, zinc set 2e (primary), terms at N2 as built",
+   "cwd": "$RUNS",
+   "resources": "gpu",
+   "depends_on": [
+    "X2"
+   ],
+   "stop_grace_s": 120,
+   "timeout_s": 21600,
+   "command": "\"$PY\" \"$MD/run_md.py\" --system \"$SYS/bonded_2e/N\" --out \"$RUNS/bonded_2e/N2\" --run-id N2 --platform CUDA --stage all --prod-ns 100 --segment-ns 5 --resume",
+   "success_test": "python3 \"$MD/gpu/queue.py\" json \"$RUNS/bonded_2e/N2/manifest.json\" run_id=N2 status=complete production.complete=true production.completed_ns=100 test_only=false"
+  },
+  {
+   "id": "R2",
+   "title": "production run R2: 100 ns from start R, replica 2, zinc set 2e (primary), terms at N2 as built",
+   "cwd": "$RUNS",
+   "resources": "gpu",
+   "depends_on": [
+    "N2"
+   ],
+   "stop_grace_s": 120,
+   "timeout_s": 21600,
+   "command": "\"$PY\" \"$MD/run_md.py\" --system \"$SYS/bonded_2e/R\" --out \"$RUNS/bonded_2e/R2\" --run-id R2 --platform CUDA --stage all --prod-ns 100 --segment-ns 5 --resume",
+   "success_test": "python3 \"$MD/gpu/queue.py\" json \"$RUNS/bonded_2e/R2/manifest.json\" run_id=R2 status=complete production.complete=true production.completed_ns=100 test_only=false"
+  },
+  {
+   "id": "X3",
+   "title": "production run X3: 100 ns from start X, replica 3, zinc set 2e (primary), terms at N2 as built",
+   "cwd": "$RUNS",
+   "resources": "gpu",
+   "depends_on": [
+    "R2"
+   ],
+   "stop_grace_s": 120,
+   "timeout_s": 21600,
+   "command": "\"$PY\" \"$MD/run_md.py\" --system \"$SYS/bonded_2e/X\" --out \"$RUNS/bonded_2e/X3\" --run-id X3 --platform CUDA --stage all --prod-ns 100 --segment-ns 5 --resume",
+   "success_test": "python3 \"$MD/gpu/queue.py\" json \"$RUNS/bonded_2e/X3/manifest.json\" run_id=X3 status=complete production.complete=true production.completed_ns=100 test_only=false"
+  },
+  {
+   "id": "N3",
+   "title": "production run N3: 100 ns from start N, replica 3, zinc set 2e (primary), terms at N2 as built",
+   "cwd": "$RUNS",
+   "resources": "gpu",
+   "depends_on": [
+    "X3"
+   ],
+   "stop_grace_s": 120,
+   "timeout_s": 21600,
+   "command": "\"$PY\" \"$MD/run_md.py\" --system \"$SYS/bonded_2e/N\" --out \"$RUNS/bonded_2e/N3\" --run-id N3 --platform CUDA --stage all --prod-ns 100 --segment-ns 5 --resume",
+   "success_test": "python3 \"$MD/gpu/queue.py\" json \"$RUNS/bonded_2e/N3/manifest.json\" run_id=N3 status=complete production.complete=true production.completed_ns=100 test_only=false"
+  },
+  {
+   "id": "R3",
+   "title": "production run R3: 100 ns from start R, replica 3, zinc set 2e (primary), terms at N2 as built",
+   "cwd": "$RUNS",
+   "resources": "gpu",
+   "depends_on": [
+    "N3"
+   ],
+   "stop_grace_s": 120,
+   "timeout_s": 21600,
+   "command": "\"$PY\" \"$MD/run_md.py\" --system \"$SYS/bonded_2e/R\" --out \"$RUNS/bonded_2e/R3\" --run-id R3 --platform CUDA --stage all --prod-ns 100 --segment-ns 5 --resume",
+   "success_test": "python3 \"$MD/gpu/queue.py\" json \"$RUNS/bonded_2e/R3/manifest.json\" run_id=R3 status=complete production.complete=true production.completed_ns=100 test_only=false"
+  }
+ ]
+}

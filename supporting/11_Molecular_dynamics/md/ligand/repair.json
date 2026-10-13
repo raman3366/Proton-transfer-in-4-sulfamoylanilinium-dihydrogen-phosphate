@@ -1,0 +1,1522 @@
+{
+ "script": "md/ligand_fit.py",
+ "started": "5 Oct 2026, 9:35 PM IST",
+ "versions": {
+  "python": "3.12.14",
+  "numpy": "2.5.3",
+  "scipy": "1.18.1",
+  "matplotlib": "3.11.2",
+  "openmm": "8.6.1",
+  "parmed": "4.3.1",
+  "ambertools": "ambertools-26.0-cuda_None_nompi_py312h1ea3936_100",
+  "amberhome": "/root/cqc-sfa-tools/md",
+  "gaff2_dat": {
+   "path": "/root/cqc-sfa-tools/md/dat/leap/parm/gaff2.dat",
+   "title": "AMBER General Force Field for organic molecules (Version 2.2.30, Oct 2025)",
+   "sha256": "2244b58627a85693776d12a0155a292f72b65b4398a03b87958136ad7460c67f"
+  },
+  "openmm_platform": "Reference (double precision, one thread)"
+ },
+ "seed": 20261005,
+ "environment_of_fit": "implicit water, OBC2 generalised Born, solvent dielectric 78.3553, solute dielectric 1, no surface-area term (OpenMM CustomGBForce built by ParmEd; radii of the topology, tleap default mbondi)",
+ "sigma_rigid": 0.5,
+ "sigma_scan": 0.1,
+ "species": {
+  "anion": {
+   "changed_equilibrium_values": [
+    {
+     "kind": "bond",
+     "types": "n2-sy",
+     "quantity": "d_S_N2",
+     "dft_target": 1.5799465999591085,
+     "old": 1.544,
+     "new": 1.5906290960636404,
+     "force_constant": 461.21,
+     "involves_ligating_N": true
+    },
+    {
+     "kind": "angle",
+     "types": "ca-sy-n2",
+     "quantity": "a_C4_S_N2",
+     "dft_target": 109.82526034676523,
+     "old": 112.23004815634431,
+     "new": 117.13303489441745,
+     "force_constant": 101.19,
+     "involves_ligating_N": true
+    },
+    {
+     "kind": "angle",
+     "types": "hn-n2-sy",
+     "quantity": "a_S_N2_H_mean",
+     "dft_target": 107.46763387009888,
+     "old": 111.2700476303201,
+     "new": 118.05927823095041,
+     "force_constant": 61.55,
+     "involves_ligating_N": true
+    }
+   ],
+   "changed_torsions": [
+    {
+     "kind": "torsion",
+     "types": "hn-n2-sy-ca",
+     "path": "H-N2-S-C4",
+     "old": "by analogy, see terms_gaff2 table",
+     "new": [
+      {
+       "n": 1,
+       "coefficient_of_cos": -0.2623991171349747,
+       "PK": 0.2623991171349747,
+       "phase": 180.0
+      },
+      {
+       "n": 2,
+       "coefficient_of_cos": 2.7029848613601044,
+       "PK": 2.7029848613601044,
+       "phase": 0.0
+      }
+     ],
+     "involves_ligating_N": true
+    },
+    {
+     "kind": "torsion",
+     "types": "hn-n2-sy-o",
+     "path": "H-N2-S-O1, H-N2-S-O2",
+     "old": "by analogy, see terms_gaff2 table",
+     "new": "zero",
+     "involves_ligating_N": true
+    }
+   ],
+   "fit_history": [
+    {
+     "cycle": 1,
+     "fit_cs": false,
+     "cs_terms": [],
+     "fit": {
+      "columns": [
+       "rotor:cos1",
+       "rotor:cos2",
+       "aniline:cos2"
+      ],
+      "coefficients": [
+       -0.2623989839295953,
+       2.7029849398409693,
+       -0.9483049517633355
+      ],
+      "rank": 3,
+      "condition": 5.098659481225992,
+      "rigid_rms": 0.7515751270261638,
+      "rigid_max": 1.5591887653821916,
+      "rigid_loo_rms": 1.0194522280952831,
+      "n_rigid": 16,
+      "n_scan": 0,
+      "aniline_cos2": -0.9483049517633355
+     },
+     "coef_change": 2.7029849398409693,
+     "scan_max_abs_dev": 0.06536799548492925,
+     "tau_H": [
+      -90.87093961201899,
+      null
+     ]
+    },
+    {
+     "cycle": 2,
+     "fit_cs": false,
+     "cs_terms": [],
+     "fit": {
+      "columns": [
+       "rotor:cos1",
+       "rotor:cos2",
+       "aniline:cos2"
+      ],
+      "coefficients": [
+       -0.26239912358319994,
+       2.702984853776666,
+       -0.9483049442538997
+      ],
+      "rank": 3,
+      "condition": 5.098659481225992,
+      "rigid_rms": 0.7515751554129895,
+      "rigid_max": 1.559188911794755,
+      "rigid_loo_rms": 1.0194522785277866,
+      "n_rigid": 16,
+      "n_scan": 0,
+      "aniline_cos2": -0.9483049442538997
+     },
+     "coef_change": 1.3965360462497856e-07,
+     "scan_max_abs_dev": 0.06536799776645355,
+     "tau_H": [
+      -90.87093961201899,
+      null
+     ]
+    },
+    {
+     "cycle": 3,
+     "fit_cs": false,
+     "cs_terms": [],
+     "fit": {
+      "columns": [
+       "rotor:cos1",
+       "rotor:cos2",
+       "aniline:cos2"
+      ],
+      "coefficients": [
+       -0.2623991171349747,
+       2.7029848613601044,
+       -0.9483049447589039
+      ],
+      "rank": 3,
+      "condition": 5.098659481225992,
+      "rigid_rms": 0.7515751572163272,
+      "rigid_max": 1.5591889150615643,
+      "rigid_loo_rms": 1.019452281785026,
+      "n_rigid": 16,
+      "n_scan": 0,
+      "aniline_cos2": -0.9483049447589039
+     },
+     "coef_change": 7.583438321745462e-09,
+     "scan_max_abs_dev": 0.09266321548863034,
+     "tau_H": [
+      -90.7996895236697,
+      null
+     ]
+    }
+   ],
+   "final_fit": {
+    "columns": [
+     "rotor:cos1",
+     "rotor:cos2",
+     "aniline:cos2"
+    ],
+    "coefficients": [
+     -0.2623991171349747,
+     2.7029848613601044,
+     -0.9483049447589039
+    ],
+    "rank": 3,
+    "condition": 5.098659481225992,
+    "rigid_rms": 0.7515751572163272,
+    "rigid_max": 1.5591889150615643,
+    "rigid_loo_rms": 1.019452281785026,
+    "n_rigid": 16,
+    "n_scan": 0,
+    "aniline_cos2": -0.9483049447589039
+   },
+   "aniline_rotor_note": {
+    "coefficient_of_cos2_per_dihedral": -0.9483049447589039,
+    "note": "correction that the rigid single points ask for on the four ca-ca-nv-hn dihedrals (GAFF2 by analogy: PK/IDIVF 1.05, phase 180, n 2); not part of the repaired force field"
+   },
+   "rebuilt_vs_fitted_max_diff": 2.7131839487992693e-05,
+   "native_terms_differing_from_gaff2": [],
+   "rigid_single_points": {
+    "mm_gaff2_vacuum": {
+     "rms_all": 7.190993215531677,
+     "rms_aniline_unrotated": 7.457275613752651,
+     "max_abs_aniline_unrotated": 8.782847300687838,
+     "n_all": 16,
+     "n_aniline_unrotated": 9
+    },
+    "mm_gaff2_OBC2": {
+     "rms_all": 4.844269150155075,
+     "rms_aniline_unrotated": 3.8670400892636447,
+     "max_abs_aniline_unrotated": 4.593427544448051,
+     "n_all": 16,
+     "n_aniline_unrotated": 9
+    },
+    "mm_repaired_vacuum": {
+     "rms_all": 4.268734197586688,
+     "rms_aniline_unrotated": 3.7641381368659097,
+     "max_abs_aniline_unrotated": 4.902736280730341,
+     "n_all": 16,
+     "n_aniline_unrotated": 9
+    },
+    "mm_repaired_OBC2": {
+     "rms_all": 2.4493038000754446,
+     "rms_aniline_unrotated": 0.7725678479687159,
+     "max_abs_aniline_unrotated": 1.5641098792634742,
+     "n_all": 16,
+     "n_aniline_unrotated": 9
+    }
+   },
+   "rigid_provenance": {
+    "script": "fsp.py",
+    "argv": [
+     "sulfonamidate_pcm_d3",
+     "molecules/sfa/results/sulfonamidate_pcm_d3/opt.xyz",
+     "dock/results/poses_for_dft/T1_3TZF__sfa_anion__vina__cl1_seed10__Hrot.xyz",
+     "dock/results/poses_for_dft/T1_3TZF__sfa_anion__vinardo__cl1_seed01__Hrot.xyz",
+     "dock/results/poses_for_dft/T3_6RL9__sfa_anion__vina__cl1_seed10__Hrot.xyz",
+     "dock/results/poses_for_dft/T3_6RL9__sfa_anion__vinardo__cl1_seed07__Hrot.xyz",
+     "dock/results/poses_for_dft/T4_3HS4__sfa_anion__vina__cl1_seed07__Hrot.xyz",
+     "dock/results/poses_for_dft/T4_3HS4__sfa_anion__vinardo__cl1_seed03__Hrot.xyz",
+     "dock/results/poses_for_dft/T5_7S2K__sfa_anion__vina__cl1_seed05__Hrot.xyz",
+     "dock/results/poses_for_dft/T5_7S2K__sfa_anion__vinardo__cl1_seed02__Hrot.xyz",
+     "dock/results/poses_for_dft/T1_3TZF__sfa_anion__vina__cl1_seed10.xyz",
+     "dock/results/poses_for_dft/T1_3TZF__sfa_anion__vinardo__cl1_seed01.xyz",
+     "dock/results/poses_for_dft/T3_6RL9__sfa_anion__vina__cl1_seed10.xyz",
+     "dock/results/poses_for_dft/T3_6RL9__sfa_anion__vinardo__cl1_seed07.xyz",
+     "dock/results/poses_for_dft/T4_3HS4__sfa_anion__vina__cl1_seed07.xyz",
+     "dock/results/poses_for_dft/T4_3HS4__sfa_anion__vinardo__cl1_seed03.xyz",
+     "dock/results/poses_for_dft/T5_7S2K__sfa_anion__vina__cl1_seed05.xyz",
+     "dock/results/poses_for_dft/T5_7S2K__sfa_anion__vinardo__cl1_seed02.xyz",
+     "--methods",
+     "b3lyp-d3bj",
+     "--label",
+     "dock_strain"
+    ],
+    "case": "sulfonamidate_pcm_d3",
+    "case_file": "molecules/sfa/cases/sulfonamidate_pcm_d3.json",
+    "charge": -1,
+    "spin": 0,
+    "basis": "6-311++G(d,p)",
+    "grid_level": 4,
+    "environment": "IEF-PCM (water, eps = 78.3553, Lebedev order 29)",
+    "case_xc": "b3lyp",
+    "case_disp": "d3bj",
+    "density_fitting": true,
+    "pyscf_version": "2.14.0",
+    "threads": 12,
+    "host": "cqc-dft-01",
+    "finished": "2026-09-28T18:10:51",
+    "wall_min": 13.92
+   },
+   "results": {
+    "vacuum": {
+     "n_starts": 145,
+     "n_minima": 2,
+     "global_min": {
+      "a_C4_S_N2": 109.74721278931453,
+      "a_O1_S_O2": 115.49457595787548,
+      "a_O1_S_N2": 114.1888960044739,
+      "a_O2_S_N2": 110.99041883502672,
+      "a_C4_S_O1": 102.71522221410369,
+      "a_C4_S_O2": 102.55402465477974,
+      "d_S_N2": 1.5609824318113703,
+      "d_C4_S": 1.7987650410721967,
+      "d_S_O1": 1.4580810909772879,
+      "d_S_O2": 1.4583679714661406,
+      "d_C1_N1": 1.3659897971724542,
+      "tau_C3": -155.57295822628342,
+      "tau_C5": 24.58739782079471,
+      "tau_fold": 155.57295822628342,
+      "S_out_of_plane": 0.13792635421631283,
+      "tau_C4_S_N2_HN21": 102.46426391713698,
+      "a_S_N2_HN21": 105.69612505307535,
+      "N1_angle_sum": 359.75751954893457,
+      "a_O_S_N2_mean": 112.58965741975031,
+      "a_C4_S_O_mean": 102.63462343444172,
+      "d_S_O_mean": 1.4582245312217141
+     },
+     "global_min_xyz": [
+      [
+       3.77759,
+       1.57645,
+       0.9149
+      ],
+      [
+       4.48879,
+       1.62009,
+       2.12121
+      ],
+      [
+       4.30066,
+       2.69259,
+       3.01348
+      ],
+      [
+       3.39491,
+       3.72261,
+       2.69622
+      ],
+      [
+       2.68439,
+       3.67587,
+       1.48205
+      ],
+      [
+       2.87712,
+       2.60067,
+       0.59393
+      ],
+      [
+       3.96389,
+       0.53572,
+       0.04999
+      ],
+      [
+       1.73893,
+       5.72698,
+       3.59612
+      ],
+      [
+       4.26006,
+       5.98136,
+       3.5121
+      ],
+      [
+       3.21637,
+       4.44526,
+       5.13521
+      ],
+      [
+       3.14691,
+       5.09549,
+       3.83167
+      ],
+      [
+       5.18721,
+       0.8297,
+       2.37334
+      ],
+      [
+       4.85058,
+       2.7308,
+       3.95113
+      ],
+      [
+       1.98841,
+       4.47545,
+       1.2358
+      ],
+      [
+       2.32566,
+       2.57194,
+       -0.33942
+      ],
+      [
+       3.48227,
+       0.53219,
+       -0.83558
+      ],
+      [
+       4.64438,
+       -0.17591,
+       0.26596
+      ],
+      [
+       1.15611,
+       5.38202,
+       4.34491
+      ]
+     ],
+     "from_dft_min": {
+      "E_rel": 0.7382459992065407,
+      "m": {
+       "a_C4_S_N2": 109.78556296627532,
+       "a_O1_S_O2": 115.37890720713446,
+       "a_O1_S_N2": 111.22212048134203,
+       "a_O2_S_N2": 114.11302196636817,
+       "a_C4_S_O1": 102.45801794557062,
+       "a_C4_S_O2": 102.71605665432028,
+       "d_S_N2": 1.5619488242624862,
+       "d_C4_S": 1.7989379827657468,
+       "d_S_O1": 1.458768073339434,
+       "d_S_O2": 1.4576868750888738,
+       "d_C1_N1": 1.365985053457186,
+       "tau_C3": 158.0112679629031,
+       "tau_C5": -22.14038041214914,
+       "tau_fold": 158.0112679629031,
+       "S_out_of_plane": 0.13041390660960392,
+       "tau_C4_S_N2_HN21": -102.65137778318754,
+       "a_S_N2_HN21": 106.17648238817017,
+       "N1_angle_sum": 359.5992945251005,
+       "a_O_S_N2_mean": 112.6675712238551,
+       "a_C4_S_O_mean": 102.58703729994545,
+       "d_S_O_mean": 1.4582274742141539
+      }
+     },
+     "hessian_lowest7": [
+      -3.932749965436891e-06,
+      -1.134848260620198e-06,
+      -6.704877463970997e-07,
+      3.089675937897666e-06,
+      7.114825395399844e-06,
+      1.2175047168646946e-05,
+      0.4835419870384512
+     ],
+     "scan_summary": {
+      "n_points": 18,
+      "max_abs_dev": 0.4754884073801432,
+      "tau_of_max_dev": 90.0,
+      "rms_dev": 0.2901102669092355,
+      "mm_min_at": 160.0,
+      "dft_min_at": 170.0,
+      "mm_max_at": 90.0,
+      "dft_max_at": 110.0,
+      "mm_barrier": 0.5643773636877114,
+      "dft_barrier": 0.09837518344673103,
+      "max_start_diff": 4.3002046368201263e-10,
+      "max_tau_dev": 0.00011151864228509112,
+      "max_gain_other_basin": 0.7003165451612574
+     },
+     "gate": {
+      "csn_mm": 109.74721278931453,
+      "csn_dft": 109.82526034676523,
+      "d_csn": -0.07804755745070224,
+      "csn_pass": true,
+      "sn_mm": 1.5609824318113703,
+      "sn_dft": 1.5799465999591085,
+      "d_sn": -0.01896416814773816,
+      "sn_pass": true,
+      "scan_max_abs_dev": 0.4754884073801432,
+      "scan_pass": true,
+      "pass": true
+     },
+     "gate_from_dft_min": {
+      "csn_mm": 109.78556296627532,
+      "csn_dft": 109.82526034676523,
+      "d_csn": -0.03969738048991189,
+      "csn_pass": true,
+      "sn_mm": 1.5619488242624862,
+      "sn_dft": 1.5799465999591085,
+      "d_sn": -0.01799777569662231,
+      "sn_pass": true,
+      "scan_max_abs_dev": 0.4754884073801432,
+      "scan_pass": true,
+      "pass": true
+     }
+    },
+    "OBC2": {
+     "n_starts": 145,
+     "n_minima": 4,
+     "global_min": {
+      "a_C4_S_N2": 111.19817243725606,
+      "a_O1_S_O2": 114.56876839541883,
+      "a_O1_S_N2": 112.48754698818226,
+      "a_O2_S_N2": 111.73777475917848,
+      "a_C4_S_O1": 102.71203023338187,
+      "a_C4_S_O2": 103.3502867250515,
+      "d_S_N2": 1.5800688341353761,
+      "d_C4_S": 1.8161685855614251,
+      "d_S_O1": 1.4689603827820963,
+      "d_S_O2": 1.4678739866640778,
+      "d_C1_N1": 1.3674104058707568,
+      "tau_C3": 20.327038648025994,
+      "tau_C5": -160.1305804937811,
+      "tau_fold": 160.1305804937811,
+      "S_out_of_plane": 0.39015174479317727,
+      "tau_C4_S_N2_HN21": 91.59101554446201,
+      "a_S_N2_HN21": 107.4084986853492,
+      "N1_angle_sum": 359.9999796459512,
+      "a_O_S_N2_mean": 112.11266087368037,
+      "a_C4_S_O_mean": 103.03115847921669,
+      "d_S_O_mean": 1.4684171847230871
+     },
+     "global_min_xyz": [
+      [
+       3.65364,
+       1.4957,
+       0.98252
+      ],
+      [
+       4.5385,
+       1.6379,
+       2.06064
+      ],
+      [
+       4.43376,
+       2.74448,
+       2.92436
+      ],
+      [
+       3.43645,
+       3.72112,
+       2.70842
+      ],
+      [
+       2.5463,
+       3.56918,
+       1.62253
+      ],
+      [
+       2.65904,
+       2.4593,
+       0.76442
+      ],
+      [
+       3.75976,
+       0.41902,
+       0.14626
+      ],
+      [
+       4.62622,
+       5.40184,
+       4.61368
+      ],
+      [
+       2.17302,
+       4.7652,
+       4.6944
+      ],
+      [
+       2.98308,
+       6.25918,
+       2.90069
+      ],
+      [
+       3.28515,
+       5.15231,
+       3.81625
+      ],
+      [
+       5.31102,
+       0.89365,
+       2.23779
+      ],
+      [
+       5.12623,
+       2.83653,
+       3.75965
+      ],
+      [
+       1.76696,
+       4.30859,
+       1.44302
+      ],
+      [
+       1.96771,
+       2.35546,
+       -0.06826
+      ],
+      [
+       3.1228,
+       0.30768,
+       -0.63637
+      ],
+      [
+       4.47643,
+       -0.28398,
+       0.29716
+      ],
+      [
+       5.19047,
+       6.05774,
+       4.06642
+      ]
+     ],
+     "from_dft_min": {
+      "E_rel": 0.18551631409900438,
+      "m": {
+       "a_C4_S_N2": 109.81701937429521,
+       "a_O1_S_O2": 115.44937041751031,
+       "a_O1_S_N2": 111.4535795742257,
+       "a_O2_S_N2": 111.86384726549402,
+       "a_C4_S_O1": 103.97297729400084,
+       "a_C4_S_O2": 103.55651664899307,
+       "d_S_N2": 1.579947948043816,
+       "d_C4_S": 1.818877527791204,
+       "d_S_O1": 1.466986408125955,
+       "d_S_O2": 1.4701455401923897,
+       "d_C1_N1": 1.367410373483491,
+       "tau_C3": 99.29765487408716,
+       "tau_C5": -80.27775321872502,
+       "tau_fold": 99.29765487408716,
+       "S_out_of_plane": 0.36105840156631286,
+       "tau_C4_S_N2_HN21": -90.8000495941469,
+       "a_S_N2_HN21": 107.45806168092035,
+       "N1_angle_sum": 359.99993239790473,
+       "a_O_S_N2_mean": 111.65871341985985,
+       "a_C4_S_O_mean": 103.76474697149695,
+       "d_S_O_mean": 1.4685659741591723
+      }
+     },
+     "hessian_lowest7": [
+      -9.134190710362044e-06,
+      -3.928424858372413e-06,
+      -9.75205986118881e-09,
+      2.718510042326846e-06,
+      3.6783382759484e-06,
+      1.4007037777324361e-05,
+      0.1866187729918266
+     ],
+     "scan_summary": {
+      "n_points": 18,
+      "max_abs_dev": 0.09265418297703122,
+      "tau_of_max_dev": 90.0,
+      "rms_dev": 0.06160974632400292,
+      "mm_min_at": 155.8,
+      "dft_min_at": 170.0,
+      "mm_max_at": 90.0,
+      "dft_max_at": 110.0,
+      "mm_barrier": 0.18154313928459942,
+      "dft_barrier": 0.09837518344673103,
+      "max_start_diff": 9.414407031727023e-10,
+      "max_tau_dev": 4.351758096277081e-05
+     },
+     "gate": {
+      "csn_mm": 111.19817243725606,
+      "csn_dft": 109.82526034676523,
+      "d_csn": 1.3729120904908285,
+      "csn_pass": true,
+      "sn_mm": 1.5800688341353761,
+      "sn_dft": 1.5799465999591085,
+      "d_sn": 0.00012223417626766597,
+      "sn_pass": true,
+      "scan_max_abs_dev": 0.09265418297703122,
+      "scan_pass": true,
+      "pass": true
+     },
+     "gate_from_dft_min": {
+      "csn_mm": 109.81701937429521,
+      "csn_dft": 109.82526034676523,
+      "d_csn": -0.00824097247001987,
+      "csn_pass": true,
+      "sn_mm": 1.579947948043816,
+      "sn_dft": 1.5799465999591085,
+      "d_sn": 1.3480847076419167e-06,
+      "sn_pass": true,
+      "scan_max_abs_dev": 0.09265418297703122,
+      "scan_pass": true,
+      "pass": true
+     }
+    }
+   },
+   "gate_before": {
+    "vacuum": {
+     "csn_mm": 107.2485410536614,
+     "csn_dft": 109.82526034676523,
+     "d_csn": -2.576719293103835,
+     "csn_pass": false,
+     "sn_mm": 1.5090475400793713,
+     "sn_dft": 1.5799465999591085,
+     "d_sn": -0.07089905987973721,
+     "sn_pass": false,
+     "scan_max_abs_dev": 0.2528040014393635,
+     "scan_pass": true,
+     "pass": false
+    },
+    "OBC2": {
+     "csn_mm": 103.75956824078595,
+     "csn_dft": 109.82526034676523,
+     "d_csn": -6.065692105979281,
+     "csn_pass": false,
+     "sn_mm": 1.5327646594312359,
+     "sn_dft": 1.5799465999591085,
+     "d_sn": -0.04718194052787261,
+     "sn_pass": false,
+     "scan_max_abs_dev": 0.3991593076049753,
+     "scan_pass": true,
+     "pass": false
+    }
+   },
+   "targets_back_to_gaff2": [
+    {
+     "kind": "angle",
+     "types": "n2-sy-o",
+     "fitted_value": 121.79152422525918,
+     "gaff2_value": 122.18005213419345,
+     "miss_with_gaff2_value": 0.20155081267964192
+    }
+   ],
+   "charge_sensitivity": {
+    "what": "O1 and O2 charges replaced by their mean; repaired terms unchanged; implicit water",
+    "charges_as_assigned": {
+     "O1": -0.736367,
+     "O2": -0.779967
+    },
+    "charge_used": -0.758167,
+    "min_from_dft": {
+     "a_C4_S_N2": 109.8162377650121,
+     "d_S_N2": 1.5798203040677925,
+     "a_O_S_N2_mean": 111.64389722859153,
+     "tau_fold": 95.8493743271941,
+     "tau_C4_S_N2_HN21": -90.9435022475473
+    },
+    "scan_max_abs_dev": 0.08739320627488466
+   }
+  },
+  "neutral": {
+   "changed_equilibrium_values": [
+    {
+     "kind": "bond",
+     "types": "n8-sy",
+     "quantity": "d_S_N2",
+     "dft_target": 1.6771120873499596,
+     "old": 1.6920000000000002,
+     "new": 1.7375290823282228,
+     "force_constant": 300.51,
+     "involves_ligating_N": true
+    },
+    {
+     "kind": "angle",
+     "types": "ca-sy-n8",
+     "quantity": "a_C4_S_N2",
+     "dft_target": 109.45319035842837,
+     "old": 103.18004399125552,
+     "new": 113.29304012418628,
+     "force_constant": 102.01,
+     "involves_ligating_N": true
+    },
+    {
+     "kind": "angle",
+     "types": "n8-sy-o",
+     "quantity": "a_O_S_N2_mean",
+     "dft_target": 105.33532973980556,
+     "old": 106.96004595504625,
+     "new": 109.76679268797542,
+     "force_constant": 134.01,
+     "involves_ligating_N": true
+    },
+    {
+     "kind": "angle",
+     "types": "hn-n8-sy",
+     "quantity": "a_S_N2_H_mean",
+     "dft_target": 110.99178158452114,
+     "old": 109.6600471122006,
+     "new": 118.44272369553717,
+     "force_constant": 56.36,
+     "involves_ligating_N": true
+    },
+    {
+     "kind": "angle",
+     "types": "hn-n8-hn",
+     "quantity": "a_H_N2_H",
+     "dft_target": 110.00789084648132,
+     "old": 106.3800453626977,
+     "new": 111.24693580604098,
+     "force_constant": 47.89,
+     "involves_ligating_N": true
+    }
+   ],
+   "changed_torsions": [
+    {
+     "kind": "torsion",
+     "types": "hn-n8-sy-ca",
+     "path": "H-N2-S-C4",
+     "old": "by analogy, see terms_gaff2 table",
+     "new": [
+      {
+       "n": 1,
+       "coefficient_of_cos": -2.3127595478953262,
+       "PK": 2.3127595478953262,
+       "phase": 180.0
+      },
+      {
+       "n": 2,
+       "coefficient_of_cos": 2.213339246182999,
+       "PK": 2.213339246182999,
+       "phase": 0.0
+      }
+     ],
+     "involves_ligating_N": true
+    },
+    {
+     "kind": "torsion",
+     "types": "hn-n8-sy-o",
+     "path": "H-N2-S-O1, H-N2-S-O2",
+     "old": "by analogy, see terms_gaff2 table",
+     "new": "zero",
+     "involves_ligating_N": true
+    },
+    {
+     "kind": "torsion",
+     "types": "ca-ca-sy-n8",
+     "path": "C3-C4-S-N2, C5-C4-S-N2",
+     "old": "X -ca-sy-X: PK/IDIVF 1.3, phase 180, n 2",
+     "new": [
+      {
+       "n": 2,
+       "coefficient_of_cos": -1.4733115846287819,
+       "PK": 1.4733115846287819,
+       "phase": 180.0
+      }
+     ],
+     "involves_ligating_N": true
+    }
+   ],
+   "fit_history": [
+    {
+     "cycle": 1,
+     "fit_cs": false,
+     "cs_terms": [],
+     "fit": {
+      "columns": [
+       "rotor:cos1",
+       "rotor:cos2",
+       "aniline:cos2"
+      ],
+      "coefficients": [
+       -2.1318053482538013,
+       2.0486697023721065,
+       -0.8756891396251567
+      ],
+      "rank": 3,
+      "condition": 4.915228313224647,
+      "rigid_rms": 0.4459658003697221,
+      "rigid_max": 1.2445205675708504,
+      "rigid_loo_rms": 0.6845774872884609,
+      "n_rigid": 20,
+      "n_scan": 0,
+      "aniline_cos2": -0.8756891396251567
+     },
+     "coef_change": 2.1318053482538013,
+     "scan_max_abs_dev": 0.7012893913247835,
+     "tau_H": [
+      61.340317542137946,
+      -61.34019496121457
+     ]
+    },
+    {
+     "cycle": 2,
+     "fit_cs": true,
+     "cs_terms": [
+      2
+     ],
+     "fit": {
+      "columns": [
+       "rotor:cos1",
+       "rotor:cos2",
+       "cs:cos2",
+       "aniline:cos2",
+       "scan offset"
+      ],
+      "coefficients": [
+       -2.314306700696681,
+       2.2091809857352365,
+       -1.4745528723467909,
+       -0.8758178902755109,
+       214.89408758862706
+      ],
+      "rank": 5,
+      "condition": 19.595979892800365,
+      "rigid_rms": 0.6107474395356245,
+      "rigid_max": 1.3452123615541016,
+      "rigid_loo_rms": 0.8694954670998901,
+      "n_rigid": 20,
+      "n_scan": 21,
+      "aniline_cos2": -0.8758178902755109
+     },
+     "coef_change": 1.4745528723467909,
+     "scan_max_abs_dev": 0.052913546947560564,
+     "tau_H": [
+      61.32797118936493,
+      -61.32789833229249
+     ]
+    },
+    {
+     "cycle": 3,
+     "fit_cs": true,
+     "cs_terms": [
+      2
+     ],
+     "fit": {
+      "columns": [
+       "rotor:cos1",
+       "rotor:cos2",
+       "cs:cos2",
+       "aniline:cos2",
+       "scan offset"
+      ],
+      "coefficients": [
+       -2.3127626584217222,
+       2.2133179311911775,
+       -1.4733119745737406,
+       -0.87508269189853,
+       214.95673232397914
+      ],
+      "rank": 5,
+      "condition": 19.521342131970503,
+      "rigid_rms": 0.609512477920209,
+      "rigid_max": 1.3334590948632923,
+      "rigid_loo_rms": 0.8669788529756327,
+      "n_rigid": 20,
+      "n_scan": 21,
+      "aniline_cos2": -0.87508269189853
+     },
+     "coef_change": 0.00413694545594101,
+     "scan_max_abs_dev": 0.052386874051673304,
+     "tau_H": [
+      61.33442689076712,
+      -61.33432039893448
+     ]
+    },
+    {
+     "cycle": 4,
+     "fit_cs": true,
+     "cs_terms": [
+      2
+     ],
+     "fit": {
+      "columns": [
+       "rotor:cos1",
+       "rotor:cos2",
+       "cs:cos2",
+       "aniline:cos2",
+       "scan offset"
+      ],
+      "coefficients": [
+       -2.3127595478953262,
+       2.213339246182999,
+       -1.4733115846287819,
+       -0.8750801047649439,
+       214.9567542528643
+      ],
+      "rank": 5,
+      "condition": 19.526466190942017,
+      "rigid_rms": 0.6095125489322897,
+      "rigid_max": 1.333414982740289,
+      "rigid_loo_rms": 0.8669773465308639,
+      "n_rigid": 20,
+      "n_scan": 21,
+      "aniline_cos2": -0.8750801047649439
+     },
+     "coef_change": 2.1314991821341778e-05,
+     "scan_max_abs_dev": 0.052386879237981576,
+     "tau_H": [
+      61.33446052648114,
+      -61.33434840721221
+     ]
+    }
+   ],
+   "final_fit": {
+    "columns": [
+     "rotor:cos1",
+     "rotor:cos2",
+     "cs:cos2",
+     "aniline:cos2",
+     "scan offset"
+    ],
+    "coefficients": [
+     -2.3127595478953262,
+     2.213339246182999,
+     -1.4733115846287819,
+     -0.8750801047649439,
+     214.9567542528643
+    ],
+    "rank": 5,
+    "condition": 19.526466190942017,
+    "rigid_rms": 0.6095125489322897,
+    "rigid_max": 1.333414982740289,
+    "rigid_loo_rms": 0.8669773465308639,
+    "n_rigid": 20,
+    "n_scan": 21,
+    "aniline_cos2": -0.8750801047649439
+   },
+   "aniline_rotor_note": {
+    "coefficient_of_cos2_per_dihedral": -0.8750801047649439,
+    "note": "correction that the rigid single points ask for on the four ca-ca-nv-hn dihedrals (GAFF2 by analogy: PK/IDIVF 1.05, phase 180, n 2); not part of the repaired force field"
+   },
+   "rebuilt_vs_fitted_max_diff": 0.00012166921914058548,
+   "native_terms_differing_from_gaff2": [],
+   "rigid_single_points": {
+    "mm_gaff2_vacuum": {
+     "rms_all": 9.808578670034743,
+     "rms_aniline_unrotated": 8.03379754566321,
+     "max_abs_aniline_unrotated": 8.234081166397623,
+     "n_all": 20,
+     "n_aniline_unrotated": 10
+    },
+    "mm_gaff2_OBC2": {
+     "rms_all": 7.052283115622726,
+     "rms_aniline_unrotated": 4.123587342518884,
+     "max_abs_aniline_unrotated": 4.399982622869918,
+     "n_all": 20,
+     "n_aniline_unrotated": 10
+    },
+    "mm_repaired_vacuum": {
+     "rms_all": 5.2341106019601495,
+     "rms_aniline_unrotated": 3.98782486985203,
+     "max_abs_aniline_unrotated": 4.24160665176061,
+     "n_all": 20,
+     "n_aniline_unrotated": 10
+    },
+    "mm_repaired_OBC2": {
+     "rms_all": 2.870612812424155,
+     "rms_aniline_unrotated": 0.48857805706403257,
+     "max_abs_aniline_unrotated": 0.6523400384955811,
+     "n_all": 20,
+     "n_aniline_unrotated": 10
+    }
+   },
+   "rigid_provenance": {
+    "script": "fsp.py",
+    "argv": [
+     "sulfanilamide_pcm_d3",
+     "molecules/sfa/results/sulfanilamide_pcm_d3/opt.xyz",
+     "dock/results/poses_for_dft/T1_3TZF__sfa_neutral__vina__cl1_seed02__Hrot.xyz",
+     "dock/results/poses_for_dft/T1_3TZF__sfa_neutral__vinardo__cl1_seed01__Hrot.xyz",
+     "dock/results/poses_for_dft/T3_6RL9__sfa_neutral__ad4zn__cl1_seed03__Hrot.xyz",
+     "dock/results/poses_for_dft/T3_6RL9__sfa_neutral__vina__cl1_seed09__Hrot.xyz",
+     "dock/results/poses_for_dft/T3_6RL9__sfa_neutral__vinardo__cl1_seed09__Hrot.xyz",
+     "dock/results/poses_for_dft/T4_3HS4__sfa_neutral__ad4zn__cl1_seed13__Hrot.xyz",
+     "dock/results/poses_for_dft/T4_3HS4__sfa_neutral__vina__cl1_seed02__Hrot.xyz",
+     "dock/results/poses_for_dft/T4_3HS4__sfa_neutral__vinardo__cl1_seed01__Hrot.xyz",
+     "dock/results/poses_for_dft/T5_7S2K__sfa_neutral__vina__cl1_seed04__Hrot.xyz",
+     "dock/results/poses_for_dft/T5_7S2K__sfa_neutral__vinardo__cl1_seed01__Hrot.xyz",
+     "dock/results/poses_for_dft/T1_3TZF__sfa_neutral__vina__cl1_seed02.xyz",
+     "dock/results/poses_for_dft/T1_3TZF__sfa_neutral__vinardo__cl1_seed01.xyz",
+     "dock/results/poses_for_dft/T3_6RL9__sfa_neutral__ad4zn__cl1_seed03.xyz",
+     "dock/results/poses_for_dft/T3_6RL9__sfa_neutral__vina__cl1_seed09.xyz",
+     "dock/results/poses_for_dft/T3_6RL9__sfa_neutral__vinardo__cl1_seed09.xyz",
+     "dock/results/poses_for_dft/T4_3HS4__sfa_neutral__ad4zn__cl1_seed13.xyz",
+     "dock/results/poses_for_dft/T4_3HS4__sfa_neutral__vina__cl1_seed02.xyz",
+     "dock/results/poses_for_dft/T4_3HS4__sfa_neutral__vinardo__cl1_seed01.xyz",
+     "dock/results/poses_for_dft/T5_7S2K__sfa_neutral__vina__cl1_seed04.xyz",
+     "dock/results/poses_for_dft/T5_7S2K__sfa_neutral__vinardo__cl1_seed01.xyz",
+     "--methods",
+     "b3lyp-d3bj",
+     "--label",
+     "dock_strain"
+    ],
+    "case": "sulfanilamide_pcm_d3",
+    "case_file": "molecules/sfa/cases/sulfanilamide_pcm_d3.json",
+    "charge": 0,
+    "spin": 0,
+    "basis": "6-311++G(d,p)",
+    "grid_level": 4,
+    "environment": "IEF-PCM (water, eps = 78.3553, Lebedev order 29)",
+    "case_xc": "b3lyp",
+    "case_disp": "d3bj",
+    "density_fitting": true,
+    "pyscf_version": "2.14.0",
+    "threads": 12,
+    "host": "cqc-dft-01",
+    "finished": "2026-09-28T17:56:55",
+    "wall_min": 18.48
+   },
+   "results": {
+    "vacuum": {
+     "n_starts": 145,
+     "n_minima": 2,
+     "global_min": {
+      "a_C4_S_N2": 110.47925135089827,
+      "a_O1_S_O2": 121.71098686382595,
+      "a_O1_S_N2": 103.85878079868081,
+      "a_O2_S_N2": 103.85884067489842,
+      "a_C4_S_O1": 108.26629745527619,
+      "a_C4_S_O2": 108.26631063605694,
+      "d_S_N2": 1.6572288533119444,
+      "d_C4_S": 1.779989871826785,
+      "d_S_O1": 1.4545644432148572,
+      "d_S_O2": 1.4545643945665419,
+      "d_C1_N1": 1.3626287939456483,
+      "tau_C3": -90.0836606332784,
+      "tau_C5": 90.08373091008336,
+      "tau_fold": 90.08373091008336,
+      "S_out_of_plane": 0.14559901928277638,
+      "tau_C4_S_N2_HN21": -116.79493890013073,
+      "a_S_N2_HN21": 109.85416400041461,
+      "tau_C4_S_N2_HN22": 116.79459696501779,
+      "a_S_N2_HN22": 109.85436072885867,
+      "N2_angle_sum": 333.89775921971295,
+      "N1_angle_sum": 359.79946360371133,
+      "a_O_S_N2_mean": 103.85881073678962,
+      "a_C4_S_O_mean": 108.26630404566657,
+      "d_S_O_mean": 1.4545644188906994
+     },
+     "global_min_xyz": [
+      [
+       3.72745,
+       1.57393,
+       0.93174
+      ],
+      [
+       4.23494,
+       1.60866,
+       2.234
+      ],
+      [
+       4.04157,
+       2.74433,
+       3.03747
+      ],
+      [
+       3.3319,
+       3.84548,
+       2.52438
+      ],
+      [
+       2.82285,
+       3.81114,
+       1.21322
+      ],
+      [
+       3.02381,
+       2.66883,
+       0.42111
+      ],
+      [
+       3.9214,
+       0.47012,
+       0.15666
+      ],
+      [
+       1.67246,
+       5.15435,
+       4.39841
+      ],
+      [
+       2.84565,
+       6.42476,
+       2.65869
+      ],
+      [
+       4.11498,
+       5.31366,
+       4.55869
+      ],
+      [
+       3.08112,
+       5.28856,
+       3.53582
+      ],
+      [
+       4.78297,
+       0.76047,
+       2.62945
+      ],
+      [
+       4.44579,
+       2.76616,
+       4.04921
+      ],
+      [
+       2.27893,
+       4.66294,
+       0.80571
+      ],
+      [
+       2.63224,
+       2.64314,
+       -0.58991
+      ],
+      [
+       3.5901,
+       0.46035,
+       -0.79579
+      ],
+      [
+       4.46279,
+       -0.30369,
+       0.51041
+      ],
+      [
+       1.03042,
+       5.87913,
+       4.12006
+      ],
+      [
+       1.87553,
+       5.13935,
+       5.38508
+      ]
+     ],
+     "from_dft_min": {
+      "E_rel": 0.5901132974391885,
+      "m": {
+       "a_C4_S_N2": 108.3596235647521,
+       "a_O1_S_O2": 122.45399015339659,
+       "a_O1_S_N2": 105.34655404986893,
+       "a_O2_S_N2": 105.34658400285377,
+       "a_C4_S_O1": 107.35100044742778,
+       "a_C4_S_O2": 107.35103381066999,
+       "d_S_N2": 1.6675289346744024,
+       "d_C4_S": 1.7797982700063357,
+       "d_S_O1": 1.4547492500902333,
+       "d_S_O2": 1.4547495010539866,
+       "d_C1_N1": 1.3623825264806046,
+       "tau_C3": 90.24344211495591,
+       "tau_C5": -90.24554199394005,
+       "tau_fold": 90.24554199394005,
+       "S_out_of_plane": 0.42508976864225073,
+       "tau_C4_S_N2_HN21": 65.15381374624964,
+       "a_S_N2_HN21": 112.26289568920477,
+       "tau_C4_S_N2_HN22": -65.1537694656866,
+       "a_S_N2_HN22": 112.26298780265756,
+       "N2_angle_sum": 338.7625922542418,
+       "N1_angle_sum": 359.0950179944688,
+       "a_O_S_N2_mean": 105.34656902636135,
+       "a_C4_S_O_mean": 107.35101712904888,
+       "d_S_O_mean": 1.45474937557211
+      }
+     },
+     "hessian_lowest7": [
+      -2.5892812935928296e-06,
+      -7.745990365091366e-07,
+      -2.476824967178298e-08,
+      8.050463865077426e-06,
+      1.4859090566512184e-05,
+      2.2665491178973864e-05,
+      0.4809341105967969
+     ],
+     "scan_summary": {
+      "n_points": 21,
+      "max_abs_dev": 2.1855994153157123,
+      "tau_of_max_dev": 180.0,
+      "rms_dev": 1.2591160782774038,
+      "mm_min_at": 90.0,
+      "dft_min_at": 90.0,
+      "mm_max_at": 180.0,
+      "dft_max_at": 180.0,
+      "mm_barrier": 4.061612656697093,
+      "dft_barrier": 1.8760132413813808,
+      "max_start_diff": 1.1480949524411699e-09,
+      "max_tau_dev": 0.0004652662878754654,
+      "max_gain_other_basin": 2.832795388919237
+     },
+     "gate": {
+      "csn_mm": 110.47925135089827,
+      "csn_dft": 109.45319035842837,
+      "d_csn": 1.026060992469894,
+      "csn_pass": true,
+      "sn_mm": 1.6572288533119444,
+      "sn_dft": 1.6771120873499596,
+      "d_sn": -0.019883234038015285,
+      "sn_pass": true,
+      "scan_max_abs_dev": 2.1855994153157123,
+      "scan_pass": false,
+      "pass": false
+     },
+     "gate_from_dft_min": {
+      "csn_mm": 108.3596235647521,
+      "csn_dft": 109.45319035842837,
+      "d_csn": -1.093566793676274,
+      "csn_pass": true,
+      "sn_mm": 1.6675289346744024,
+      "sn_dft": 1.6771120873499596,
+      "d_sn": -0.009583152675557205,
+      "sn_pass": true,
+      "scan_max_abs_dev": 2.1855994153157123,
+      "scan_pass": false,
+      "pass": false
+     }
+    },
+    "OBC2": {
+     "n_starts": 145,
+     "n_minima": 2,
+     "global_min": {
+      "a_C4_S_N2": 109.44667402347524,
+      "a_O1_S_O2": 120.67500288673621,
+      "a_O1_S_N2": 105.33009293692506,
+      "a_O2_S_N2": 105.33009552090635,
+      "a_C4_S_O1": 107.84645879089568,
+      "a_C4_S_O2": 107.84646434838581,
+      "d_S_N2": 1.6771096981015634,
+      "d_C4_S": 1.7943979628247422,
+      "d_S_O1": 1.4651436257848776,
+      "d_S_O2": 1.465143607644543,
+      "d_C1_N1": 1.3652077485549263,
+      "tau_C3": -89.94113821351378,
+      "tau_C5": 89.940706151561,
+      "tau_fold": 89.94113821351378,
+      "S_out_of_plane": 0.1018478390676394,
+      "tau_C4_S_N2_HN21": 61.33472480547924,
+      "a_S_N2_HN21": 110.98634263554011,
+      "tau_C4_S_N2_HN22": -61.334589195008896,
+      "a_S_N2_HN22": 110.98648009688684,
+      "N2_angle_sum": 331.98881344485255,
+      "N1_angle_sum": 359.9605157555457,
+      "a_O_S_N2_mean": 105.3300942289157,
+      "a_C4_S_O_mean": 107.84646156964075,
+      "d_S_O_mean": 1.4651436167147103
+     },
+     "global_min_xyz": [
+      [
+       3.7172,
+       1.6228,
+       0.94493
+      ],
+      [
+       4.66368,
+       1.79642,
+       1.96043
+      ],
+      [
+       4.52463,
+       2.84056,
+       2.89017
+      ],
+      [
+       3.42286,
+       3.71823,
+       2.79774
+      ],
+      [
+       2.46943,
+       3.54058,
+       1.77199
+      ],
+      [
+       2.62428,
+       2.49105,
+       0.85084
+      ],
+      [
+       3.8602,
+       0.6058,
+       0.04545
+      ],
+      [
+       2.3365,
+       4.51369,
+       5.29242
+      ],
+      [
+       2.41602,
+       6.09572,
+       3.35607
+      ],
+      [
+       4.55883,
+       5.36585,
+       4.52193
+      ],
+      [
+       3.23327,
+       5.05306,
+       3.98186
+      ],
+      [
+       5.51389,
+       1.12402,
+       2.03651
+      ],
+      [
+       5.27448,
+       2.95833,
+       3.67357
+      ],
+      [
+       1.61031,
+       4.20638,
+       1.67998
+      ],
+      [
+       1.88724,
+       2.35929,
+       0.06334
+      ],
+      [
+       3.1893,
+       0.48075,
+       -0.706
+      ],
+      [
+       4.6583,
+       -0.01963,
+       0.09323
+      ],
+      [
+       2.80577,
+       3.75019,
+       5.76328
+      ],
+      [
+       1.4099,
+       4.22564,
+       5.00382
+      ]
+     ],
+     "from_dft_min": {
+      "E_rel": 3.484394710540073e-07,
+      "m": {
+       "a_C4_S_N2": 109.44667410921295,
+       "a_O1_S_O2": 120.67500266579755,
+       "a_O1_S_N2": 105.33009616659028,
+       "a_O2_S_N2": 105.33009181782687,
+       "a_C4_S_O1": 107.84645851440561,
+       "a_C4_S_O2": 107.84646522536795,
+       "d_S_N2": 1.6771096976424467,
+       "d_C4_S": 1.7943979646498764,
+       "d_S_O1": 1.465143628352759,
+       "d_S_O2": 1.4651436033447414,
+       "d_C1_N1": 1.3652077487682395,
+       "tau_C3": 89.94084589766891,
+       "tau_C5": -89.94103740360174,
+       "tau_fold": 89.94103740360174,
+       "S_out_of_plane": 0.10181427717225118,
+       "tau_C4_S_N2_HN21": 61.33470594784497,
+       "a_S_N2_HN21": 110.98634134789876,
+       "tau_C4_S_N2_HN22": -61.33460472814099,
+       "a_S_N2_HN22": 110.98647981162571,
+       "N2_angle_sum": 331.98881013745495,
+       "N1_angle_sum": 359.9605897630365,
+       "a_O_S_N2_mean": 105.33009399220857,
+       "a_C4_S_O_mean": 107.84646186988678,
+       "d_S_O_mean": 1.46514361584875
+      }
+     },
+     "hessian_lowest7": [
+      -6.5291680965206495e-06,
+      -5.438836844495179e-07,
+      -1.4630507073653327e-07,
+      3.579983706762411e-07,
+      9.849503469173487e-06,
+      1.5278753616536995e-05,
+      0.39994916299013483
+     ],
+     "scan_summary": {
+      "n_points": 21,
+      "max_abs_dev": 0.05237684594967651,
+      "tau_of_max_dev": 110.0,
+      "rms_dev": 0.024308181424337088,
+      "mm_min_at": 90.0,
+      "dft_min_at": 90.0,
+      "mm_max_at": 180.0,
+      "dft_max_at": 180.0,
+      "mm_barrier": 1.8847849459235135,
+      "dft_barrier": 1.8760132413813808,
+      "max_start_diff": 2.0077379758731695e-09,
+      "max_tau_dev": 0.0002180332779460059
+     },
+     "gate": {
+      "csn_mm": 109.44667402347524,
+      "csn_dft": 109.45319035842837,
+      "d_csn": -0.006516334953133196,
+      "csn_pass": true,
+      "sn_mm": 1.6771096981015634,
+      "sn_dft": 1.6771120873499596,
+      "d_sn": -2.3892483962395517e-06,
+      "sn_pass": true,
+      "scan_max_abs_dev": 0.05237684594967651,
+      "scan_pass": true,
+      "pass": true
+     },
+     "gate_from_dft_min": {
+      "csn_mm": 109.44667410921295,
+      "csn_dft": 109.45319035842837,
+      "d_csn": -0.006516249215422931,
+      "csn_pass": true,
+      "sn_mm": 1.6771096976424467,
+      "sn_dft": 1.6771120873499596,
+      "d_sn": -2.389707512984174e-06,
+      "sn_pass": true,
+      "scan_max_abs_dev": 0.05237684594967651,
+      "scan_pass": true,
+      "pass": true
+     }
+    }
+   },
+   "gate_before": {
+    "vacuum": {
+     "csn_mm": 102.96193616133903,
+     "csn_dft": 109.45319035842837,
+     "d_csn": -6.491254197089347,
+     "csn_pass": false,
+     "sn_mm": 1.5928139123489726,
+     "sn_dft": 1.6771120873499596,
+     "d_sn": -0.08429817500098702,
+     "sn_pass": false,
+     "scan_max_abs_dev": 2.228858118192442,
+     "scan_pass": false,
+     "pass": false
+    },
+    "OBC2": {
+     "csn_mm": 100.05025798502727,
+     "csn_dft": 109.45319035842837,
+     "d_csn": -9.4029323734011,
+     "csn_pass": false,
+     "sn_mm": 1.6185017029810005,
+     "sn_dft": 1.6771120873499596,
+     "d_sn": -0.058610384368959156,
+     "sn_pass": false,
+     "scan_max_abs_dev": 2.100537679520178,
+     "scan_pass": false,
+     "pass": false
+    }
+   },
+   "targets_back_to_gaff2": [],
+   "charge_sensitivity": null
+  }
+ },
+ "finished": "5 Oct 2026, 9:55 PM IST"
+}

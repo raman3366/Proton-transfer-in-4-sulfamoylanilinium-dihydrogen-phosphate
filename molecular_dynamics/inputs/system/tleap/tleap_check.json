@@ -1,0 +1,1862 @@
+{
+ "written_by": "md/check_tleap.py",
+ "tleap": "/root/cqc-sfa-tools/md/bin/tleap",
+ "amberhome": "/root/cqc-sfa-tools/md",
+ "force_field": [
+  "leaprc.protein.ff14SB",
+  "leaprc.water.tip3p"
+ ],
+ "software": {
+  "ambertools": "ambertools-26.0-cuda_None_nompi_py312h1ea3936_100",
+  "parmed": "4.3.1",
+  "numpy": "2.5.3",
+  "python": "3.12.14"
+ },
+ "not_in_this_test": "zinc and ligand (no parameters yet); no solvent box, no ions",
+ "expected_added_heavy_atoms": [
+  "ASP165.CG",
+  "ASP165.OD1",
+  "ASP165.OD2",
+  "ASP52.OD1",
+  "ASP52.OD2",
+  "LYS168.NZ",
+  "LYS170.NZ",
+  "LYS213.NZ",
+  "LYS228.CE",
+  "LYS228.NZ",
+  "LYS261.CD",
+  "LYS261.CE",
+  "LYS261.CG",
+  "LYS261.NZ",
+  "LYS45.CE",
+  "LYS45.NZ",
+  "LYS80.CE",
+  "LYS80.NZ",
+  "LYS9.CD",
+  "LYS9.CE",
+  "LYS9.CG",
+  "LYS9.NZ"
+ ],
+ "runs": {
+  "protein": {
+   "returncode": 0,
+   "topology_written": true,
+   "log": {
+    "added_heavy": [
+     [
+      "LYS",
+      9,
+      "CG"
+     ],
+     [
+      "LYS",
+      9,
+      "CD"
+     ],
+     [
+      "LYS",
+      9,
+      "CE"
+     ],
+     [
+      "LYS",
+      9,
+      "NZ"
+     ],
+     [
+      "LYS",
+      45,
+      "CE"
+     ],
+     [
+      "LYS",
+      45,
+      "NZ"
+     ],
+     [
+      "ASP",
+      52,
+      "OD1"
+     ],
+     [
+      "ASP",
+      52,
+      "OD2"
+     ],
+     [
+      "LYS",
+      80,
+      "CE"
+     ],
+     [
+      "LYS",
+      80,
+      "NZ"
+     ],
+     [
+      "ASP",
+      164,
+      "CG"
+     ],
+     [
+      "ASP",
+      164,
+      "OD1"
+     ],
+     [
+      "ASP",
+      164,
+      "OD2"
+     ],
+     [
+      "LYS",
+      167,
+      "NZ"
+     ],
+     [
+      "LYS",
+      169,
+      "NZ"
+     ],
+     [
+      "LYS",
+      212,
+      "NZ"
+     ],
+     [
+      "LYS",
+      227,
+      "CE"
+     ],
+     [
+      "LYS",
+      227,
+      "NZ"
+     ],
+     [
+      "CLYS",
+      260,
+      "CG"
+     ],
+     [
+      "CLYS",
+      260,
+      "CD"
+     ],
+     [
+      "CLYS",
+      260,
+      "CE"
+     ],
+     [
+      "CLYS",
+      260,
+      "NZ"
+     ]
+    ],
+    "created_unknown": [],
+    "leap_summary": {
+     "total": 2035,
+     "heavy": 22,
+     "hydrogen": 2013
+    },
+    "total_charge": -2.0,
+    "errors": 0,
+    "warnings": 4,
+    "notes": 1,
+    "unknown_residue": false,
+    "fatal": false,
+    "close_contacts_reported": 1,
+    "close_contacts_between_hydrogens": 1,
+    "close_contacts_with_a_heavy_atom": [],
+    "shortest_close_contact_A": 1.27,
+    "other_warnings": [
+     "The unperturbed charge of the unit (-2.000000) is not zero.",
+     "Total unperturbed charge:  -2.000000"
+    ]
+   },
+   "atoms": 4075,
+   "residues": 259,
+   "protein_residues": 259,
+   "waters": 0,
+   "protein_atoms": 4075,
+   "protein_heavy_atoms": 2062,
+   "water_atoms": 0,
+   "net_charge": -2.0,
+   "protein_charge": -2.0,
+   "residue_names": {
+    "ACE": 1,
+    "ALA": 13,
+    "ARG": 7,
+    "ASN": 10,
+    "ASP": 19,
+    "CYS": 1,
+    "GLN": 11,
+    "GLU": 13,
+    "GLY": 22,
+    "HID": 5,
+    "HIE": 7,
+    "ILE": 9,
+    "LEU": 26,
+    "LYS": 24,
+    "MET": 1,
+    "PHE": 12,
+    "PRO": 17,
+    "SER": 17,
+    "THR": 12,
+    "TRP": 7,
+    "TYR": 8,
+    "VAL": 17
+   },
+   "input_heavy_atoms": 2040,
+   "max_displacement_of_input_heavy_atoms_A": 0.0,
+   "heavy_atoms_added_by_tleap": [
+    "LYS9.CD",
+    "LYS9.CE",
+    "LYS9.CG",
+    "LYS9.NZ",
+    "LYS45.CE",
+    "LYS45.NZ",
+    "ASP52.OD1",
+    "ASP52.OD2",
+    "LYS80.CE",
+    "LYS80.NZ",
+    "ASP165.CG",
+    "ASP165.OD1",
+    "ASP165.OD2",
+    "LYS168.NZ",
+    "LYS170.NZ",
+    "LYS213.NZ",
+    "LYS228.CE",
+    "LYS228.NZ",
+    "LYS261.CD",
+    "LYS261.CE",
+    "LYS261.CG",
+    "LYS261.NZ"
+   ],
+   "built_atom_contacts": [
+    {
+     "atom": "LYS9.CD",
+     "nearest": "HIE10.N",
+     "dist_A": 5.1
+    },
+    {
+     "atom": "LYS9.CE",
+     "nearest": "HIE10.N",
+     "dist_A": 6.07
+    },
+    {
+     "atom": "LYS9.CG",
+     "nearest": "HIE10.N",
+     "dist_A": 3.89
+    },
+    {
+     "atom": "LYS9.NZ",
+     "nearest": "HIE10.N",
+     "dist_A": 7.29
+    },
+    {
+     "atom": "LYS45.CE",
+     "nearest": "SER43.O",
+     "dist_A": 4.05
+    },
+    {
+     "atom": "LYS45.NZ",
+     "nearest": "SER43.O",
+     "dist_A": 4.6
+    },
+    {
+     "atom": "ASP52.OD1",
+     "nearest": "GLN53.CG",
+     "dist_A": 3.23
+    },
+    {
+     "atom": "ASP52.OD2",
+     "nearest": "GLN53.N",
+     "dist_A": 4.24
+    },
+    {
+     "atom": "LYS80.CE",
+     "nearest": "THR87.OG1",
+     "dist_A": 2.82
+    },
+    {
+     "atom": "LYS80.NZ",
+     "nearest": "THR87.OG1",
+     "dist_A": 3.6
+    },
+    {
+     "atom": "ASP165.CG",
+     "nearest": "SER166.N",
+     "dist_A": 3.99
+    },
+    {
+     "atom": "ASP165.OD1",
+     "nearest": "SER166.N",
+     "dist_A": 5.02
+    },
+    {
+     "atom": "ASP165.OD2",
+     "nearest": "SER166.N",
+     "dist_A": 3.88
+    },
+    {
+     "atom": "LYS168.NZ",
+     "nearest": "GLU238.OE2",
+     "dist_A": 3.4
+    },
+    {
+     "atom": "LYS170.NZ",
+     "nearest": "ASN62.O",
+     "dist_A": 4.98
+    },
+    {
+     "atom": "LYS213.NZ",
+     "nearest": "PHE260.CE2",
+     "dist_A": 3.45
+    },
+    {
+     "atom": "LYS228.CE",
+     "nearest": "LEU224.O",
+     "dist_A": 4.42
+    },
+    {
+     "atom": "LYS228.NZ",
+     "nearest": "LYS225.CG",
+     "dist_A": 4.93
+    },
+    {
+     "atom": "LYS261.CD",
+     "nearest": "TYR40.CD2",
+     "dist_A": 5.49
+    },
+    {
+     "atom": "LYS261.CE",
+     "nearest": "TYR40.CD2",
+     "dist_A": 6.21
+    },
+    {
+     "atom": "LYS261.CG",
+     "nearest": "TYR40.CD2",
+     "dist_A": 4.85
+    },
+    {
+     "atom": "LYS261.NZ",
+     "nearest": "TYR40.CE2",
+     "dist_A": 7.12
+    }
+   ],
+   "hydrogens": {
+    "HIS3": {
+     "residue_name": "HIE",
+     "ring_NH": [
+      "HE2"
+     ],
+     "as_decided": true
+    },
+    "HIS4": {
+     "residue_name": "HID",
+     "ring_NH": [
+      "HD1"
+     ],
+     "as_decided": true
+    },
+    "HIS10": {
+     "residue_name": "HIE",
+     "ring_NH": [
+      "HE2"
+     ],
+     "as_decided": true
+    },
+    "HIS15": {
+     "residue_name": "HIE",
+     "ring_NH": [
+      "HE2"
+     ],
+     "as_decided": true
+    },
+    "HIS17": {
+     "residue_name": "HIE",
+     "ring_NH": [
+      "HE2"
+     ],
+     "as_decided": true
+    },
+    "HIS36": {
+     "residue_name": "HIE",
+     "ring_NH": [
+      "HE2"
+     ],
+     "as_decided": true
+    },
+    "HIS64": {
+     "residue_name": "HIE",
+     "ring_NH": [
+      "HE2"
+     ],
+     "as_decided": true
+    },
+    "HIS94": {
+     "residue_name": "HID",
+     "ring_NH": [
+      "HD1"
+     ],
+     "as_decided": true
+    },
+    "HIS96": {
+     "residue_name": "HID",
+     "ring_NH": [
+      "HD1"
+     ],
+     "as_decided": true
+    },
+    "HIS107": {
+     "residue_name": "HID",
+     "ring_NH": [
+      "HD1"
+     ],
+     "as_decided": true
+    },
+    "HIS119": {
+     "residue_name": "HIE",
+     "ring_NH": [
+      "HE2"
+     ],
+     "as_decided": true
+    },
+    "HIS122": {
+     "residue_name": "HID",
+     "ring_NH": [
+      "HD1"
+     ],
+     "as_decided": true
+    },
+    "GLU106": {
+     "residue_name": "GLU",
+     "carboxyl_H": [],
+     "as_decided": true
+    },
+    "GLU117": {
+     "residue_name": "GLU",
+     "as_decided": true
+    },
+    "THR199": {
+     "residue_name": "THR",
+     "hydrogens": [
+      "H",
+      "HA",
+      "HB",
+      "HG1",
+      "HG21",
+      "HG22",
+      "HG23"
+     ],
+     "as_decided": true,
+     "HG1_as_placed_by_tleap": {
+      "HG1_OE1_A": 1.71,
+      "OG1_HG1_OE1_deg": 158.2,
+      "HG1_OE2_A": 2.95,
+      "note": "tleap places hydroxyl hydrogens from the template, not by hydrogen bonds; the entry has HG1 1.81 A from OE1 (162 deg)"
+     }
+    },
+    "CYS206": {
+     "residue_name": "CYS",
+     "as_decided": true
+    },
+    "TYR7": {
+     "residue_name": "TYR",
+     "as_decided": true
+    },
+    "N_terminus": {
+     "first_residue": "ACE",
+     "atoms": [
+      "C",
+      "CH3",
+      "H1",
+      "H2",
+      "H3",
+      "O"
+     ],
+     "His3_N_hydrogens": [
+      "H"
+     ],
+     "as_decided": true
+    },
+    "C_terminus": {
+     "last_residue": "LYS",
+     "has_OXT": true,
+     "as_decided": true
+    }
+   },
+   "added_heavy_atoms_as_expected": true,
+   "hydrogens_as_decided": true,
+   "passed": true
+  },
+  "X": {
+   "returncode": 0,
+   "topology_written": true,
+   "log": {
+    "added_heavy": [
+     [
+      "LYS",
+      9,
+      "CG"
+     ],
+     [
+      "LYS",
+      9,
+      "CD"
+     ],
+     [
+      "LYS",
+      9,
+      "CE"
+     ],
+     [
+      "LYS",
+      9,
+      "NZ"
+     ],
+     [
+      "LYS",
+      45,
+      "CE"
+     ],
+     [
+      "LYS",
+      45,
+      "NZ"
+     ],
+     [
+      "ASP",
+      52,
+      "OD1"
+     ],
+     [
+      "ASP",
+      52,
+      "OD2"
+     ],
+     [
+      "LYS",
+      80,
+      "CE"
+     ],
+     [
+      "LYS",
+      80,
+      "NZ"
+     ],
+     [
+      "ASP",
+      164,
+      "CG"
+     ],
+     [
+      "ASP",
+      164,
+      "OD1"
+     ],
+     [
+      "ASP",
+      164,
+      "OD2"
+     ],
+     [
+      "LYS",
+      167,
+      "NZ"
+     ],
+     [
+      "LYS",
+      169,
+      "NZ"
+     ],
+     [
+      "LYS",
+      212,
+      "NZ"
+     ],
+     [
+      "LYS",
+      227,
+      "CE"
+     ],
+     [
+      "LYS",
+      227,
+      "NZ"
+     ],
+     [
+      "CLYS",
+      260,
+      "CG"
+     ],
+     [
+      "CLYS",
+      260,
+      "CD"
+     ],
+     [
+      "CLYS",
+      260,
+      "CE"
+     ],
+     [
+      "CLYS",
+      260,
+      "NZ"
+     ]
+    ],
+    "created_unknown": [],
+    "leap_summary": {
+     "total": 2035,
+     "heavy": 22,
+     "hydrogen": 2013
+    },
+    "total_charge": -2.0,
+    "errors": 0,
+    "warnings": 48,
+    "notes": 1,
+    "unknown_residue": false,
+    "fatal": false,
+    "close_contacts_reported": 45,
+    "close_contacts_between_hydrogens": 45,
+    "close_contacts_with_a_heavy_atom": [],
+    "shortest_close_contact_A": 0.897,
+    "other_warnings": [
+     "The unperturbed charge of the unit (-2.000000) is not zero.",
+     "Total unperturbed charge:  -2.000000"
+    ]
+   },
+   "atoms": 4720,
+   "residues": 474,
+   "protein_residues": 259,
+   "waters": 215,
+   "protein_atoms": 4075,
+   "protein_heavy_atoms": 2062,
+   "water_atoms": 645,
+   "net_charge": -2.0,
+   "protein_charge": -2.0,
+   "residue_names": {
+    "ACE": 1,
+    "ALA": 13,
+    "ARG": 7,
+    "ASN": 10,
+    "ASP": 19,
+    "CYS": 1,
+    "GLN": 11,
+    "GLU": 13,
+    "GLY": 22,
+    "HID": 5,
+    "HIE": 7,
+    "ILE": 9,
+    "LEU": 26,
+    "LYS": 24,
+    "MET": 1,
+    "PHE": 12,
+    "PRO": 17,
+    "SER": 17,
+    "THR": 12,
+    "TRP": 7,
+    "TYR": 8,
+    "VAL": 17,
+    "WAT": 215
+   },
+   "input_heavy_atoms": 2040,
+   "max_displacement_of_input_heavy_atoms_A": 0.0,
+   "heavy_atoms_added_by_tleap": [
+    "LYS9.CD",
+    "LYS9.CE",
+    "LYS9.CG",
+    "LYS9.NZ",
+    "LYS45.CE",
+    "LYS45.NZ",
+    "ASP52.OD1",
+    "ASP52.OD2",
+    "LYS80.CE",
+    "LYS80.NZ",
+    "ASP165.CG",
+    "ASP165.OD1",
+    "ASP165.OD2",
+    "LYS168.NZ",
+    "LYS170.NZ",
+    "LYS213.NZ",
+    "LYS228.CE",
+    "LYS228.NZ",
+    "LYS261.CD",
+    "LYS261.CE",
+    "LYS261.CG",
+    "LYS261.NZ"
+   ],
+   "built_atom_contacts": [
+    {
+     "atom": "LYS9.CD",
+     "nearest": "HIE10.N",
+     "dist_A": 5.1
+    },
+    {
+     "atom": "LYS9.CE",
+     "nearest": "HOH.O (residue index 360)",
+     "dist_A": 5.71
+    },
+    {
+     "atom": "LYS9.CG",
+     "nearest": "HIE10.N",
+     "dist_A": 3.89
+    },
+    {
+     "atom": "LYS9.NZ",
+     "nearest": "HOH.O (residue index 360)",
+     "dist_A": 7.16
+    },
+    {
+     "atom": "LYS45.CE",
+     "nearest": "SER43.O",
+     "dist_A": 4.05
+    },
+    {
+     "atom": "LYS45.NZ",
+     "nearest": "SER43.O",
+     "dist_A": 4.6
+    },
+    {
+     "atom": "ASP52.OD1",
+     "nearest": "GLN53.CG",
+     "dist_A": 3.23
+    },
+    {
+     "atom": "ASP52.OD2",
+     "nearest": "HOH.O (residue index 362)",
+     "dist_A": 3.43
+    },
+    {
+     "atom": "LYS80.CE",
+     "nearest": "THR87.OG1",
+     "dist_A": 2.82
+    },
+    {
+     "atom": "LYS80.NZ",
+     "nearest": "THR87.OG1",
+     "dist_A": 3.6
+    },
+    {
+     "atom": "ASP165.CG",
+     "nearest": "HOH.O (residue index 278)",
+     "dist_A": 2.7
+    },
+    {
+     "atom": "ASP165.OD1",
+     "nearest": "HOH.O (residue index 278)",
+     "dist_A": 2.36
+    },
+    {
+     "atom": "ASP165.OD2",
+     "nearest": "HOH.O (residue index 278)",
+     "dist_A": 3.05
+    },
+    {
+     "atom": "LYS168.NZ",
+     "nearest": "HOH.O (residue index 455)",
+     "dist_A": 3.16
+    },
+    {
+     "atom": "LYS170.NZ",
+     "nearest": "HOH.O (residue index 367)",
+     "dist_A": 3.86
+    },
+    {
+     "atom": "LYS213.NZ",
+     "nearest": "PHE260.CE2",
+     "dist_A": 3.45
+    },
+    {
+     "atom": "LYS228.CE",
+     "nearest": "HOH.O (residue index 366)",
+     "dist_A": 4.07
+    },
+    {
+     "atom": "LYS228.NZ",
+     "nearest": "HOH.O (residue index 402)",
+     "dist_A": 4.76
+    },
+    {
+     "atom": "LYS261.CD",
+     "nearest": "TYR40.CD2",
+     "dist_A": 5.49
+    },
+    {
+     "atom": "LYS261.CE",
+     "nearest": "TYR40.CD2",
+     "dist_A": 6.21
+    },
+    {
+     "atom": "LYS261.CG",
+     "nearest": "TYR40.CD2",
+     "dist_A": 4.85
+    },
+    {
+     "atom": "LYS261.NZ",
+     "nearest": "TYR40.CE2",
+     "dist_A": 7.12
+    }
+   ],
+   "hydrogens": {
+    "HIS3": {
+     "residue_name": "HIE",
+     "ring_NH": [
+      "HE2"
+     ],
+     "as_decided": true
+    },
+    "HIS4": {
+     "residue_name": "HID",
+     "ring_NH": [
+      "HD1"
+     ],
+     "as_decided": true
+    },
+    "HIS10": {
+     "residue_name": "HIE",
+     "ring_NH": [
+      "HE2"
+     ],
+     "as_decided": true
+    },
+    "HIS15": {
+     "residue_name": "HIE",
+     "ring_NH": [
+      "HE2"
+     ],
+     "as_decided": true
+    },
+    "HIS17": {
+     "residue_name": "HIE",
+     "ring_NH": [
+      "HE2"
+     ],
+     "as_decided": true
+    },
+    "HIS36": {
+     "residue_name": "HIE",
+     "ring_NH": [
+      "HE2"
+     ],
+     "as_decided": true
+    },
+    "HIS64": {
+     "residue_name": "HIE",
+     "ring_NH": [
+      "HE2"
+     ],
+     "as_decided": true
+    },
+    "HIS94": {
+     "residue_name": "HID",
+     "ring_NH": [
+      "HD1"
+     ],
+     "as_decided": true
+    },
+    "HIS96": {
+     "residue_name": "HID",
+     "ring_NH": [
+      "HD1"
+     ],
+     "as_decided": true
+    },
+    "HIS107": {
+     "residue_name": "HID",
+     "ring_NH": [
+      "HD1"
+     ],
+     "as_decided": true
+    },
+    "HIS119": {
+     "residue_name": "HIE",
+     "ring_NH": [
+      "HE2"
+     ],
+     "as_decided": true
+    },
+    "HIS122": {
+     "residue_name": "HID",
+     "ring_NH": [
+      "HD1"
+     ],
+     "as_decided": true
+    },
+    "GLU106": {
+     "residue_name": "GLU",
+     "carboxyl_H": [],
+     "as_decided": true
+    },
+    "GLU117": {
+     "residue_name": "GLU",
+     "as_decided": true
+    },
+    "THR199": {
+     "residue_name": "THR",
+     "hydrogens": [
+      "H",
+      "HA",
+      "HB",
+      "HG1",
+      "HG21",
+      "HG22",
+      "HG23"
+     ],
+     "as_decided": true,
+     "HG1_as_placed_by_tleap": {
+      "HG1_OE1_A": 1.71,
+      "OG1_HG1_OE1_deg": 158.2,
+      "HG1_OE2_A": 2.95,
+      "note": "tleap places hydroxyl hydrogens from the template, not by hydrogen bonds; the entry has HG1 1.81 A from OE1 (162 deg)"
+     }
+    },
+    "CYS206": {
+     "residue_name": "CYS",
+     "as_decided": true
+    },
+    "TYR7": {
+     "residue_name": "TYR",
+     "as_decided": true
+    },
+    "N_terminus": {
+     "first_residue": "ACE",
+     "atoms": [
+      "C",
+      "CH3",
+      "H1",
+      "H2",
+      "H3",
+      "O"
+     ],
+     "His3_N_hydrogens": [
+      "H"
+     ],
+     "as_decided": true
+    },
+    "C_terminus": {
+     "last_residue": "LYS",
+     "has_OXT": true,
+     "as_decided": true
+    }
+   },
+   "added_heavy_atoms_as_expected": true,
+   "hydrogens_as_decided": true,
+   "passed": true
+  },
+  "N": {
+   "returncode": 0,
+   "topology_written": true,
+   "log": {
+    "added_heavy": [
+     [
+      "LYS",
+      9,
+      "CG"
+     ],
+     [
+      "LYS",
+      9,
+      "CD"
+     ],
+     [
+      "LYS",
+      9,
+      "CE"
+     ],
+     [
+      "LYS",
+      9,
+      "NZ"
+     ],
+     [
+      "LYS",
+      45,
+      "CE"
+     ],
+     [
+      "LYS",
+      45,
+      "NZ"
+     ],
+     [
+      "ASP",
+      52,
+      "OD1"
+     ],
+     [
+      "ASP",
+      52,
+      "OD2"
+     ],
+     [
+      "LYS",
+      80,
+      "CE"
+     ],
+     [
+      "LYS",
+      80,
+      "NZ"
+     ],
+     [
+      "ASP",
+      164,
+      "CG"
+     ],
+     [
+      "ASP",
+      164,
+      "OD1"
+     ],
+     [
+      "ASP",
+      164,
+      "OD2"
+     ],
+     [
+      "LYS",
+      167,
+      "NZ"
+     ],
+     [
+      "LYS",
+      169,
+      "NZ"
+     ],
+     [
+      "LYS",
+      212,
+      "NZ"
+     ],
+     [
+      "LYS",
+      227,
+      "CE"
+     ],
+     [
+      "LYS",
+      227,
+      "NZ"
+     ],
+     [
+      "CLYS",
+      260,
+      "CG"
+     ],
+     [
+      "CLYS",
+      260,
+      "CD"
+     ],
+     [
+      "CLYS",
+      260,
+      "CE"
+     ],
+     [
+      "CLYS",
+      260,
+      "NZ"
+     ]
+    ],
+    "created_unknown": [],
+    "leap_summary": {
+     "total": 2035,
+     "heavy": 22,
+     "hydrogen": 2013
+    },
+    "total_charge": -2.0,
+    "errors": 0,
+    "warnings": 48,
+    "notes": 1,
+    "unknown_residue": false,
+    "fatal": false,
+    "close_contacts_reported": 45,
+    "close_contacts_between_hydrogens": 45,
+    "close_contacts_with_a_heavy_atom": [],
+    "shortest_close_contact_A": 0.897,
+    "other_warnings": [
+     "The unperturbed charge of the unit (-2.000000) is not zero.",
+     "Total unperturbed charge:  -2.000000"
+    ]
+   },
+   "atoms": 4720,
+   "residues": 474,
+   "protein_residues": 259,
+   "waters": 215,
+   "protein_atoms": 4075,
+   "protein_heavy_atoms": 2062,
+   "water_atoms": 645,
+   "net_charge": -2.0,
+   "protein_charge": -2.0,
+   "residue_names": {
+    "ACE": 1,
+    "ALA": 13,
+    "ARG": 7,
+    "ASN": 10,
+    "ASP": 19,
+    "CYS": 1,
+    "GLN": 11,
+    "GLU": 13,
+    "GLY": 22,
+    "HID": 5,
+    "HIE": 7,
+    "ILE": 9,
+    "LEU": 26,
+    "LYS": 24,
+    "MET": 1,
+    "PHE": 12,
+    "PRO": 17,
+    "SER": 17,
+    "THR": 12,
+    "TRP": 7,
+    "TYR": 8,
+    "VAL": 17,
+    "WAT": 215
+   },
+   "input_heavy_atoms": 2040,
+   "max_displacement_of_input_heavy_atoms_A": 0.0,
+   "heavy_atoms_added_by_tleap": [
+    "LYS9.CD",
+    "LYS9.CE",
+    "LYS9.CG",
+    "LYS9.NZ",
+    "LYS45.CE",
+    "LYS45.NZ",
+    "ASP52.OD1",
+    "ASP52.OD2",
+    "LYS80.CE",
+    "LYS80.NZ",
+    "ASP165.CG",
+    "ASP165.OD1",
+    "ASP165.OD2",
+    "LYS168.NZ",
+    "LYS170.NZ",
+    "LYS213.NZ",
+    "LYS228.CE",
+    "LYS228.NZ",
+    "LYS261.CD",
+    "LYS261.CE",
+    "LYS261.CG",
+    "LYS261.NZ"
+   ],
+   "built_atom_contacts": [
+    {
+     "atom": "LYS9.CD",
+     "nearest": "HIE10.N",
+     "dist_A": 5.1
+    },
+    {
+     "atom": "LYS9.CE",
+     "nearest": "HOH.O (residue index 360)",
+     "dist_A": 5.71
+    },
+    {
+     "atom": "LYS9.CG",
+     "nearest": "HIE10.N",
+     "dist_A": 3.89
+    },
+    {
+     "atom": "LYS9.NZ",
+     "nearest": "HOH.O (residue index 360)",
+     "dist_A": 7.16
+    },
+    {
+     "atom": "LYS45.CE",
+     "nearest": "SER43.O",
+     "dist_A": 4.05
+    },
+    {
+     "atom": "LYS45.NZ",
+     "nearest": "SER43.O",
+     "dist_A": 4.6
+    },
+    {
+     "atom": "ASP52.OD1",
+     "nearest": "GLN53.CG",
+     "dist_A": 3.23
+    },
+    {
+     "atom": "ASP52.OD2",
+     "nearest": "HOH.O (residue index 362)",
+     "dist_A": 3.43
+    },
+    {
+     "atom": "LYS80.CE",
+     "nearest": "THR87.OG1",
+     "dist_A": 2.82
+    },
+    {
+     "atom": "LYS80.NZ",
+     "nearest": "THR87.OG1",
+     "dist_A": 3.6
+    },
+    {
+     "atom": "ASP165.CG",
+     "nearest": "HOH.O (residue index 278)",
+     "dist_A": 2.7
+    },
+    {
+     "atom": "ASP165.OD1",
+     "nearest": "HOH.O (residue index 278)",
+     "dist_A": 2.36
+    },
+    {
+     "atom": "ASP165.OD2",
+     "nearest": "HOH.O (residue index 278)",
+     "dist_A": 3.05
+    },
+    {
+     "atom": "LYS168.NZ",
+     "nearest": "HOH.O (residue index 455)",
+     "dist_A": 3.16
+    },
+    {
+     "atom": "LYS170.NZ",
+     "nearest": "HOH.O (residue index 367)",
+     "dist_A": 3.86
+    },
+    {
+     "atom": "LYS213.NZ",
+     "nearest": "PHE260.CE2",
+     "dist_A": 3.45
+    },
+    {
+     "atom": "LYS228.CE",
+     "nearest": "HOH.O (residue index 366)",
+     "dist_A": 4.07
+    },
+    {
+     "atom": "LYS228.NZ",
+     "nearest": "HOH.O (residue index 402)",
+     "dist_A": 4.76
+    },
+    {
+     "atom": "LYS261.CD",
+     "nearest": "TYR40.CD2",
+     "dist_A": 5.49
+    },
+    {
+     "atom": "LYS261.CE",
+     "nearest": "TYR40.CD2",
+     "dist_A": 6.21
+    },
+    {
+     "atom": "LYS261.CG",
+     "nearest": "TYR40.CD2",
+     "dist_A": 4.85
+    },
+    {
+     "atom": "LYS261.NZ",
+     "nearest": "TYR40.CE2",
+     "dist_A": 7.12
+    }
+   ],
+   "hydrogens": {
+    "HIS3": {
+     "residue_name": "HIE",
+     "ring_NH": [
+      "HE2"
+     ],
+     "as_decided": true
+    },
+    "HIS4": {
+     "residue_name": "HID",
+     "ring_NH": [
+      "HD1"
+     ],
+     "as_decided": true
+    },
+    "HIS10": {
+     "residue_name": "HIE",
+     "ring_NH": [
+      "HE2"
+     ],
+     "as_decided": true
+    },
+    "HIS15": {
+     "residue_name": "HIE",
+     "ring_NH": [
+      "HE2"
+     ],
+     "as_decided": true
+    },
+    "HIS17": {
+     "residue_name": "HIE",
+     "ring_NH": [
+      "HE2"
+     ],
+     "as_decided": true
+    },
+    "HIS36": {
+     "residue_name": "HIE",
+     "ring_NH": [
+      "HE2"
+     ],
+     "as_decided": true
+    },
+    "HIS64": {
+     "residue_name": "HIE",
+     "ring_NH": [
+      "HE2"
+     ],
+     "as_decided": true
+    },
+    "HIS94": {
+     "residue_name": "HID",
+     "ring_NH": [
+      "HD1"
+     ],
+     "as_decided": true
+    },
+    "HIS96": {
+     "residue_name": "HID",
+     "ring_NH": [
+      "HD1"
+     ],
+     "as_decided": true
+    },
+    "HIS107": {
+     "residue_name": "HID",
+     "ring_NH": [
+      "HD1"
+     ],
+     "as_decided": true
+    },
+    "HIS119": {
+     "residue_name": "HIE",
+     "ring_NH": [
+      "HE2"
+     ],
+     "as_decided": true
+    },
+    "HIS122": {
+     "residue_name": "HID",
+     "ring_NH": [
+      "HD1"
+     ],
+     "as_decided": true
+    },
+    "GLU106": {
+     "residue_name": "GLU",
+     "carboxyl_H": [],
+     "as_decided": true
+    },
+    "GLU117": {
+     "residue_name": "GLU",
+     "as_decided": true
+    },
+    "THR199": {
+     "residue_name": "THR",
+     "hydrogens": [
+      "H",
+      "HA",
+      "HB",
+      "HG1",
+      "HG21",
+      "HG22",
+      "HG23"
+     ],
+     "as_decided": true,
+     "HG1_as_placed_by_tleap": {
+      "HG1_OE1_A": 1.71,
+      "OG1_HG1_OE1_deg": 158.2,
+      "HG1_OE2_A": 2.95,
+      "note": "tleap places hydroxyl hydrogens from the template, not by hydrogen bonds; the entry has HG1 1.81 A from OE1 (162 deg)"
+     }
+    },
+    "CYS206": {
+     "residue_name": "CYS",
+     "as_decided": true
+    },
+    "TYR7": {
+     "residue_name": "TYR",
+     "as_decided": true
+    },
+    "N_terminus": {
+     "first_residue": "ACE",
+     "atoms": [
+      "C",
+      "CH3",
+      "H1",
+      "H2",
+      "H3",
+      "O"
+     ],
+     "His3_N_hydrogens": [
+      "H"
+     ],
+     "as_decided": true
+    },
+    "C_terminus": {
+     "last_residue": "LYS",
+     "has_OXT": true,
+     "as_decided": true
+    }
+   },
+   "added_heavy_atoms_as_expected": true,
+   "hydrogens_as_decided": true,
+   "passed": true
+  },
+  "R": {
+   "returncode": 0,
+   "topology_written": true,
+   "log": {
+    "added_heavy": [
+     [
+      "LYS",
+      9,
+      "CG"
+     ],
+     [
+      "LYS",
+      9,
+      "CD"
+     ],
+     [
+      "LYS",
+      9,
+      "CE"
+     ],
+     [
+      "LYS",
+      9,
+      "NZ"
+     ],
+     [
+      "LYS",
+      45,
+      "CE"
+     ],
+     [
+      "LYS",
+      45,
+      "NZ"
+     ],
+     [
+      "ASP",
+      52,
+      "OD1"
+     ],
+     [
+      "ASP",
+      52,
+      "OD2"
+     ],
+     [
+      "LYS",
+      80,
+      "CE"
+     ],
+     [
+      "LYS",
+      80,
+      "NZ"
+     ],
+     [
+      "ASP",
+      164,
+      "CG"
+     ],
+     [
+      "ASP",
+      164,
+      "OD1"
+     ],
+     [
+      "ASP",
+      164,
+      "OD2"
+     ],
+     [
+      "LYS",
+      167,
+      "NZ"
+     ],
+     [
+      "LYS",
+      169,
+      "NZ"
+     ],
+     [
+      "LYS",
+      212,
+      "NZ"
+     ],
+     [
+      "LYS",
+      227,
+      "CE"
+     ],
+     [
+      "LYS",
+      227,
+      "NZ"
+     ],
+     [
+      "CLYS",
+      260,
+      "CG"
+     ],
+     [
+      "CLYS",
+      260,
+      "CD"
+     ],
+     [
+      "CLYS",
+      260,
+      "CE"
+     ],
+     [
+      "CLYS",
+      260,
+      "NZ"
+     ]
+    ],
+    "created_unknown": [],
+    "leap_summary": {
+     "total": 2035,
+     "heavy": 22,
+     "hydrogen": 2013
+    },
+    "total_charge": -2.0,
+    "errors": 0,
+    "warnings": 47,
+    "notes": 1,
+    "unknown_residue": false,
+    "fatal": false,
+    "close_contacts_reported": 44,
+    "close_contacts_between_hydrogens": 44,
+    "close_contacts_with_a_heavy_atom": [],
+    "shortest_close_contact_A": 0.897,
+    "other_warnings": [
+     "The unperturbed charge of the unit (-2.000000) is not zero.",
+     "Total unperturbed charge:  -2.000000"
+    ]
+   },
+   "atoms": 4708,
+   "residues": 470,
+   "protein_residues": 259,
+   "waters": 211,
+   "protein_atoms": 4075,
+   "protein_heavy_atoms": 2062,
+   "water_atoms": 633,
+   "net_charge": -2.0,
+   "protein_charge": -2.0,
+   "residue_names": {
+    "ACE": 1,
+    "ALA": 13,
+    "ARG": 7,
+    "ASN": 10,
+    "ASP": 19,
+    "CYS": 1,
+    "GLN": 11,
+    "GLU": 13,
+    "GLY": 22,
+    "HID": 5,
+    "HIE": 7,
+    "ILE": 9,
+    "LEU": 26,
+    "LYS": 24,
+    "MET": 1,
+    "PHE": 12,
+    "PRO": 17,
+    "SER": 17,
+    "THR": 12,
+    "TRP": 7,
+    "TYR": 8,
+    "VAL": 17,
+    "WAT": 211
+   },
+   "input_heavy_atoms": 2040,
+   "max_displacement_of_input_heavy_atoms_A": 0.0,
+   "heavy_atoms_added_by_tleap": [
+    "LYS9.CD",
+    "LYS9.CE",
+    "LYS9.CG",
+    "LYS9.NZ",
+    "LYS45.CE",
+    "LYS45.NZ",
+    "ASP52.OD1",
+    "ASP52.OD2",
+    "LYS80.CE",
+    "LYS80.NZ",
+    "ASP165.CG",
+    "ASP165.OD1",
+    "ASP165.OD2",
+    "LYS168.NZ",
+    "LYS170.NZ",
+    "LYS213.NZ",
+    "LYS228.CE",
+    "LYS228.NZ",
+    "LYS261.CD",
+    "LYS261.CE",
+    "LYS261.CG",
+    "LYS261.NZ"
+   ],
+   "built_atom_contacts": [
+    {
+     "atom": "LYS9.CD",
+     "nearest": "HIE10.N",
+     "dist_A": 5.1
+    },
+    {
+     "atom": "LYS9.CE",
+     "nearest": "HOH.O (residue index 359)",
+     "dist_A": 5.71
+    },
+    {
+     "atom": "LYS9.CG",
+     "nearest": "HIE10.N",
+     "dist_A": 3.89
+    },
+    {
+     "atom": "LYS9.NZ",
+     "nearest": "HOH.O (residue index 359)",
+     "dist_A": 7.16
+    },
+    {
+     "atom": "LYS45.CE",
+     "nearest": "SER43.O",
+     "dist_A": 4.05
+    },
+    {
+     "atom": "LYS45.NZ",
+     "nearest": "SER43.O",
+     "dist_A": 4.6
+    },
+    {
+     "atom": "ASP52.OD1",
+     "nearest": "GLN53.CG",
+     "dist_A": 3.23
+    },
+    {
+     "atom": "ASP52.OD2",
+     "nearest": "HOH.O (residue index 361)",
+     "dist_A": 3.43
+    },
+    {
+     "atom": "LYS80.CE",
+     "nearest": "THR87.OG1",
+     "dist_A": 2.82
+    },
+    {
+     "atom": "LYS80.NZ",
+     "nearest": "THR87.OG1",
+     "dist_A": 3.6
+    },
+    {
+     "atom": "ASP165.CG",
+     "nearest": "HOH.O (residue index 278)",
+     "dist_A": 2.7
+    },
+    {
+     "atom": "ASP165.OD1",
+     "nearest": "HOH.O (residue index 278)",
+     "dist_A": 2.36
+    },
+    {
+     "atom": "ASP165.OD2",
+     "nearest": "HOH.O (residue index 278)",
+     "dist_A": 3.05
+    },
+    {
+     "atom": "LYS168.NZ",
+     "nearest": "HOH.O (residue index 451)",
+     "dist_A": 3.16
+    },
+    {
+     "atom": "LYS170.NZ",
+     "nearest": "HOH.O (residue index 366)",
+     "dist_A": 3.86
+    },
+    {
+     "atom": "LYS213.NZ",
+     "nearest": "PHE260.CE2",
+     "dist_A": 3.45
+    },
+    {
+     "atom": "LYS228.CE",
+     "nearest": "HOH.O (residue index 365)",
+     "dist_A": 4.07
+    },
+    {
+     "atom": "LYS228.NZ",
+     "nearest": "HOH.O (residue index 400)",
+     "dist_A": 4.76
+    },
+    {
+     "atom": "LYS261.CD",
+     "nearest": "TYR40.CD2",
+     "dist_A": 5.49
+    },
+    {
+     "atom": "LYS261.CE",
+     "nearest": "TYR40.CD2",
+     "dist_A": 6.21
+    },
+    {
+     "atom": "LYS261.CG",
+     "nearest": "TYR40.CD2",
+     "dist_A": 4.85
+    },
+    {
+     "atom": "LYS261.NZ",
+     "nearest": "TYR40.CE2",
+     "dist_A": 7.12
+    }
+   ],
+   "hydrogens": {
+    "HIS3": {
+     "residue_name": "HIE",
+     "ring_NH": [
+      "HE2"
+     ],
+     "as_decided": true
+    },
+    "HIS4": {
+     "residue_name": "HID",
+     "ring_NH": [
+      "HD1"
+     ],
+     "as_decided": true
+    },
+    "HIS10": {
+     "residue_name": "HIE",
+     "ring_NH": [
+      "HE2"
+     ],
+     "as_decided": true
+    },
+    "HIS15": {
+     "residue_name": "HIE",
+     "ring_NH": [
+      "HE2"
+     ],
+     "as_decided": true
+    },
+    "HIS17": {
+     "residue_name": "HIE",
+     "ring_NH": [
+      "HE2"
+     ],
+     "as_decided": true
+    },
+    "HIS36": {
+     "residue_name": "HIE",
+     "ring_NH": [
+      "HE2"
+     ],
+     "as_decided": true
+    },
+    "HIS64": {
+     "residue_name": "HIE",
+     "ring_NH": [
+      "HE2"
+     ],
+     "as_decided": true
+    },
+    "HIS94": {
+     "residue_name": "HID",
+     "ring_NH": [
+      "HD1"
+     ],
+     "as_decided": true
+    },
+    "HIS96": {
+     "residue_name": "HID",
+     "ring_NH": [
+      "HD1"
+     ],
+     "as_decided": true
+    },
+    "HIS107": {
+     "residue_name": "HID",
+     "ring_NH": [
+      "HD1"
+     ],
+     "as_decided": true
+    },
+    "HIS119": {
+     "residue_name": "HIE",
+     "ring_NH": [
+      "HE2"
+     ],
+     "as_decided": true
+    },
+    "HIS122": {
+     "residue_name": "HID",
+     "ring_NH": [
+      "HD1"
+     ],
+     "as_decided": true
+    },
+    "GLU106": {
+     "residue_name": "GLU",
+     "carboxyl_H": [],
+     "as_decided": true
+    },
+    "GLU117": {
+     "residue_name": "GLU",
+     "as_decided": true
+    },
+    "THR199": {
+     "residue_name": "THR",
+     "hydrogens": [
+      "H",
+      "HA",
+      "HB",
+      "HG1",
+      "HG21",
+      "HG22",
+      "HG23"
+     ],
+     "as_decided": true,
+     "HG1_as_placed_by_tleap": {
+      "HG1_OE1_A": 1.71,
+      "OG1_HG1_OE1_deg": 158.2,
+      "HG1_OE2_A": 2.95,
+      "note": "tleap places hydroxyl hydrogens from the template, not by hydrogen bonds; the entry has HG1 1.81 A from OE1 (162 deg)"
+     }
+    },
+    "CYS206": {
+     "residue_name": "CYS",
+     "as_decided": true
+    },
+    "TYR7": {
+     "residue_name": "TYR",
+     "as_decided": true
+    },
+    "N_terminus": {
+     "first_residue": "ACE",
+     "atoms": [
+      "C",
+      "CH3",
+      "H1",
+      "H2",
+      "H3",
+      "O"
+     ],
+     "His3_N_hydrogens": [
+      "H"
+     ],
+     "as_decided": true
+    },
+    "C_terminus": {
+     "last_residue": "LYS",
+     "has_OXT": true,
+     "as_decided": true
+    }
+   },
+   "added_heavy_atoms_as_expected": true,
+   "hydrogens_as_decided": true,
+   "passed": true
+  }
+ },
+ "gate_tleap_load_ok": true
+}

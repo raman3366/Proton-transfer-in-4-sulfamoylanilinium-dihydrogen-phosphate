@@ -1,0 +1,255 @@
+{
+  "source": "T4_3HS4",
+  "variant": "T4_3HS4_glu106GLU",
+  "chain": "A",
+  "resnum": 106,
+  "note": "single-residue deprotonation of an existing receptor (GLH -> GLU); nothing else changed; serial numbers of the other atoms kept, so one number is unused",
+  "receptor.pdbqt": {
+    "residue": "A:GLU106",
+    "frm": "GLH (neutral acid)",
+    "to": "GLU (carboxylate)",
+    "proton_removed": {
+      "name": "HE2",
+      "on": "OE2",
+      "serial": 1005,
+      "xyz": [
+        -2.969,
+        -4.507,
+        16.654
+      ],
+      "charge": 0.296,
+      "type": "HD"
+    },
+    "atoms_retyped_or_recharged": {
+      "CB": {
+        "before": {
+          "charge": 0.047,
+          "type": "C"
+        },
+        "after": {
+          "charge": 0.041,
+          "type": "C"
+        }
+      },
+      "CG": {
+        "before": {
+          "charge": 0.125,
+          "type": "C"
+        },
+        "after": {
+          "charge": 0.055,
+          "type": "C"
+        }
+      },
+      "CD": {
+        "before": {
+          "charge": 0.303,
+          "type": "C"
+        },
+        "after": {
+          "charge": 0.041,
+          "type": "C"
+        }
+      },
+      "OE1": {
+        "before": {
+          "charge": -0.252,
+          "type": "OA"
+        },
+        "after": {
+          "charge": -0.548,
+          "type": "OA"
+        }
+      },
+      "OE2": {
+        "before": {
+          "charge": -0.479,
+          "type": "OA"
+        },
+        "after": {
+          "charge": -0.549,
+          "type": "OA"
+        }
+      }
+    },
+    "atoms_unchanged": [
+      "C",
+      "CA",
+      "H",
+      "N",
+      "O"
+    ],
+    "residue_charge_before": 0.0,
+    "residue_charge_after": -1.0,
+    "pattern_source": {
+      "n_reference_residues": 12,
+      "reference_residues": [
+        "A:GLU14",
+        "A:GLU26",
+        "A:GLU69",
+        "A:GLU117",
+        "A:GLU187",
+        "A:GLU205",
+        "A:GLU214",
+        "A:GLU221",
+        "A:GLU234",
+        "A:GLU236",
+        "A:GLU238",
+        "A:GLU239"
+      ],
+      "all_identical": true,
+      "pattern": {
+        "C": {
+          "charge": 0.242,
+          "type": "C"
+        },
+        "CA": {
+          "charge": 0.171,
+          "type": "C"
+        },
+        "CB": {
+          "charge": 0.041,
+          "type": "C"
+        },
+        "CD": {
+          "charge": 0.041,
+          "type": "C"
+        },
+        "CG": {
+          "charge": 0.055,
+          "type": "C"
+        },
+        "H": {
+          "charge": 0.164,
+          "type": "HD"
+        },
+        "N": {
+          "charge": -0.344,
+          "type": "N"
+        },
+        "O": {
+          "charge": -0.273,
+          "type": "OA"
+        },
+        "OE1": {
+          "charge": -0.548,
+          "type": "OA"
+        },
+        "OE2": {
+          "charge": -0.549,
+          "type": "OA"
+        }
+      }
+    },
+    "receptor_total_charge_before": 2.0,
+    "receptor_total_charge_after": 1.0,
+    "file_check": {
+      "n_lines_source": 2498,
+      "n_lines_variant": 2497,
+      "n_lines_removed_or_rewritten": 6,
+      "n_lines_new": 5,
+      "all_differences_inside_the_residue": true,
+      "other_lines_byte_identical_and_in_order": true
+    }
+  },
+  "receptor.pdb": {
+    "residue": "A:GLU106",
+    "proton_removed": {
+      "name": "HE2",
+      "serial": 1589
+    },
+    "file_check": {
+      "n_lines_source": 4057,
+      "n_lines_variant": 4056,
+      "n_lines_removed_or_rewritten": 1,
+      "n_lines_new": 0,
+      "all_differences_inside_the_residue": true,
+      "other_lines_byte_identical_and_in_order": true
+    }
+  },
+  "receptor.pdbqt_sha256": {
+    "source": "5e9ade1962a707f501dd19bbd30c4fa38536005ccf5d1a6b77ebfefcadfe2f80",
+    "variant": "ee2972fda41fbbcbca3056d1301ed79003bda58f81ce6a68e14bc2e6d683491f"
+  },
+  "receptor.pdb_sha256": {
+    "source": "7e1f6e0d745f8da1fe401dd912df546b51d5545c7fb303e895d970a2a9fc42b1",
+    "variant": "0a110af0cc830ea74b62c7da497f7827fa9cf681f31a44f1ac9d5beb4b646ea6"
+  },
+  "geometry": {
+    "measured_on": "T4_3HS4/receptor.pdbqt (polar hydrogens; identical in the variant)",
+    "polar_H_within_3p2A_of_the_carboxylate": [
+      {
+        "hydrogen": "THR199 HG1",
+        "donor": "THR199 OG1",
+        "H_to_OE1_A": 1.67,
+        "H_to_OE2_A": 2.96,
+        "nearer_oxygen": "OE1",
+        "donor_to_that_oxygen_A": 2.58,
+        "angle_D_H_O_deg": 153.4,
+        "hydrogen_bond": true
+      },
+      {
+        "hydrogen": "ARG246 H",
+        "donor": "ARG246 N",
+        "H_to_OE1_A": 3.84,
+        "H_to_OE2_A": 1.81,
+        "nearer_oxygen": "OE2",
+        "donor_to_that_oxygen_A": 2.79,
+        "angle_D_H_O_deg": 161.8,
+        "hydrogen_bond": true
+      }
+    ],
+    "removed_proton": {
+      "name": "HE2",
+      "O_H_A": 0.964,
+      "nearest_heavy_atoms_of_other_residues": [
+        {
+          "atom": "THR199 OG1",
+          "distance_A": 2.63
+        },
+        {
+          "atom": "HIS96 CE1",
+          "distance_A": 3.03
+        },
+        {
+          "atom": "HIS96 ND1",
+          "distance_A": 3.19
+        },
+        {
+          "atom": "THR199 CB",
+          "distance_A": 3.21
+        },
+        {
+          "atom": "ARG246 N",
+          "distance_A": 3.38
+        }
+      ]
+    },
+    "carboxylate_bond_lengths_A": {
+      "CD_OE1": 1.207,
+      "CD_OE2": 1.329,
+      "note": "heavy atoms not moved: the lengths are those of the minimised acid"
+    },
+    "zinc_distances_A": {
+      "OE1": 3.97,
+      "OE2": 5.41,
+      "HE2": 4.89
+    },
+    "distance_to_co_crystal_ligand": {
+      "ref_AZM.sdf": {
+        "HE2": {
+          "distance_A": 4.68,
+          "ligand_atom": "N"
+        },
+        "OE1": {
+          "distance_A": 4.08,
+          "ligand_atom": "N"
+        },
+        "OE2": {
+          "distance_A": 5.42,
+          "ligand_atom": "N"
+        }
+      }
+    }
+  }
+}

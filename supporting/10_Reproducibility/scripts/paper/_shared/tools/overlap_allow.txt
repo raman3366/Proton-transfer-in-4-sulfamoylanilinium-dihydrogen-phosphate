@@ -1,0 +1,52 @@
+# overlap_allow.txt -- boilerplate that overlap.py may ignore.
+#
+# plain line        phrase; normalised like the text (lower case, numbers dropped, punctuation ignored) and
+#                   removed from every text before n-grams are formed. The n-grams bridge the gap, so text
+#                   copied around an allowed phrase is still found. Keep entries short and genuinely unavoidable.
+# re: <regex>       the same, as a regex over the normalised text (lower-case words joined by single spaces)
+# !skip-tables      manuscript pipe-table rows are not checked (captions are)
+# !skip-section RX  manuscript sections whose heading (number stripped) matches RX are not checked
+# !exclude-source G repo-relative glob of prior-text sources to ignore
+#
+# Add a phrase here only after checking that no rewording is possible (model names, fixed publisher wording).
+
+!skip-tables
+# back matter: standard publisher wording, identical by design in this paper and the four cqc-dft papers
+!skip-section ^credit
+!skip-section ^declaration
+!skip-section ^data availability
+!skip-section ^acknowledg
+!skip-section ^funding
+!skip-section ^references
+# description of the supplementary material (Elsevier: Appendix A; 5 Oct 2026): it repeats the SI headings by design
+!skip-section ^appendix
+# ACS Omega back matter (29 Sep 2026; used with build.py --journal acs-omega), for the same reason
+!skip-section ^associated content
+!skip-section ^author information
+!skip-section ^for table of contents
+
+# model and method names fixed by STYLE.md (SAPH)
+B3LYP-D3(BJ)/6-311++G(d,p)
+CAM-B3LYP/6-311++G(d,p)
+4-sulfamoylanilinium dihydrogen phosphate
+B3LYP/6-311++G(d,p)
+IEF-PCM (water)
+gas phase and IEF-PCM (water)
+in the gas phase and in IEF-PCM (water)
+
+# Elsevier declarations, in case they appear outside their own sections
+The authors declare that they have no known competing financial interests or personal relationships that could have appeared to influence the work reported in this paper.
+During the preparation of this work the author(s) used
+After using this tool/service, the author(s) reviewed and edited the content as needed and take(s) full responsibility for the content of the publication.
+Data will be made available on request.
+Proton transfer in 4-sulfamoylanilinium dihydrogen phosphate: a combined molecular and periodic DFT study with molecular docking
+
+# disclosure of the AI tool (Guide for Authors of the Journal of Molecular Graphics and Modelling, 12 Oct 2026: "in
+# each image caption"; Elsevier's policy: tool, version and developer in the Methods). Fixed wording, repeated by
+# design at the end of the figure captions of both documents and in Sections 2.6 and S1.
+Drawn by a script written and run with the generative AI tool Claude
+written and run with the generative artificial-intelligence tool Claude
+Claude Opus 5.5 in Claude Code; Anthropic
+under the authors' direction; no image-generation tool was used
+under the authors' direction
+no image-generation tool was used

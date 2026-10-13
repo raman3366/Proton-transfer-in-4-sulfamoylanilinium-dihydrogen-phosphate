@@ -1,0 +1,1823 @@
+{
+  "provenance": {
+    "script": "tddft.py",
+    "argv": [
+      "sfa_pair_pcm_d3",
+      "--xc",
+      "camb3lyp",
+      "--solvation",
+      "noneq"
+    ],
+    "case": "sfa_pair_pcm_d3",
+    "case_file": "molecules/sfa/cases/sfa_pair_pcm_d3.json",
+    "charge": 0,
+    "spin": 0,
+    "basis": "6-311++G(d,p)",
+    "grid_level": 4,
+    "environment": "IEF-PCM (water, eps = 78.3553, Lebedev order 29)",
+    "case_xc": "b3lyp",
+    "case_disp": "d3bj",
+    "density_fitting": true,
+    "pyscf_version": "2.14.0",
+    "threads": 12,
+    "host": "cqc-dft-01",
+    "finished": "2026-09-28T13:24:51",
+    "geometry": "molecules/sfa/results/sfa_pair_pcm_d3/opt.xyz",
+    "geometry_sha256": "a21dd40f42c1ec9fc8ddab752a9067f7c6c816d8d881afab0c3d53a8cbb6e870",
+    "proton": {
+      "d_H_N_A": 1.0974250194056019,
+      "d_H_O_A": 1.4840939777321678,
+      "on": "N (ionic pair)"
+    },
+    "wall_min": 376.39,
+    "td_wall_min": 374.09
+  },
+  "functional": "CAM-B3LYP",
+  "xc_pyscf": "camb3lyp",
+  "td_method": "TDDFT (RPA)",
+  "solvation": "noneq",
+  "environment": "IEF-PCM (water, eps = 78.3553, Lebedev order 29); non-equilibrium, optical eps_inf = 1.78 (PySCF)",
+  "nstates": 20,
+  "all_converged": true,
+  "ground_state_E_Ha": -1535.7280567334285,
+  "HOMO_eV": -9.187437068949201,
+  "LUMO_eV": -0.4522751096284738,
+  "n_occ": 70,
+  "fragments": [
+    "4-sulfamoylanilinium cation",
+    "dihydrogen phosphate anion"
+  ],
+  "S1_eV": 5.345320304096092,
+  "S1_nm": 231.9490532774837,
+  "S1_f": 0.01537976603203832,
+  "first_bright_state": 1,
+  "first_bright_eV": 5.345320304096092,
+  "first_bright_nm": 231.9490532774837,
+  "spectrum_peak_nm": 185.04219615322887,
+  "spectrum_peak_eps": 114715.78105602946,
+  "spectrum_csv": "spectrum_camb3lyp_noneq.csv",
+  "fwhm_eV": 0.3,
+  "states": [
+    {
+      "state": 1,
+      "E_eV": 5.345320304096092,
+      "lambda_nm": 231.9490532774837,
+      "f": 0.01537976603203832,
+      "transition_dipole_au": [
+        0.2622025043887726,
+        -0.050256269523429375,
+        0.21485963291066207
+      ],
+      "dominant": [
+        {
+          "from_mo": 69,
+          "to_mo": 71,
+          "label": "H-1->L",
+          "weight": 0.607332834128891
+        },
+        {
+          "from_mo": 70,
+          "to_mo": 72,
+          "label": "H->L+1",
+          "weight": 0.31708827754859453
+        },
+        {
+          "from_mo": 68,
+          "to_mo": 72,
+          "label": "H-2->L+1",
+          "weight": 0.0324796031211648
+        }
+      ],
+      "nto_first_pair_weight": 0.5930115699824209,
+      "nto_pairs_for_90pct": 2,
+      "converged": true,
+      "ct": {
+        "omega_total_raw": 0.5490636101121343,
+        "D_CT_A": 0.05251976351665859,
+        "hole_centroid_A": [
+          3.344279813712431,
+          2.523591755009135,
+          1.6891381853850105
+        ],
+        "electron_centroid_A": [
+          3.3341083856693707,
+          2.545837821873272,
+          1.735613771669499
+        ],
+        "fragments": [
+          "4-sulfamoylanilinium cation",
+          "dihydrogen phosphate anion"
+        ],
+        "omega_frag": [
+          [
+            0.9929735258918476,
+            0.001536046525400694
+          ],
+          [
+            0.005431552695598255,
+            5.887488715338238e-05
+          ]
+        ],
+        "hole_on": {
+          "4-sulfamoylanilinium cation": 0.9945095724172484,
+          "dihydrogen phosphate anion": 0.005490427582751638
+        },
+        "electron_on": {
+          "4-sulfamoylanilinium cation": 0.9984050785874459,
+          "dihydrogen phosphate anion": 0.0015949214125540764
+        },
+        "CT_number": 0.006967599220998988
+      },
+      "nto1_hole_on": {
+        "4-sulfamoylanilinium cation": 0.9982559818560526,
+        "dihydrogen phosphate anion": 0.0017440181439424053
+      },
+      "nto1_particle_on": {
+        "4-sulfamoylanilinium cation": 0.9988934935103173,
+        "dihydrogen phosphate anion": 0.001106506489683794
+      }
+    },
+    {
+      "state": 2,
+      "E_eV": 5.8735379042394875,
+      "lambda_nm": 211.08946672585338,
+      "f": 0.1825589034761983,
+      "transition_dipole_au": [
+        0.07193487096329194,
+        -0.9199851925287873,
+        -0.6458423885847124
+      ],
+      "dominant": [
+        {
+          "from_mo": 70,
+          "to_mo": 71,
+          "label": "H->L",
+          "weight": 0.7422283613229944
+        },
+        {
+          "from_mo": 69,
+          "to_mo": 72,
+          "label": "H-1->L+1",
+          "weight": 0.1703114807589794
+        },
+        {
+          "from_mo": 68,
+          "to_mo": 71,
+          "label": "H-2->L",
+          "weight": 0.05187349153064675
+        }
+      ],
+      "nto_first_pair_weight": 0.7682410386354641,
+      "nto_pairs_for_90pct": 2,
+      "converged": true,
+      "ct": {
+        "omega_total_raw": 0.486622592870477,
+        "D_CT_A": 0.15865864889247616,
+        "hole_centroid_A": [
+          3.3663107292039376,
+          2.739472800483478,
+          1.6866693654177243
+        ],
+        "electron_centroid_A": [
+          3.3262368300414695,
+          2.7211796689818977,
+          1.8390898719585709
+        ],
+        "fragments": [
+          "4-sulfamoylanilinium cation",
+          "dihydrogen phosphate anion"
+        ],
+        "omega_frag": [
+          [
+            0.972557796933009,
+            0.0018942799129981547
+          ],
+          [
+            0.024843519586252243,
+            0.0007044035677406244
+          ]
+        ],
+        "hole_on": {
+          "4-sulfamoylanilinium cation": 0.9744520768460072,
+          "dihydrogen phosphate anion": 0.025547923153992867
+        },
+        "electron_on": {
+          "4-sulfamoylanilinium cation": 0.9974013165192612,
+          "dihydrogen phosphate anion": 0.002598683480738779
+        },
+        "CT_number": 0.02673779949925037
+      },
+      "nto1_hole_on": {
+        "4-sulfamoylanilinium cation": 0.9697742920258247,
+        "dihydrogen phosphate anion": 0.030225707974174423
+      },
+      "nto1_particle_on": {
+        "4-sulfamoylanilinium cation": 0.9978774759113112,
+        "dihydrogen phosphate anion": 0.0021225240886886395
+      }
+    },
+    {
+      "state": 3,
+      "E_eV": 6.694457322153745,
+      "lambda_nm": 185.20425545130178,
+      "f": 0.8730950765686034,
+      "transition_dipole_au": [
+        0.07379179048751837,
+        -1.7977337797731372,
+        -1.4443322400610483
+      ],
+      "dominant": [
+        {
+          "from_mo": 69,
+          "to_mo": 72,
+          "label": "H-1->L+1",
+          "weight": 0.7567677799073907
+        },
+        {
+          "from_mo": 70,
+          "to_mo": 71,
+          "label": "H->L",
+          "weight": 0.1654264071990066
+        }
+      ],
+      "nto_first_pair_weight": 0.7387206390048552,
+      "nto_pairs_for_90pct": 2,
+      "converged": true,
+      "ct": {
+        "omega_total_raw": 0.43437223368346756,
+        "D_CT_A": 0.17356225328011066,
+        "hole_centroid_A": [
+          3.3589214807421848,
+          2.685633193681478,
+          1.589909011324399
+        ],
+        "electron_centroid_A": [
+          3.3235138309566823,
+          2.526195270987678,
+          1.6486431828723345
+        ],
+        "fragments": [
+          "4-sulfamoylanilinium cation",
+          "dihydrogen phosphate anion"
+        ],
+        "omega_frag": [
+          [
+            0.9535687615275786,
+            0.005616826839200839
+          ],
+          [
+            0.035074358854944504,
+            0.005740052778276025
+          ]
+        ],
+        "hole_on": {
+          "4-sulfamoylanilinium cation": 0.9591855883667795,
+          "dihydrogen phosphate anion": 0.040814411633220526
+        },
+        "electron_on": {
+          "4-sulfamoylanilinium cation": 0.9886431203825231,
+          "dihydrogen phosphate anion": 0.011356879617476865
+        },
+        "CT_number": 0.040691185694145315
+      },
+      "nto1_hole_on": {
+        "4-sulfamoylanilinium cation": 0.9960277386069697,
+        "dihydrogen phosphate anion": 0.0039722613930232315
+      },
+      "nto1_particle_on": {
+        "4-sulfamoylanilinium cation": 0.9930351019528766,
+        "dihydrogen phosphate anion": 0.006964898047114646
+      }
+    },
+    {
+      "state": 4,
+      "E_eV": 6.70364974309595,
+      "lambda_nm": 184.95029297688265,
+      "f": 0.3987560252997022,
+      "transition_dipole_au": [
+        -1.2463767931767185,
+        0.4324676263665882,
+        -0.8291297790559689
+      ],
+      "dominant": [
+        {
+          "from_mo": 70,
+          "to_mo": 72,
+          "label": "H->L+1",
+          "weight": 0.5510373862367791
+        },
+        {
+          "from_mo": 69,
+          "to_mo": 71,
+          "label": "H-1->L",
+          "weight": 0.3468079989812404
+        },
+        {
+          "from_mo": 68,
+          "to_mo": 72,
+          "label": "H-2->L+1",
+          "weight": 0.03243041250779552
+        }
+      ],
+      "nto_first_pair_weight": 0.6004028480622926,
+      "nto_pairs_for_90pct": 2,
+      "converged": true,
+      "ct": {
+        "omega_total_raw": 0.42458386900091244,
+        "D_CT_A": 0.10754257834071905,
+        "hole_centroid_A": [
+          3.347036390436019,
+          2.652268739412687,
+          1.6143427267372892
+        ],
+        "electron_centroid_A": [
+          3.3093219025423664,
+          2.554743951708802,
+          1.639481130473434
+        ],
+        "fragments": [
+          "4-sulfamoylanilinium cation",
+          "dihydrogen phosphate anion"
+        ],
+        "omega_frag": [
+          [
+            0.9599684122470389,
+            0.006904494036830169
+          ],
+          [
+            0.030025531071024375,
+            0.003101562645106458
+          ]
+        ],
+        "hole_on": {
+          "4-sulfamoylanilinium cation": 0.966872906283869,
+          "dihydrogen phosphate anion": 0.03312709371613083
+        },
+        "electron_on": {
+          "4-sulfamoylanilinium cation": 0.9899939433180632,
+          "dihydrogen phosphate anion": 0.010006056681936626
+        },
+        "CT_number": 0.03693002510785448
+      },
+      "nto1_hole_on": {
+        "4-sulfamoylanilinium cation": 0.9578213374086418,
+        "dihydrogen phosphate anion": 0.04217866259135824
+      },
+      "nto1_particle_on": {
+        "4-sulfamoylanilinium cation": 0.9899084150576598,
+        "dihydrogen phosphate anion": 0.010091584942332612
+      }
+    },
+    {
+      "state": 5,
+      "E_eV": 6.969466803236072,
+      "lambda_nm": 177.89624644231247,
+      "f": 0.0273830863664814,
+      "transition_dipole_au": [
+        -0.14184884739598996,
+        -0.3503547681596736,
+        0.13229151969119918
+      ],
+      "dominant": [
+        {
+          "from_mo": 65,
+          "to_mo": 71,
+          "label": "H-5->L",
+          "weight": 0.8025057820736655
+        },
+        {
+          "from_mo": 62,
+          "to_mo": 71,
+          "label": "H-8->L",
+          "weight": 0.0478150706569202
+        }
+      ],
+      "nto_first_pair_weight": 0.943926519331775,
+      "nto_pairs_for_90pct": 1,
+      "converged": true,
+      "ct": {
+        "omega_total_raw": 0.4948665495692438,
+        "D_CT_A": 1.6128746824914857,
+        "hole_centroid_A": [
+          3.1262080208898957,
+          4.364189030905508,
+          2.8224693085218733
+        ],
+        "electron_centroid_A": [
+          3.32849384527834,
+          3.0274080265849395,
+          1.9430025762566951
+        ],
+        "fragments": [
+          "4-sulfamoylanilinium cation",
+          "dihydrogen phosphate anion"
+        ],
+        "omega_frag": [
+          [
+            0.9781267734348581,
+            0.0020447300413356257
+          ],
+          [
+            0.012715773960504348,
+            0.007112722563301681
+          ]
+        ],
+        "hole_on": {
+          "4-sulfamoylanilinium cation": 0.9801715034761938,
+          "dihydrogen phosphate anion": 0.019828496523806027
+        },
+        "electron_on": {
+          "4-sulfamoylanilinium cation": 0.9908425473953625,
+          "dihydrogen phosphate anion": 0.009157452604637305
+        },
+        "CT_number": 0.014760504001840036
+      },
+      "nto1_hole_on": {
+        "4-sulfamoylanilinium cation": 0.9903507194308104,
+        "dihydrogen phosphate anion": 0.00964928056917747
+      },
+      "nto1_particle_on": {
+        "4-sulfamoylanilinium cation": 0.9981964634456245,
+        "dihydrogen phosphate anion": 0.001803536554374306
+      }
+    },
+    {
+      "state": 6,
+      "E_eV": 7.022188087342624,
+      "lambda_nm": 176.56063446018973,
+      "f": 0.05120390404863102,
+      "transition_dipole_au": [
+        0.22599906639627781,
+        -0.49652045288740354,
+        -0.0043600681393719636
+      ],
+      "dominant": [
+        {
+          "from_mo": 68,
+          "to_mo": 73,
+          "label": "H-2->L+2",
+          "weight": 0.29531123460144515
+        },
+        {
+          "from_mo": 70,
+          "to_mo": 73,
+          "label": "H->L+2",
+          "weight": 0.23772728416863267
+        },
+        {
+          "from_mo": 68,
+          "to_mo": 74,
+          "label": "H-2->L+3",
+          "weight": 0.1827965230544494
+        },
+        {
+          "from_mo": 68,
+          "to_mo": 71,
+          "label": "H-2->L",
+          "weight": 0.061724024460602545
+        },
+        {
+          "from_mo": 68,
+          "to_mo": 76,
+          "label": "H-2->L+5",
+          "weight": 0.03687899282279943
+        },
+        {
+          "from_mo": 70,
+          "to_mo": 74,
+          "label": "H->L+3",
+          "weight": 0.02862517783260662
+        }
+      ],
+      "nto_first_pair_weight": 0.9037747339665714,
+      "nto_pairs_for_90pct": 1,
+      "converged": true,
+      "ct": {
+        "omega_total_raw": 0.49472958172606524,
+        "D_CT_A": 1.3559483925085916,
+        "hole_centroid_A": [
+          3.356094984371392,
+          1.838592791298472,
+          -3.100417681480801
+        ],
+        "electron_centroid_A": [
+          2.3702516435045253,
+          2.372423806027428,
+          -2.337703188286564
+        ],
+        "fragments": [
+          "4-sulfamoylanilinium cation",
+          "dihydrogen phosphate anion"
+        ],
+        "omega_frag": [
+          [
+            0.1048513037947626,
+            0.026020489868846863
+          ],
+          [
+            0.30151189727553485,
+            0.5676163090608556
+          ]
+        ],
+        "hole_on": {
+          "4-sulfamoylanilinium cation": 0.13087179366360946,
+          "dihydrogen phosphate anion": 0.8691282063363904
+        },
+        "electron_on": {
+          "4-sulfamoylanilinium cation": 0.40636320107029744,
+          "dihydrogen phosphate anion": 0.5936367989297024
+        },
+        "CT_number": 0.3275323871443817
+      },
+      "nto1_hole_on": {
+        "4-sulfamoylanilinium cation": 0.060604859897023446,
+        "dihydrogen phosphate anion": 0.9393951401029698
+      },
+      "nto1_particle_on": {
+        "4-sulfamoylanilinium cation": 0.3650334183708782,
+        "dihydrogen phosphate anion": 0.6349665816291208
+      }
+    },
+    {
+      "state": 7,
+      "E_eV": 7.056699008245166,
+      "lambda_nm": 175.69716131456755,
+      "f": 0.014361658300553326,
+      "transition_dipole_au": [
+        0.23612642806377532,
+        0.16145447380835395,
+        0.03531145583936542
+      ],
+      "dominant": [
+        {
+          "from_mo": 67,
+          "to_mo": 73,
+          "label": "H-3->L+2",
+          "weight": 0.4836576167337751
+        },
+        {
+          "from_mo": 67,
+          "to_mo": 74,
+          "label": "H-3->L+3",
+          "weight": 0.2528734908569491
+        },
+        {
+          "from_mo": 67,
+          "to_mo": 75,
+          "label": "H-3->L+4",
+          "weight": 0.04181929448213376
+        },
+        {
+          "from_mo": 67,
+          "to_mo": 76,
+          "label": "H-3->L+5",
+          "weight": 0.037054711345155
+        },
+        {
+          "from_mo": 67,
+          "to_mo": 71,
+          "label": "H-3->L",
+          "weight": 0.030197541364820606
+        },
+        {
+          "from_mo": 67,
+          "to_mo": 77,
+          "label": "H-3->L+6",
+          "weight": 0.021328620058557096
+        }
+      ],
+      "nto_first_pair_weight": 0.971760359596369,
+      "nto_pairs_for_90pct": 1,
+      "converged": true,
+      "ct": {
+        "omega_total_raw": 0.4950603648462197,
+        "D_CT_A": 1.7186480916769329,
+        "hole_centroid_A": [
+          2.989361659391148,
+          2.0392288916349752,
+          -3.915128102296679
+        ],
+        "electron_centroid_A": [
+          2.13686358707114,
+          2.748154687643748,
+          -2.6019554116467547
+        ],
+        "fragments": [
+          "4-sulfamoylanilinium cation",
+          "dihydrogen phosphate anion"
+        ],
+        "omega_frag": [
+          [
+            0.008751421403377884,
+            0.0034645130506564233
+          ],
+          [
+            0.2344935493734479,
+            0.7532905161725179
+          ]
+        ],
+        "hole_on": {
+          "4-sulfamoylanilinium cation": 0.012215934454034308,
+          "dihydrogen phosphate anion": 0.9877840655459658
+        },
+        "electron_on": {
+          "4-sulfamoylanilinium cation": 0.2432449707768258,
+          "dihydrogen phosphate anion": 0.7567550292231743
+        },
+        "CT_number": 0.23795806242410422
+      },
+      "nto1_hole_on": {
+        "4-sulfamoylanilinium cation": 0.006424167073404555,
+        "dihydrogen phosphate anion": 0.9935758329265996
+      },
+      "nto1_particle_on": {
+        "4-sulfamoylanilinium cation": 0.24282494775608354,
+        "dihydrogen phosphate anion": 0.7571750522439202
+      }
+    },
+    {
+      "state": 8,
+      "E_eV": 7.214958460683169,
+      "lambda_nm": 171.8432601873361,
+      "f": 0.009634668716521796,
+      "transition_dipole_au": [
+        -0.10069013579718322,
+        0.137573857912226,
+        -0.15950235457050294
+      ],
+      "dominant": [
+        {
+          "from_mo": 70,
+          "to_mo": 73,
+          "label": "H->L+2",
+          "weight": 0.38255377617859115
+        },
+        {
+          "from_mo": 68,
+          "to_mo": 71,
+          "label": "H-2->L",
+          "weight": 0.27455645724590827
+        },
+        {
+          "from_mo": 70,
+          "to_mo": 74,
+          "label": "H->L+3",
+          "weight": 0.0951235767664068
+        },
+        {
+          "from_mo": 68,
+          "to_mo": 73,
+          "label": "H-2->L+2",
+          "weight": 0.05438034652223334
+        }
+      ],
+      "nto_first_pair_weight": 0.6196153611179969,
+      "nto_pairs_for_90pct": 2,
+      "converged": true,
+      "ct": {
+        "omega_total_raw": 0.4980377240438086,
+        "D_CT_A": 3.0632751204220203,
+        "hole_centroid_A": [
+          3.467109958322893,
+          2.6184689044273903,
+          0.2291990453222011
+        ],
+        "electron_centroid_A": [
+          3.7616069959231697,
+          0.11645552124492252,
+          -1.5134584048432134
+        ],
+        "fragments": [
+          "4-sulfamoylanilinium cation",
+          "dihydrogen phosphate anion"
+        ],
+        "omega_frag": [
+          [
+            0.6389362906901355,
+            0.04045231979948601
+          ],
+          [
+            0.3002983178960652,
+            0.020313071614313793
+          ]
+        ],
+        "hole_on": {
+          "4-sulfamoylanilinium cation": 0.6793886104896215,
+          "dihydrogen phosphate anion": 0.320611389510379
+        },
+        "electron_on": {
+          "4-sulfamoylanilinium cation": 0.9392346085862007,
+          "dihydrogen phosphate anion": 0.0607653914137998
+        },
+        "CT_number": 0.34075063769555114
+      },
+      "nto1_hole_on": {
+        "4-sulfamoylanilinium cation": 0.9821174336708408,
+        "dihydrogen phosphate anion": 0.017882566329159178
+      },
+      "nto1_particle_on": {
+        "4-sulfamoylanilinium cation": 0.9311537019799542,
+        "dihydrogen phosphate anion": 0.06884629801996558
+      }
+    },
+    {
+      "state": 9,
+      "E_eV": 7.265011961939406,
+      "lambda_nm": 170.65931763022482,
+      "f": 0.008316263496405135,
+      "transition_dipole_au": [
+        0.0931004042306591,
+        0.18824529466482604,
+        0.05117967077967816
+      ],
+      "dominant": [
+        {
+          "from_mo": 68,
+          "to_mo": 71,
+          "label": "H-2->L",
+          "weight": 0.44773969259134
+        },
+        {
+          "from_mo": 68,
+          "to_mo": 73,
+          "label": "H-2->L+2",
+          "weight": 0.1435203715835052
+        },
+        {
+          "from_mo": 70,
+          "to_mo": 74,
+          "label": "H->L+3",
+          "weight": 0.10953380958763372
+        },
+        {
+          "from_mo": 70,
+          "to_mo": 73,
+          "label": "H->L+2",
+          "weight": 0.07811882905319477
+        },
+        {
+          "from_mo": 70,
+          "to_mo": 71,
+          "label": "H->L",
+          "weight": 0.03820376086603472
+        },
+        {
+          "from_mo": 63,
+          "to_mo": 71,
+          "label": "H-7->L",
+          "weight": 0.034731505224221124
+        }
+      ],
+      "nto_first_pair_weight": 0.705645464075931,
+      "nto_pairs_for_90pct": 2,
+      "converged": true,
+      "ct": {
+        "omega_total_raw": 0.4975413627302111,
+        "D_CT_A": 1.580279994148485,
+        "hole_centroid_A": [
+          3.4784188146486104,
+          2.2167889221757764,
+          -1.3815640476331335
+        ],
+        "electron_centroid_A": [
+          3.534573395955188,
+          1.683266614375363,
+          0.1048697618530271
+        ],
+        "fragments": [
+          "4-sulfamoylanilinium cation",
+          "dihydrogen phosphate anion"
+        ],
+        "omega_frag": [
+          [
+            0.357442413076511,
+            0.016002420729100172
+          ],
+          [
+            0.5360006532825558,
+            0.0905545129118331
+          ]
+        ],
+        "hole_on": {
+          "4-sulfamoylanilinium cation": 0.37344483380561116,
+          "dihydrogen phosphate anion": 0.6265551661943889
+        },
+        "electron_on": {
+          "4-sulfamoylanilinium cation": 0.8934430663590667,
+          "dihydrogen phosphate anion": 0.10655693364093327
+        },
+        "CT_number": 0.5520030740116559
+      },
+      "nto1_hole_on": {
+        "4-sulfamoylanilinium cation": 0.16179912829755208,
+        "dihydrogen phosphate anion": 0.8382008717024465
+      },
+      "nto1_particle_on": {
+        "4-sulfamoylanilinium cation": 0.8906485453338987,
+        "dihydrogen phosphate anion": 0.10935145466610055
+      }
+    },
+    {
+      "state": 10,
+      "E_eV": 7.309814900197279,
+      "lambda_nm": 169.61332139429945,
+      "f": 0.004484277877865255,
+      "transition_dipole_au": [
+        -0.052254856192125956,
+        0.13631000417863037,
+        0.06106268694714022
+      ],
+      "dominant": [
+        {
+          "from_mo": 69,
+          "to_mo": 73,
+          "label": "H-1->L+2",
+          "weight": 0.7103566450039506
+        },
+        {
+          "from_mo": 69,
+          "to_mo": 74,
+          "label": "H-1->L+3",
+          "weight": 0.09071583550290832
+        },
+        {
+          "from_mo": 69,
+          "to_mo": 75,
+          "label": "H-1->L+4",
+          "weight": 0.0460136077409552
+        },
+        {
+          "from_mo": 69,
+          "to_mo": 76,
+          "label": "H-1->L+5",
+          "weight": 0.02004216509480865
+        }
+      ],
+      "nto_first_pair_weight": 0.9851945684686095,
+      "nto_pairs_for_90pct": 1,
+      "converged": true,
+      "ct": {
+        "omega_total_raw": 0.4990164554683842,
+        "D_CT_A": 6.287814506577174,
+        "hole_centroid_A": [
+          3.3428486297899966,
+          2.468543024801118,
+          1.6655944567665906
+        ],
+        "electron_centroid_A": [
+          3.542064738176419,
+          -1.762487965198856,
+          -2.981479996364278
+        ],
+        "fragments": [
+          "4-sulfamoylanilinium cation",
+          "dihydrogen phosphate anion"
+        ],
+        "omega_frag": [
+          [
+            0.9242305004811933,
+            0.06890765377381239
+          ],
+          [
+            0.0036090990330024707,
+            0.0032527467119929793
+          ]
+        ],
+        "hole_on": {
+          "4-sulfamoylanilinium cation": 0.9931381542550056,
+          "dihydrogen phosphate anion": 0.00686184574499545
+        },
+        "electron_on": {
+          "4-sulfamoylanilinium cation": 0.9278395995141957,
+          "dihydrogen phosphate anion": 0.07216040048580537
+        },
+        "CT_number": 0.07251675280681491
+      },
+      "nto1_hole_on": {
+        "4-sulfamoylanilinium cation": 0.9969578017861778,
+        "dihydrogen phosphate anion": 0.0030421982138162705
+      },
+      "nto1_particle_on": {
+        "4-sulfamoylanilinium cation": 0.9297977547103624,
+        "dihydrogen phosphate anion": 0.0702022452895887
+      }
+    },
+    {
+      "state": 11,
+      "E_eV": 7.417723861936827,
+      "lambda_nm": 167.14588020216044,
+      "f": 0.007733419270473656,
+      "transition_dipole_au": [
+        -0.16761151195214358,
+        0.06856331132453758,
+        -0.09879115145545657
+      ],
+      "dominant": [
+        {
+          "from_mo": 64,
+          "to_mo": 71,
+          "label": "H-6->L",
+          "weight": 0.8647268747039669
+        },
+        {
+          "from_mo": 61,
+          "to_mo": 71,
+          "label": "H-9->L",
+          "weight": 0.05522302103762417
+        }
+      ],
+      "nto_first_pair_weight": 0.9883361967783371,
+      "nto_pairs_for_90pct": 1,
+      "converged": true,
+      "ct": {
+        "omega_total_raw": 0.49706321813837795,
+        "D_CT_A": 2.433191670714843,
+        "hole_centroid_A": [
+          2.7440978718985756,
+          4.941460270289044,
+          3.799525107220636
+        ],
+        "electron_centroid_A": [
+          3.323011100822318,
+          3.2477975823923697,
+          2.1512569617298034
+        ],
+        "fragments": [
+          "4-sulfamoylanilinium cation",
+          "dihydrogen phosphate anion"
+        ],
+        "omega_frag": [
+          [
+            0.9912001826331982,
+            0.0015698228099025884
+          ],
+          [
+            0.0069515124751855315,
+            0.0002784820817136537
+          ]
+        ],
+        "hole_on": {
+          "4-sulfamoylanilinium cation": 0.9927700054431008,
+          "dihydrogen phosphate anion": 0.007229994556899185
+        },
+        "electron_on": {
+          "4-sulfamoylanilinium cation": 0.9981516951083838,
+          "dihydrogen phosphate anion": 0.001848304891616242
+        },
+        "CT_number": 0.008521335285088139
+      },
+      "nto1_hole_on": {
+        "4-sulfamoylanilinium cation": 0.9938365798062961,
+        "dihydrogen phosphate anion": 0.006163420193701297
+      },
+      "nto1_particle_on": {
+        "4-sulfamoylanilinium cation": 0.998395206088787,
+        "dihydrogen phosphate anion": 0.001604793911210394
+      }
+    },
+    {
+      "state": 12,
+      "E_eV": 7.547794317485501,
+      "lambda_nm": 164.26547039414362,
+      "f": 0.001438575869470717,
+      "transition_dipole_au": [
+        0.0813261721761663,
+        0.01734829167524714,
+        -0.029404819861140928
+      ],
+      "dominant": [
+        {
+          "from_mo": 67,
+          "to_mo": 71,
+          "label": "H-3->L",
+          "weight": 0.6336155420527123
+        },
+        {
+          "from_mo": 66,
+          "to_mo": 71,
+          "label": "H-4->L",
+          "weight": 0.11427785767411017
+        },
+        {
+          "from_mo": 57,
+          "to_mo": 71,
+          "label": "H-13->L",
+          "weight": 0.09226634245827173
+        }
+      ],
+      "nto_first_pair_weight": 0.9016072310752417,
+      "nto_pairs_for_90pct": 1,
+      "converged": true,
+      "ct": {
+        "omega_total_raw": 0.4992328886210134,
+        "D_CT_A": 4.037325879679089,
+        "hole_centroid_A": [
+          2.951172438978174,
+          2.2389954919247277,
+          -2.6357106624691404
+        ],
+        "electron_centroid_A": [
+          3.2160199603391564,
+          2.5249921934113697,
+          1.38275445942681
+        ],
+        "fragments": [
+          "4-sulfamoylanilinium cation",
+          "dihydrogen phosphate anion"
+        ],
+        "omega_frag": [
+          [
+            0.1778338089593153,
+            0.0013079907572536294
+          ],
+          [
+            0.7777234651058238,
+            0.043134735177607256
+          ]
+        ],
+        "hole_on": {
+          "4-sulfamoylanilinium cation": 0.17914179971656893,
+          "dihydrogen phosphate anion": 0.820858200283431
+        },
+        "electron_on": {
+          "4-sulfamoylanilinium cation": 0.9555572740651391,
+          "dihydrogen phosphate anion": 0.044442725934860886
+        },
+        "CT_number": 0.7790314558630774
+      },
+      "nto1_hole_on": {
+        "4-sulfamoylanilinium cation": 0.15178976689074844,
+        "dihydrogen phosphate anion": 0.8482102331092565
+      },
+      "nto1_particle_on": {
+        "4-sulfamoylanilinium cation": 0.9871948277337192,
+        "dihydrogen phosphate anion": 0.012805172266278177
+      }
+    },
+    {
+      "state": 13,
+      "E_eV": 7.599515467465074,
+      "lambda_nm": 163.1475045097272,
+      "f": 0.005270631668228913,
+      "transition_dipole_au": [
+        -0.04195869353236206,
+        0.011226852713606659,
+        0.16254859345076544
+      ],
+      "dominant": [
+        {
+          "from_mo": 66,
+          "to_mo": 71,
+          "label": "H-4->L",
+          "weight": 0.35774204423278905
+        },
+        {
+          "from_mo": 67,
+          "to_mo": 71,
+          "label": "H-3->L",
+          "weight": 0.20830794323003593
+        },
+        {
+          "from_mo": 66,
+          "to_mo": 73,
+          "label": "H-4->L+2",
+          "weight": 0.11297190649987565
+        },
+        {
+          "from_mo": 70,
+          "to_mo": 74,
+          "label": "H->L+3",
+          "weight": 0.04621319757895973
+        },
+        {
+          "from_mo": 62,
+          "to_mo": 71,
+          "label": "H-8->L",
+          "weight": 0.03484962238512124
+        },
+        {
+          "from_mo": 66,
+          "to_mo": 74,
+          "label": "H-4->L+3",
+          "weight": 0.031152958799214026
+        }
+      ],
+      "nto_first_pair_weight": 0.7551121699729701,
+      "nto_pairs_for_90pct": 3,
+      "converged": true,
+      "ct": {
+        "omega_total_raw": 0.4975748185923591,
+        "D_CT_A": 2.528086570500013,
+        "hole_centroid_A": [
+          3.5052843503737927,
+          1.997100415535502,
+          -1.968135237297571
+        ],
+        "electron_centroid_A": [
+          3.1163718917160237,
+          2.575172917226336,
+          0.4620501445678102
+        ],
+        "fragments": [
+          "4-sulfamoylanilinium cation",
+          "dihydrogen phosphate anion"
+        ],
+        "omega_frag": [
+          [
+            0.19600185227195707,
+            0.005629196306563515
+          ],
+          [
+            0.6461745841531235,
+            0.15219436726835597
+          ]
+        ],
+        "hole_on": {
+          "4-sulfamoylanilinium cation": 0.2016310485785206,
+          "dihydrogen phosphate anion": 0.7983689514214795
+        },
+        "electron_on": {
+          "4-sulfamoylanilinium cation": 0.8421764364250806,
+          "dihydrogen phosphate anion": 0.1578235635749195
+        },
+        "CT_number": 0.651803780459687
+      },
+      "nto1_hole_on": {
+        "4-sulfamoylanilinium cation": 0.10218376571470379,
+        "dihydrogen phosphate anion": 0.8978162342852942
+      },
+      "nto1_particle_on": {
+        "4-sulfamoylanilinium cation": 0.8969757204048091,
+        "dihydrogen phosphate anion": 0.10302427959518724
+      }
+    },
+    {
+      "state": 14,
+      "E_eV": 7.611349584356941,
+      "lambda_nm": 162.89384297210023,
+      "f": 0.012349333516451568,
+      "transition_dipole_au": [
+        -0.025221773605135552,
+        0.19496665393105994,
+        -0.16606366822465762
+      ],
+      "dominant": [
+        {
+          "from_mo": 70,
+          "to_mo": 75,
+          "label": "H->L+4",
+          "weight": 0.26711656290666685
+        },
+        {
+          "from_mo": 66,
+          "to_mo": 71,
+          "label": "H-4->L",
+          "weight": 0.16480671872675792
+        },
+        {
+          "from_mo": 70,
+          "to_mo": 74,
+          "label": "H->L+3",
+          "weight": 0.1479055642908032
+        },
+        {
+          "from_mo": 66,
+          "to_mo": 73,
+          "label": "H-4->L+2",
+          "weight": 0.04656652328599202
+        },
+        {
+          "from_mo": 62,
+          "to_mo": 71,
+          "label": "H-8->L",
+          "weight": 0.04524877929158155
+        },
+        {
+          "from_mo": 68,
+          "to_mo": 74,
+          "label": "H-2->L+3",
+          "weight": 0.03731877520988203
+        }
+      ],
+      "nto_first_pair_weight": 0.5542027077765201,
+      "nto_pairs_for_90pct": 3,
+      "converged": true,
+      "ct": {
+        "omega_total_raw": 0.49569697660594203,
+        "D_CT_A": 0.9167077710446959,
+        "hole_centroid_A": [
+          3.4949464446304868,
+          2.7844613398744684,
+          0.4770378728446882
+        ],
+        "electron_centroid_A": [
+          2.6450937954124383,
+          2.505547759698612,
+          0.2762623093308848
+        ],
+        "fragments": [
+          "4-sulfamoylanilinium cation",
+          "dihydrogen phosphate anion"
+        ],
+        "omega_frag": [
+          [
+            0.6673954493479185,
+            0.016322089824485783
+          ],
+          [
+            0.26011609017772025,
+            0.05616637064987538
+          ]
+        ],
+        "hole_on": {
+          "4-sulfamoylanilinium cation": 0.6837175391724043,
+          "dihydrogen phosphate anion": 0.31628246082759565
+        },
+        "electron_on": {
+          "4-sulfamoylanilinium cation": 0.9275115395256388,
+          "dihydrogen phosphate anion": 0.07248846047436117
+        },
+        "CT_number": 0.2764381800022061
+      },
+      "nto1_hole_on": {
+        "4-sulfamoylanilinium cation": 0.8392811379729228,
+        "dihydrogen phosphate anion": 0.1607188620270788
+      },
+      "nto1_particle_on": {
+        "4-sulfamoylanilinium cation": 0.9439631135334702,
+        "dihydrogen phosphate anion": 0.05603688646652931
+      }
+    },
+    {
+      "state": 15,
+      "E_eV": 7.620303904189712,
+      "lambda_nm": 162.70243281482823,
+      "f": 0.0043769421809678605,
+      "transition_dipole_au": [
+        -0.09025202842023178,
+        0.036463288360684146,
+        -0.11819251793649074
+      ],
+      "dominant": [
+        {
+          "from_mo": 65,
+          "to_mo": 72,
+          "label": "H-5->L+1",
+          "weight": 0.6777400169511207
+        },
+        {
+          "from_mo": 68,
+          "to_mo": 72,
+          "label": "H-2->L+1",
+          "weight": 0.10011148709850586
+        },
+        {
+          "from_mo": 66,
+          "to_mo": 72,
+          "label": "H-4->L+1",
+          "weight": 0.03672616205499596
+        },
+        {
+          "from_mo": 66,
+          "to_mo": 71,
+          "label": "H-4->L",
+          "weight": 0.033667757631476676
+        },
+        {
+          "from_mo": 53,
+          "to_mo": 72,
+          "label": "H-17->L+1",
+          "weight": 0.027445679032189006
+        },
+        {
+          "from_mo": 62,
+          "to_mo": 72,
+          "label": "H-8->L+1",
+          "weight": 0.024462799863733262
+        }
+      ],
+      "nto_first_pair_weight": 0.9126136605364067,
+      "nto_pairs_for_90pct": 1,
+      "converged": true,
+      "ct": {
+        "omega_total_raw": 0.4983367480770578,
+        "D_CT_A": 1.3425977315586781,
+        "hole_centroid_A": [
+          3.246702536260041,
+          3.793871444209084,
+          1.7934817517251107
+        ],
+        "electron_centroid_A": [
+          3.297262154110286,
+          2.482931672711246,
+          1.5080884978900868
+        ],
+        "fragments": [
+          "4-sulfamoylanilinium cation",
+          "dihydrogen phosphate anion"
+        ],
+        "omega_frag": [
+          [
+            0.8398644767674325,
+            0.0022728192141089404
+          ],
+          [
+            0.13534443527306825,
+            0.022518268745390292
+          ]
+        ],
+        "hole_on": {
+          "4-sulfamoylanilinium cation": 0.8421372959815414,
+          "dihydrogen phosphate anion": 0.15786270401845853
+        },
+        "electron_on": {
+          "4-sulfamoylanilinium cation": 0.9752089120405008,
+          "dihydrogen phosphate anion": 0.024791087959499233
+        },
+        "CT_number": 0.1376172544871772
+      },
+      "nto1_hole_on": {
+        "4-sulfamoylanilinium cation": 0.897654461772352,
+        "dihydrogen phosphate anion": 0.10234553822763806
+      },
+      "nto1_particle_on": {
+        "4-sulfamoylanilinium cation": 0.9973213957425618,
+        "dihydrogen phosphate anion": 0.0026786042574283245
+      }
+    },
+    {
+      "state": 16,
+      "E_eV": 7.697275120504175,
+      "lambda_nm": 161.0754409306848,
+      "f": 0.0027443775731621394,
+      "transition_dipole_au": [
+        0.10042896741759101,
+        -0.05577242252671257,
+        0.036828435770109226
+      ],
+      "dominant": [
+        {
+          "from_mo": 68,
+          "to_mo": 72,
+          "label": "H-2->L+1",
+          "weight": 0.6234000987697864
+        },
+        {
+          "from_mo": 65,
+          "to_mo": 72,
+          "label": "H-5->L+1",
+          "weight": 0.08961257450309251
+        },
+        {
+          "from_mo": 70,
+          "to_mo": 72,
+          "label": "H->L+1",
+          "weight": 0.06250602721145411
+        },
+        {
+          "from_mo": 66,
+          "to_mo": 73,
+          "label": "H-4->L+2",
+          "weight": 0.04694371587695686
+        },
+        {
+          "from_mo": 63,
+          "to_mo": 72,
+          "label": "H-7->L+1",
+          "weight": 0.04327047093117617
+        },
+        {
+          "from_mo": 67,
+          "to_mo": 72,
+          "label": "H-3->L+1",
+          "weight": 0.034188415952138375
+        }
+      ],
+      "nto_first_pair_weight": 0.8856335716188273,
+      "nto_pairs_for_90pct": 2,
+      "converged": true,
+      "ct": {
+        "omega_total_raw": 0.49871604682661497,
+        "D_CT_A": 3.31164424155533,
+        "hole_centroid_A": [
+          3.415143907928938,
+          1.8788000048065094,
+          -2.205191824747489
+        ],
+        "electron_centroid_A": [
+          3.101459225380092,
+          2.3991646709506718,
+          1.0502359684602611
+        ],
+        "fragments": [
+          "4-sulfamoylanilinium cation",
+          "dihydrogen phosphate anion"
+        ],
+        "omega_frag": [
+          [
+            0.18857301359616246,
+            0.0032691449662334026
+          ],
+          [
+            0.7280011233222856,
+            0.08015671811531867
+          ]
+        ],
+        "hole_on": {
+          "4-sulfamoylanilinium cation": 0.19184215856239586,
+          "dihydrogen phosphate anion": 0.8081578414376043
+        },
+        "electron_on": {
+          "4-sulfamoylanilinium cation": 0.9165741369184481,
+          "dihydrogen phosphate anion": 0.08342586308155207
+        },
+        "CT_number": 0.731270268288519
+      },
+      "nto1_hole_on": {
+        "4-sulfamoylanilinium cation": 0.18907260820869587,
+        "dihydrogen phosphate anion": 0.8109273917912996
+      },
+      "nto1_particle_on": {
+        "4-sulfamoylanilinium cation": 0.9767218522161363,
+        "dihydrogen phosphate anion": 0.023278147783854952
+      }
+    },
+    {
+      "state": 17,
+      "E_eV": 7.736493602884012,
+      "lambda_nm": 160.25890379303246,
+      "f": 0.004515165897901406,
+      "transition_dipole_au": [
+        0.02484378293637838,
+        0.058194832022920306,
+        0.14077562839649627
+      ],
+      "dominant": [
+        {
+          "from_mo": 66,
+          "to_mo": 73,
+          "label": "H-4->L+2",
+          "weight": 0.22542378382232123
+        },
+        {
+          "from_mo": 70,
+          "to_mo": 75,
+          "label": "H->L+4",
+          "weight": 0.16320239632034503
+        },
+        {
+          "from_mo": 57,
+          "to_mo": 71,
+          "label": "H-13->L",
+          "weight": 0.13496227768838723
+        },
+        {
+          "from_mo": 66,
+          "to_mo": 74,
+          "label": "H-4->L+3",
+          "weight": 0.09900893468883606
+        },
+        {
+          "from_mo": 68,
+          "to_mo": 72,
+          "label": "H-2->L+1",
+          "weight": 0.06887431503704904
+        },
+        {
+          "from_mo": 61,
+          "to_mo": 71,
+          "label": "H-9->L",
+          "weight": 0.03103429935677894
+        }
+      ],
+      "nto_first_pair_weight": 0.4430388452897286,
+      "nto_pairs_for_90pct": 4,
+      "converged": true,
+      "ct": {
+        "omega_total_raw": 0.4964490461790555,
+        "D_CT_A": 0.6401597582045357,
+        "hole_centroid_A": [
+          3.357963682247928,
+          2.1994596164300115,
+          -0.8112391127872602
+        ],
+        "electron_centroid_A": [
+          2.7473353214218177,
+          2.272527003273076,
+          -0.6334789430100208
+        ],
+        "fragments": [
+          "4-sulfamoylanilinium cation",
+          "dihydrogen phosphate anion"
+        ],
+        "omega_frag": [
+          [
+            0.4201987747125993,
+            0.01258368125178232
+          ],
+          [
+            0.25058714025663753,
+            0.31663040377898094
+          ]
+        ],
+        "hole_on": {
+          "4-sulfamoylanilinium cation": 0.43278245596438164,
+          "dihydrogen phosphate anion": 0.5672175440356184
+        },
+        "electron_on": {
+          "4-sulfamoylanilinium cation": 0.6707859149692368,
+          "dihydrogen phosphate anion": 0.32921408503076327
+        },
+        "CT_number": 0.26317082150841975
+      },
+      "nto1_hole_on": {
+        "4-sulfamoylanilinium cation": 0.12516494918895127,
+        "dihydrogen phosphate anion": 0.8748350508110487
+      },
+      "nto1_particle_on": {
+        "4-sulfamoylanilinium cation": 0.4691368903107178,
+        "dihydrogen phosphate anion": 0.5308631096892842
+      }
+    },
+    {
+      "state": 18,
+      "E_eV": 7.783682037630771,
+      "lambda_nm": 159.2873370219768,
+      "f": 0.010409820001137694,
+      "transition_dipole_au": [
+        0.1373751817525713,
+        -0.15357290061816906,
+        -0.11014438331946116
+      ],
+      "dominant": [
+        {
+          "from_mo": 57,
+          "to_mo": 71,
+          "label": "H-13->L",
+          "weight": 0.31717972207038453
+        },
+        {
+          "from_mo": 61,
+          "to_mo": 71,
+          "label": "H-9->L",
+          "weight": 0.1805650704169284
+        },
+        {
+          "from_mo": 62,
+          "to_mo": 71,
+          "label": "H-8->L",
+          "weight": 0.12808392455038678
+        },
+        {
+          "from_mo": 66,
+          "to_mo": 71,
+          "label": "H-4->L",
+          "weight": 0.06447897521733108
+        },
+        {
+          "from_mo": 66,
+          "to_mo": 73,
+          "label": "H-4->L+2",
+          "weight": 0.04464456804217563
+        },
+        {
+          "from_mo": 70,
+          "to_mo": 75,
+          "label": "H->L+4",
+          "weight": 0.04190057886926567
+        }
+      ],
+      "nto_first_pair_weight": 0.8039982047318579,
+      "nto_pairs_for_90pct": 3,
+      "converged": true,
+      "ct": {
+        "omega_total_raw": 0.496074164211957,
+        "D_CT_A": 0.5506498968682781,
+        "hole_centroid_A": [
+          3.327814629760852,
+          3.2600481778455643,
+          1.3922948149560954
+        ],
+        "electron_centroid_A": [
+          3.2097568517536668,
+          2.7237542472779697,
+          1.3514721495677169
+        ],
+        "fragments": [
+          "4-sulfamoylanilinium cation",
+          "dihydrogen phosphate anion"
+        ],
+        "omega_frag": [
+          [
+            0.7798309551797374,
+            0.004382128888464398
+          ],
+          [
+            0.1513923023780266,
+            0.06439461355377159
+          ]
+        ],
+        "hole_on": {
+          "4-sulfamoylanilinium cation": 0.7842130840682018,
+          "dihydrogen phosphate anion": 0.21578691593179816
+        },
+        "electron_on": {
+          "4-sulfamoylanilinium cation": 0.931223257557764,
+          "dihydrogen phosphate anion": 0.06877674244223599
+        },
+        "CT_number": 0.15577443126649093
+      },
+      "nto1_hole_on": {
+        "4-sulfamoylanilinium cation": 0.8474495425836538,
+        "dihydrogen phosphate anion": 0.15255045741633783
+      },
+      "nto1_particle_on": {
+        "4-sulfamoylanilinium cation": 0.992466725773716,
+        "dihydrogen phosphate anion": 0.007533274226283316
+      }
+    },
+    {
+      "state": 19,
+      "E_eV": 7.863561484792966,
+      "lambda_nm": 157.66926810424027,
+      "f": 0.044299506667474266,
+      "transition_dipole_au": [
+        -0.08021621347793037,
+        0.25979555862747317,
+        0.3949877643907159
+      ],
+      "dominant": [
+        {
+          "from_mo": 62,
+          "to_mo": 71,
+          "label": "H-8->L",
+          "weight": 0.5275775290830398
+        },
+        {
+          "from_mo": 66,
+          "to_mo": 71,
+          "label": "H-4->L",
+          "weight": 0.14559930147931352
+        },
+        {
+          "from_mo": 65,
+          "to_mo": 71,
+          "label": "H-5->L",
+          "weight": 0.06084195725293704
+        },
+        {
+          "from_mo": 61,
+          "to_mo": 71,
+          "label": "H-9->L",
+          "weight": 0.042126001334363575
+        }
+      ],
+      "nto_first_pair_weight": 0.8593385100342968,
+      "nto_pairs_for_90pct": 2,
+      "converged": true,
+      "ct": {
+        "omega_total_raw": 0.48751491282558523,
+        "D_CT_A": 1.2505736973022377,
+        "hole_centroid_A": [
+          3.393174310075516,
+          3.8885992478464297,
+          1.0386824107285455
+        ],
+        "electron_centroid_A": [
+          3.2782799053399607,
+          2.902650712874581,
+          1.7993658761276012
+        ],
+        "fragments": [
+          "4-sulfamoylanilinium cation",
+          "dihydrogen phosphate anion"
+        ],
+        "omega_frag": [
+          [
+            0.7043953105689478,
+            0.003574102463868573
+          ],
+          [
+            0.2777457054886734,
+            0.014284881478510349
+          ]
+        ],
+        "hole_on": {
+          "4-sulfamoylanilinium cation": 0.7079694130328164,
+          "dihydrogen phosphate anion": 0.29203058696718376
+        },
+        "electron_on": {
+          "4-sulfamoylanilinium cation": 0.9821410160576212,
+          "dihydrogen phosphate anion": 0.01785898394237892
+        },
+        "CT_number": 0.28131980795254186
+      },
+      "nto1_hole_on": {
+        "4-sulfamoylanilinium cation": 0.7125675056126355,
+        "dihydrogen phosphate anion": 0.28743249438736457
+      },
+      "nto1_particle_on": {
+        "4-sulfamoylanilinium cation": 0.9939202071808233,
+        "dihydrogen phosphate anion": 0.006079792819174844
+      }
+    },
+    {
+      "state": 20,
+      "E_eV": 7.925842894598501,
+      "lambda_nm": 156.43030028326174,
+      "f": 0.012285466504458721,
+      "transition_dipole_au": [
+        -0.20386876497468276,
+        0.0772413228607538,
+        -0.12545871540806433
+      ],
+      "dominant": [
+        {
+          "from_mo": 61,
+          "to_mo": 71,
+          "label": "H-9->L",
+          "weight": 0.5523080315849358
+        },
+        {
+          "from_mo": 57,
+          "to_mo": 71,
+          "label": "H-13->L",
+          "weight": 0.19413526197250042
+        },
+        {
+          "from_mo": 64,
+          "to_mo": 71,
+          "label": "H-6->L",
+          "weight": 0.03939871408556766
+        },
+        {
+          "from_mo": 59,
+          "to_mo": 71,
+          "label": "H-11->L",
+          "weight": 0.031942668415497345
+        },
+        {
+          "from_mo": 69,
+          "to_mo": 75,
+          "label": "H-1->L+4",
+          "weight": 0.028585003526532562
+        },
+        {
+          "from_mo": 66,
+          "to_mo": 71,
+          "label": "H-4->L",
+          "weight": 0.021284402180618053
+        }
+      ],
+      "nto_first_pair_weight": 0.8874201410151854,
+      "nto_pairs_for_90pct": 2,
+      "converged": true,
+      "ct": {
+        "omega_total_raw": 0.49757721036746927,
+        "D_CT_A": 1.791182377725942,
+        "hole_centroid_A": [
+          2.8938040251605823,
+          4.292023658219508,
+          3.0279692745411277
+        ],
+        "electron_centroid_A": [
+          3.2860519165019326,
+          3.0107639783289906,
+          1.8393358008827958
+        ],
+        "fragments": [
+          "4-sulfamoylanilinium cation",
+          "dihydrogen phosphate anion"
+        ],
+        "omega_frag": [
+          [
+            0.9493894414502299,
+            0.0034259455983079536
+          ],
+          [
+            0.04408056525552329,
+            0.0031040476959388313
+          ]
+        ],
+        "hole_on": {
+          "4-sulfamoylanilinium cation": 0.9528153870485379,
+          "dihydrogen phosphate anion": 0.047184612951462125
+        },
+        "electron_on": {
+          "4-sulfamoylanilinium cation": 0.9934700067057531,
+          "dihydrogen phosphate anion": 0.0065299932942467845
+        },
+        "CT_number": 0.047506510853831285
+      },
+      "nto1_hole_on": {
+        "4-sulfamoylanilinium cation": 0.9606506917961534,
+        "dihydrogen phosphate anion": 0.03934930820384467
+      },
+      "nto1_particle_on": {
+        "4-sulfamoylanilinium cation": 0.9981629867373354,
+        "dihydrogen phosphate anion": 0.0018370132626620958
+      }
+    }
+  ],
+  "notes": "D3 omitted in the TD step (no effect on excitation energies). Weights = (X^2 - Y^2) normalised; CT analysis on X+Y with Mulliken partitioning (Plasser & Lischka 2012)."
+}

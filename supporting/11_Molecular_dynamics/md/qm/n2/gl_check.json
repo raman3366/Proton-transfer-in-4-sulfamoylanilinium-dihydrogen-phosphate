@@ -1,0 +1,100 @@
+{
+ "what": "the three numbers of gate G-L on the free anion with three charge sets; a sensitivity, not a second reading of the gate; written by md/qm/n2_gl_check.py",
+ "written": "2026-10-06 06:25:41 PM IST",
+ "environment": "implicit water, OBC2, dielectric 78.3553 (as md/ligand_fit.py)",
+ "dft": {
+  "a_C4_S_N2": 109.82526034676523,
+  "d_S_N2": 1.5799465999591085
+ },
+ "tolerances_of_G_L": {
+  "a_C4_S_N2_deg": 2.0,
+  "d_S_N2_A": 0.02,
+  "scan_kcal": 0.5
+ },
+ "inputs": {
+  "md/ligand/sfa_anion.mol2": "f8fba7528dceade5eec4c56ab1d5e450e29c9c54b27e1a34c521edb3865a66fa",
+  "md/ligand/sfa_anion_gaff2.frcmod": "694fd181a8c2b7359a529112a1ba539e681dd2c66a883379607e6e6095ca438c",
+  "md/ligand/sfa_anion_repair.frcmod": "76dda0d181a27e12868eea1a2eff055fbeda708357f200d12a53915fa7d60b86",
+  "md/qm/n2/ff/inputs/SN1.mol2": "0ecbec58ff769c66bb0cd6e1d62467da0863f88d0c7ac07132db2b65b9534810",
+  "md/qm/n2/ff2/inputs/SN1.mol2": "97510cde9adc1d61fab0f801421bd3c3df44ebb35e9a36d3f9c522f4971e7d55"
+ },
+ "sets": {
+  "am1bcc": {
+   "charges_from": "md/ligand/sfa_anion.mol2 (AM1-BCC, the charges of the calibration)",
+   "total_charge": -1.0,
+   "charges": {
+    "N2": -1.250067,
+    "S": 1.511833,
+    "O1": -0.736367,
+    "O2": -0.779967,
+    "C4": -0.253667,
+    "HN21": 0.504239
+   },
+   "a_C4_S_N2": 109.817,
+   "a_C4_S_N2_minus_DFT": -0.008,
+   "d_S_N2": 1.5799,
+   "d_S_N2_minus_DFT": 0.0,
+   "scan_largest_deviation": 0.0927,
+   "scan_mm_barrier": 0.1815,
+   "scan_dft_barrier": 0.0984,
+   "within_the_tolerances_of_G_L": {
+    "a_C4_S_N2": true,
+    "d_S_N2": true,
+    "scan": true
+   }
+  },
+  "resp_as_built": {
+   "charges_from": "md/qm/n2/ff/inputs/SN1.mol2",
+   "total_charge": -0.530426,
+   "charges": {
+    "N2": -0.914224,
+    "S": 0.790275,
+    "O1": -0.48855,
+    "O2": -0.48855,
+    "C4": 0.080205,
+    "HN21": 0.398775
+   },
+   "a_C4_S_N2": 109.813,
+   "a_C4_S_N2_minus_DFT": -0.012,
+   "d_S_N2": 1.5879,
+   "d_S_N2_minus_DFT": 0.008,
+   "scan_largest_deviation": 0.277,
+   "scan_mm_barrier": 0.3712,
+   "scan_dft_barrier": 0.0984,
+   "within_the_tolerances_of_G_L": {
+    "a_C4_S_N2": true,
+    "d_S_N2": true,
+    "scan": true
+   }
+  },
+  "resp_two": {
+   "charges_from": "md/qm/n2/ff2/inputs/SN1.mol2",
+   "total_charge": -0.477729,
+   "charges": {
+    "N2": -0.762266,
+    "S": 0.879187,
+    "O1": -0.492226,
+    "O2": -0.492226,
+    "C4": -0.075856,
+    "HN21": 0.316248
+   },
+   "a_C4_S_N2": 109.067,
+   "a_C4_S_N2_minus_DFT": -0.758,
+   "d_S_N2": 1.5867,
+   "d_S_N2_minus_DFT": 0.0067,
+   "scan_largest_deviation": 0.317,
+   "scan_mm_barrier": 0.4061,
+   "scan_dft_barrier": 0.0984,
+   "within_the_tolerances_of_G_L": {
+    "a_C4_S_N2": true,
+    "d_S_N2": true,
+    "scan": true
+   }
+  }
+ },
+ "two_placements_minus_as_built": {
+  "a_C4_S_N2": -0.746,
+  "d_S_N2": -0.0012,
+  "scan_largest_deviation": 0.04
+ }
+}

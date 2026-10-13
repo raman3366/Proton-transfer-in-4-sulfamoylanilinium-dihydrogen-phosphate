@@ -1,0 +1,10 @@
+{
+ "what": "access times of the 188 result files in the watchdog's copy on the Pi (/root/cqc-sfa-md/from_gpu/repo_md/qm/n2/qm), as first seen by the examiner; TRANSCRIBED from the terminal output of a stat-only command (os.stat, no file opened), not written by a program at the time",
+ "when": "2026-10-06, between 06:54:09 PM and 06:55:30 PM IST, before the examiner's checksum pass over the same files",
+ "files": 188,
+ "test_files": 47,
+ "test_files_with_access_time_later_than_arrival_by_more_than_1_s": 0,
+ "fit_files_with_access_time_later_than_arrival_by_more_than_1_s": 0,
+ "examples_test_id_mtime_atime_ctime_IST": [["f04", "03:05:39 PM", "03:22:15 PM", "03:22:15 PM"], ["f06", "03:19:22 PM", "03:22:15 PM", "03:22:15 PM"], ["f10", "03:46:19 PM", "03:51:49 PM", "03:51:49 PM"], ["f12", "03:59:56 PM", "04:06:45 PM", "04:06:45 PM"]],
+ "then": "at 06:55:30 PM IST the examiner computed SHA-256 checksums of the 47 test files (bytes hashed, nothing parsed, nothing printed but the count) to look for copies in scratch and in the repository; that pass moved their access times to 06:55:30 PM, which integrity.json shows"
+}

@@ -1,0 +1,388 @@
+{
+ "what": "the test runs of the driver's maintainer under analyse_md.py: steps, settings, warnings; and why a DCD header can differ from the stage table",
+ "runs": {
+  "dry": {
+   "driver_script_sha256": "b0f3e2b23b3eedf5582a25572ef80b0c3c214edb9414e94273f13be1b7a74fcc",
+   "analysis_script_sha256": "f75e6155de7007000b8c118b5e9989af7fbaf40994b3f684d4c9b3c9bbcf8ea3",
+   "spec": "md/analysis/SPEC.md, version 1.3 (6 Oct 2026)",
+   "created": "6 Oct 2026, 5:44:16 AM IST",
+   "last_written": "6 Oct 2026, 5:51:04 AM IST",
+   "equil_scale": 0.0005,
+   "settings_in_the_manifest": {
+    "site_atoms": [
+     "C1",
+     "C2",
+     "C3",
+     "C4",
+     "C5",
+     "C6",
+     "N1"
+    ],
+    "water_cutoff_A": 3.5
+   },
+   "settings_used_by_the_analysis": {
+    "site_atoms": [
+     "C1",
+     "C2",
+     "C3",
+     "C4",
+     "C5",
+     "C6",
+     "N1"
+    ],
+    "water_cutoff_A": 3.5,
+    "source": "manifest hydration_check.settings",
+    "settings_are_the_defaults": false
+   },
+   "full_frame_interval_ps": 0.2,
+   "length_ps_of_eq03": 0.15,
+   "length_ps_of_an_extension_step": 0.25,
+   "steps_in_the_manifest": [
+    "eq01",
+    "eq02",
+    "eq03",
+    "eq03x1",
+    "eq03x2",
+    "eq03x3",
+    "eq03x4",
+    "eq04",
+    "eq05",
+    "eq06"
+   ],
+   "steps_read": [
+    "eq01",
+    "eq02",
+    "eq03",
+    "eq03x1",
+    "eq03x2",
+    "eq03x3",
+    "eq03x4",
+    "eq04",
+    "eq05",
+    "eq06"
+   ],
+   "n_extension_steps": 4,
+   "frames_read_as_recorded": true,
+   "counts_of_the_driver": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "compared": [
+    false,
+    false,
+    false,
+    false,
+    false
+   ],
+   "eq04_start_ps": 1.35,
+   "eq04_timestep_fs": 4.0,
+   "eq04_start_in_its_time_steps": 337.5,
+   "eq04_starts_on_a_whole_time_step": false,
+   "header_first_frame_ps_of_solute_eq04": 1.452,
+   "solute_interval_ps": 0.1,
+   "n_warnings": 7,
+   "warnings_settings_not_those_of_the_plan": 1,
+   "warnings_header": 6,
+   "warnings_other": 0
+  },
+  "arrive": {
+   "driver_script_sha256": "b0f3e2b23b3eedf5582a25572ef80b0c3c214edb9414e94273f13be1b7a74fcc",
+   "analysis_script_sha256": "f75e6155de7007000b8c118b5e9989af7fbaf40994b3f684d4c9b3c9bbcf8ea3",
+   "spec": "md/analysis/SPEC.md, version 1.3 (6 Oct 2026)",
+   "created": "6 Oct 2026, 6:25:21 AM IST",
+   "last_written": "6 Oct 2026, 6:32:01 AM IST",
+   "equil_scale": 0.0005,
+   "settings_in_the_manifest": {
+    "site_atoms": [
+     "C1",
+     "C2",
+     "C3",
+     "C4",
+     "C5",
+     "C6",
+     "N1"
+    ],
+    "water_cutoff_A": 11.2
+   },
+   "settings_used_by_the_analysis": {
+    "site_atoms": [
+     "C1",
+     "C2",
+     "C3",
+     "C4",
+     "C5",
+     "C6",
+     "N1"
+    ],
+    "water_cutoff_A": 11.2,
+    "source": "manifest hydration_check.settings",
+    "settings_are_the_defaults": false
+   },
+   "full_frame_interval_ps": 0.2,
+   "length_ps_of_eq03": 0.15,
+   "length_ps_of_an_extension_step": 0.25,
+   "steps_in_the_manifest": [
+    "eq01",
+    "eq02",
+    "eq03",
+    "eq03x1",
+    "eq03x2",
+    "eq03x3",
+    "eq04",
+    "eq05",
+    "eq06"
+   ],
+   "steps_read": [
+    "eq01",
+    "eq02",
+    "eq03",
+    "eq03x1",
+    "eq03x2",
+    "eq03x3",
+    "eq04",
+    "eq05",
+    "eq06"
+   ],
+   "n_extension_steps": 3,
+   "frames_read_as_recorded": true,
+   "counts_of_the_driver": [
+    0,
+    0,
+    0,
+    1
+   ],
+   "compared": [
+    false,
+    false,
+    false,
+    false
+   ],
+   "eq04_start_ps": 1.1,
+   "eq04_timestep_fs": 4.0,
+   "eq04_start_in_its_time_steps": 275.0,
+   "eq04_starts_on_a_whole_time_step": true,
+   "header_first_frame_ps_of_solute_eq04": 1.2,
+   "solute_interval_ps": 0.1,
+   "n_warnings": 1,
+   "warnings_settings_not_those_of_the_plan": 1,
+   "warnings_header": 0,
+   "warnings_other": 0
+  },
+  "wet": {
+   "driver_script_sha256": "b0f3e2b23b3eedf5582a25572ef80b0c3c214edb9414e94273f13be1b7a74fcc",
+   "analysis_script_sha256": "f75e6155de7007000b8c118b5e9989af7fbaf40994b3f684d4c9b3c9bbcf8ea3",
+   "spec": "md/analysis/SPEC.md, version 1.3 (6 Oct 2026)",
+   "created": "6 Oct 2026, 5:39:34 AM IST",
+   "last_written": "6 Oct 2026, 5:44:07 AM IST",
+   "equil_scale": 0.0005,
+   "settings_in_the_manifest": {
+    "site_atoms": [
+     "C1",
+     "C2",
+     "C3",
+     "C4",
+     "C5",
+     "C6",
+     "N1"
+    ],
+    "water_cutoff_A": 3.5
+   },
+   "settings_used_by_the_analysis": {
+    "site_atoms": [
+     "C1",
+     "C2",
+     "C3",
+     "C4",
+     "C5",
+     "C6",
+     "N1"
+    ],
+    "water_cutoff_A": 3.5,
+    "source": "manifest hydration_check.settings",
+    "settings_are_the_defaults": false
+   },
+   "full_frame_interval_ps": 0.2,
+   "length_ps_of_eq03": 0.15,
+   "length_ps_of_an_extension_step": 0.25,
+   "steps_in_the_manifest": [
+    "eq01",
+    "eq02",
+    "eq03",
+    "eq04",
+    "eq05",
+    "eq06"
+   ],
+   "steps_read": [
+    "eq01",
+    "eq02",
+    "eq03",
+    "eq04",
+    "eq05",
+    "eq06"
+   ],
+   "n_extension_steps": 0,
+   "frames_read_as_recorded": true,
+   "counts_of_the_driver": [
+    15
+   ],
+   "compared": [
+    false
+   ],
+   "eq04_start_ps": 0.35,
+   "eq04_timestep_fs": 4.0,
+   "eq04_start_in_its_time_steps": 87.5,
+   "eq04_starts_on_a_whole_time_step": false,
+   "header_first_frame_ps_of_solute_eq04": 0.452,
+   "solute_interval_ps": 0.1,
+   "n_warnings": 7,
+   "warnings_settings_not_those_of_the_plan": 1,
+   "warnings_header": 6,
+   "warnings_other": 0
+  },
+  "skip": {
+   "driver_script_sha256": "b0f3e2b23b3eedf5582a25572ef80b0c3c214edb9414e94273f13be1b7a74fcc",
+   "analysis_script_sha256": "f75e6155de7007000b8c118b5e9989af7fbaf40994b3f684d4c9b3c9bbcf8ea3",
+   "spec": "md/analysis/SPEC.md, version 1.3 (6 Oct 2026)",
+   "created": "6 Oct 2026, 5:35:08 AM IST",
+   "last_written": "6 Oct 2026, 5:39:21 AM IST",
+   "equil_scale": 0.0005,
+   "settings_in_the_manifest": {
+    "site_atoms": [
+     "C1",
+     "C2",
+     "C3",
+     "C4",
+     "C5",
+     "C6",
+     "N1"
+    ],
+    "water_cutoff_A": 3.5
+   },
+   "settings_used_by_the_analysis": {
+    "site_atoms": [
+     "C1",
+     "C2",
+     "C3",
+     "C4",
+     "C5",
+     "C6",
+     "N1"
+    ],
+    "water_cutoff_A": 3.5,
+    "source": "manifest hydration_check.settings",
+    "settings_are_the_defaults": false
+   },
+   "full_frame_interval_ps": 0.2,
+   "length_ps_of_eq03": 0.15,
+   "length_ps_of_an_extension_step": 0.25,
+   "steps_in_the_manifest": [
+    "eq01",
+    "eq02",
+    "eq03",
+    "eq04",
+    "eq05",
+    "eq06"
+   ],
+   "steps_read": [
+    "eq01",
+    "eq02",
+    "eq03",
+    "eq04",
+    "eq05",
+    "eq06"
+   ],
+   "n_extension_steps": 0,
+   "frames_read_as_recorded": true,
+   "counts_of_the_driver": [
+    3
+   ],
+   "compared": [
+    false
+   ],
+   "eq04_start_ps": 0.35,
+   "eq04_timestep_fs": 4.0,
+   "eq04_start_in_its_time_steps": 87.5,
+   "eq04_starts_on_a_whole_time_step": false,
+   "header_first_frame_ps_of_solute_eq04": 0.452,
+   "solute_interval_ps": 0.1,
+   "n_warnings": 7,
+   "warnings_settings_not_those_of_the_plan": 1,
+   "warnings_header": 6,
+   "warnings_other": 0
+  },
+  "late": {
+   "driver_script_sha256": "b0f3e2b23b3eedf5582a25572ef80b0c3c214edb9414e94273f13be1b7a74fcc",
+   "analysis_script_sha256": "f75e6155de7007000b8c118b5e9989af7fbaf40994b3f684d4c9b3c9bbcf8ea3",
+   "spec": "md/analysis/SPEC.md, version 1.3 (6 Oct 2026)",
+   "created": "6 Oct 2026, 5:51:16 AM IST",
+   "last_written": "6 Oct 2026, 5:56:21 AM IST",
+   "equil_scale": 0.0005,
+   "settings_in_the_manifest": {
+    "site_atoms": [
+     "C1",
+     "C2",
+     "C3",
+     "C4",
+     "C5",
+     "C6",
+     "N1"
+    ],
+    "water_cutoff_A": 3.5
+   },
+   "settings_used_by_the_analysis": {
+    "site_atoms": [
+     "C1",
+     "C2",
+     "C3",
+     "C4",
+     "C5",
+     "C6",
+     "N1"
+    ],
+    "water_cutoff_A": 3.5,
+    "source": "manifest hydration_check.settings",
+    "settings_are_the_defaults": false
+   },
+   "full_frame_interval_ps": 0.2,
+   "length_ps_of_eq03": 0.15,
+   "length_ps_of_an_extension_step": 0.25,
+   "steps_in_the_manifest": [
+    "eq01",
+    "eq02",
+    "eq03",
+    "eq04",
+    "eq05",
+    "eq06"
+   ],
+   "steps_read": [
+    "eq01",
+    "eq02",
+    "eq03",
+    "eq04",
+    "eq05",
+    "eq06"
+   ],
+   "n_extension_steps": 0,
+   "frames_read_as_recorded": true,
+   "counts_of_the_driver": [
+    1
+   ],
+   "compared": [
+    false
+   ],
+   "eq04_start_ps": 0.35,
+   "eq04_timestep_fs": 4.0,
+   "eq04_start_in_its_time_steps": 87.5,
+   "eq04_starts_on_a_whole_time_step": false,
+   "header_first_frame_ps_of_solute_eq04": 0.452,
+   "solute_interval_ps": 0.1,
+   "n_warnings": 7,
+   "warnings_settings_not_those_of_the_plan": 1,
+   "warnings_header": 6,
+   "warnings_other": 0
+  }
+ }
+}

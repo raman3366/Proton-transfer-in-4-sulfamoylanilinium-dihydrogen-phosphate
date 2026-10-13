@@ -1,0 +1,776 @@
+--- /tmp/claude-0/-root-workspace-cqc-4-sulfamoylanilinium-dihydrogen-phosphate/82cc65d7-a11f-4d60-91ee-436dc9534941/scratchpad/rehearsal/orig/build_topology.py.orig	2026-10-06 00:54:06.139619398 +0530
++++ md/build_topology.py	2026-10-06 10:13:49.048627774 +0530
+@@ -1,7 +1,9 @@
+ #!/usr/bin/env python
+ """Simulation topologies of hCA II (6RL9) with the sulfonamidate anion on the zinc: stage S3 of md/PLAN.md.
+ 
+-    AMBERHOME=<prefix> python md/build_topology.py --model restrained|bonded --start X|N|R [--buffer-A 10.0]
++    AMBERHOME=<prefix> python md/build_topology.py --model restrained --start X|N|R [--buffer-A 10.0]
++    AMBERHOME=<prefix> python md/build_topology.py --model bonded --set 2e|2s --start X|N|R [--mcpb-dir DIR]
++                                                   [--n2-frcmod FILE] [--note TEXT]
+     AMBERHOME=<prefix> python md/build_topology.py --model restrained --start X --min-check [--short-md] [--reuse-run]
+     AMBERHOME=<prefix> python md/build_topology.py --model restrained --start X --min-check --min-full
+     AMBERHOME=<prefix> python md/build_topology.py --model restrained --start X --k-scan
+@@ -12,15 +14,25 @@
+     md/system/protein_md.pdb, zinc.pdb, ligand_<start>.pdb, waters_<start>.pdb, residue_map.csv, starts.csv
+     md/ligand/sfa_anion.mol2, sfa_anion_gaff2.frcmod, sfa_anion_repair.frcmod (loaded after the first, so
+     that the repaired terms win), sfa_anion_repaired.prmtop (only to compare the ligand terms)
+-    model "bonded" only: the output of MCPB.py step 4 in --mcpb-dir (default md/qm/mcpb):
++    model "bonded" only: the output of MCPB.py step 4 in --mcpb-dir (default for a named set: the first of
++    /root/cqc-sfa-md/qm/gr/mcpb_<set> and md/qm/mcpb that holds a <group>_tleap.in):
+     <group>_tleap.in, <group>_mcpbpy.pdb, <group>_mcpbpy.frcmod and the mol2 files named in <group>_tleap.in
+     the checks: md/run_md.py, md/protocol.json, md/analysis/analyse_md.py (run, not changed)
+ 
++The bonded model has two parameter sets (md/PLAN.md, 6 Oct 2026, 3:02 AM, point 3): --set 2e (MCPB.py step 2e,
++empirical) and --set 2s (step 2s, Seminario).  The folder is named <model>_<set> (bonded_2e, bonded_2s), and the
++builder stops if the frcmod of --mcpb-dir was not made by the step that the set names.  The terms at the ligand
++nitrogen N2 (Zn-N2-S, Zn-N2-H, S-N2-H, H-N2-S-C4) are the same in both sets and are loaded last, from one file:
++--n2-frcmod FILE (what gate G-R settles, md/GR.md; or n2_terms.frcmod of an earlier build).  Without it, and for
++set 2e only, the builder writes that file itself with the terms AS BUILT BEFORE THE GATE: those of
++<group>_mcpbpy.frcmod, but Zn-N2-H at its value in start X (107.41 deg) instead of the 120 deg of step 2e.
++
+ Writes
+     <out-root>/<model>/<start>/   system.prmtop, system.inpcrd (Amber, truncated octahedron), selections.json,
+-                                  extra_forces.json, reference.pdb, build.json, and build/ (work files of tleap)
++                                  extra_forces.json, reference.pdb, build.json, and build/ (work files of tleap);
++                                  <model> is bonded_<set> for a named set; with --note also STATUS_NOTE.txt
+     md/topology/<model>/<start>/  leap_stage1.in, leap.in, leap.log, ions.pdb, build.json (copy),
+-                                  selections_table.txt, openmm_check.json, SHA256SUMS
++                                  selections_table.txt, openmm_check.json, SHA256SUMS; bonded: n2_terms.frcmod
+     --min-check     <out-root>/_checks/<model>/<start>/min_<n>/ (or min_full/): a run folder of md/run_md.py;
+                     md/topology/<model>/<start>/min_check.json (or min_check_full.json).  With --short-md the six
+                     equilibration stages shortened to 4 ps and two production segments of 1 ps follow, and
+@@ -98,6 +110,12 @@
+         "asn67_OD1": (67, "OD1"), "asn67_ND2": (67, "ND2")}
+ ZN_PARTNERS = [("N2", None, "N2 of the ligand (SAN 304)"), ("NE2", 94, "NE2 of His94"),
+                ("NE2", 96, "NE2 of His96"), ("ND1", 119, "ND1 of His119")]
++# the bonded parameter sets (md/PLAN.md, 6 Oct 2026, 3:02 AM, point 3): the word MCPB.py writes behind every zinc
++# term of its frcmod ("Created by <method> method using MCPB.py"), and where the MCPB.py folder of a set is looked for
++SET_METHOD = {"2e": "empirical", "2s": "Seminario"}
++MCPB_SET_DIRS = (str(pathlib.Path(DEFAULT_OUT_ROOT).parent / "qm" / "gr" / "mcpb_{set}"), str(MD / "qm" / "mcpb"))
++LIG_EQUAL_PAIRS = [("O1", "O2"), ("C2", "C6"), ("C3", "C5"), ("H2", "H6"), ("H3", "H5"), ("HN11", "HN12")]
++SCEE, SCNB = 1.2, 2.0                # Amber's scaling of 1-4 electrostatics and 1-4 Lennard-Jones (ff14SB, GAFF2)
+ # limits of the minimisation check, fixed before the first minimisation was run
+ MIN_CHECK = {"zn_distance_tolerance_A": 0.10,
+              "max_displacement_zinc_and_ligand_heavy_A": {"X": 0.30, "N": 0.50, "R": 0.50},
+@@ -354,9 +372,79 @@
+         r = residues.setdefault(a["resi"], {"name": a["resn"], "atoms": {}})
+         r["atoms"][a["name"]] = a["xyz"]
+     out["residues"] = residues
++    out["frcmod"] = d / f"{group}_mcpbpy.frcmod"
++    out["methods"] = sorted(set(re.findall(r"Created by (\S+) method using MCPB\.py", out["frcmod"].read_text())))
+     return out
+ 
+ 
++def frcmod_lines(path, section, types):
++    """The lines of one section of a frcmod file that carry these atom types (in either direction), as written."""
++    n = {"BOND": 2, "ANGLE": 3, "DIHE": 4}[section]
++    want = {tuple(types), tuple(types)[::-1]}
++    sec, hits = None, []
++    for line in pathlib.Path(path).read_text().splitlines()[1:]:
++        word = line.strip()
++        if word[:4] in ("MASS", "BOND", "ANGL", "DIHE", "IMPR", "NONB"):
++            sec = {"ANGL": "ANGLE"}.get(word[:4], word[:4])
++            continue
++        if word and sec == section and tuple(t.strip() for t in line[:3 * n - 1].split("-")) in want:
++            hits.append(line.rstrip())
++    return hits
++
++
++def n2_terms_file(mcpb, types, theta_x, path):
++    """The terms at the ligand nitrogen N2 AS BUILT BEFORE GATE G-R, in a frcmod file of their own that is loaded
++    last: Zn-N2-S, S-N2-H and the H-N2-S-C4 series as <group>_mcpbpy.frcmod has them (copied line by line), and
++    Zn-N2-H with the force constant of that file and its angle in start X instead of the 120 deg that MCPB.py
++    step 2e writes (md/PLAN.md, 6 Oct 2026, 3:02 AM point 2 and 8:01 AM point 3; md/qm/gr_mm.py does the same for
++    the small model of the gate).  types: atom types of Zn, N2, S, HN21 and C4."""
++    zn, n2, s, hn, c4 = (types[k] for k in ("ZN", "N2", "S", "HN21", "C4"))
++    src = mcpb["frcmod"]
++    zn_s, s_h = frcmod_lines(src, "ANGLE", (zn, n2, s)), frcmod_lines(src, "ANGLE", (hn, n2, s))
++    zn_h, tor = frcmod_lines(src, "ANGLE", (zn, n2, hn)), frcmod_lines(src, "DIHE", (c4, s, n2, hn))
++    if not (len(zn_s) == len(s_h) == len(zn_h) == 1 and tor):
++        raise BuildError(f"{src}: the terms at N2 ({zn}-{n2}-{s}, {hn}-{n2}-{s}, {zn}-{n2}-{hn}, {c4}-{s}-{n2}-{hn}) "
++                         "were not found once each")
++    k_h = float(zn_h[0][8:].split()[0])
++    text = [f"Terms at N2 AS BUILT BEFORE GATE G-R (md/build_topology.py): Zn-N2-H at its value in start X, not the "
++            f"{float(zn_h[0][8:].split()[1]):g} deg of {src.name}",
++            "MASS", "", "BOND", "", "ANGLE", zn_s[0],
++            f"{zn}-{n2}-{hn}   {k_h:6.2f}    {theta_x:7.3f}    angle of start X (md/system); force constant of {src.name}",
++            s_h[0], "", "DIHE"] + tor + ["", "IMPROPER", "", "NONBON", "", ""]
++    pathlib.Path(path).write_text("\n".join(text))
++    return {"replaced_line_of_mcpb_frcmod": zn_h[0].strip(), "lines_copied_from_mcpb_frcmod": [x.strip() for x in zn_s + s_h + tor]}
++
++
++def zinc_pair_sets(parm, zn):
++    """Pairs of atoms whose shortest path of bonds runs through the zinc, by the number of bonds between them
++    (1 to 4).  The zinc has four arms (its nitrogen atoms with what hangs on them); a pair is the zinc with an
++    atom of an arm, or two atoms of different arms.  Returns {n_bonds: [(i, j), ...]} with i < j."""
++    arms = []
++    for n in parm.atoms[zn].bond_partners:
++        depth, layer = {n.idx: 1}, [n]
++        for d in (2, 3, 4):
++            nxt = []
++            for a in layer:
++                for b in a.bond_partners:
++                    if b.idx != zn and b.idx not in depth:
++                        depth[b.idx] = d
++                        nxt.append(b)
++            layer = nxt
++        arms.append(depth)
++    pairs = {1: [], 2: [], 3: [], 4: []}
++    for depth in arms:
++        for i, d in depth.items():
++            pairs[d].append(tuple(sorted((zn, i))))
++    for p, q in itertools.combinations(range(len(arms)), 2):
++        if set(arms[p]) & set(arms[q]):
++            raise BuildError("two arms of the zinc share an atom within four bonds: the pair rules cannot be checked")
++        for i, di in arms[p].items():
++            for j, dj in arms[q].items():
++                if di + dj <= 4:
++                    pairs[di + dj].append(tuple(sorted((i, j))))
++    return {d: sorted(set(v)) for d, v in pairs.items()}
++
++
+ # --------------------------------------------------------------------------------------------- the assembly
+ def load_inputs(start):
+     files = {"protein": SYSTEM / "protein_md.pdb", "zinc": SYSTEM / "zinc.pdb",
+@@ -436,8 +524,15 @@
+     return table
+ 
+ 
+-def leap_head(model, mcpb, assembly, build, buffer_A=BUFFER_A):
+-    """The lines of the tleap input up to and including the solvation."""
++def leap_head(model, mcpb, assembly, build, buffer_A=BUFFER_A, last_frcmods=(), chain_units=()):
++    """The lines of the tleap input up to and including the solvation.  last_frcmods (bonded model): parameter
++    files loaded after those of MCPB.py, so that their terms are the ones in force (the terms at N2).
++    chain_units (bonded model): the units of MCPB.py that are residues of the protein chain.  They get head, tail
++    and connect atoms (N and C), so that loadpdb joins them to their neighbours as it joins library residues.
++    Without that the peptide bonds are made by the 'bond' commands only AFTER loadpdb has built the hydrogens, and
++    the amide hydrogen of the residue after each of them is built without its C-N bond, out of the peptide plane
++    (found on 6 Oct 2026 with the real output: Phe95, Trp97, Leu120, by 0.4 to 1.2 A).  The peptide 'bond'
++    commands of MCPB.py for these units are then left out (the builder checks that the chain is unbroken)."""
+     L = ["source leaprc.protein.ff14SB", "source leaprc.gaff2", "source leaprc.water.tip3p"]
+     notes = []
+     if model == "restrained":
+@@ -453,6 +548,9 @@
+             L.append("}")
+         for unit, fname in mcpb["mol2"]:
+             L.append(f"{unit} = loadmol2 {d / fname}")
++        for unit in chain_units:
++            L += [f"set {unit} head {unit}.1.N", f"set {unit} tail {unit}.1.C",
++                  f"set {unit}.1 connect0 {unit}.1.N", f"set {unit}.1 connect1 {unit}.1.C"]
+         for fname in mcpb["frcmods"]:
+             if (d / fname).is_file():
+                 L.append(f"loadamberparams {d / fname}")
+@@ -461,8 +559,11 @@
+                              "leaprc.water.tip3p (Joung-Cheatham), as in the restrained model")
+             else:
+                 L.append(f"loadamberparams {fname}")
++        L += [f"loadamberparams {f}" for f in last_frcmods]
+         L.append(f"sys = loadpdb {assembly}")
+         for u1, r1, a1, u2, r2, a2 in mcpb["bonds"]:
++            if chain_units and a1 == "C" and a2 == "N" and int(r2) == int(r1) + 1:
++                continue                             # a peptide bond: made by loadpdb through the head and tail atoms
+             L.append(f"bond sys.{r1}.{a1} sys.{r2}.{a2}")
+     L += ["check sys", "charge sys",
+           f"saveamberparm sys {build / 'dry.prmtop'} {build / 'dry.inpcrd'}",
+@@ -504,28 +605,44 @@
+ 
+ 
+ # ------------------------------------------------------------------------------------------------ the build
++def folder_name(model, pset=None):
++    """Name of the model folder under <out-root>, md/topology and the runs: bonded_2e, bonded_2s for a named set."""
++    return f"{model}_{pset}" if pset else model
++
++
++def default_mcpb_dir(pset):
++    """The MCPB.py folder of a named set: the first of MCPB_SET_DIRS that holds the tleap input of step 4."""
++    cands = [pathlib.Path(p.format(set=pset)) for p in MCPB_SET_DIRS] if pset else [MD / "qm" / "mcpb"]
++    return next((p for p in cands if sorted(p.glob("*_tleap.in"))), cands[0])
++
++
+ def build(model, start, out_root, mcpb_dir=None, mcpb_group=None, records_root=RECORDS, label=None, openmm_check=True,
+-          buffer_A=BUFFER_A):
++          buffer_A=BUFFER_A, pset=None, n2_frcmod=None, note=None):
+     import parmed
+     from scipy.spatial import cKDTree, ConvexHull
+     from scipy.spatial.distance import pdist
+ 
+     inp = load_inputs(start)
++    kind, model = model, folder_name(model, pset)    # kind: restrained or bonded; model: the name of the folder
+     out = pathlib.Path(out_root) / model / start
+     bdir = out / "build"
+     rec = pathlib.Path(records_root) / model / start
+     for d in (bdir, rec):
+         d.mkdir(parents=True, exist_ok=True)
+-    for name in ("system.prmtop", "system.inpcrd", "selections.json", "extra_forces.json", "reference.pdb", "build.json"):
++    for name in ("system.prmtop", "system.inpcrd", "selections.json", "extra_forces.json", "reference.pdb", "build.json",
++                 "STATUS_NOTE.txt"):
+         if (out / name).exists():
+             (out / name).unlink()
+     print(f"== {model}/{start}: building in {out}  ({now_ist()})", flush=True)
+ 
+     # -- model-specific input
+-    mcpb, rename, mcpb_record = None, {}, None
++    mcpb, rename, mcpb_record, n2_record, last_frcmods = None, {}, None, None, []
+     n_prot = len(inp["protein"])
+-    if model == "bonded":
+-        mcpb = read_mcpb(mcpb_dir or (MD / "qm" / "mcpb"), mcpb_group)
++    if kind == "bonded":
++        mcpb = read_mcpb(mcpb_dir or default_mcpb_dir(pset), mcpb_group)
++        if pset and mcpb["methods"] != [SET_METHOD[pset]]:
++            raise BuildError(f"--set {pset} needs zinc terms made by the {SET_METHOD[pset]} method, but "
++                             f"{mcpb['frcmod']} names {mcpb['methods'] or 'no method'}; give the right --mcpb-dir")
+         units = {u for u, _ in mcpb["mol2"]}
+         other_names = []
+         if sorted(mcpb["residues"])[:n_prot + 2] != list(range(1, n_prot + 3)):
+@@ -560,12 +677,46 @@
+         mcpb_record = {"dir": rel(mcpb["dir"]), "group": mcpb["group"], "atom_types_added": mcpb["atom_types"],
+                        "renamed_residues": {str(k): v for k, v in sorted(rename.items())},
+                        "bond_commands": [f"bond sys.{b[1]}.{b[2]} sys.{b[4]}.{b[5]}" for b in mcpb["bonds"]],
++                       "bond_commands_used": "the four to the zinc; the peptide bonds of the renamed residues are made by "
++                                             "loadpdb through head and tail atoms set on their units (see leap.in)",
+                        "frcmod_files_named_by_mcpb": mcpb["frcmods"],
+                        "residue_names_that_differ_without_a_mol2_unit": other_names,
+                        "files_sha256": {rel(p): sha256(p) for p in sorted(set(mcpb_files))}}
+         for name in ("sfa_anion_gaff2.frcmod", "sfa_anion_repair.frcmod"):
+             p = pathlib.Path(mcpb["dir"]) / name
+             mcpb_record[f"{name}_same_as_md_ligand"] = (sha256(p) == sha256(LIGAND / name)) if p.is_file() else None
++        mcpb_record["parameter_set"] = {"named": pset, "method_named_in_the_frcmod": mcpb["methods"],
++                                        "expected_method": SET_METHOD.get(pset)}
++        # the templates of the five site residues as MCPB.py (and md/qm/resp_equiv.py) wrote them
++        mol2_of = dict(mcpb["mol2"])
++        site_mol2 = {k: parmed.load_file(str(pathlib.Path(mcpb["dir"]) / mol2_of[rename[k]]), structure=True)
++                     for k in sorted(rename)}
++        # -- the terms at N2: one file, loaded last, the same for both parameter sets
++        lig_types = {a.name: a.type for a in site_mol2[n_prot + 2].atoms}
++        n2_types = dict({k: lig_types[k] for k in ("N2", "S", "HN21", "C4")}, ZN=site_mol2[n_prot + 1].atoms[0].type)
++        ligx = {a["name"]: a["xyz"] for a in inp["ligand_crystal"]}
++        theta_x = angle(inp["zinc"][0]["xyz"], ligx["N2"], ligx["HN21"])
++        if n2_frcmod:
++            if not pathlib.Path(n2_frcmod).is_file():
++                raise BuildError(f"--n2-frcmod: no such file: {n2_frcmod}")
++            shutil.copy(n2_frcmod, bdir / "n2_terms.frcmod")
++            n2_record = {"source": "given with --n2-frcmod", "given_file": rel(n2_frcmod),
++                         "validated_by_gate_GR": "not known to the builder: the file was given"}
++        elif pset == "2e":
++            n2_record = dict({"source": "written by the builder: the terms AS BUILT BEFORE GATE G-R (Zn-N2-S, S-N2-H and "
++                                        "H-N2-S-C4 as in the frcmod of MCPB.py; Zn-N2-H at its angle in start X with the "
++                                        "force constant of that frcmod)", "validated_by_gate_GR": False},
++                             **n2_terms_file(mcpb, n2_types, theta_x, bdir / "n2_terms.frcmod"))
++        elif pset:
++            raise BuildError(f"--set {pset} needs --n2-frcmod: the terms at N2 are the same in both parameter sets "
++                             "(md/PLAN.md, 6 Oct 2026, 3:02 AM, point 3) and are not taken from this step of MCPB.py. "
++                             "Give the file of gate G-R, or md/topology/bonded_2e/<start>/n2_terms.frcmod")
++        if n2_record:
++            last_frcmods.append(bdir / "n2_terms.frcmod")
++            n2_record.update({"file": "n2_terms.frcmod (in build/ of the system and in md/topology)",
++                              "sha256": sha256(bdir / "n2_terms.frcmod"), "atom_types": n2_types,
++                              "Zn_N2_H_in_start_X_deg": round(theta_x, 4),
++                              "loaded": "after every parameter file of MCPB.py, so its terms are the ones in force"})
+ 
+     assembly = bdir / "assembly.pdb"
+     table = write_assembly(inp, assembly, rename)
+@@ -573,7 +724,8 @@
+     n_dry_res = n_prot + 2 + n_xtal
+ 
+     # -- pass 1: solvated, no ions
+-    head, leap_notes = leap_head(model, mcpb, assembly, bdir, buffer_A)
++    chain_units = [rename[k] for k in sorted(rename) if k <= n_prot]
++    head, leap_notes = leap_head(kind, mcpb, assembly, bdir, buffer_A, last_frcmods, chain_units)
+     s1 = head + ["charge sys", f"saveamberparm sys {bdir / 'stage1.prmtop'} {bdir / 'stage1.inpcrd'}",
+                  f"savepdb sys {bdir / 'stage1.pdb'}", "quit"]
+     (bdir / "leap_stage1.in").write_text("\n".join(s1) + "\n")
+@@ -896,7 +1048,7 @@
+             x = next(a["xyz"] for a in inp["protein"][k]["atoms"] if a["name"] == name)
+         r0[text] = (j, dist(inp["zinc"][0]["xyz"], x))
+     sigma_A = 10.0 * math.sqrt(KT_300_KJ / ZN_RESTRAINT_K_KJ_NM2)
+-    if model == "restrained":
++    if kind == "restrained":
+         bonds = [{"i": zn, "j": j, "r0_nm": round(d / 10.0, 5), "k_kj_per_mol_nm2": ZN_RESTRAINT_K_KJ_NM2,
+                   "label": f"Zn to {text}; r0 = {d:.3f} A, the distance in 6RL9"} for text, (j, d) in r0.items()]
+         extra = {"energy": "U = 0.5 k (r - r0)^2 for each entry; r0 in nm, k in kJ mol-1 nm-2",
+@@ -944,7 +1096,7 @@
+ 
+     # -- zinc site of the bonded model, read back
+     bonded_rec = None
+-    if model == "bonded":
++    if kind == "bonded":
+         want = sorted([f"{atoms[j].residue.name}{dep_of_res.get(atoms[j].residue.idx, 304)}:{atoms[j].name}"
+                        for j, _ in r0.values()])
+         zb = [{"to": f"{(b.atom2 if b.atom1.idx == zn else b.atom1).residue.name}:{(b.atom2 if b.atom1.idx == zn else b.atom1).name}",
+@@ -965,6 +1117,180 @@
+                       "charge_of_zinc_site_e": round(sum(a.charge for k in site_res for a in parm.residues[k].atoms), 5),
+                       "ligand_atom_types": {a.name: a.type for a in lig_atoms}}
+ 
++        # ---- every zinc term against the parameter files: the terms-at-N2 file (loaded last), then MCPB.py's frcmod
++        frc = read_frcmod(mcpb["frcmod"])
++        n2f = read_frcmod(bdir / "n2_terms.frcmod") if n2_record else {"BOND": {}, "ANGLE": {}, "DIHE": {}}
++
++        def look(section, aa):
++            tt = tuple(a.type for a in aa)
++            for table, src in ((n2f[section], "n2_terms.frcmod"), (frc[section], mcpb["frcmod"].name)):
++                hit = table.get(tt, table.get(tt[::-1]))
++                if hit is not None:
++                    return hit, src
++            return None, None
++
++        def tag(a):
++            return f"{a.residue.name}{dep_of_res.get(a.residue.idx, 301 if a.idx == zn else 304)}:{a.name}"
++
++        crystal_d = {j: d for j, d in r0.values()}
++        zbonds, zangles = [], []
++        for b in parm.bonds:
++            if zn in (b.atom1.idx, b.atom2.idx):
++                o = b.atom2 if b.atom1.idx == zn else b.atom1
++                exp, src = look("BOND", (b.atom1, b.atom2))
++                zbonds.append({"bond": f"Zn-{tag(o)}", "types": f"{b.atom1.type}-{b.atom2.type}",
++                               "k_kcal_per_mol_A2": round(b.type.k, 3), "r0_A": round(b.type.req, 4),
++                               "parameter_file": list(exp) if exp else None, "from": src,
++                               "as_file": exp is not None and abs(b.type.k - exp[0]) < 5e-3 and abs(b.type.req - exp[1]) < 5e-5,
++                               "distance_in_6RL9_A": round(crystal_d[o.idx], 4),
++                               "distance_in_this_start_A": round(dist(xyz[zn], xyz[o.idx]), 4)})
++        for a in parm.angles:
++            trio = (a.atom1, a.atom2, a.atom3)
++            if zn not in [x.idx for x in trio]:
++                continue
++            if a.atom2.idx == zn:
++                group = "N-Zn-N"
++            else:
++                end = a.atom3 if a.atom1.idx == zn else a.atom1
++                group = ("Zn-N2-S" if end.name == "S" else "Zn-N2-H") if end.residue.idx == lig_res.idx else "Zn-N-C"
++            exp, src = look("ANGLE", trio)
++            zangles.append({"angle": "-".join("Zn" if x.idx == zn else tag(x) for x in trio),
++                            "kind": group, "types": "-".join(x.type for x in trio),
++                            "k_kcal_per_mol_rad2": round(a.type.k, 3), "theta0_deg": round(a.type.theteq, 3),
++                            "parameter_file": list(exp) if exp else None, "from": src,
++                            "as_file": exp is not None and abs(a.type.k - exp[0]) < 5e-3 and abs(a.type.theteq - exp[1]) < 5e-3,
++                            "angle_in_this_start_deg": round(angle(*(xyz[x.idx] for x in trio)), 2)})
++        zangles.sort(key=lambda z: (["N-Zn-N", "Zn-N-C", "Zn-N2-S", "Zn-N2-H"].index(z["kind"]), z["angle"]))
++        ztor = [d for d in parm.dihedrals if zn in (d.atom1.idx, d.atom2.idx, d.atom3.idx, d.atom4.idx)]
++
++        # ---- the terms at N2 as they stand in the topology
++        n2a, sa, ha, c4a = (atoms[lig[n]] for n in ("N2", "S", "HN21", "C4"))
++
++        def angle_term(i, j, k):
++            hits = [a for a in parm.angles if a.atom2.idx == j.idx and {a.atom1.idx, a.atom3.idx} == {i.idx, k.idx}]
++            return hits[0] if len(hits) == 1 else None
++
++        def series(table_entry):
++            return sorted([round(k, 5), n, round(ph, 3) % 360.0] for k, ph, n in table_entry if abs(k) > 1e-9)
++
++        n2_angles = {}
++        for label_, trio in (("Zn-N2-S", (znatom, n2a, sa)), ("Zn-N2-H", (znatom, n2a, ha)), ("S-N2-H", (sa, n2a, ha))):
++            a = angle_term(*trio)
++            exp = n2f["ANGLE"].get(tuple(x.type for x in trio), n2f["ANGLE"].get(tuple(x.type for x in trio)[::-1]))
++            n2_angles[label_] = {"types": "-".join(x.type for x in trio),
++                                 "k_kcal_per_mol_rad2": round(a.type.k, 3) if a else None,
++                                 "theta0_deg": round(a.type.theteq, 3) if a else None,
++                                 "n2_terms_file": list(exp) if exp else None,
++                                 "as_n2_terms_file": (a is not None and exp is not None and abs(a.type.k - exp[0]) < 5e-3
++                                                      and abs(a.type.theteq - exp[1]) < 5e-3) if n2_record else None,
++                                 "angle_in_this_start_deg": round(angle(*(xyz[x.idx] for x in trio)), 2)}
++        tor_got = sorted([round(d.type.phi_k, 5), int(d.type.per), round(d.type.phase, 3) % 360.0] for d in parm.dihedrals
++                         if not d.improper and abs(d.type.phi_k) > 1e-9 and
++                         [d.atom1.idx, d.atom2.idx, d.atom3.idx, d.atom4.idx] in ([ha.idx, n2a.idx, sa.idx, c4a.idx],
++                                                                                  [c4a.idx, sa.idx, n2a.idx, ha.idx]))
++        tt = (c4a.type, sa.type, n2a.type, ha.type)
++        tor_exp = n2f["DIHE"].get(tt, n2f["DIHE"].get(tt[::-1]))
++        if n2_record:
++            n2_record["in_the_topology"] = {
++                "angles": n2_angles,
++                "sum_of_the_three_equilibrium_angles_deg": round(sum(v["theta0_deg"] or 0.0 for v in n2_angles.values()), 2),
++                "H-N2-S-C4_k_n_phase": tor_got, "H-N2-S-C4_n2_terms_file": series(tor_exp) if tor_exp else None,
++                "all_as_n2_terms_file": bool(all(v["as_n2_terms_file"] for v in n2_angles.values())
++                                             and tor_exp is not None and tor_got == series(tor_exp)),
++                "Zn-N2-H_is_not_120_deg": abs((n2_angles["Zn-N2-H"]["theta0_deg"] or 120.0) - 120.0) > 1.0}
++            for c in repaired_check:                 # a repaired ligand term that the terms-at-N2 file carries
++                what, names = c["term"].split(" ", 1)
++                sec = {"bond": "BOND", "angle": "ANGLE", "torsion": "DIHE"}[what]
++                types_now = tuple(atoms[lig[n]].type for n in names.split("-"))
++                hit = n2f[sec].get(types_now, n2f[sec].get(types_now[::-1]))
++                if hit is None:
++                    continue
++                c["types_in_this_system"] = "-".join(types_now)
++                c["expected_from"] = "n2_terms.frcmod, which is loaded after the repair frcmod and MCPB.py's frcmod"
++                if sec == "DIHE":
++                    c["n2_terms_file_k_per_phase"] = series(hit)
++                    c["in_force"] = [x for x in c["in_prmtop_k_per_phase"] if abs(x[0]) > 1e-9] == series(hit)
++                else:
++                    c["n2_terms_file"] = list(hit)
++                    got = c["in_prmtop"]
++                    c["in_force"] = got is not None and abs(got[0] - hit[0]) < 5e-3 and abs(got[1] - hit[1]) < 5e-3
++
++        # ---- charges of the five residues of the site against the templates (mol2 files) they came from
++        gate_copy = MD / "qm" / "gr" / "charges"
++        site_q, q_ok, pair_rows = {}, True, []
++        for k in sorted(rename):
++            res = parm.residues[k - 1]
++            fname = mol2_of[rename[k]]
++            tmpl = {a.name: a.charge for a in site_mol2[k].atoms}
++            got = {a.name: a.charge for a in res.atoms}
++            worst = max(abs(got[n] - tmpl[n]) for n in tmpl) if set(got) == set(tmpl) else None
++            q_ok = q_ok and worst is not None and worst < 2e-6
++            row = {"residue": f"{res.name} (number {dep_of_res.get(k - 1, 301 if k == n_prot + 1 else 304)} of 6RL9)",
++                   "template": fname,
++                   "template_charge_line": (pathlib.Path(mcpb["dir"]) / fname).read_text().splitlines()[4].strip(),
++                   "sum_e": round(sum(got.values()), 6), "largest_difference_from_template_e": worst,
++                   "atoms_e": {a.name: round(a.charge, 6) for a in res.atoms}}
++            free = pathlib.Path(mcpb["dir"]) / "charges_unconstrained" / fname
++            if free.is_file():
++                fq = {a.name: a.charge for a in parmed.load_file(str(free), structure=True).atoms}
++                row["largest_difference_from_the_unconstrained_fit_e"] = round(max(abs(got[n] - fq[n]) for n in fq), 6)
++            if (gate_copy / fname).is_file():
++                row["template_same_as_md_qm_gr_charges"] = sha256(gate_copy / fname) == sha256(pathlib.Path(mcpb["dir"]) / fname)
++            site_q[res.name] = row
++        ligq = site_q[lig_res.name]["atoms_e"]
++        pair_rows = [{"pair": f"{a}, {b}", "charges_e": [ligq[a], ligq[b]], "equal": abs(ligq[a] - ligq[b]) < 1e-6}
++                     for a, b in LIG_EQUAL_PAIRS]
++
++        # ---- exclusions and 1-4 pairs across the zinc, as the topology has them
++        ps = zinc_pair_sets(parm, zn)
++        near = {i for d in ps for pr in ps[d] for i in pr}
++        excl, ptr = set(), 0
++        for i, n in enumerate(parm.parm_data["NUMBER_EXCLUDED_ATOMS"]):
++            if i in near:
++                excl |= {(i, j - 1) for j in parm.parm_data["EXCLUDED_ATOMS_LIST"][ptr:ptr + n] if j > 0}
++            ptr += n
++        one4 = {}
++        for d in parm.dihedrals:
++            if not d.improper and not d.ignore_end:
++                key = tuple(sorted((d.atom1.idx, d.atom4.idx)))
++                if key[0] in near and key[1] in near:
++                    one4.setdefault(key, []).append((d.type.scee, d.type.scnb))
++        rule12 = all(p in excl and p not in one4 for p in ps[1] + ps[2])
++        rule3 = all(p in excl and len(one4.get(p, [])) == 1 and abs(one4[p][0][0] - SCEE) < 1e-6
++                    and abs(one4[p][0][1] - SCNB) < 1e-6 for p in ps[3])
++        rule4 = not any(p in excl or p in one4 for p in ps[4])
++
++        def pair_name(p):
++            return " ... ".join("Zn" if i == zn else tag(atoms[i]) for i in p)
++
++        bonded_rec.update({
++            "bonds_to_zinc_against_the_parameter_files": zbonds,
++            "angles_with_zinc_against_the_parameter_files": zangles,
++            "n_angles_by_kind": {g: sum(1 for z in zangles if z["kind"] == g) for g in ("N-Zn-N", "Zn-N-C", "Zn-N2-S", "Zn-N2-H")},
++            "all_zinc_bonds_and_angles_as_the_parameter_files": bool(zbonds and zangles and all(z["as_file"] for z in zbonds + zangles)),
++            "torsions_through_zinc": {"n": len(ztor), "n_proper": sum(1 for d in ztor if not d.improper),
++                                      "n_improper": sum(1 for d in ztor if d.improper),
++                                      "largest_abs_k_kcal_per_mol": round(max(abs(d.type.phi_k) for d in ztor), 6) if ztor else None,
++                                      "all_zero": bool(ztor) and all(abs(d.type.phi_k) < 1e-9 for d in ztor)},
++            "charges": {"residues": site_q, "site_sum_e": bonded_rec["charge_of_zinc_site_e"],
++                        "zinc_e": round(znatom.charge, 6), "all_as_the_templates": bool(q_ok),
++                        "equal_pairs_of_the_ligand": pair_rows, "pairs_equal": all(r_["equal"] for r_ in pair_rows),
++                        "resp_equiv_json_sha256": (sha256(pathlib.Path(mcpb["dir"]) / "resp_equiv.json")
++                                                   if (pathlib.Path(mcpb["dir"]) / "resp_equiv.json").is_file() else None)},
++            "pairs_across_the_zinc": {
++                "rule": "Amber: atoms one or two bonds apart do not interact (excluded); atoms three bonds apart interact "
++                        f"with the electrostatics divided by {SCEE} and the Lennard-Jones term by {SCNB} (1-4); atoms four "
++                        "or more bonds apart interact in full. Checked here for every pair whose bonds run through the zinc",
++                "n_pairs_1_or_2_bonds_apart": len(ps[1]) + len(ps[2]), "n_pairs_3_bonds_apart": len(ps[3]),
++                "n_pairs_4_bonds_apart": len(ps[4]),
++                "1_or_2_bonds_excluded_and_no_1_4_term": bool(rule12),
++                "3_bonds_one_1_4_term_each_with_the_amber_scaling": bool(rule3),
++                "4_bonds_neither_excluded_nor_1_4": bool(rule4),
++                "pairs_1_or_2_bonds_apart": [pair_name(p) for p in ps[1] + ps[2]],
++                "pairs_3_bonds_apart_1_4": [pair_name(p) for p in ps[3]],
++                "zinc_to_sulfonyl_oxygens": "three bonds apart (Zn-N2-S-O): a 1-4 pair, scaled as above"},
++        })
++
+     # -- water at the ligand, and in the place the crystal ligand takes (empty in start R)
+     wat_fit = fit[water_o]
+     is_xtal = np.arange(len(water_o)) < n_xtal
+@@ -1005,8 +1331,7 @@
+     warn1, warn2 = leap_warnings(log1), leap_warnings(log2)
+     unexpected = warn2["other"] + [f"close contact between heavy atoms: {c['atoms']} {c['distance_A']} A"
+                                    for c in warn2["close_contacts_between_heavy_atoms"]]
+-    renamed_protein = sorted(k for k in rename if k <= n_prot)
+-    n_one_sided = 2 * len(renamed_protein)           # one for the residue, one for its neighbour in the chain
++    n_one_sided = 0                                  # the renamed residues have head and tail atoms (leap_head)
+     if len(warn2["one_sided_connection"]) != n_one_sided:
+         unexpected += warn2["one_sided_connection"]
+     bonded_pairs = {(b.atom1.idx, b.atom2.idx) for b in parm.bonds} | {(b.atom2.idx, b.atom1.idx) for b in parm.bonds}
+@@ -1020,6 +1345,37 @@
+     cc = warn2["close_contacts_with_a_hydrogen"]
+     cc_lig = [c for c in cc if lig_res.name in c["atoms"] or zn_res.name in c["atoms"].replace("Zn2+", "")]
+ 
++    # -- the same solvation and the same ions as the restrained system of this start?
++    against_restrained = None
++    other = pathlib.Path(out_root) / "restrained" / start
++    if kind == "bonded" and (other / "build.json").is_file() and (other / "system.inpcrd").is_file():
++        ob = json.loads((other / "build.json").read_text())
++        oc = ob["composition"]
++        d_max = None
++        if oc["atoms"] == len(atoms):
++            d_max = float(np.abs(parmed.load_file(str(other / "system.inpcrd")).coordinates.reshape(-1, 3) - xyz).max())
++        against_restrained = {
++            "folder": str(other), "note": "each pair is [this system, the restrained system]",
++            "atoms": [len(atoms), oc["atoms"]], "water_molecules": [len(water_o), oc["water_molecules"]],
++            "crystal_water_molecules": [n_xtal, oc["crystal_water_molecules"]],
++            "Na+": [n_na, oc["Na+"]], "Cl-": [n_cl, oc["Cl-"]],
++            "cell_edge_A": [round(float(parm.box[0]), 7), ob["box"]["edge_A"]],
++            "ions_replace_the_same_water_molecules": [(x["ion"], x["replaces_added_water_number"]) for x in ion_sites]
++            == [(x["ion"], x["replaces_added_water_number"]) for x in ob["ions"]["sites"]],
++            "largest_coordinate_difference_A": None if d_max is None else round(d_max, 6),
++            "same_atoms_at_the_same_places_within_0.005_A": d_max is not None and d_max < 0.005}
++        osel = json.loads((other / "selections.json").read_text())
++        if osel["solute"] == sel["solute"] and osel["protein_CA"] == ca:
++            ox = parmed.load_file(str(other / "system.inpcrd")).coordinates.reshape(-1, 3)
++            R2, t2 = kabsch(ox[ca], ref_ca)
++            dsol = np.linalg.norm((ox @ R2.T + t2)[sel["solute"]] - fit[sel["solute"]], axis=1)
++            worst = int(np.argmax(dsol))
++            against_restrained.update({
++                "solute_atoms_largest_deviation_after_the_fit_on_CA_A": round(float(dsol.max()), 4),
++                "solute_atom_with_the_largest_deviation": f"{atoms[sel['solute'][worst]].residue.name}"
++                                                          f"{atoms[sel['solute'][worst]].residue.idx + 1}:{atoms[sel['solute'][worst]].name}",
++                "solute_atoms_farther_than_0.01_A": int((dsol > 0.01).sum())})
++
+     checks = {
+         "tleap_errors_0": count1["errors"] == 0 and count2["errors"] == 0,
+         "tleap_no_unexpected_warning": not unexpected,
+@@ -1030,16 +1386,34 @@
+         "input_heavy_atoms_at_their_coordinates": input_dev < 0.002,
+         "selections_resolve_to_the_right_atoms": bool(sel_ok and names_ok),
+         "geometry_agrees_with_starts_csv": all(v["agrees"] for v in against.values()),
+-        "zinc_charge_and_type": (abs(znatom.charge - 2.0) < 1e-6 and znatom.type == "Zn2+") if model == "restrained" else None,
++        "zinc_charge_and_type": (abs(znatom.charge - 2.0) < 1e-6 and znatom.type == "Zn2+") if kind == "restrained" else None,
+         "zinc_lj_is_the_frcmod_value": (abs(znatom.rmin - ffiles["frcmod.ions234lm_126_tip3p"]["rmin_half_A"]) < 1e-4 and
+                                         abs(znatom.epsilon - ffiles["frcmod.ions234lm_126_tip3p"]["epsilon_kcal_per_mol"]) < 1e-7)
+-        if model == "restrained" else None,
+-        "zinc_not_bonded": (not znatom.bond_partners) if model == "restrained" else None,
+-        "zinc_has_the_four_bonds": bonded_rec["zinc_has_the_four_bonds"] if model == "bonded" else None,
++        if kind == "restrained" else None,
++        "zinc_not_bonded": (not znatom.bond_partners) if kind == "restrained" else None,
++        "zinc_has_the_four_bonds": bonded_rec["zinc_has_the_four_bonds"] if kind == "bonded" else None,
++        "zinc_bonds_and_angles_as_the_parameter_files": bonded_rec["all_zinc_bonds_and_angles_as_the_parameter_files"]
++        if kind == "bonded" else None,
++        "zinc_angles_6_N_Zn_N_6_Zn_N_C_1_Zn_N2_S_1_Zn_N2_H": (bonded_rec["n_angles_by_kind"] ==
++                                                              {"N-Zn-N": 6, "Zn-N-C": 6, "Zn-N2-S": 1, "Zn-N2-H": 1})
++        if kind == "bonded" else None,
++        "torsions_through_zinc_all_zero": bonded_rec["torsions_through_zinc"]["all_zero"] if kind == "bonded" else None,
++        "terms_at_N2_are_those_of_the_n2_file": n2_record["in_the_topology"]["all_as_n2_terms_file"] if n2_record else None,
++        "zn_n2_h_is_not_the_120_deg_of_step_2e": n2_record["in_the_topology"]["Zn-N2-H_is_not_120_deg"] if n2_record else None,
++        "site_charges_are_those_of_the_templates": bonded_rec["charges"]["all_as_the_templates"] if kind == "bonded" else None,
++        "site_charge_plus_one": (abs(bonded_rec["charge_of_zinc_site_e"] - 1.0) < 5e-4) if kind == "bonded" else None,
++        "ligand_equal_atoms_have_equal_charges": bonded_rec["charges"]["pairs_equal"] if pset else None,
++        "solute_hydrogens_where_the_restrained_build_has_them": (
++            against_restrained["solute_atoms_farther_than_0.01_A"] == 0)
++        if against_restrained and "solute_atoms_farther_than_0.01_A" in against_restrained else None,
++        "exclusions_and_1_4_pairs_across_the_zinc_follow_amber": (
++            bonded_rec["pairs_across_the_zinc"]["1_or_2_bonds_excluded_and_no_1_4_term"]
++            and bonded_rec["pairs_across_the_zinc"]["3_bonds_one_1_4_term_each_with_the_amber_scaling"]
++            and bonded_rec["pairs_across_the_zinc"]["4_bonds_neither_excluded_nor_1_4"]) if kind == "bonded" else None,
+         "na_cl_are_joung_cheatham_tip3p": ions_as_jc,
+         "ligand_repaired_terms_in_force": all(c["in_force"] for c in repaired_check),
+-        "ligand_terms_equal_free_anion_topology": all(same_as_free.values()) if model == "restrained" else None,
+-        "ligand_charges_are_those_of_the_mol2": charges_as_mol2 if model == "restrained" else None,
++        "ligand_terms_equal_free_anion_topology": all(same_as_free.values()) if kind == "restrained" else None,
++        "ligand_charges_are_those_of_the_mol2": charges_as_mol2 if kind == "restrained" else None,
+         "ions_keep_their_distances": bool(len(near) == 0 or (near.min() >= ION_MIN_DIST_TO_SOLUTE_A - 0.002 and
+                                                                (ion_sep is None or ion_sep >= ION_MIN_SEPARATION_A - 0.002))),
+         "no_crystal_water_replaced": len(crystal_o) == n_xtal and
+@@ -1063,7 +1437,8 @@
+         "schema": "cqc-sfa-md built system, version 1",
+         "what": label or "hCA II (PDB 6RL9, chain A) with the sulfonamidate anion of sulfanilamide on the zinc, "
+                          "crystal water, TIP3P water and NaCl in a truncated octahedron",
+-        "model": model, "start": start,
++        "model": model, "model_kind": kind, "parameter_set": pset, "start": start,
++        "status_note": note,
+         "written_by": "md/build_topology.py", "script_sha256": sha256(__file__),
+         "software": versions(),
+         "units": "Angstrom, degrees, e, amu, kcal mol-1 (Amber parameters); nm and kJ mol-1 nm-2 only where the key says so",
+@@ -1076,19 +1451,24 @@
+             "protein": "ff14SB", "water": "TIP3P (rigid; the topology holds the H-H bond)",
+             "ligand": ("GAFF2 atom types; AM1-BCC charges of the free anion (md/ligand/sfa_anion.mol2, sum -1); "
+                        "sfa_anion_gaff2.frcmod, then sfa_anion_repair.frcmod (repaired terms at sulfur)")
+-            if model == "restrained" else "as delivered by MCPB.py (charges of the zinc site refitted; see mcpb)",
++            if kind == "restrained" else "as delivered by MCPB.py (charges of the zinc site refitted; see mcpb)",
+             "zinc": ("nonbonded Zn2+, 12-6 Lennard-Jones, Li/Merz 'CM' (compromise) set for TIP3P of "
+                      "frcmod.ions234lm_126_tip3p, which leaprc.water.tip3p loads last")
+-            if model == "restrained" else "bonded to its four nitrogen atoms with the terms of MCPB.py (see mcpb, zinc_site_bonded)",
++            if kind == "restrained" else "bonded to its four nitrogen atoms with the terms of MCPB.py (see mcpb, zinc_site_bonded)",
+             "zinc_in_prmtop": zn_rec, "zinc_line_of_frcmod": ffiles["frcmod.ions234lm_126_tip3p"],
+             "sodium_chloride": "Joung-Cheatham for TIP3P (frcmod.ionsjc_tip3p, loaded by leaprc.water.tip3p)",
+             "ions_in_prmtop": ion_rec, "ion_lines_of_frcmod": {k: v for k, v in ffiles.items() if "ionsjc" in k},
+             "notes": leap_notes},
+         "mcpb": mcpb_record,
++        "terms_at_N2": n2_record,
+         "zinc_site_bonded": bonded_rec,
++        "against_the_restrained_system_of_this_start": against_restrained,
+         "ligand_parameters": {
+             "repaired_terms": repaired_check,
+             "all_ligand_terms_equal_to_md_ligand_sfa_anion_repaired_prmtop": same_as_free,
++            "terms_that_differ_from_that_topology": {sec: sorted(k for k in set(terms[sec]) | set(ref_terms[sec])
++                                                                 if terms[sec].get(k) != ref_terms[sec].get(k)) for sec in terms},
++            "terms": terms if kind == "bonded" else "as md/ligand/sfa_anion_repaired.prmtop (see the line above)",
+             "charges_e": lig_charge, "charge_sum_e": round(sum(lig_charge.values()), 6),
+             "charges_are_those_of_sfa_anion_mol2": charges_as_mol2,
+             "n_terms": {k: len(v) for k, v in terms.items()}},
+@@ -1134,7 +1514,7 @@
+                 "why_not_tleap": "addIonsRand has no seed (its help text: the result differs between invocations) and "
+                                  "may replace a crystal water; addIons puts every ion on the protein surface"},
+             "sites": ion_sites},
+-        "zinc_restraints": None if model != "restrained" else {
++        "zinc_restraints": None if kind != "restrained" else {
+             "k_kj_per_mol_nm2": ZN_RESTRAINT_K_KJ_NM2,
+             "k_kcal_per_mol_A2_same_form": round(ZN_RESTRAINT_K_KJ_NM2 / 418.4, 3),
+             "form": "U = 0.5 k (r - r0)^2",
+@@ -1164,6 +1544,13 @@
+     }
+     write_json(out / "build.json", build_json)
+     shutil.copy(out / "build.json", rec / "build.json")
++    if n2_record:
++        shutil.copy(bdir / "n2_terms.frcmod", rec / "n2_terms.frcmod")
++    for d in (out, rec):
++        if note:
++            (d / "STATUS_NOTE.txt").write_text(f"{model}/{start}, built {now_ist()} by md/build_topology.py\n{note}\n")
++        elif (d / "STATUS_NOTE.txt").exists():
++            (d / "STATUS_NOTE.txt").unlink()
+     for name in ("leap_stage1.in", "leap.in", "leap.log", "ions.pdb"):
+         shutil.copy(bdir / name, rec / name)
+     sums = [f"{sha256(out / n)}  {n}" for n in ("system.prmtop", "system.inpcrd", "selections.json", "extra_forces.json",
+@@ -1182,7 +1569,9 @@
+     print(f"   checks failed: {failed if failed else 'none'}")
+ 
+     if openmm_check:
+-        openmm_load_check(out, rec)
++        om = openmm_load_check(out, rec)
++        if (om.get("pairs_across_the_zinc") or {}).get("as_amber_rules") is False:
++            build_json["checks_failed"].append("openmm_check.json: pairs_across_the_zinc")
+     return build_json
+ 
+ 
+@@ -1218,6 +1607,45 @@
+            "energy_is_finite": bool(math.isfinite(total)),
+            "note": "the energy is not repeatable to the last digit with more than one thread; this file is not part "
+                    "of the built system"}
++    # bonded model: the pairs across the zinc as the engine will treat them (exceptions of the NonbondedForce)
++    import parmed
++    zn = json.loads((out / "selections.json").read_text())["zn"]
++    parm = parmed.load_file(str(out / "system.prmtop"))
++    if parm.atoms[zn].bond_partners:
++        ps = zinc_pair_sets(parm, zn)
++        near = {i for d in ps for pr in ps[d] for i in pr}
++        nb = next(f for f in system.getForces() if isinstance(f, openmm.NonbondedForce))
++        e2 = unit.elementary_charge ** 2
++        exc = {}
++        for n in range(nb.getNumExceptions()):
++            i, j, qq, sig, eps = nb.getExceptionParameters(n)
++            if i in near and j in near:
++                exc[tuple(sorted((i, j)))] = (qq.value_in_unit(e2), sig.value_in_unit(unit.nanometer), eps.value_in_unit(kj))
++        par = {i: nb.getParticleParameters(i) for i in near}
++
++        def scaled(p):                               # what Amber's 1-4 rule gives for the pair
++            (q1, s1, e1), (q2, s2, e2_) = par[p[0]], par[p[1]]
++            return (q1.value_in_unit(unit.elementary_charge) * q2.value_in_unit(unit.elementary_charge) / SCEE,
++                    0.5 * (s1.value_in_unit(unit.nanometer) + s2.value_in_unit(unit.nanometer)),
++                    math.sqrt(e1.value_in_unit(kj) * e2_.value_in_unit(kj)) / SCNB)
++
++        def close(x, y):
++            return abs(x - y) <= 1e-6 + 1e-5 * abs(y)
++
++        r12 = all(p in exc and exc[p][0] == 0.0 and exc[p][2] == 0.0 for p in ps[1] + ps[2])
++        r3 = all(p in exc and close(exc[p][0], scaled(p)[0]) and close(exc[p][2], scaled(p)[2])
++                 and (scaled(p)[2] == 0.0 or close(exc[p][1], scaled(p)[1])) for p in ps[3])
++        r4 = not any(p in exc for p in ps[4])
++        res["pairs_across_the_zinc"] = {
++            "what": "exceptions of OpenMM's NonbondedForce for the pairs whose bonds run through the zinc: one or two "
++                    f"bonds apart, no interaction; three bonds apart, charge product / {SCEE} and epsilon / {SCNB}; four "
++                    "bonds apart, no exception (full interaction)",
++            "n_pairs_1_or_2_bonds_apart": len(ps[1]) + len(ps[2]), "n_pairs_3_bonds_apart": len(ps[3]),
++            "n_pairs_4_bonds_apart": len(ps[4]), "1_or_2_bonds_no_interaction": bool(r12),
++            "3_bonds_scaled_as_amber_1_4": bool(r3), "4_bonds_no_exception": bool(r4),
++            "as_amber_rules": bool(r12 and r3 and r4)}
++        print(f"   OpenMM: pairs across the zinc ({len(ps[1]) + len(ps[2])} excluded, {len(ps[3])} scaled 1-4, "
++              f"{len(ps[4])} in full) follow the Amber rules: {res['pairs_across_the_zinc']['as_amber_rules']}")
+     write_json(rec / "openmm_check.json", res)
+     print(f"   OpenMM: {res['n_particles']} particles, {res['n_constraints']} constraints, energy as built "
+           f"{total:.4g} kJ/mol (finite: {res['energy_is_finite']})")
+@@ -1259,6 +1687,11 @@
+            "Zn_N2_S_C4_deg": round(torsion(zx, X[lig["N2"]], X[lig["S"]], X[lig["C4"]]), 2),
+            "N2_Thr199OG1_A": round(dist(X[lig["N2"]], X[sel["thr199_OG1"]]), 3),
+            "N2_HN21_Thr199OG1_deg": round(angle(X[lig["N2"]], X[sel["lig_HN2"]], X[sel["thr199_OG1"]]), 1)}
++    e = [(X[i] - X[lig["N2"]]) / np.linalg.norm(X[i] - X[lig["N2"]]) for i in (sel["zn"], sel["lig_HN2"], lig["S"])]
++    out["n2_signed_volume_Zn_H_S"] = round(float(np.dot(e[0], np.cross(e[1], e[2]))), 4)   # md/analysis/SPEC.md, 9A
++    out["Zn_N2_S_deg"] = round(angle(zx, X[lig["N2"]], X[lig["S"]]), 2)
++    out["Zn_N2_HN21_deg"] = round(angle(zx, X[lig["N2"]], X[sel["lig_HN2"]]), 2)
++    out["S_N2_HN21_deg"] = round(angle(X[lig["S"]], X[lig["N2"]], X[sel["lig_HN2"]]), 2)
+     return out
+ 
+ 
+@@ -1280,15 +1713,21 @@
+     parm = parmed.load_file(str(out / "system.prmtop"), xyz=str(out / "system.inpcrd"))
+     key = {sel["lig_heavy"]["N2"]: "N2", sel["his94_NE2"]: "H94NE2", sel["his96_NE2"]: "H96NE2", sel["his119_ND1"]: "H119ND1"}
+     r0 = {key[b["j"]]: 10.0 * b["r0_nm"] for b in extra["harmonic_bonds"]} or None
++    if r0 is None:                                   # bonded model: the equilibrium lengths of the four zinc bonds
++        zn = sel["zn"]
++        r0 = {key[(b.atom2 if b.atom1.idx == zn else b.atom1).idx]: float(b.type.req) for b in parm.bonds
++              if zn in (b.atom1.idx, b.atom2.idx) and (b.atom2 if b.atom1.idx == zn else b.atom1).idx in key} or None
+     return sel, extra, ref_ca, ref_lig, parm, r0
+ 
+ 
+ def min_check(model, start, out_root, records_root=RECORDS, short_md=False, iterations=300, threads=THREADS,
+-              reuse=False):
++              reuse=False, pset=None):
+     """The minimisation of md/run_md.py on the built system, and what it does to the zinc site and the ligand.
+     iterations = None: md/protocol.json as it is (up to 5000 L-BFGS iterations per pass; an hour or more on the
+     shared Pi).  iterations = n: the same protocol with at most n iterations per pass and output every 0.1 ps,
+-    marked as a test; short_md then continues with the six equilibration stages shortened to 4 ps in all."""
++    marked as a test; short_md then continues with the six equilibration stages shortened to 4 ps in all.
++    For the bonded model r0 are the equilibrium lengths of the four zinc bonds of the topology."""
++    model = folder_name(model, pset)
+     out = pathlib.Path(out_root) / model / start
+     rec = pathlib.Path(records_root) / model / start
+     tag = "min_full" if iterations is None else f"min_{iterations}"
+@@ -1358,6 +1797,9 @@
+            "extra_forces_sha256": sha256(out / "extra_forces.json"), "selections_sha256": sha256(out / "selections.json"),
+            "run_md_sha256": sha256(MD / "run_md.py"), "protocol_sha256": sha256(protocol),
+            "limits_fixed_beforehand": MIN_CHECK,
++           "r0_A": {k: round(v, 4) for k, v in r0.items()} if r0 else None,
++           "r0_are": ("the targets of the four harmonic restraints of extra_forces.json" if extra["harmonic_bonds"] else
++                      "the equilibrium lengths of the four zinc bonds of system.prmtop (bonded model)"),
+            "energies_before_kj_per_mol": r["energies_before"], "energies_after_kj_per_mol": r["energies_after"],
+            "lbfgs_iterations_per_pass": r["lbfgs_iterations_per_pass"],
+            "passes_stopped_by_the_iteration_limit": r["passes_stopped_by_the_iteration_limit"],
+@@ -1755,7 +2197,17 @@
+     ap.add_argument("--model", choices=["restrained", "bonded"])
+     ap.add_argument("--start", choices=["X", "N", "R"])
+     ap.add_argument("--out-root", default=DEFAULT_OUT_ROOT, help=f"folder of the built systems (default {DEFAULT_OUT_ROOT})")
+-    ap.add_argument("--mcpb-dir", default=None, help="model bonded: folder with the output of MCPB.py step 4 (default md/qm/mcpb)")
++    ap.add_argument("--set", dest="pset", choices=sorted(SET_METHOD), default=None,
++                    help="model bonded: the parameter set, 2e (MCPB.py step 2e, empirical) or 2s (step 2s, Seminario); "
++                         "the folder is then bonded_<set>")
++    ap.add_argument("--n2-frcmod", default=None,
++                    help="model bonded: frcmod file with the terms at N2 (Zn-N2-S, Zn-N2-H, S-N2-H, H-N2-S-C4), loaded last; "
++                         "default for --set 2e: written by the builder, the terms as built before gate G-R")
++    ap.add_argument("--note", default=None, help="a sentence on the status of this build, written to build.json "
++                                                 "(status_note) and to STATUS_NOTE.txt beside the system")
++    ap.add_argument("--mcpb-dir", default=None,
++                    help="model bonded: folder with the output of MCPB.py step 4 (default: the first of "
++                         "/root/cqc-sfa-md/qm/gr/mcpb_<set> and md/qm/mcpb that holds it)")
+     ap.add_argument("--mcpb-group", default=None, help="model bonded: group name of MCPB.py (default: the one <group>_tleap.in found)")
+     ap.add_argument("--no-openmm", action="store_true", help="skip the OpenMM load check after the build")
+     ap.add_argument("--min-check", action="store_true", help="minimise the built system with md/run_md.py and report")
+@@ -1783,16 +2235,21 @@
+             return 0
+         if not args.model or not args.start:
+             ap.error("--model and --start are required")
++        if args.model == "bonded" and not args.pset:
++            ap.error("--model bonded needs --set 2e or --set 2s (md/PLAN.md, 6 Oct 2026, 3:02 AM, point 3)")
++        if args.model != "bonded" and (args.pset or args.n2_frcmod):
++            ap.error("--set and --n2-frcmod belong to --model bonded")
+         if args.min_check:
+             res = min_check(args.model, args.start, args.out_root, short_md=args.short_md,
+                             iterations=None if args.min_full else args.min_iterations, threads=args.threads,
+-                            reuse=args.reuse_run)
++                            reuse=args.reuse_run, pset=args.pset)
+             return 1 if res["checks_failed"] else 0
+         if args.k_scan:
+             k_scan(args.model, args.start, args.out_root)
+             return 0
+         bj = build(args.model, args.start, args.out_root, mcpb_dir=args.mcpb_dir, mcpb_group=args.mcpb_group,
+-                   openmm_check=not args.no_openmm, buffer_A=args.buffer_A)
++                   openmm_check=not args.no_openmm, buffer_A=args.buffer_A, pset=args.pset, n2_frcmod=args.n2_frcmod,
++                   note=args.note)
+         return 1 if bj["checks_failed"] else 0
+     except BuildError as exc:
+         print(f"build_topology.py: {exc}", file=sys.stderr)

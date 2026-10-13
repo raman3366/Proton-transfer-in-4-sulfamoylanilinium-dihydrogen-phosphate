@@ -1,0 +1,1880 @@
+{
+ "what": "seminario_blocks.py WORK OUT.json: which blocks of the Hessian MCPB.py reads for the zinc terms, and the constants. Step 2ms is tabulated only.",
+ "work_folder": "/root/cqc-sfa-md/qm/gr/mcpb_2s",
+ "fchk_title": "CA2 small model, PySCF B3LYP/6-31g* DF(def2-universal-jkfit); PARTIAL fo",
+ "n_atoms": 64,
+ "displaced_atoms_found_in_the_matrix": [
+  {
+   "number": 12,
+   "atom": "HID93@NE2"
+  },
+  {
+   "number": 27,
+   "atom": "HID95@NE2"
+  },
+  {
+   "number": 38,
+   "atom": "HIE118@ND1"
+  },
+  {
+   "number": 46,
+   "atom": "ZN260@ZN"
+  },
+  {
+   "number": 54,
+   "atom": "SAN261@N2"
+  },
+  {
+   "number": 57,
+   "atom": "SAN261@S"
+  }
+ ],
+ "n_blocks_non_zero": 732,
+ "n_blocks": 4096,
+ "rule": "a block between two atoms is computed if at least one of them was displaced; found from the matrix itself: a displaced atom has a non-zero block with every atom",
+ "step_2s": {
+  "n_bonds": 4,
+  "n_angles": 14,
+  "every_block_read_was_computed": true,
+  "terms": [
+   {
+    "kind": "bond",
+    "atoms": [
+     "ZN260@ZN",
+     "SAN261@N2"
+    ],
+    "atom_numbers": [
+     46,
+     54
+    ],
+    "k_mcpb": 102.442,
+    "equilibrium_mcpb": 1.9665,
+    "anglefc_or_bondfc_avg": 0,
+    "blocks_read": [
+     {
+      "rows_of": "ZN260@ZN",
+      "columns_of": "SAN261@N2",
+      "computed": true,
+      "norm_hartree_per_bohr2": 0.092017,
+      "row_atom_displaced": true,
+      "column_atom_displaced": true,
+      "eigenvalues_complex": false
+     }
+    ],
+    "all_blocks_computed": true,
+    "own_code": {
+     "length_A": 1.9665,
+     "k_block_as_mcpb": 102.44,
+     "k_other_block": 99.53,
+     "k_mean_of_the_two": 100.99
+    }
+   },
+   {
+    "kind": "bond",
+    "atoms": [
+     "HID93@NE2",
+     "ZN260@ZN"
+    ],
+    "atom_numbers": [
+     12,
+     46
+    ],
+    "k_mcpb": 73.627,
+    "equilibrium_mcpb": 2.0258,
+    "anglefc_or_bondfc_avg": 0,
+    "blocks_read": [
+     {
+      "rows_of": "HID93@NE2",
+      "columns_of": "ZN260@ZN",
+      "computed": true,
+      "norm_hartree_per_bohr2": 0.067597,
+      "row_atom_displaced": true,
+      "column_atom_displaced": true,
+      "eigenvalues_complex": false
+     }
+    ],
+    "all_blocks_computed": true,
+    "own_code": {
+     "length_A": 2.0258,
+     "k_block_as_mcpb": 73.63,
+     "k_other_block": 73.65,
+     "k_mean_of_the_two": 73.64
+    }
+   },
+   {
+    "kind": "bond",
+    "atoms": [
+     "HID95@NE2",
+     "ZN260@ZN"
+    ],
+    "atom_numbers": [
+     27,
+     46
+    ],
+    "k_mcpb": 51.21,
+    "equilibrium_mcpb": 2.084,
+    "anglefc_or_bondfc_avg": 0,
+    "blocks_read": [
+     {
+      "rows_of": "HID95@NE2",
+      "columns_of": "ZN260@ZN",
+      "computed": true,
+      "norm_hartree_per_bohr2": 0.048084,
+      "row_atom_displaced": true,
+      "column_atom_displaced": true,
+      "eigenvalues_complex": false
+     }
+    ],
+    "all_blocks_computed": true,
+    "own_code": {
+     "length_A": 2.084,
+     "k_block_as_mcpb": 51.21,
+     "k_other_block": 51.36,
+     "k_mean_of_the_two": 51.29
+    }
+   },
+   {
+    "kind": "bond",
+    "atoms": [
+     "HIE118@ND1",
+     "ZN260@ZN"
+    ],
+    "atom_numbers": [
+     38,
+     46
+    ],
+    "k_mcpb": 65.424,
+    "equilibrium_mcpb": 2.0423,
+    "anglefc_or_bondfc_avg": 0,
+    "blocks_read": [
+     {
+      "rows_of": "HIE118@ND1",
+      "columns_of": "ZN260@ZN",
+      "computed": true,
+      "norm_hartree_per_bohr2": 0.060412,
+      "row_atom_displaced": true,
+      "column_atom_displaced": true,
+      "eigenvalues_complex": false
+     }
+    ],
+    "all_blocks_computed": true,
+    "own_code": {
+     "length_A": 2.0423,
+     "k_block_as_mcpb": 65.42,
+     "k_other_block": 65.65,
+     "k_mean_of_the_two": 65.54
+    }
+   },
+   {
+    "kind": "angle",
+    "atoms": [
+     "HIE118@CG",
+     "HIE118@ND1",
+     "ZN260@ZN"
+    ],
+    "atom_numbers": [
+     37,
+     38,
+     46
+    ],
+    "k_mcpb": 51.879,
+    "equilibrium_mcpb": 130.3054,
+    "anglefc_or_bondfc_avg": 0,
+    "blocks_read": [
+     {
+      "rows_of": "HIE118@CG",
+      "columns_of": "HIE118@ND1",
+      "computed": true,
+      "norm_hartree_per_bohr2": 0.277031,
+      "row_atom_displaced": false,
+      "column_atom_displaced": true,
+      "eigenvalues_complex": false
+     },
+     {
+      "rows_of": "ZN260@ZN",
+      "columns_of": "HIE118@ND1",
+      "computed": true,
+      "norm_hartree_per_bohr2": 0.060412,
+      "row_atom_displaced": true,
+      "column_atom_displaced": true,
+      "eigenvalues_complex": false
+     }
+    ],
+    "all_blocks_computed": true,
+    "own_code": {
+     "angle_deg": 130.31,
+     "k_block_as_mcpb": 51.88
+    }
+   },
+   {
+    "kind": "angle",
+    "atoms": [
+     "HID93@CE1",
+     "HID93@NE2",
+     "ZN260@ZN"
+    ],
+    "atom_numbers": [
+     10,
+     12,
+     46
+    ],
+    "k_mcpb": 51.005,
+    "equilibrium_mcpb": 124.9461,
+    "anglefc_or_bondfc_avg": 0,
+    "blocks_read": [
+     {
+      "rows_of": "HID93@CE1",
+      "columns_of": "HID93@NE2",
+      "computed": true,
+      "norm_hartree_per_bohr2": 0.424025,
+      "row_atom_displaced": false,
+      "column_atom_displaced": true,
+      "eigenvalues_complex": false
+     },
+     {
+      "rows_of": "ZN260@ZN",
+      "columns_of": "HID93@NE2",
+      "computed": true,
+      "norm_hartree_per_bohr2": 0.067597,
+      "row_atom_displaced": true,
+      "column_atom_displaced": true,
+      "eigenvalues_complex": false
+     }
+    ],
+    "all_blocks_computed": true,
+    "own_code": {
+     "angle_deg": 124.95,
+     "k_block_as_mcpb": 51.01
+    }
+   },
+   {
+    "kind": "angle",
+    "atoms": [
+     "HID95@CE1",
+     "HID95@NE2",
+     "ZN260@ZN"
+    ],
+    "atom_numbers": [
+     25,
+     27,
+     46
+    ],
+    "k_mcpb": 64.736,
+    "equilibrium_mcpb": 120.8601,
+    "anglefc_or_bondfc_avg": 0,
+    "blocks_read": [
+     {
+      "rows_of": "HID95@CE1",
+      "columns_of": "HID95@NE2",
+      "computed": true,
+      "norm_hartree_per_bohr2": 0.426765,
+      "row_atom_displaced": false,
+      "column_atom_displaced": true,
+      "eigenvalues_complex": false
+     },
+     {
+      "rows_of": "ZN260@ZN",
+      "columns_of": "HID95@NE2",
+      "computed": true,
+      "norm_hartree_per_bohr2": 0.048084,
+      "row_atom_displaced": true,
+      "column_atom_displaced": true,
+      "eigenvalues_complex": false
+     }
+    ],
+    "all_blocks_computed": true,
+    "own_code": {
+     "angle_deg": 120.86,
+     "k_block_as_mcpb": 64.74
+    }
+   },
+   {
+    "kind": "angle",
+    "atoms": [
+     "ZN260@ZN",
+     "HID93@NE2",
+     "HID93@CD2"
+    ],
+    "atom_numbers": [
+     46,
+     12,
+     13
+    ],
+    "k_mcpb": 53.998,
+    "equilibrium_mcpb": 128.4687,
+    "anglefc_or_bondfc_avg": 0,
+    "blocks_read": [
+     {
+      "rows_of": "ZN260@ZN",
+      "columns_of": "HID93@NE2",
+      "computed": true,
+      "norm_hartree_per_bohr2": 0.067597,
+      "row_atom_displaced": true,
+      "column_atom_displaced": true,
+      "eigenvalues_complex": false
+     },
+     {
+      "rows_of": "HID93@CD2",
+      "columns_of": "HID93@NE2",
+      "computed": true,
+      "norm_hartree_per_bohr2": 0.298898,
+      "row_atom_displaced": false,
+      "column_atom_displaced": true,
+      "eigenvalues_complex": false
+     }
+    ],
+    "all_blocks_computed": true,
+    "own_code": {
+     "angle_deg": 128.47,
+     "k_block_as_mcpb": 54.0
+    }
+   },
+   {
+    "kind": "angle",
+    "atoms": [
+     "ZN260@ZN",
+     "HID95@NE2",
+     "HID95@CD2"
+    ],
+    "atom_numbers": [
+     46,
+     27,
+     28
+    ],
+    "k_mcpb": 65.132,
+    "equilibrium_mcpb": 132.8069,
+    "anglefc_or_bondfc_avg": 0,
+    "blocks_read": [
+     {
+      "rows_of": "ZN260@ZN",
+      "columns_of": "HID95@NE2",
+      "computed": true,
+      "norm_hartree_per_bohr2": 0.048084,
+      "row_atom_displaced": true,
+      "column_atom_displaced": true,
+      "eigenvalues_complex": false
+     },
+     {
+      "rows_of": "HID95@CD2",
+      "columns_of": "HID95@NE2",
+      "computed": true,
+      "norm_hartree_per_bohr2": 0.298288,
+      "row_atom_displaced": false,
+      "column_atom_displaced": true,
+      "eigenvalues_complex": false
+     }
+    ],
+    "all_blocks_computed": true,
+    "own_code": {
+     "angle_deg": 132.81,
+     "k_block_as_mcpb": 65.13
+    }
+   },
+   {
+    "kind": "angle",
+    "atoms": [
+     "ZN260@ZN",
+     "HIE118@ND1",
+     "HIE118@CE1"
+    ],
+    "atom_numbers": [
+     46,
+     38,
+     39
+    ],
+    "k_mcpb": 54.65,
+    "equilibrium_mcpb": 121.7652,
+    "anglefc_or_bondfc_avg": 0,
+    "blocks_read": [
+     {
+      "rows_of": "ZN260@ZN",
+      "columns_of": "HIE118@ND1",
+      "computed": true,
+      "norm_hartree_per_bohr2": 0.060412,
+      "row_atom_displaced": true,
+      "column_atom_displaced": true,
+      "eigenvalues_complex": false
+     },
+     {
+      "rows_of": "HIE118@CE1",
+      "columns_of": "HIE118@ND1",
+      "computed": true,
+      "norm_hartree_per_bohr2": 0.418195,
+      "row_atom_displaced": false,
+      "column_atom_displaced": true,
+      "eigenvalues_complex": false
+     }
+    ],
+    "all_blocks_computed": true,
+    "own_code": {
+     "angle_deg": 121.77,
+     "k_block_as_mcpb": 54.65
+    }
+   },
+   {
+    "kind": "angle",
+    "atoms": [
+     "ZN260@ZN",
+     "SAN261@N2",
+     "SAN261@HN21"
+    ],
+    "atom_numbers": [
+     46,
+     54,
+     64
+    ],
+    "k_mcpb": 43.303,
+    "equilibrium_mcpb": 122.7565,
+    "anglefc_or_bondfc_avg": 0,
+    "blocks_read": [
+     {
+      "rows_of": "ZN260@ZN",
+      "columns_of": "SAN261@N2",
+      "computed": true,
+      "norm_hartree_per_bohr2": 0.092017,
+      "row_atom_displaced": true,
+      "column_atom_displaced": true,
+      "eigenvalues_complex": false
+     },
+     {
+      "rows_of": "SAN261@HN21",
+      "columns_of": "SAN261@N2",
+      "computed": true,
+      "norm_hartree_per_bohr2": 0.427582,
+      "row_atom_displaced": false,
+      "column_atom_displaced": true,
+      "eigenvalues_complex": false
+     }
+    ],
+    "all_blocks_computed": true,
+    "own_code": {
+     "angle_deg": 122.76,
+     "k_block_as_mcpb": 43.3
+    }
+   },
+   {
+    "kind": "angle",
+    "atoms": [
+     "ZN260@ZN",
+     "SAN261@N2",
+     "SAN261@S"
+    ],
+    "atom_numbers": [
+     46,
+     54,
+     57
+    ],
+    "k_mcpb": 74.178,
+    "equilibrium_mcpb": 107.7373,
+    "anglefc_or_bondfc_avg": 0,
+    "blocks_read": [
+     {
+      "rows_of": "ZN260@ZN",
+      "columns_of": "SAN261@N2",
+      "computed": true,
+      "norm_hartree_per_bohr2": 0.092017,
+      "row_atom_displaced": true,
+      "column_atom_displaced": true,
+      "eigenvalues_complex": false
+     },
+     {
+      "rows_of": "SAN261@S",
+      "columns_of": "SAN261@N2",
+      "computed": true,
+      "norm_hartree_per_bohr2": 0.259873,
+      "row_atom_displaced": true,
+      "column_atom_displaced": true,
+      "eigenvalues_complex": false
+     }
+    ],
+    "all_blocks_computed": true,
+    "own_code": {
+     "angle_deg": 107.74,
+     "k_block_as_mcpb": 74.18
+    }
+   },
+   {
+    "kind": "angle",
+    "atoms": [
+     "HID93@NE2",
+     "ZN260@ZN",
+     "HID95@NE2"
+    ],
+    "atom_numbers": [
+     12,
+     46,
+     27
+    ],
+    "k_mcpb": 40.219,
+    "equilibrium_mcpb": 101.6456,
+    "anglefc_or_bondfc_avg": 0,
+    "blocks_read": [
+     {
+      "rows_of": "HID93@NE2",
+      "columns_of": "ZN260@ZN",
+      "computed": true,
+      "norm_hartree_per_bohr2": 0.067597,
+      "row_atom_displaced": true,
+      "column_atom_displaced": true,
+      "eigenvalues_complex": false
+     },
+     {
+      "rows_of": "HID95@NE2",
+      "columns_of": "ZN260@ZN",
+      "computed": true,
+      "norm_hartree_per_bohr2": 0.048084,
+      "row_atom_displaced": true,
+      "column_atom_displaced": true,
+      "eigenvalues_complex": false
+     }
+    ],
+    "all_blocks_computed": true,
+    "own_code": {
+     "angle_deg": 101.65,
+     "k_block_as_mcpb": 40.22
+    }
+   },
+   {
+    "kind": "angle",
+    "atoms": [
+     "HID93@NE2",
+     "ZN260@ZN",
+     "HIE118@ND1"
+    ],
+    "atom_numbers": [
+     12,
+     46,
+     38
+    ],
+    "k_mcpb": 36.784,
+    "equilibrium_mcpb": 113.9705,
+    "anglefc_or_bondfc_avg": 0,
+    "blocks_read": [
+     {
+      "rows_of": "HID93@NE2",
+      "columns_of": "ZN260@ZN",
+      "computed": true,
+      "norm_hartree_per_bohr2": 0.067597,
+      "row_atom_displaced": true,
+      "column_atom_displaced": true,
+      "eigenvalues_complex": false
+     },
+     {
+      "rows_of": "HIE118@ND1",
+      "columns_of": "ZN260@ZN",
+      "computed": true,
+      "norm_hartree_per_bohr2": 0.060412,
+      "row_atom_displaced": true,
+      "column_atom_displaced": true,
+      "eigenvalues_complex": false
+     }
+    ],
+    "all_blocks_computed": true,
+    "own_code": {
+     "angle_deg": 113.97,
+     "k_block_as_mcpb": 36.78
+    }
+   },
+   {
+    "kind": "angle",
+    "atoms": [
+     "HID93@NE2",
+     "ZN260@ZN",
+     "SAN261@N2"
+    ],
+    "atom_numbers": [
+     12,
+     46,
+     54
+    ],
+    "k_mcpb": 47.102,
+    "equilibrium_mcpb": 118.1914,
+    "anglefc_or_bondfc_avg": 0,
+    "blocks_read": [
+     {
+      "rows_of": "HID93@NE2",
+      "columns_of": "ZN260@ZN",
+      "computed": true,
+      "norm_hartree_per_bohr2": 0.067597,
+      "row_atom_displaced": true,
+      "column_atom_displaced": true,
+      "eigenvalues_complex": false
+     },
+     {
+      "rows_of": "SAN261@N2",
+      "columns_of": "ZN260@ZN",
+      "computed": true,
+      "norm_hartree_per_bohr2": 0.092017,
+      "row_atom_displaced": true,
+      "column_atom_displaced": true,
+      "eigenvalues_complex": false
+     }
+    ],
+    "all_blocks_computed": true,
+    "own_code": {
+     "angle_deg": 118.19,
+     "k_block_as_mcpb": 47.1
+    }
+   },
+   {
+    "kind": "angle",
+    "atoms": [
+     "HID95@NE2",
+     "ZN260@ZN",
+     "HIE118@ND1"
+    ],
+    "atom_numbers": [
+     27,
+     46,
+     38
+    ],
+    "k_mcpb": 29.786,
+    "equilibrium_mcpb": 102.4328,
+    "anglefc_or_bondfc_avg": 0,
+    "blocks_read": [
+     {
+      "rows_of": "HID95@NE2",
+      "columns_of": "ZN260@ZN",
+      "computed": true,
+      "norm_hartree_per_bohr2": 0.048084,
+      "row_atom_displaced": true,
+      "column_atom_displaced": true,
+      "eigenvalues_complex": false
+     },
+     {
+      "rows_of": "HIE118@ND1",
+      "columns_of": "ZN260@ZN",
+      "computed": true,
+      "norm_hartree_per_bohr2": 0.060412,
+      "row_atom_displaced": true,
+      "column_atom_displaced": true,
+      "eigenvalues_complex": false
+     }
+    ],
+    "all_blocks_computed": true,
+    "own_code": {
+     "angle_deg": 102.43,
+     "k_block_as_mcpb": 29.79
+    }
+   },
+   {
+    "kind": "angle",
+    "atoms": [
+     "HID95@NE2",
+     "ZN260@ZN",
+     "SAN261@N2"
+    ],
+    "atom_numbers": [
+     27,
+     46,
+     54
+    ],
+    "k_mcpb": 51.42,
+    "equilibrium_mcpb": 100.6446,
+    "anglefc_or_bondfc_avg": 0,
+    "blocks_read": [
+     {
+      "rows_of": "HID95@NE2",
+      "columns_of": "ZN260@ZN",
+      "computed": true,
+      "norm_hartree_per_bohr2": 0.048084,
+      "row_atom_displaced": true,
+      "column_atom_displaced": true,
+      "eigenvalues_complex": false
+     },
+     {
+      "rows_of": "SAN261@N2",
+      "columns_of": "ZN260@ZN",
+      "computed": true,
+      "norm_hartree_per_bohr2": 0.092017,
+      "row_atom_displaced": true,
+      "column_atom_displaced": true,
+      "eigenvalues_complex": false
+     }
+    ],
+    "all_blocks_computed": true,
+    "own_code": {
+     "angle_deg": 100.64,
+     "k_block_as_mcpb": 51.42
+    }
+   },
+   {
+    "kind": "angle",
+    "atoms": [
+     "HIE118@ND1",
+     "ZN260@ZN",
+     "SAN261@N2"
+    ],
+    "atom_numbers": [
+     38,
+     46,
+     54
+    ],
+    "k_mcpb": 30.267,
+    "equilibrium_mcpb": 116.0909,
+    "anglefc_or_bondfc_avg": 0,
+    "blocks_read": [
+     {
+      "rows_of": "HIE118@ND1",
+      "columns_of": "ZN260@ZN",
+      "computed": true,
+      "norm_hartree_per_bohr2": 0.060412,
+      "row_atom_displaced": true,
+      "column_atom_displaced": true,
+      "eigenvalues_complex": false
+     },
+     {
+      "rows_of": "SAN261@N2",
+      "columns_of": "ZN260@ZN",
+      "computed": true,
+      "norm_hartree_per_bohr2": 0.092017,
+      "row_atom_displaced": true,
+      "column_atom_displaced": true,
+      "eigenvalues_complex": false
+     }
+    ],
+    "all_blocks_computed": true,
+    "own_code": {
+     "angle_deg": 116.09,
+     "k_block_as_mcpb": 30.27
+    }
+   }
+  ]
+ },
+ "step_2ms": {
+  "n_bonds": 4,
+  "n_angles": 14,
+  "every_block_read_was_computed": true,
+  "terms": [
+   {
+    "kind": "bond",
+    "atoms": [
+     "ZN260@ZN",
+     "SAN261@N2"
+    ],
+    "atom_numbers": [
+     46,
+     54
+    ],
+    "k_mcpb": 102.442,
+    "equilibrium_mcpb": 1.9665,
+    "anglefc_or_bondfc_avg": 0,
+    "blocks_read": [
+     {
+      "rows_of": "ZN260@ZN",
+      "columns_of": "SAN261@N2",
+      "computed": true,
+      "norm_hartree_per_bohr2": 0.092017,
+      "row_atom_displaced": true,
+      "column_atom_displaced": true,
+      "eigenvalues_complex": false
+     }
+    ],
+    "all_blocks_computed": true,
+    "own_code": {
+     "length_A": 1.9665,
+     "k_block_as_mcpb": 102.44,
+     "k_other_block": 99.53,
+     "k_mean_of_the_two": 100.99
+    }
+   },
+   {
+    "kind": "bond",
+    "atoms": [
+     "HID93@NE2",
+     "ZN260@ZN"
+    ],
+    "atom_numbers": [
+     12,
+     46
+    ],
+    "k_mcpb": 73.627,
+    "equilibrium_mcpb": 2.0258,
+    "anglefc_or_bondfc_avg": 0,
+    "blocks_read": [
+     {
+      "rows_of": "HID93@NE2",
+      "columns_of": "ZN260@ZN",
+      "computed": true,
+      "norm_hartree_per_bohr2": 0.067597,
+      "row_atom_displaced": true,
+      "column_atom_displaced": true,
+      "eigenvalues_complex": false
+     }
+    ],
+    "all_blocks_computed": true,
+    "own_code": {
+     "length_A": 2.0258,
+     "k_block_as_mcpb": 73.63,
+     "k_other_block": 73.65,
+     "k_mean_of_the_two": 73.64
+    }
+   },
+   {
+    "kind": "bond",
+    "atoms": [
+     "HID95@NE2",
+     "ZN260@ZN"
+    ],
+    "atom_numbers": [
+     27,
+     46
+    ],
+    "k_mcpb": 51.21,
+    "equilibrium_mcpb": 2.084,
+    "anglefc_or_bondfc_avg": 0,
+    "blocks_read": [
+     {
+      "rows_of": "HID95@NE2",
+      "columns_of": "ZN260@ZN",
+      "computed": true,
+      "norm_hartree_per_bohr2": 0.048084,
+      "row_atom_displaced": true,
+      "column_atom_displaced": true,
+      "eigenvalues_complex": false
+     }
+    ],
+    "all_blocks_computed": true,
+    "own_code": {
+     "length_A": 2.084,
+     "k_block_as_mcpb": 51.21,
+     "k_other_block": 51.36,
+     "k_mean_of_the_two": 51.29
+    }
+   },
+   {
+    "kind": "bond",
+    "atoms": [
+     "HIE118@ND1",
+     "ZN260@ZN"
+    ],
+    "atom_numbers": [
+     38,
+     46
+    ],
+    "k_mcpb": 65.424,
+    "equilibrium_mcpb": 2.0423,
+    "anglefc_or_bondfc_avg": 0,
+    "blocks_read": [
+     {
+      "rows_of": "HIE118@ND1",
+      "columns_of": "ZN260@ZN",
+      "computed": true,
+      "norm_hartree_per_bohr2": 0.060412,
+      "row_atom_displaced": true,
+      "column_atom_displaced": true,
+      "eigenvalues_complex": false
+     }
+    ],
+    "all_blocks_computed": true,
+    "own_code": {
+     "length_A": 2.0423,
+     "k_block_as_mcpb": 65.42,
+     "k_other_block": 65.65,
+     "k_mean_of_the_two": 65.54
+    }
+   },
+   {
+    "kind": "angle",
+    "atoms": [
+     "HIE118@CG",
+     "HIE118@ND1",
+     "ZN260@ZN"
+    ],
+    "atom_numbers": [
+     37,
+     38,
+     46
+    ],
+    "k_mcpb": 26.516,
+    "equilibrium_mcpb": 130.3054,
+    "anglefc_or_bondfc_avg": 0,
+    "blocks_read": [
+     {
+      "rows_of": "HIE118@CG",
+      "columns_of": "HIE118@ND1",
+      "computed": true,
+      "norm_hartree_per_bohr2": 0.277031,
+      "row_atom_displaced": false,
+      "column_atom_displaced": true,
+      "eigenvalues_complex": false
+     },
+     {
+      "rows_of": "ZN260@ZN",
+      "columns_of": "HIE118@ND1",
+      "computed": true,
+      "norm_hartree_per_bohr2": 0.060412,
+      "row_atom_displaced": true,
+      "column_atom_displaced": true,
+      "eigenvalues_complex": false
+     }
+    ],
+    "all_blocks_computed": true,
+    "angle_scalings_of_the_modified_method": [
+     1.9644,
+     1.955
+    ],
+    "own_code": {
+     "angle_deg": 130.31,
+     "k_block_as_mcpb": 51.88
+    }
+   },
+   {
+    "kind": "angle",
+    "atoms": [
+     "HID93@CE1",
+     "HID93@NE2",
+     "ZN260@ZN"
+    ],
+    "atom_numbers": [
+     10,
+     12,
+     46
+    ],
+    "k_mcpb": 25.526,
+    "equilibrium_mcpb": 124.9461,
+    "anglefc_or_bondfc_avg": 0,
+    "blocks_read": [
+     {
+      "rows_of": "HID93@CE1",
+      "columns_of": "HID93@NE2",
+      "computed": true,
+      "norm_hartree_per_bohr2": 0.424025,
+      "row_atom_displaced": false,
+      "column_atom_displaced": true,
+      "eigenvalues_complex": false
+     },
+     {
+      "rows_of": "ZN260@ZN",
+      "columns_of": "HID93@NE2",
+      "computed": true,
+      "norm_hartree_per_bohr2": 0.067597,
+      "row_atom_displaced": true,
+      "column_atom_displaced": true,
+      "eigenvalues_complex": false
+     }
+    ],
+    "all_blocks_computed": true,
+    "angle_scalings_of_the_modified_method": [
+     1.9987,
+     1.998
+    ],
+    "own_code": {
+     "angle_deg": 124.95,
+     "k_block_as_mcpb": 51.01
+    }
+   },
+   {
+    "kind": "angle",
+    "atoms": [
+     "HID95@CE1",
+     "HID95@NE2",
+     "ZN260@ZN"
+    ],
+    "atom_numbers": [
+     25,
+     27,
+     46
+    ],
+    "k_mcpb": 32.429,
+    "equilibrium_mcpb": 120.8601,
+    "anglefc_or_bondfc_avg": 0,
+    "blocks_read": [
+     {
+      "rows_of": "HID95@CE1",
+      "columns_of": "HID95@NE2",
+      "computed": true,
+      "norm_hartree_per_bohr2": 0.426765,
+      "row_atom_displaced": false,
+      "column_atom_displaced": true,
+      "eigenvalues_complex": false
+     },
+     {
+      "rows_of": "ZN260@ZN",
+      "columns_of": "HID95@NE2",
+      "computed": true,
+      "norm_hartree_per_bohr2": 0.048084,
+      "row_atom_displaced": true,
+      "column_atom_displaced": true,
+      "eigenvalues_complex": false
+     }
+    ],
+    "all_blocks_computed": true,
+    "angle_scalings_of_the_modified_method": [
+     1.9976,
+     1.9958
+    ],
+    "own_code": {
+     "angle_deg": 120.86,
+     "k_block_as_mcpb": 64.74
+    }
+   },
+   {
+    "kind": "angle",
+    "atoms": [
+     "ZN260@ZN",
+     "HID93@NE2",
+     "HID93@CD2"
+    ],
+    "atom_numbers": [
+     46,
+     12,
+     13
+    ],
+    "k_mcpb": 27.02,
+    "equilibrium_mcpb": 128.4687,
+    "anglefc_or_bondfc_avg": 0,
+    "blocks_read": [
+     {
+      "rows_of": "ZN260@ZN",
+      "columns_of": "HID93@NE2",
+      "computed": true,
+      "norm_hartree_per_bohr2": 0.067597,
+      "row_atom_displaced": true,
+      "column_atom_displaced": true,
+      "eigenvalues_complex": false
+     },
+     {
+      "rows_of": "HID93@CD2",
+      "columns_of": "HID93@NE2",
+      "computed": true,
+      "norm_hartree_per_bohr2": 0.298898,
+      "row_atom_displaced": false,
+      "column_atom_displaced": true,
+      "eigenvalues_complex": false
+     }
+    ],
+    "all_blocks_computed": true,
+    "angle_scalings_of_the_modified_method": [
+     1.9985,
+     1.998
+    ],
+    "own_code": {
+     "angle_deg": 128.47,
+     "k_block_as_mcpb": 54.0
+    }
+   },
+   {
+    "kind": "angle",
+    "atoms": [
+     "ZN260@ZN",
+     "HID95@NE2",
+     "HID95@CD2"
+    ],
+    "atom_numbers": [
+     46,
+     27,
+     28
+    ],
+    "k_mcpb": 32.624,
+    "equilibrium_mcpb": 132.8069,
+    "anglefc_or_bondfc_avg": 0,
+    "blocks_read": [
+     {
+      "rows_of": "ZN260@ZN",
+      "columns_of": "HID95@NE2",
+      "computed": true,
+      "norm_hartree_per_bohr2": 0.048084,
+      "row_atom_displaced": true,
+      "column_atom_displaced": true,
+      "eigenvalues_complex": false
+     },
+     {
+      "rows_of": "HID95@CD2",
+      "columns_of": "HID95@NE2",
+      "computed": true,
+      "norm_hartree_per_bohr2": 0.298288,
+      "row_atom_displaced": false,
+      "column_atom_displaced": true,
+      "eigenvalues_complex": false
+     }
+    ],
+    "all_blocks_computed": true,
+    "angle_scalings_of_the_modified_method": [
+     1.9966,
+     1.9958
+    ],
+    "own_code": {
+     "angle_deg": 132.81,
+     "k_block_as_mcpb": 65.13
+    }
+   },
+   {
+    "kind": "angle",
+    "atoms": [
+     "ZN260@ZN",
+     "HIE118@ND1",
+     "HIE118@CE1"
+    ],
+    "atom_numbers": [
+     46,
+     38,
+     39
+    ],
+    "k_mcpb": 27.77,
+    "equilibrium_mcpb": 121.7652,
+    "anglefc_or_bondfc_avg": 0,
+    "blocks_read": [
+     {
+      "rows_of": "ZN260@ZN",
+      "columns_of": "HIE118@ND1",
+      "computed": true,
+      "norm_hartree_per_bohr2": 0.060412,
+      "row_atom_displaced": true,
+      "column_atom_displaced": true,
+      "eigenvalues_complex": false
+     },
+     {
+      "rows_of": "HIE118@CE1",
+      "columns_of": "HIE118@ND1",
+      "computed": true,
+      "norm_hartree_per_bohr2": 0.418195,
+      "row_atom_displaced": false,
+      "column_atom_displaced": true,
+      "eigenvalues_complex": false
+     }
+    ],
+    "all_blocks_computed": true,
+    "angle_scalings_of_the_modified_method": [
+     1.9714,
+     1.955
+    ],
+    "own_code": {
+     "angle_deg": 121.77,
+     "k_block_as_mcpb": 54.65
+    }
+   },
+   {
+    "kind": "angle",
+    "atoms": [
+     "ZN260@ZN",
+     "SAN261@N2",
+     "SAN261@HN21"
+    ],
+    "atom_numbers": [
+     46,
+     54,
+     64
+    ],
+    "k_mcpb": 31.588,
+    "equilibrium_mcpb": 122.7565,
+    "anglefc_or_bondfc_avg": 0,
+    "blocks_read": [
+     {
+      "rows_of": "ZN260@ZN",
+      "columns_of": "SAN261@N2",
+      "computed": true,
+      "norm_hartree_per_bohr2": 0.092017,
+      "row_atom_displaced": true,
+      "column_atom_displaced": true,
+      "eigenvalues_complex": false
+     },
+     {
+      "rows_of": "SAN261@HN21",
+      "columns_of": "SAN261@N2",
+      "computed": true,
+      "norm_hartree_per_bohr2": 0.427582,
+      "row_atom_displaced": false,
+      "column_atom_displaced": true,
+      "eigenvalues_complex": false
+     }
+    ],
+    "all_blocks_computed": true,
+    "angle_scalings_of_the_modified_method": [
+     1.3769,
+     1.3671
+    ],
+    "own_code": {
+     "angle_deg": 122.76,
+     "k_block_as_mcpb": 43.3
+    }
+   },
+   {
+    "kind": "angle",
+    "atoms": [
+     "ZN260@ZN",
+     "SAN261@N2",
+     "SAN261@S"
+    ],
+    "atom_numbers": [
+     46,
+     54,
+     57
+    ],
+    "k_mcpb": 52.914,
+    "equilibrium_mcpb": 107.7373,
+    "anglefc_or_bondfc_avg": 0,
+    "blocks_read": [
+     {
+      "rows_of": "ZN260@ZN",
+      "columns_of": "SAN261@N2",
+      "computed": true,
+      "norm_hartree_per_bohr2": 0.092017,
+      "row_atom_displaced": true,
+      "column_atom_displaced": true,
+      "eigenvalues_complex": false
+     },
+     {
+      "rows_of": "SAN261@S",
+      "columns_of": "SAN261@N2",
+      "computed": true,
+      "norm_hartree_per_bohr2": 0.259873,
+      "row_atom_displaced": true,
+      "column_atom_displaced": true,
+      "eigenvalues_complex": false
+     }
+    ],
+    "all_blocks_computed": true,
+    "angle_scalings_of_the_modified_method": [
+     1.3769,
+     1.5066
+    ],
+    "own_code": {
+     "angle_deg": 107.74,
+     "k_block_as_mcpb": 74.18
+    }
+   },
+   {
+    "kind": "angle",
+    "atoms": [
+     "HID93@NE2",
+     "ZN260@ZN",
+     "HID95@NE2"
+    ],
+    "atom_numbers": [
+     12,
+     46,
+     27
+    ],
+    "k_mcpb": 34.354,
+    "equilibrium_mcpb": 101.6456,
+    "anglefc_or_bondfc_avg": 0,
+    "blocks_read": [
+     {
+      "rows_of": "HID93@NE2",
+      "columns_of": "ZN260@ZN",
+      "computed": true,
+      "norm_hartree_per_bohr2": 0.067597,
+      "row_atom_displaced": true,
+      "column_atom_displaced": true,
+      "eigenvalues_complex": false
+     },
+     {
+      "rows_of": "HID95@NE2",
+      "columns_of": "ZN260@ZN",
+      "computed": true,
+      "norm_hartree_per_bohr2": 0.048084,
+      "row_atom_displaced": true,
+      "column_atom_displaced": true,
+      "eigenvalues_complex": false
+     }
+    ],
+    "all_blocks_computed": true,
+    "angle_scalings_of_the_modified_method": [
+     1.1078,
+     1.2507
+    ],
+    "own_code": {
+     "angle_deg": 101.65,
+     "k_block_as_mcpb": 40.22
+    }
+   },
+   {
+    "kind": "angle",
+    "atoms": [
+     "HID93@NE2",
+     "ZN260@ZN",
+     "HIE118@ND1"
+    ],
+    "atom_numbers": [
+     12,
+     46,
+     38
+    ],
+    "k_mcpb": 26.952,
+    "equilibrium_mcpb": 113.9705,
+    "anglefc_or_bondfc_avg": 0,
+    "blocks_read": [
+     {
+      "rows_of": "HID93@NE2",
+      "columns_of": "ZN260@ZN",
+      "computed": true,
+      "norm_hartree_per_bohr2": 0.067597,
+      "row_atom_displaced": true,
+      "column_atom_displaced": true,
+      "eigenvalues_complex": false
+     },
+     {
+      "rows_of": "HIE118@ND1",
+      "columns_of": "ZN260@ZN",
+      "computed": true,
+      "norm_hartree_per_bohr2": 0.060412,
+      "row_atom_displaced": true,
+      "column_atom_displaced": true,
+      "eigenvalues_complex": false
+     }
+    ],
+    "all_blocks_computed": true,
+    "angle_scalings_of_the_modified_method": [
+     1.3628,
+     1.3673
+    ],
+    "own_code": {
+     "angle_deg": 113.97,
+     "k_block_as_mcpb": 36.78
+    }
+   },
+   {
+    "kind": "angle",
+    "atoms": [
+     "HID93@NE2",
+     "ZN260@ZN",
+     "SAN261@N2"
+    ],
+    "atom_numbers": [
+     12,
+     46,
+     54
+    ],
+    "k_mcpb": 34.667,
+    "equilibrium_mcpb": 118.1914,
+    "anglefc_or_bondfc_avg": 0,
+    "blocks_read": [
+     {
+      "rows_of": "HID93@NE2",
+      "columns_of": "ZN260@ZN",
+      "computed": true,
+      "norm_hartree_per_bohr2": 0.067597,
+      "row_atom_displaced": true,
+      "column_atom_displaced": true,
+      "eigenvalues_complex": false
+     },
+     {
+      "rows_of": "SAN261@N2",
+      "columns_of": "ZN260@ZN",
+      "computed": true,
+      "norm_hartree_per_bohr2": 0.092017,
+      "row_atom_displaced": true,
+      "column_atom_displaced": true,
+      "eigenvalues_complex": false
+     }
+    ],
+    "all_blocks_computed": true,
+    "angle_scalings_of_the_modified_method": [
+     1.3603,
+     1.3566
+    ],
+    "own_code": {
+     "angle_deg": 118.19,
+     "k_block_as_mcpb": 47.1
+    }
+   },
+   {
+    "kind": "angle",
+    "atoms": [
+     "HID95@NE2",
+     "ZN260@ZN",
+     "HIE118@ND1"
+    ],
+    "atom_numbers": [
+     27,
+     46,
+     38
+    ],
+    "k_mcpb": 25.209,
+    "equilibrium_mcpb": 102.4328,
+    "anglefc_or_bondfc_avg": 0,
+    "blocks_read": [
+     {
+      "rows_of": "HID95@NE2",
+      "columns_of": "ZN260@ZN",
+      "computed": true,
+      "norm_hartree_per_bohr2": 0.048084,
+      "row_atom_displaced": true,
+      "column_atom_displaced": true,
+      "eigenvalues_complex": false
+     },
+     {
+      "rows_of": "HIE118@ND1",
+      "columns_of": "ZN260@ZN",
+      "computed": true,
+      "norm_hartree_per_bohr2": 0.060412,
+      "row_atom_displaced": true,
+      "column_atom_displaced": true,
+      "eigenvalues_complex": false
+     }
+    ],
+    "all_blocks_computed": true,
+    "angle_scalings_of_the_modified_method": [
+     1.2354,
+     1.1033
+    ],
+    "own_code": {
+     "angle_deg": 102.43,
+     "k_block_as_mcpb": 29.79
+    }
+   },
+   {
+    "kind": "angle",
+    "atoms": [
+     "HID95@NE2",
+     "ZN260@ZN",
+     "SAN261@N2"
+    ],
+    "atom_numbers": [
+     27,
+     46,
+     54
+    ],
+    "k_mcpb": 42.658,
+    "equilibrium_mcpb": 100.6446,
+    "anglefc_or_bondfc_avg": 0,
+    "blocks_read": [
+     {
+      "rows_of": "HID95@NE2",
+      "columns_of": "ZN260@ZN",
+      "computed": true,
+      "norm_hartree_per_bohr2": 0.048084,
+      "row_atom_displaced": true,
+      "column_atom_displaced": true,
+      "eigenvalues_complex": false
+     },
+     {
+      "rows_of": "SAN261@N2",
+      "columns_of": "ZN260@ZN",
+      "computed": true,
+      "norm_hartree_per_bohr2": 0.092017,
+      "row_atom_displaced": true,
+      "column_atom_displaced": true,
+      "eigenvalues_complex": false
+     }
+    ],
+    "all_blocks_computed": true,
+    "angle_scalings_of_the_modified_method": [
+     1.265,
+     1.1121
+    ],
+    "own_code": {
+     "angle_deg": 100.64,
+     "k_block_as_mcpb": 51.42
+    }
+   },
+   {
+    "kind": "angle",
+    "atoms": [
+     "HIE118@ND1",
+     "ZN260@ZN",
+     "SAN261@N2"
+    ],
+    "atom_numbers": [
+     38,
+     46,
+     54
+    ],
+    "k_mcpb": 22.236,
+    "equilibrium_mcpb": 116.0909,
+    "anglefc_or_bondfc_avg": 0,
+    "blocks_read": [
+     {
+      "rows_of": "HIE118@ND1",
+      "columns_of": "ZN260@ZN",
+      "computed": true,
+      "norm_hartree_per_bohr2": 0.060412,
+      "row_atom_displaced": true,
+      "column_atom_displaced": true,
+      "eigenvalues_complex": false
+     },
+     {
+      "rows_of": "SAN261@N2",
+      "columns_of": "ZN260@ZN",
+      "computed": true,
+      "norm_hartree_per_bohr2": 0.092017,
+      "row_atom_displaced": true,
+      "column_atom_displaced": true,
+      "eigenvalues_complex": false
+     }
+    ],
+    "all_blocks_computed": true,
+    "angle_scalings_of_the_modified_method": [
+     1.3655,
+     1.3573
+    ],
+    "own_code": {
+     "angle_deg": 116.09,
+     "k_block_as_mcpb": 30.27
+    }
+   }
+  ]
+ },
+ "frcmod_zinc_lines": {
+  "2s": {
+   "M1-Y4": {
+    "k": 102.4,
+    "equilibrium": 1.9665,
+    "method": "Seminario"
+   },
+   "Y1-M1": {
+    "k": 73.6,
+    "equilibrium": 2.0258,
+    "method": "Seminario"
+   },
+   "Y2-M1": {
+    "k": 51.2,
+    "equilibrium": 2.084,
+    "method": "Seminario"
+   },
+   "Y3-M1": {
+    "k": 65.4,
+    "equilibrium": 2.0423,
+    "method": "Seminario"
+   },
+   "CC-Y3-M1": {
+    "k": 51.88,
+    "equilibrium": 130.31,
+    "method": "Seminario"
+   },
+   "CR-Y1-M1": {
+    "k": 51.01,
+    "equilibrium": 124.95,
+    "method": "Seminario"
+   },
+   "CR-Y2-M1": {
+    "k": 64.74,
+    "equilibrium": 120.86,
+    "method": "Seminario"
+   },
+   "M1-Y1-CV": {
+    "k": 54.0,
+    "equilibrium": 128.47,
+    "method": "Seminario"
+   },
+   "M1-Y2-CV": {
+    "k": 65.13,
+    "equilibrium": 132.81,
+    "method": "Seminario"
+   },
+   "M1-Y3-CR": {
+    "k": 54.65,
+    "equilibrium": 121.77,
+    "method": "Seminario"
+   },
+   "M1-Y4-hn": {
+    "k": 43.3,
+    "equilibrium": 122.76,
+    "method": "Seminario"
+   },
+   "M1-Y4-sy": {
+    "k": 74.18,
+    "equilibrium": 107.74,
+    "method": "Seminario"
+   },
+   "Y1-M1-Y2": {
+    "k": 40.22,
+    "equilibrium": 101.65,
+    "method": "Seminario"
+   },
+   "Y1-M1-Y3": {
+    "k": 36.78,
+    "equilibrium": 113.97,
+    "method": "Seminario"
+   },
+   "Y1-M1-Y4": {
+    "k": 47.1,
+    "equilibrium": 118.19,
+    "method": "Seminario"
+   },
+   "Y2-M1-Y3": {
+    "k": 29.79,
+    "equilibrium": 102.43,
+    "method": "Seminario"
+   },
+   "Y2-M1-Y4": {
+    "k": 51.42,
+    "equilibrium": 100.64,
+    "method": "Seminario"
+   },
+   "Y3-M1-Y4": {
+    "k": 30.27,
+    "equilibrium": 116.09,
+    "method": "Seminario"
+   }
+  },
+  "2ms": {
+   "M1-Y4": {
+    "k": 102.4,
+    "equilibrium": 1.9665,
+    "method": "Modified Seminario"
+   },
+   "Y1-M1": {
+    "k": 73.6,
+    "equilibrium": 2.0258,
+    "method": "Modified Seminario"
+   },
+   "Y2-M1": {
+    "k": 51.2,
+    "equilibrium": 2.084,
+    "method": "Modified Seminario"
+   },
+   "Y3-M1": {
+    "k": 65.4,
+    "equilibrium": 2.0423,
+    "method": "Modified Seminario"
+   },
+   "CC-Y3-M1": {
+    "k": 26.52,
+    "equilibrium": 130.31,
+    "method": "Modified Seminario"
+   },
+   "CR-Y1-M1": {
+    "k": 25.53,
+    "equilibrium": 124.95,
+    "method": "Modified Seminario"
+   },
+   "CR-Y2-M1": {
+    "k": 32.43,
+    "equilibrium": 120.86,
+    "method": "Modified Seminario"
+   },
+   "M1-Y1-CV": {
+    "k": 27.02,
+    "equilibrium": 128.47,
+    "method": "Modified Seminario"
+   },
+   "M1-Y2-CV": {
+    "k": 32.62,
+    "equilibrium": 132.81,
+    "method": "Modified Seminario"
+   },
+   "M1-Y3-CR": {
+    "k": 27.77,
+    "equilibrium": 121.77,
+    "method": "Modified Seminario"
+   },
+   "M1-Y4-hn": {
+    "k": 31.59,
+    "equilibrium": 122.76,
+    "method": "Modified Seminario"
+   },
+   "M1-Y4-sy": {
+    "k": 52.91,
+    "equilibrium": 107.74,
+    "method": "Modified Seminario"
+   },
+   "Y1-M1-Y2": {
+    "k": 34.35,
+    "equilibrium": 101.65,
+    "method": "Modified Seminario"
+   },
+   "Y1-M1-Y3": {
+    "k": 26.95,
+    "equilibrium": 113.97,
+    "method": "Modified Seminario"
+   },
+   "Y1-M1-Y4": {
+    "k": 34.67,
+    "equilibrium": 118.19,
+    "method": "Modified Seminario"
+   },
+   "Y2-M1-Y3": {
+    "k": 25.21,
+    "equilibrium": 102.43,
+    "method": "Modified Seminario"
+   },
+   "Y2-M1-Y4": {
+    "k": 42.66,
+    "equilibrium": 100.64,
+    "method": "Modified Seminario"
+   },
+   "Y3-M1-Y4": {
+    "k": 22.24,
+    "equilibrium": 116.09,
+    "method": "Modified Seminario"
+   }
+  },
+  "2s_in_work_folder": {
+   "M1-Y4": {
+    "k": 102.4,
+    "equilibrium": 1.9665,
+    "method": "Seminario"
+   },
+   "Y1-M1": {
+    "k": 73.6,
+    "equilibrium": 2.0258,
+    "method": "Seminario"
+   },
+   "Y2-M1": {
+    "k": 51.2,
+    "equilibrium": 2.084,
+    "method": "Seminario"
+   },
+   "Y3-M1": {
+    "k": 65.4,
+    "equilibrium": 2.0423,
+    "method": "Seminario"
+   },
+   "CC-Y3-M1": {
+    "k": 51.88,
+    "equilibrium": 130.31,
+    "method": "Seminario"
+   },
+   "CR-Y1-M1": {
+    "k": 51.01,
+    "equilibrium": 124.95,
+    "method": "Seminario"
+   },
+   "CR-Y2-M1": {
+    "k": 64.74,
+    "equilibrium": 120.86,
+    "method": "Seminario"
+   },
+   "M1-Y1-CV": {
+    "k": 54.0,
+    "equilibrium": 128.47,
+    "method": "Seminario"
+   },
+   "M1-Y2-CV": {
+    "k": 65.13,
+    "equilibrium": 132.81,
+    "method": "Seminario"
+   },
+   "M1-Y3-CR": {
+    "k": 54.65,
+    "equilibrium": 121.77,
+    "method": "Seminario"
+   },
+   "M1-Y4-hn": {
+    "k": 43.3,
+    "equilibrium": 122.76,
+    "method": "Seminario"
+   },
+   "M1-Y4-sy": {
+    "k": 74.18,
+    "equilibrium": 107.74,
+    "method": "Seminario"
+   },
+   "Y1-M1-Y2": {
+    "k": 40.22,
+    "equilibrium": 101.65,
+    "method": "Seminario"
+   },
+   "Y1-M1-Y3": {
+    "k": 36.78,
+    "equilibrium": 113.97,
+    "method": "Seminario"
+   },
+   "Y1-M1-Y4": {
+    "k": 47.1,
+    "equilibrium": 118.19,
+    "method": "Seminario"
+   },
+   "Y2-M1-Y3": {
+    "k": 29.79,
+    "equilibrium": 102.43,
+    "method": "Seminario"
+   },
+   "Y2-M1-Y4": {
+    "k": 51.42,
+    "equilibrium": 100.64,
+    "method": "Seminario"
+   },
+   "Y3-M1-Y4": {
+    "k": 30.27,
+    "equilibrium": 116.09,
+    "method": "Seminario"
+   }
+  },
+  "2e": {
+   "M1-Y4": {
+    "k": 122.1,
+    "equilibrium": 1.931,
+    "method": "empirical"
+   },
+   "Y1-M1": {
+    "k": 78.0,
+    "equilibrium": 2.01,
+    "method": "empirical"
+   },
+   "Y2-M1": {
+    "k": 73.3,
+    "equilibrium": 2.021,
+    "method": "empirical"
+   },
+   "Y3-M1": {
+    "k": 74.3,
+    "equilibrium": 2.018,
+    "method": "empirical"
+   },
+   "CC-Y3-M1": {
+    "k": 50.0,
+    "equilibrium": 131.22,
+    "method": "empirical"
+   },
+   "CR-Y1-M1": {
+    "k": 50.0,
+    "equilibrium": 127.89,
+    "method": "empirical"
+   },
+   "CR-Y2-M1": {
+    "k": 50.0,
+    "equilibrium": 129.31,
+    "method": "empirical"
+   },
+   "M1-Y1-CV": {
+    "k": 50.0,
+    "equilibrium": 124.21,
+    "method": "empirical"
+   },
+   "M1-Y2-CV": {
+    "k": 50.0,
+    "equilibrium": 122.91,
+    "method": "empirical"
+   },
+   "M1-Y3-CR": {
+    "k": 50.0,
+    "equilibrium": 121.05,
+    "method": "empirical"
+   },
+   "M1-Y4-hn": {
+    "k": 50.0,
+    "equilibrium": 120.0,
+    "method": "empirical"
+   },
+   "M1-Y4-sy": {
+    "k": 50.0,
+    "equilibrium": 117.55,
+    "method": "empirical"
+   },
+   "Y1-M1-Y2": {
+    "k": 35.0,
+    "equilibrium": 103.82,
+    "method": "empirical"
+   },
+   "Y1-M1-Y3": {
+    "k": 35.0,
+    "equilibrium": 113.59,
+    "method": "empirical"
+   },
+   "Y1-M1-Y4": {
+    "k": 35.0,
+    "equilibrium": 108.92,
+    "method": "empirical"
+   },
+   "Y2-M1-Y3": {
+    "k": 35.0,
+    "equilibrium": 98.41,
+    "method": "empirical"
+   },
+   "Y2-M1-Y4": {
+    "k": 35.0,
+    "equilibrium": 114.28,
+    "method": "empirical"
+   },
+   "Y3-M1-Y4": {
+    "k": 35.0,
+    "equilibrium": 116.83,
+    "method": "empirical"
+   }
+  }
+ },
+ "step_2s_here_equals_the_frcmod_of_the_work_folder": true
+}

@@ -1,0 +1,25 @@
+{
+ "label": "gate G-R: B3LYP/6-31G* single points of the small zinc model, settings of stage S2",
+ "comment": "The queue of md/qm/gr/queue_prod.json as it runs on the rented machine (tasks gr_points, gr_relax_* of md/gpu/tasks_gr.json). Same points, same settings of the quantum chemistry (md/qm/config_prod.json), same folders. Different: threads 7 (the Pi: 4); nothing is waited for (wait_for of the Pi's file names the job of the Pi that ended at 7:07 AM IST; on the machine that path belongs to task qm_opt, which runs beside); no reference energy of the timing job (the Pi made that comparison for X). The order is that of md/qm/gr/points.json (d2 and Nx before the turns about N2-S since 9 AM IST; until 9:40 AM this file carried the same order as `order_first`). `relax`: settings of the relaxed references of part B.",
+ "bulk": "/root/cqc-sfa-md/qm/gr",
+ "small_out": "md/qm/gr",
+ "points": "md/qm/gr/points.json",
+ "qm_config": "md/qm/config_prod.json",
+ "threads": 7,
+ "nice": 10,
+ "wait_for": null,
+ "mcpb_source": "md/qm/mcpb",
+ "step2": "2e",
+ "placeholder_params": null,
+ "guess": "atomic",
+ "guess_checkpoint": null,
+ "timing_reference_status": null,
+ "only": null,
+ "method_override": null,
+ "poll_seconds": 30,
+ "relax": {
+  "maxsteps": 200,
+  "on_crossing": "stop",
+  "convergence": {}
+ }
+}

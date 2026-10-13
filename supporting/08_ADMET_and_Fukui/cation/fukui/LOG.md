@@ -1,0 +1,16 @@
+- 2026-09-28 23:44  start: case cation_pcm_d3, geometry molecules/sfa/results/cation_pcm_d3/opt.xyz, threads 2, basis 6-311++G(d,p), grid 4, IEF-PCM (water, eps = 78.3553, Lebedev order 29)
+- 2026-09-28 23:48  N (90 e): E = -892.2140690678 Ha, 239 s
+- 2026-09-29 00:02  N-1 (89 e, charge +2): E = -891.9243911098 Ha, <S^2> = 0.7615, 819 s
+- 2026-09-29 00:11  N+1 (91 e, charge +0): E = -892.2899027116 Ha, <S^2> = 0.7569, 548 s
+- 2026-09-29 00:11  NPA done in 0 s; sums N +1.0000, N-1 +2.0000, N+1 -0.0000
+- 2026-09-29 00:11  free atom C: E = -37.74985894 Ha, 4pi int r^2 rho = 6.00001 (Z = 6), anisotropy 1.6e-15
+- 2026-09-29 00:11  free atom H: E = -0.44793110 Ha, 4pi int r^2 rho = 1.00000 (Z = 1), anisotropy 1.2e-15
+- 2026-09-29 00:11  free atom N: E = -54.40915980 Ha, 4pi int r^2 rho = 7.00002 (Z = 7), anisotropy 1.7e-15
+- 2026-09-29 00:11  free atom O: E = -74.93707426 Ha, 4pi int r^2 rho = 8.00002 (Z = 8), anisotropy 2.0e-15
+- 2026-09-29 00:11  free atom S: E = -398.04911243 Ha, 4pi int r^2 rho = 16.00004 (Z = 16), anisotropy 1.4e-15
+- 2026-09-29 00:11  Hirshfeld done in 22 s on 453984 grid points; integrated electrons N 89.99998 (90), N-1 88.99998 (89), N+1 90.99998 (91); charge sums N +1.0000, N-1 +2.0000, N+1 +0.0000
+- 2026-09-29 00:11  NPA: sums f+ 1.0000, f- 1.0000, f0 1.0000, Df -0.0000; max f+ C1 0.178, max f- C1 0.183
+- 2026-09-29 00:11  Hirshfeld: sums f+ 1.0000, f- 1.0000, f0 1.0000, Df -0.0000; max f+ C1 0.106, max f- N2 0.113
+- 2026-09-29 00:11  vs dscf.json: dE N +0.00e+00, N-1 +1.36e-12, N+1 -2.96e-12 Ha (same geometry: True)
+- 2026-09-29 00:11  vs mwfn_extra charges.json (N state): max_abs_diff_NPA 1.40e-05, max_abs_diff_Hirshfeld 4.82e-02
+- 2026-09-29 00:11  done in 27.2 min; I = 7.8825 eV, A = 2.0635 eV

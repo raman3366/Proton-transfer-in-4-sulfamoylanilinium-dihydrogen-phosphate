@@ -1,0 +1,1449 @@
+{
+ "label": "PLACEHOLDER: charges of the zinc agent's known-content test (ff14SB, AM1-BCC, Zn +2 refitted; no ligand equivalence), step 2e; not the model",
+ "params": "/tmp/claude-0/-root-workspace-cqc-4-sulfamoylanilinium-dihydrogen-phosphate/82cc65d7-a11f-4d60-91ee-436dc9534941/scratchpad/mdprep/zinc/after_qm_test/mcpb",
+ "points_file": "/root/workspace/cqc-4-sulfamoylanilinium-dihydrogen-phosphate/md/qm/gr/points.json",
+ "points_sha256": "251bf1cf763bc7a2b3cae763e75613d32a9f219a0269223687ac8fb87912a1ef",
+ "schemes": {
+  "methyl": {
+   "scheme": "methyl",
+   "inputs": {
+    "HD1.mol2": "e04cd5e31a8d0af7b6e5f7c6a3688732ceffcdf9a29e32076916f370110a4dfc",
+    "HD2.mol2": "75df3f81e78cad217dfaa5de1ffc3fa7a229814ece022f0aedef4aead8c94c70",
+    "HE1.mol2": "5e1b4eabab9782fa739652252f9920afe4b715965cb56007533fa92e1a98655a",
+    "ZN1.mol2": "705574571be0dc5319c5099a1de743542de502bfba5a405ba5858035fa01e338",
+    "SN1.mol2": "f1a0074d2b620b4659f71026e4291f1792647d490d1ae2f162785dd68b2ec06f",
+    "sfa_anion_gaff2.frcmod": "694fd181a8c2b7359a529112a1ba539e681dd2c66a883379607e6e6095ca438c",
+    "sfa_anion_repair.frcmod": "76dda0d181a27e12868eea1a2eff055fbeda708357f200d12a53915fa7d60b86",
+    "CA2_mcpbpy.frcmod": "38221d1d52d8b0af047145619d29bdeee11fdaf3010c452503facd01ec8f29c9"
+   },
+   "n2h": {
+    "mode": "structure",
+    "k": 50.0,
+    "theta0": 107.4065,
+    "replaced_line": "M1-Y4-hn    50.00     120.00    Created by empirical method using MCPB.py"
+   },
+   "frcmods": [
+    "sfa_anion_gaff2.frcmod",
+    "sfa_anion_repair.frcmod",
+    "CA2_mcpbpy.frcmod",
+    "n2h_structure.frcmod"
+   ],
+   "cap_charges": {
+    "HD1": {
+     "removed_backbone_charge": -0.116278,
+     "H1": 0.086576,
+     "CH3": -0.27063,
+     "H2": 0.086576,
+     "H3": 0.086576,
+     "residue_total": 0.030371
+    },
+    "HD2": {
+     "removed_backbone_charge": -0.113496,
+     "H1": 0.08731,
+     "CH3": -0.269316,
+     "H2": 0.08731,
+     "H3": 0.08731,
+     "residue_total": 0.03015
+    },
+    "HE1": {
+     "removed_backbone_charge": -0.117982,
+     "H1": 0.136112,
+     "CH3": -0.448306,
+     "H2": 0.136112,
+     "H3": 0.136112,
+     "residue_total": 0.036697
+    }
+   },
+   "tleap_warnings": [
+    "/root/cqc-sfa-tools/md/bin/teLeap: Warning!",
+    "Ignoring the warning from Unit Checking.",
+    "/root/cqc-sfa-tools/md/bin/teLeap: Warning!",
+    "check:  Warnings: 1",
+    "Exiting LEaP: Errors = 0; Warnings = 2; Notes = 1."
+   ],
+   "prmtop": "/tmp/claude-0/-root-workspace-cqc-4-sulfamoylanilinium-dihydrogen-phosphate/82cc65d7-a11f-4d60-91ee-436dc9534941/scratchpad/mdprep3/gr/mm_placeholder/methyl/small.prmtop",
+   "topology_check": {
+    "natoms": 64,
+    "order_is_qm_order": true,
+    "total_charge": 1.0,
+    "n_bonds": 67,
+    "n_angles": 117,
+    "n_dihedrals": 204,
+    "zinc_bonded_to": [
+     "HD1:NE2",
+     "HD2:NE2",
+     "HE1:ND1",
+     "SN1:N2"
+    ],
+    "dry_complex": {
+     "file": "/tmp/claude-0/-root-workspace-cqc-4-sulfamoylanilinium-dihydrogen-phosphate/82cc65d7-a11f-4d60-91ee-436dc9534941/scratchpad/mdprep/zinc/after_qm_test/mcpb/CA2_dry.prmtop",
+     "sha256": "4e2ec94f3b241f51a8dbff4d84b52a8273cc0a2a5c5ca28124e228931e93a4de",
+     "common_atoms": 58,
+     "cap_atoms": 6,
+     "largest_charge_difference_common_atoms": 0.3902059997914643,
+     "atoms_with_other_type_or_lj": 0,
+     "compared": {
+      "bonds": 61,
+      "angles": 102,
+      "dihedrals": 170
+     },
+     "not_found_in_dry_complex": [],
+     "different_parameters": [
+      "angle ZN-N2-HN21 50.0 107.40604604305861 / (50.0, 120.00005142908158)"
+     ]
+    }
+   },
+   "rest_two_ways_largest_difference": 8.526512829121202e-14,
+   "relative_energy": {
+    "X": 0.0,
+    "R": 62.6616,
+    "Rx": 23.1425,
+    "a4": 32.8082,
+    "a3": 26.7418,
+    "a5": 32.1333,
+    "a2": 14.9328,
+    "a6": 26.5726,
+    "d1": 9.6603,
+    "d3": 2.7036,
+    "d4": 2.107,
+    "d5": 2.2721,
+    "d6": 1.9776,
+    "c1_m030": 1.4165,
+    "c2_m015": 19.1965,
+    "c1_p030": 5.9636,
+    "c2_m030": 17.6286,
+    "c1_m060": 5.8627,
+    "c2_m120": 18.8407,
+    "c1_m090": 10.5493,
+    "c2_m150": 13.2459,
+    "c1_m120": 12.3034,
+    "c2_m180": 11.3693,
+    "d2": 7.8565,
+    "N": 34.95,
+    "Nx": 2.9681
+   },
+   "total": {
+    "X": -271.246116,
+    "R": -208.584561,
+    "Rx": -248.103664,
+    "a4": -238.437921,
+    "a3": -244.504362,
+    "a5": -239.112818,
+    "a2": -256.313332,
+    "a6": -244.673492,
+    "d1": -261.585856,
+    "d3": -268.542548,
+    "d4": -269.139107,
+    "d5": -268.974033,
+    "d6": -269.268488,
+    "c1_m030": -269.829661,
+    "c2_m015": -252.049623,
+    "c1_p030": -265.282514,
+    "c2_m030": -253.617473,
+    "c1_m060": -265.383437,
+    "c2_m120": -252.405416,
+    "c1_m090": -260.696838,
+    "c2_m150": -258.000188,
+    "c1_m120": -258.942683,
+    "c2_m180": -259.876807,
+    "d2": -263.389608,
+    "N": -236.296072,
+    "Nx": -268.278013
+   },
+   "rest": {
+    "X": -275.274306,
+    "R": -211.243271,
+    "Rx": -252.068894,
+    "a4": -246.856985,
+    "a3": -251.426001,
+    "a5": -246.562215,
+    "a2": -260.769039,
+    "a6": -249.838523,
+    "d1": -265.941403,
+    "d3": -273.547355,
+    "d4": -276.803211,
+    "d5": -269.993618,
+    "d6": -281.558753,
+    "c1_m030": -272.230351,
+    "c2_m015": -255.79461,
+    "c1_p030": -272.101188,
+    "c2_m030": -257.859384,
+    "c1_m060": -268.851932,
+    "c2_m120": -260.701783,
+    "c1_m090": -266.763824,
+    "c2_m150": -263.853709,
+    "c1_m120": -266.467846,
+    "c2_m180": -263.745363,
+    "d2": -270.894412,
+    "N": -242.5785,
+    "Nx": -273.326131
+   }
+  },
+  "group": {
+   "scheme": "group",
+   "inputs": {
+    "HD1.mol2": "e04cd5e31a8d0af7b6e5f7c6a3688732ceffcdf9a29e32076916f370110a4dfc",
+    "HD2.mol2": "75df3f81e78cad217dfaa5de1ffc3fa7a229814ece022f0aedef4aead8c94c70",
+    "HE1.mol2": "5e1b4eabab9782fa739652252f9920afe4b715965cb56007533fa92e1a98655a",
+    "ZN1.mol2": "705574571be0dc5319c5099a1de743542de502bfba5a405ba5858035fa01e338",
+    "SN1.mol2": "f1a0074d2b620b4659f71026e4291f1792647d490d1ae2f162785dd68b2ec06f",
+    "sfa_anion_gaff2.frcmod": "694fd181a8c2b7359a529112a1ba539e681dd2c66a883379607e6e6095ca438c",
+    "sfa_anion_repair.frcmod": "76dda0d181a27e12868eea1a2eff055fbeda708357f200d12a53915fa7d60b86",
+    "CA2_mcpbpy.frcmod": "38221d1d52d8b0af047145619d29bdeee11fdaf3010c452503facd01ec8f29c9"
+   },
+   "n2h": {
+    "mode": "structure",
+    "k": 50.0,
+    "theta0": 107.4065,
+    "replaced_line": "M1-Y4-hn    50.00     120.00    Created by empirical method using MCPB.py"
+   },
+   "frcmods": [
+    "sfa_anion_gaff2.frcmod",
+    "sfa_anion_repair.frcmod",
+    "CA2_mcpbpy.frcmod",
+    "n2h_structure.frcmod"
+   ],
+   "cap_charges": {
+    "HD1": {
+     "removed_backbone_charge": -0.116278,
+     "H1": -0.145678,
+     "CH3": 0.0188,
+     "H2": 0.086576,
+     "H3": 0.0294,
+     "residue_total": 0.030371
+    },
+    "HD2": {
+     "removed_backbone_charge": -0.113496,
+     "H1": -0.142896,
+     "CH3": 0.0188,
+     "H2": 0.08731,
+     "H3": 0.0294,
+     "residue_total": 0.03015
+    },
+    "HE1": {
+     "removed_backbone_charge": -0.117982,
+     "H1": -0.147382,
+     "CH3": -0.0581,
+     "H2": 0.136112,
+     "H3": 0.0294,
+     "residue_total": 0.036697
+    }
+   },
+   "tleap_warnings": [
+    "/root/cqc-sfa-tools/md/bin/teLeap: Warning!",
+    "Ignoring the warning from Unit Checking.",
+    "/root/cqc-sfa-tools/md/bin/teLeap: Warning!",
+    "check:  Warnings: 1",
+    "Exiting LEaP: Errors = 0; Warnings = 2; Notes = 1."
+   ],
+   "prmtop": "/tmp/claude-0/-root-workspace-cqc-4-sulfamoylanilinium-dihydrogen-phosphate/82cc65d7-a11f-4d60-91ee-436dc9534941/scratchpad/mdprep3/gr/mm_placeholder/group/small.prmtop",
+   "topology_check": {
+    "natoms": 64,
+    "order_is_qm_order": true,
+    "total_charge": 1.0,
+    "n_bonds": 67,
+    "n_angles": 117,
+    "n_dihedrals": 204,
+    "zinc_bonded_to": [
+     "HD1:NE2",
+     "HD2:NE2",
+     "HE1:ND1",
+     "SN1:N2"
+    ],
+    "dry_complex": {
+     "file": "/tmp/claude-0/-root-workspace-cqc-4-sulfamoylanilinium-dihydrogen-phosphate/82cc65d7-a11f-4d60-91ee-436dc9534941/scratchpad/mdprep/zinc/after_qm_test/mcpb/CA2_dry.prmtop",
+     "sha256": "4e2ec94f3b241f51a8dbff4d84b52a8273cc0a2a5c5ca28124e228931e93a4de",
+     "common_atoms": 58,
+     "cap_atoms": 6,
+     "largest_charge_difference_common_atoms": 0.0,
+     "atoms_with_other_type_or_lj": 0,
+     "compared": {
+      "bonds": 61,
+      "angles": 102,
+      "dihedrals": 170
+     },
+     "not_found_in_dry_complex": [],
+     "different_parameters": [
+      "angle ZN-N2-HN21 50.0 107.40604604305861 / (50.0, 120.00005142908158)"
+     ]
+    }
+   },
+   "rest_two_ways_largest_difference": 8.526512829121202e-14,
+   "relative_energy": {
+    "X": 0.0,
+    "R": 63.1277,
+    "Rx": 23.5077,
+    "a4": 33.1334,
+    "a3": 26.9937,
+    "a5": 32.4943,
+    "a2": 15.0704,
+    "a6": 26.9469,
+    "d1": 9.6143,
+    "d3": 2.6845,
+    "d4": 2.1258,
+    "d5": 2.2602,
+    "d6": 1.9915,
+    "c1_m030": 1.5699,
+    "c2_m015": 19.565,
+    "c1_p030": 6.0433,
+    "c2_m030": 18.0167,
+    "c1_m060": 6.0628,
+    "c2_m120": 19.2566,
+    "c1_m090": 10.6338,
+    "c2_m150": 13.6729,
+    "c1_m120": 12.3639,
+    "c2_m180": 11.8619,
+    "d2": 7.7813,
+    "N": 34.8149,
+    "Nx": 2.8282
+   },
+   "total": {
+    "X": -274.196122,
+    "R": -211.068418,
+    "Rx": -250.688412,
+    "a4": -241.06271,
+    "a3": -247.202387,
+    "a5": -241.701822,
+    "a2": -259.125718,
+    "a6": -247.249264,
+    "d1": -264.58184,
+    "d3": -271.511578,
+    "d4": -272.070274,
+    "d5": -271.935962,
+    "d6": -272.204663,
+    "c1_m030": -272.626188,
+    "c2_m015": -254.631135,
+    "c1_p030": -268.152803,
+    "c2_m030": -256.179388,
+    "c1_m060": -268.133314,
+    "c2_m120": -254.939491,
+    "c1_m090": -263.562369,
+    "c2_m150": -260.523185,
+    "c1_m120": -261.832236,
+    "c2_m180": -262.334201,
+    "d2": -266.414801,
+    "N": -239.381222,
+    "Nx": -271.367902
+   },
+   "rest": {
+    "X": -278.224312,
+    "R": -213.727128,
+    "Rx": -254.653642,
+    "a4": -249.481775,
+    "a3": -254.124026,
+    "a5": -249.151218,
+    "a2": -263.581426,
+    "a6": -252.414295,
+    "d1": -268.937388,
+    "d3": -276.516385,
+    "d4": -279.734378,
+    "d5": -272.955547,
+    "d6": -284.494928,
+    "c1_m030": -275.026878,
+    "c2_m015": -258.376122,
+    "c1_p030": -274.971478,
+    "c2_m030": -260.421299,
+    "c1_m060": -271.601809,
+    "c2_m120": -263.235858,
+    "c1_m090": -269.629355,
+    "c2_m150": -266.376706,
+    "c1_m120": -269.357399,
+    "c2_m180": -266.202757,
+    "d2": -273.919605,
+    "N": -245.66365,
+    "Nx": -276.41602
+   }
+  },
+  "spread": {
+   "scheme": "spread",
+   "inputs": {
+    "HD1.mol2": "e04cd5e31a8d0af7b6e5f7c6a3688732ceffcdf9a29e32076916f370110a4dfc",
+    "HD2.mol2": "75df3f81e78cad217dfaa5de1ffc3fa7a229814ece022f0aedef4aead8c94c70",
+    "HE1.mol2": "5e1b4eabab9782fa739652252f9920afe4b715965cb56007533fa92e1a98655a",
+    "ZN1.mol2": "705574571be0dc5319c5099a1de743542de502bfba5a405ba5858035fa01e338",
+    "SN1.mol2": "f1a0074d2b620b4659f71026e4291f1792647d490d1ae2f162785dd68b2ec06f",
+    "sfa_anion_gaff2.frcmod": "694fd181a8c2b7359a529112a1ba539e681dd2c66a883379607e6e6095ca438c",
+    "sfa_anion_repair.frcmod": "76dda0d181a27e12868eea1a2eff055fbeda708357f200d12a53915fa7d60b86",
+    "CA2_mcpbpy.frcmod": "38221d1d52d8b0af047145619d29bdeee11fdaf3010c452503facd01ec8f29c9"
+   },
+   "n2h": {
+    "mode": "structure",
+    "k": 50.0,
+    "theta0": 107.4065,
+    "replaced_line": "M1-Y4-hn    50.00     120.00    Created by empirical method using MCPB.py"
+   },
+   "frcmods": [
+    "sfa_anion_gaff2.frcmod",
+    "sfa_anion_repair.frcmod",
+    "CA2_mcpbpy.frcmod",
+    "n2h_structure.frcmod"
+   ],
+   "cap_charges": {
+    "HD1": {
+     "removed_backbone_charge": -0.116278,
+     "H1": -0.007752,
+     "CH3": 0.011048,
+     "H2": 0.078824,
+     "H3": -0.007752,
+     "residue_total": 0.030371
+    },
+    "HD2": {
+     "removed_backbone_charge": -0.113496,
+     "H1": -0.007566,
+     "CH3": 0.011234,
+     "H2": 0.079744,
+     "H3": -0.007566,
+     "residue_total": 0.03015
+    },
+    "HE1": {
+     "removed_backbone_charge": -0.117982,
+     "H1": -0.007865,
+     "CH3": -0.065965,
+     "H2": 0.128247,
+     "H3": -0.007865,
+     "residue_total": 0.036697
+    }
+   },
+   "tleap_warnings": [
+    "/root/cqc-sfa-tools/md/bin/teLeap: Warning!",
+    "Ignoring the warning from Unit Checking.",
+    "/root/cqc-sfa-tools/md/bin/teLeap: Warning!",
+    "check:  Warnings: 1",
+    "Exiting LEaP: Errors = 0; Warnings = 2; Notes = 1."
+   ],
+   "prmtop": "/tmp/claude-0/-root-workspace-cqc-4-sulfamoylanilinium-dihydrogen-phosphate/82cc65d7-a11f-4d60-91ee-436dc9534941/scratchpad/mdprep3/gr/mm_placeholder/spread/small.prmtop",
+   "topology_check": {
+    "natoms": 64,
+    "order_is_qm_order": true,
+    "total_charge": 1.000011,
+    "n_bonds": 67,
+    "n_angles": 117,
+    "n_dihedrals": 204,
+    "zinc_bonded_to": [
+     "HD1:NE2",
+     "HD2:NE2",
+     "HE1:ND1",
+     "SN1:N2"
+    ],
+    "dry_complex": {
+     "file": "/tmp/claude-0/-root-workspace-cqc-4-sulfamoylanilinium-dihydrogen-phosphate/82cc65d7-a11f-4d60-91ee-436dc9534941/scratchpad/mdprep/zinc/after_qm_test/mcpb/CA2_dry.prmtop",
+     "sha256": "4e2ec94f3b241f51a8dbff4d84b52a8273cc0a2a5c5ca28124e228931e93a4de",
+     "common_atoms": 58,
+     "cap_atoms": 6,
+     "largest_charge_difference_common_atoms": 0.007865000027438923,
+     "atoms_with_other_type_or_lj": 0,
+     "compared": {
+      "bonds": 61,
+      "angles": 102,
+      "dihedrals": 170
+     },
+     "not_found_in_dry_complex": [],
+     "different_parameters": [
+      "angle ZN-N2-HN21 50.0 107.40604604305861 / (50.0, 120.00005142908158)"
+     ]
+    }
+   },
+   "rest_two_ways_largest_difference": 1.1368683772161603e-13,
+   "relative_energy": {
+    "X": 0.0,
+    "R": 62.6891,
+    "Rx": 23.1389,
+    "a4": 32.6906,
+    "a3": 26.6346,
+    "a5": 32.0167,
+    "a2": 14.8543,
+    "a6": 26.478,
+    "d1": 9.7401,
+    "d3": 2.795,
+    "d4": 2.0037,
+    "d5": 2.2376,
+    "d6": 2.0174,
+    "c1_m030": 1.6865,
+    "c2_m015": 19.1355,
+    "c1_p030": 6.0344,
+    "c2_m030": 17.6744,
+    "c1_m060": 6.1782,
+    "c2_m120": 19.1426,
+    "c1_m090": 10.5923,
+    "c2_m150": 13.5744,
+    "c1_m120": 12.1475,
+    "c2_m180": 11.8724,
+    "d2": 7.8973,
+    "N": 35.0672,
+    "Nx": 2.842
+   },
+   "total": {
+    "X": -275.389906,
+    "R": -212.700782,
+    "Rx": -252.251008,
+    "a4": -242.699354,
+    "a3": -248.755275,
+    "a5": -243.373198,
+    "a2": -260.535605,
+    "a6": -248.911863,
+    "d1": -265.649812,
+    "d3": -272.594952,
+    "d4": -273.386236,
+    "d5": -273.15231,
+    "d6": -273.372533,
+    "c1_m030": -273.703441,
+    "c2_m015": -256.254359,
+    "c1_p030": -269.355547,
+    "c2_m030": -257.715531,
+    "c1_m060": -269.211681,
+    "c2_m120": -256.247296,
+    "c1_m090": -264.797624,
+    "c2_m150": -261.815473,
+    "c1_m120": -263.242404,
+    "c2_m180": -263.517545,
+    "d2": -267.492598,
+    "N": -240.322696,
+    "Nx": -272.547864
+   },
+   "rest": {
+    "X": -279.418097,
+    "R": -215.359493,
+    "Rx": -256.216238,
+    "a4": -251.118418,
+    "a3": -255.676914,
+    "a5": -250.822595,
+    "a2": -264.991313,
+    "a6": -254.076894,
+    "d1": -270.005359,
+    "d3": -277.599759,
+    "d4": -281.05034,
+    "d5": -274.171895,
+    "d6": -285.662798,
+    "c1_m030": -276.104131,
+    "c2_m015": -259.999346,
+    "c1_p030": -276.174221,
+    "c2_m030": -261.957442,
+    "c1_m060": -272.680175,
+    "c2_m120": -264.543663,
+    "c1_m090": -270.864609,
+    "c2_m150": -267.668994,
+    "c1_m120": -270.767567,
+    "c2_m180": -267.386102,
+    "d2": -274.997402,
+    "N": -246.605124,
+    "Nx": -277.595983
+   }
+  }
+ },
+ "used_scheme": "methyl",
+ "note": "energies in kcal/mol; relative energies are relative to point X",
+ "fit_terms_in_topology": {
+  "angles": {
+   "Zn_N2_H": {
+    "k": 50.0,
+    "theta0": 107.40604604305861
+   },
+   "S_N2_H": {
+    "k": 61.55,
+    "theta0": 118.059050327926
+   },
+   "Zn_N2_S": {
+    "k": 50.0,
+    "theta0": 117.55005066555006
+   }
+  },
+  "torsion_H_N2_S_C4": [
+   {
+    "n": 1,
+    "phase": 180.00007714362235,
+    "k": 0.2624
+   },
+   {
+    "n": 2,
+    "phase": 0.0,
+    "k": 2.703
+   }
+  ],
+  "other_torsions_about_N2_S": [
+   {
+    "atoms": "O1-S-N2-HN21",
+    "n": 2,
+    "phase": 0.0,
+    "k": 0.0
+   },
+   {
+    "atoms": "O2-S-N2-HN21",
+    "n": 2,
+    "phase": 0.0,
+    "k": 0.0
+   },
+   {
+    "atoms": "ZN-N2-S-C4",
+    "n": 3,
+    "phase": 0.0,
+    "k": 0.0
+   },
+   {
+    "atoms": "ZN-N2-S-O1",
+    "n": 3,
+    "phase": 0.0,
+    "k": 0.0
+   },
+   {
+    "atoms": "ZN-N2-S-O2",
+    "n": 3,
+    "phase": 0.0,
+    "k": 0.0
+   }
+  ]
+ },
+ "points": {
+  "X": {
+   "energy": {
+    "bond": 4.2957,
+    "angle": 87.217381,
+    "torsion": 16.261495,
+    "nonbonded": -379.020692,
+    "total": -271.246116,
+    "rest_openmm": -275.274306,
+    "fit_terms": 4.028191,
+    "rest": -275.274306
+   },
+   "internal": {
+    "Zn_N2_S": 117.5521,
+    "Zn_N2_H": 107.4065,
+    "S_N2_H": 107.41429,
+    "H_N2_S_C4": 121.82122,
+    "H_N2_S_O1": 5.3825,
+    "H_N2_S_O2": -124.13385,
+    "C4_S_N2": 108.7946,
+    "S_N2": 1.59633,
+    "Zn_N2": 1.93144,
+    "Zn_N2_S_C4": -117.02986
+   }
+  },
+  "R": {
+   "energy": {
+    "bond": 17.698813,
+    "angle": 96.386258,
+    "torsion": 18.389871,
+    "nonbonded": -341.059503,
+    "total": -208.584561,
+    "rest_openmm": -211.243271,
+    "fit_terms": 2.658711,
+    "rest": -211.243271
+   },
+   "internal": {
+    "Zn_N2_S": 119.52856,
+    "Zn_N2_H": 106.90701,
+    "S_N2_H": 106.89866,
+    "H_N2_S_C4": 89.30158,
+    "H_N2_S_O1": -27.15022,
+    "H_N2_S_O2": -154.34001,
+    "C4_S_N2": 109.43192,
+    "S_N2": 1.67725,
+    "Zn_N2": 2.23515,
+    "Zn_N2_S_C4": -32.1244
+   }
+  },
+  "Rx": {
+   "energy": {
+    "bond": 4.295286,
+    "angle": 89.517617,
+    "torsion": 14.851976,
+    "nonbonded": -356.768544,
+    "total": -248.103664,
+    "rest_openmm": -252.068894,
+    "fit_terms": 3.96523,
+    "rest": -252.068894
+   },
+   "internal": {
+    "Zn_N2_S": 123.82724,
+    "Zn_N2_H": 105.77271,
+    "S_N2_H": 105.77271,
+    "H_N2_S_C4": 100.61511,
+    "H_N2_S_O1": -15.82361,
+    "H_N2_S_O2": -145.33996,
+    "C4_S_N2": 108.7946,
+    "S_N2": 1.59633,
+    "Zn_N2": 1.93144,
+    "Zn_N2_S_C4": -21.34292
+   }
+  },
+  "a4": {
+   "energy": {
+    "bond": 4.295286,
+    "angle": 92.577706,
+    "torsion": 15.556686,
+    "nonbonded": -350.867598,
+    "total": -238.437921,
+    "rest_openmm": -246.856985,
+    "fit_terms": 8.419065,
+    "rest": -246.856985
+   },
+   "internal": {
+    "Zn_N2_S": 138.62521,
+    "Zn_N2_H": 108.19185,
+    "S_N2_H": 113.18294,
+    "H_N2_S_C4": 113.11941,
+    "H_N2_S_O1": -3.3193,
+    "H_N2_S_O2": -132.83565,
+    "C4_S_N2": 108.7946,
+    "S_N2": 1.59633,
+    "Zn_N2": 1.93144,
+    "Zn_N2_S_C4": -66.88059
+   }
+  },
+  "a3": {
+   "energy": {
+    "bond": 4.295286,
+    "angle": 90.316688,
+    "torsion": 16.17364,
+    "nonbonded": -355.289977,
+    "total": -244.504362,
+    "rest_openmm": -251.426001,
+    "fit_terms": 6.921639,
+    "rest": -251.426001
+   },
+   "internal": {
+    "Zn_N2_S": 134.99691,
+    "Zn_N2_H": 108.32978,
+    "S_N2_H": 113.12403,
+    "H_N2_S_C4": 120.81952,
+    "H_N2_S_O1": 4.3808,
+    "H_N2_S_O2": -125.13554,
+    "C4_S_N2": 108.7946,
+    "S_N2": 1.59633,
+    "Zn_N2": 1.93144,
+    "Zn_N2_S_C4": -83.59701
+   }
+  },
+  "a5": {
+   "energy": {
+    "bond": 4.295286,
+    "angle": 92.282665,
+    "torsion": 15.065046,
+    "nonbonded": -350.755816,
+    "total": -239.112818,
+    "rest_openmm": -246.562215,
+    "fit_terms": 7.449396,
+    "rest": -246.562215
+   },
+   "internal": {
+    "Zn_N2_S": 137.4204,
+    "Zn_N2_H": 107.71405,
+    "S_N2_H": 111.83173,
+    "H_N2_S_C4": 105.28468,
+    "H_N2_S_O1": -11.15404,
+    "H_N2_S_O2": -140.67038,
+    "C4_S_N2": 108.7946,
+    "S_N2": 1.59633,
+    "Zn_N2": 1.93144,
+    "Zn_N2_S_C4": -51.70136
+   }
+  },
+  "a2": {
+   "energy": {
+    "bond": 4.295286,
+    "angle": 87.485096,
+    "torsion": 16.450866,
+    "nonbonded": -364.544579,
+    "total": -256.313332,
+    "rest_openmm": -260.769039,
+    "fit_terms": 4.455708,
+    "rest": -260.769039
+   },
+   "internal": {
+    "Zn_N2_S": 127.42441,
+    "Zn_N2_H": 108.06404,
+    "S_N2_H": 111.24329,
+    "H_N2_S_C4": 123.92876,
+    "H_N2_S_O1": 7.49004,
+    "H_N2_S_O2": -122.02631,
+    "C4_S_N2": 108.7946,
+    "S_N2": 1.59633,
+    "Zn_N2": 1.93144,
+    "Zn_N2_S_C4": -100.31343
+   }
+  },
+  "a6": {
+   "energy": {
+    "bond": 4.295286,
+    "angle": 90.443248,
+    "torsion": 14.849963,
+    "nonbonded": -354.261989,
+    "total": -244.673492,
+    "rest_openmm": -249.838523,
+    "fit_terms": 5.165031,
+    "rest": -249.838523
+   },
+   "internal": {
+    "Zn_N2_S": 132.12418,
+    "Zn_N2_H": 106.90454,
+    "S_N2_H": 109.31384,
+    "H_N2_S_C4": 100.56293,
+    "H_N2_S_O1": -15.87579,
+    "H_N2_S_O2": -145.39213,
+    "C4_S_N2": 108.7946,
+    "S_N2": 1.59633,
+    "Zn_N2": 1.93144,
+    "Zn_N2_S_C4": -36.52214
+   }
+  },
+  "d1": {
+   "energy": {
+    "bond": 4.295286,
+    "angle": 88.188791,
+    "torsion": 15.617443,
+    "nonbonded": -369.687375,
+    "total": -261.585856,
+    "rest_openmm": -265.941403,
+    "fit_terms": 4.355548,
+    "rest": -265.941403
+   },
+   "internal": {
+    "Zn_N2_S": 117.5521,
+    "Zn_N2_H": 121.22395,
+    "S_N2_H": 121.22395,
+    "H_N2_S_C4": 62.97014,
+    "H_N2_S_O1": -53.46858,
+    "H_N2_S_O2": 177.01508,
+    "C4_S_N2": 108.7946,
+    "S_N2": 1.59633,
+    "Zn_N2": 1.93144,
+    "Zn_N2_S_C4": -117.02986
+   }
+  },
+  "d3": {
+   "energy": {
+    "bond": 4.2957,
+    "angle": 89.410793,
+    "torsion": 15.044699,
+    "nonbonded": -377.29374,
+    "total": -268.542548,
+    "rest_openmm": -273.547355,
+    "fit_terms": 5.004807,
+    "rest": -273.547355
+   },
+   "internal": {
+    "Zn_N2_S": 117.5521,
+    "Zn_N2_H": 119.4065,
+    "S_N2_H": 107.41429,
+    "H_N2_S_C4": 104.89225,
+    "H_N2_S_O1": -11.54647,
+    "H_N2_S_O2": -141.06281,
+    "C4_S_N2": 108.7946,
+    "S_N2": 1.59633,
+    "Zn_N2": 1.93144,
+    "Zn_N2_S_C4": -117.02986
+   }
+  },
+  "d4": {
+   "energy": {
+    "bond": 4.2957,
+    "angle": 89.41046,
+    "torsion": 17.70433,
+    "nonbonded": -380.549596,
+    "total": -269.139107,
+    "rest_openmm": -276.803211,
+    "fit_terms": 7.664104,
+    "rest": -276.803211
+   },
+   "internal": {
+    "Zn_N2_S": 117.5521,
+    "Zn_N2_H": 95.4065,
+    "S_N2_H": 107.41429,
+    "H_N2_S_C4": 137.00695,
+    "H_N2_S_O1": 20.56823,
+    "H_N2_S_O2": -108.94812,
+    "C4_S_N2": 108.7946,
+    "S_N2": 1.59633,
+    "Zn_N2": 1.93144,
+    "Zn_N2_S_C4": -117.02986
+   }
+  },
+  "d5": {
+   "energy": {
+    "bond": 4.2957,
+    "angle": 85.127326,
+    "torsion": 15.342944,
+    "nonbonded": -373.740003,
+    "total": -268.974033,
+    "rest_openmm": -269.993618,
+    "fit_terms": 1.019585,
+    "rest": -269.993618
+   },
+   "internal": {
+    "Zn_N2_S": 117.5521,
+    "Zn_N2_H": 107.4065,
+    "S_N2_H": 119.41429,
+    "H_N2_S_C4": 110.00956,
+    "H_N2_S_O1": -6.42916,
+    "H_N2_S_O2": -135.94551,
+    "C4_S_N2": 108.7946,
+    "S_N2": 1.59633,
+    "Zn_N2": 1.93144,
+    "Zn_N2_S_C4": -117.02986
+   }
+  },
+  "d6": {
+   "energy": {
+    "bond": 4.2957,
+    "angle": 94.707206,
+    "torsion": 17.033744,
+    "nonbonded": -385.305138,
+    "total": -269.268488,
+    "rest_openmm": -281.558753,
+    "fit_terms": 12.290265,
+    "rest": -281.558753
+   },
+   "internal": {
+    "Zn_N2_S": 117.5521,
+    "Zn_N2_H": 107.4065,
+    "S_N2_H": 95.41429,
+    "H_N2_S_C4": 130.11666,
+    "H_N2_S_O1": 13.67794,
+    "H_N2_S_O2": -115.83841,
+    "C4_S_N2": 108.7946,
+    "S_N2": 1.59633,
+    "Zn_N2": 1.93144,
+    "Zn_N2_S_C4": -117.02986
+   }
+  },
+  "c1_m030": {
+   "energy": {
+    "bond": 4.2957,
+    "angle": 87.217381,
+    "torsion": 14.633994,
+    "nonbonded": -375.976737,
+    "total": -269.829661,
+    "rest_openmm": -272.230351,
+    "fit_terms": 2.40069,
+    "rest": -272.230351
+   },
+   "internal": {
+    "Zn_N2_S": 117.5521,
+    "Zn_N2_H": 107.4065,
+    "S_N2_H": 107.41429,
+    "H_N2_S_C4": 91.82122,
+    "H_N2_S_O1": -24.6175,
+    "H_N2_S_O2": -154.13385,
+    "C4_S_N2": 108.7946,
+    "S_N2": 1.59633,
+    "Zn_N2": 1.93144,
+    "Zn_N2_S_C4": -147.02986
+   }
+  },
+  "c2_m015": {
+   "energy": {
+    "bond": 4.295286,
+    "angle": 89.517617,
+    "torsion": 14.631734,
+    "nonbonded": -360.49426,
+    "total": -252.049623,
+    "rest_openmm": -255.79461,
+    "fit_terms": 3.744987,
+    "rest": -255.79461
+   },
+   "internal": {
+    "Zn_N2_S": 123.82724,
+    "Zn_N2_H": 105.77271,
+    "S_N2_H": 105.77271,
+    "H_N2_S_C4": 85.61511,
+    "H_N2_S_O1": -30.82361,
+    "H_N2_S_O2": -160.33996,
+    "C4_S_N2": 108.7946,
+    "S_N2": 1.59633,
+    "Zn_N2": 1.93144,
+    "Zn_N2_S_C4": -36.34292
+   }
+  },
+  "c1_p030": {
+   "energy": {
+    "bond": 4.2957,
+    "angle": 87.217381,
+    "torsion": 19.051979,
+    "nonbonded": -375.847574,
+    "total": -265.282514,
+    "rest_openmm": -272.101188,
+    "fit_terms": 6.818675,
+    "rest": -272.101188
+   },
+   "internal": {
+    "Zn_N2_S": 117.5521,
+    "Zn_N2_H": 107.4065,
+    "S_N2_H": 107.41429,
+    "H_N2_S_C4": 151.82122,
+    "H_N2_S_O1": 35.3825,
+    "H_N2_S_O2": -94.13385,
+    "C4_S_N2": 108.7946,
+    "S_N2": 1.59633,
+    "Zn_N2": 1.93144,
+    "Zn_N2_S_C4": -87.02986
+   }
+  },
+  "c2_m030": {
+   "energy": {
+    "bond": 4.295286,
+    "angle": 89.517617,
+    "torsion": 15.128658,
+    "nonbonded": -362.559034,
+    "total": -253.617473,
+    "rest_openmm": -257.859384,
+    "fit_terms": 4.241911,
+    "rest": -257.859384
+   },
+   "internal": {
+    "Zn_N2_S": 123.82724,
+    "Zn_N2_H": 105.77271,
+    "S_N2_H": 105.77271,
+    "H_N2_S_C4": 70.61511,
+    "H_N2_S_O1": -45.82361,
+    "H_N2_S_O2": -175.33996,
+    "C4_S_N2": 108.7946,
+    "S_N2": 1.59633,
+    "Zn_N2": 1.93144,
+    "Zn_N2_S_C4": -51.34292
+   }
+  },
+  "c1_m060": {
+   "energy": {
+    "bond": 4.2957,
+    "angle": 87.217381,
+    "torsion": 15.701799,
+    "nonbonded": -372.598317,
+    "total": -265.383437,
+    "rest_openmm": -268.851932,
+    "fit_terms": 3.468494,
+    "rest": -268.851932
+   },
+   "internal": {
+    "Zn_N2_S": 117.5521,
+    "Zn_N2_H": 107.4065,
+    "S_N2_H": 107.41429,
+    "H_N2_S_C4": 61.82122,
+    "H_N2_S_O1": -54.6175,
+    "H_N2_S_O2": 175.86615,
+    "C4_S_N2": 108.7946,
+    "S_N2": 1.59633,
+    "Zn_N2": 1.93144,
+    "Zn_N2_S_C4": -177.02986
+   }
+  },
+  "c2_m120": {
+   "energy": {
+    "bond": 4.295286,
+    "angle": 89.517617,
+    "torsion": 19.183114,
+    "nonbonded": -365.401433,
+    "total": -252.405416,
+    "rest_openmm": -260.701783,
+    "fit_terms": 8.296368,
+    "rest": -260.701783
+   },
+   "internal": {
+    "Zn_N2_S": 123.82724,
+    "Zn_N2_H": 105.77271,
+    "S_N2_H": 105.77271,
+    "H_N2_S_C4": -19.38489,
+    "H_N2_S_O1": -135.82361,
+    "H_N2_S_O2": 94.66004,
+    "C4_S_N2": 108.7946,
+    "S_N2": 1.59633,
+    "Zn_N2": 1.93144,
+    "Zn_N2_S_C4": -141.34292
+   }
+  },
+  "c1_m090": {
+   "energy": {
+    "bond": 4.2957,
+    "angle": 87.217381,
+    "torsion": 18.30029,
+    "nonbonded": -370.510209,
+    "total": -260.696838,
+    "rest_openmm": -266.763824,
+    "fit_terms": 6.066985,
+    "rest": -266.763824
+   },
+   "internal": {
+    "Zn_N2_S": 117.5521,
+    "Zn_N2_H": 107.4065,
+    "S_N2_H": 107.41429,
+    "H_N2_S_C4": 31.82122,
+    "H_N2_S_O1": -84.6175,
+    "H_N2_S_O2": 145.86615,
+    "C4_S_N2": 108.7946,
+    "S_N2": 1.59633,
+    "Zn_N2": 1.93144,
+    "Zn_N2_S_C4": 152.97014
+   }
+  },
+  "c2_m150": {
+   "energy": {
+    "bond": 4.295286,
+    "angle": 89.517617,
+    "torsion": 16.740268,
+    "nonbonded": -368.553359,
+    "total": -258.000188,
+    "rest_openmm": -263.853709,
+    "fit_terms": 5.853521,
+    "rest": -263.853709
+   },
+   "internal": {
+    "Zn_N2_S": 123.82724,
+    "Zn_N2_H": 105.77271,
+    "S_N2_H": 105.77271,
+    "H_N2_S_C4": -49.38489,
+    "H_N2_S_O1": -165.82361,
+    "H_N2_S_O2": 64.66004,
+    "C4_S_N2": 108.7946,
+    "S_N2": 1.59633,
+    "Zn_N2": 1.93144,
+    "Zn_N2_S_C4": -171.34292
+   }
+  },
+  "c1_m120": {
+   "energy": {
+    "bond": 4.2957,
+    "angle": 87.217381,
+    "torsion": 19.758468,
+    "nonbonded": -370.214231,
+    "total": -258.942683,
+    "rest_openmm": -266.467846,
+    "fit_terms": 7.525163,
+    "rest": -266.467846
+   },
+   "internal": {
+    "Zn_N2_S": 117.5521,
+    "Zn_N2_H": 107.4065,
+    "S_N2_H": 107.41429,
+    "H_N2_S_C4": 1.82122,
+    "H_N2_S_O1": -114.6175,
+    "H_N2_S_O2": 115.86615,
+    "C4_S_N2": 108.7946,
+    "S_N2": 1.59633,
+    "Zn_N2": 1.93144,
+    "Zn_N2_S_C4": 122.97014
+   }
+  },
+  "c2_m180": {
+   "energy": {
+    "bond": 4.295286,
+    "angle": 89.517617,
+    "torsion": 14.755303,
+    "nonbonded": -368.445013,
+    "total": -259.876807,
+    "rest_openmm": -263.745363,
+    "fit_terms": 3.868557,
+    "rest": -263.745363
+   },
+   "internal": {
+    "Zn_N2_S": 123.82724,
+    "Zn_N2_H": 105.77271,
+    "S_N2_H": 105.77271,
+    "H_N2_S_C4": -79.38489,
+    "H_N2_S_O1": 164.17639,
+    "H_N2_S_O2": 34.66004,
+    "C4_S_N2": 108.7946,
+    "S_N2": 1.59633,
+    "Zn_N2": 1.93144,
+    "Zn_N2_S_C4": 158.65708
+   }
+  },
+  "d2": {
+   "energy": {
+    "bond": 4.295286,
+    "angle": 87.218935,
+    "torsion": 19.736554,
+    "nonbonded": -374.640384,
+    "total": -263.389608,
+    "rest_openmm": -270.894412,
+    "fit_terms": 7.504804,
+    "rest": -270.894412
+   },
+   "internal": {
+    "Zn_N2_S": 117.5521,
+    "Zn_N2_H": 107.41039,
+    "S_N2_H": 107.41039,
+    "H_N2_S_C4": 4.12108,
+    "H_N2_S_O1": -112.31763,
+    "H_N2_S_O2": 118.16602,
+    "C4_S_N2": 108.7946,
+    "S_N2": 1.59633,
+    "Zn_N2": 1.93144,
+    "Zn_N2_S_C4": -117.02986
+   }
+  },
+  "N": {
+   "energy": {
+    "bond": 15.737114,
+    "angle": 97.436153,
+    "torsion": 25.915781,
+    "nonbonded": -375.385119,
+    "total": -236.296072,
+    "rest_openmm": -242.5785,
+    "fit_terms": 6.282428,
+    "rest": -242.5785
+   },
+   "internal": {
+    "Zn_N2_S": 105.90753,
+    "Zn_N2_H": 110.35253,
+    "S_N2_H": 110.32582,
+    "H_N2_S_C4": 133.08838,
+    "H_N2_S_O1": 16.66553,
+    "H_N2_S_O2": -110.51343,
+    "C4_S_N2": 109.48251,
+    "S_N2": 1.67745,
+    "Zn_N2": 2.20712,
+    "Zn_N2_S_C4": -107.49023
+   }
+  },
+  "Nx": {
+   "energy": {
+    "bond": 4.295286,
+    "angle": 88.026381,
+    "torsion": 17.324349,
+    "nonbonded": -377.924029,
+    "total": -268.278013,
+    "rest_openmm": -273.326131,
+    "fit_terms": 5.048118,
+    "rest": -273.326131
+   },
+   "internal": {
+    "Zn_N2_S": 117.10572,
+    "Zn_N2_H": 107.53059,
+    "S_N2_H": 107.53059,
+    "H_N2_S_C4": 133.11028,
+    "H_N2_S_O1": 16.67156,
+    "H_N2_S_O2": -112.84479,
+    "C4_S_N2": 108.7946,
+    "S_N2": 1.59633,
+    "Zn_N2": 1.93144,
+    "Zn_N2_S_C4": -105.78875
+   }
+  }
+ },
+ "n2h": {
+  "mode": "structure",
+  "k": 50.0,
+  "theta0": 107.4065,
+  "replaced_line": "M1-Y4-hn    50.00     120.00    Created by empirical method using MCPB.py"
+ },
+ "frcmods": [
+  "sfa_anion_gaff2.frcmod",
+  "sfa_anion_repair.frcmod",
+  "CA2_mcpbpy.frcmod",
+  "n2h_structure.frcmod"
+ ],
+ "inputs_sha256": {
+  "HD1.mol2": "e04cd5e31a8d0af7b6e5f7c6a3688732ceffcdf9a29e32076916f370110a4dfc",
+  "HD2.mol2": "75df3f81e78cad217dfaa5de1ffc3fa7a229814ece022f0aedef4aead8c94c70",
+  "HE1.mol2": "5e1b4eabab9782fa739652252f9920afe4b715965cb56007533fa92e1a98655a",
+  "ZN1.mol2": "705574571be0dc5319c5099a1de743542de502bfba5a405ba5858035fa01e338",
+  "SN1.mol2": "f1a0074d2b620b4659f71026e4291f1792647d490d1ae2f162785dd68b2ec06f",
+  "sfa_anion_gaff2.frcmod": "694fd181a8c2b7359a529112a1ba539e681dd2c66a883379607e6e6095ca438c",
+  "sfa_anion_repair.frcmod": "76dda0d181a27e12868eea1a2eff055fbeda708357f200d12a53915fa7d60b86",
+  "CA2_mcpbpy.frcmod": "38221d1d52d8b0af047145619d29bdeee11fdaf3010c452503facd01ec8f29c9"
+ },
+ "minimum_ligand_free": {
+  "energy_start": -271.2461,
+  "energy_min": -341.601,
+  "rms_force_free_atoms": 0.0,
+  "rmsd_ligand_heavy_from_X": 3.2746,
+  "Zn_N_His": [
+   2.0099,
+   2.0206,
+   2.0183
+  ],
+  "internal": {
+   "Zn_N2_S": 71.6588,
+   "Zn_N2_H": 99.4506,
+   "S_N2_H": 104.1289,
+   "H_N2_S_C4": 96.1871,
+   "H_N2_S_O1": -20.0121,
+   "H_N2_S_O2": -144.259,
+   "C4_S_N2": 114.2545,
+   "S_N2": 1.486,
+   "Zn_N2": 1.8103,
+   "Zn_N2_S_C4": -168.3655
+  },
+  "angle_sum_N2": 275.238,
+  "binding_check": {
+   "C4_S_N2": {
+    "mm": 114.2545,
+    "crystal": 108.8,
+    "tolerance": 2.0,
+    "passed": false
+   },
+   "S_N2": {
+    "mm": 1.486,
+    "crystal": 1.596,
+    "tolerance": 0.02,
+    "passed": false
+   },
+   "Zn_N2_S": {
+    "mm": 71.6588,
+    "crystal": 117.6,
+    "tolerance": 3.0,
+    "passed": false
+   }
+  },
+  "binding_check_passed": false
+ },
+ "minimum_all_free": {
+  "energy_start": -271.2461,
+  "energy_min": -377.1121,
+  "rms_force_free_atoms": 0.0,
+  "rmsd_ligand_heavy_from_X": 1.9496,
+  "Zn_N_His": [
+   2.0549,
+   2.0867,
+   2.1247
+  ],
+  "internal": {
+   "Zn_N2_S": 63.4605,
+   "Zn_N2_H": 97.1395,
+   "S_N2_H": 110.6071,
+   "H_N2_S_C4": 95.4761,
+   "H_N2_S_O1": -20.7604,
+   "H_N2_S_O2": -143.4917,
+   "C4_S_N2": 114.3342,
+   "S_N2": 1.5069,
+   "Zn_N2": 1.7876,
+   "Zn_N2_S_C4": -176.7806
+  },
+  "angle_sum_N2": 271.207,
+  "binding_check": {
+   "C4_S_N2": {
+    "mm": 114.3342,
+    "crystal": 108.8,
+    "tolerance": 2.0,
+    "passed": false
+   },
+   "S_N2": {
+    "mm": 1.5069,
+    "crystal": 1.596,
+    "tolerance": 0.02,
+    "passed": false
+   },
+   "Zn_N2_S": {
+    "mm": 63.4605,
+    "crystal": 117.6,
+    "tolerance": 3.0,
+    "passed": false
+   }
+  },
+  "binding_check_passed": false
+ },
+ "binding_check": {
+  "rule": "md/PLAN.md, 6 Oct 2026 3:02 AM, point 6: at the force-field minimum of the small model C4-S-N2 within 2 deg, S-N2 within 0.02 A, Zn-N2-S within 3 deg of 6RL9 (no quantum-chemical optimum of the model exists)",
+  "verdict_on": "minimum_all_free",
+  "passed": false,
+  "passed_with_zinc_and_imidazoles_fixed": false
+ },
+ "cap_test": {
+  "methyl_minus_group": {
+   "largest_abs": 0.4926,
+   "at": "c2_m180",
+   "rms": 0.2647,
+   "per_point": {
+    "X": 0.0,
+    "R": -0.4661,
+    "Rx": -0.3653,
+    "a4": -0.3252,
+    "a3": -0.252,
+    "a5": -0.361,
+    "a2": -0.1376,
+    "a6": -0.3742,
+    "d1": 0.046,
+    "d3": 0.019,
+    "d4": -0.0188,
+    "d5": 0.0119,
+    "d6": -0.0138,
+    "c1_m030": -0.1535,
+    "c2_m015": -0.3685,
+    "c1_p030": -0.0797,
+    "c2_m030": -0.3881,
+    "c1_m060": -0.2001,
+    "c2_m120": -0.4159,
+    "c1_m090": -0.0845,
+    "c2_m150": -0.427,
+    "c1_m120": -0.0605,
+    "c2_m180": -0.4926,
+    "d2": 0.0752,
+    "N": 0.1351,
+    "Nx": 0.1399
+   }
+  },
+  "methyl_minus_spread": {
+   "largest_abs": 0.5031,
+   "at": "c2_m180",
+   "rms": 0.1727,
+   "per_point": {
+    "X": 0.0,
+    "R": -0.0276,
+    "Rx": 0.0036,
+    "a4": 0.1176,
+    "a3": 0.1071,
+    "a5": 0.1166,
+    "a2": 0.0785,
+    "a6": 0.0946,
+    "d1": -0.0798,
+    "d3": -0.0914,
+    "d4": 0.1033,
+    "d5": 0.0345,
+    "d6": -0.0397,
+    "c1_m030": -0.27,
+    "c2_m015": 0.0609,
+    "c1_p030": -0.0708,
+    "c2_m030": -0.0457,
+    "c1_m060": -0.3155,
+    "c2_m120": -0.3019,
+    "c1_m090": -0.043,
+    "c2_m150": -0.3285,
+    "c1_m120": 0.1559,
+    "c2_m180": -0.5031,
+    "d2": -0.0408,
+    "N": -0.1172,
+    "Nx": 0.1261
+   }
+  },
+  "group_minus_spread": {
+   "largest_abs": 0.4776,
+   "at": "a5",
+   "rms": 0.2534,
+   "per_point": {
+    "X": 0.0,
+    "R": 0.4386,
+    "Rx": 0.3688,
+    "a4": 0.4429,
+    "a3": 0.3591,
+    "a5": 0.4776,
+    "a2": 0.2161,
+    "a6": 0.4688,
+    "d1": -0.1258,
+    "d3": -0.1104,
+    "d4": 0.1222,
+    "d5": 0.0226,
+    "d6": -0.0259,
+    "c1_m030": -0.1165,
+    "c2_m015": 0.4294,
+    "c1_p030": 0.009,
+    "c2_m030": 0.3424,
+    "c1_m060": -0.1154,
+    "c2_m120": 0.114,
+    "c1_m090": 0.0415,
+    "c2_m150": 0.0985,
+    "c1_m120": 0.2164,
+    "c2_m180": -0.0104,
+    "d2": -0.116,
+    "N": -0.2523,
+    "Nx": -0.0138
+   }
+  }
+ },
+ "cap_test_largest_abs_two_reasonable": 0.4926,
+ "cap_test_largest_abs_all": 0.5031,
+ "versions": {
+  "openmm": "8.6.1",
+  "parmed": "4.3.1",
+  "numpy": "2.5.3",
+  "python": "3.12.14",
+  "amberhome": "/root/cqc-sfa-tools/md"
+ }
+}

@@ -1,0 +1,28 @@
+source leaprc.protein.ff14SB
+source leaprc.gaff2
+addAtomTypes {
+        { "M1"  "Zn" "sp3" }
+        { "Y1"  "N" "sp3" }
+        { "Y2"  "N" "sp3" }
+        { "Y3"  "N" "sp3" }
+        { "Y4"  "N" "sp3" }
+}
+HD1 = loadmol2 HD1.mol2
+HD2 = loadmol2 HD2.mol2
+HE1 = loadmol2 HE1.mol2
+ZN1 = loadmol2 ZN1.mol2
+SN1 = loadmol2 SN1.mol2
+loadamberparams sfa_anion_gaff2.frcmod
+loadamberparams sfa_anion_repair.frcmod
+loadamberparams CA2_mcpbpy.frcmod
+loadamberparams n2h_structure.frcmod
+loadamberparams n2_extra.frcmod
+mol = loadpdb X.pdb
+bond mol.1.NE2 mol.4.ZN
+bond mol.2.NE2 mol.4.ZN
+bond mol.3.ND1 mol.4.ZN
+bond mol.4.ZN mol.5.N2
+saveamberparm mol small.prmtop small.inpcrd
+check mol
+charge mol
+quit

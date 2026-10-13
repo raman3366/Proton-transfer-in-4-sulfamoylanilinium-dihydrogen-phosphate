@@ -1,0 +1,620 @@
+{
+ "what": "gate G-R2 (md/PLAN.md, 6 Oct 2026, 1:34 PM IST, point 4), PREVIEW without the test set: not a verdict",
+ "mode": "preview",
+ "written": "2026-10-06 07:08:28 PM IST",
+ "model": {
+  "file": "md/qm/n2/fit_ff2/MODEL_01_L5_ridge0.01.json",
+  "sha256": "96593bb16f7c4900fffae59a6185b40a87c9442e83020579568a5afac18362be",
+  "name": "L5_ridge0.01",
+  "groups": [
+   "angle",
+   "tor_H",
+   "tor_Zn",
+   "tor_ZnN_S",
+   "improper",
+   "tor_ZnN_H"
+  ],
+  "ridge": 0.01,
+  "parameters": {
+   "K_ZnN2S": 16.10117743076524,
+   "B_ZnN2S": -62.09359219046262,
+   "K_ZnN2H": 23.88429212303599,
+   "B_ZnN2H": -99.31887904607242,
+   "K_SN2H": 49.79936004154246,
+   "B_SN2H": -202.06766121556956,
+   "H_NS_C4_1": -1.0836621620712676,
+   "H_NS_C4_2": 2.7937657504479163,
+   "H_NS_C4_3": 1.0345377858738434,
+   "Zn_NS_C4_1": -1.8832141470723667,
+   "Zn_NS_C4_2": 0.40078634801531654,
+   "Zn_NS_C4_3": 0.47660405588733656,
+   "His_ZnN_S_3c": 0.13158476574019098,
+   "His_ZnN_S_3s": -0.28372801652319946,
+   "His_ZnN_H_3c": 0.3564822931347684,
+   "His_ZnN_H_3s": 0.0374822152471353,
+   "improper": 0.5515049349550778
+  },
+  "amber": {
+   "angles": {
+    "M1-Y4-sy": {
+     "K": 16.10117743076524,
+     "theta0": 110.47952184298457
+    },
+    "M1-Y4-hn": {
+     "K": 23.88429212303599,
+     "theta0": 119.12751204842736
+    },
+    "hn-Y4-sy": {
+     "K": 49.79936004154246,
+     "theta0": 116.2427002482911
+    }
+   },
+   "torsions": {
+    "ca-sy-Y4-hn": [
+     {
+      "n": 1,
+      "PK": 1.0836621620712676,
+      "phase": 180.0
+     },
+     {
+      "n": 2,
+      "PK": 2.7937657504479163,
+      "phase": 0.0
+     },
+     {
+      "n": 3,
+      "PK": 1.0345377858738434,
+      "phase": 0.0
+     }
+    ],
+    "M1-Y4-sy-ca": [
+     {
+      "n": 1,
+      "PK": 1.8832141470723667,
+      "phase": 180.0
+     },
+     {
+      "n": 2,
+      "PK": 0.40078634801531654,
+      "phase": 0.0
+     },
+     {
+      "n": 3,
+      "PK": 0.47660405588733656,
+      "phase": 0.0
+     }
+    ],
+    "Y1-M1-Y4-sy": [
+     {
+      "n": 3,
+      "PK": 0.31275571607100944,
+      "phase": 294.8804928469125
+     }
+    ],
+    "Y2-M1-Y4-sy": [
+     {
+      "n": 3,
+      "PK": 0.31275571607100944,
+      "phase": 294.8804928469125
+     }
+    ],
+    "Y3-M1-Y4-sy": [
+     {
+      "n": 3,
+      "PK": 0.31275571607100944,
+      "phase": 294.8804928469125
+     }
+    ],
+    "Y1-M1-Y4-hn": [
+     {
+      "n": 3,
+      "PK": 0.35844740448000956,
+      "phase": 6.002291762527502
+     }
+    ],
+    "Y2-M1-Y4-hn": [
+     {
+      "n": 3,
+      "PK": 0.35844740448000956,
+      "phase": 6.002291762527502
+     }
+    ],
+    "Y3-M1-Y4-hn": [
+     {
+      "n": 3,
+      "PK": 0.35844740448000956,
+      "phase": 6.002291762527502
+     }
+    ]
+   },
+   "improper": {
+    "M1-hn-Y4-sy": {
+     "PK": 0.5515049349550778,
+     "phase": 180.0,
+     "n": 2
+    }
+   }
+  }
+ },
+ "verdict": "conditions 3 to 6 and the pre-test do not all hold",
+ "accepted": null,
+ "conditions": {
+  "c1_test_rms": {
+   "passed": null,
+   "note": "preview: the test set was not read"
+  },
+  "c2_test_largest": {
+   "passed": null,
+   "note": "preview: the test set was not read"
+  },
+  "c3_part_A": {
+   "passed": false,
+   "rms": 1.0923,
+   "n": 23,
+   "criterion": 1.0,
+   "families": {
+    "X": {
+     "reference": "e_p120",
+     "deviations": {
+      "X": -1.0184,
+      "a2": -1.2171,
+      "a3": -1.4921,
+      "a4": -1.4239,
+      "a5": -1.0347,
+      "a6": -0.8255,
+      "d1": -1.8665,
+      "d2": -1.181,
+      "d3": -1.2851,
+      "d4": -0.8331,
+      "d5": -1.4421,
+      "d6": -0.5724,
+      "e_p015": -0.9685,
+      "e_p030": -0.7144,
+      "e_m120": -1.5049,
+      "f_p08": -0.8796,
+      "f_m08": -1.1935
+     }
+    },
+    "Rx": {
+     "reference": "g3",
+     "deviations": {
+      "Rx": -0.2273,
+      "g1": -0.9099,
+      "g2": 1.0793,
+      "g4": -0.2818,
+      "g5": -0.9153,
+      "g6": -0.6432
+     }
+    }
+   },
+   "largest": -1.8665,
+   "references_as_on_6_Oct": true,
+   "not_deciding": {
+    "rms_single_reference": 1.2012,
+    "single_reference": "e_p120",
+    "as_built_on_6_Oct": 3.0753
+   }
+  },
+  "c4_bounds_and_nothing_else": {
+   "passed": true,
+   "outside_bounds": [],
+   "differences_the_plan_does_not_allow": [],
+   "rebuilt_as_built_equals_the_kept_topology": true,
+   "angles": {
+    "SN1:HN21-SN1:N2-ZN1:ZN": {
+     "as_built": [
+      50.0,
+      107.406
+     ],
+     "K": 23.884,
+     "theta0": 119.1281,
+     "optimum": 122.757,
+     "theta0_minus_optimum": -3.628
+    },
+    "SN1:S-SN1:N2-ZN1:ZN": {
+     "as_built": [
+      50.0,
+      117.5501
+     ],
+     "K": 16.101,
+     "theta0": 110.48,
+     "optimum": 107.737,
+     "theta0_minus_optimum": 2.743
+    },
+    "SN1:HN21-SN1:N2-SN1:S": {
+     "as_built": [
+      61.55,
+      118.0591
+     ],
+     "K": 49.799,
+     "theta0": 116.243,
+     "optimum": 109.083,
+     "theta0_minus_optimum": 7.16
+    }
+   },
+   "torsions": {
+    "SN1:C4-SN1:S-SN1:N2-SN1:HN21": {
+     "as_built": [
+      [
+       1,
+       0.2624,
+       180.0
+      ],
+      [
+       2,
+       2.703,
+       0.0
+      ]
+     ],
+     "terms": [
+      [
+       1,
+       1.0837,
+       180.0
+      ],
+      [
+       2,
+       2.7938,
+       0.0
+      ],
+      [
+       3,
+       1.0345,
+       0.0
+      ]
+     ],
+     "changed": true
+    },
+    "SN1:HN21-SN1:N2-SN1:S-SN1:O2": {
+     "as_built": [
+      [
+       2,
+       0.0,
+       0.0
+      ]
+     ],
+     "terms": [
+      [
+       2,
+       0.0,
+       0.0
+      ]
+     ],
+     "changed": false
+    },
+    "HD1:NE2-ZN1:ZN-SN1:N2-SN1:HN21": {
+     "as_built": [
+      [
+       3,
+       0.0,
+       0.0
+      ]
+     ],
+     "terms": [
+      [
+       3,
+       0.3584,
+       6.002
+      ]
+     ],
+     "changed": true
+    },
+    "HE1:ND1-ZN1:ZN-SN1:N2-SN1:S": {
+     "as_built": [
+      [
+       3,
+       0.0,
+       0.0
+      ]
+     ],
+     "terms": [
+      [
+       3,
+       0.3128,
+       294.88
+      ]
+     ],
+     "changed": true
+    },
+    "HE1:ND1-ZN1:ZN-SN1:N2-SN1:HN21": {
+     "as_built": [
+      [
+       3,
+       0.0,
+       0.0
+      ]
+     ],
+     "terms": [
+      [
+       3,
+       0.3584,
+       6.002
+      ]
+     ],
+     "changed": true
+    },
+    "SN1:O2-SN1:S-SN1:N2-ZN1:ZN": {
+     "as_built": [
+      [
+       3,
+       0.0,
+       0.0
+      ]
+     ],
+     "terms": [
+      [
+       3,
+       0.0,
+       0.0
+      ]
+     ],
+     "changed": false
+    },
+    "SN1:HN21-SN1:N2-SN1:S-SN1:O1": {
+     "as_built": [
+      [
+       2,
+       0.0,
+       0.0
+      ]
+     ],
+     "terms": [
+      [
+       2,
+       0.0,
+       0.0
+      ]
+     ],
+     "changed": false
+    },
+    "HD1:NE2-ZN1:ZN-SN1:N2-SN1:S": {
+     "as_built": [
+      [
+       3,
+       0.0,
+       0.0
+      ]
+     ],
+     "terms": [
+      [
+       3,
+       0.3128,
+       294.88
+      ]
+     ],
+     "changed": true
+    },
+    "SN1:C4-SN1:S-SN1:N2-ZN1:ZN": {
+     "as_built": [
+      [
+       3,
+       0.0,
+       0.0
+      ]
+     ],
+     "terms": [
+      [
+       1,
+       1.8832,
+       180.0
+      ],
+      [
+       2,
+       0.4008,
+       0.0
+      ],
+      [
+       3,
+       0.4766,
+       0.0
+      ]
+     ],
+     "changed": true
+    },
+    "HD2:NE2-ZN1:ZN-SN1:N2-SN1:HN21": {
+     "as_built": [
+      [
+       3,
+       0.0,
+       0.0
+      ]
+     ],
+     "terms": [
+      [
+       3,
+       0.3584,
+       6.002
+      ]
+     ],
+     "changed": true
+    },
+    "SN1:O1-SN1:S-SN1:N2-ZN1:ZN": {
+     "as_built": [
+      [
+       3,
+       0.0,
+       0.0
+      ]
+     ],
+     "terms": [
+      [
+       3,
+       0.0,
+       0.0
+      ]
+     ],
+     "changed": false
+    },
+    "HD2:NE2-ZN1:ZN-SN1:N2-SN1:S": {
+     "as_built": [
+      [
+       3,
+       0.0,
+       0.0
+      ]
+     ],
+     "terms": [
+      [
+       3,
+       0.3128,
+       294.88
+      ]
+     ],
+     "changed": true
+    }
+   },
+   "improper": {
+    "SN1:HN21-SN1:N2-SN1:S-ZN1:ZN": [
+     [
+      2,
+      0.5515,
+      180.0
+     ]
+    ]
+   },
+   "bounds": {
+    "k_angle": [
+     10.0,
+     300.0
+    ],
+    "theta0_window_deg": 15.0,
+    "torsion_abs_max": 5.0,
+    "improper_abs_max": 5.0
+   },
+   "quantum_chemical_optimum": {
+    "Zn_N2_S": 107.7373,
+    "Zn_N2_H": 122.7565,
+    "S_N2_H": 109.0832
+   }
+  },
+  "c5_leave_one_out": {
+   "passed": false,
+   "leave_one_out_rms": 1.1844,
+   "leave_one_out_largest": 5.1075,
+   "criterion": 1.0,
+   "n_fitting_points": 177,
+   "n_parameters": 17,
+   "points_per_parameter": 10.41,
+   "at_least_8_points_per_parameter": true,
+   "residual_rms_of_the_fit": 1.0395,
+   "ridge": 0.01,
+   "groups": [
+    "angle",
+    "tor_H",
+    "tor_Zn",
+    "tor_ZnN_S",
+    "improper",
+    "tor_ZnN_H"
+   ],
+   "model_is_the_declared_fit": true,
+   "largest_difference_given_against_refitted_kcal": 0.0,
+   "solver": {
+    "method": "SLSQP",
+    "success": true,
+    "message": "Optimization terminated successfully",
+    "iterations": 32
+   }
+  },
+  "c6_minimum": {
+   "passed": false,
+   "criterion_deg": 5.0,
+   "optimum": {
+    "Zn_N2_S": 107.7373,
+    "Zn_N2_H": 122.7565,
+    "S_N2_H": 109.0832
+   },
+   "optimum_source": "/root/cqc-sfa-md/qm/prod/opt_final.npy",
+   "optimum_sha256": "ab96538c0fd8c9f5330b16d6e85497e48ed934ccf7b1af46a831290dc5d4bcbe",
+   "minima": {
+    "from_X": {
+     "Zn_N2_S": 99.226,
+     "Zn_N2_H": 120.972,
+     "S_N2_H": 109.888,
+     "signed_volume": 0.7332,
+     "Zn_N2": 1.9201,
+     "energy": 38.2344,
+     "difference": {
+      "Zn_N2_S": -8.511,
+      "Zn_N2_H": -1.785,
+      "S_N2_H": 0.805
+     },
+     "within": false
+    },
+    "from_the_optimum": {
+     "Zn_N2_S": 99.447,
+     "Zn_N2_H": 121.104,
+     "S_N2_H": 109.874,
+     "signed_volume": 0.73,
+     "Zn_N2": 1.9206,
+     "energy": 38.2821,
+     "difference": {
+      "Zn_N2_S": -8.29,
+      "Zn_N2_H": -1.653,
+      "S_N2_H": 0.791
+     },
+     "within": false
+    }
+   }
+  },
+  "pre_test_one_reference": {
+   "passed": false,
+   "rms": 1.2217,
+   "largest": 5.3916,
+   "reference": "n005",
+   "mean": 0.2869,
+   "leave_one_out_error_of_the_reference": -0.2841,
+   "criterion_rms": 1.0,
+   "criterion_largest": 2.5,
+   "note": "fitting data only; decides in the preview, reported in the final test"
+  }
+ },
+ "failed": [
+  "c3_part_A",
+  "c5_leave_one_out",
+  "c6_minimum",
+  "pre_test_one_reference"
+ ],
+ "linear_model_against_topology": {
+  "spread_kcal": 0.000857,
+  "tolerance": 0.01,
+  "consistent": true
+ },
+ "points": {
+  "old": 36,
+  "fit": 141,
+  "test": 0,
+  "lowest_E_QM": "n005"
+ },
+ "not_deciding": {
+  "rms_fitting_points_one_reference": 1.0762,
+  "Rx_against_X": {
+   "QM": 10.844,
+   "MM": 10.858,
+   "as_built_MM": 11.695
+  },
+  "force_field_copy": "ff2"
+ },
+ "tolerances": {
+  "test_rms": 1.0,
+  "test_largest": 2.5,
+  "part_A_rms": 1.0,
+  "loo_rms": 1.0,
+  "minimum_deg": 5.0,
+  "declared_fit_kcal": 0.01,
+  "linear_against_topology_kcal": 0.01,
+  "pre_test_rms": 1.0,
+  "pre_test_largest": 2.5
+ },
+ "files": {
+  "frcmod": "md/qm/n2/final_test/designer_preview_second_step/n2_terms_candidate.frcmod",
+  "frcmod_sha256": "e5912ef45568f76d24182aa3f94812796ae80a0968dc42433ca7b32263f43f51",
+  "prmtop": "md/qm/n2/final_test/designer_preview_second_step/work/small.prmtop",
+  "split_sha256": "d38e01b5d47e7abbbc25556dba16721ac1bd078cff4d64b634d814e6e09eb9d7",
+  "points_sha256": "e866b20ce71651b3b1a4201fbe70687e4a8ccd2fcaf9f0987a69cab5cfc8a327"
+ },
+ "versions": {
+  "numpy": "2.5.3",
+  "openmm": "8.6.1",
+  "python": "3.12.14"
+ }
+}

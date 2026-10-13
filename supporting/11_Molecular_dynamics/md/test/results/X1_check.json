@@ -1,0 +1,401 @@
+{
+ "note": "TEST OF THE PIPELINE with the restrained-zinc model (nonbonded Zn2+, four Zn-N distance restraints); NOT a result for the paper",
+ "run_dir": "/root/cqc-sfa-md/runs_test/restrained/X1",
+ "run_id": "X1",
+ "checked": "6 Oct 2026, 8:37:24 AM IST",
+ "inputs_sha256": {
+  "manifest.json": "846d3493800e52570cf2456afff236f42400085fe038ed82d691f76fa290cc78",
+  "run_md.py (as recorded in the manifest)": "45e4cf2872beddbfc44696e178a6721d574965c8beb4ec5bb0d83814f6f3bc29",
+  "protocol (as recorded)": "de0adcef5025c03c330125db9c32a4c372498828cbb48d624d318871b4928251",
+  "system.prmtop (as recorded)": "f297a0ed8d6c9d42bc763e047e490e9410396d2374673b246cbc2b87bc506e5f",
+  "system.inpcrd (as recorded)": "abca2bda29fc54df7afcf043f9ac1cd0b7b1492062320e996f5ce9c96f5baca1"
+ },
+ "run_seed": 154924513,
+ "equil_scale": 0.05,
+ "segment_ns": 0.1,
+ "n_atoms": 40902,
+ "invocations": [
+  {
+   "pid": 4149915,
+   "started_ist": "6 Oct 2026, 1:04:32 AM IST",
+   "ended_ist": null,
+   "exit_code": null,
+   "outcome": null,
+   "resume": true,
+   "threads": "2",
+   "platform": "CPU"
+  }
+ ],
+ "steps": [
+  {
+   "step": "min",
+   "kind": "minimisation",
+   "wall_s": 1653.34,
+   "ns_per_day": null,
+   "started_ist": "6 Oct 2026, 1:04:33 AM IST",
+   "ended_ist": "6 Oct 2026, 1:32:09 AM IST",
+   "lbfgs_iterations_per_pass": [
+    1005,
+    3619,
+    6,
+    6
+   ],
+   "minimiser_calls": 4636,
+   "passes_stopped_by_the_iteration_limit": 0,
+   "last_pass_stopped_by_the_iteration_limit": false,
+   "energy_before_kj_per_mol": -447644.427,
+   "energy_after_kj_per_mol": -661131.1
+  },
+  {
+   "step": "eq01",
+   "kind": "equilibration",
+   "wall_s": 743.88,
+   "ns_per_day": 0.58,
+   "started_ist": "6 Oct 2026, 1:32:09 AM IST",
+   "ended_ist": "6 Oct 2026, 1:44:36 AM IST",
+   "n_steps": 2500,
+   "timestep_fs": 2.0,
+   "length_ps": 5.0,
+   "time_start_ps": 0.0,
+   "expected": {
+    "state_log_rows": 0,
+    "solute": 0,
+    "full": 0
+   },
+   "found": {
+    "state_log_rows": 0,
+    "solute": 0,
+    "full": 0
+   },
+   "record_frames": {
+    "solute": 0,
+    "full": 0,
+    "state_log_rows": 0
+   },
+   "dcd_header_n_frames": {
+    "solute": 0,
+    "full": 0
+   },
+   "bytes_beyond_whole_frames": {
+    "solute": 0,
+    "full": 0
+   },
+   "mean_temperature_K": null,
+   "mean_density_g_per_cm3": null,
+   "final_temperature_K": 259.48,
+   "final_density_g_per_cm3": 0.91235
+  },
+  {
+   "step": "eq02",
+   "kind": "equilibration",
+   "wall_s": 3183.15,
+   "ns_per_day": 0.41,
+   "started_ist": "6 Oct 2026, 1:44:37 AM IST",
+   "ended_ist": "6 Oct 2026, 2:37:43 AM IST",
+   "n_steps": 7500,
+   "timestep_fs": 2.0,
+   "length_ps": 15.0,
+   "time_start_ps": 5.0,
+   "expected": {
+    "state_log_rows": 1,
+    "solute": 1,
+    "full": 0
+   },
+   "found": {
+    "state_log_rows": 1,
+    "solute": 1,
+    "full": 0
+   },
+   "record_frames": {
+    "solute": 1,
+    "full": 0,
+    "state_log_rows": 1
+   },
+   "dcd_header_n_frames": {
+    "solute": 1,
+    "full": 0
+   },
+   "bytes_beyond_whole_frames": {
+    "solute": 0,
+    "full": 0
+   },
+   "mean_temperature_K": 303.77,
+   "mean_density_g_per_cm3": 0.99052,
+   "final_temperature_K": 300.1,
+   "final_density_g_per_cm3": 1.01196
+  },
+  {
+   "step": "eq03",
+   "kind": "equilibration",
+   "wall_s": 3492.88,
+   "ns_per_day": 0.37,
+   "started_ist": "6 Oct 2026, 2:37:43 AM IST",
+   "ended_ist": "6 Oct 2026, 3:36:00 AM IST",
+   "n_steps": 7500,
+   "timestep_fs": 2.0,
+   "length_ps": 15.0,
+   "time_start_ps": 20.0,
+   "expected": {
+    "state_log_rows": 1,
+    "solute": 1,
+    "full": 0
+   },
+   "found": {
+    "state_log_rows": 1,
+    "solute": 1,
+    "full": 0
+   },
+   "record_frames": {
+    "solute": 1,
+    "full": 0,
+    "state_log_rows": 1
+   },
+   "dcd_header_n_frames": {
+    "solute": 1,
+    "full": 0
+   },
+   "bytes_beyond_whole_frames": {
+    "solute": 0,
+    "full": 0
+   },
+   "mean_temperature_K": 299.04,
+   "mean_density_g_per_cm3": 1.0238,
+   "final_temperature_K": 298.1,
+   "final_density_g_per_cm3": 1.02924
+  },
+  {
+   "step": "eq04",
+   "kind": "equilibration",
+   "wall_s": 2798.07,
+   "ns_per_day": 0.62,
+   "started_ist": "6 Oct 2026, 3:36:00 AM IST",
+   "ended_ist": "6 Oct 2026, 4:22:42 AM IST",
+   "n_steps": 5000,
+   "timestep_fs": 4.0,
+   "length_ps": 20.0,
+   "time_start_ps": 35.0,
+   "expected": {
+    "state_log_rows": 2,
+    "solute": 2,
+    "full": 0
+   },
+   "found": {
+    "state_log_rows": 2,
+    "solute": 2,
+    "full": 0
+   },
+   "record_frames": {
+    "solute": 2,
+    "full": 0,
+    "state_log_rows": 2
+   },
+   "dcd_header_n_frames": {
+    "solute": 2,
+    "full": 0
+   },
+   "bytes_beyond_whole_frames": {
+    "solute": 0,
+    "full": 0
+   },
+   "mean_temperature_K": 300.16,
+   "mean_density_g_per_cm3": 1.02727,
+   "final_temperature_K": 297.77,
+   "final_density_g_per_cm3": 1.02601
+  },
+  {
+   "step": "eq05",
+   "kind": "equilibration",
+   "wall_s": 2837.68,
+   "ns_per_day": 0.61,
+   "started_ist": "6 Oct 2026, 4:22:42 AM IST",
+   "ended_ist": "6 Oct 2026, 5:10:03 AM IST",
+   "n_steps": 5000,
+   "timestep_fs": 4.0,
+   "length_ps": 20.0,
+   "time_start_ps": 55.0,
+   "expected": {
+    "state_log_rows": 2,
+    "solute": 2,
+    "full": 0
+   },
+   "found": {
+    "state_log_rows": 2,
+    "solute": 2,
+    "full": 0
+   },
+   "record_frames": {
+    "solute": 2,
+    "full": 0,
+    "state_log_rows": 2
+   },
+   "dcd_header_n_frames": {
+    "solute": 2,
+    "full": 0
+   },
+   "bytes_beyond_whole_frames": {
+    "solute": 0,
+    "full": 0
+   },
+   "mean_temperature_K": 300.66,
+   "mean_density_g_per_cm3": 1.02695,
+   "final_temperature_K": 299.23,
+   "final_density_g_per_cm3": 1.02798
+  },
+  {
+   "step": "eq06",
+   "kind": "equilibration",
+   "wall_s": 3511.8,
+   "ns_per_day": 0.62,
+   "started_ist": "6 Oct 2026, 5:10:03 AM IST",
+   "ended_ist": "6 Oct 2026, 6:08:38 AM IST",
+   "n_steps": 6250,
+   "timestep_fs": 4.0,
+   "length_ps": 25.0,
+   "time_start_ps": 75.0,
+   "expected": {
+    "state_log_rows": 2,
+    "solute": 2,
+    "full": 0
+   },
+   "found": {
+    "state_log_rows": 2,
+    "solute": 2,
+    "full": 0
+   },
+   "record_frames": {
+    "solute": 2,
+    "full": 0,
+    "state_log_rows": 2
+   },
+   "dcd_header_n_frames": {
+    "solute": 2,
+    "full": 0
+   },
+   "bytes_beyond_whole_frames": {
+    "solute": 0,
+    "full": 0
+   },
+   "mean_temperature_K": 302.73,
+   "mean_density_g_per_cm3": 1.02446,
+   "final_temperature_K": 300.31,
+   "final_density_g_per_cm3": 1.02778
+  }
+ ],
+ "cut_off_step": {
+  "step": "seg0001",
+  "expected": {
+   "n_steps": 25000,
+   "state_log_rows": 10,
+   "solute": 10,
+   "full": 1
+  },
+  "files": {
+   "full_seg0001.dcd": {
+    "bytes": 0,
+    "readable": false
+   },
+   "log_seg0001.csv": {
+    "bytes": 672,
+    "state_log_rows": 5,
+    "last_time_ps": 50.0
+   },
+   "solute_seg0001.dcd": {
+    "bytes": 246316,
+    "readable": true,
+    "header_n_frames": 5,
+    "header_first_step": 2500,
+    "header_step_interval": 2500,
+    "header_timestep_ps": 0.004,
+    "header_has_cell": true,
+    "n_atoms": 4094,
+    "whole_frames_by_size": 5,
+    "bytes_beyond_whole_frames": 0,
+    "titles": [
+     "cqc-sfa-md run X1 step seg0001; coordinates in Angstrom",
+     "time zero: start of the production; step 4 fs"
+    ]
+   }
+  }
+ },
+ "tests": [
+  {
+   "test": "manifest status (a run that was cut off: 'running' is what a killed process leaves)",
+   "value": "status running, all_steps_complete False, test_only True (--equil-scale 0.05), TEST_ONLY file present",
+   "passed": true
+  },
+  {
+   "test": "every complete step; frames and log rows as expected (file size, DCD header, record)",
+   "value": "7 of 9 steps complete; production 0 solute frames, 0 full frames, 0 log rows; equilibration 8, 0, 8",
+   "passed": true
+  },
+  {
+   "test": "the cut-off step: its files hold whole frames only",
+   "value": {
+    "full_seg0001.dcd": {
+     "bytes": 0,
+     "whole_frames": null,
+     "header_frames": null,
+     "bytes_beyond": null
+    },
+    "log_seg0001.csv": {
+     "bytes": 672,
+     "rows": 5,
+     "last_time_ps": 50.0
+    },
+    "solute_seg0001.dcd": {
+     "bytes": 246316,
+     "whole_frames": 5,
+     "header_frames": 5,
+     "bytes_beyond": 0
+    }
+   },
+   "passed": true
+  },
+  {
+   "test": "time axis: log times and DCD headers continue from step to step",
+   "value": "6 steps; none off",
+   "passed": true
+  },
+  {
+   "test": "MDAnalysis reads the same numbers of frames",
+   "value": "all files with a frame agree",
+   "passed": true
+  },
+  {
+   "test": "sha256 and size of every file of every step equal the record",
+   "value": "25 files",
+   "passed": true
+  },
+  {
+   "test": "each step started from the recorded state of the step before",
+   "value": "6 links",
+   "passed": true
+  },
+  {
+   "test": "last solute frame of a step = its saved state (largest coordinate difference, A)",
+   "value": {
+    "eq04": 3.7e-06,
+    "eq05": 3.5e-06
+   },
+   "passed": true
+  },
+  {
+   "test": "what the kill left behind: the lock of the dead process and the files of the cut-off step, nothing else",
+   "value": "left: ['run_md.lock']; files without a record: ['full_seg0001.dcd', 'log_seg0001.csv', 'solute_seg0001.dcd']; checkpoints: none",
+   "passed": true
+  }
+ ],
+ "not_checked": [
+  "solute atoms of each full frame against the solute frame of the same time: the run holds no all-atom frame (no step reached the 100 ps interval of the all-atom file)"
+ ],
+ "software": {
+  "python": "3.12.14",
+  "numpy": "2.5.3",
+  "machine": "aarch64",
+  "host": "arya",
+  "openmm": "8.6.1",
+  "MDAnalysis": "2.10.0"
+ },
+ "script_sha256": "e0a258744a7b4edfc315d9814e06204f1457475ac258cf4ad14b5a9987335cbf",
+ "all_passed": true
+}

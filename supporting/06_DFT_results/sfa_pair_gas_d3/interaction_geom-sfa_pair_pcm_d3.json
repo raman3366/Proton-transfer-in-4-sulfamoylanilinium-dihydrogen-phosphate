@@ -1,0 +1,128 @@
+{
+  "provenance": {
+    "script": "interaction.py",
+    "argv": [
+      "sfa_pair_gas_d3",
+      "--geom-from",
+      "sfa_pair_pcm_d3",
+      "--partition",
+      "ionic"
+    ],
+    "case": "sfa_pair_gas_d3",
+    "case_file": "molecules/sfa/cases/sfa_pair_gas_d3.json",
+    "charge": 0,
+    "spin": 0,
+    "basis": "6-311++G(d,p)",
+    "grid_level": 4,
+    "environment": "gas phase",
+    "case_xc": "b3lyp",
+    "case_disp": "d3bj",
+    "density_fitting": true,
+    "pyscf_version": "2.14.0",
+    "threads": 8,
+    "host": "cqc-dft-01",
+    "finished": "2026-09-28T12:33:34",
+    "geometry": "molecules/sfa/results/sfa_pair_pcm_d3/opt.xyz",
+    "geometry_sha256": "a21dd40f42c1ec9fc8ddab752a9067f7c6c816d8d881afab0c3d53a8cbb6e870",
+    "proton": {
+      "d_H_N_A": 1.0974250194056019,
+      "d_H_O_A": 1.4840939777321678,
+      "on": "N (ionic pair)"
+    },
+    "wall_min": 6.15
+  },
+  "partition": "ionic",
+  "proton_transferred_in_geometry": false,
+  "fragments": {
+    "4-sulfamoylanilinium cation": {
+      "atoms": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ],
+      "charge": 1,
+      "relaxed_case": "cation_gas_d3",
+      "chemical_name": "4-sulfamoylanilinium cation",
+      "relaxed_geometry": "molecules/sfa/results/cation_gas_d3/opt.xyz",
+      "relaxed_sha256": "d19662f7a2155a4a5fbf6a0ccb9851f06facdbc0e3da31c372acf9ea43c7b80e"
+    },
+    "dihydrogen phosphate anion": {
+      "atoms": [
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26
+      ],
+      "charge": -1,
+      "relaxed_case": "h2po4_gas_d3",
+      "chemical_name": "dihydrogen phosphate anion",
+      "relaxed_geometry": "molecules/sfa/results/h2po4_gas_d3/opt.xyz",
+      "relaxed_sha256": "8ee2e946117913e900c12e4e155ad1953aad589d69f7f651ffb5c56828957da7"
+    }
+  },
+  "energies_Ha": {
+    "gas": {
+      "AB": -1535.9729685502855,
+      "4-sulfamoylanilinium cation|AB": -892.0280333442395,
+      "4-sulfamoylanilinium cation|own": -892.0276378987967,
+      "dihydrogen phosphate anion|AB": -643.7472966952752,
+      "dihydrogen phosphate anion|own": -643.744865743506,
+      "4-sulfamoylanilinium cation|relaxed": -892.0397951127544,
+      "4-sulfamoylanilinium cation|relaxed_D3": -0.04068382368681582,
+      "dihydrogen phosphate anion|relaxed": -643.7520258661145,
+      "dihydrogen phosphate anion|relaxed_D3": -0.008894388853811287
+    }
+  },
+  "D3_Ha": {
+    "AB": -0.05712564096512803,
+    "4-sulfamoylanilinium cation": -0.040954630703543805,
+    "dihydrogen phosphate anion": -0.00886614222628229
+  },
+  "results": {
+    "E_int_raw_kcal": -130.37750286221154,
+    "E_int_CP_kcal": -128.60391183442727,
+    "BSSE_kcal": 1.7735910277842741,
+    "E_int_CP_electronic_kcal": -124.02003793595553,
+    "E_int_D3_kcal": -4.58387389847173,
+    "E_def_kcal": {
+      "4-sulfamoylanilinium cation": 7.458832967235875,
+      "dihydrogen phosphate anion": 4.510769798211966
+    },
+    "E_bind_kcal": -116.63430906897942
+  },
+  "results_kJ": {
+    "E_int_raw_kJ": -545.4994719306148,
+    "E_int_CP_kJ": -538.0787670709759,
+    "BSSE_kJ": 7.420704859638902,
+    "E_int_CP_electronic_kJ": -518.8998386813481,
+    "E_int_D3_kJ": -19.17892838962787,
+    "E_def_kJ": {
+      "4-sulfamoylanilinium cation": 31.207757132347435,
+      "dihydrogen phosphate anion": 18.87306083416618
+    },
+    "E_bind_kJ": -487.9979491044623
+  },
+  "gas_crosscheck_for_pcm": null,
+  "definitions": "E_int(CP)=E_AB-E_A(AB basis)-E_B(AB basis); BSSE=E_int(CP)-E_int(raw); E_def(X)=E_X(cplx)-E_X(relaxed); E_bind=E_int(CP)+sum E_def; D3 added on real atoms (no BSSE)",
+  "pcm_note": null
+}

@@ -1,0 +1,6397 @@
+{
+ "what": "Blind third reading of the MD campaign (hCA II with the sulfanilamide anion, 6RL9): eleven runs of 100 ns",
+ "written": "8 Oct 2026, 4:52 AM IST",
+ "by": "third reader (own code; scripts in this folder)",
+ "runs": {
+  "bonded_2e/X1": {
+   "set": "bonded_2e",
+   "run": "X1",
+   "start": "X",
+   "role": "production",
+   "folder": "/root/cqc-sfa-md/runs/bonded_2e/X1",
+   "state_of_start": "C",
+   "opposite_state": "R",
+   "frames": {
+    "n_production_frames": 10000,
+    "n_segment_files": 20,
+    "frames_per_file": [
+     500
+    ],
+    "manifest_frames_solute": 10000,
+    "manifest_completed_ns": 100.0,
+    "manifest_n_segments_complete": 20,
+    "manifest_status": "complete",
+    "dcd_headers_consistent_with_10ps_and_contiguous_time": true,
+    "time_of_frame_n_ns": "(n + 1) * 0.01, n from 0"
+   },
+   "imaging_and_fit": {
+    "frames_zinc_moved_by_a_lattice_vector": 0,
+    "frames_ligand_moved_by_a_lattice_vector": 0,
+    "max_abs_d1_minus_minimum_image_d1_A": 0.0,
+    "max_abs_d2_minus_minimum_image_d2_A": 0.0,
+    "ca_rmsd_to_reference_A": {
+     "mean": 0.8771,
+     "sd": 0.0755,
+     "min": 0.5852,
+     "max": 1.1787
+    }
+   },
+   "d1_A": {
+    "whole": {
+     "mean": 4.606,
+     "sd": 0.6886,
+     "min": 3.0657,
+     "max": 7.7087
+    },
+    "last_half": {
+     "mean": 4.617,
+     "sd": 0.6907,
+     "min": 3.0911,
+     "max": 7.1645
+    },
+    "last_20ns": {
+     "mean": 4.5516,
+     "sd": 0.6774,
+     "min": 3.0911,
+     "max": 7.094
+    }
+   },
+   "d2_A": {
+    "whole": {
+     "mean": 7.9561,
+     "sd": 0.6803,
+     "min": 4.39,
+     "max": 10.6199
+    },
+    "last_half": {
+     "mean": 8.0786,
+     "sd": 0.5991,
+     "min": 5.4063,
+     "max": 10.3738
+    },
+    "last_20ns": {
+     "mean": 8.0835,
+     "sd": 0.6073,
+     "min": 5.5391,
+     "max": 10.3738
+    }
+   },
+   "frames_exactly_on_a_midpoint": 0,
+   "states": {
+    "whole": {
+     "C": 9953,
+     "R": 0,
+     "I": 47,
+     "n": 10000,
+     "fraction": {
+      "C": 0.9953,
+      "R": 0.0,
+      "I": 0.0047
+     }
+    },
+    "last_half": {
+     "C": 4984,
+     "R": 0,
+     "I": 16,
+     "n": 5000,
+     "fraction": {
+      "C": 0.9968,
+      "R": 0.0,
+      "I": 0.0032
+     }
+    },
+    "last_20ns": {
+     "C": 1995,
+     "R": 0,
+     "I": 5,
+     "n": 2000,
+     "fraction": {
+      "C": 0.9975,
+      "R": 0.0,
+      "I": 0.0025
+     }
+    }
+   },
+   "verdict": {
+    "verdict": "STAYED",
+    "W": 2000,
+    "c_start": 1995,
+    "c_opposite": 0,
+    "c_intermediate": 5,
+    "test_converted": "10*0 >= 9*2000 : False",
+    "test_stayed": "10*1995 >= 9*2000 : True",
+    "window_complete": true
+   },
+   "visits": {
+    "assigned": {
+     "C": 10000,
+     "R": 0
+    },
+    "n_visits": 1,
+    "n_visits_by_state": {
+     "C": 1,
+     "R": 0
+    },
+    "n_long_visits": 1,
+    "long_visits": [
+     {
+      "state": "C",
+      "first_frame": 0,
+      "n_frames": 10000,
+      "t_first": 0.01,
+      "fraction_strict": 0.9953
+     }
+    ],
+    "longest_visit_in_opposite_state_frames": 0,
+    "longest_visit_in_start_state_frames": 10000,
+    "first_passage_ns": null,
+    "first_passage_frame": null,
+    "n_transitions": 0,
+    "first_frame_state": "C",
+    "first_frame_not_in_start_state": {
+     "frame": 74,
+     "t_ns": 0.75,
+     "state": "I"
+    },
+    "first_frame_in_opposite_state": null
+   },
+   "equilibration_steps": [
+    {
+     "tag": "eq01",
+     "frames": 10,
+     "time_start_ps": 0.0,
+     "time_end_ps": 100.0,
+     "header_step_fs": 2.0,
+     "header_first_frame_ps": 10.0,
+     "header_agrees_with_S_plus_10ps": true,
+     "restraint_atoms": "solute_heavy",
+     "states": {
+      "C": 10,
+      "R": 0,
+      "I": 0
+     },
+     "n2_sign": {
+      "plus": 10,
+      "minus": 0
+     },
+     "last_frame": {
+      "state": "C",
+      "d1": 4.156,
+      "d2": 7.359,
+      "lig_rmsd": 0.249,
+      "n2_vol": 0.732
+     }
+    },
+    {
+     "tag": "eq02",
+     "frames": 30,
+     "time_start_ps": 100.0,
+     "time_end_ps": 400.0,
+     "header_step_fs": 2.0,
+     "header_first_frame_ps": 110.0,
+     "header_agrees_with_S_plus_10ps": true,
+     "restraint_atoms": "solute_heavy",
+     "states": {
+      "C": 30,
+      "R": 0,
+      "I": 0
+     },
+     "n2_sign": {
+      "plus": 30,
+      "minus": 0
+     },
+     "last_frame": {
+      "state": "C",
+      "d1": 3.43,
+      "d2": 8.023,
+      "lig_rmsd": 0.368,
+      "n2_vol": 0.792
+     }
+    },
+    {
+     "tag": "eq03",
+     "frames": 30,
+     "time_start_ps": 400.0,
+     "time_end_ps": 700.0,
+     "header_step_fs": 2.0,
+     "header_first_frame_ps": 410.0,
+     "header_agrees_with_S_plus_10ps": true,
+     "restraint_atoms": "solute_heavy",
+     "states": {
+      "C": 30,
+      "R": 0,
+      "I": 0
+     },
+     "n2_sign": {
+      "plus": 30,
+      "minus": 0
+     },
+     "last_frame": {
+      "state": "C",
+      "d1": 3.677,
+      "d2": 6.918,
+      "lig_rmsd": 0.25,
+      "n2_vol": 0.699
+     }
+    },
+    {
+     "tag": "eq04",
+     "frames": 40,
+     "time_start_ps": 700.0,
+     "time_end_ps": 1100.0,
+     "header_step_fs": 4.0,
+     "header_first_frame_ps": 710.0,
+     "header_agrees_with_S_plus_10ps": true,
+     "restraint_atoms": "protein_backbone",
+     "states": {
+      "C": 40,
+      "R": 0,
+      "I": 0
+     },
+     "n2_sign": {
+      "plus": 40,
+      "minus": 0
+     },
+     "last_frame": {
+      "state": "C",
+      "d1": 3.856,
+      "d2": 7.075,
+      "lig_rmsd": 0.316,
+      "n2_vol": 0.722
+     }
+    },
+    {
+     "tag": "eq05",
+     "frames": 40,
+     "time_start_ps": 1100.0,
+     "time_end_ps": 1500.0,
+     "header_step_fs": 4.0,
+     "header_first_frame_ps": 1110.0,
+     "header_agrees_with_S_plus_10ps": true,
+     "restraint_atoms": "protein_backbone",
+     "states": {
+      "C": 38,
+      "R": 0,
+      "I": 2
+     },
+     "n2_sign": {
+      "plus": 40,
+      "minus": 0
+     },
+     "last_frame": {
+      "state": "C",
+      "d1": 3.675,
+      "d2": 8.094,
+      "lig_rmsd": 0.435,
+      "n2_vol": 0.759
+     }
+    },
+    {
+     "tag": "eq06",
+     "frames": 50,
+     "time_start_ps": 1500.0,
+     "time_end_ps": 2000.0,
+     "header_step_fs": 4.0,
+     "header_first_frame_ps": 1510.0,
+     "header_agrees_with_S_plus_10ps": true,
+     "restraint_atoms": "none",
+     "states": {
+      "C": 49,
+      "R": 0,
+      "I": 1
+     },
+     "n2_sign": {
+      "plus": 50,
+      "minus": 0
+     },
+     "last_frame": {
+      "state": "C",
+      "d1": 3.491,
+      "d2": 8.484,
+      "lig_rmsd": 0.46,
+      "n2_vol": 0.714
+     }
+    }
+   ],
+   "conversion": {
+    "n_frames_stage4_5_6": [
+     40,
+     40,
+     50
+    ],
+    "n_equilibration_frames_joined": 130,
+    "expected_130_frames_1300_ps": true,
+    "time_of_joined_frame_k_from_release_ps": "(k + 1) * 10, k from 0",
+    "states_in_stage4_5_6": {
+     "C": 127,
+     "R": 0,
+     "I": 3
+    },
+    "first_frame_in_opposite_state_joined": null,
+    "last_frame_in_start_state_joined": {
+     "joined_frame": 10129,
+     "t_from_release_ps": 101300.0
+    },
+    "n_long_visits_joined": 1,
+    "long_visits_joined": [
+     {
+      "state": "C",
+      "first_joined_frame": 0,
+      "n_frames": 10130,
+      "t_first_from_release_ps": 10.0
+     }
+    ],
+    "n_transitions_joined": 0,
+    "production_frames_in_start_state": 9953,
+    "has_conversion_time": false,
+    "where": null,
+    "t_from_release_ps": null,
+    "t_from_release_ns": null,
+    "t_in_production_ns": null,
+    "report": "no long visit in the opposite state: no time"
+   },
+   "lig_rmsd_A": {
+    "mean_whole": 0.5564,
+    "mean_last_half": 0.5752,
+    "mean_first_half": 0.5375,
+    "mean_last_20ns": 0.6027,
+    "sd_whole": 0.2309,
+    "min": 0.1144,
+    "max": 1.7955,
+    "n_frames_last_half": 5000,
+    "identity_labelling_mean_whole": 0.5564,
+    "identity_labelling_mean_last_half": 0.5752,
+    "frames_by_best_labelling": {
+     "identity": 10000,
+     "ring_flip": 0,
+     "oxygen_swap": 0,
+     "ring_flip+oxygen_swap": 0
+    },
+    "frames_above_2A_whole": 0,
+    "frames_above_2A_last_half": 0,
+    "rule1_mean_last_half_above_2A": false
+   },
+   "hbond_N2H_T199OG1": {
+    "count": 9986,
+    "n": 10000,
+    "fraction": 0.9986,
+    "fraction_last_half": 0.9984,
+    "mean_N2_OG1_A": 2.959,
+    "mean_angle_deg": 166.16,
+    "fraction_distance_ok": 0.9992,
+    "fraction_angle_ok": 0.9993,
+    "by_state": {
+     "C": {
+      "n": 9953,
+      "fraction": 0.9986
+     },
+     "R": null,
+     "I": {
+      "n": 47,
+      "fraction": 1.0
+     }
+    }
+   },
+   "zinc": {
+    "mean_Zn_N2_A": 1.9261,
+    "mean_Zn_H94NE2_A": 2.019,
+    "mean_Zn_H96NE2_A": 2.0398,
+    "mean_Zn_H119ND1_A": 2.0366,
+    "sd_Zn_N2_A": 0.0481,
+    "sd_Zn_H94NE2_A": 0.0586,
+    "sd_Zn_H96NE2_A": 0.0617,
+    "sd_Zn_H119ND1_A": 0.06,
+    "max_of_the_four_A": 2.2768,
+    "sulfonyl_O_within_2.6A": {
+     "count": 11,
+     "n": 10000,
+     "fraction": 0.0011,
+     "at_most_5_percent_integers": true
+    },
+    "mean_Zn_Osulfonyl_min_A": 2.9692,
+    "min_Zn_Osulfonyl_min_A": 2.4642,
+    "mean_Zn_O1_A": 4.0024,
+    "mean_Zn_O2_A": 2.9692
+   },
+   "n2_configuration": {
+    "sign_of_start": 1,
+    "frames_plus": 10000,
+    "frames_minus": 0,
+    "frames_zero": 0,
+    "fraction_plus": 1.0,
+    "fraction_minus": 0.0,
+    "mean_volume": 0.6975,
+    "mean_volume_last_half": 0.6999,
+    "min_volume": 0.1586,
+    "max_volume": 0.9044,
+    "frames_abs_volume_below_0.1": 0,
+    "n_sign_visits": 1,
+    "n_long_sign_visits": 1,
+    "long_sign_visits": [
+     {
+      "sign": 1,
+      "first_frame": 0,
+      "n_frames": 10000,
+      "t_first_ns": 0.01
+     }
+    ],
+    "n_lasting_sign_changes": 0,
+    "first_frame_with_other_sign_production": null,
+    "first_lasting_change_production_ns": null,
+    "sign_by_state": {
+     "C": {
+      "plus": 9953,
+      "minus": 0
+     },
+     "R": {
+      "plus": 0,
+      "minus": 0
+     },
+     "I": {
+      "plus": 47,
+      "minus": 0
+     }
+    },
+    "joined_release_series": {
+     "sign_in_stage4_5_6": {
+      "plus": 130,
+      "minus": 0
+     },
+     "first_frame_with_other_sign": null,
+     "first_lasting_change": null,
+     "n_lasting_sign_changes": 0
+    },
+    "sign_in_held_steps_before_release": {
+     "eq01": {
+      "plus": 10,
+      "minus": 0
+     },
+     "eq02": {
+      "plus": 30,
+      "minus": 0
+     },
+     "eq03": {
+      "plus": 30,
+      "minus": 0
+     }
+    }
+   },
+   "wall_s": 5.7,
+   "extras": {
+    "states_frame_by_frame_stage4_5_6": {
+     "eq04": "CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC",
+     "eq05": "CCCCCCCCCCCCCCCCCCCCCIICCCCCCCCCCCCCCCCC",
+     "eq06": "CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCICCCCCCCCCCCC"
+    },
+    "hbond_in_stage4_5_6": {
+     "count": 130,
+     "n": 130
+    },
+    "visits_in_start_state_production": {
+     "n": 1,
+     "longest_frames": 10000,
+     "total_assigned_frames": 10000
+    },
+    "visits_in_last_20ns_by_assigned_state": {
+     "C": 1,
+     "R": 0
+    },
+    "frames_within_0.0001A_of_a_midpoint": 0,
+    "hydration_check_of_the_driver_from_manifest": {
+     "applies": false,
+     "counts": [
+      {
+       "step": "eq03",
+       "time_end_ps": 700.0,
+       "n_water_O": 0,
+       "nearest_water_O_A": 3.263,
+       "ligand_mean_distance_from_site_A": 0.259,
+       "applies": false,
+       "decision": "go on"
+      }
+     ],
+     "n_extensions": 0,
+     "final_decision": "go on: check skipped: the ligand itself is at the site",
+     "site_without_water_when_the_solute_was_released": false
+    }
+   },
+   "key_numbers_one_line": "bonded_2e/X1 start X (production): N=10000; d1 mean 4.606, d2 mean 7.956 A; states C/R/I whole 9953/0/47, last 20 ns 1995/0/5; verdict STAYED; visits 1 (long 1), transitions 0, first passage in production none; conversion time: no long visit in the opposite state: no time; lig RMSD mean 0.556, last half 0.575 A; H-bond 0.9986; Zn-N2 1.926, Zn-N(His94/96/119) 2.019/2.040/2.037 A; sulfonyl O within 2.6 A of Zn 0.0011 (11 frames); N2 sign +/- 1.0000/0.0000, first lasting change none"
+  },
+  "bonded_2e/X2": {
+   "set": "bonded_2e",
+   "run": "X2",
+   "start": "X",
+   "role": "production",
+   "folder": "/root/cqc-sfa-md/runs/bonded_2e/X2",
+   "state_of_start": "C",
+   "opposite_state": "R",
+   "frames": {
+    "n_production_frames": 10000,
+    "n_segment_files": 20,
+    "frames_per_file": [
+     500
+    ],
+    "manifest_frames_solute": 10000,
+    "manifest_completed_ns": 100.0,
+    "manifest_n_segments_complete": 20,
+    "manifest_status": "complete",
+    "dcd_headers_consistent_with_10ps_and_contiguous_time": true,
+    "time_of_frame_n_ns": "(n + 1) * 0.01, n from 0"
+   },
+   "imaging_and_fit": {
+    "frames_zinc_moved_by_a_lattice_vector": 0,
+    "frames_ligand_moved_by_a_lattice_vector": 0,
+    "max_abs_d1_minus_minimum_image_d1_A": 0.0,
+    "max_abs_d2_minus_minimum_image_d2_A": 0.0,
+    "ca_rmsd_to_reference_A": {
+     "mean": 0.9098,
+     "sd": 0.0706,
+     "min": 0.6085,
+     "max": 1.225
+    }
+   },
+   "d1_A": {
+    "whole": {
+     "mean": 4.7421,
+     "sd": 0.7919,
+     "min": 2.9135,
+     "max": 9.2138
+    },
+    "last_half": {
+     "mean": 4.5484,
+     "sd": 0.6963,
+     "min": 2.9135,
+     "max": 7.5714
+    },
+    "last_20ns": {
+     "mean": 4.5241,
+     "sd": 0.6888,
+     "min": 3.0756,
+     "max": 7.0858
+    }
+   },
+   "d2_A": {
+    "whole": {
+     "mean": 7.6738,
+     "sd": 0.697,
+     "min": 4.4645,
+     "max": 10.8543
+    },
+    "last_half": {
+     "mean": 7.7735,
+     "sd": 0.7566,
+     "min": 4.6073,
+     "max": 10.8543
+    },
+    "last_20ns": {
+     "mean": 7.9776,
+     "sd": 0.9016,
+     "min": 4.6073,
+     "max": 10.8543
+    }
+   },
+   "frames_exactly_on_a_midpoint": 0,
+   "states": {
+    "whole": {
+     "C": 9864,
+     "R": 0,
+     "I": 136,
+     "n": 10000,
+     "fraction": {
+      "C": 0.9864,
+      "R": 0.0,
+      "I": 0.0136
+     }
+    },
+    "last_half": {
+     "C": 4980,
+     "R": 0,
+     "I": 20,
+     "n": 5000,
+     "fraction": {
+      "C": 0.996,
+      "R": 0.0,
+      "I": 0.004
+     }
+    },
+    "last_20ns": {
+     "C": 1993,
+     "R": 0,
+     "I": 7,
+     "n": 2000,
+     "fraction": {
+      "C": 0.9965,
+      "R": 0.0,
+      "I": 0.0035
+     }
+    }
+   },
+   "verdict": {
+    "verdict": "STAYED",
+    "W": 2000,
+    "c_start": 1993,
+    "c_opposite": 0,
+    "c_intermediate": 7,
+    "test_converted": "10*0 >= 9*2000 : False",
+    "test_stayed": "10*1993 >= 9*2000 : True",
+    "window_complete": true
+   },
+   "visits": {
+    "assigned": {
+     "C": 10000,
+     "R": 0
+    },
+    "n_visits": 1,
+    "n_visits_by_state": {
+     "C": 1,
+     "R": 0
+    },
+    "n_long_visits": 1,
+    "long_visits": [
+     {
+      "state": "C",
+      "first_frame": 0,
+      "n_frames": 10000,
+      "t_first": 0.01,
+      "fraction_strict": 0.9864
+     }
+    ],
+    "longest_visit_in_opposite_state_frames": 0,
+    "longest_visit_in_start_state_frames": 10000,
+    "first_passage_ns": null,
+    "first_passage_frame": null,
+    "n_transitions": 0,
+    "first_frame_state": "C",
+    "first_frame_not_in_start_state": {
+     "frame": 89,
+     "t_ns": 0.9,
+     "state": "I"
+    },
+    "first_frame_in_opposite_state": null
+   },
+   "equilibration_steps": [
+    {
+     "tag": "eq01",
+     "frames": 10,
+     "time_start_ps": 0.0,
+     "time_end_ps": 100.0,
+     "header_step_fs": 2.0,
+     "header_first_frame_ps": 10.0,
+     "header_agrees_with_S_plus_10ps": true,
+     "restraint_atoms": "solute_heavy",
+     "states": {
+      "C": 10,
+      "R": 0,
+      "I": 0
+     },
+     "n2_sign": {
+      "plus": 10,
+      "minus": 0
+     },
+     "last_frame": {
+      "state": "C",
+      "d1": 3.938,
+      "d2": 7.407,
+      "lig_rmsd": 0.314,
+      "n2_vol": 0.784
+     }
+    },
+    {
+     "tag": "eq02",
+     "frames": 30,
+     "time_start_ps": 100.0,
+     "time_end_ps": 400.0,
+     "header_step_fs": 2.0,
+     "header_first_frame_ps": 110.0,
+     "header_agrees_with_S_plus_10ps": true,
+     "restraint_atoms": "solute_heavy",
+     "states": {
+      "C": 30,
+      "R": 0,
+      "I": 0
+     },
+     "n2_sign": {
+      "plus": 30,
+      "minus": 0
+     },
+     "last_frame": {
+      "state": "C",
+      "d1": 3.591,
+      "d2": 7.802,
+      "lig_rmsd": 0.226,
+      "n2_vol": 0.815
+     }
+    },
+    {
+     "tag": "eq03",
+     "frames": 30,
+     "time_start_ps": 400.0,
+     "time_end_ps": 700.0,
+     "header_step_fs": 2.0,
+     "header_first_frame_ps": 410.0,
+     "header_agrees_with_S_plus_10ps": true,
+     "restraint_atoms": "solute_heavy",
+     "states": {
+      "C": 30,
+      "R": 0,
+      "I": 0
+     },
+     "n2_sign": {
+      "plus": 30,
+      "minus": 0
+     },
+     "last_frame": {
+      "state": "C",
+      "d1": 3.558,
+      "d2": 7.249,
+      "lig_rmsd": 0.293,
+      "n2_vol": 0.615
+     }
+    },
+    {
+     "tag": "eq04",
+     "frames": 40,
+     "time_start_ps": 700.0,
+     "time_end_ps": 1100.0,
+     "header_step_fs": 4.0,
+     "header_first_frame_ps": 710.0,
+     "header_agrees_with_S_plus_10ps": true,
+     "restraint_atoms": "protein_backbone",
+     "states": {
+      "C": 40,
+      "R": 0,
+      "I": 0
+     },
+     "n2_sign": {
+      "plus": 40,
+      "minus": 0
+     },
+     "last_frame": {
+      "state": "C",
+      "d1": 4.812,
+      "d2": 8.23,
+      "lig_rmsd": 0.587,
+      "n2_vol": 0.664
+     }
+    },
+    {
+     "tag": "eq05",
+     "frames": 40,
+     "time_start_ps": 1100.0,
+     "time_end_ps": 1500.0,
+     "header_step_fs": 4.0,
+     "header_first_frame_ps": 1110.0,
+     "header_agrees_with_S_plus_10ps": true,
+     "restraint_atoms": "protein_backbone",
+     "states": {
+      "C": 40,
+      "R": 0,
+      "I": 0
+     },
+     "n2_sign": {
+      "plus": 40,
+      "minus": 0
+     },
+     "last_frame": {
+      "state": "C",
+      "d1": 3.788,
+      "d2": 7.758,
+      "lig_rmsd": 0.245,
+      "n2_vol": 0.726
+     }
+    },
+    {
+     "tag": "eq06",
+     "frames": 50,
+     "time_start_ps": 1500.0,
+     "time_end_ps": 2000.0,
+     "header_step_fs": 4.0,
+     "header_first_frame_ps": 1510.0,
+     "header_agrees_with_S_plus_10ps": true,
+     "restraint_atoms": "none",
+     "states": {
+      "C": 50,
+      "R": 0,
+      "I": 0
+     },
+     "n2_sign": {
+      "plus": 50,
+      "minus": 0
+     },
+     "last_frame": {
+      "state": "C",
+      "d1": 4.455,
+      "d2": 7.441,
+      "lig_rmsd": 0.404,
+      "n2_vol": 0.718
+     }
+    }
+   ],
+   "conversion": {
+    "n_frames_stage4_5_6": [
+     40,
+     40,
+     50
+    ],
+    "n_equilibration_frames_joined": 130,
+    "expected_130_frames_1300_ps": true,
+    "time_of_joined_frame_k_from_release_ps": "(k + 1) * 10, k from 0",
+    "states_in_stage4_5_6": {
+     "C": 130,
+     "R": 0,
+     "I": 0
+    },
+    "first_frame_in_opposite_state_joined": null,
+    "last_frame_in_start_state_joined": {
+     "joined_frame": 10129,
+     "t_from_release_ps": 101300.0
+    },
+    "n_long_visits_joined": 1,
+    "long_visits_joined": [
+     {
+      "state": "C",
+      "first_joined_frame": 0,
+      "n_frames": 10130,
+      "t_first_from_release_ps": 10.0
+     }
+    ],
+    "n_transitions_joined": 0,
+    "production_frames_in_start_state": 9864,
+    "has_conversion_time": false,
+    "where": null,
+    "t_from_release_ps": null,
+    "t_from_release_ns": null,
+    "t_in_production_ns": null,
+    "report": "no long visit in the opposite state: no time"
+   },
+   "lig_rmsd_A": {
+    "mean_whole": 0.5413,
+    "mean_last_half": 0.534,
+    "mean_first_half": 0.5486,
+    "mean_last_20ns": 0.5519,
+    "sd_whole": 0.2224,
+    "min": 0.1184,
+    "max": 2.2809,
+    "n_frames_last_half": 5000,
+    "identity_labelling_mean_whole": 0.5413,
+    "identity_labelling_mean_last_half": 0.534,
+    "frames_by_best_labelling": {
+     "identity": 10000,
+     "ring_flip": 0,
+     "oxygen_swap": 0,
+     "ring_flip+oxygen_swap": 0
+    },
+    "frames_above_2A_whole": 3,
+    "frames_above_2A_last_half": 2,
+    "rule1_mean_last_half_above_2A": false
+   },
+   "hbond_N2H_T199OG1": {
+    "count": 9986,
+    "n": 10000,
+    "fraction": 0.9986,
+    "fraction_last_half": 0.9984,
+    "mean_N2_OG1_A": 2.9471,
+    "mean_angle_deg": 166.07,
+    "fraction_distance_ok": 0.9998,
+    "fraction_angle_ok": 0.9988,
+    "by_state": {
+     "C": {
+      "n": 9864,
+      "fraction": 0.9986
+     },
+     "R": null,
+     "I": {
+      "n": 136,
+      "fraction": 1.0
+     }
+    }
+   },
+   "zinc": {
+    "mean_Zn_N2_A": 1.9275,
+    "mean_Zn_H94NE2_A": 2.0175,
+    "mean_Zn_H96NE2_A": 2.0428,
+    "mean_Zn_H119ND1_A": 2.0389,
+    "sd_Zn_N2_A": 0.0485,
+    "sd_Zn_H94NE2_A": 0.058,
+    "sd_Zn_H96NE2_A": 0.0615,
+    "sd_Zn_H119ND1_A": 0.0598,
+    "max_of_the_four_A": 2.2654,
+    "sulfonyl_O_within_2.6A": {
+     "count": 11,
+     "n": 10000,
+     "fraction": 0.0011,
+     "at_most_5_percent_integers": true
+    },
+    "mean_Zn_Osulfonyl_min_A": 2.9796,
+    "min_Zn_Osulfonyl_min_A": 2.541,
+    "mean_Zn_O1_A": 4.0121,
+    "mean_Zn_O2_A": 2.9796
+   },
+   "n2_configuration": {
+    "sign_of_start": 1,
+    "frames_plus": 10000,
+    "frames_minus": 0,
+    "frames_zero": 0,
+    "fraction_plus": 1.0,
+    "fraction_minus": 0.0,
+    "mean_volume": 0.6984,
+    "mean_volume_last_half": 0.6995,
+    "min_volume": 0.3131,
+    "max_volume": 0.9186,
+    "frames_abs_volume_below_0.1": 0,
+    "n_sign_visits": 1,
+    "n_long_sign_visits": 1,
+    "long_sign_visits": [
+     {
+      "sign": 1,
+      "first_frame": 0,
+      "n_frames": 10000,
+      "t_first_ns": 0.01
+     }
+    ],
+    "n_lasting_sign_changes": 0,
+    "first_frame_with_other_sign_production": null,
+    "first_lasting_change_production_ns": null,
+    "sign_by_state": {
+     "C": {
+      "plus": 9864,
+      "minus": 0
+     },
+     "R": {
+      "plus": 0,
+      "minus": 0
+     },
+     "I": {
+      "plus": 136,
+      "minus": 0
+     }
+    },
+    "joined_release_series": {
+     "sign_in_stage4_5_6": {
+      "plus": 130,
+      "minus": 0
+     },
+     "first_frame_with_other_sign": null,
+     "first_lasting_change": null,
+     "n_lasting_sign_changes": 0
+    },
+    "sign_in_held_steps_before_release": {
+     "eq01": {
+      "plus": 10,
+      "minus": 0
+     },
+     "eq02": {
+      "plus": 30,
+      "minus": 0
+     },
+     "eq03": {
+      "plus": 30,
+      "minus": 0
+     }
+    }
+   },
+   "wall_s": 6.3,
+   "extras": {
+    "states_frame_by_frame_stage4_5_6": {
+     "eq04": "CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC",
+     "eq05": "CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC",
+     "eq06": "CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC"
+    },
+    "hbond_in_stage4_5_6": {
+     "count": 129,
+     "n": 130
+    },
+    "visits_in_start_state_production": {
+     "n": 1,
+     "longest_frames": 10000,
+     "total_assigned_frames": 10000
+    },
+    "visits_in_last_20ns_by_assigned_state": {
+     "C": 1,
+     "R": 0
+    },
+    "frames_within_0.0001A_of_a_midpoint": 0,
+    "hydration_check_of_the_driver_from_manifest": {
+     "applies": false,
+     "counts": [
+      {
+       "step": "eq03",
+       "time_end_ps": 700.0,
+       "n_water_O": 0,
+       "nearest_water_O_A": 3.203,
+       "ligand_mean_distance_from_site_A": 0.29,
+       "applies": false,
+       "decision": "go on"
+      }
+     ],
+     "n_extensions": 0,
+     "final_decision": "go on: check skipped: the ligand itself is at the site",
+     "site_without_water_when_the_solute_was_released": false
+    }
+   },
+   "key_numbers_one_line": "bonded_2e/X2 start X (production): N=10000; d1 mean 4.742, d2 mean 7.674 A; states C/R/I whole 9864/0/136, last 20 ns 1993/0/7; verdict STAYED; visits 1 (long 1), transitions 0, first passage in production none; conversion time: no long visit in the opposite state: no time; lig RMSD mean 0.541, last half 0.534 A; H-bond 0.9986; Zn-N2 1.927, Zn-N(His94/96/119) 2.018/2.043/2.039 A; sulfonyl O within 2.6 A of Zn 0.0011 (11 frames); N2 sign +/- 1.0000/0.0000, first lasting change none"
+  },
+  "bonded_2e/X3": {
+   "set": "bonded_2e",
+   "run": "X3",
+   "start": "X",
+   "role": "production",
+   "folder": "/root/cqc-sfa-md/runs/bonded_2e/X3",
+   "state_of_start": "C",
+   "opposite_state": "R",
+   "frames": {
+    "n_production_frames": 10000,
+    "n_segment_files": 20,
+    "frames_per_file": [
+     500
+    ],
+    "manifest_frames_solute": 10000,
+    "manifest_completed_ns": 100.0,
+    "manifest_n_segments_complete": 20,
+    "manifest_status": "complete",
+    "dcd_headers_consistent_with_10ps_and_contiguous_time": true,
+    "time_of_frame_n_ns": "(n + 1) * 0.01, n from 0"
+   },
+   "imaging_and_fit": {
+    "frames_zinc_moved_by_a_lattice_vector": 0,
+    "frames_ligand_moved_by_a_lattice_vector": 0,
+    "max_abs_d1_minus_minimum_image_d1_A": 0.0,
+    "max_abs_d2_minus_minimum_image_d2_A": 0.0,
+    "ca_rmsd_to_reference_A": {
+     "mean": 0.9582,
+     "sd": 0.1052,
+     "min": 0.6434,
+     "max": 1.4406
+    }
+   },
+   "d1_A": {
+    "whole": {
+     "mean": 4.7162,
+     "sd": 0.7006,
+     "min": 3.1121,
+     "max": 9.2877
+    },
+    "last_half": {
+     "mean": 4.6893,
+     "sd": 0.7129,
+     "min": 3.1121,
+     "max": 7.3042
+    },
+    "last_20ns": {
+     "mean": 4.9,
+     "sd": 0.7252,
+     "min": 3.1155,
+     "max": 7.3042
+    }
+   },
+   "d2_A": {
+    "whole": {
+     "mean": 7.5116,
+     "sd": 0.7236,
+     "min": 4.3357,
+     "max": 10.8403
+    },
+    "last_half": {
+     "mean": 7.6282,
+     "sd": 0.7572,
+     "min": 4.3357,
+     "max": 10.8403
+    },
+    "last_20ns": {
+     "mean": 7.5915,
+     "sd": 0.7747,
+     "min": 4.3357,
+     "max": 10.0402
+    }
+   },
+   "frames_exactly_on_a_midpoint": 0,
+   "states": {
+    "whole": {
+     "C": 9950,
+     "R": 0,
+     "I": 50,
+     "n": 10000,
+     "fraction": {
+      "C": 0.995,
+      "R": 0.0,
+      "I": 0.005
+     }
+    },
+    "last_half": {
+     "C": 4971,
+     "R": 0,
+     "I": 29,
+     "n": 5000,
+     "fraction": {
+      "C": 0.9942,
+      "R": 0.0,
+      "I": 0.0058
+     }
+    },
+    "last_20ns": {
+     "C": 1975,
+     "R": 0,
+     "I": 25,
+     "n": 2000,
+     "fraction": {
+      "C": 0.9875,
+      "R": 0.0,
+      "I": 0.0125
+     }
+    }
+   },
+   "verdict": {
+    "verdict": "STAYED",
+    "W": 2000,
+    "c_start": 1975,
+    "c_opposite": 0,
+    "c_intermediate": 25,
+    "test_converted": "10*0 >= 9*2000 : False",
+    "test_stayed": "10*1975 >= 9*2000 : True",
+    "window_complete": true
+   },
+   "visits": {
+    "assigned": {
+     "C": 10000,
+     "R": 0
+    },
+    "n_visits": 1,
+    "n_visits_by_state": {
+     "C": 1,
+     "R": 0
+    },
+    "n_long_visits": 1,
+    "long_visits": [
+     {
+      "state": "C",
+      "first_frame": 0,
+      "n_frames": 10000,
+      "t_first": 0.01,
+      "fraction_strict": 0.995
+     }
+    ],
+    "longest_visit_in_opposite_state_frames": 0,
+    "longest_visit_in_start_state_frames": 10000,
+    "first_passage_ns": null,
+    "first_passage_frame": null,
+    "n_transitions": 0,
+    "first_frame_state": "C",
+    "first_frame_not_in_start_state": {
+     "frame": 748,
+     "t_ns": 7.49,
+     "state": "I"
+    },
+    "first_frame_in_opposite_state": null
+   },
+   "equilibration_steps": [
+    {
+     "tag": "eq01",
+     "frames": 10,
+     "time_start_ps": 0.0,
+     "time_end_ps": 100.0,
+     "header_step_fs": 2.0,
+     "header_first_frame_ps": 10.0,
+     "header_agrees_with_S_plus_10ps": true,
+     "restraint_atoms": "solute_heavy",
+     "states": {
+      "C": 10,
+      "R": 0,
+      "I": 0
+     },
+     "n2_sign": {
+      "plus": 10,
+      "minus": 0
+     },
+     "last_frame": {
+      "state": "C",
+      "d1": 3.439,
+      "d2": 7.795,
+      "lig_rmsd": 0.326,
+      "n2_vol": 0.71
+     }
+    },
+    {
+     "tag": "eq02",
+     "frames": 30,
+     "time_start_ps": 100.0,
+     "time_end_ps": 400.0,
+     "header_step_fs": 2.0,
+     "header_first_frame_ps": 110.0,
+     "header_agrees_with_S_plus_10ps": true,
+     "restraint_atoms": "solute_heavy",
+     "states": {
+      "C": 30,
+      "R": 0,
+      "I": 0
+     },
+     "n2_sign": {
+      "plus": 30,
+      "minus": 0
+     },
+     "last_frame": {
+      "state": "C",
+      "d1": 3.576,
+      "d2": 7.067,
+      "lig_rmsd": 0.234,
+      "n2_vol": 0.68
+     }
+    },
+    {
+     "tag": "eq03",
+     "frames": 30,
+     "time_start_ps": 400.0,
+     "time_end_ps": 700.0,
+     "header_step_fs": 2.0,
+     "header_first_frame_ps": 410.0,
+     "header_agrees_with_S_plus_10ps": true,
+     "restraint_atoms": "solute_heavy",
+     "states": {
+      "C": 30,
+      "R": 0,
+      "I": 0
+     },
+     "n2_sign": {
+      "plus": 30,
+      "minus": 0
+     },
+     "last_frame": {
+      "state": "C",
+      "d1": 3.969,
+      "d2": 7.141,
+      "lig_rmsd": 0.311,
+      "n2_vol": 0.708
+     }
+    },
+    {
+     "tag": "eq04",
+     "frames": 40,
+     "time_start_ps": 700.0,
+     "time_end_ps": 1100.0,
+     "header_step_fs": 4.0,
+     "header_first_frame_ps": 710.0,
+     "header_agrees_with_S_plus_10ps": true,
+     "restraint_atoms": "protein_backbone",
+     "states": {
+      "C": 40,
+      "R": 0,
+      "I": 0
+     },
+     "n2_sign": {
+      "plus": 40,
+      "minus": 0
+     },
+     "last_frame": {
+      "state": "C",
+      "d1": 4.429,
+      "d2": 7.45,
+      "lig_rmsd": 0.516,
+      "n2_vol": 0.687
+     }
+    },
+    {
+     "tag": "eq05",
+     "frames": 40,
+     "time_start_ps": 1100.0,
+     "time_end_ps": 1500.0,
+     "header_step_fs": 4.0,
+     "header_first_frame_ps": 1110.0,
+     "header_agrees_with_S_plus_10ps": true,
+     "restraint_atoms": "protein_backbone",
+     "states": {
+      "C": 40,
+      "R": 0,
+      "I": 0
+     },
+     "n2_sign": {
+      "plus": 40,
+      "minus": 0
+     },
+     "last_frame": {
+      "state": "C",
+      "d1": 5.382,
+      "d2": 7.901,
+      "lig_rmsd": 0.709,
+      "n2_vol": 0.719
+     }
+    },
+    {
+     "tag": "eq06",
+     "frames": 50,
+     "time_start_ps": 1500.0,
+     "time_end_ps": 2000.0,
+     "header_step_fs": 4.0,
+     "header_first_frame_ps": 1510.0,
+     "header_agrees_with_S_plus_10ps": true,
+     "restraint_atoms": "none",
+     "states": {
+      "C": 50,
+      "R": 0,
+      "I": 0
+     },
+     "n2_sign": {
+      "plus": 50,
+      "minus": 0
+     },
+     "last_frame": {
+      "state": "C",
+      "d1": 5.63,
+      "d2": 6.824,
+      "lig_rmsd": 0.791,
+      "n2_vol": 0.762
+     }
+    }
+   ],
+   "conversion": {
+    "n_frames_stage4_5_6": [
+     40,
+     40,
+     50
+    ],
+    "n_equilibration_frames_joined": 130,
+    "expected_130_frames_1300_ps": true,
+    "time_of_joined_frame_k_from_release_ps": "(k + 1) * 10, k from 0",
+    "states_in_stage4_5_6": {
+     "C": 130,
+     "R": 0,
+     "I": 0
+    },
+    "first_frame_in_opposite_state_joined": null,
+    "last_frame_in_start_state_joined": {
+     "joined_frame": 10129,
+     "t_from_release_ps": 101300.0
+    },
+    "n_long_visits_joined": 1,
+    "long_visits_joined": [
+     {
+      "state": "C",
+      "first_joined_frame": 0,
+      "n_frames": 10130,
+      "t_first_from_release_ps": 10.0
+     }
+    ],
+    "n_transitions_joined": 0,
+    "production_frames_in_start_state": 9950,
+    "has_conversion_time": false,
+    "where": null,
+    "t_from_release_ps": null,
+    "t_from_release_ns": null,
+    "t_in_production_ns": null,
+    "report": "no long visit in the opposite state: no time"
+   },
+   "lig_rmsd_A": {
+    "mean_whole": 0.5446,
+    "mean_last_half": 0.5635,
+    "mean_first_half": 0.5256,
+    "mean_last_20ns": 0.6137,
+    "sd_whole": 0.2114,
+    "min": 0.1165,
+    "max": 1.7479,
+    "n_frames_last_half": 5000,
+    "identity_labelling_mean_whole": 0.5446,
+    "identity_labelling_mean_last_half": 0.5635,
+    "frames_by_best_labelling": {
+     "identity": 10000,
+     "ring_flip": 0,
+     "oxygen_swap": 0,
+     "ring_flip+oxygen_swap": 0
+    },
+    "frames_above_2A_whole": 0,
+    "frames_above_2A_last_half": 0,
+    "rule1_mean_last_half_above_2A": false
+   },
+   "hbond_N2H_T199OG1": {
+    "count": 9983,
+    "n": 10000,
+    "fraction": 0.9983,
+    "fraction_last_half": 0.9974,
+    "mean_N2_OG1_A": 2.9468,
+    "mean_angle_deg": 166.17,
+    "fraction_distance_ok": 0.9988,
+    "fraction_angle_ok": 0.9995,
+    "by_state": {
+     "C": {
+      "n": 9950,
+      "fraction": 0.9983
+     },
+     "R": null,
+     "I": {
+      "n": 50,
+      "fraction": 1.0
+     }
+    }
+   },
+   "zinc": {
+    "mean_Zn_N2_A": 1.9277,
+    "mean_Zn_H94NE2_A": 2.0181,
+    "mean_Zn_H96NE2_A": 2.0456,
+    "mean_Zn_H119ND1_A": 2.037,
+    "sd_Zn_N2_A": 0.0483,
+    "sd_Zn_H94NE2_A": 0.0586,
+    "sd_Zn_H96NE2_A": 0.0612,
+    "sd_Zn_H119ND1_A": 0.0601,
+    "max_of_the_four_A": 2.3247,
+    "sulfonyl_O_within_2.6A": {
+     "count": 7,
+     "n": 10000,
+     "fraction": 0.0007,
+     "at_most_5_percent_integers": true
+    },
+    "mean_Zn_Osulfonyl_min_A": 2.9821,
+    "min_Zn_Osulfonyl_min_A": 2.5699,
+    "mean_Zn_O1_A": 4.0108,
+    "mean_Zn_O2_A": 2.9821
+   },
+   "n2_configuration": {
+    "sign_of_start": 1,
+    "frames_plus": 10000,
+    "frames_minus": 0,
+    "frames_zero": 0,
+    "fraction_plus": 1.0,
+    "fraction_minus": 0.0,
+    "mean_volume": 0.6956,
+    "mean_volume_last_half": 0.695,
+    "min_volume": 0.3249,
+    "max_volume": 0.8917,
+    "frames_abs_volume_below_0.1": 0,
+    "n_sign_visits": 1,
+    "n_long_sign_visits": 1,
+    "long_sign_visits": [
+     {
+      "sign": 1,
+      "first_frame": 0,
+      "n_frames": 10000,
+      "t_first_ns": 0.01
+     }
+    ],
+    "n_lasting_sign_changes": 0,
+    "first_frame_with_other_sign_production": null,
+    "first_lasting_change_production_ns": null,
+    "sign_by_state": {
+     "C": {
+      "plus": 9950,
+      "minus": 0
+     },
+     "R": {
+      "plus": 0,
+      "minus": 0
+     },
+     "I": {
+      "plus": 50,
+      "minus": 0
+     }
+    },
+    "joined_release_series": {
+     "sign_in_stage4_5_6": {
+      "plus": 130,
+      "minus": 0
+     },
+     "first_frame_with_other_sign": null,
+     "first_lasting_change": null,
+     "n_lasting_sign_changes": 0
+    },
+    "sign_in_held_steps_before_release": {
+     "eq01": {
+      "plus": 10,
+      "minus": 0
+     },
+     "eq02": {
+      "plus": 30,
+      "minus": 0
+     },
+     "eq03": {
+      "plus": 30,
+      "minus": 0
+     }
+    }
+   },
+   "wall_s": 6.5,
+   "extras": {
+    "states_frame_by_frame_stage4_5_6": {
+     "eq04": "CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC",
+     "eq05": "CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC",
+     "eq06": "CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC"
+    },
+    "hbond_in_stage4_5_6": {
+     "count": 130,
+     "n": 130
+    },
+    "visits_in_start_state_production": {
+     "n": 1,
+     "longest_frames": 10000,
+     "total_assigned_frames": 10000
+    },
+    "visits_in_last_20ns_by_assigned_state": {
+     "C": 1,
+     "R": 0
+    },
+    "frames_within_0.0001A_of_a_midpoint": 0,
+    "hydration_check_of_the_driver_from_manifest": {
+     "applies": false,
+     "counts": [
+      {
+       "step": "eq03",
+       "time_end_ps": 700.0,
+       "n_water_O": 0,
+       "nearest_water_O_A": 3.259,
+       "ligand_mean_distance_from_site_A": 0.335,
+       "applies": false,
+       "decision": "go on"
+      }
+     ],
+     "n_extensions": 0,
+     "final_decision": "go on: check skipped: the ligand itself is at the site",
+     "site_without_water_when_the_solute_was_released": false
+    }
+   },
+   "key_numbers_one_line": "bonded_2e/X3 start X (production): N=10000; d1 mean 4.716, d2 mean 7.512 A; states C/R/I whole 9950/0/50, last 20 ns 1975/0/25; verdict STAYED; visits 1 (long 1), transitions 0, first passage in production none; conversion time: no long visit in the opposite state: no time; lig RMSD mean 0.545, last half 0.564 A; H-bond 0.9983; Zn-N2 1.928, Zn-N(His94/96/119) 2.018/2.046/2.037 A; sulfonyl O within 2.6 A of Zn 0.0007 (7 frames); N2 sign +/- 1.0000/0.0000, first lasting change none"
+  },
+  "bonded_2e/N1": {
+   "set": "bonded_2e",
+   "run": "N1",
+   "start": "N",
+   "role": "production",
+   "folder": "/root/cqc-sfa-md/runs/bonded_2e/N1",
+   "state_of_start": "C",
+   "opposite_state": "R",
+   "frames": {
+    "n_production_frames": 10000,
+    "n_segment_files": 20,
+    "frames_per_file": [
+     500
+    ],
+    "manifest_frames_solute": 10000,
+    "manifest_completed_ns": 100.0,
+    "manifest_n_segments_complete": 20,
+    "manifest_status": "complete",
+    "dcd_headers_consistent_with_10ps_and_contiguous_time": true,
+    "time_of_frame_n_ns": "(n + 1) * 0.01, n from 0"
+   },
+   "imaging_and_fit": {
+    "frames_zinc_moved_by_a_lattice_vector": 0,
+    "frames_ligand_moved_by_a_lattice_vector": 0,
+    "max_abs_d1_minus_minimum_image_d1_A": 0.0,
+    "max_abs_d2_minus_minimum_image_d2_A": 0.0,
+    "ca_rmsd_to_reference_A": {
+     "mean": 0.8719,
+     "sd": 0.0718,
+     "min": 0.6376,
+     "max": 1.1729
+    }
+   },
+   "d1_A": {
+    "whole": {
+     "mean": 4.5031,
+     "sd": 0.6633,
+     "min": 3.0372,
+     "max": 7.9002
+    },
+    "last_half": {
+     "mean": 4.5388,
+     "sd": 0.6788,
+     "min": 3.0372,
+     "max": 7.631
+    },
+    "last_20ns": {
+     "mean": 4.6619,
+     "sd": 0.7414,
+     "min": 3.0675,
+     "max": 7.631
+    }
+   },
+   "d2_A": {
+    "whole": {
+     "mean": 7.5072,
+     "sd": 0.6029,
+     "min": 4.9592,
+     "max": 10.481
+    },
+    "last_half": {
+     "mean": 7.5577,
+     "sd": 0.5949,
+     "min": 4.9592,
+     "max": 10.481
+    },
+    "last_20ns": {
+     "mean": 7.6383,
+     "sd": 0.6272,
+     "min": 5.6243,
+     "max": 10.481
+    }
+   },
+   "frames_exactly_on_a_midpoint": 0,
+   "states": {
+    "whole": {
+     "C": 9980,
+     "R": 0,
+     "I": 20,
+     "n": 10000,
+     "fraction": {
+      "C": 0.998,
+      "R": 0.0,
+      "I": 0.002
+     }
+    },
+    "last_half": {
+     "C": 4989,
+     "R": 0,
+     "I": 11,
+     "n": 5000,
+     "fraction": {
+      "C": 0.9978,
+      "R": 0.0,
+      "I": 0.0022
+     }
+    },
+    "last_20ns": {
+     "C": 1991,
+     "R": 0,
+     "I": 9,
+     "n": 2000,
+     "fraction": {
+      "C": 0.9955,
+      "R": 0.0,
+      "I": 0.0045
+     }
+    }
+   },
+   "verdict": {
+    "verdict": "STAYED",
+    "W": 2000,
+    "c_start": 1991,
+    "c_opposite": 0,
+    "c_intermediate": 9,
+    "test_converted": "10*0 >= 9*2000 : False",
+    "test_stayed": "10*1991 >= 9*2000 : True",
+    "window_complete": true
+   },
+   "visits": {
+    "assigned": {
+     "C": 10000,
+     "R": 0
+    },
+    "n_visits": 1,
+    "n_visits_by_state": {
+     "C": 1,
+     "R": 0
+    },
+    "n_long_visits": 1,
+    "long_visits": [
+     {
+      "state": "C",
+      "first_frame": 0,
+      "n_frames": 10000,
+      "t_first": 0.01,
+      "fraction_strict": 0.998
+     }
+    ],
+    "longest_visit_in_opposite_state_frames": 0,
+    "longest_visit_in_start_state_frames": 10000,
+    "first_passage_ns": null,
+    "first_passage_frame": null,
+    "n_transitions": 0,
+    "first_frame_state": "C",
+    "first_frame_not_in_start_state": {
+     "frame": 1313,
+     "t_ns": 13.14,
+     "state": "I"
+    },
+    "first_frame_in_opposite_state": null
+   },
+   "equilibration_steps": [
+    {
+     "tag": "eq01",
+     "frames": 10,
+     "time_start_ps": 0.0,
+     "time_end_ps": 100.0,
+     "header_step_fs": 2.0,
+     "header_first_frame_ps": 10.0,
+     "header_agrees_with_S_plus_10ps": true,
+     "restraint_atoms": "solute_heavy",
+     "states": {
+      "C": 10,
+      "R": 0,
+      "I": 0
+     },
+     "n2_sign": {
+      "plus": 10,
+      "minus": 0
+     },
+     "last_frame": {
+      "state": "C",
+      "d1": 3.436,
+      "d2": 7.594,
+      "lig_rmsd": 0.317,
+      "n2_vol": 0.683
+     }
+    },
+    {
+     "tag": "eq02",
+     "frames": 30,
+     "time_start_ps": 100.0,
+     "time_end_ps": 400.0,
+     "header_step_fs": 2.0,
+     "header_first_frame_ps": 110.0,
+     "header_agrees_with_S_plus_10ps": true,
+     "restraint_atoms": "solute_heavy",
+     "states": {
+      "C": 30,
+      "R": 0,
+      "I": 0
+     },
+     "n2_sign": {
+      "plus": 30,
+      "minus": 0
+     },
+     "last_frame": {
+      "state": "C",
+      "d1": 3.86,
+      "d2": 7.623,
+      "lig_rmsd": 0.322,
+      "n2_vol": 0.71
+     }
+    },
+    {
+     "tag": "eq03",
+     "frames": 30,
+     "time_start_ps": 400.0,
+     "time_end_ps": 700.0,
+     "header_step_fs": 2.0,
+     "header_first_frame_ps": 410.0,
+     "header_agrees_with_S_plus_10ps": true,
+     "restraint_atoms": "solute_heavy",
+     "states": {
+      "C": 30,
+      "R": 0,
+      "I": 0
+     },
+     "n2_sign": {
+      "plus": 30,
+      "minus": 0
+     },
+     "last_frame": {
+      "state": "C",
+      "d1": 3.91,
+      "d2": 8.249,
+      "lig_rmsd": 0.474,
+      "n2_vol": 0.662
+     }
+    },
+    {
+     "tag": "eq04",
+     "frames": 40,
+     "time_start_ps": 700.0,
+     "time_end_ps": 1100.0,
+     "header_step_fs": 4.0,
+     "header_first_frame_ps": 710.0,
+     "header_agrees_with_S_plus_10ps": true,
+     "restraint_atoms": "protein_backbone",
+     "states": {
+      "C": 40,
+      "R": 0,
+      "I": 0
+     },
+     "n2_sign": {
+      "plus": 40,
+      "minus": 0
+     },
+     "last_frame": {
+      "state": "C",
+      "d1": 3.827,
+      "d2": 7.541,
+      "lig_rmsd": 0.461,
+      "n2_vol": 0.807
+     }
+    },
+    {
+     "tag": "eq05",
+     "frames": 40,
+     "time_start_ps": 1100.0,
+     "time_end_ps": 1500.0,
+     "header_step_fs": 4.0,
+     "header_first_frame_ps": 1110.0,
+     "header_agrees_with_S_plus_10ps": true,
+     "restraint_atoms": "protein_backbone",
+     "states": {
+      "C": 39,
+      "R": 0,
+      "I": 1
+     },
+     "n2_sign": {
+      "plus": 40,
+      "minus": 0
+     },
+     "last_frame": {
+      "state": "C",
+      "d1": 5.184,
+      "d2": 6.087,
+      "lig_rmsd": 1.112,
+      "n2_vol": 0.676
+     }
+    },
+    {
+     "tag": "eq06",
+     "frames": 50,
+     "time_start_ps": 1500.0,
+     "time_end_ps": 2000.0,
+     "header_step_fs": 4.0,
+     "header_first_frame_ps": 1510.0,
+     "header_agrees_with_S_plus_10ps": true,
+     "restraint_atoms": "none",
+     "states": {
+      "C": 50,
+      "R": 0,
+      "I": 0
+     },
+     "n2_sign": {
+      "plus": 50,
+      "minus": 0
+     },
+     "last_frame": {
+      "state": "C",
+      "d1": 3.463,
+      "d2": 7.368,
+      "lig_rmsd": 0.349,
+      "n2_vol": 0.74
+     }
+    }
+   ],
+   "conversion": {
+    "n_frames_stage4_5_6": [
+     40,
+     40,
+     50
+    ],
+    "n_equilibration_frames_joined": 130,
+    "expected_130_frames_1300_ps": true,
+    "time_of_joined_frame_k_from_release_ps": "(k + 1) * 10, k from 0",
+    "states_in_stage4_5_6": {
+     "C": 129,
+     "R": 0,
+     "I": 1
+    },
+    "first_frame_in_opposite_state_joined": null,
+    "last_frame_in_start_state_joined": {
+     "joined_frame": 10129,
+     "t_from_release_ps": 101300.0
+    },
+    "n_long_visits_joined": 1,
+    "long_visits_joined": [
+     {
+      "state": "C",
+      "first_joined_frame": 0,
+      "n_frames": 10130,
+      "t_first_from_release_ps": 10.0
+     }
+    ],
+    "n_transitions_joined": 0,
+    "production_frames_in_start_state": 9980,
+    "has_conversion_time": false,
+    "where": null,
+    "t_from_release_ps": null,
+    "t_from_release_ns": null,
+    "t_in_production_ns": null,
+    "report": "no long visit in the opposite state: no time"
+   },
+   "lig_rmsd_A": {
+    "mean_whole": 0.5297,
+    "mean_last_half": 0.5325,
+    "mean_first_half": 0.5268,
+    "mean_last_20ns": 0.5689,
+    "sd_whole": 0.2158,
+    "min": 0.1202,
+    "max": 1.7815,
+    "n_frames_last_half": 5000,
+    "identity_labelling_mean_whole": 0.5297,
+    "identity_labelling_mean_last_half": 0.5325,
+    "frames_by_best_labelling": {
+     "identity": 10000,
+     "ring_flip": 0,
+     "oxygen_swap": 0,
+     "ring_flip+oxygen_swap": 0
+    },
+    "frames_above_2A_whole": 0,
+    "frames_above_2A_last_half": 0,
+    "rule1_mean_last_half_above_2A": false
+   },
+   "hbond_N2H_T199OG1": {
+    "count": 9982,
+    "n": 10000,
+    "fraction": 0.9982,
+    "fraction_last_half": 0.9976,
+    "mean_N2_OG1_A": 2.9455,
+    "mean_angle_deg": 166.13,
+    "fraction_distance_ok": 0.9991,
+    "fraction_angle_ok": 0.9991,
+    "by_state": {
+     "C": {
+      "n": 9980,
+      "fraction": 0.9982
+     },
+     "R": null,
+     "I": {
+      "n": 20,
+      "fraction": 1.0
+     }
+    }
+   },
+   "zinc": {
+    "mean_Zn_N2_A": 1.9261,
+    "mean_Zn_H94NE2_A": 2.0166,
+    "mean_Zn_H96NE2_A": 2.0473,
+    "mean_Zn_H119ND1_A": 2.0389,
+    "sd_Zn_N2_A": 0.0484,
+    "sd_Zn_H94NE2_A": 0.0594,
+    "sd_Zn_H96NE2_A": 0.0608,
+    "sd_Zn_H119ND1_A": 0.0599,
+    "max_of_the_four_A": 2.2767,
+    "sulfonyl_O_within_2.6A": {
+     "count": 7,
+     "n": 10000,
+     "fraction": 0.0007,
+     "at_most_5_percent_integers": true
+    },
+    "mean_Zn_Osulfonyl_min_A": 2.977,
+    "min_Zn_Osulfonyl_min_A": 2.5015,
+    "mean_Zn_O1_A": 4.0136,
+    "mean_Zn_O2_A": 2.977
+   },
+   "n2_configuration": {
+    "sign_of_start": 1,
+    "frames_plus": 10000,
+    "frames_minus": 0,
+    "frames_zero": 0,
+    "fraction_plus": 1.0,
+    "fraction_minus": 0.0,
+    "mean_volume": 0.6965,
+    "mean_volume_last_half": 0.6965,
+    "min_volume": 0.3062,
+    "max_volume": 0.9134,
+    "frames_abs_volume_below_0.1": 0,
+    "n_sign_visits": 1,
+    "n_long_sign_visits": 1,
+    "long_sign_visits": [
+     {
+      "sign": 1,
+      "first_frame": 0,
+      "n_frames": 10000,
+      "t_first_ns": 0.01
+     }
+    ],
+    "n_lasting_sign_changes": 0,
+    "first_frame_with_other_sign_production": null,
+    "first_lasting_change_production_ns": null,
+    "sign_by_state": {
+     "C": {
+      "plus": 9980,
+      "minus": 0
+     },
+     "R": {
+      "plus": 0,
+      "minus": 0
+     },
+     "I": {
+      "plus": 20,
+      "minus": 0
+     }
+    },
+    "joined_release_series": {
+     "sign_in_stage4_5_6": {
+      "plus": 130,
+      "minus": 0
+     },
+     "first_frame_with_other_sign": null,
+     "first_lasting_change": null,
+     "n_lasting_sign_changes": 0
+    },
+    "sign_in_held_steps_before_release": {
+     "eq01": {
+      "plus": 10,
+      "minus": 0
+     },
+     "eq02": {
+      "plus": 30,
+      "minus": 0
+     },
+     "eq03": {
+      "plus": 30,
+      "minus": 0
+     }
+    }
+   },
+   "wall_s": 5.6,
+   "extras": {
+    "states_frame_by_frame_stage4_5_6": {
+     "eq04": "CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC",
+     "eq05": "CCCCCCCCCCCCCCCCCCCCCCCCCCCCCICCCCCCCCCC",
+     "eq06": "CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC"
+    },
+    "hbond_in_stage4_5_6": {
+     "count": 130,
+     "n": 130
+    },
+    "visits_in_start_state_production": {
+     "n": 1,
+     "longest_frames": 10000,
+     "total_assigned_frames": 10000
+    },
+    "visits_in_last_20ns_by_assigned_state": {
+     "C": 1,
+     "R": 0
+    },
+    "frames_within_0.0001A_of_a_midpoint": 0,
+    "hydration_check_of_the_driver_from_manifest": {
+     "applies": false,
+     "counts": [
+      {
+       "step": "eq03",
+       "time_end_ps": 700.0,
+       "n_water_O": 0,
+       "nearest_water_O_A": 3.057,
+       "ligand_mean_distance_from_site_A": 0.451,
+       "applies": false,
+       "decision": "go on"
+      }
+     ],
+     "n_extensions": 0,
+     "final_decision": "go on: check skipped: the ligand itself is at the site",
+     "site_without_water_when_the_solute_was_released": false
+    }
+   },
+   "key_numbers_one_line": "bonded_2e/N1 start N (production): N=10000; d1 mean 4.503, d2 mean 7.507 A; states C/R/I whole 9980/0/20, last 20 ns 1991/0/9; verdict STAYED; visits 1 (long 1), transitions 0, first passage in production none; conversion time: no long visit in the opposite state: no time; lig RMSD mean 0.530, last half 0.532 A; H-bond 0.9982; Zn-N2 1.926, Zn-N(His94/96/119) 2.017/2.047/2.039 A; sulfonyl O within 2.6 A of Zn 0.0007 (7 frames); N2 sign +/- 1.0000/0.0000, first lasting change none"
+  },
+  "bonded_2e/N2": {
+   "set": "bonded_2e",
+   "run": "N2",
+   "start": "N",
+   "role": "production",
+   "folder": "/root/cqc-sfa-md/runs/bonded_2e/N2",
+   "state_of_start": "C",
+   "opposite_state": "R",
+   "frames": {
+    "n_production_frames": 10000,
+    "n_segment_files": 20,
+    "frames_per_file": [
+     500
+    ],
+    "manifest_frames_solute": 10000,
+    "manifest_completed_ns": 100.0,
+    "manifest_n_segments_complete": 20,
+    "manifest_status": "complete",
+    "dcd_headers_consistent_with_10ps_and_contiguous_time": true,
+    "time_of_frame_n_ns": "(n + 1) * 0.01, n from 0"
+   },
+   "imaging_and_fit": {
+    "frames_zinc_moved_by_a_lattice_vector": 0,
+    "frames_ligand_moved_by_a_lattice_vector": 0,
+    "max_abs_d1_minus_minimum_image_d1_A": 0.0,
+    "max_abs_d2_minus_minimum_image_d2_A": 0.0,
+    "ca_rmsd_to_reference_A": {
+     "mean": 0.8735,
+     "sd": 0.0739,
+     "min": 0.663,
+     "max": 1.2077
+    }
+   },
+   "d1_A": {
+    "whole": {
+     "mean": 4.6169,
+     "sd": 0.7256,
+     "min": 2.8915,
+     "max": 7.4386
+    },
+    "last_half": {
+     "mean": 4.5571,
+     "sd": 0.6987,
+     "min": 3.0831,
+     "max": 7.3947
+    },
+    "last_20ns": {
+     "mean": 4.3441,
+     "sd": 0.6294,
+     "min": 3.0831,
+     "max": 6.8448
+    }
+   },
+   "d2_A": {
+    "whole": {
+     "mean": 7.6124,
+     "sd": 0.7084,
+     "min": 4.4545,
+     "max": 10.3805
+    },
+    "last_half": {
+     "mean": 7.6874,
+     "sd": 0.754,
+     "min": 4.4545,
+     "max": 10.3805
+    },
+    "last_20ns": {
+     "mean": 7.9457,
+     "sd": 0.8196,
+     "min": 5.6489,
+     "max": 10.3805
+    }
+   },
+   "frames_exactly_on_a_midpoint": 0,
+   "states": {
+    "whole": {
+     "C": 9944,
+     "R": 0,
+     "I": 56,
+     "n": 10000,
+     "fraction": {
+      "C": 0.9944,
+      "R": 0.0,
+      "I": 0.0056
+     }
+    },
+    "last_half": {
+     "C": 4986,
+     "R": 0,
+     "I": 14,
+     "n": 5000,
+     "fraction": {
+      "C": 0.9972,
+      "R": 0.0,
+      "I": 0.0028
+     }
+    },
+    "last_20ns": {
+     "C": 1998,
+     "R": 0,
+     "I": 2,
+     "n": 2000,
+     "fraction": {
+      "C": 0.999,
+      "R": 0.0,
+      "I": 0.001
+     }
+    }
+   },
+   "verdict": {
+    "verdict": "STAYED",
+    "W": 2000,
+    "c_start": 1998,
+    "c_opposite": 0,
+    "c_intermediate": 2,
+    "test_converted": "10*0 >= 9*2000 : False",
+    "test_stayed": "10*1998 >= 9*2000 : True",
+    "window_complete": true
+   },
+   "visits": {
+    "assigned": {
+     "C": 10000,
+     "R": 0
+    },
+    "n_visits": 1,
+    "n_visits_by_state": {
+     "C": 1,
+     "R": 0
+    },
+    "n_long_visits": 1,
+    "long_visits": [
+     {
+      "state": "C",
+      "first_frame": 0,
+      "n_frames": 10000,
+      "t_first": 0.01,
+      "fraction_strict": 0.9944
+     }
+    ],
+    "longest_visit_in_opposite_state_frames": 0,
+    "longest_visit_in_start_state_frames": 10000,
+    "first_passage_ns": null,
+    "first_passage_frame": null,
+    "n_transitions": 0,
+    "first_frame_state": "C",
+    "first_frame_not_in_start_state": {
+     "frame": 1654,
+     "t_ns": 16.55,
+     "state": "I"
+    },
+    "first_frame_in_opposite_state": null
+   },
+   "equilibration_steps": [
+    {
+     "tag": "eq01",
+     "frames": 10,
+     "time_start_ps": 0.0,
+     "time_end_ps": 100.0,
+     "header_step_fs": 2.0,
+     "header_first_frame_ps": 10.0,
+     "header_agrees_with_S_plus_10ps": true,
+     "restraint_atoms": "solute_heavy",
+     "states": {
+      "C": 10,
+      "R": 0,
+      "I": 0
+     },
+     "n2_sign": {
+      "plus": 10,
+      "minus": 0
+     },
+     "last_frame": {
+      "state": "C",
+      "d1": 3.62,
+      "d2": 6.846,
+      "lig_rmsd": 0.616,
+      "n2_vol": 0.428
+     }
+    },
+    {
+     "tag": "eq02",
+     "frames": 30,
+     "time_start_ps": 100.0,
+     "time_end_ps": 400.0,
+     "header_step_fs": 2.0,
+     "header_first_frame_ps": 110.0,
+     "header_agrees_with_S_plus_10ps": true,
+     "restraint_atoms": "solute_heavy",
+     "states": {
+      "C": 30,
+      "R": 0,
+      "I": 0
+     },
+     "n2_sign": {
+      "plus": 30,
+      "minus": 0
+     },
+     "last_frame": {
+      "state": "C",
+      "d1": 3.282,
+      "d2": 8.075,
+      "lig_rmsd": 0.544,
+      "n2_vol": 0.754
+     }
+    },
+    {
+     "tag": "eq03",
+     "frames": 30,
+     "time_start_ps": 400.0,
+     "time_end_ps": 700.0,
+     "header_step_fs": 2.0,
+     "header_first_frame_ps": 410.0,
+     "header_agrees_with_S_plus_10ps": true,
+     "restraint_atoms": "solute_heavy",
+     "states": {
+      "C": 30,
+      "R": 0,
+      "I": 0
+     },
+     "n2_sign": {
+      "plus": 30,
+      "minus": 0
+     },
+     "last_frame": {
+      "state": "C",
+      "d1": 3.612,
+      "d2": 7.326,
+      "lig_rmsd": 0.303,
+      "n2_vol": 0.769
+     }
+    },
+    {
+     "tag": "eq04",
+     "frames": 40,
+     "time_start_ps": 700.0,
+     "time_end_ps": 1100.0,
+     "header_step_fs": 4.0,
+     "header_first_frame_ps": 710.0,
+     "header_agrees_with_S_plus_10ps": true,
+     "restraint_atoms": "protein_backbone",
+     "states": {
+      "C": 40,
+      "R": 0,
+      "I": 0
+     },
+     "n2_sign": {
+      "plus": 40,
+      "minus": 0
+     },
+     "last_frame": {
+      "state": "C",
+      "d1": 4.126,
+      "d2": 8.109,
+      "lig_rmsd": 0.353,
+      "n2_vol": 0.67
+     }
+    },
+    {
+     "tag": "eq05",
+     "frames": 40,
+     "time_start_ps": 1100.0,
+     "time_end_ps": 1500.0,
+     "header_step_fs": 4.0,
+     "header_first_frame_ps": 1110.0,
+     "header_agrees_with_S_plus_10ps": true,
+     "restraint_atoms": "protein_backbone",
+     "states": {
+      "C": 40,
+      "R": 0,
+      "I": 0
+     },
+     "n2_sign": {
+      "plus": 40,
+      "minus": 0
+     },
+     "last_frame": {
+      "state": "C",
+      "d1": 4.085,
+      "d2": 7.518,
+      "lig_rmsd": 0.262,
+      "n2_vol": 0.685
+     }
+    },
+    {
+     "tag": "eq06",
+     "frames": 50,
+     "time_start_ps": 1500.0,
+     "time_end_ps": 2000.0,
+     "header_step_fs": 4.0,
+     "header_first_frame_ps": 1510.0,
+     "header_agrees_with_S_plus_10ps": true,
+     "restraint_atoms": "none",
+     "states": {
+      "C": 50,
+      "R": 0,
+      "I": 0
+     },
+     "n2_sign": {
+      "plus": 50,
+      "minus": 0
+     },
+     "last_frame": {
+      "state": "C",
+      "d1": 5.729,
+      "d2": 7.086,
+      "lig_rmsd": 0.541,
+      "n2_vol": 0.609
+     }
+    }
+   ],
+   "conversion": {
+    "n_frames_stage4_5_6": [
+     40,
+     40,
+     50
+    ],
+    "n_equilibration_frames_joined": 130,
+    "expected_130_frames_1300_ps": true,
+    "time_of_joined_frame_k_from_release_ps": "(k + 1) * 10, k from 0",
+    "states_in_stage4_5_6": {
+     "C": 130,
+     "R": 0,
+     "I": 0
+    },
+    "first_frame_in_opposite_state_joined": null,
+    "last_frame_in_start_state_joined": {
+     "joined_frame": 10129,
+     "t_from_release_ps": 101300.0
+    },
+    "n_long_visits_joined": 1,
+    "long_visits_joined": [
+     {
+      "state": "C",
+      "first_joined_frame": 0,
+      "n_frames": 10130,
+      "t_first_from_release_ps": 10.0
+     }
+    ],
+    "n_transitions_joined": 0,
+    "production_frames_in_start_state": 9944,
+    "has_conversion_time": false,
+    "where": null,
+    "t_from_release_ps": null,
+    "t_from_release_ns": null,
+    "t_in_production_ns": null,
+    "report": "no long visit in the opposite state: no time"
+   },
+   "lig_rmsd_A": {
+    "mean_whole": 0.5428,
+    "mean_last_half": 0.5259,
+    "mean_first_half": 0.5596,
+    "mean_last_20ns": 0.4968,
+    "sd_whole": 0.2379,
+    "min": 0.1211,
+    "max": 1.8799,
+    "n_frames_last_half": 5000,
+    "identity_labelling_mean_whole": 0.5428,
+    "identity_labelling_mean_last_half": 0.5259,
+    "frames_by_best_labelling": {
+     "identity": 10000,
+     "ring_flip": 0,
+     "oxygen_swap": 0,
+     "ring_flip+oxygen_swap": 0
+    },
+    "frames_above_2A_whole": 0,
+    "frames_above_2A_last_half": 0,
+    "rule1_mean_last_half_above_2A": false
+   },
+   "hbond_N2H_T199OG1": {
+    "count": 9985,
+    "n": 10000,
+    "fraction": 0.9985,
+    "fraction_last_half": 0.9982,
+    "mean_N2_OG1_A": 2.9482,
+    "mean_angle_deg": 165.84,
+    "fraction_distance_ok": 0.9995,
+    "fraction_angle_ok": 0.999,
+    "by_state": {
+     "C": {
+      "n": 9944,
+      "fraction": 0.9985
+     },
+     "R": null,
+     "I": {
+      "n": 56,
+      "fraction": 1.0
+     }
+    }
+   },
+   "zinc": {
+    "mean_Zn_N2_A": 1.9264,
+    "mean_Zn_H94NE2_A": 2.0188,
+    "mean_Zn_H96NE2_A": 2.0438,
+    "mean_Zn_H119ND1_A": 2.0378,
+    "sd_Zn_N2_A": 0.0488,
+    "sd_Zn_H94NE2_A": 0.058,
+    "sd_Zn_H96NE2_A": 0.0608,
+    "sd_Zn_H119ND1_A": 0.0605,
+    "max_of_the_four_A": 2.2804,
+    "sulfonyl_O_within_2.6A": {
+     "count": 17,
+     "n": 10000,
+     "fraction": 0.0017,
+     "at_most_5_percent_integers": true
+    },
+    "mean_Zn_Osulfonyl_min_A": 2.9683,
+    "min_Zn_Osulfonyl_min_A": 2.458,
+    "mean_Zn_O1_A": 4.0085,
+    "mean_Zn_O2_A": 2.9683
+   },
+   "n2_configuration": {
+    "sign_of_start": 1,
+    "frames_plus": 10000,
+    "frames_minus": 0,
+    "frames_zero": 0,
+    "fraction_plus": 1.0,
+    "fraction_minus": 0.0,
+    "mean_volume": 0.7026,
+    "mean_volume_last_half": 0.704,
+    "min_volume": 0.2048,
+    "max_volume": 0.9056,
+    "frames_abs_volume_below_0.1": 0,
+    "n_sign_visits": 1,
+    "n_long_sign_visits": 1,
+    "long_sign_visits": [
+     {
+      "sign": 1,
+      "first_frame": 0,
+      "n_frames": 10000,
+      "t_first_ns": 0.01
+     }
+    ],
+    "n_lasting_sign_changes": 0,
+    "first_frame_with_other_sign_production": null,
+    "first_lasting_change_production_ns": null,
+    "sign_by_state": {
+     "C": {
+      "plus": 9944,
+      "minus": 0
+     },
+     "R": {
+      "plus": 0,
+      "minus": 0
+     },
+     "I": {
+      "plus": 56,
+      "minus": 0
+     }
+    },
+    "joined_release_series": {
+     "sign_in_stage4_5_6": {
+      "plus": 130,
+      "minus": 0
+     },
+     "first_frame_with_other_sign": null,
+     "first_lasting_change": null,
+     "n_lasting_sign_changes": 0
+    },
+    "sign_in_held_steps_before_release": {
+     "eq01": {
+      "plus": 10,
+      "minus": 0
+     },
+     "eq02": {
+      "plus": 30,
+      "minus": 0
+     },
+     "eq03": {
+      "plus": 30,
+      "minus": 0
+     }
+    }
+   },
+   "wall_s": 5.0,
+   "extras": {
+    "states_frame_by_frame_stage4_5_6": {
+     "eq04": "CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC",
+     "eq05": "CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC",
+     "eq06": "CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC"
+    },
+    "hbond_in_stage4_5_6": {
+     "count": 130,
+     "n": 130
+    },
+    "visits_in_start_state_production": {
+     "n": 1,
+     "longest_frames": 10000,
+     "total_assigned_frames": 10000
+    },
+    "visits_in_last_20ns_by_assigned_state": {
+     "C": 1,
+     "R": 0
+    },
+    "frames_within_0.0001A_of_a_midpoint": 0,
+    "hydration_check_of_the_driver_from_manifest": {
+     "applies": false,
+     "counts": [
+      {
+       "step": "eq03",
+       "time_end_ps": 700.0,
+       "n_water_O": 0,
+       "nearest_water_O_A": 3.319,
+       "ligand_mean_distance_from_site_A": 0.237,
+       "applies": false,
+       "decision": "go on"
+      }
+     ],
+     "n_extensions": 0,
+     "final_decision": "go on: check skipped: the ligand itself is at the site",
+     "site_without_water_when_the_solute_was_released": false
+    }
+   },
+   "key_numbers_one_line": "bonded_2e/N2 start N (production): N=10000; d1 mean 4.617, d2 mean 7.612 A; states C/R/I whole 9944/0/56, last 20 ns 1998/0/2; verdict STAYED; visits 1 (long 1), transitions 0, first passage in production none; conversion time: no long visit in the opposite state: no time; lig RMSD mean 0.543, last half 0.526 A; H-bond 0.9985; Zn-N2 1.926, Zn-N(His94/96/119) 2.019/2.044/2.038 A; sulfonyl O within 2.6 A of Zn 0.0017 (17 frames); N2 sign +/- 1.0000/0.0000, first lasting change none"
+  },
+  "bonded_2e/N3": {
+   "set": "bonded_2e",
+   "run": "N3",
+   "start": "N",
+   "role": "production",
+   "folder": "/root/cqc-sfa-md/runs/bonded_2e/N3",
+   "state_of_start": "C",
+   "opposite_state": "R",
+   "frames": {
+    "n_production_frames": 10000,
+    "n_segment_files": 20,
+    "frames_per_file": [
+     500
+    ],
+    "manifest_frames_solute": 10000,
+    "manifest_completed_ns": 100.0,
+    "manifest_n_segments_complete": 20,
+    "manifest_status": "complete",
+    "dcd_headers_consistent_with_10ps_and_contiguous_time": true,
+    "time_of_frame_n_ns": "(n + 1) * 0.01, n from 0"
+   },
+   "imaging_and_fit": {
+    "frames_zinc_moved_by_a_lattice_vector": 0,
+    "frames_ligand_moved_by_a_lattice_vector": 0,
+    "max_abs_d1_minus_minimum_image_d1_A": 0.0,
+    "max_abs_d2_minus_minimum_image_d2_A": 0.0,
+    "ca_rmsd_to_reference_A": {
+     "mean": 0.8983,
+     "sd": 0.0818,
+     "min": 0.6135,
+     "max": 1.184
+    }
+   },
+   "d1_A": {
+    "whole": {
+     "mean": 4.4953,
+     "sd": 0.7009,
+     "min": 3.0017,
+     "max": 7.243
+    },
+    "last_half": {
+     "mean": 4.595,
+     "sd": 0.7476,
+     "min": 3.0017,
+     "max": 7.2056
+    },
+    "last_20ns": {
+     "mean": 4.8166,
+     "sd": 0.7191,
+     "min": 3.1122,
+     "max": 7.2056
+    }
+   },
+   "d2_A": {
+    "whole": {
+     "mean": 7.5058,
+     "sd": 0.7043,
+     "min": 4.4738,
+     "max": 11.0508
+    },
+    "last_half": {
+     "mean": 7.3862,
+     "sd": 0.6444,
+     "min": 4.8765,
+     "max": 9.9237
+    },
+    "last_20ns": {
+     "mean": 7.5511,
+     "sd": 0.6366,
+     "min": 5.4079,
+     "max": 9.9237
+    }
+   },
+   "frames_exactly_on_a_midpoint": 0,
+   "states": {
+    "whole": {
+     "C": 9971,
+     "R": 0,
+     "I": 29,
+     "n": 10000,
+     "fraction": {
+      "C": 0.9971,
+      "R": 0.0,
+      "I": 0.0029
+     }
+    },
+    "last_half": {
+     "C": 4980,
+     "R": 0,
+     "I": 20,
+     "n": 5000,
+     "fraction": {
+      "C": 0.996,
+      "R": 0.0,
+      "I": 0.004
+     }
+    },
+    "last_20ns": {
+     "C": 1988,
+     "R": 0,
+     "I": 12,
+     "n": 2000,
+     "fraction": {
+      "C": 0.994,
+      "R": 0.0,
+      "I": 0.006
+     }
+    }
+   },
+   "verdict": {
+    "verdict": "STAYED",
+    "W": 2000,
+    "c_start": 1988,
+    "c_opposite": 0,
+    "c_intermediate": 12,
+    "test_converted": "10*0 >= 9*2000 : False",
+    "test_stayed": "10*1988 >= 9*2000 : True",
+    "window_complete": true
+   },
+   "visits": {
+    "assigned": {
+     "C": 10000,
+     "R": 0
+    },
+    "n_visits": 1,
+    "n_visits_by_state": {
+     "C": 1,
+     "R": 0
+    },
+    "n_long_visits": 1,
+    "long_visits": [
+     {
+      "state": "C",
+      "first_frame": 0,
+      "n_frames": 10000,
+      "t_first": 0.01,
+      "fraction_strict": 0.9971
+     }
+    ],
+    "longest_visit_in_opposite_state_frames": 0,
+    "longest_visit_in_start_state_frames": 10000,
+    "first_passage_ns": null,
+    "first_passage_frame": null,
+    "n_transitions": 0,
+    "first_frame_state": "C",
+    "first_frame_not_in_start_state": {
+     "frame": 186,
+     "t_ns": 1.87,
+     "state": "I"
+    },
+    "first_frame_in_opposite_state": null
+   },
+   "equilibration_steps": [
+    {
+     "tag": "eq01",
+     "frames": 10,
+     "time_start_ps": 0.0,
+     "time_end_ps": 100.0,
+     "header_step_fs": 2.0,
+     "header_first_frame_ps": 10.0,
+     "header_agrees_with_S_plus_10ps": true,
+     "restraint_atoms": "solute_heavy",
+     "states": {
+      "C": 10,
+      "R": 0,
+      "I": 0
+     },
+     "n2_sign": {
+      "plus": 10,
+      "minus": 0
+     },
+     "last_frame": {
+      "state": "C",
+      "d1": 3.65,
+      "d2": 6.723,
+      "lig_rmsd": 0.285,
+      "n2_vol": 0.68
+     }
+    },
+    {
+     "tag": "eq02",
+     "frames": 30,
+     "time_start_ps": 100.0,
+     "time_end_ps": 400.0,
+     "header_step_fs": 2.0,
+     "header_first_frame_ps": 110.0,
+     "header_agrees_with_S_plus_10ps": true,
+     "restraint_atoms": "solute_heavy",
+     "states": {
+      "C": 30,
+      "R": 0,
+      "I": 0
+     },
+     "n2_sign": {
+      "plus": 30,
+      "minus": 0
+     },
+     "last_frame": {
+      "state": "C",
+      "d1": 3.825,
+      "d2": 7.538,
+      "lig_rmsd": 0.367,
+      "n2_vol": 0.671
+     }
+    },
+    {
+     "tag": "eq03",
+     "frames": 30,
+     "time_start_ps": 400.0,
+     "time_end_ps": 700.0,
+     "header_step_fs": 2.0,
+     "header_first_frame_ps": 410.0,
+     "header_agrees_with_S_plus_10ps": true,
+     "restraint_atoms": "solute_heavy",
+     "states": {
+      "C": 30,
+      "R": 0,
+      "I": 0
+     },
+     "n2_sign": {
+      "plus": 30,
+      "minus": 0
+     },
+     "last_frame": {
+      "state": "C",
+      "d1": 3.476,
+      "d2": 6.893,
+      "lig_rmsd": 0.986,
+      "n2_vol": 0.676
+     }
+    },
+    {
+     "tag": "eq04",
+     "frames": 40,
+     "time_start_ps": 700.0,
+     "time_end_ps": 1100.0,
+     "header_step_fs": 4.0,
+     "header_first_frame_ps": 710.0,
+     "header_agrees_with_S_plus_10ps": true,
+     "restraint_atoms": "protein_backbone",
+     "states": {
+      "C": 40,
+      "R": 0,
+      "I": 0
+     },
+     "n2_sign": {
+      "plus": 40,
+      "minus": 0
+     },
+     "last_frame": {
+      "state": "C",
+      "d1": 3.696,
+      "d2": 7.681,
+      "lig_rmsd": 0.518,
+      "n2_vol": 0.841
+     }
+    },
+    {
+     "tag": "eq05",
+     "frames": 40,
+     "time_start_ps": 1100.0,
+     "time_end_ps": 1500.0,
+     "header_step_fs": 4.0,
+     "header_first_frame_ps": 1110.0,
+     "header_agrees_with_S_plus_10ps": true,
+     "restraint_atoms": "protein_backbone",
+     "states": {
+      "C": 40,
+      "R": 0,
+      "I": 0
+     },
+     "n2_sign": {
+      "plus": 40,
+      "minus": 0
+     },
+     "last_frame": {
+      "state": "C",
+      "d1": 4.057,
+      "d2": 8.658,
+      "lig_rmsd": 0.375,
+      "n2_vol": 0.681
+     }
+    },
+    {
+     "tag": "eq06",
+     "frames": 50,
+     "time_start_ps": 1500.0,
+     "time_end_ps": 2000.0,
+     "header_step_fs": 4.0,
+     "header_first_frame_ps": 1510.0,
+     "header_agrees_with_S_plus_10ps": true,
+     "restraint_atoms": "none",
+     "states": {
+      "C": 50,
+      "R": 0,
+      "I": 0
+     },
+     "n2_sign": {
+      "plus": 50,
+      "minus": 0
+     },
+     "last_frame": {
+      "state": "C",
+      "d1": 4.097,
+      "d2": 8.474,
+      "lig_rmsd": 0.417,
+      "n2_vol": 0.815
+     }
+    }
+   ],
+   "conversion": {
+    "n_frames_stage4_5_6": [
+     40,
+     40,
+     50
+    ],
+    "n_equilibration_frames_joined": 130,
+    "expected_130_frames_1300_ps": true,
+    "time_of_joined_frame_k_from_release_ps": "(k + 1) * 10, k from 0",
+    "states_in_stage4_5_6": {
+     "C": 130,
+     "R": 0,
+     "I": 0
+    },
+    "first_frame_in_opposite_state_joined": null,
+    "last_frame_in_start_state_joined": {
+     "joined_frame": 10129,
+     "t_from_release_ps": 101300.0
+    },
+    "n_long_visits_joined": 1,
+    "long_visits_joined": [
+     {
+      "state": "C",
+      "first_joined_frame": 0,
+      "n_frames": 10130,
+      "t_first_from_release_ps": 10.0
+     }
+    ],
+    "n_transitions_joined": 0,
+    "production_frames_in_start_state": 9971,
+    "has_conversion_time": false,
+    "where": null,
+    "t_from_release_ps": null,
+    "t_from_release_ns": null,
+    "t_in_production_ns": null,
+    "report": "no long visit in the opposite state: no time"
+   },
+   "lig_rmsd_A": {
+    "mean_whole": 0.61,
+    "mean_last_half": 0.6682,
+    "mean_first_half": 0.5519,
+    "mean_last_20ns": 0.5761,
+    "sd_whole": 0.2681,
+    "min": 0.1275,
+    "max": 1.952,
+    "n_frames_last_half": 5000,
+    "identity_labelling_mean_whole": 0.61,
+    "identity_labelling_mean_last_half": 0.6682,
+    "frames_by_best_labelling": {
+     "identity": 10000,
+     "ring_flip": 0,
+     "oxygen_swap": 0,
+     "ring_flip+oxygen_swap": 0
+    },
+    "frames_above_2A_whole": 0,
+    "frames_above_2A_last_half": 0,
+    "rule1_mean_last_half_above_2A": false
+   },
+   "hbond_N2H_T199OG1": {
+    "count": 9977,
+    "n": 10000,
+    "fraction": 0.9977,
+    "fraction_last_half": 0.9964,
+    "mean_N2_OG1_A": 2.9561,
+    "mean_angle_deg": 165.64,
+    "fraction_distance_ok": 0.9991,
+    "fraction_angle_ok": 0.9986,
+    "by_state": {
+     "C": {
+      "n": 9971,
+      "fraction": 0.9977
+     },
+     "R": null,
+     "I": {
+      "n": 29,
+      "fraction": 1.0
+     }
+    }
+   },
+   "zinc": {
+    "mean_Zn_N2_A": 1.9271,
+    "mean_Zn_H94NE2_A": 2.0192,
+    "mean_Zn_H96NE2_A": 2.0476,
+    "mean_Zn_H119ND1_A": 2.0378,
+    "sd_Zn_N2_A": 0.0485,
+    "sd_Zn_H94NE2_A": 0.0579,
+    "sd_Zn_H96NE2_A": 0.0606,
+    "sd_Zn_H119ND1_A": 0.0605,
+    "max_of_the_four_A": 2.2746,
+    "sulfonyl_O_within_2.6A": {
+     "count": 11,
+     "n": 10000,
+     "fraction": 0.0011,
+     "at_most_5_percent_integers": true
+    },
+    "mean_Zn_Osulfonyl_min_A": 2.992,
+    "min_Zn_Osulfonyl_min_A": 2.5252,
+    "mean_Zn_O1_A": 4.0306,
+    "mean_Zn_O2_A": 2.992
+   },
+   "n2_configuration": {
+    "sign_of_start": 1,
+    "frames_plus": 10000,
+    "frames_minus": 0,
+    "frames_zero": 0,
+    "fraction_plus": 1.0,
+    "fraction_minus": 0.0,
+    "mean_volume": 0.6887,
+    "mean_volume_last_half": 0.6845,
+    "min_volume": 0.2698,
+    "max_volume": 0.9099,
+    "frames_abs_volume_below_0.1": 0,
+    "n_sign_visits": 1,
+    "n_long_sign_visits": 1,
+    "long_sign_visits": [
+     {
+      "sign": 1,
+      "first_frame": 0,
+      "n_frames": 10000,
+      "t_first_ns": 0.01
+     }
+    ],
+    "n_lasting_sign_changes": 0,
+    "first_frame_with_other_sign_production": null,
+    "first_lasting_change_production_ns": null,
+    "sign_by_state": {
+     "C": {
+      "plus": 9971,
+      "minus": 0
+     },
+     "R": {
+      "plus": 0,
+      "minus": 0
+     },
+     "I": {
+      "plus": 29,
+      "minus": 0
+     }
+    },
+    "joined_release_series": {
+     "sign_in_stage4_5_6": {
+      "plus": 130,
+      "minus": 0
+     },
+     "first_frame_with_other_sign": null,
+     "first_lasting_change": null,
+     "n_lasting_sign_changes": 0
+    },
+    "sign_in_held_steps_before_release": {
+     "eq01": {
+      "plus": 10,
+      "minus": 0
+     },
+     "eq02": {
+      "plus": 30,
+      "minus": 0
+     },
+     "eq03": {
+      "plus": 30,
+      "minus": 0
+     }
+    }
+   },
+   "wall_s": 5.0,
+   "extras": {
+    "states_frame_by_frame_stage4_5_6": {
+     "eq04": "CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC",
+     "eq05": "CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC",
+     "eq06": "CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC"
+    },
+    "hbond_in_stage4_5_6": {
+     "count": 130,
+     "n": 130
+    },
+    "visits_in_start_state_production": {
+     "n": 1,
+     "longest_frames": 10000,
+     "total_assigned_frames": 10000
+    },
+    "visits_in_last_20ns_by_assigned_state": {
+     "C": 1,
+     "R": 0
+    },
+    "frames_within_0.0001A_of_a_midpoint": 0,
+    "hydration_check_of_the_driver_from_manifest": {
+     "applies": false,
+     "counts": [
+      {
+       "step": "eq03",
+       "time_end_ps": 700.0,
+       "n_water_O": 0,
+       "nearest_water_O_A": 2.846,
+       "ligand_mean_distance_from_site_A": 1.07,
+       "applies": false,
+       "decision": "go on"
+      }
+     ],
+     "n_extensions": 0,
+     "final_decision": "go on: check skipped: the ligand itself is at the site",
+     "site_without_water_when_the_solute_was_released": false
+    }
+   },
+   "key_numbers_one_line": "bonded_2e/N3 start N (production): N=10000; d1 mean 4.495, d2 mean 7.506 A; states C/R/I whole 9971/0/29, last 20 ns 1988/0/12; verdict STAYED; visits 1 (long 1), transitions 0, first passage in production none; conversion time: no long visit in the opposite state: no time; lig RMSD mean 0.610, last half 0.668 A; H-bond 0.9977; Zn-N2 1.927, Zn-N(His94/96/119) 2.019/2.048/2.038 A; sulfonyl O within 2.6 A of Zn 0.0011 (11 frames); N2 sign +/- 1.0000/0.0000, first lasting change none"
+  },
+  "bonded_2e/R1": {
+   "set": "bonded_2e",
+   "run": "R1",
+   "start": "R",
+   "role": "production",
+   "folder": "/root/cqc-sfa-md/runs/bonded_2e/R1",
+   "state_of_start": "R",
+   "opposite_state": "C",
+   "frames": {
+    "n_production_frames": 10000,
+    "n_segment_files": 20,
+    "frames_per_file": [
+     500
+    ],
+    "manifest_frames_solute": 10000,
+    "manifest_completed_ns": 100.0,
+    "manifest_n_segments_complete": 20,
+    "manifest_status": "complete",
+    "dcd_headers_consistent_with_10ps_and_contiguous_time": true,
+    "time_of_frame_n_ns": "(n + 1) * 0.01, n from 0"
+   },
+   "imaging_and_fit": {
+    "frames_zinc_moved_by_a_lattice_vector": 0,
+    "frames_ligand_moved_by_a_lattice_vector": 0,
+    "max_abs_d1_minus_minimum_image_d1_A": 0.0,
+    "max_abs_d2_minus_minimum_image_d2_A": 0.0,
+    "ca_rmsd_to_reference_A": {
+     "mean": 1.0066,
+     "sd": 0.1173,
+     "min": 0.6392,
+     "max": 1.3967
+    }
+   },
+   "d1_A": {
+    "whole": {
+     "mean": 4.7131,
+     "sd": 0.7339,
+     "min": 2.9633,
+     "max": 7.6554
+    },
+    "last_half": {
+     "mean": 4.7683,
+     "sd": 0.7621,
+     "min": 3.1938,
+     "max": 7.6554
+    },
+    "last_20ns": {
+     "mean": 4.6814,
+     "sd": 0.6901,
+     "min": 3.1972,
+     "max": 7.4779
+    }
+   },
+   "d2_A": {
+    "whole": {
+     "mean": 7.602,
+     "sd": 0.6551,
+     "min": 4.5184,
+     "max": 9.9008
+    },
+    "last_half": {
+     "mean": 7.8755,
+     "sd": 0.5399,
+     "min": 5.7093,
+     "max": 9.6178
+    },
+    "last_20ns": {
+     "mean": 7.8879,
+     "sd": 0.5216,
+     "min": 5.998,
+     "max": 9.5112
+    }
+   },
+   "frames_exactly_on_a_midpoint": 0,
+   "states": {
+    "whole": {
+     "C": 9913,
+     "R": 0,
+     "I": 87,
+     "n": 10000,
+     "fraction": {
+      "C": 0.9913,
+      "R": 0.0,
+      "I": 0.0087
+     }
+    },
+    "last_half": {
+     "C": 4947,
+     "R": 0,
+     "I": 53,
+     "n": 5000,
+     "fraction": {
+      "C": 0.9894,
+      "R": 0.0,
+      "I": 0.0106
+     }
+    },
+    "last_20ns": {
+     "C": 1993,
+     "R": 0,
+     "I": 7,
+     "n": 2000,
+     "fraction": {
+      "C": 0.9965,
+      "R": 0.0,
+      "I": 0.0035
+     }
+    }
+   },
+   "verdict": {
+    "verdict": "CONVERTED",
+    "W": 2000,
+    "c_start": 0,
+    "c_opposite": 1993,
+    "c_intermediate": 7,
+    "test_converted": "10*1993 >= 9*2000 : True",
+    "test_stayed": "10*0 >= 9*2000 : False",
+    "window_complete": true
+   },
+   "visits": {
+    "assigned": {
+     "C": 10000,
+     "R": 0
+    },
+    "n_visits": 1,
+    "n_visits_by_state": {
+     "C": 1,
+     "R": 0
+    },
+    "n_long_visits": 1,
+    "long_visits": [
+     {
+      "state": "C",
+      "first_frame": 0,
+      "n_frames": 10000,
+      "t_first": 0.01,
+      "fraction_strict": 0.9913
+     }
+    ],
+    "longest_visit_in_opposite_state_frames": 10000,
+    "longest_visit_in_start_state_frames": 0,
+    "first_passage_ns": 0.01,
+    "first_passage_frame": 0,
+    "n_transitions": 1,
+    "first_frame_state": "C",
+    "first_frame_not_in_start_state": {
+     "frame": 0,
+     "t_ns": 0.01,
+     "state": "C"
+    },
+    "first_frame_in_opposite_state": {
+     "frame": 0,
+     "t_ns": 0.01
+    }
+   },
+   "equilibration_steps": [
+    {
+     "tag": "eq01",
+     "frames": 10,
+     "time_start_ps": 0.0,
+     "time_end_ps": 100.0,
+     "header_step_fs": 2.0,
+     "header_first_frame_ps": 10.0,
+     "header_agrees_with_S_plus_10ps": true,
+     "restraint_atoms": "solute_heavy",
+     "states": {
+      "C": 0,
+      "R": 10,
+      "I": 0
+     },
+     "n2_sign": {
+      "plus": 0,
+      "minus": 10
+     },
+     "last_frame": {
+      "state": "R",
+      "d1": 9.822,
+      "d2": 2.783,
+      "lig_rmsd": 3.685,
+      "n2_vol": -0.583
+     }
+    },
+    {
+     "tag": "eq02",
+     "frames": 30,
+     "time_start_ps": 100.0,
+     "time_end_ps": 400.0,
+     "header_step_fs": 2.0,
+     "header_first_frame_ps": 110.0,
+     "header_agrees_with_S_plus_10ps": true,
+     "restraint_atoms": "solute_heavy",
+     "states": {
+      "C": 0,
+      "R": 30,
+      "I": 0
+     },
+     "n2_sign": {
+      "plus": 0,
+      "minus": 30
+     },
+     "last_frame": {
+      "state": "R",
+      "d1": 9.327,
+      "d2": 2.898,
+      "lig_rmsd": 3.576,
+      "n2_vol": -0.649
+     }
+    },
+    {
+     "tag": "eq03",
+     "frames": 30,
+     "time_start_ps": 400.0,
+     "time_end_ps": 700.0,
+     "header_step_fs": 2.0,
+     "header_first_frame_ps": 410.0,
+     "header_agrees_with_S_plus_10ps": true,
+     "restraint_atoms": "solute_heavy",
+     "states": {
+      "C": 0,
+      "R": 30,
+      "I": 0
+     },
+     "n2_sign": {
+      "plus": 0,
+      "minus": 30
+     },
+     "last_frame": {
+      "state": "R",
+      "d1": 9.439,
+      "d2": 2.952,
+      "lig_rmsd": 3.511,
+      "n2_vol": -0.427
+     }
+    },
+    {
+     "tag": "eq03x1",
+     "frames": 50,
+     "time_start_ps": 700.0,
+     "time_end_ps": 1200.0,
+     "header_step_fs": 2.0,
+     "header_first_frame_ps": 710.0,
+     "header_agrees_with_S_plus_10ps": true,
+     "restraint_atoms": "solute_heavy",
+     "states": {
+      "C": 0,
+      "R": 50,
+      "I": 0
+     },
+     "n2_sign": {
+      "plus": 0,
+      "minus": 50
+     },
+     "last_frame": {
+      "state": "R",
+      "d1": 10.267,
+      "d2": 2.782,
+      "lig_rmsd": 3.695,
+      "n2_vol": -0.642
+     }
+    },
+    {
+     "tag": "eq04",
+     "frames": 40,
+     "time_start_ps": 1200.0,
+     "time_end_ps": 1600.0,
+     "header_step_fs": 4.0,
+     "header_first_frame_ps": 1210.0,
+     "header_agrees_with_S_plus_10ps": true,
+     "restraint_atoms": "protein_backbone",
+     "states": {
+      "C": 12,
+      "R": 26,
+      "I": 2
+     },
+     "n2_sign": {
+      "plus": 15,
+      "minus": 25
+     },
+     "last_frame": {
+      "state": "C",
+      "d1": 3.162,
+      "d2": 7.264,
+      "lig_rmsd": 1.074,
+      "n2_vol": 0.73
+     }
+    },
+    {
+     "tag": "eq05",
+     "frames": 40,
+     "time_start_ps": 1600.0,
+     "time_end_ps": 2000.0,
+     "header_step_fs": 4.0,
+     "header_first_frame_ps": 1610.0,
+     "header_agrees_with_S_plus_10ps": true,
+     "restraint_atoms": "protein_backbone",
+     "states": {
+      "C": 31,
+      "R": 1,
+      "I": 8
+     },
+     "n2_sign": {
+      "plus": 40,
+      "minus": 0
+     },
+     "last_frame": {
+      "state": "C",
+      "d1": 5.416,
+      "d2": 5.305,
+      "lig_rmsd": 1.711,
+      "n2_vol": 0.726
+     }
+    },
+    {
+     "tag": "eq06",
+     "frames": 50,
+     "time_start_ps": 2000.0,
+     "time_end_ps": 2500.0,
+     "header_step_fs": 4.0,
+     "header_first_frame_ps": 2010.0,
+     "header_agrees_with_S_plus_10ps": true,
+     "restraint_atoms": "none",
+     "states": {
+      "C": 49,
+      "R": 0,
+      "I": 1
+     },
+     "n2_sign": {
+      "plus": 50,
+      "minus": 0
+     },
+     "last_frame": {
+      "state": "C",
+      "d1": 4.695,
+      "d2": 6.914,
+      "lig_rmsd": 0.713,
+      "n2_vol": 0.723
+     }
+    }
+   ],
+   "conversion": {
+    "n_frames_stage4_5_6": [
+     40,
+     40,
+     50
+    ],
+    "n_equilibration_frames_joined": 130,
+    "expected_130_frames_1300_ps": true,
+    "time_of_joined_frame_k_from_release_ps": "(k + 1) * 10, k from 0",
+    "states_in_stage4_5_6": {
+     "C": 92,
+     "R": 27,
+     "I": 11
+    },
+    "first_frame_in_opposite_state_joined": {
+     "joined_frame": 26,
+     "t_from_release_ps": 270.0
+    },
+    "last_frame_in_start_state_joined": {
+     "joined_frame": 52,
+     "t_from_release_ps": 530.0
+    },
+    "n_long_visits_joined": 1,
+    "long_visits_joined": [
+     {
+      "state": "C",
+      "first_joined_frame": 53,
+      "n_frames": 10077,
+      "t_first_from_release_ps": 540.0
+     }
+    ],
+    "n_transitions_joined": 1,
+    "production_frames_in_start_state": 0,
+    "has_conversion_time": true,
+    "where": "equilibration",
+    "t_from_release_ps": 540.0,
+    "t_from_release_ns": 0.54,
+    "t_in_production_ns": null,
+    "stage_of_that_frame": "eq05",
+    "report": "converted during the equilibration, 540 ps after release"
+   },
+   "lig_rmsd_A": {
+    "mean_whole": 0.5379,
+    "mean_last_half": 0.4969,
+    "mean_first_half": 0.5788,
+    "mean_last_20ns": 0.4889,
+    "sd_whole": 0.2063,
+    "min": 0.1213,
+    "max": 1.8984,
+    "n_frames_last_half": 5000,
+    "identity_labelling_mean_whole": 0.5379,
+    "identity_labelling_mean_last_half": 0.4969,
+    "frames_by_best_labelling": {
+     "identity": 10000,
+     "ring_flip": 0,
+     "oxygen_swap": 0,
+     "ring_flip+oxygen_swap": 0
+    },
+    "frames_above_2A_whole": 0,
+    "frames_above_2A_last_half": 0,
+    "rule1_mean_last_half_above_2A": false
+   },
+   "hbond_N2H_T199OG1": {
+    "count": 9991,
+    "n": 10000,
+    "fraction": 0.9991,
+    "fraction_last_half": 0.9988,
+    "mean_N2_OG1_A": 2.9502,
+    "mean_angle_deg": 166.45,
+    "fraction_distance_ok": 0.9993,
+    "fraction_angle_ok": 0.9998,
+    "by_state": {
+     "C": {
+      "n": 9913,
+      "fraction": 0.9991
+     },
+     "R": null,
+     "I": {
+      "n": 87,
+      "fraction": 1.0
+     }
+    }
+   },
+   "zinc": {
+    "mean_Zn_N2_A": 1.9262,
+    "mean_Zn_H94NE2_A": 2.0181,
+    "mean_Zn_H96NE2_A": 2.0434,
+    "mean_Zn_H119ND1_A": 2.0355,
+    "sd_Zn_N2_A": 0.0488,
+    "sd_Zn_H94NE2_A": 0.0581,
+    "sd_Zn_H96NE2_A": 0.0605,
+    "sd_Zn_H119ND1_A": 0.0604,
+    "max_of_the_four_A": 2.2693,
+    "sulfonyl_O_within_2.6A": {
+     "count": 10,
+     "n": 10000,
+     "fraction": 0.001,
+     "at_most_5_percent_integers": true
+    },
+    "mean_Zn_Osulfonyl_min_A": 2.9743,
+    "min_Zn_Osulfonyl_min_A": 2.5336,
+    "mean_Zn_O1_A": 4.007,
+    "mean_Zn_O2_A": 2.9743
+   },
+   "n2_configuration": {
+    "sign_of_start": -1,
+    "frames_plus": 10000,
+    "frames_minus": 0,
+    "frames_zero": 0,
+    "fraction_plus": 1.0,
+    "fraction_minus": 0.0,
+    "mean_volume": 0.6954,
+    "mean_volume_last_half": 0.698,
+    "min_volume": 0.2649,
+    "max_volume": 0.9002,
+    "frames_abs_volume_below_0.1": 0,
+    "n_sign_visits": 1,
+    "n_long_sign_visits": 1,
+    "long_sign_visits": [
+     {
+      "sign": 1,
+      "first_frame": 0,
+      "n_frames": 10000,
+      "t_first_ns": 0.01
+     }
+    ],
+    "n_lasting_sign_changes": 1,
+    "first_frame_with_other_sign_production": {
+     "frame": 0,
+     "t_ns": 0.01
+    },
+    "first_lasting_change_production_ns": 0.01,
+    "sign_by_state": {
+     "C": {
+      "plus": 9913,
+      "minus": 0
+     },
+     "R": {
+      "plus": 0,
+      "minus": 0
+     },
+     "I": {
+      "plus": 87,
+      "minus": 0
+     }
+    },
+    "joined_release_series": {
+     "sign_in_stage4_5_6": {
+      "plus": 105,
+      "minus": 25
+     },
+     "first_frame_with_other_sign": {
+      "joined_frame": 25,
+      "t_from_release_ps": 260.0
+     },
+     "first_lasting_change": {
+      "joined_frame": 25,
+      "t_from_release_ps": 260.0,
+      "where": "equilibration",
+      "t_in_production_ns": null,
+      "length_of_that_visit_frames": 10105
+     },
+     "n_lasting_sign_changes": 1
+    },
+    "sign_in_held_steps_before_release": {
+     "eq01": {
+      "plus": 0,
+      "minus": 10
+     },
+     "eq02": {
+      "plus": 0,
+      "minus": 30
+     },
+     "eq03": {
+      "plus": 0,
+      "minus": 30
+     },
+     "eq03x1": {
+      "plus": 0,
+      "minus": 50
+     }
+    }
+   },
+   "wall_s": 5.1,
+   "extras": {
+    "states_frame_by_frame_stage4_5_6": {
+     "eq04": "RRRRRRRRRRRRRRRRRRRRRRRRRRCCCCIICCCCCCCC",
+     "eq05": "CIICCIICICCIRCICCCCCCICCCCCCCCCCCCCCCCCC",
+     "eq06": "CCCCCICCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC"
+    },
+    "hbond_in_stage4_5_6": {
+     "count": 128,
+     "n": 130
+    },
+    "visits_in_start_state_production": {
+     "n": 0,
+     "longest_frames": 0,
+     "total_assigned_frames": 0
+    },
+    "visits_in_last_20ns_by_assigned_state": {
+     "C": 1,
+     "R": 0
+    },
+    "frames_within_0.0001A_of_a_midpoint": 0,
+    "hydration_check_of_the_driver_from_manifest": {
+     "applies": true,
+     "counts": [
+      {
+       "step": "eq03",
+       "time_end_ps": 700.0,
+       "n_water_O": 0,
+       "nearest_water_O_A": 3.293,
+       "ligand_mean_distance_from_site_A": 3.628,
+       "applies": true,
+       "decision": "extend"
+      },
+      {
+       "step": "eq03x1",
+       "time_end_ps": 1200.0,
+       "n_water_O": 2,
+       "nearest_water_O_A": 0.745,
+       "ligand_mean_distance_from_site_A": 3.851,
+       "applies": true,
+       "decision": "go on"
+      }
+     ],
+     "n_extensions": 1,
+     "final_decision": "go on: 2 water oxygens at the site",
+     "site_without_water_when_the_solute_was_released": false
+    }
+   },
+   "key_numbers_one_line": "bonded_2e/R1 start R (production): N=10000; d1 mean 4.713, d2 mean 7.602 A; states C/R/I whole 9913/0/87, last 20 ns 1993/0/7; verdict CONVERTED; visits 1 (long 1), transitions 1, first passage in production 0.01 ns; conversion time: converted during the equilibration, 540 ps after release; lig RMSD mean 0.538, last half 0.497 A; H-bond 0.9991; Zn-N2 1.926, Zn-N(His94/96/119) 2.018/2.043/2.035 A; sulfonyl O within 2.6 A of Zn 0.0010 (10 frames); N2 sign +/- 1.0000/0.0000, first lasting change 260 ps after release (equilibration)"
+  },
+  "bonded_2e/R2": {
+   "set": "bonded_2e",
+   "run": "R2",
+   "start": "R",
+   "role": "production",
+   "folder": "/root/cqc-sfa-md/runs/bonded_2e/R2",
+   "state_of_start": "R",
+   "opposite_state": "C",
+   "frames": {
+    "n_production_frames": 10000,
+    "n_segment_files": 20,
+    "frames_per_file": [
+     500
+    ],
+    "manifest_frames_solute": 10000,
+    "manifest_completed_ns": 100.0,
+    "manifest_n_segments_complete": 20,
+    "manifest_status": "complete",
+    "dcd_headers_consistent_with_10ps_and_contiguous_time": true,
+    "time_of_frame_n_ns": "(n + 1) * 0.01, n from 0"
+   },
+   "imaging_and_fit": {
+    "frames_zinc_moved_by_a_lattice_vector": 0,
+    "frames_ligand_moved_by_a_lattice_vector": 0,
+    "max_abs_d1_minus_minimum_image_d1_A": 0.0,
+    "max_abs_d2_minus_minimum_image_d2_A": 0.0,
+    "ca_rmsd_to_reference_A": {
+     "mean": 0.9474,
+     "sd": 0.087,
+     "min": 0.6331,
+     "max": 1.4356
+    }
+   },
+   "d1_A": {
+    "whole": {
+     "mean": 4.5724,
+     "sd": 0.6897,
+     "min": 2.839,
+     "max": 7.8507
+    },
+    "last_half": {
+     "mean": 4.6806,
+     "sd": 0.6942,
+     "min": 3.1577,
+     "max": 7.3149
+    },
+    "last_20ns": {
+     "mean": 4.7074,
+     "sd": 0.6829,
+     "min": 3.1577,
+     "max": 7.2901
+    }
+   },
+   "d2_A": {
+    "whole": {
+     "mean": 7.724,
+     "sd": 0.6279,
+     "min": 4.5086,
+     "max": 10.0357
+    },
+    "last_half": {
+     "mean": 7.829,
+     "sd": 0.5691,
+     "min": 5.2637,
+     "max": 9.5513
+    },
+    "last_20ns": {
+     "mean": 7.7921,
+     "sd": 0.5516,
+     "min": 5.891,
+     "max": 9.5513
+    }
+   },
+   "frames_exactly_on_a_midpoint": 0,
+   "states": {
+    "whole": {
+     "C": 9963,
+     "R": 0,
+     "I": 37,
+     "n": 10000,
+     "fraction": {
+      "C": 0.9963,
+      "R": 0.0,
+      "I": 0.0037
+     }
+    },
+    "last_half": {
+     "C": 4977,
+     "R": 0,
+     "I": 23,
+     "n": 5000,
+     "fraction": {
+      "C": 0.9954,
+      "R": 0.0,
+      "I": 0.0046
+     }
+    },
+    "last_20ns": {
+     "C": 1993,
+     "R": 0,
+     "I": 7,
+     "n": 2000,
+     "fraction": {
+      "C": 0.9965,
+      "R": 0.0,
+      "I": 0.0035
+     }
+    }
+   },
+   "verdict": {
+    "verdict": "CONVERTED",
+    "W": 2000,
+    "c_start": 0,
+    "c_opposite": 1993,
+    "c_intermediate": 7,
+    "test_converted": "10*1993 >= 9*2000 : True",
+    "test_stayed": "10*0 >= 9*2000 : False",
+    "window_complete": true
+   },
+   "visits": {
+    "assigned": {
+     "C": 10000,
+     "R": 0
+    },
+    "n_visits": 1,
+    "n_visits_by_state": {
+     "C": 1,
+     "R": 0
+    },
+    "n_long_visits": 1,
+    "long_visits": [
+     {
+      "state": "C",
+      "first_frame": 0,
+      "n_frames": 10000,
+      "t_first": 0.01,
+      "fraction_strict": 0.9963
+     }
+    ],
+    "longest_visit_in_opposite_state_frames": 10000,
+    "longest_visit_in_start_state_frames": 0,
+    "first_passage_ns": 0.01,
+    "first_passage_frame": 0,
+    "n_transitions": 1,
+    "first_frame_state": "C",
+    "first_frame_not_in_start_state": {
+     "frame": 0,
+     "t_ns": 0.01,
+     "state": "C"
+    },
+    "first_frame_in_opposite_state": {
+     "frame": 0,
+     "t_ns": 0.01
+    }
+   },
+   "equilibration_steps": [
+    {
+     "tag": "eq01",
+     "frames": 10,
+     "time_start_ps": 0.0,
+     "time_end_ps": 100.0,
+     "header_step_fs": 2.0,
+     "header_first_frame_ps": 10.0,
+     "header_agrees_with_S_plus_10ps": true,
+     "restraint_atoms": "solute_heavy",
+     "states": {
+      "C": 0,
+      "R": 10,
+      "I": 0
+     },
+     "n2_sign": {
+      "plus": 0,
+      "minus": 10
+     },
+     "last_frame": {
+      "state": "R",
+      "d1": 9.709,
+      "d2": 2.847,
+      "lig_rmsd": 3.586,
+      "n2_vol": -0.409
+     }
+    },
+    {
+     "tag": "eq02",
+     "frames": 30,
+     "time_start_ps": 100.0,
+     "time_end_ps": 400.0,
+     "header_step_fs": 2.0,
+     "header_first_frame_ps": 110.0,
+     "header_agrees_with_S_plus_10ps": true,
+     "restraint_atoms": "solute_heavy",
+     "states": {
+      "C": 0,
+      "R": 30,
+      "I": 0
+     },
+     "n2_sign": {
+      "plus": 0,
+      "minus": 30
+     },
+     "last_frame": {
+      "state": "R",
+      "d1": 10.09,
+      "d2": 2.749,
+      "lig_rmsd": 3.668,
+      "n2_vol": -0.601
+     }
+    },
+    {
+     "tag": "eq03",
+     "frames": 30,
+     "time_start_ps": 400.0,
+     "time_end_ps": 700.0,
+     "header_step_fs": 2.0,
+     "header_first_frame_ps": 410.0,
+     "header_agrees_with_S_plus_10ps": true,
+     "restraint_atoms": "solute_heavy",
+     "states": {
+      "C": 0,
+      "R": 30,
+      "I": 0
+     },
+     "n2_sign": {
+      "plus": 0,
+      "minus": 30
+     },
+     "last_frame": {
+      "state": "R",
+      "d1": 9.907,
+      "d2": 2.74,
+      "lig_rmsd": 3.783,
+      "n2_vol": -0.468
+     }
+    },
+    {
+     "tag": "eq04",
+     "frames": 40,
+     "time_start_ps": 700.0,
+     "time_end_ps": 1100.0,
+     "header_step_fs": 4.0,
+     "header_first_frame_ps": 710.0,
+     "header_agrees_with_S_plus_10ps": true,
+     "restraint_atoms": "protein_backbone",
+     "states": {
+      "C": 4,
+      "R": 35,
+      "I": 1
+     },
+     "n2_sign": {
+      "plus": 5,
+      "minus": 35
+     },
+     "last_frame": {
+      "state": "C",
+      "d1": 4.634,
+      "d2": 6.686,
+      "lig_rmsd": 0.524,
+      "n2_vol": 0.461
+     }
+    },
+    {
+     "tag": "eq05",
+     "frames": 40,
+     "time_start_ps": 1100.0,
+     "time_end_ps": 1500.0,
+     "header_step_fs": 4.0,
+     "header_first_frame_ps": 1110.0,
+     "header_agrees_with_S_plus_10ps": true,
+     "restraint_atoms": "protein_backbone",
+     "states": {
+      "C": 40,
+      "R": 0,
+      "I": 0
+     },
+     "n2_sign": {
+      "plus": 40,
+      "minus": 0
+     },
+     "last_frame": {
+      "state": "C",
+      "d1": 3.579,
+      "d2": 7.26,
+      "lig_rmsd": 0.207,
+      "n2_vol": 0.75
+     }
+    },
+    {
+     "tag": "eq06",
+     "frames": 50,
+     "time_start_ps": 1500.0,
+     "time_end_ps": 2000.0,
+     "header_step_fs": 4.0,
+     "header_first_frame_ps": 1510.0,
+     "header_agrees_with_S_plus_10ps": true,
+     "restraint_atoms": "none",
+     "states": {
+      "C": 50,
+      "R": 0,
+      "I": 0
+     },
+     "n2_sign": {
+      "plus": 50,
+      "minus": 0
+     },
+     "last_frame": {
+      "state": "C",
+      "d1": 5.86,
+      "d2": 7.616,
+      "lig_rmsd": 1.154,
+      "n2_vol": 0.763
+     }
+    }
+   ],
+   "conversion": {
+    "n_frames_stage4_5_6": [
+     40,
+     40,
+     50
+    ],
+    "n_equilibration_frames_joined": 130,
+    "expected_130_frames_1300_ps": true,
+    "time_of_joined_frame_k_from_release_ps": "(k + 1) * 10, k from 0",
+    "states_in_stage4_5_6": {
+     "C": 94,
+     "R": 35,
+     "I": 1
+    },
+    "first_frame_in_opposite_state_joined": {
+     "joined_frame": 36,
+     "t_from_release_ps": 370.0
+    },
+    "last_frame_in_start_state_joined": {
+     "joined_frame": 34,
+     "t_from_release_ps": 350.0
+    },
+    "n_long_visits_joined": 1,
+    "long_visits_joined": [
+     {
+      "state": "C",
+      "first_joined_frame": 36,
+      "n_frames": 10094,
+      "t_first_from_release_ps": 370.0
+     }
+    ],
+    "n_transitions_joined": 1,
+    "production_frames_in_start_state": 0,
+    "has_conversion_time": true,
+    "where": "equilibration",
+    "t_from_release_ps": 370.0,
+    "t_from_release_ns": 0.37,
+    "t_in_production_ns": null,
+    "stage_of_that_frame": "eq04",
+    "report": "converted during the equilibration, 370 ps after release"
+   },
+   "lig_rmsd_A": {
+    "mean_whole": 0.5458,
+    "mean_last_half": 0.509,
+    "mean_first_half": 0.5826,
+    "mean_last_20ns": 0.5108,
+    "sd_whole": 0.2363,
+    "min": 0.109,
+    "max": 1.8196,
+    "n_frames_last_half": 5000,
+    "identity_labelling_mean_whole": 0.5458,
+    "identity_labelling_mean_last_half": 0.509,
+    "frames_by_best_labelling": {
+     "identity": 10000,
+     "ring_flip": 0,
+     "oxygen_swap": 0,
+     "ring_flip+oxygen_swap": 0
+    },
+    "frames_above_2A_whole": 0,
+    "frames_above_2A_last_half": 0,
+    "rule1_mean_last_half_above_2A": false
+   },
+   "hbond_N2H_T199OG1": {
+    "count": 9982,
+    "n": 10000,
+    "fraction": 0.9982,
+    "fraction_last_half": 0.999,
+    "mean_N2_OG1_A": 2.9457,
+    "mean_angle_deg": 165.85,
+    "fraction_distance_ok": 0.999,
+    "fraction_angle_ok": 0.9992,
+    "by_state": {
+     "C": {
+      "n": 9963,
+      "fraction": 0.9982
+     },
+     "R": null,
+     "I": {
+      "n": 37,
+      "fraction": 1.0
+     }
+    }
+   },
+   "zinc": {
+    "mean_Zn_N2_A": 1.9249,
+    "mean_Zn_H94NE2_A": 2.0141,
+    "mean_Zn_H96NE2_A": 2.0417,
+    "mean_Zn_H119ND1_A": 2.0382,
+    "sd_Zn_N2_A": 0.0483,
+    "sd_Zn_H94NE2_A": 0.0587,
+    "sd_Zn_H96NE2_A": 0.0611,
+    "sd_Zn_H119ND1_A": 0.06,
+    "max_of_the_four_A": 2.2911,
+    "sulfonyl_O_within_2.6A": {
+     "count": 13,
+     "n": 10000,
+     "fraction": 0.0013,
+     "at_most_5_percent_integers": true
+    },
+    "mean_Zn_Osulfonyl_min_A": 2.9761,
+    "min_Zn_Osulfonyl_min_A": 2.4942,
+    "mean_Zn_O1_A": 4.0095,
+    "mean_Zn_O2_A": 2.9761
+   },
+   "n2_configuration": {
+    "sign_of_start": -1,
+    "frames_plus": 10000,
+    "frames_minus": 0,
+    "frames_zero": 0,
+    "fraction_plus": 1.0,
+    "fraction_minus": 0.0,
+    "mean_volume": 0.6964,
+    "mean_volume_last_half": 0.6995,
+    "min_volume": 0.1806,
+    "max_volume": 0.8966,
+    "frames_abs_volume_below_0.1": 0,
+    "n_sign_visits": 1,
+    "n_long_sign_visits": 1,
+    "long_sign_visits": [
+     {
+      "sign": 1,
+      "first_frame": 0,
+      "n_frames": 10000,
+      "t_first_ns": 0.01
+     }
+    ],
+    "n_lasting_sign_changes": 1,
+    "first_frame_with_other_sign_production": {
+     "frame": 0,
+     "t_ns": 0.01
+    },
+    "first_lasting_change_production_ns": 0.01,
+    "sign_by_state": {
+     "C": {
+      "plus": 9963,
+      "minus": 0
+     },
+     "R": {
+      "plus": 0,
+      "minus": 0
+     },
+     "I": {
+      "plus": 37,
+      "minus": 0
+     }
+    },
+    "joined_release_series": {
+     "sign_in_stage4_5_6": {
+      "plus": 95,
+      "minus": 35
+     },
+     "first_frame_with_other_sign": {
+      "joined_frame": 35,
+      "t_from_release_ps": 360.0
+     },
+     "first_lasting_change": {
+      "joined_frame": 35,
+      "t_from_release_ps": 360.0,
+      "where": "equilibration",
+      "t_in_production_ns": null,
+      "length_of_that_visit_frames": 10095
+     },
+     "n_lasting_sign_changes": 1
+    },
+    "sign_in_held_steps_before_release": {
+     "eq01": {
+      "plus": 0,
+      "minus": 10
+     },
+     "eq02": {
+      "plus": 0,
+      "minus": 30
+     },
+     "eq03": {
+      "plus": 0,
+      "minus": 30
+     }
+    }
+   },
+   "wall_s": 5.4,
+   "extras": {
+    "states_frame_by_frame_stage4_5_6": {
+     "eq04": "RRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRICCCC",
+     "eq05": "CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC",
+     "eq06": "CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC"
+    },
+    "hbond_in_stage4_5_6": {
+     "count": 130,
+     "n": 130
+    },
+    "visits_in_start_state_production": {
+     "n": 0,
+     "longest_frames": 0,
+     "total_assigned_frames": 0
+    },
+    "visits_in_last_20ns_by_assigned_state": {
+     "C": 1,
+     "R": 0
+    },
+    "frames_within_0.0001A_of_a_midpoint": 0,
+    "hydration_check_of_the_driver_from_manifest": {
+     "applies": true,
+     "counts": [
+      {
+       "step": "eq03",
+       "time_end_ps": 700.0,
+       "n_water_O": 2,
+       "nearest_water_O_A": 0.885,
+       "ligand_mean_distance_from_site_A": 3.886,
+       "applies": true,
+       "decision": "go on"
+      }
+     ],
+     "n_extensions": 0,
+     "final_decision": "go on: 2 water oxygens at the site",
+     "site_without_water_when_the_solute_was_released": false
+    }
+   },
+   "key_numbers_one_line": "bonded_2e/R2 start R (production): N=10000; d1 mean 4.572, d2 mean 7.724 A; states C/R/I whole 9963/0/37, last 20 ns 1993/0/7; verdict CONVERTED; visits 1 (long 1), transitions 1, first passage in production 0.01 ns; conversion time: converted during the equilibration, 370 ps after release; lig RMSD mean 0.546, last half 0.509 A; H-bond 0.9982; Zn-N2 1.925, Zn-N(His94/96/119) 2.014/2.042/2.038 A; sulfonyl O within 2.6 A of Zn 0.0013 (13 frames); N2 sign +/- 1.0000/0.0000, first lasting change 360 ps after release (equilibration)"
+  },
+  "bonded_2e/R3": {
+   "set": "bonded_2e",
+   "run": "R3",
+   "start": "R",
+   "role": "production",
+   "folder": "/root/cqc-sfa-md/runs/bonded_2e/R3",
+   "state_of_start": "R",
+   "opposite_state": "C",
+   "frames": {
+    "n_production_frames": 10000,
+    "n_segment_files": 20,
+    "frames_per_file": [
+     500
+    ],
+    "manifest_frames_solute": 10000,
+    "manifest_completed_ns": 100.0,
+    "manifest_n_segments_complete": 20,
+    "manifest_status": "complete",
+    "dcd_headers_consistent_with_10ps_and_contiguous_time": true,
+    "time_of_frame_n_ns": "(n + 1) * 0.01, n from 0"
+   },
+   "imaging_and_fit": {
+    "frames_zinc_moved_by_a_lattice_vector": 0,
+    "frames_ligand_moved_by_a_lattice_vector": 0,
+    "max_abs_d1_minus_minimum_image_d1_A": 0.0,
+    "max_abs_d2_minus_minimum_image_d2_A": 0.0,
+    "ca_rmsd_to_reference_A": {
+     "mean": 0.9061,
+     "sd": 0.0948,
+     "min": 0.6111,
+     "max": 1.2252
+    }
+   },
+   "d1_A": {
+    "whole": {
+     "mean": 4.5275,
+     "sd": 0.6836,
+     "min": 3.0007,
+     "max": 8.0827
+    },
+    "last_half": {
+     "mean": 4.3915,
+     "sd": 0.6026,
+     "min": 3.0007,
+     "max": 6.8323
+    },
+    "last_20ns": {
+     "mean": 4.3397,
+     "sd": 0.5946,
+     "min": 3.0007,
+     "max": 6.6395
+    }
+   },
+   "d2_A": {
+    "whole": {
+     "mean": 7.6947,
+     "sd": 0.6234,
+     "min": 4.5334,
+     "max": 9.7656
+    },
+    "last_half": {
+     "mean": 7.8751,
+     "sd": 0.5619,
+     "min": 4.5334,
+     "max": 9.7656
+    },
+    "last_20ns": {
+     "mean": 7.9857,
+     "sd": 0.4878,
+     "min": 5.9094,
+     "max": 9.7656
+    }
+   },
+   "frames_exactly_on_a_midpoint": 0,
+   "states": {
+    "whole": {
+     "C": 9951,
+     "R": 0,
+     "I": 49,
+     "n": 10000,
+     "fraction": {
+      "C": 0.9951,
+      "R": 0.0,
+      "I": 0.0049
+     }
+    },
+    "last_half": {
+     "C": 4990,
+     "R": 0,
+     "I": 10,
+     "n": 5000,
+     "fraction": {
+      "C": 0.998,
+      "R": 0.0,
+      "I": 0.002
+     }
+    },
+    "last_20ns": {
+     "C": 2000,
+     "R": 0,
+     "I": 0,
+     "n": 2000,
+     "fraction": {
+      "C": 1.0,
+      "R": 0.0,
+      "I": 0.0
+     }
+    }
+   },
+   "verdict": {
+    "verdict": "CONVERTED",
+    "W": 2000,
+    "c_start": 0,
+    "c_opposite": 2000,
+    "c_intermediate": 0,
+    "test_converted": "10*2000 >= 9*2000 : True",
+    "test_stayed": "10*0 >= 9*2000 : False",
+    "window_complete": true
+   },
+   "visits": {
+    "assigned": {
+     "C": 10000,
+     "R": 0
+    },
+    "n_visits": 1,
+    "n_visits_by_state": {
+     "C": 1,
+     "R": 0
+    },
+    "n_long_visits": 1,
+    "long_visits": [
+     {
+      "state": "C",
+      "first_frame": 0,
+      "n_frames": 10000,
+      "t_first": 0.01,
+      "fraction_strict": 0.9951
+     }
+    ],
+    "longest_visit_in_opposite_state_frames": 10000,
+    "longest_visit_in_start_state_frames": 0,
+    "first_passage_ns": 0.01,
+    "first_passage_frame": 0,
+    "n_transitions": 1,
+    "first_frame_state": "C",
+    "first_frame_not_in_start_state": {
+     "frame": 0,
+     "t_ns": 0.01,
+     "state": "C"
+    },
+    "first_frame_in_opposite_state": {
+     "frame": 0,
+     "t_ns": 0.01
+    }
+   },
+   "equilibration_steps": [
+    {
+     "tag": "eq01",
+     "frames": 10,
+     "time_start_ps": 0.0,
+     "time_end_ps": 100.0,
+     "header_step_fs": 2.0,
+     "header_first_frame_ps": 10.0,
+     "header_agrees_with_S_plus_10ps": true,
+     "restraint_atoms": "solute_heavy",
+     "states": {
+      "C": 0,
+      "R": 10,
+      "I": 0
+     },
+     "n2_sign": {
+      "plus": 0,
+      "minus": 10
+     },
+     "last_frame": {
+      "state": "R",
+      "d1": 10.21,
+      "d2": 2.829,
+      "lig_rmsd": 3.77,
+      "n2_vol": -0.632
+     }
+    },
+    {
+     "tag": "eq02",
+     "frames": 30,
+     "time_start_ps": 100.0,
+     "time_end_ps": 400.0,
+     "header_step_fs": 2.0,
+     "header_first_frame_ps": 110.0,
+     "header_agrees_with_S_plus_10ps": true,
+     "restraint_atoms": "solute_heavy",
+     "states": {
+      "C": 0,
+      "R": 30,
+      "I": 0
+     },
+     "n2_sign": {
+      "plus": 0,
+      "minus": 30
+     },
+     "last_frame": {
+      "state": "R",
+      "d1": 9.56,
+      "d2": 3.057,
+      "lig_rmsd": 3.551,
+      "n2_vol": -0.661
+     }
+    },
+    {
+     "tag": "eq03",
+     "frames": 30,
+     "time_start_ps": 400.0,
+     "time_end_ps": 700.0,
+     "header_step_fs": 2.0,
+     "header_first_frame_ps": 410.0,
+     "header_agrees_with_S_plus_10ps": true,
+     "restraint_atoms": "solute_heavy",
+     "states": {
+      "C": 0,
+      "R": 30,
+      "I": 0
+     },
+     "n2_sign": {
+      "plus": 0,
+      "minus": 30
+     },
+     "last_frame": {
+      "state": "R",
+      "d1": 9.632,
+      "d2": 2.745,
+      "lig_rmsd": 3.619,
+      "n2_vol": -0.643
+     }
+    },
+    {
+     "tag": "eq04",
+     "frames": 40,
+     "time_start_ps": 700.0,
+     "time_end_ps": 1100.0,
+     "header_step_fs": 4.0,
+     "header_first_frame_ps": 710.0,
+     "header_agrees_with_S_plus_10ps": true,
+     "restraint_atoms": "protein_backbone",
+     "states": {
+      "C": 25,
+      "R": 14,
+      "I": 1
+     },
+     "n2_sign": {
+      "plus": 27,
+      "minus": 13
+     },
+     "last_frame": {
+      "state": "C",
+      "d1": 3.792,
+      "d2": 7.98,
+      "lig_rmsd": 0.421,
+      "n2_vol": 0.594
+     }
+    },
+    {
+     "tag": "eq05",
+     "frames": 40,
+     "time_start_ps": 1100.0,
+     "time_end_ps": 1500.0,
+     "header_step_fs": 4.0,
+     "header_first_frame_ps": 1110.0,
+     "header_agrees_with_S_plus_10ps": true,
+     "restraint_atoms": "protein_backbone",
+     "states": {
+      "C": 40,
+      "R": 0,
+      "I": 0
+     },
+     "n2_sign": {
+      "plus": 40,
+      "minus": 0
+     },
+     "last_frame": {
+      "state": "C",
+      "d1": 4.646,
+      "d2": 6.423,
+      "lig_rmsd": 0.56,
+      "n2_vol": 0.702
+     }
+    },
+    {
+     "tag": "eq06",
+     "frames": 50,
+     "time_start_ps": 1500.0,
+     "time_end_ps": 2000.0,
+     "header_step_fs": 4.0,
+     "header_first_frame_ps": 1510.0,
+     "header_agrees_with_S_plus_10ps": true,
+     "restraint_atoms": "none",
+     "states": {
+      "C": 50,
+      "R": 0,
+      "I": 0
+     },
+     "n2_sign": {
+      "plus": 50,
+      "minus": 0
+     },
+     "last_frame": {
+      "state": "C",
+      "d1": 4.23,
+      "d2": 7.546,
+      "lig_rmsd": 0.27,
+      "n2_vol": 0.672
+     }
+    }
+   ],
+   "conversion": {
+    "n_frames_stage4_5_6": [
+     40,
+     40,
+     50
+    ],
+    "n_equilibration_frames_joined": 130,
+    "expected_130_frames_1300_ps": true,
+    "time_of_joined_frame_k_from_release_ps": "(k + 1) * 10, k from 0",
+    "states_in_stage4_5_6": {
+     "C": 115,
+     "R": 14,
+     "I": 1
+    },
+    "first_frame_in_opposite_state_joined": {
+     "joined_frame": 15,
+     "t_from_release_ps": 160.0
+    },
+    "last_frame_in_start_state_joined": {
+     "joined_frame": 13,
+     "t_from_release_ps": 140.0
+    },
+    "n_long_visits_joined": 1,
+    "long_visits_joined": [
+     {
+      "state": "C",
+      "first_joined_frame": 15,
+      "n_frames": 10115,
+      "t_first_from_release_ps": 160.0
+     }
+    ],
+    "n_transitions_joined": 1,
+    "production_frames_in_start_state": 0,
+    "has_conversion_time": true,
+    "where": "equilibration",
+    "t_from_release_ps": 160.0,
+    "t_from_release_ns": 0.16,
+    "t_in_production_ns": null,
+    "stage_of_that_frame": "eq04",
+    "report": "converted during the equilibration, 160 ps after release"
+   },
+   "lig_rmsd_A": {
+    "mean_whole": 0.5336,
+    "mean_last_half": 0.5309,
+    "mean_first_half": 0.5364,
+    "mean_last_20ns": 0.5316,
+    "sd_whole": 0.2114,
+    "min": 0.118,
+    "max": 2.0017,
+    "n_frames_last_half": 5000,
+    "identity_labelling_mean_whole": 0.5336,
+    "identity_labelling_mean_last_half": 0.5309,
+    "frames_by_best_labelling": {
+     "identity": 10000,
+     "ring_flip": 0,
+     "oxygen_swap": 0,
+     "ring_flip+oxygen_swap": 0
+    },
+    "frames_above_2A_whole": 1,
+    "frames_above_2A_last_half": 1,
+    "rule1_mean_last_half_above_2A": false
+   },
+   "hbond_N2H_T199OG1": {
+    "count": 9989,
+    "n": 10000,
+    "fraction": 0.9989,
+    "fraction_last_half": 0.999,
+    "mean_N2_OG1_A": 2.9455,
+    "mean_angle_deg": 165.91,
+    "fraction_distance_ok": 0.9996,
+    "fraction_angle_ok": 0.9992,
+    "by_state": {
+     "C": {
+      "n": 9951,
+      "fraction": 0.9989
+     },
+     "R": null,
+     "I": {
+      "n": 49,
+      "fraction": 1.0
+     }
+    }
+   },
+   "zinc": {
+    "mean_Zn_N2_A": 1.9266,
+    "mean_Zn_H94NE2_A": 2.0174,
+    "mean_Zn_H96NE2_A": 2.0448,
+    "mean_Zn_H119ND1_A": 2.0355,
+    "sd_Zn_N2_A": 0.0481,
+    "sd_Zn_H94NE2_A": 0.0592,
+    "sd_Zn_H96NE2_A": 0.0615,
+    "sd_Zn_H119ND1_A": 0.0605,
+    "max_of_the_four_A": 2.297,
+    "sulfonyl_O_within_2.6A": {
+     "count": 12,
+     "n": 10000,
+     "fraction": 0.0012,
+     "at_most_5_percent_integers": true
+    },
+    "mean_Zn_Osulfonyl_min_A": 2.9847,
+    "min_Zn_Osulfonyl_min_A": 2.5532,
+    "mean_Zn_O1_A": 4.0084,
+    "mean_Zn_O2_A": 2.9847
+   },
+   "n2_configuration": {
+    "sign_of_start": -1,
+    "frames_plus": 10000,
+    "frames_minus": 0,
+    "frames_zero": 0,
+    "fraction_plus": 1.0,
+    "fraction_minus": 0.0,
+    "mean_volume": 0.6961,
+    "mean_volume_last_half": 0.6987,
+    "min_volume": 0.2064,
+    "max_volume": 0.9143,
+    "frames_abs_volume_below_0.1": 0,
+    "n_sign_visits": 1,
+    "n_long_sign_visits": 1,
+    "long_sign_visits": [
+     {
+      "sign": 1,
+      "first_frame": 0,
+      "n_frames": 10000,
+      "t_first_ns": 0.01
+     }
+    ],
+    "n_lasting_sign_changes": 1,
+    "first_frame_with_other_sign_production": {
+     "frame": 0,
+     "t_ns": 0.01
+    },
+    "first_lasting_change_production_ns": 0.01,
+    "sign_by_state": {
+     "C": {
+      "plus": 9951,
+      "minus": 0
+     },
+     "R": {
+      "plus": 0,
+      "minus": 0
+     },
+     "I": {
+      "plus": 49,
+      "minus": 0
+     }
+    },
+    "joined_release_series": {
+     "sign_in_stage4_5_6": {
+      "plus": 117,
+      "minus": 13
+     },
+     "first_frame_with_other_sign": {
+      "joined_frame": 13,
+      "t_from_release_ps": 140.0
+     },
+     "first_lasting_change": {
+      "joined_frame": 13,
+      "t_from_release_ps": 140.0,
+      "where": "equilibration",
+      "t_in_production_ns": null,
+      "length_of_that_visit_frames": 10117
+     },
+     "n_lasting_sign_changes": 1
+    },
+    "sign_in_held_steps_before_release": {
+     "eq01": {
+      "plus": 0,
+      "minus": 10
+     },
+     "eq02": {
+      "plus": 0,
+      "minus": 30
+     },
+     "eq03": {
+      "plus": 0,
+      "minus": 30
+     }
+    }
+   },
+   "wall_s": 5.4,
+   "extras": {
+    "states_frame_by_frame_stage4_5_6": {
+     "eq04": "RRRRRRRRRRRRRRICCCCCCCCCCCCCCCCCCCCCCCCC",
+     "eq05": "CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC",
+     "eq06": "CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC"
+    },
+    "hbond_in_stage4_5_6": {
+     "count": 129,
+     "n": 130
+    },
+    "visits_in_start_state_production": {
+     "n": 0,
+     "longest_frames": 0,
+     "total_assigned_frames": 0
+    },
+    "visits_in_last_20ns_by_assigned_state": {
+     "C": 1,
+     "R": 0
+    },
+    "frames_within_0.0001A_of_a_midpoint": 0,
+    "hydration_check_of_the_driver_from_manifest": {
+     "applies": true,
+     "counts": [
+      {
+       "step": "eq03",
+       "time_end_ps": 700.0,
+       "n_water_O": 1,
+       "nearest_water_O_A": 2.312,
+       "ligand_mean_distance_from_site_A": 3.719,
+       "applies": true,
+       "decision": "go on"
+      }
+     ],
+     "n_extensions": 0,
+     "final_decision": "go on: 1 water oxygen at the site",
+     "site_without_water_when_the_solute_was_released": false
+    }
+   },
+   "key_numbers_one_line": "bonded_2e/R3 start R (production): N=10000; d1 mean 4.527, d2 mean 7.695 A; states C/R/I whole 9951/0/49, last 20 ns 2000/0/0; verdict CONVERTED; visits 1 (long 1), transitions 1, first passage in production 0.01 ns; conversion time: converted during the equilibration, 160 ps after release; lig RMSD mean 0.534, last half 0.531 A; H-bond 0.9989; Zn-N2 1.927, Zn-N(His94/96/119) 2.017/2.045/2.035 A; sulfonyl O within 2.6 A of Zn 0.0012 (12 frames); N2 sign +/- 1.0000/0.0000, first lasting change 140 ps after release (equilibration)"
+  },
+  "bonded_2s/R1": {
+   "set": "bonded_2s",
+   "run": "R1",
+   "start": "R",
+   "role": "sensitivity",
+   "folder": "/root/cqc-sfa-md/runs/bonded_2s/R1",
+   "state_of_start": "R",
+   "opposite_state": "C",
+   "frames": {
+    "n_production_frames": 10000,
+    "n_segment_files": 20,
+    "frames_per_file": [
+     500
+    ],
+    "manifest_frames_solute": 10000,
+    "manifest_completed_ns": 100.0,
+    "manifest_n_segments_complete": 20,
+    "manifest_status": "complete",
+    "dcd_headers_consistent_with_10ps_and_contiguous_time": true,
+    "time_of_frame_n_ns": "(n + 1) * 0.01, n from 0"
+   },
+   "imaging_and_fit": {
+    "frames_zinc_moved_by_a_lattice_vector": 0,
+    "frames_ligand_moved_by_a_lattice_vector": 0,
+    "max_abs_d1_minus_minimum_image_d1_A": 0.0,
+    "max_abs_d2_minus_minimum_image_d2_A": 0.0,
+    "ca_rmsd_to_reference_A": {
+     "mean": 0.9042,
+     "sd": 0.0819,
+     "min": 0.652,
+     "max": 1.2962
+    }
+   },
+   "d1_A": {
+    "whole": {
+     "mean": 4.718,
+     "sd": 0.7146,
+     "min": 2.99,
+     "max": 8.1609
+    },
+    "last_half": {
+     "mean": 4.7144,
+     "sd": 0.7256,
+     "min": 3.1095,
+     "max": 8.1609
+    },
+    "last_20ns": {
+     "mean": 4.6184,
+     "sd": 0.6896,
+     "min": 3.1095,
+     "max": 7.3768
+    }
+   },
+   "d2_A": {
+    "whole": {
+     "mean": 8.0236,
+     "sd": 1.0458,
+     "min": 3.6109,
+     "max": 10.9852
+    },
+    "last_half": {
+     "mean": 8.2164,
+     "sd": 1.1175,
+     "min": 4.4867,
+     "max": 10.9852
+    },
+    "last_20ns": {
+     "mean": 8.4351,
+     "sd": 0.949,
+     "min": 5.0443,
+     "max": 10.6214
+    }
+   },
+   "frames_exactly_on_a_midpoint": 0,
+   "states": {
+    "whole": {
+     "C": 9876,
+     "R": 1,
+     "I": 123,
+     "n": 10000,
+     "fraction": {
+      "C": 0.9876,
+      "R": 0.0001,
+      "I": 0.0123
+     }
+    },
+    "last_half": {
+     "C": 4941,
+     "R": 0,
+     "I": 59,
+     "n": 5000,
+     "fraction": {
+      "C": 0.9882,
+      "R": 0.0,
+      "I": 0.0118
+     }
+    },
+    "last_20ns": {
+     "C": 1989,
+     "R": 0,
+     "I": 11,
+     "n": 2000,
+     "fraction": {
+      "C": 0.9945,
+      "R": 0.0,
+      "I": 0.0055
+     }
+    }
+   },
+   "verdict": {
+    "verdict": "CONVERTED",
+    "W": 2000,
+    "c_start": 0,
+    "c_opposite": 1989,
+    "c_intermediate": 11,
+    "test_converted": "10*1989 >= 9*2000 : True",
+    "test_stayed": "10*0 >= 9*2000 : False",
+    "window_complete": true
+   },
+   "visits": {
+    "assigned": {
+     "C": 9999,
+     "R": 1
+    },
+    "n_visits": 3,
+    "n_visits_by_state": {
+     "C": 2,
+     "R": 1
+    },
+    "n_long_visits": 2,
+    "long_visits": [
+     {
+      "state": "C",
+      "first_frame": 0,
+      "n_frames": 3986,
+      "t_first": 0.01,
+      "fraction_strict": 0.9897
+     },
+     {
+      "state": "C",
+      "first_frame": 3987,
+      "n_frames": 6013,
+      "t_first": 39.88,
+      "fraction_strict": 0.9864
+     }
+    ],
+    "longest_visit_in_opposite_state_frames": 6013,
+    "longest_visit_in_start_state_frames": 1,
+    "first_passage_ns": 0.01,
+    "first_passage_frame": 0,
+    "n_transitions": 1,
+    "first_frame_state": "C",
+    "first_frame_not_in_start_state": {
+     "frame": 0,
+     "t_ns": 0.01,
+     "state": "C"
+    },
+    "first_frame_in_opposite_state": {
+     "frame": 0,
+     "t_ns": 0.01
+    }
+   },
+   "equilibration_steps": [
+    {
+     "tag": "eq01",
+     "frames": 10,
+     "time_start_ps": 0.0,
+     "time_end_ps": 100.0,
+     "header_step_fs": 2.0,
+     "header_first_frame_ps": 10.0,
+     "header_agrees_with_S_plus_10ps": true,
+     "restraint_atoms": "solute_heavy",
+     "states": {
+      "C": 0,
+      "R": 10,
+      "I": 0
+     },
+     "n2_sign": {
+      "plus": 0,
+      "minus": 10
+     },
+     "last_frame": {
+      "state": "R",
+      "d1": 9.784,
+      "d2": 2.831,
+      "lig_rmsd": 3.587,
+      "n2_vol": -0.555
+     }
+    },
+    {
+     "tag": "eq02",
+     "frames": 30,
+     "time_start_ps": 100.0,
+     "time_end_ps": 400.0,
+     "header_step_fs": 2.0,
+     "header_first_frame_ps": 110.0,
+     "header_agrees_with_S_plus_10ps": true,
+     "restraint_atoms": "solute_heavy",
+     "states": {
+      "C": 0,
+      "R": 30,
+      "I": 0
+     },
+     "n2_sign": {
+      "plus": 0,
+      "minus": 30
+     },
+     "last_frame": {
+      "state": "R",
+      "d1": 9.625,
+      "d2": 2.889,
+      "lig_rmsd": 3.708,
+      "n2_vol": -0.604
+     }
+    },
+    {
+     "tag": "eq03",
+     "frames": 30,
+     "time_start_ps": 400.0,
+     "time_end_ps": 700.0,
+     "header_step_fs": 2.0,
+     "header_first_frame_ps": 410.0,
+     "header_agrees_with_S_plus_10ps": true,
+     "restraint_atoms": "solute_heavy",
+     "states": {
+      "C": 0,
+      "R": 30,
+      "I": 0
+     },
+     "n2_sign": {
+      "plus": 2,
+      "minus": 28
+     },
+     "last_frame": {
+      "state": "R",
+      "d1": 9.912,
+      "d2": 2.812,
+      "lig_rmsd": 3.645,
+      "n2_vol": -0.266
+     }
+    },
+    {
+     "tag": "eq04",
+     "frames": 40,
+     "time_start_ps": 700.0,
+     "time_end_ps": 1100.0,
+     "header_step_fs": 4.0,
+     "header_first_frame_ps": 710.0,
+     "header_agrees_with_S_plus_10ps": true,
+     "restraint_atoms": "protein_backbone",
+     "states": {
+      "C": 19,
+      "R": 6,
+      "I": 15
+     },
+     "n2_sign": {
+      "plus": 38,
+      "minus": 2
+     },
+     "last_frame": {
+      "state": "C",
+      "d1": 4.635,
+      "d2": 6.052,
+      "lig_rmsd": 1.275,
+      "n2_vol": 0.753
+     }
+    },
+    {
+     "tag": "eq05",
+     "frames": 40,
+     "time_start_ps": 1100.0,
+     "time_end_ps": 1500.0,
+     "header_step_fs": 4.0,
+     "header_first_frame_ps": 1110.0,
+     "header_agrees_with_S_plus_10ps": true,
+     "restraint_atoms": "protein_backbone",
+     "states": {
+      "C": 19,
+      "R": 7,
+      "I": 14
+     },
+     "n2_sign": {
+      "plus": 40,
+      "minus": 0
+     },
+     "last_frame": {
+      "state": "I",
+      "d1": 5.54,
+      "d2": 4.779,
+      "lig_rmsd": 1.745,
+      "n2_vol": 0.531
+     }
+    },
+    {
+     "tag": "eq06",
+     "frames": 50,
+     "time_start_ps": 1500.0,
+     "time_end_ps": 2000.0,
+     "header_step_fs": 4.0,
+     "header_first_frame_ps": 1510.0,
+     "header_agrees_with_S_plus_10ps": true,
+     "restraint_atoms": "none",
+     "states": {
+      "C": 39,
+      "R": 4,
+      "I": 7
+     },
+     "n2_sign": {
+      "plus": 50,
+      "minus": 0
+     },
+     "last_frame": {
+      "state": "C",
+      "d1": 4.45,
+      "d2": 7.133,
+      "lig_rmsd": 0.624,
+      "n2_vol": 0.68
+     }
+    }
+   ],
+   "conversion": {
+    "n_frames_stage4_5_6": [
+     40,
+     40,
+     50
+    ],
+    "n_equilibration_frames_joined": 130,
+    "expected_130_frames_1300_ps": true,
+    "time_of_joined_frame_k_from_release_ps": "(k + 1) * 10, k from 0",
+    "states_in_stage4_5_6": {
+     "C": 77,
+     "R": 17,
+     "I": 36
+    },
+    "first_frame_in_opposite_state_joined": {
+     "joined_frame": 6,
+     "t_from_release_ps": 70.0
+    },
+    "last_frame_in_start_state_joined": {
+     "joined_frame": 4116,
+     "t_from_release_ps": 41170.0
+    },
+    "n_long_visits_joined": 2,
+    "long_visits_joined": [
+     {
+      "state": "C",
+      "first_joined_frame": 88,
+      "n_frames": 4028,
+      "t_first_from_release_ps": 890.0
+     },
+     {
+      "state": "C",
+      "first_joined_frame": 4117,
+      "n_frames": 6013,
+      "t_first_from_release_ps": 41180.0
+     }
+    ],
+    "n_transitions_joined": 1,
+    "production_frames_in_start_state": 1,
+    "has_conversion_time": true,
+    "where": "equilibration",
+    "t_from_release_ps": 890.0,
+    "t_from_release_ns": 0.89,
+    "t_in_production_ns": null,
+    "stage_of_that_frame": "eq06",
+    "report": "converted during the equilibration, 890 ps after release"
+   },
+   "lig_rmsd_A": {
+    "mean_whole": 0.8036,
+    "mean_last_half": 0.8473,
+    "mean_first_half": 0.7599,
+    "mean_last_20ns": 0.7816,
+    "sd_whole": 0.3772,
+    "min": 0.1383,
+    "max": 2.6787,
+    "n_frames_last_half": 5000,
+    "identity_labelling_mean_whole": 0.8036,
+    "identity_labelling_mean_last_half": 0.8473,
+    "frames_by_best_labelling": {
+     "identity": 10000,
+     "ring_flip": 0,
+     "oxygen_swap": 0,
+     "ring_flip+oxygen_swap": 0
+    },
+    "frames_above_2A_whole": 30,
+    "frames_above_2A_last_half": 23,
+    "rule1_mean_last_half_above_2A": false
+   },
+   "hbond_N2H_T199OG1": {
+    "count": 9988,
+    "n": 10000,
+    "fraction": 0.9988,
+    "fraction_last_half": 0.9986,
+    "mean_N2_OG1_A": 2.9544,
+    "mean_angle_deg": 166.28,
+    "fraction_distance_ok": 0.9995,
+    "fraction_angle_ok": 0.9993,
+    "by_state": {
+     "C": {
+      "n": 9876,
+      "fraction": 0.9989
+     },
+     "R": {
+      "n": 1,
+      "fraction": 1.0
+     },
+     "I": {
+      "n": 123,
+      "fraction": 0.9919
+     }
+    }
+   },
+   "zinc": {
+    "mean_Zn_N2_A": 1.9511,
+    "mean_Zn_H94NE2_A": 2.0112,
+    "mean_Zn_H96NE2_A": 2.0983,
+    "mean_Zn_H119ND1_A": 2.051,
+    "sd_Zn_N2_A": 0.0526,
+    "sd_Zn_H94NE2_A": 0.0603,
+    "sd_Zn_H96NE2_A": 0.0722,
+    "sd_Zn_H119ND1_A": 0.0644,
+    "max_of_the_four_A": 2.3624,
+    "sulfonyl_O_within_2.6A": {
+     "count": 254,
+     "n": 10000,
+     "fraction": 0.0254,
+     "at_most_5_percent_integers": true
+    },
+    "mean_Zn_Osulfonyl_min_A": 2.8551,
+    "min_Zn_Osulfonyl_min_A": 2.405,
+    "mean_Zn_O1_A": 4.0119,
+    "mean_Zn_O2_A": 2.8551
+   },
+   "n2_configuration": {
+    "sign_of_start": -1,
+    "frames_plus": 9998,
+    "frames_minus": 2,
+    "frames_zero": 0,
+    "fraction_plus": 0.9998,
+    "fraction_minus": 0.0002,
+    "mean_volume": 0.7153,
+    "mean_volume_last_half": 0.7104,
+    "min_volume": -0.4834,
+    "max_volume": 0.911,
+    "frames_abs_volume_below_0.1": 0,
+    "n_sign_visits": 5,
+    "n_long_sign_visits": 3,
+    "long_sign_visits": [
+     {
+      "sign": 1,
+      "first_frame": 0,
+      "n_frames": 5699,
+      "t_first_ns": 0.01
+     },
+     {
+      "sign": 1,
+      "first_frame": 5700,
+      "n_frames": 1928,
+      "t_first_ns": 57.01
+     },
+     {
+      "sign": 1,
+      "first_frame": 7629,
+      "n_frames": 2371,
+      "t_first_ns": 76.3
+     }
+    ],
+    "n_lasting_sign_changes": 1,
+    "first_frame_with_other_sign_production": {
+     "frame": 0,
+     "t_ns": 0.01
+    },
+    "first_lasting_change_production_ns": 0.01,
+    "sign_by_state": {
+     "C": {
+      "plus": 9874,
+      "minus": 2
+     },
+     "R": {
+      "plus": 1,
+      "minus": 0
+     },
+     "I": {
+      "plus": 123,
+      "minus": 0
+     }
+    },
+    "joined_release_series": {
+     "sign_in_stage4_5_6": {
+      "plus": 128,
+      "minus": 2
+     },
+     "first_frame_with_other_sign": {
+      "joined_frame": 2,
+      "t_from_release_ps": 30.0
+     },
+     "first_lasting_change": {
+      "joined_frame": 2,
+      "t_from_release_ps": 30.0,
+      "where": "equilibration",
+      "t_in_production_ns": null,
+      "length_of_that_visit_frames": 5827
+     },
+     "n_lasting_sign_changes": 1
+    },
+    "sign_in_held_steps_before_release": {
+     "eq01": {
+      "plus": 0,
+      "minus": 10
+     },
+     "eq02": {
+      "plus": 0,
+      "minus": 30
+     },
+     "eq03": {
+      "plus": 2,
+      "minus": 28
+     }
+    }
+   },
+   "wall_s": 7.0,
+   "extras": {
+    "states_frame_by_frame_stage4_5_6": {
+     "eq04": "RRRRRICRIIIICIICIIICIIIICCICCCCCCCCCCCCC",
+     "eq05": "CCCCCCCIICICCCCCCCIICCCIRRIIIIIRRIRRIRCI",
+     "eq06": "IIRIRRIRCCCCCCCCCCICCIICCCCCCCCCCCCCCCCCCCCCCCCCCC"
+    },
+    "hbond_in_stage4_5_6": {
+     "count": 129,
+     "n": 130
+    },
+    "visits_in_start_state_production": {
+     "n": 1,
+     "longest_frames": 1,
+     "total_assigned_frames": 1
+    },
+    "visits_in_last_20ns_by_assigned_state": {
+     "C": 1,
+     "R": 0
+    },
+    "frames_within_0.0001A_of_a_midpoint": 0,
+    "hydration_check_of_the_driver_from_manifest": {
+     "applies": true,
+     "counts": [
+      {
+       "step": "eq03",
+       "time_end_ps": 700.0,
+       "n_water_O": 1,
+       "nearest_water_O_A": 2.429,
+       "ligand_mean_distance_from_site_A": 3.76,
+       "applies": true,
+       "decision": "go on"
+      }
+     ],
+     "n_extensions": 0,
+     "final_decision": "go on: 1 water oxygen at the site",
+     "site_without_water_when_the_solute_was_released": false
+    }
+   },
+   "key_numbers_one_line": "bonded_2s/R1 start R (sensitivity): N=10000; d1 mean 4.718, d2 mean 8.024 A; states C/R/I whole 9876/1/123, last 20 ns 1989/0/11; verdict CONVERTED; visits 3 (long 2), transitions 1, first passage in production 0.01 ns; conversion time: converted during the equilibration, 890 ps after release; lig RMSD mean 0.804, last half 0.847 A; H-bond 0.9988; Zn-N2 1.951, Zn-N(His94/96/119) 2.011/2.098/2.051 A; sulfonyl O within 2.6 A of Zn 0.0254 (254 frames); N2 sign +/- 0.9998/0.0002, first lasting change 30 ps after release (equilibration)"
+  },
+  "bonded_2e_n2fit/R1": {
+   "set": "bonded_2e_n2fit",
+   "run": "R1",
+   "start": "R",
+   "role": "sensitivity",
+   "folder": "/root/cqc-sfa-md/runs/bonded_2e_n2fit/R1",
+   "state_of_start": "R",
+   "opposite_state": "C",
+   "frames": {
+    "n_production_frames": 10000,
+    "n_segment_files": 20,
+    "frames_per_file": [
+     500
+    ],
+    "manifest_frames_solute": 10000,
+    "manifest_completed_ns": 100.0,
+    "manifest_n_segments_complete": 20,
+    "manifest_status": "complete",
+    "dcd_headers_consistent_with_10ps_and_contiguous_time": true,
+    "time_of_frame_n_ns": "(n + 1) * 0.01, n from 0"
+   },
+   "imaging_and_fit": {
+    "frames_zinc_moved_by_a_lattice_vector": 0,
+    "frames_ligand_moved_by_a_lattice_vector": 0,
+    "max_abs_d1_minus_minimum_image_d1_A": 0.0,
+    "max_abs_d2_minus_minimum_image_d2_A": 0.0,
+    "ca_rmsd_to_reference_A": {
+     "mean": 0.9798,
+     "sd": 0.1199,
+     "min": 0.6319,
+     "max": 1.4778
+    }
+   },
+   "d1_A": {
+    "whole": {
+     "mean": 4.95,
+     "sd": 0.9966,
+     "min": 2.8822,
+     "max": 10.4882
+    },
+    "last_half": {
+     "mean": 5.1095,
+     "sd": 1.1229,
+     "min": 2.8822,
+     "max": 10.4882
+    },
+    "last_20ns": {
+     "mean": 5.1399,
+     "sd": 1.1927,
+     "min": 2.8822,
+     "max": 10.4374
+    }
+   },
+   "d2_A": {
+    "whole": {
+     "mean": 6.655,
+     "sd": 1.1537,
+     "min": 2.6171,
+     "max": 9.4343
+    },
+    "last_half": {
+     "mean": 6.4461,
+     "sd": 1.2777,
+     "min": 2.6171,
+     "max": 9.4343
+    },
+    "last_20ns": {
+     "mean": 6.1759,
+     "sd": 1.3521,
+     "min": 2.6171,
+     "max": 9.4343
+    }
+   },
+   "frames_exactly_on_a_midpoint": 0,
+   "states": {
+    "whole": {
+     "C": 8722,
+     "R": 393,
+     "I": 885,
+     "n": 10000,
+     "fraction": {
+      "C": 0.8722,
+      "R": 0.0393,
+      "I": 0.0885
+     }
+    },
+    "last_half": {
+     "C": 4057,
+     "R": 347,
+     "I": 596,
+     "n": 5000,
+     "fraction": {
+      "C": 0.8114,
+      "R": 0.0694,
+      "I": 0.1192
+     }
+    },
+    "last_20ns": {
+     "C": 1487,
+     "R": 183,
+     "I": 330,
+     "n": 2000,
+     "fraction": {
+      "C": 0.7435,
+      "R": 0.0915,
+      "I": 0.165
+     }
+    }
+   },
+   "verdict": {
+    "verdict": "MIXED",
+    "W": 2000,
+    "c_start": 183,
+    "c_opposite": 1487,
+    "c_intermediate": 330,
+    "test_converted": "10*1487 >= 9*2000 : False",
+    "test_stayed": "10*183 >= 9*2000 : False",
+    "window_complete": true
+   },
+   "visits": {
+    "assigned": {
+     "C": 9397,
+     "R": 603
+    },
+    "n_visits": 249,
+    "n_visits_by_state": {
+     "C": 125,
+     "R": 124
+    },
+    "n_long_visits": 24,
+    "long_visits": [
+     {
+      "state": "C",
+      "first_frame": 0,
+      "n_frames": 102,
+      "t_first": 0.01,
+      "fraction_strict": 0.9804
+     },
+     {
+      "state": "C",
+      "first_frame": 168,
+      "n_frames": 654,
+      "t_first": 1.69,
+      "fraction_strict": 0.9434
+     },
+     {
+      "state": "C",
+      "first_frame": 852,
+      "n_frames": 156,
+      "t_first": 8.53,
+      "fraction_strict": 0.9295
+     },
+     {
+      "state": "C",
+      "first_frame": 1093,
+      "n_frames": 271,
+      "t_first": 10.94,
+      "fraction_strict": 0.952
+     },
+     {
+      "state": "C",
+      "first_frame": 1474,
+      "n_frames": 105,
+      "t_first": 14.75,
+      "fraction_strict": 0.9619
+     },
+     {
+      "state": "C",
+      "first_frame": 1603,
+      "n_frames": 642,
+      "t_first": 16.04,
+      "fraction_strict": 0.9408
+     },
+     {
+      "state": "C",
+      "first_frame": 2247,
+      "n_frames": 192,
+      "t_first": 22.48,
+      "fraction_strict": 1.0
+     },
+     {
+      "state": "C",
+      "first_frame": 2440,
+      "n_frames": 395,
+      "t_first": 24.41,
+      "fraction_strict": 0.9949
+     },
+     {
+      "state": "C",
+      "first_frame": 2836,
+      "n_frames": 176,
+      "t_first": 28.37,
+      "fraction_strict": 0.9205
+     },
+     {
+      "state": "C",
+      "first_frame": 3013,
+      "n_frames": 565,
+      "t_first": 30.14,
+      "fraction_strict": 0.9434
+     },
+     {
+      "state": "C",
+      "first_frame": 3607,
+      "n_frames": 477,
+      "t_first": 36.08,
+      "fraction_strict": 0.9602
+     },
+     {
+      "state": "C",
+      "first_frame": 4156,
+      "n_frames": 603,
+      "t_first": 41.57,
+      "fraction_strict": 0.9552
+     },
+     {
+      "state": "C",
+      "first_frame": 4776,
+      "n_frames": 271,
+      "t_first": 47.77,
+      "fraction_strict": 0.9852
+     },
+     {
+      "state": "C",
+      "first_frame": 5227,
+      "n_frames": 149,
+      "t_first": 52.28,
+      "fraction_strict": 1.0
+     },
+     {
+      "state": "C",
+      "first_frame": 5377,
+      "n_frames": 126,
+      "t_first": 53.78,
+      "fraction_strict": 0.9841
+     },
+     {
+      "state": "C",
+      "first_frame": 5585,
+      "n_frames": 268,
+      "t_first": 55.86,
+      "fraction_strict": 0.9478
+     },
+     {
+      "state": "C",
+      "first_frame": 6184,
+      "n_frames": 331,
+      "t_first": 61.85,
+      "fraction_strict": 0.9486
+     },
+     {
+      "state": "C",
+      "first_frame": 6739,
+      "n_frames": 230,
+      "t_first": 67.4,
+      "fraction_strict": 0.9652
+     },
+     {
+      "state": "C",
+      "first_frame": 7100,
+      "n_frames": 176,
+      "t_first": 71.01,
+      "fraction_strict": 0.892
+     },
+     {
+      "state": "C",
+      "first_frame": 7346,
+      "n_frames": 833,
+      "t_first": 73.47,
+      "fraction_strict": 0.9832
+     },
+     {
+      "state": "C",
+      "first_frame": 8776,
+      "n_frames": 307,
+      "t_first": 87.77,
+      "fraction_strict": 0.9707
+     },
+     {
+      "state": "C",
+      "first_frame": 9101,
+      "n_frames": 111,
+      "t_first": 91.02,
+      "fraction_strict": 0.9369
+     },
+     {
+      "state": "C",
+      "first_frame": 9321,
+      "n_frames": 202,
+      "t_first": 93.22,
+      "fraction_strict": 0.8515
+     },
+     {
+      "state": "C",
+      "first_frame": 9786,
+      "n_frames": 214,
+      "t_first": 97.87,
+      "fraction_strict": 0.986
+     }
+    ],
+    "longest_visit_in_opposite_state_frames": 833,
+    "longest_visit_in_start_state_frames": 75,
+    "first_passage_ns": 0.01,
+    "first_passage_frame": 0,
+    "n_transitions": 1,
+    "first_frame_state": "C",
+    "first_frame_not_in_start_state": {
+     "frame": 0,
+     "t_ns": 0.01,
+     "state": "C"
+    },
+    "first_frame_in_opposite_state": {
+     "frame": 0,
+     "t_ns": 0.01
+    }
+   },
+   "equilibration_steps": [
+    {
+     "tag": "eq01",
+     "frames": 10,
+     "time_start_ps": 0.0,
+     "time_end_ps": 100.0,
+     "header_step_fs": 2.0,
+     "header_first_frame_ps": 10.0,
+     "header_agrees_with_S_plus_10ps": true,
+     "restraint_atoms": "solute_heavy",
+     "states": {
+      "C": 0,
+      "R": 10,
+      "I": 0
+     },
+     "n2_sign": {
+      "plus": 0,
+      "minus": 10
+     },
+     "last_frame": {
+      "state": "R",
+      "d1": 9.98,
+      "d2": 2.813,
+      "lig_rmsd": 3.712,
+      "n2_vol": -0.454
+     }
+    },
+    {
+     "tag": "eq02",
+     "frames": 30,
+     "time_start_ps": 100.0,
+     "time_end_ps": 400.0,
+     "header_step_fs": 2.0,
+     "header_first_frame_ps": 110.0,
+     "header_agrees_with_S_plus_10ps": true,
+     "restraint_atoms": "solute_heavy",
+     "states": {
+      "C": 0,
+      "R": 30,
+      "I": 0
+     },
+     "n2_sign": {
+      "plus": 0,
+      "minus": 30
+     },
+     "last_frame": {
+      "state": "R",
+      "d1": 9.687,
+      "d2": 2.858,
+      "lig_rmsd": 3.666,
+      "n2_vol": -0.317
+     }
+    },
+    {
+     "tag": "eq03",
+     "frames": 30,
+     "time_start_ps": 400.0,
+     "time_end_ps": 700.0,
+     "header_step_fs": 2.0,
+     "header_first_frame_ps": 410.0,
+     "header_agrees_with_S_plus_10ps": true,
+     "restraint_atoms": "solute_heavy",
+     "states": {
+      "C": 0,
+      "R": 30,
+      "I": 0
+     },
+     "n2_sign": {
+      "plus": 0,
+      "minus": 30
+     },
+     "last_frame": {
+      "state": "R",
+      "d1": 8.506,
+      "d2": 3.654,
+      "lig_rmsd": 2.95,
+      "n2_vol": -0.329
+     }
+    },
+    {
+     "tag": "eq04",
+     "frames": 40,
+     "time_start_ps": 700.0,
+     "time_end_ps": 1100.0,
+     "header_step_fs": 4.0,
+     "header_first_frame_ps": 710.0,
+     "header_agrees_with_S_plus_10ps": true,
+     "restraint_atoms": "protein_backbone",
+     "states": {
+      "C": 36,
+      "R": 3,
+      "I": 1
+     },
+     "n2_sign": {
+      "plus": 38,
+      "minus": 2
+     },
+     "last_frame": {
+      "state": "C",
+      "d1": 4.961,
+      "d2": 6.862,
+      "lig_rmsd": 0.813,
+      "n2_vol": 0.5
+     }
+    },
+    {
+     "tag": "eq05",
+     "frames": 40,
+     "time_start_ps": 1100.0,
+     "time_end_ps": 1500.0,
+     "header_step_fs": 4.0,
+     "header_first_frame_ps": 1110.0,
+     "header_agrees_with_S_plus_10ps": true,
+     "restraint_atoms": "protein_backbone",
+     "states": {
+      "C": 40,
+      "R": 0,
+      "I": 0
+     },
+     "n2_sign": {
+      "plus": 40,
+      "minus": 0
+     },
+     "last_frame": {
+      "state": "C",
+      "d1": 3.911,
+      "d2": 8.175,
+      "lig_rmsd": 0.303,
+      "n2_vol": 0.55
+     }
+    },
+    {
+     "tag": "eq06",
+     "frames": 50,
+     "time_start_ps": 1500.0,
+     "time_end_ps": 2000.0,
+     "header_step_fs": 4.0,
+     "header_first_frame_ps": 1510.0,
+     "header_agrees_with_S_plus_10ps": true,
+     "restraint_atoms": "none",
+     "states": {
+      "C": 50,
+      "R": 0,
+      "I": 0
+     },
+     "n2_sign": {
+      "plus": 50,
+      "minus": 0
+     },
+     "last_frame": {
+      "state": "C",
+      "d1": 4.373,
+      "d2": 7.079,
+      "lig_rmsd": 0.82,
+      "n2_vol": 0.564
+     }
+    }
+   ],
+   "conversion": {
+    "n_frames_stage4_5_6": [
+     40,
+     40,
+     50
+    ],
+    "n_equilibration_frames_joined": 130,
+    "expected_130_frames_1300_ps": true,
+    "time_of_joined_frame_k_from_release_ps": "(k + 1) * 10, k from 0",
+    "states_in_stage4_5_6": {
+     "C": 126,
+     "R": 3,
+     "I": 1
+    },
+    "first_frame_in_opposite_state_joined": {
+     "joined_frame": 1,
+     "t_from_release_ps": 20.0
+    },
+    "last_frame_in_start_state_joined": {
+     "joined_frame": 9915,
+     "t_from_release_ps": 99160.0
+    },
+    "n_long_visits_joined": 24,
+    "long_visits_joined": [
+     {
+      "state": "C",
+      "first_joined_frame": 5,
+      "n_frames": 227,
+      "t_first_from_release_ps": 60.0
+     },
+     {
+      "state": "C",
+      "first_joined_frame": 298,
+      "n_frames": 654,
+      "t_first_from_release_ps": 2990.0
+     },
+     {
+      "state": "C",
+      "first_joined_frame": 982,
+      "n_frames": 156,
+      "t_first_from_release_ps": 9830.0
+     },
+     {
+      "state": "C",
+      "first_joined_frame": 1223,
+      "n_frames": 271,
+      "t_first_from_release_ps": 12240.0
+     },
+     {
+      "state": "C",
+      "first_joined_frame": 1604,
+      "n_frames": 105,
+      "t_first_from_release_ps": 16050.0
+     },
+     {
+      "state": "C",
+      "first_joined_frame": 1733,
+      "n_frames": 642,
+      "t_first_from_release_ps": 17340.0
+     },
+     {
+      "state": "C",
+      "first_joined_frame": 2377,
+      "n_frames": 192,
+      "t_first_from_release_ps": 23780.0
+     },
+     {
+      "state": "C",
+      "first_joined_frame": 2570,
+      "n_frames": 395,
+      "t_first_from_release_ps": 25710.0
+     },
+     {
+      "state": "C",
+      "first_joined_frame": 2966,
+      "n_frames": 176,
+      "t_first_from_release_ps": 29670.0
+     },
+     {
+      "state": "C",
+      "first_joined_frame": 3143,
+      "n_frames": 565,
+      "t_first_from_release_ps": 31440.0
+     },
+     {
+      "state": "C",
+      "first_joined_frame": 3737,
+      "n_frames": 477,
+      "t_first_from_release_ps": 37380.0
+     },
+     {
+      "state": "C",
+      "first_joined_frame": 4286,
+      "n_frames": 603,
+      "t_first_from_release_ps": 42870.0
+     },
+     {
+      "state": "C",
+      "first_joined_frame": 4906,
+      "n_frames": 271,
+      "t_first_from_release_ps": 49070.0
+     },
+     {
+      "state": "C",
+      "first_joined_frame": 5357,
+      "n_frames": 149,
+      "t_first_from_release_ps": 53580.0
+     },
+     {
+      "state": "C",
+      "first_joined_frame": 5507,
+      "n_frames": 126,
+      "t_first_from_release_ps": 55080.0
+     },
+     {
+      "state": "C",
+      "first_joined_frame": 5715,
+      "n_frames": 268,
+      "t_first_from_release_ps": 57160.0
+     },
+     {
+      "state": "C",
+      "first_joined_frame": 6314,
+      "n_frames": 331,
+      "t_first_from_release_ps": 63150.0
+     },
+     {
+      "state": "C",
+      "first_joined_frame": 6869,
+      "n_frames": 230,
+      "t_first_from_release_ps": 68700.0
+     },
+     {
+      "state": "C",
+      "first_joined_frame": 7230,
+      "n_frames": 176,
+      "t_first_from_release_ps": 72310.0
+     },
+     {
+      "state": "C",
+      "first_joined_frame": 7476,
+      "n_frames": 833,
+      "t_first_from_release_ps": 74770.0
+     },
+     {
+      "state": "C",
+      "first_joined_frame": 8906,
+      "n_frames": 307,
+      "t_first_from_release_ps": 89070.0
+     },
+     {
+      "state": "C",
+      "first_joined_frame": 9231,
+      "n_frames": 111,
+      "t_first_from_release_ps": 92320.0
+     },
+     {
+      "state": "C",
+      "first_joined_frame": 9451,
+      "n_frames": 202,
+      "t_first_from_release_ps": 94520.0
+     },
+     {
+      "state": "C",
+      "first_joined_frame": 9916,
+      "n_frames": 214,
+      "t_first_from_release_ps": 99170.0
+     }
+    ],
+    "n_transitions_joined": 1,
+    "production_frames_in_start_state": 393,
+    "has_conversion_time": true,
+    "where": "equilibration",
+    "t_from_release_ps": 60.0,
+    "t_from_release_ns": 0.06,
+    "t_in_production_ns": null,
+    "stage_of_that_frame": "eq04",
+    "report": "converted during the equilibration, 60 ps after release"
+   },
+   "lig_rmsd_A": {
+    "mean_whole": 0.9923,
+    "mean_last_half": 1.0833,
+    "mean_first_half": 0.9012,
+    "mean_last_20ns": 1.1912,
+    "sd_whole": 0.5364,
+    "min": 0.137,
+    "max": 4.0477,
+    "n_frames_last_half": 5000,
+    "identity_labelling_mean_whole": 1.4477,
+    "identity_labelling_mean_last_half": 1.773,
+    "frames_by_best_labelling": {
+     "identity": 3442,
+     "ring_flip": 6558,
+     "oxygen_swap": 0,
+     "ring_flip+oxygen_swap": 0
+    },
+    "frames_above_2A_whole": 490,
+    "frames_above_2A_last_half": 399,
+    "rule1_mean_last_half_above_2A": false
+   },
+   "hbond_N2H_T199OG1": {
+    "count": 9829,
+    "n": 10000,
+    "fraction": 0.9829,
+    "fraction_last_half": 0.9802,
+    "mean_N2_OG1_A": 2.9171,
+    "mean_angle_deg": 160.87,
+    "fraction_distance_ok": 0.9999,
+    "fraction_angle_ok": 0.983,
+    "by_state": {
+     "C": {
+      "n": 8722,
+      "fraction": 0.9859
+     },
+     "R": {
+      "n": 393,
+      "fraction": 0.9644
+     },
+     "I": {
+      "n": 885,
+      "fraction": 0.9616
+     }
+    }
+   },
+   "zinc": {
+    "mean_Zn_N2_A": 1.9241,
+    "mean_Zn_H94NE2_A": 2.0264,
+    "mean_Zn_H96NE2_A": 2.0405,
+    "mean_Zn_H119ND1_A": 2.0287,
+    "sd_Zn_N2_A": 0.0487,
+    "sd_Zn_H94NE2_A": 0.0588,
+    "sd_Zn_H96NE2_A": 0.0617,
+    "sd_Zn_H119ND1_A": 0.061,
+    "max_of_the_four_A": 2.3056,
+    "sulfonyl_O_within_2.6A": {
+     "count": 255,
+     "n": 10000,
+     "fraction": 0.0255,
+     "at_most_5_percent_integers": true
+    },
+    "mean_Zn_Osulfonyl_min_A": 2.9467,
+    "min_Zn_Osulfonyl_min_A": 2.2996,
+    "mean_Zn_O1_A": 4.0833,
+    "mean_Zn_O2_A": 2.9467
+   },
+   "n2_configuration": {
+    "sign_of_start": -1,
+    "frames_plus": 9298,
+    "frames_minus": 702,
+    "frames_zero": 0,
+    "fraction_plus": 0.9298,
+    "fraction_minus": 0.0702,
+    "mean_volume": 0.4894,
+    "mean_volume_last_half": 0.4616,
+    "min_volume": -0.6674,
+    "max_volume": 0.8887,
+    "frames_abs_volume_below_0.1": 432,
+    "n_sign_visits": 977,
+    "n_long_sign_visits": 24,
+    "long_sign_visits": [
+     {
+      "sign": 1,
+      "first_frame": 0,
+      "n_frames": 143,
+      "t_first_ns": 0.01
+     },
+     {
+      "sign": 1,
+      "first_frame": 387,
+      "n_frames": 203,
+      "t_first_ns": 3.88
+     },
+     {
+      "sign": 1,
+      "first_frame": 654,
+      "n_frames": 132,
+      "t_first_ns": 6.55
+     },
+     {
+      "sign": 1,
+      "first_frame": 1156,
+      "n_frames": 200,
+      "t_first_ns": 11.57
+     },
+     {
+      "sign": 1,
+      "first_frame": 1465,
+      "n_frames": 100,
+      "t_first_ns": 14.66
+     },
+     {
+      "sign": 1,
+      "first_frame": 1620,
+      "n_frames": 124,
+      "t_first_ns": 16.21
+     },
+     {
+      "sign": 1,
+      "first_frame": 1963,
+      "n_frames": 189,
+      "t_first_ns": 19.64
+     },
+     {
+      "sign": 1,
+      "first_frame": 2272,
+      "n_frames": 156,
+      "t_first_ns": 22.73
+     },
+     {
+      "sign": 1,
+      "first_frame": 2443,
+      "n_frames": 393,
+      "t_first_ns": 24.44
+     },
+     {
+      "sign": 1,
+      "first_frame": 3013,
+      "n_frames": 138,
+      "t_first_ns": 30.14
+     },
+     {
+      "sign": 1,
+      "first_frame": 3161,
+      "n_frames": 271,
+      "t_first_ns": 31.62
+     },
+     {
+      "sign": 1,
+      "first_frame": 3779,
+      "n_frames": 305,
+      "t_first_ns": 37.8
+     },
+     {
+      "sign": 1,
+      "first_frame": 4188,
+      "n_frames": 307,
+      "t_first_ns": 41.89
+     },
+     {
+      "sign": 1,
+      "first_frame": 4496,
+      "n_frames": 102,
+      "t_first_ns": 44.97
+     },
+     {
+      "sign": 1,
+      "first_frame": 4938,
+      "n_frames": 104,
+      "t_first_ns": 49.39
+     },
+     {
+      "sign": 1,
+      "first_frame": 5227,
+      "n_frames": 133,
+      "t_first_ns": 52.28
+     },
+     {
+      "sign": 1,
+      "first_frame": 5377,
+      "n_frames": 130,
+      "t_first_ns": 53.78
+     },
+     {
+      "sign": 1,
+      "first_frame": 5577,
+      "n_frames": 226,
+      "t_first_ns": 55.78
+     },
+     {
+      "sign": 1,
+      "first_frame": 6251,
+      "n_frames": 266,
+      "t_first_ns": 62.52
+     },
+     {
+      "sign": 1,
+      "first_frame": 6750,
+      "n_frames": 213,
+      "t_first_ns": 67.51
+     }
+    ],
+    "n_lasting_sign_changes": 1,
+    "first_frame_with_other_sign_production": {
+     "frame": 0,
+     "t_ns": 0.01
+    },
+    "first_lasting_change_production_ns": 0.01,
+    "sign_by_state": {
+     "C": {
+      "plus": 8413,
+      "minus": 309
+     },
+     "R": {
+      "plus": 179,
+      "minus": 214
+     },
+     "I": {
+      "plus": 706,
+      "minus": 179
+     }
+    },
+    "joined_release_series": {
+     "sign_in_stage4_5_6": {
+      "plus": 128,
+      "minus": 2
+     },
+     "first_frame_with_other_sign": {
+      "joined_frame": 1,
+      "t_from_release_ps": 20.0
+     },
+     "first_lasting_change": {
+      "joined_frame": 6,
+      "t_from_release_ps": 70.0,
+      "where": "equilibration",
+      "t_in_production_ns": null,
+      "length_of_that_visit_frames": 267
+     },
+     "n_lasting_sign_changes": 1
+    },
+    "sign_in_held_steps_before_release": {
+     "eq01": {
+      "plus": 0,
+      "minus": 10
+     },
+     "eq02": {
+      "plus": 0,
+      "minus": 30
+     },
+     "eq03": {
+      "plus": 0,
+      "minus": 30
+     }
+    }
+   },
+   "wall_s": 6.7,
+   "extras": {
+    "states_frame_by_frame_stage4_5_6": {
+     "eq04": "RCRRICCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC",
+     "eq05": "CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC",
+     "eq06": "CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC"
+    },
+    "hbond_in_stage4_5_6": {
+     "count": 128,
+     "n": 130
+    },
+    "visits_in_start_state_production": {
+     "n": 124,
+     "longest_frames": 75,
+     "total_assigned_frames": 603
+    },
+    "visits_in_last_20ns_by_assigned_state": {
+     "C": 50,
+     "R": 49
+    },
+    "frames_within_0.0001A_of_a_midpoint": 0,
+    "hydration_check_of_the_driver_from_manifest": {
+     "applies": true,
+     "counts": [
+      {
+       "step": "eq03",
+       "time_end_ps": 700.0,
+       "n_water_O": 1,
+       "nearest_water_O_A": 2.493,
+       "ligand_mean_distance_from_site_A": 3.14,
+       "applies": true,
+       "decision": "go on"
+      }
+     ],
+     "n_extensions": 0,
+     "final_decision": "go on: 1 water oxygen at the site",
+     "site_without_water_when_the_solute_was_released": false
+    }
+   },
+   "key_numbers_one_line": "bonded_2e_n2fit/R1 start R (sensitivity): N=10000; d1 mean 4.950, d2 mean 6.655 A; states C/R/I whole 8722/393/885, last 20 ns 1487/183/330; verdict MIXED; visits 249 (long 24), transitions 1, first passage in production 0.01 ns; conversion time: converted during the equilibration, 60 ps after release; lig RMSD mean 0.992, last half 1.083 A; H-bond 0.9829; Zn-N2 1.924, Zn-N(His94/96/119) 2.026/2.041/2.029 A; sulfonyl O within 2.6 A of Zn 0.0255 (255 frames); N2 sign +/- 0.9298/0.0702, first lasting change 70 ps after release (equilibration)"
+  }
+ },
+ "rule1": {
+  "rule": "PLAN.md section 5 rule 1, read by the entry of 5 Oct 2026, 8:40 PM IST, point 2: the mean ligand RMSD over the last half of the run above 2.0 A",
+  "per_run": {
+   "X1": {
+    "mean_lig_rmsd_last_half_A": 0.5752,
+    "n_frames_last_half": 5000,
+    "above_2A": "no",
+    "frames_above_2A_in_last_half": 0,
+    "max_lig_rmsd_whole_run_A": 1.7955
+   },
+   "X2": {
+    "mean_lig_rmsd_last_half_A": 0.534,
+    "n_frames_last_half": 5000,
+    "above_2A": "no",
+    "frames_above_2A_in_last_half": 2,
+    "max_lig_rmsd_whole_run_A": 2.2809
+   },
+   "X3": {
+    "mean_lig_rmsd_last_half_A": 0.5635,
+    "n_frames_last_half": 5000,
+    "above_2A": "no",
+    "frames_above_2A_in_last_half": 0,
+    "max_lig_rmsd_whole_run_A": 1.7479
+   }
+  },
+  "runs_that_left_the_crystal_orientation": 0,
+  "of": 3,
+  "reading": "The crystal-start runs leave the crystal orientation in 0 of three runs. The condition of rule 1 (two or three of three) is not met: the validation is not failed."
+ },
+ "rule3": {
+  "rule": "PLAN.md section 5 rule 3; a run converts by the 90 % rule on its last 20 ns (entry of 5 Oct 2026, 8:40 PM IST, point 1); a rotated run whose production holds no rotated frame counts as converted (entry of 6 Oct 2026, 11:40 AM IST, point 2)",
+  "verdicts_of_the_nine_runs": {
+   "X1": "STAYED",
+   "X2": "STAYED",
+   "X3": "STAYED",
+   "N1": "STAYED",
+   "N2": "STAYED",
+   "N3": "STAYED",
+   "R1": "CONVERTED",
+   "R2": "CONVERTED",
+   "R3": "CONVERTED"
+  },
+  "rotated_starts_converted": 3,
+  "crystal_and_near_native_starts_stayed": 6,
+  "branch": "first",
+  "reading_in_the_plans_words": "Rotated starts convert in three of three runs, crystal and near-native starts stay: the rotated orientation is not stable outside the scoring function.",
+  "conversions_of_the_rotated_starts": {
+   "R1": {
+    "report": "converted during the equilibration, 540 ps after release",
+    "t_from_release_ps": 540.0,
+    "stage": "eq05",
+    "rotated_frames_in_production": 0,
+    "last_20ns_C_R_I": [
+     1993,
+     0,
+     7
+    ]
+   },
+   "R2": {
+    "report": "converted during the equilibration, 370 ps after release",
+    "t_from_release_ps": 370.0,
+    "stage": "eq04",
+    "rotated_frames_in_production": 0,
+    "last_20ns_C_R_I": [
+     1993,
+     0,
+     7
+    ]
+   },
+   "R3": {
+    "report": "converted during the equilibration, 160 ps after release",
+    "t_from_release_ps": 160.0,
+    "stage": "eq04",
+    "rotated_frames_in_production": 0,
+    "last_20ns_C_R_I": [
+     2000,
+     0,
+     0
+    ]
+   }
+  },
+  "sensitivity_runs_in_no_count_of_rule_3": {
+   "bonded_2s/R1": {
+    "verdict": "CONVERTED",
+    "last_20ns_C_R_I": [
+     1989,
+     0,
+     11
+    ],
+    "whole_run_C_R_I": [
+     9876,
+     1,
+     123
+    ],
+    "time_by_the_rule_of_7_Oct": "converted during the equilibration, 890 ps after release",
+    "visits_in_R_in_production": {
+     "n": 1,
+     "longest_frames": 1,
+     "total_assigned_frames": 1
+    }
+   },
+   "bonded_2e_n2fit/R1": {
+    "verdict": "MIXED",
+    "last_20ns_C_R_I": [
+     1487,
+     183,
+     330
+    ],
+    "whole_run_C_R_I": [
+     8722,
+     393,
+     885
+    ],
+    "time_by_the_rule_of_7_Oct": "converted during the equilibration, 60 ps after release",
+    "visits_in_R_in_production": {
+     "n": 124,
+     "longest_frames": 75,
+     "total_assigned_frames": 603
+    }
+   }
+  },
+  "rule_4": "The outcome is a conversion, so rule 4 applies; the two sensitivity runs of start R are those fixed on 6 Oct 2026, 9:15 PM IST, point 3.",
+  "said_beside_the_reading": [
+   "All three conversions of the primary set happened in the equilibration (stage 4 or 5, backbone still restrained), 160 to 540 ps after the ligand was released; no production frame of R1, R2 or R3 is in the rotated state. The production therefore shows the crystal-like state being kept after the conversion, not the conversion itself.",
+   "The sensitivity run with the candidate terms at N2 (bonded_2e_n2fit/R1; terms not accepted by gate G-R2) is MIXED by the 90 % rule: it leaves the rotated state 60 ps after release by the time rule, but returns to it again and again (no visit there of 1 ns or more). Under these terms the rotated state is revisited, so the reading of rule 3 depends on the terms at N2, which failed gates G-R and G-R2.",
+   "The sensitivity run with zinc set 2s (bonded_2s/R1; the set that failed gate G-V narrowly) is CONVERTED."
+  ]
+ },
+ "definitions_used": {
+  "blind": "No file of any analysis/, analysis_recheck/ or analysis_campaign*/ folder, of md/results/ or md/RESULTS.md was opened; md/analysis/analyse_md.py and recheck_md.py were neither opened nor imported. Read: md/PLAN.md, md/analysis/SPEC.md sections 2 to 6 and 9E, md/protocol.json, md/system/{residue_map.csv,starts.csv,protein_md.pdb,ligand_X.pdb,zinc.pdb}, reference.pdb of the built systems (for one comparison), and of each run folder solute.pdb, manifest.json and solute_*.dcd.",
+  "code": "third_lib.py (PDB by fixed columns, own DCD reader with numpy, imaging, Kabsch fit, states, visits), third_reader.py (per run), make_reading.py (this file), check_starts.py and crosscheck_mda.py (checks). One process, nice -n 10, one thread.",
+  "atoms": "By name in solute.pdb, residues by the tleap index of md/system/residue_map.csv: Phe131 CZ (index 129), Asn67 OD1 (66), Thr199 OG1 (197), His94 NE2 (93, residue HD1), His96 NE2 (95, HD2), His119 ND1 (118, HE1), zinc (atom ZN), ligand residue SN1 (18 atoms; HN21 is the hydrogen on N2), 258 CA atoms.",
+  "reference": "Built by this reader from md/system/protein_md.pdb (258 CA, frame of 6RL9) and md/system/ligand_X.pdb (crystal pose, 11 heavy atoms). It is identical (0.0 A) to the CA and ligand atoms of reference.pdb of the built systems (check_starts.json).",
+  "frames_and_time": "All complete frames of solute_seg0001.dcd to solute_seg0020.dcd in order; production frame n (from 0) has the time (n + 1) * 0.01 ns. The DCD headers agree (first step, interval, step length).",
+  "images": "SPEC section 2: the zinc moved by the lattice vector that makes |Zn - NE2(His94)| smallest, then the whole ligand by the one that makes |N2 - Zn| smallest; search over 125 cells; lattice from the cell record of each frame (lengths and cosines). No frame of any of the eleven runs needed a move, and d1 and d2 equal their minimum-image values in every frame.",
+  "fit": "Least-squares superposition of the 258 CA atoms on the reference, equal weights, rotation without reflection (own Kabsch by SVD); the ligand is not fitted on itself.",
+  "lig_rmsd": "sqrt(mean over the 11 heavy atoms of |x_a - r_sigma(a)|^2) after the fit; smallest of the four labellings identity, ring_flip (C2<->C6, C3<->C5), oxygen_swap (O1<->O2), both. Mean over all frames and over the last half = frames N//2 to N-1 (5000 frames, 50.01 to 100.00 ns).",
+  "d1_d2_state": "d1 = |N1 - CZ(Phe131)|, d2 = |N1 - OD1(Asn67)|; C if d1 < 6.7 and d2 > 5.2; R if d1 > 6.7 and d2 < 5.2; I otherwise (a frame exactly on a midpoint would be I; there is none, and none within 0.0001 A unless the run entry says so).",
+  "verdict": "W = min(N, 2000) last frames; CONVERTED if 10*c_opposite >= 9*W, else STAYED if 10*c_start >= 9*W, else MIXED; integers.",
+  "visits": "Assigned state: the state of the frame if C or R, else that of the frame before; before the first frame the state of the start (C for X and N, R for R). Visit: maximal stretch of one assigned state; long: at least 100 frames. First passage: time of the first frame of the first long visit in the opposite state, in the production. Transitions: changes in (state of the start, states of the long visits in order).",
+  "conversion_time": "Plan, 7 Oct 2026, 12:10 AM IST, point 1: the solute frames of solute_eq04.dcd, solute_eq05.dcd, solute_eq06.dcd (40 + 40 + 50) joined before the production; same rules on the joined series; joined frame k (from 0) lies (k + 1) * 10 ps after the start of stage 4. Extension step eq03x1 of bonded_2e/R1 lies before the release and is not joined.",
+  "hbond": "Present if |N2 - OG1(Thr199)| <= 3.5 A and the angle N2-HN21-OG1 at the hydrogen >= 135 deg; fraction over all production frames.",
+  "zinc": "Means over all production frames of |Zn - N2|, |Zn - NE2(His94)|, |Zn - NE2(His96)|, |Zn - ND1(His119)|; fraction of solute frames with min(|Zn - O1|, |Zn - O2|) <= 2.6 A.",
+  "n2_sign": "Signed volume = u(N2->Zn) . [u(N2->HN21) x u(N2->S)] with unit vectors; it gives +0.7238, +0.7854 and -0.7102 on the three starts as built (plan: +0.724, +0.786, -0.710). Sign = +1 if the volume is above zero, -1 if below.",
+  "choices_where_the_wording_left_one": [
+   "Configuration at N2: section 9A of the specification was not read (only sections 2 to 6 and 9E were open to this reader). The sign is the plain sign of the volume, with no dead band. \"First lasting change\" is this reader's own definition, made like a first passage: assigned sign (a zero keeps the sign before; before the first frame the sign of the start: +1 for X and N, -1 for R), and the first frame of the first stretch of at least 100 frames with the other sign. It is given in the production alone and on the joined series of stages 4 to 6 plus production (time from release). The first single frame with the other sign is given beside it.",
+   "Conversion time of a run that is not CONVERTED: the rule of 7 Oct gives a time to every run with a long visit in the opposite state and words it \"converted during the equilibration, t ps after release\" if that frame lies in the equilibration. For bonded_2e_n2fit/R1 the rule as worded gives that phrase (60 ps) although the verdict of the run is MIXED and its production holds 393 rotated frames; the entry of 6 Oct, 11:40 AM, point 2 ties the phrase to a production without a rotated frame. Reported by the rule as worded, with the verdict beside it; the two do not fit together for this run.",
+   "The time of a conversion is the start of the first LONG visit, which can lie well after the first frame in the opposite state when the run goes back and forth first (bonded_2e/R1: first C frame 270 ps, time by the rule 540 ps; bonded_2s/R1: 70 ps against 890 ps). Both are in the run entries.",
+   "Rule 3 counts a run as converted or stayed by its verdict (90 % of the last 20 ns). For R1 to R3 the entry of 6 Oct, 11:40 AM (no rotated frame in the production) gives the same count.",
+   "Last half with N = 10000 is frames 5000 to 9999; with an odd N this reader would take N - N//2 frames.",
+   "\"Mean Zn-N distances\" and the hydrogen-bond fraction are taken over the whole production (10000 frames), not over a window.",
+   "The reference was built from md/system and not taken from reference.pdb; the two are identical."
+  ],
+  "checks_of_this_reader": {
+   "starts": "check_starts.json: on the coordinates of solute.pdb the three starts give ligand RMSD 0.0005, 0.6106, 3.5732 A (starts.csv 0.0, 0.61, 3.573), d1 3.897, 3.356, 9.585 A and d2 7.744, 7.726, 2.597 A (starts.csv 3.897, 3.356, 9.585; 7.744, 7.725, 2.597), Zn-N2, Zn-O, N2-OG1 and the N2-H-OG1 angle within 0.001 A and 0.1 deg.",
+   "mdanalysis": "crosscheck_mda.json: on six files (X1 seg 1, R1 eq04, R3 seg 20, 2s/R1 seg 9, n2fit/R1 seg 15 and 20) the own DCD reader and MDAnalysis give the same coordinates (difference 0.0), d1 and d2 within 1e-6 A, ligand RMSD within 1e-13 A (fit by MDAnalysis rotation_matrix), and the same hydrogen-bond flag in every frame."
+  }
+ }
+}

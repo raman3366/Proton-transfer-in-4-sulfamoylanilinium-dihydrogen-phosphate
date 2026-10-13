@@ -1,0 +1,221 @@
+{
+ "what": "end-to-end rehearsal of md/qm/gr_queue.py on 6 Oct 2026, one thread; NOT results",
+ "config": {
+  "label": "REHEARSAL (HF/STO-3G, grid 0, two points, synthetic potential; NOT a result)",
+  "bulk": "/tmp/claude-0/-root-workspace-cqc-4-sulfamoylanilinium-dihydrogen-phosphate/82cc65d7-a11f-4d60-91ee-436dc9534941/scratchpad/mdprep3/gr/rehearsal/bulk",
+  "small_out": "/tmp/claude-0/-root-workspace-cqc-4-sulfamoylanilinium-dihydrogen-phosphate/82cc65d7-a11f-4d60-91ee-436dc9534941/scratchpad/mdprep3/gr/rehearsal/small",
+  "points": "md/qm/gr/points.json",
+  "qm_config": "md/qm/config_prod.json",
+  "threads": 1,
+  "nice": 10,
+  "wait_for": {
+   "pid_file": "/tmp/claude-0/-root-workspace-cqc-4-sulfamoylanilinium-dihydrogen-phosphate/82cc65d7-a11f-4d60-91ee-436dc9534941/scratchpad/mdprep3/gr/rehearsal/dummy.pid",
+   "status": "/tmp/claude-0/-root-workspace-cqc-4-sulfamoylanilinium-dihydrogen-phosphate/82cc65d7-a11f-4d60-91ee-436dc9534941/scratchpad/mdprep3/gr/rehearsal/dummy_status.json",
+   "done_states": [
+    "finished"
+   ],
+   "grace_minutes": 1
+  },
+  "mcpb_source": "/tmp/claude-0/-root-workspace-cqc-4-sulfamoylanilinium-dihydrogen-phosphate/82cc65d7-a11f-4d60-91ee-436dc9534941/scratchpad/mdprep/zinc/after_qm_test/mcpb",
+  "step2": "2e",
+  "placeholder_params": null,
+  "guess_checkpoint": null,
+  "timing_reference_status": null,
+  "only": null,
+  "method_override": {
+   "xc": "hf",
+   "basis": "sto-3g",
+   "grid": 0,
+   "conv_tol": 0.01
+  },
+  "poll_seconds": 5
+ },
+ "part_1": "wait for a dummy job (40 s), charge step on the synthetic potential of the known-content test (after_qm.sh 2e with resp_equiv.py in a copy), MM model (three variants), two single points of the real 64-atom model at a test level, table and gate numbers",
+ "part_2": "restart with a result file for every point written beforehand (synthetic energies = MM rest + known terms + noise 0.2 kcal/mol): all points skipped, gate, fit, topology rebuilt with the fitted terms, gate again",
+ "queue_log": [
+  "2026-10-06 03:41:34 AM IST  queue REHEARSAL (STO-3G, grid 0, two points, synthetic potential; NOT a result) started, pid 155682, 2 points, threads 1",
+  "2026-10-06 03:41:34 AM IST  waiting for PID 155661 (state running)",
+  "2026-10-06 03:54:12 AM IST  point X (1/2) started",
+  "2026-10-06 04:03:35 AM IST  queue ended: stopped",
+  "2026-10-06 04:03:55 AM IST  queue REHEARSAL (STO-3G, grid 0, two points, synthetic potential; NOT a result) started, pid 183901, 2 points, threads 1",
+  "2026-10-06 04:03:55 AM IST  the awaited job has ended; charge step",
+  "2026-10-06 04:03:55 AM IST  charge step: ok True, reused True, real charges True; MM model",
+  "2026-10-06 04:04:14 AM IST  MM model: ['asis', 'free', 'main'] built; single points",
+  "2026-10-06 04:04:18 AM IST  point X (1/2) started",
+  "2026-10-06 04:13:07 AM IST  queue ended: stopped",
+  "2026-10-06 04:13:11 AM IST  queue REHEARSAL (HF/STO-3G, grid 0, two points, synthetic potential; NOT a result) started, pid 196035, 2 points, threads 1",
+  "2026-10-06 04:13:11 AM IST  the awaited job has ended; charge step",
+  "2026-10-06 04:13:11 AM IST  charge step: ok True, reused True, real charges True; MM model",
+  "2026-10-06 04:13:29 AM IST  MM model: ['asis', 'free', 'main'] built; single points",
+  "2026-10-06 04:13:31 AM IST  point X (1/2) started",
+  "2026-10-06 04:22:43 AM IST  queue ended: stopped",
+  "2026-10-06 04:22:47 AM IST  queue REHEARSAL (HF/STO-3G, grid 0, two points, synthetic potential; NOT a result) started, pid 208070, 2 points, threads 1",
+  "2026-10-06 04:22:47 AM IST  the awaited job has ended; charge step",
+  "2026-10-06 04:22:47 AM IST  charge step: ok True, reused True, real charges True; MM model",
+  "2026-10-06 04:23:05 AM IST  MM model: ['asis', 'free', 'main'] built; single points",
+  "2026-10-06 04:23:07 AM IST  point X (1/2) started",
+  "2026-10-06 04:25:19 AM IST  point X done: E = -3530.976318445, 1 cycles, 2.1 min; gate so far: rms None over None points, X->R None, X->Rx None",
+  "2026-10-06 04:25:19 AM IST  point a4 (2/2) started",
+  "2026-10-06 04:34:49 AM IST  point a4 done: E = -3530.957616589, 25 cycles, 9.4 min; gate so far: rms 19.3648 over 2 points, X->R None, X->Rx None",
+  "2026-10-06 04:34:49 AM IST  queue ended: finished",
+  "2026-10-06 04:35:17 AM IST  queue REHEARSAL (HF/STO-3G, grid 0, two points, synthetic potential; NOT a result) started, pid 223893, 26 points, threads 1",
+  "2026-10-06 04:35:17 AM IST  the awaited job has ended; charge step",
+  "2026-10-06 04:35:17 AM IST  charge step: ok True, reused True, real charges True; MM model",
+  "2026-10-06 04:35:36 AM IST  MM model: ['asis', 'free', 'main'] built; single points",
+  "2026-10-06 04:35:46 AM IST  queue ended: finished",
+  "2026-10-06 04:55:56 AM IST  queue REHEARSAL (HF/STO-3G, grid 0, two points, synthetic potential; NOT a result) started, pid 250828, 26 points, threads 1",
+  "2026-10-06 04:55:56 AM IST  the awaited job has ended; charge step",
+  "2026-10-06 04:55:56 AM IST  charge step: ok True, reused True, real charges True; MM model",
+  "2026-10-06 04:56:14 AM IST  MM model: ['asis', 'free', 'main'] built; single points",
+  "2026-10-06 04:56:15 AM IST  point Nx (26/26) started",
+  "2026-10-06 05:01:47 AM IST  point Nx done: E = -3530.967271654, 14 cycles, 5.4 min; gate so far: rms 2.4942 over 17 points, X->R -2.6631, X->Rx -1.2736",
+  "2026-10-06 05:01:48 AM IST  queue ended: finished"
+ ],
+ "events": {
+  "first_test_level": "B3LYP/STO-3G did not converge in a useful time (HOMO-LUMO gap below 1 eV in the minimal basis); used to test STOP and restart, then replaced by HF/STO-3G with conv_tol 1e-2",
+  "stop_by_file": "the SCF ended at its next cycle (exit code 3), orbitals kept in X.part.chk, controller state \"stopped\"; a start with STOP present is refused",
+  "restart": "charge step reused, X continued from its own checkpoint"
+ },
+ "single_points_test_level": {
+  "X": {
+   "e_tot": -3530.9763184449166,
+   "converged": true,
+   "scf_cycles": 1,
+   "wall_seconds": 123.9,
+   "guess": {
+    "kind": "own checkpoint of a stopped run"
+   },
+   "nao": 213,
+   "naux": 3295,
+   "grid_points": 56744
+  },
+  "a4": {
+   "e_tot": -3530.957616589163,
+   "converged": true,
+   "scf_cycles": 25,
+   "wall_seconds": 562.0,
+   "guess": {
+    "kind": "orbitals of a finished point, projected",
+    "point": "X",
+    "ligand_heavy_rmsd_A": 1.9964
+   },
+   "nao": 213,
+   "naux": 3295,
+   "grid_points": 56744
+  }
+ },
+ "charge_step": {
+  "started": "2026-10-06 03:42:16 AM IST",
+  "after_qm_returncode": 0,
+  "log_sha256": "348b257b40b140aa28f763214e9fdb434103ee95dd8b35fbed40c6e4cbab0640",
+  "ok": true,
+  "reused": true,
+  "all_hard_checks_passed": true,
+  "params": "/tmp/claude-0/-root-workspace-cqc-4-sulfamoylanilinium-dihydrogen-phosphate/82cc65d7-a11f-4d60-91ee-436dc9534941/scratchpad/mdprep3/gr/rehearsal/bulk/mcpb_2e",
+  "real_charges": true,
+  "ended": "2026-10-06 04:35:17 AM IST"
+ },
+ "fit_stage": {
+  "truth": {
+   "k": {
+    "Zn_N2_S": 38.0,
+    "Zn_N2_H": 28.0,
+    "S_N2_H": 45.0
+   },
+   "theta0": {
+    "Zn_N2_S": 121.0,
+    "Zn_N2_H": 112.0,
+    "S_N2_H": 110.0
+   },
+   "c1": 0.8,
+   "c2": -1.5
+  },
+  "chosen": "M2",
+  "recovered": {
+   "k": {
+    "Zn_N2_S": 37.3916464999194,
+    "Zn_N2_H": 27.378770171707952,
+    "S_N2_H": 45.528851592557395
+   },
+   "theta0": {
+    "Zn_N2_S": 121.1621031618332,
+    "Zn_N2_H": 112.26999423525059,
+    "S_N2_H": 109.71489066354296
+   },
+   "c1": 0.6319833444181372,
+   "c2": -1.4475143677560094,
+   "offset_coefficient": 438.56511438998876
+  },
+  "standard_errors": {
+   "k": {
+    "Zn_N2_S": 3.067754437628331,
+    "Zn_N2_H": 2.410321546772541,
+    "S_N2_H": 2.4269008969844297
+   },
+   "theta0": {
+    "Zn_N2_S": 0.5198890730704356,
+    "Zn_N2_H": 0.5954824088501678,
+    "S_N2_H": 0.2916252370558918
+   },
+   "c1": 0.06763546828761377,
+   "c2": 0.06529800807579028
+  },
+  "rms_residual": 0.12291648157969552,
+  "leave_one_out_rms": 0.41462559265487775,
+  "gate_before": {
+   "rms": 2.4942,
+   "dd_X_R": {
+    "qm": 62.9594,
+    "mm": 60.2963,
+    "dd": -2.6631,
+    "passed": false
+   }
+  },
+  "gate_after_from_model": {
+   "rms": 0.1445,
+   "dd_X_R": {
+    "qm": 62.9594,
+    "mm": 62.7723,
+    "dd": -0.1871,
+    "passed": true
+   }
+  },
+  "gate_after_from_rebuilt_topology": 0.1445,
+  "frcmod": [
+   "Terms at N2 of the zinc-bound sulfonamidate fitted on B3LYP/6-31G* single points of the small zinc model, gate G-R (model M2, cap scheme methyl, 24 points; md/qm/gr_fit.py); load after CA2_mcpbpy.frcmod",
+   "MASS",
+   "",
+   "BOND",
+   "",
+   "ANGLE",
+   "M1-Y4-sy     37.392     121.162    fitted, gate G-R",
+   "M1-Y4-hn     27.379     112.270    fitted, gate G-R",
+   "hn-Y4-sy     45.529     109.715    fitted, gate G-R",
+   "",
+   "DIHE",
+   "ca-sy-Y4-hn   1     0.6320      0.000   -1.0      fitted, gate G-R",
+   "ca-sy-Y4-hn   1     1.4475    180.000    2.0",
+   "",
+   "IMPROPER",
+   "",
+   "NONBON",
+   ""
+  ]
+ },
+ "final_state": "finished",
+ "part_3": "after the last changes of the controller (a failed charge step is not repeated on the same file; yielding between points is an option): one result file removed, restart; the missing point ran at the test level from the orbitals of a finished point, then gate, fit and rebuilt topology ran again (numbers meaningless: one test-level energy among synthetic ones)",
+ "part_3_point": {
+  "id": "Nx",
+  "e_tot": -3530.9672716544783,
+  "converged": true,
+  "scf_cycles": 14,
+  "wall_seconds": 326.1,
+  "guess": {
+   "kind": "orbital coefficients of a finished point, taken over",
+   "point": "X",
+   "ligand_heavy_rmsd_A": 0.6018
+  }
+ },
+ "part_3_final_state": "finished",
+ "part_3_fit_stage_ran": true
+}

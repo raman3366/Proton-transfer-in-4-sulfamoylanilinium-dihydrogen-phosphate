@@ -1,0 +1,2 @@
+- 2026-09-29 00:40  Hessian by parallel finite differences: 162 gradients, 16 workers x 2 threads
+- 2026-09-29 02:38  frequencies (finite-difference (gradients, step 0.005 Bohr, 16 workers x 2 threads)): 0 imaginary, lowest 17.7 cm-1, 117 min

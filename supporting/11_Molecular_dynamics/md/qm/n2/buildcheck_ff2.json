@@ -1,0 +1,748 @@
+{
+ "what": "throwaway build of start X with a file of terms at N2, against the system as built; written by md/qm/n2_buildcheck.py; the built system is a test object",
+ "written": "2026-10-06 06:39:33 PM IST",
+ "frcmod": {
+  "file": "/root/workspace/cqc-4-sulfamoylanilinium-dihydrogen-phosphate/md/qm/n2/n2_terms_new.frcmod",
+  "sha256": "a0aa950f00e4c620ac98acd71becbbe3cc53d8fd7b3a53f05ef1d1f4e1de02a4"
+ },
+ "reference": "/root/cqc-sfa-md/systems/bonded_2e/X",
+ "reference_n2_terms_sha256": "113e3a2ebdbe99a4389e2ed497b20caaf0e64aebcbc8d547cf39823e9ee2cd00",
+ "work": "/tmp/claude-0/-root-workspace-cqc-4-sulfamoylanilinium-dihydrogen-phosphate/82cc65d7-a11f-4d60-91ee-436dc9534941/scratchpad/n2/build/takeover/build_ff2",
+ "builder": {
+  "script": "md/build_topology.py",
+  "sha256": "b858d1d1fe1b6006602ab29b2be68328efa6f05315d53cb1b9fb6e506710fbe4",
+  "checks_failed": [
+   "torsions_through_zinc_all_zero",
+   "zn_n2_h_is_not_the_120_deg_of_step_2e"
+  ],
+  "n_checks": 29,
+  "checks_passed": 21,
+  "terms_at_N2_record": {
+   "angles": {
+    "Zn-N2-S": {
+     "types": "M1-Y4-sy",
+     "k_kcal_per_mol_rad2": 16.101,
+     "theta0_deg": 110.48,
+     "n2_terms_file": [
+      16.101,
+      110.48
+     ],
+     "as_n2_terms_file": true,
+     "angle_in_this_start_deg": 117.55
+    },
+    "Zn-N2-H": {
+     "types": "M1-Y4-hn",
+     "k_kcal_per_mol_rad2": 23.884,
+     "theta0_deg": 119.128,
+     "n2_terms_file": [
+      23.884,
+      119.128
+     ],
+     "as_n2_terms_file": true,
+     "angle_in_this_start_deg": 107.41
+    },
+    "S-N2-H": {
+     "types": "sy-Y4-hn",
+     "k_kcal_per_mol_rad2": 49.799,
+     "theta0_deg": 116.243,
+     "n2_terms_file": [
+      49.799,
+      116.243
+     ],
+     "as_n2_terms_file": true,
+     "angle_in_this_start_deg": 107.41
+    }
+   },
+   "sum_of_the_three_equilibrium_angles_deg": 345.85,
+   "H-N2-S-C4_k_n_phase": [
+    [
+     1.0345,
+     3,
+     0.0
+    ],
+    [
+     1.0837,
+     1,
+     180.0
+    ],
+    [
+     2.7938,
+     2,
+     0.0
+    ]
+   ],
+   "H-N2-S-C4_n2_terms_file": [
+    [
+     1.0345,
+     3,
+     0.0
+    ],
+    [
+     1.0837,
+     1,
+     180.0
+    ],
+    [
+     2.7938,
+     2,
+     0.0
+    ]
+   ],
+   "all_as_n2_terms_file": true,
+   "Zn-N2-H_is_not_120_deg": false
+  },
+  "torsions_through_zinc": {
+   "n": 42,
+   "n_proper": 41,
+   "n_improper": 1,
+   "largest_abs_k_kcal_per_mol": 1.8832,
+   "all_zero": false
+  }
+ },
+ "prmtop_sections": {
+  "n": 44,
+  "identical": 33,
+  "differ": [
+   "ANGLE_EQUIL_VALUE",
+   "ANGLE_FORCE_CONSTANT",
+   "CHARGE",
+   "DIHEDRALS_INC_HYDROGEN",
+   "DIHEDRALS_WITHOUT_HYDROGEN",
+   "DIHEDRAL_FORCE_CONSTANT",
+   "DIHEDRAL_PERIODICITY",
+   "DIHEDRAL_PHASE",
+   "POINTERS",
+   "SCEE_SCALE_FACTOR",
+   "SCNB_SCALE_FACTOR"
+  ],
+  "differ_outside_angles_and_torsions": [],
+  "identical_sections": [
+   "AMBER_ATOM_TYPE",
+   "ANGLES_INC_HYDROGEN",
+   "ANGLES_WITHOUT_HYDROGEN",
+   "ATOMIC_NUMBER",
+   "ATOMS_PER_MOLECULE",
+   "ATOM_NAME",
+   "ATOM_TYPE_INDEX",
+   "BONDS_INC_HYDROGEN",
+   "BONDS_WITHOUT_HYDROGEN",
+   "BOND_EQUIL_VALUE",
+   "BOND_FORCE_CONSTANT",
+   "BOX_DIMENSIONS",
+   "EXCLUDED_ATOMS_LIST",
+   "HBCUT",
+   "HBOND_ACOEF",
+   "HBOND_BCOEF",
+   "IPOL",
+   "IROTAT",
+   "JOIN_ARRAY",
+   "LENNARD_JONES_ACOEF",
+   "LENNARD_JONES_BCOEF",
+   "MASS",
+   "NONBONDED_PARM_INDEX",
+   "NUMBER_EXCLUDED_ATOMS",
+   "RADII",
+   "RADIUS_SET",
+   "RESIDUE_LABEL",
+   "RESIDUE_POINTER",
+   "SCREEN",
+   "SOLTY",
+   "SOLVENT_POINTERS",
+   "TITLE",
+   "TREE_CHAIN_CLASSIFICATION"
+  ]
+ },
+ "coordinates_identical": true,
+ "charges": {
+  "site_atoms_with_another_charge": 58,
+  "atoms_outside_the_site_that_differ": 0,
+  "largest_difference_from_the_mol2_files": 0.0,
+  "site_charge_new": 1.0,
+  "site_charge_reference": 1.0,
+  "total_charge_new": -0.0
+ },
+ "term_by_term": {
+  "atoms": 40902,
+  "bonds": 40900,
+  "angles": 7539,
+  "torsion_quadruples": 11142,
+  "improper_quadruples": 858,
+  "pairs_1_4": 10878,
+  "pairs_1_4_identical": true,
+  "differences_the_plan_allows": {
+   "angles": {
+    "SN1260:S-SN1260:N2-SN1260:HN21": {
+     "as_built": [
+      61.55,
+      118.0591
+     ],
+     "new": [
+      49.799,
+      116.243
+     ]
+    },
+    "ZN1259:ZN-SN1260:N2-SN1260:HN21": {
+     "as_built": [
+      50.0,
+      107.407
+     ],
+     "new": [
+      23.884,
+      119.1281
+     ]
+    },
+    "ZN1259:ZN-SN1260:N2-SN1260:S": {
+     "as_built": [
+      50.0,
+      117.5501
+     ],
+     "new": [
+      16.101,
+      110.48
+     ]
+    }
+   },
+   "torsions": {
+    "HD294:NE2-ZN1259:ZN-SN1260:N2-SN1260:HN21": {
+     "as_built": [
+      [
+       3,
+       0.0,
+       0.0
+      ]
+     ],
+     "new": [
+      [
+       3,
+       0.3584,
+       6.002
+      ]
+     ],
+     "atoms": [
+      "n96",
+      "zn",
+      "n2",
+      "h"
+     ]
+    },
+    "HE1117:ND1-ZN1259:ZN-SN1260:N2-SN1260:HN21": {
+     "as_built": [
+      [
+       3,
+       0.0,
+       0.0
+      ]
+     ],
+     "new": [
+      [
+       3,
+       0.3584,
+       6.002
+      ]
+     ],
+     "atoms": [
+      "n119",
+      "zn",
+      "n2",
+      "h"
+     ]
+    },
+    "HD192:NE2-ZN1259:ZN-SN1260:N2-SN1260:S": {
+     "as_built": [
+      [
+       3,
+       0.0,
+       0.0
+      ]
+     ],
+     "new": [
+      [
+       3,
+       0.3128,
+       294.88
+      ]
+     ],
+     "atoms": [
+      "n94",
+      "zn",
+      "n2",
+      "s"
+     ]
+    },
+    "SN1260:C4-SN1260:S-SN1260:N2-SN1260:HN21": {
+     "as_built": [
+      [
+       1,
+       0.2624,
+       180.0
+      ],
+      [
+       2,
+       2.703,
+       0.0
+      ]
+     ],
+     "new": [
+      [
+       1,
+       1.0837,
+       180.0
+      ],
+      [
+       2,
+       2.7938,
+       0.0
+      ],
+      [
+       3,
+       1.0345,
+       0.0
+      ]
+     ],
+     "atoms": [
+      "c4",
+      "s",
+      "n2",
+      "h"
+     ]
+    },
+    "ZN1259:ZN-SN1260:N2-SN1260:S-SN1260:C4": {
+     "as_built": [
+      [
+       3,
+       0.0,
+       0.0
+      ]
+     ],
+     "new": [
+      [
+       1,
+       1.8832,
+       180.0
+      ],
+      [
+       2,
+       0.4008,
+       0.0
+      ],
+      [
+       3,
+       0.4766,
+       0.0
+      ]
+     ],
+     "atoms": [
+      "zn",
+      "n2",
+      "s",
+      "c4"
+     ]
+    },
+    "HD294:NE2-ZN1259:ZN-SN1260:N2-SN1260:S": {
+     "as_built": [
+      [
+       3,
+       0.0,
+       0.0
+      ]
+     ],
+     "new": [
+      [
+       3,
+       0.3128,
+       294.88
+      ]
+     ],
+     "atoms": [
+      "n96",
+      "zn",
+      "n2",
+      "s"
+     ]
+    },
+    "HE1117:ND1-ZN1259:ZN-SN1260:N2-SN1260:S": {
+     "as_built": [
+      [
+       3,
+       0.0,
+       0.0
+      ]
+     ],
+     "new": [
+      [
+       3,
+       0.3128,
+       294.88
+      ]
+     ],
+     "atoms": [
+      "n119",
+      "zn",
+      "n2",
+      "s"
+     ]
+    },
+    "HD192:NE2-ZN1259:ZN-SN1260:N2-SN1260:HN21": {
+     "as_built": [
+      [
+       3,
+       0.0,
+       0.0
+      ]
+     ],
+     "new": [
+      [
+       3,
+       0.3584,
+       6.002
+      ]
+     ],
+     "atoms": [
+      "n94",
+      "zn",
+      "n2",
+      "h"
+     ]
+    }
+   },
+   "improper": {
+    "ZN1259:ZN-SN1260:N2-SN1260:S-SN1260:HN21": [
+     [
+      2,
+      0.5515,
+      180.0
+     ]
+    ]
+   }
+  },
+  "differences_the_plan_does_not_allow": []
+ },
+ "terms_in_the_topology_against_the_file": [
+  {
+   "term": "angle zn-n2-s",
+   "file": [
+    16.101,
+    110.48
+   ],
+   "topology": [
+    16.101,
+    110.48
+   ],
+   "same": true
+  },
+  {
+   "term": "angle zn-n2-h",
+   "file": [
+    23.884,
+    119.128
+   ],
+   "topology": [
+    23.884,
+    119.1281
+   ],
+   "same": true
+  },
+  {
+   "term": "angle s-n2-h",
+   "file": [
+    49.799,
+    116.243
+   ],
+   "topology": [
+    49.799,
+    116.243
+   ],
+   "same": true
+  },
+  {
+   "term": "torsion c4-s-n2-h",
+   "file": [
+    [
+     1,
+     1.0837,
+     180.0
+    ],
+    [
+     2,
+     2.7938,
+     0.0
+    ],
+    [
+     3,
+     1.0345,
+     0.0
+    ]
+   ],
+   "topology": [
+    [
+     1,
+     1.0837,
+     180.0
+    ],
+    [
+     2,
+     2.7938,
+     0.0
+    ],
+    [
+     3,
+     1.0345,
+     0.0
+    ]
+   ],
+   "same": true,
+   "non_zero_terms_same": true
+  },
+  {
+   "term": "torsion zn-n2-s-c4",
+   "file": [
+    [
+     1,
+     1.8832,
+     180.0
+    ],
+    [
+     2,
+     0.4008,
+     0.0
+    ],
+    [
+     3,
+     0.4766,
+     0.0
+    ]
+   ],
+   "topology": [
+    [
+     1,
+     1.8832,
+     180.0
+    ],
+    [
+     2,
+     0.4008,
+     0.0
+    ],
+    [
+     3,
+     0.4766,
+     0.0
+    ]
+   ],
+   "same": true,
+   "non_zero_terms_same": true
+  },
+  {
+   "term": "torsion zn-n2-s-o1",
+   "file": "not in the file: as built",
+   "topology": [
+    [
+     3,
+     0.0,
+     0.0
+    ]
+   ],
+   "same": true
+  },
+  {
+   "term": "torsion zn-n2-s-o2",
+   "file": "not in the file: as built",
+   "topology": [
+    [
+     3,
+     0.0,
+     0.0
+    ]
+   ],
+   "same": true
+  },
+  {
+   "term": "torsion h-n2-s-o1",
+   "file": "not in the file: as built",
+   "topology": [
+    [
+     2,
+     0.0,
+     0.0
+    ]
+   ],
+   "same": true
+  },
+  {
+   "term": "torsion h-n2-s-o2",
+   "file": "not in the file: as built",
+   "topology": [
+    [
+     2,
+     0.0,
+     0.0
+    ]
+   ],
+   "same": true
+  },
+  {
+   "term": "torsion n94-zn-n2-s",
+   "file": [
+    [
+     3,
+     0.3128,
+     294.88
+    ]
+   ],
+   "topology": [
+    [
+     3,
+     0.3128,
+     294.88
+    ]
+   ],
+   "same": true,
+   "non_zero_terms_same": true
+  },
+  {
+   "term": "torsion n94-zn-n2-h",
+   "file": [
+    [
+     3,
+     0.3584,
+     6.002
+    ]
+   ],
+   "topology": [
+    [
+     3,
+     0.3584,
+     6.002
+    ]
+   ],
+   "same": true,
+   "non_zero_terms_same": true
+  },
+  {
+   "term": "torsion n96-zn-n2-s",
+   "file": [
+    [
+     3,
+     0.3128,
+     294.88
+    ]
+   ],
+   "topology": [
+    [
+     3,
+     0.3128,
+     294.88
+    ]
+   ],
+   "same": true,
+   "non_zero_terms_same": true
+  },
+  {
+   "term": "torsion n96-zn-n2-h",
+   "file": [
+    [
+     3,
+     0.3584,
+     6.002
+    ]
+   ],
+   "topology": [
+    [
+     3,
+     0.3584,
+     6.002
+    ]
+   ],
+   "same": true,
+   "non_zero_terms_same": true
+  },
+  {
+   "term": "torsion n119-zn-n2-s",
+   "file": [
+    [
+     3,
+     0.3128,
+     294.88
+    ]
+   ],
+   "topology": [
+    [
+     3,
+     0.3128,
+     294.88
+    ]
+   ],
+   "same": true,
+   "non_zero_terms_same": true
+  },
+  {
+   "term": "torsion n119-zn-n2-h",
+   "file": [
+    [
+     3,
+     0.3584,
+     6.002
+    ]
+   ],
+   "topology": [
+    [
+     3,
+     0.3584,
+     6.002
+    ]
+   ],
+   "same": true,
+   "non_zero_terms_same": true
+  },
+  {
+   "term": "improper at N2 M1-hn-Y4-sy",
+   "file": [
+    2,
+    0.5515,
+    180.0
+   ],
+   "topology": [
+    [
+     [
+      2,
+      0.5515,
+      180.0
+     ]
+    ]
+   ],
+   "same": true
+  }
+ ],
+ "energy_of_the_changed_terms": {
+  "points": [
+   {
+    "geometry": "as built",
+    "topology_new_minus_as_built": 9.33662,
+    "from_the_two_files": 9.33662,
+    "difference": -1e-06
+   },
+   {
+    "geometry": "TX0 production, full frame 0 of 50",
+    "topology_new_minus_as_built": 9.15308,
+    "from_the_two_files": 9.15307,
+    "difference": 8e-06
+   },
+   {
+    "geometry": "TX0 production, full frame 24 of 50",
+    "topology_new_minus_as_built": 11.46732,
+    "from_the_two_files": 11.46732,
+    "difference": -5e-06
+   },
+   {
+    "geometry": "TX0 production, full frame 49 of 50",
+    "topology_new_minus_as_built": 9.40563,
+    "from_the_two_files": 9.40563,
+    "difference": -1e-06
+   }
+  ],
+  "largest_difference_kcal": 8e-06,
+  "note": "angles and torsions only, all 40,902 atoms; the difference of the two topologies must be the difference of the terms at N2 and nothing else"
+ },
+ "passed": true,
+ "builder_own_checks_all_passed": false
+}

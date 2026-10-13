@@ -1,0 +1,20 @@
+[6 Oct 2026, 10:31:14 AM IST] cqc-sfa-md run_md.py: run TX0, stage all, system /root/cqc-sfa-md/systems/bonded_2e/X, out /root/cqc-sfa-md/runs_test/bonded_2e/TX0, --resume
+[6 Oct 2026, 10:31:17 AM IST] min: potential energy before -445219.5 kJ/mol; minimising (2289 atoms restrained, k = 1000.0 kJ mol-1 nm-2)
+[6 Oct 2026, 10:32:02 AM IST] min: potential energy after -659032.7 kJ/mol (change -213813.2), 4679 calls, 33 s; L-BFGS iterations per pass 1054, 3613, 6, 6
+[6 Oct 2026, 10:32:12 AM IST] eq01 (heat): NVT, 50000 steps of 2 fs, restraints solute_heavy k = 1000, on CUDA
+[6 Oct 2026, 10:32:26 AM IST] eq01 (heat): done in 14 s, 634.6 ns/day; T 299.7 K, density 0.9123 g/cm3
+[6 Oct 2026, 10:32:27 AM IST] eq02 (density): NPT, 150000 steps of 2 fs, restraints solute_heavy k = 1000, on CUDA
+[6 Oct 2026, 10:33:23 AM IST] eq02 (density): done in 56 s, 465.3 ns/day; T 299.7 K, density 1.0248 g/cm3
+[6 Oct 2026, 10:33:24 AM IST] eq03 (loosen): NPT, 150000 steps of 2 fs, restraints solute_heavy k = 250, on CUDA
+[6 Oct 2026, 10:34:21 AM IST] eq03 (loosen): done in 57 s, 455.1 ns/day; T 299.8 K, density 1.0296 g/cm3
+[6 Oct 2026, 10:34:21 AM IST] eq03: hydration check: 0 water oxygen(s) within 2.5 A of the crystal ring site (nearest 3.45 A); ligand 0.63 A from the site on average; check skipped: the ligand itself is at the site; next step eq04
+[6 Oct 2026, 10:34:23 AM IST] eq04 (release_side_chains_zinc_ligand): NPT, 100000 steps of 4 fs, restraints protein_backbone k = 250, on CUDA
+[6 Oct 2026, 10:35:04 AM IST] eq04 (release_side_chains_zinc_ligand): done in 41 s, 847.3 ns/day; T 299.6 K, density 1.0222 g/cm3
+[6 Oct 2026, 10:35:05 AM IST] eq05 (loosen_backbone): NPT, 100000 steps of 4 fs, restraints protein_backbone k = 50, on CUDA
+[6 Oct 2026, 10:35:55 AM IST] eq05 (loosen_backbone): done in 50 s, 690.0 ns/day; T 302.5 K, density 1.0254 g/cm3
+[6 Oct 2026, 10:35:57 AM IST] eq06 (free): NPT, 125000 steps of 4 fs, restraints none k = 0, on CUDA
+[6 Oct 2026, 10:36:48 AM IST] eq06 (free): done in 51 s, 846.4 ns/day; T 300.8 K, density 1.0209 g/cm3
+[6 Oct 2026, 10:36:49 AM IST] seg0001 (0-5 ns): NPT, 1250000 steps of 4 fs, restraints none k = 0, on CUDA
+[6 Oct 2026, 10:45:21 AM IST] seg0001 (0-5 ns): done in 511 s, 845.1 ns/day; T 301.1 K, density 1.0235 g/cm3
+[6 Oct 2026, 10:45:21 AM IST] production: 1 of 1 segments complete, 5 of 5 ns, 845.1 ns/day
+[6 Oct 2026, 10:45:21 AM IST] DONE TX0

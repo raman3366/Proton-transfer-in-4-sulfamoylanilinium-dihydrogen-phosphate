@@ -1,0 +1,111 @@
+******************************************************************
+*               Welcome to use the MCPB.py program               *
+*                          Version 2026                          *
+*                       Author: Pengfei Li                       *
+*                      Merz Research Group                       *
+*                   Michigan State University                    *
+*                              AND                               *
+*                 Hammes-Schiffer Research Group                 *
+*                        Yale University                         *
+*                              AND                               *
+*                       Li Research Group                        *
+*                   Loyola University Chicago                    *
+******************************************************************
+The input file you are using is : CA2.in
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+The following is the input variable you have:
+The variable ion_ids is :  [4076]
+The variable ion_info is :  []
+The variable ion_mol2files is :  ['ZN.mol2']
+The variable original_pdb is :  CA2_H.pdb
+The variable add_bonded_pairs is :  []
+The variable add_redcrd is :  0
+The variable additional_resids is :  []
+The variable anglefc_avg is :  0
+The variable bondfc_avg is :  0
+The variable chgfix_resids is :  []
+The variable cut_off is :  2.8
+The variable force_field is :  ff14SB
+The variable frcmod_files is :  ['sfa_anion_gaff2.frcmod', 'sfa_anion_repair.frcmod']
+The variable gaff is :  2
+The variable group_name is :  CA2
+The variable ion_paraset is :  12_6 (Only for the ions using the nonbonded model).
+The variable smmodel_frz_ids is :  []
+The variable large_opt is :  0
+The variable lgmodel_chg is :  -99
+The variable lgmodel_spin is :  -99
+             -99 means program will assign a charge automatically.
+The variable naa_mol2files is :  ['SAN.mol2']
+The variable scale_factor is :  1.0
+             ATTENTION: This is the scale factor of frequency. The 
+             force constants will be scaled by multiplying the square
+             of scale_factor.
+The variable smmodel_chg is :  -99
+The variable smmodel_spin is :  -99
+             -99 means program will assign a charge automatically.
+The variable software_version is :  gau
+The variable sqm_opt is :  0
+The variable water_model is :  TIP3P
+The variable xstru is :  0
+******************************************************************
+*                                                                *
+*=======================Metal Site Information===================*
+*                                                                *
+******************************************************************
+***Selected Metal ion ZN is atom 4076 in residue 260-ZN
+93-HID@NE2 is in 2.8 Angstrom of or set bonded (in the input file) to (one of) these metal ions
+95-HID@NE2 is in 2.8 Angstrom of or set bonded (in the input file) to (one of) these metal ions
+118-HIE@ND1 is in 2.8 Angstrom of or set bonded (in the input file) to (one of) these metal ions
+261-SAN@N2 is in 2.8 Angstrom of or set bonded (in the input file) to (one of) these metal ions
+***The following residues are in the Metal Site:
+Residue 93-HID
+Residue 95-HID
+Residue 118-HIE
+Residue 260-ZN
+Residue 261-SAN
+***The small model contains the following residues: 
+[93, 95, 118, 260, 261]
+***The large model contains the following residues: 
+[92, 93, 94, 95, 96, 117, 118, 119, 260, 261]
+******************************************************************
+*                                                                *
+*=======================Building models==========================*
+*                                                                *
+******************************************************************
+***Creating the small model...
+It contains the residue 93-HID as sidechain coordinated.
+It contains the residue 95-HID as sidechain coordinated.
+It contains the residue 118-HIE as sidechain coordinated.
+It contains the residue 260-ZN as normal.
+It contains the residue 261-SAN as normal.
+Totally there are 64 atoms in the small model.
+Totally there are 274 electrons in the small model.
+***Creating the standard model...
+It contains the residue 93-HID as normal.
+It contains the residue 95-HID as normal.
+It contains the residue 118-HIE as normal.
+It contains the residue 260-ZN as normal.
+It contains the residue 261-SAN as normal.
+Totally there are 70 atoms in the standard model.
+***Creating the large model...
+Creating the residue 92-PHE into ACE...
+It contains the residue 93-HID as normal.
+Creating the residue 94-PHE into GLY...
+It contains the residue 95-HID as normal.
+Creating the residue 96-TRP into NME...
+Creating the residue 117-LEU into ACE...
+It contains the residue 118-HIE as normal.
+Creating the residue 119-LEU into NME...
+It contains the residue 260-ZN as normal.
+It contains the residue 261-SAN as normal.
+Totally there are 101 atoms in the large model.
+Totally there are 444 electrons in the large model.
+==================================================================
+To cite MCPB.py please use the following reference:
+  Pengfei Li and Kenneth M. Merz, Jr., "MCPB.py: A Python Based
+  Metal Center Parameter Builder", J. Chem. Inf. Model., 2016,
+  56, 599-604.
+Helpful tips can be found in the following book chapter:
+  Pengfei Li and Kenneth M. Merz, Jr., "Parameterization of a Dioxygen
+  Binding Metal Site Using the MCPB.py Program", Methods Mol. Biol.,
+  2021, 2199, 257-275.

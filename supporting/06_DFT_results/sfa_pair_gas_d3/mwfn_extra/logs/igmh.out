@@ -1,0 +1,244 @@
+[95m Multiwfn -- A Multifunctional Wavefunction Analyzer
+[0m[32m Version 2026.9.20 (release date is the same as version name)
+[0m Developer: Tian Lu (Beijing Kein Research Center for Natural Sciences)
+ Multiwfn official website: http://sobereva.com/multiwfn
+ Multiwfn English forum: http://sobereva.com/wfnbbs
+ Multiwfn Chinese forum: http://bbs.keinsci.com/wfn
+ ( Number of parallel threads:   4  Current date: 2026-09-28  Time: 04:49:54 )
+ 
+ Both following papers ***MUST BE CITED IN MAIN TEXT*** if Multiwfn is used:
+[36m
+  Tian Lu, Feiwu Chen, J. Comput. Chem., 33, 580 (2012) DOI: 10.1002/jcc.22885
+  Tian Lu, J. Chem. Phys., 161, 082503 (2024) DOI: 10.1063/5.0216272
+[0m
+ See "How to cite Multiwfn.pdf" in Multiwfn binary package for more information
+ 
+ Please wait...
+ Loading various information of the wavefunction
+ Loading basis set definition...
+ The highest angular moment basis functions is D
+ All D basis functions are spherical harmonic type
+ Loading orbitals...
+ The actual number of orbitals read:       445
+ Converting basis function information to GTF information...
+ Back converting basis function information from Cartesian to spherical type...
+ Generating density matrix...
+ Generating overlap matrix...
+ 
+ Total/Alpha/Beta electrons:    140.0000     70.0000     70.0000
+ Net charge:     0.00000      Expected multiplicity:    1
+ Atoms:     27,  Basis functions:    445,  GTFs:    703
+ This is a restricted single-determinant wavefunction
+ Orbitals from 1 to    70 are occupied
+
+ Loaded /home/ubuntu/cqc-sfa/molecules/sfa/results/sfa_pair_gas_d3/final.molden successfully!
+ 
+ Formula: H11 C6 N2 O6 P1 S1      Total atoms:      27
+ Molecule weight:       270.20015 Da
+ Point group: C1 
+ 
+ "q": Exit program gracefully          "r": Load a new file
+                    ************ Main function menu ************
+ 0 Show molecular structure and view orbitals
+ 1 Output all properties at a point       2 Topology analysis
+ 3 Output and plot specific property in a line
+ 4 Output and plot specific property in a plane
+ 5 Output and plot specific property within a spatial region (calc. grid data)
+ 6 Check & modify wavefunction
+ 7 Population analysis and calculation of atomic charges
+ 8 Orbital composition analysis           9 Bond order analysis
+ 10 Plot total DOS, PDOS, OPDOS, local DOS, COHP and photoelectron spectrum
+ 11 Plot IR/Raman/UV-Vis/ECD/VCD/ROA/NMR spectrum
+ 12 Quantitative analysis of molecular surface
+ 13 Process grid data (No grid data is presented currently)
+ 14 Adaptive natural density partitioning (AdNDP) analysis
+ 15 Fuzzy atomic space analysis
+ 16 Charge decomposition analysis (CDA) and plot orbital interaction diagram
+ 17 Basin analysis                       18 Electron excitation analysis
+ 19 Orbital localization analysis        20 Visual study of weak interaction
+ 21 Energy decomposition analysis        22 Conceptual DFT (CDFT) analysis
+ 23 ETS-NOCV analysis                    24 (Hyper)polarizability analysis
+ 25 Electron delocalization and aromaticity analyses
+ 26 Structure and geometry related analyses
+ 100 Other functions (Part 1)            200 Other functions (Part 2)
+ 300 Other functions (Part 3)
+ Reviews of functions in this module:
+ Tian Lu and Qinxue Chen, Visualization Analysis of Weak Interactions in Chemical Systems. In Comprehensive Computational Chemistry, vol. 2, pp. 240-264. Oxford: Elsevier (2024) DOI: 10.1016/B978-0-12-821978-2.00076-3
+ Tian Lu, Visualization Analysis of Covalent and Noncovalent Interactions in Real Space, Angew. Chem. Int. Ed., 137, e202504895 (2025) DOI: 10.1002/anie.202504895
+ 
+            ============ Visual study of weak interaction ============ 
+  0 Return
+  1 NCI analysis (also known as RDG analysis)
+  2 NCI analysis based on promolecular density
+  3 aNCI: Averaged NCI analysis
+  4 IRI: Interaction region indicator analysis (Chemistry-Methods, 1, 231)
+  5 DORI analysis
+  6 Visualization of van der Waals potential (JMM, 26, 315)
+  9 Becke/Hirshfeld surface analysis
+  10 IGM analysis
+ -10 mIGM: Modified IGM analysis
+  11 IGMH: IGM analysis based on Hirshfeld partition of molecular density (JCC, 43, 539)
+  12 aIGM: Averaged IGM analysis
+ -12 amIGM: Averaged mIGM analysis
+ Note: Atomic unit is used for all outputs of this function
+ 
+ 
+ *** Please cite the following papers along with Multiwfn original papers ***
+   Original paper of IGMH:
+ Tian Lu, Qinxue Chen, J. Comput. Chem., 43, 539 (2022) DOI: 10.1002/jcc.26812
+   Erratum to the IGMH paper:
+ Tian Lu, Qinxue Chen, ChemRxiv (2022) DOI: 10.26434/chemrxiv-2022-g1m34
+   Comprehensive reviews:
+ Tian Lu, Qinxue Chen, Visualization Analysis of Weak Interactions in Chemical Systems. In Comprehensive Computational Chemistry, vol. 2, pp. 240-264. Oxford: Elsevier (2024) DOI: 10.1016/B978-0-12-821978-2.00076-3
+ Tian Lu, Visualization Analysis of Covalent and Noncovalent Interactions in Real Space, Angew. Chem. Int. Ed., 137, e202504895 (2025) DOI: 10.1002/anie.202504895
+ 
+ How many fragments will be defined? e.g. 3
+ Note: At least one fragment should be defined. Union set of all fragment atoms will be taken into calculation
+ Input atom indices for fragment  1, e.g. 3,5-8,15-20
+ Input atom indices for fragment  2, e.g. 3,5-8,15-20
+ Note: If input "c", the atoms complementary to already defined fragments will be selected
+ 
+ Please select a method to set up grid
+ -10 Set extension distance of grid range for mode 1~4, current:  2.000 Bohr
+ 1 Low-quality grid,    covering whole system, about 125000 points in total
+ 2 Medium-quality grid, covering whole system, about 512000 points in total
+ 3 High-quality grid,   covering whole system, about 1728000 points in total
+ 4 Input the number of points or grid spacing in X,Y,Z, covering whole system
+ 5 Input original point, grid spacings, and the number of points
+ 6 Input center coordinate, number of points and extension distance
+ 7 The same as 6, but input two atoms, the midpoint will be defined as center
+ 8 Use grid setting of another cube file
+ 10 Set box of grid data visually using a GUI window
+ 11 Select a set of atoms, set extension distance around them and grid spacing
+ Coordinate of origin in X,Y,Z is      -0.538452   -2.499747  -11.197627 Bohr
+ Coordinate of end point in X,Y,Z is   12.264869   14.286829   11.990610 Bohr
+ Grid spacing in X,Y,Z is    0.142259    0.142259    0.142259 Bohr
+ Number of points in X,Y,Z is   91  119  164   Total:     1775956
+ Note: Virtual orbitals higher than LUMO+9 have been temporarily discarded for saving computational time
+
+ Unique GTFs have been constructed. Number of unique GTFs:     701
+ Calculating sign(lambda2)rho...
+ Progress: [--------------------------------------------------]     0.0 %     - Progress: [--------------------------------------------------]     1.0 %     \ Progress: [#-------------------------------------------------]     2.0 %     | Progress: [#-------------------------------------------------]     3.0 %     / Progress: [##------------------------------------------------]     4.0 %     - Progress: [##------------------------------------------------]     5.0 %     \ Progress: [###-----------------------------------------------]     6.0 %     | Progress: [###-----------------------------------------------]     7.0 %     / Progress: [####----------------------------------------------]     8.0 %     - Progress: [####----------------------------------------------]     9.0 %     \ Progress: [#####---------------------------------------------]    10.0 %     | Progress: [#####---------------------------------------------]    11.0 %     / Progress: [######--------------------------------------------]    12.0 %     - Progress: [######--------------------------------------------]    13.0 %     \ Progress: [#######-------------------------------------------]    14.0 %     | Progress: [#######-------------------------------------------]    15.0 %     / Progress: [########------------------------------------------]    16.0 %     - Progress: [########------------------------------------------]    17.0 %     \ Progress: [#########-----------------------------------------]    18.0 %     | Progress: [#########-----------------------------------------]    19.0 %     / Progress: [##########----------------------------------------]    20.0 %     - Progress: [##########----------------------------------------]    21.0 %     \ Progress: [###########---------------------------------------]    22.0 %     | Progress: [###########---------------------------------------]    23.0 %     / Progress: [############--------------------------------------]    24.0 %     - Progress: [############--------------------------------------]    25.0 %     \ Progress: [#############-------------------------------------]    26.0 %     | Progress: [#############-------------------------------------]    27.0 %     / Progress: [##############------------------------------------]    28.0 %     - Progress: [##############------------------------------------]    29.0 %     \ Progress: [###############-----------------------------------]    30.0 %     | Progress: [###############-----------------------------------]    31.0 %     / Progress: [################----------------------------------]    32.0 %     - Progress: [################----------------------------------]    33.0 %     \ Progress: [#################---------------------------------]    34.0 %     | Progress: [#################---------------------------------]    35.0 %     / Progress: [##################--------------------------------]    36.0 %     - Progress: [##################--------------------------------]    37.0 %     \ Progress: [###################-------------------------------]    38.0 %     | Progress: [###################-------------------------------]    39.0 %     / Progress: [####################------------------------------]    40.0 %     - Progress: [####################------------------------------]    41.0 %     \ Progress: [#####################-----------------------------]    42.0 %     | Progress: [#####################-----------------------------]    43.0 %     / Progress: [######################----------------------------]    44.0 %     - Progress: [######################----------------------------]    45.0 %     \ Progress: [#######################---------------------------]    46.0 %     | Progress: [#######################---------------------------]    47.0 %     / Progress: [########################--------------------------]    48.0 %     - Progress: [########################--------------------------]    49.0 %     \ Progress: [#########################-------------------------]    50.0 %     | Progress: [#########################-------------------------]    51.0 %     / Progress: [##########################------------------------]    52.0 %     - Progress: [##########################------------------------]    53.0 %     \ Progress: [###########################-----------------------]    54.0 %     | Progress: [###########################-----------------------]    55.0 %     / Progress: [############################----------------------]    56.0 %     - Progress: [############################----------------------]    57.0 %     \ Progress: [############################----------------------]    58.0 %     | Progress: [#############################---------------------]    59.0 %     / Progress: [##############################--------------------]    60.0 %     - Progress: [##############################--------------------]    61.0 %     \ Progress: [###############################-------------------]    62.0 %     | Progress: [###############################-------------------]    63.0 %     / Progress: [################################------------------]    64.0 %     - Progress: [################################------------------]    65.0 %     \ Progress: [#################################-----------------]    66.0 %     | Progress: [#################################-----------------]    67.0 %     / Progress: [##################################----------------]    68.0 %     - Progress: [##################################----------------]    69.0 %     \ Progress: [###################################---------------]    70.0 %     | Progress: [###################################---------------]    71.0 %     / Progress: [####################################--------------]    72.0 %     - Progress: [####################################--------------]    73.0 %     \ Progress: [#####################################-------------]    74.0 %     | Progress: [#####################################-------------]    75.0 %     / Progress: [######################################------------]    76.0 %     - Progress: [######################################------------]    77.0 %     \ Progress: [#######################################-----------]    78.0 %     | Progress: [#######################################-----------]    79.0 %     / Progress: [########################################----------]    80.0 %     - Progress: [########################################----------]    81.0 %     \ Progress: [#########################################---------]    82.0 %     | Progress: [#########################################---------]    83.0 %     / Progress: [##########################################--------]    84.0 %     - Progress: [##########################################--------]    85.0 %     \ Progress: [###########################################-------]    86.0 %     | Progress: [###########################################-------]    87.0 %     / Progress: [############################################------]    88.0 %     - Progress: [############################################------]    89.0 %     \ Progress: [#############################################-----]    90.0 %     | Progress: [#############################################-----]    91.0 %     / Progress: [##############################################----]    92.0 %     - Progress: [##############################################----]    93.0 %     \ Progress: [###############################################---]    94.0 %     | Progress: [###############################################---]    95.0 %     / Progress: [################################################--]    96.0 %     - Progress: [################################################--]    97.0 %     \ Progress: [#################################################-]    98.0 %     | Progress: [#################################################-]    99.0 %     / Progress: [##################################################]   100.0 %     - 
+ Calculating delta-g, delta-g_inter and delta-g_intra...
+ Progress: [--------------------------------------------------]     0.0 %     \ Progress: [--------------------------------------------------]     1.0 %     | Progress: [#-------------------------------------------------]     2.0 %     / Progress: [#-------------------------------------------------]     3.0 %     - Progress: [##------------------------------------------------]     4.0 %     \ Progress: [##------------------------------------------------]     5.0 %     | Progress: [###-----------------------------------------------]     6.0 %     / Progress: [###-----------------------------------------------]     7.0 %     - Progress: [####----------------------------------------------]     8.0 %     \ Progress: [####----------------------------------------------]     9.0 %     | Progress: [#####---------------------------------------------]    10.0 %     / Progress: [#####---------------------------------------------]    11.0 %     - Progress: [######--------------------------------------------]    12.0 %     \ Progress: [######--------------------------------------------]    13.0 %     | Progress: [#######-------------------------------------------]    14.0 %     / Progress: [#######-------------------------------------------]    15.0 %     - Progress: [########------------------------------------------]    16.0 %     \ Progress: [########------------------------------------------]    17.0 %     | Progress: [#########-----------------------------------------]    18.0 %     / Progress: [#########-----------------------------------------]    19.0 %     - Progress: [##########----------------------------------------]    20.0 %     \ Progress: [##########----------------------------------------]    21.0 %     | Progress: [###########---------------------------------------]    22.0 %     / Progress: [###########---------------------------------------]    23.0 %     - Progress: [############--------------------------------------]    24.0 %     \ Progress: [############--------------------------------------]    25.0 %     | Progress: [#############-------------------------------------]    26.0 %     / Progress: [#############-------------------------------------]    27.0 %     - Progress: [##############------------------------------------]    28.0 %     \ Progress: [##############------------------------------------]    29.0 %     | Progress: [###############-----------------------------------]    30.0 %     / Progress: [###############-----------------------------------]    31.0 %     - Progress: [################----------------------------------]    32.0 %     \ Progress: [################----------------------------------]    33.0 %     | Progress: [#################---------------------------------]    34.0 %     / Progress: [#################---------------------------------]    35.0 %     - Progress: [##################--------------------------------]    36.0 %     \ Progress: [##################--------------------------------]    37.0 %     | Progress: [###################-------------------------------]    38.0 %     / Progress: [###################-------------------------------]    39.0 %     - Progress: [####################------------------------------]    40.0 %     \ Progress: [####################------------------------------]    41.0 %     | Progress: [#####################-----------------------------]    42.0 %     / Progress: [#####################-----------------------------]    43.0 %     - Progress: [######################----------------------------]    44.0 %     \ Progress: [######################----------------------------]    45.0 %     | Progress: [#######################---------------------------]    46.0 %     / Progress: [#######################---------------------------]    47.0 %     - Progress: [########################--------------------------]    48.0 %     \ Progress: [########################--------------------------]    49.0 %     | Progress: [#########################-------------------------]    50.0 %     / Progress: [#########################-------------------------]    51.0 %     - Progress: [##########################------------------------]    52.0 %     \ Progress: [##########################------------------------]    53.0 %     | Progress: [###########################-----------------------]    54.0 %     / Progress: [###########################-----------------------]    55.0 %     - Progress: [############################----------------------]    56.0 %     \ Progress: [############################----------------------]    57.0 %     | Progress: [############################----------------------]    58.0 %     / Progress: [#############################---------------------]    59.0 %     - Progress: [##############################--------------------]    60.0 %     \ Progress: [##############################--------------------]    61.0 %     | Progress: [###############################-------------------]    62.0 %     / Progress: [###############################-------------------]    63.0 %     - Progress: [################################------------------]    64.0 %     \ Progress: [################################------------------]    65.0 %     | Progress: [#################################-----------------]    66.0 %     / Progress: [#################################-----------------]    67.0 %     - Progress: [##################################----------------]    68.0 %     \ Progress: [##################################----------------]    69.0 %     | Progress: [###################################---------------]    70.0 %     / Progress: [###################################---------------]    71.0 %     - Progress: [####################################--------------]    72.0 %     \ Progress: [####################################--------------]    73.0 %     | Progress: [#####################################-------------]    74.0 %     / Progress: [#####################################-------------]    75.0 %     - Progress: [######################################------------]    76.0 %     \ Progress: [######################################------------]    77.0 %     | Progress: [#######################################-----------]    78.0 %     / Progress: [#######################################-----------]    79.0 %     - Progress: [########################################----------]    80.0 %     \ Progress: [########################################----------]    81.0 %     | Progress: [#########################################---------]    82.0 %     / Progress: [#########################################---------]    83.0 %     - Progress: [##########################################--------]    84.0 %     \ Progress: [##########################################--------]    85.0 %     | Progress: [###########################################-------]    86.0 %     / Progress: [###########################################-------]    87.0 %     - Progress: [############################################------]    88.0 %     \ Progress: [############################################------]    89.0 %     | Progress: [#############################################-----]    90.0 %     / Progress: [#############################################-----]    91.0 %     - Progress: [##############################################----]    92.0 %     \ Progress: [##############################################----]    93.0 %     | Progress: [###############################################---]    94.0 %     / Progress: [###############################################---]    95.0 %     - Progress: [################################################--]    96.0 %     \ Progress: [################################################--]    97.0 %     | Progress: [#################################################-]    98.0 %     / Progress: [#################################################-]    99.0 %     - Progress: [##################################################]   100.0 %     \ 
+ Note: Previous orbital information has been restored
+ Calculation took up wall clock time        50 s
+ 
+ Integral of delta-g over whole space:         17.421772 a.u.
+ Integral of delta-g_inter over whole space:    0.239891 a.u.
+ Integral of delta-g_intra over whole space:   17.181880 a.u.
+ 
+                   ---------- Post-processing menu ----------
+ -3 Change range of Y-axis of scatter graph, current:   0.000000 to   0.740509
+ -2 Change range of X-axis of scatter graph, current:  -0.600000 to   0.200000
+ -1 Draw scatter graph           1 Save the scatter graph to file
+ 0 Exit
+ 2 Output scatter points to output.txt in current folder
+ 3 Output cube files to current folder
+ 4 Show isosurface of grid data
+ 5 Screen delta-g_intra in high density region
+ 6 Evaluate contribution of atomic pairs and atoms to interfragment interaction (atomic and atomic pair delta-g indices as well as IBSIW index)
+ 7 Set delta-g where value of sign(lambda2)rho is out of a certain range
+ 8 Set delta-g_inter where value of sign(lambda2)rho is out of a certain range
+ Outputting output.txt...
+ Finished! Column 1/2/3/4 = delta-g_inter/delta-g_intra/delta-g/sign(lambda2)rho
+ 
+                   ---------- Post-processing menu ----------
+ -3 Change range of Y-axis of scatter graph, current:   0.000000 to   0.740509
+ -2 Change range of X-axis of scatter graph, current:  -0.600000 to   0.200000
+ -1 Draw scatter graph           1 Save the scatter graph to file
+ 0 Exit
+ 2 Output scatter points to output.txt in current folder
+ 3 Output cube files to current folder
+ 4 Show isosurface of grid data
+ 5 Screen delta-g_intra in high density region
+ 6 Evaluate contribution of atomic pairs and atoms to interfragment interaction (atomic and atomic pair delta-g indices as well as IBSIW index)
+ 7 Set delta-g where value of sign(lambda2)rho is out of a certain range
+ 8 Set delta-g_inter where value of sign(lambda2)rho is out of a certain range
+ Exporting...
+ sign(lambda2)rho has been exported to sl2r.cub in current folder
+ delta-g_inter has been exported to dg_inter.cub in current folder
+ delta-g_intra has been exported to dg_intra.cub in current folder
+ delta-g has been exported to dg.cub in current folder
+ 
+                   ---------- Post-processing menu ----------
+ -3 Change range of Y-axis of scatter graph, current:   0.000000 to   0.740509
+ -2 Change range of X-axis of scatter graph, current:  -0.600000 to   0.200000
+ -1 Draw scatter graph           1 Save the scatter graph to file
+ 0 Exit
+ 2 Output scatter points to output.txt in current folder
+ 3 Output cube files to current folder
+ 4 Show isosurface of grid data
+ 5 Screen delta-g_intra in high density region
+ 6 Evaluate contribution of atomic pairs and atoms to interfragment interaction (atomic and atomic pair delta-g indices as well as IBSIW index)
+ 7 Set delta-g where value of sign(lambda2)rho is out of a certain range
+ 8 Set delta-g_inter where value of sign(lambda2)rho is out of a certain range
+ Please select grid for integrating the delta-g_pair functions
+ Note: Option 1 is deprecated since numerical accuracy is too low for IGMH
+ 1 Medium quality (radial=30, angular=110. Cost=1.0 x)
+ 2 High quality (radial=40, angular=170. Cost=2.1 x)
+ 3 Ultrafine quality (radial=60, angular=302. Cost=5.5 x)
+ 4 Perfect quality (radial=75, angular=434. Cost=9.9 x)
+ 5 Use "radpot" and "sphpot" defined in settings.ini
+ Radial points:   40    Angular points:  170   Total:      6800 per center
+ Progress: [--------------------------------------------------]     0.0 %     | Progress: [#-------------------------------------------------]     3.7 %     / Progress: [###-----------------------------------------------]     7.4 %     - Progress: [#####---------------------------------------------]    11.1 %     \ Progress: [#######-------------------------------------------]    14.8 %     | Progress: [#########-----------------------------------------]    18.5 %     / Progress: [###########---------------------------------------]    22.2 %     - Progress: [############--------------------------------------]    25.9 %     \ Progress: [######################----------------------------]    44.4 %     | Progress: [#########################-------------------------]    51.9 %     / Progress: [###########################-----------------------]    55.6 %     - Progress: [#############################---------------------]    59.3 %     \ Progress: [###############################-------------------]    63.0 %     | Progress: [#################################-----------------]    66.7 %     / Progress: [######################################------------]    77.8 %     - Progress: [########################################----------]    81.5 %     \ Progress: [##########################################--------]    85.2 %     | Progress: [############################################------]    88.9 %     / Progress: [##############################################----]    92.6 %     - Progress: [################################################--]    96.3 %     \ Progress: [##################################################]   100.0 %     | 
+ Calculation took up wall clock time        23 s
+ Atomic and atomic pair delta-g indices have been outputted to atmdg.txt in current folder
+ IBSIW have been outputted to IBSIW.txt in current folder
+
+ If outputting the two fragments as atmdg.pdb in current folder, whose "Beta" and "Occupancy" atomic properties correspond to atomic delta-g index multiplied by 10 and percentage atomic delta-g index, respectively? (y/n)
+ Done! atmdg.pdb has been outputted to current folder
+ 
+                   ---------- Post-processing menu ----------
+ -3 Change range of Y-axis of scatter graph, current:   0.000000 to   0.740509
+ -2 Change range of X-axis of scatter graph, current:  -0.600000 to   0.200000
+ -1 Draw scatter graph           1 Save the scatter graph to file
+ 0 Exit
+ 2 Output scatter points to output.txt in current folder
+ 3 Output cube files to current folder
+ 4 Show isosurface of grid data
+ 5 Screen delta-g_intra in high density region
+ 6 Evaluate contribution of atomic pairs and atoms to interfragment interaction (atomic and atomic pair delta-g indices as well as IBSIW index)
+ 7 Set delta-g where value of sign(lambda2)rho is out of a certain range
+ 8 Set delta-g_inter where value of sign(lambda2)rho is out of a certain range
+ 
+            ============ Visual study of weak interaction ============ 
+  0 Return
+  1 NCI analysis (also known as RDG analysis)
+  2 NCI analysis based on promolecular density
+  3 aNCI: Averaged NCI analysis
+  4 IRI: Interaction region indicator analysis (Chemistry-Methods, 1, 231)
+  5 DORI analysis
+  6 Visualization of van der Waals potential (JMM, 26, 315)
+  9 Becke/Hirshfeld surface analysis
+  10 IGM analysis
+ -10 mIGM: Modified IGM analysis
+  11 IGMH: IGM analysis based on Hirshfeld partition of molecular density (JCC, 43, 539)
+  12 aIGM: Averaged IGM analysis
+ -12 amIGM: Averaged mIGM analysis
+ 
+ "q": Exit program gracefully          "r": Load a new file
+                    ************ Main function menu ************
+ 0 Show molecular structure and view orbitals
+ 1 Output all properties at a point       2 Topology analysis
+ 3 Output and plot specific property in a line
+ 4 Output and plot specific property in a plane
+ 5 Output and plot specific property within a spatial region (calc. grid data)
+ 6 Check & modify wavefunction
+ 7 Population analysis and calculation of atomic charges
+ 8 Orbital composition analysis           9 Bond order analysis
+ 10 Plot total DOS, PDOS, OPDOS, local DOS, COHP and photoelectron spectrum
+ 11 Plot IR/Raman/UV-Vis/ECD/VCD/ROA/NMR spectrum
+ 12 Quantitative analysis of molecular surface
+ 13 Process grid data (No grid data is presented currently)
+ 14 Adaptive natural density partitioning (AdNDP) analysis
+ 15 Fuzzy atomic space analysis
+ 16 Charge decomposition analysis (CDA) and plot orbital interaction diagram
+ 17 Basin analysis                       18 Electron excitation analysis
+ 19 Orbital localization analysis        20 Visual study of weak interaction
+ 21 Energy decomposition analysis        22 Conceptual DFT (CDFT) analysis
+ 23 ETS-NOCV analysis                    24 (Hyper)polarizability analysis
+ 25 Electron delocalization and aromaticity analyses
+ 26 Structure and geometry related analyses
+ 100 Other functions (Part 1)            200 Other functions (Part 2)
+ 300 Other functions (Part 3)

@@ -1,0 +1,299 @@
+-I: Adding /root/cqc-sfa-tools/md/dat/leap/prep to search path.
+-I: Adding /root/cqc-sfa-tools/md/dat/leap/lib to search path.
+-I: Adding /root/cqc-sfa-tools/md/dat/leap/parm to search path.
+-I: Adding /root/cqc-sfa-tools/md/dat/leap/cmd to search path.
+-f: Source md/system/tleap/leap_X.in.
+
+Welcome to LEaP!
+(no leaprc in search path)
+Sourcing: md/system/tleap/leap_X.in
+----- Source: /root/cqc-sfa-tools/md/dat/leap/cmd/leaprc.protein.ff14SB
+----- Source of /root/cqc-sfa-tools/md/dat/leap/cmd/leaprc.protein.ff14SB done
+Log file: ./leap.log
+Loading parameters: /root/cqc-sfa-tools/md/dat/leap/parm/parm10.dat
+Reading title:
+PARM99 + frcmod.ff99SB + frcmod.parmbsc0 + OL3 for RNA
+Loading parameters: /root/cqc-sfa-tools/md/dat/leap/parm/frcmod.ff14SB
+Reading force field modification type file (frcmod)
+Reading title:
+ff14SB protein backbone and sidechain parameters
+Loading library: /root/cqc-sfa-tools/md/dat/leap/lib/amino12.lib
+Loading library: /root/cqc-sfa-tools/md/dat/leap/lib/aminoct12.lib
+Loading library: /root/cqc-sfa-tools/md/dat/leap/lib/aminont12.lib
+----- Source: /root/cqc-sfa-tools/md/dat/leap/cmd/leaprc.water.tip3p
+----- Source of /root/cqc-sfa-tools/md/dat/leap/cmd/leaprc.water.tip3p done
+Loading library: /root/cqc-sfa-tools/md/dat/leap/lib/atomic_ions.lib
+Loading library: /root/cqc-sfa-tools/md/dat/leap/lib/solvents.lib
+Loading parameters: /root/cqc-sfa-tools/md/dat/leap/parm/frcmod.tip3p
+Reading force field modification type file (frcmod)
+Reading title:
+This is the additional/replacement parameter set for TIP3P water
+Loading parameters: /root/cqc-sfa-tools/md/dat/leap/parm/frcmod.ions1lm_126_tip3p
+Reading force field modification type file (frcmod)
+Reading title:
+Li/Merz ion parameters of monovalent ions for TIP3P water model (12-6 normal usage set)
+Loading parameters: /root/cqc-sfa-tools/md/dat/leap/parm/frcmod.ionsjc_tip3p
+Reading force field modification type file (frcmod)
+Reading title:
+Monovalent ion parameters for Ewald and TIP3P water from Joung & Cheatham JPCB (2008)
+Loading parameters: /root/cqc-sfa-tools/md/dat/leap/parm/frcmod.ions234lm_126_tip3p
+Reading force field modification type file (frcmod)
+Reading title:
+Li/Merz ion parameters of divalent to tetravalent ions for TIP3P water model (12-6 normal usage set)
+Loading PDB file: md/system/protein_md.pdb
+  Added missing heavy atom: .R<LYS 9>.A<CG 8>
+  Added missing heavy atom: .R<LYS 9>.A<CD 11>
+  Added missing heavy atom: .R<LYS 9>.A<CE 14>
+  Added missing heavy atom: .R<LYS 9>.A<NZ 17>
+  Added missing heavy atom: .R<LYS 45>.A<CE 14>
+  Added missing heavy atom: .R<LYS 45>.A<NZ 17>
+  Added missing heavy atom: .R<ASP 52>.A<OD1 9>
+  Added missing heavy atom: .R<ASP 52>.A<OD2 10>
+  Added missing heavy atom: .R<LYS 80>.A<CE 14>
+  Added missing heavy atom: .R<LYS 80>.A<NZ 17>
+  Added missing heavy atom: .R<ASP 164>.A<CG 8>
+  Added missing heavy atom: .R<ASP 164>.A<OD1 9>
+  Added missing heavy atom: .R<ASP 164>.A<OD2 10>
+  Added missing heavy atom: .R<LYS 167>.A<NZ 17>
+  Added missing heavy atom: .R<LYS 169>.A<NZ 17>
+  Added missing heavy atom: .R<LYS 212>.A<NZ 17>
+  Added missing heavy atom: .R<LYS 227>.A<CE 14>
+  Added missing heavy atom: .R<LYS 227>.A<NZ 17>
+  Added missing heavy atom: .R<CLYS 260>.A<CG 8>
+  Added missing heavy atom: .R<CLYS 260>.A<CD 11>
+  Added missing heavy atom: .R<CLYS 260>.A<CE 14>
+  Added missing heavy atom: .R<CLYS 260>.A<NZ 17>
+  total atoms in file: 2040
+  Leap added 2035 missing atoms according to residue templates:
+       22 Heavy
+       2013 H / lone pairs
+Loading PDB file: md/system/waters_X.pdb
+  total atoms in file: 215
+  Leap added 430 missing atoms according to residue templates:
+       430 H / lone pairs
+Checking 'sys'....
+
+/root/cqc-sfa-tools/md/bin/teLeap: Warning!
+The unperturbed charge of the unit (-2.000000) is not zero.
+
+/root/cqc-sfa-tools/md/bin/teLeap: Warning!
+Close contact of 1.135 angstroms between nonbonded atoms H and H1
+-------  .R<CLYS 260>.A<H 2> and .R<WAT 398>.A<H1 2>
+
+/root/cqc-sfa-tools/md/bin/teLeap: Warning!
+Close contact of 1.053 angstroms between nonbonded atoms HZ1 and H2
+-------  .R<LYS 256>.A<HZ1 18> and .R<WAT 316>.A<H2 3>
+
+/root/cqc-sfa-tools/md/bin/teLeap: Warning!
+Close contact of 0.897 angstroms between nonbonded atoms HZ3 and H1
+-------  .R<LYS 256>.A<HZ3 20> and .R<WAT 385>.A<H1 2>
+
+/root/cqc-sfa-tools/md/bin/teLeap: Warning!
+Close contact of 1.203 angstroms between nonbonded atoms H and H2
+-------  .R<ILE 255>.A<H 2> and .R<WAT 395>.A<H2 3>
+
+/root/cqc-sfa-tools/md/bin/teLeap: Warning!
+Close contact of 1.057 angstroms between nonbonded atoms HE22 and H2
+-------  .R<GLN 254>.A<HE22 15> and .R<WAT 394>.A<H2 3>
+
+/root/cqc-sfa-tools/md/bin/teLeap: Warning!
+Close contact of 1.207 angstroms between nonbonded atoms H and H2
+-------  .R<LYS 251>.A<H 2> and .R<WAT 393>.A<H2 3>
+
+/root/cqc-sfa-tools/md/bin/teLeap: Warning!
+Close contact of 1.092 angstroms between nonbonded atoms H and H2
+-------  .R<LEU 250>.A<H 2> and .R<WAT 413>.A<H2 3>
+
+/root/cqc-sfa-tools/md/bin/teLeap: Warning!
+Close contact of 1.296 angstroms between nonbonded atoms H and H2
+-------  .R<ALA 247>.A<H 2> and .R<WAT 417>.A<H2 3>
+
+/root/cqc-sfa-tools/md/bin/teLeap: Warning!
+Close contact of 1.299 angstroms between nonbonded atoms HH21 and H2
+-------  .R<ARG 245>.A<HH21 21> and .R<WAT 373>.A<H2 3>
+
+/root/cqc-sfa-tools/md/bin/teLeap: Warning!
+Close contact of 1.367 angstroms between nonbonded atoms H and H1
+-------  .R<GLU 233>.A<H 2> and .R<WAT 315>.A<H1 2>
+
+/root/cqc-sfa-tools/md/bin/teLeap: Warning!
+Close contact of 1.183 angstroms between nonbonded atoms HH12 and H1
+-------  .R<ARG 226>.A<HH12 19> and .R<WAT 302>.A<H1 2>
+
+/root/cqc-sfa-tools/md/bin/teLeap: Warning!
+Close contact of 1.482 angstroms between nonbonded atoms H and H1
+-------  .R<GLU 213>.A<H 2> and .R<WAT 322>.A<H1 2>
+
+/root/cqc-sfa-tools/md/bin/teLeap: Warning!
+Close contact of 1.265 angstroms between nonbonded atoms H and H1
+-------  .R<LEU 188>.A<H 2> and .R<WAT 391>.A<H1 2>
+
+/root/cqc-sfa-tools/md/bin/teLeap: Warning!
+Close contact of 1.458 angstroms between nonbonded atoms HD22 and H2
+-------  .R<ASN 177>.A<HD22 12> and .R<WAT 359>.A<H2 3>
+
+/root/cqc-sfa-tools/md/bin/teLeap: Warning!
+Close contact of 1.125 angstroms between nonbonded atoms HZ1 and H2
+-------  .R<LYS 171>.A<HZ1 18> and .R<WAT 320>.A<H2 3>
+
+/root/cqc-sfa-tools/md/bin/teLeap: Warning!
+Close contact of 1.323 angstroms between nonbonded atoms HG and H1
+-------  .R<SER 165>.A<HG 9> and .R<WAT 374>.A<H1 2>
+
+/root/cqc-sfa-tools/md/bin/teLeap: Warning!
+Close contact of 1.471 angstroms between nonbonded atoms HB3 and H1
+-------  .R<ASP 164>.A<HB3 7> and .R<WAT 423>.A<H1 2>
+
+/root/cqc-sfa-tools/md/bin/teLeap: Warning!
+Close contact of 1.147 angstroms between nonbonded atoms H and H1
+-------  .R<LYS 158>.A<H 2> and .R<WAT 356>.A<H1 2>
+
+/root/cqc-sfa-tools/md/bin/teLeap: Warning!
+Close contact of 1.248 angstroms between nonbonded atoms HZ3 and H1
+-------  .R<LYS 153>.A<HZ3 20> and .R<WAT 351>.A<H1 2>
+
+/root/cqc-sfa-tools/md/bin/teLeap: Warning!
+Close contact of 1.493 angstroms between nonbonded atoms H and H2
+-------  .R<ALA 152>.A<H 2> and .R<WAT 401>.A<H2 3>
+
+/root/cqc-sfa-tools/md/bin/teLeap: Warning!
+Close contact of 1.208 angstroms between nonbonded atoms H and H1
+-------  .R<PHE 146>.A<H 2> and .R<WAT 342>.A<H1 2>
+
+/root/cqc-sfa-tools/md/bin/teLeap: Warning!
+Close contact of 1.173 angstroms between nonbonded atoms HG1 and H1
+-------  .R<THR 125>.A<HG1 12> and .R<WAT 282>.A<H1 2>
+
+/root/cqc-sfa-tools/md/bin/teLeap: Warning!
+Close contact of 1.034 angstroms between nonbonded atoms HZ1 and H2
+-------  .R<LYS 113>.A<HZ1 18> and .R<WAT 380>.A<H2 3>
+
+/root/cqc-sfa-tools/md/bin/teLeap: Warning!
+Close contact of 1.136 angstroms between nonbonded atoms H and H2
+-------  .R<ASP 101>.A<H 2> and .R<WAT 369>.A<H2 3>
+
+/root/cqc-sfa-tools/md/bin/teLeap: Warning!
+Close contact of 1.270 angstroms between nonbonded atoms HZ1 and HG1
+-------  .R<LYS 76>.A<HZ1 18> and .R<THR 55>.A<HG1 12>
+
+/root/cqc-sfa-tools/md/bin/teLeap: Warning!
+Close contact of 1.091 angstroms between nonbonded atoms H and H1
+-------  .R<SER 56>.A<H 2> and .R<WAT 357>.A<H1 2>
+
+/root/cqc-sfa-tools/md/bin/teLeap: Warning!
+Close contact of 1.426 angstroms between nonbonded atoms H and H2
+-------  .R<TYR 51>.A<H 2> and .R<WAT 354>.A<H2 3>
+
+/root/cqc-sfa-tools/md/bin/teLeap: Warning!
+Close contact of 1.163 angstroms between nonbonded atoms H and H1
+-------  .R<VAL 49>.A<H 2> and .R<WAT 360>.A<H1 2>
+
+/root/cqc-sfa-tools/md/bin/teLeap: Warning!
+Close contact of 1.196 angstroms between nonbonded atoms H and H2
+-------  .R<LEU 47>.A<H 2> and .R<WAT 400>.A<H2 3>
+
+/root/cqc-sfa-tools/md/bin/teLeap: Warning!
+Close contact of 1.459 angstroms between nonbonded atoms H and H2
+-------  .R<HIE 36>.A<H 2> and .R<WAT 272>.A<H2 3>
+
+/root/cqc-sfa-tools/md/bin/teLeap: Warning!
+Close contact of 1.348 angstroms between nonbonded atoms H and H2
+-------  .R<GLN 28>.A<H 2> and .R<WAT 410>.A<H2 3>
+
+/root/cqc-sfa-tools/md/bin/teLeap: Warning!
+Close contact of 1.454 angstroms between nonbonded atoms HZ2 and H2
+-------  .R<LYS 24>.A<HZ2 19> and .R<WAT 377>.A<H2 3>
+
+/root/cqc-sfa-tools/md/bin/teLeap: Warning!
+Close contact of 1.500 angstroms between nonbonded atoms HD2 and H1
+-------  .R<HIE 17>.A<HD2 15> and .R<WAT 344>.A<H1 2>
+
+/root/cqc-sfa-tools/md/bin/teLeap: Warning!
+Close contact of 1.357 angstroms between nonbonded atoms H2 and H1
+-------  .R<WAT 287>.A<H2 3> and .R<WAT 428>.A<H1 2>
+
+/root/cqc-sfa-tools/md/bin/teLeap: Warning!
+Close contact of 1.375 angstroms between nonbonded atoms H2 and H1
+-------  .R<WAT 289>.A<H2 3> and .R<WAT 463>.A<H1 2>
+
+/root/cqc-sfa-tools/md/bin/teLeap: Warning!
+Close contact of 1.266 angstroms between nonbonded atoms H2 and H1
+-------  .R<WAT 290>.A<H2 3> and .R<WAT 375>.A<H1 2>
+
+/root/cqc-sfa-tools/md/bin/teLeap: Warning!
+Close contact of 1.313 angstroms between nonbonded atoms H1 and H2
+-------  .R<WAT 302>.A<H1 2> and .R<WAT 440>.A<H2 3>
+
+/root/cqc-sfa-tools/md/bin/teLeap: Warning!
+Close contact of 1.368 angstroms between nonbonded atoms H2 and H1
+-------  .R<WAT 304>.A<H2 3> and .R<WAT 433>.A<H1 2>
+
+/root/cqc-sfa-tools/md/bin/teLeap: Warning!
+Close contact of 1.453 angstroms between nonbonded atoms H1 and H2
+-------  .R<WAT 312>.A<H1 2> and .R<WAT 462>.A<H2 3>
+
+/root/cqc-sfa-tools/md/bin/teLeap: Warning!
+Close contact of 1.394 angstroms between nonbonded atoms H1 and H2
+-------  .R<WAT 336>.A<H1 2> and .R<WAT 459>.A<H2 3>
+
+/root/cqc-sfa-tools/md/bin/teLeap: Warning!
+Close contact of 1.378 angstroms between nonbonded atoms H1 and H2
+-------  .R<WAT 407>.A<H1 2> and .R<WAT 470>.A<H2 3>
+
+/root/cqc-sfa-tools/md/bin/teLeap: Warning!
+Close contact of 1.369 angstroms between nonbonded atoms H1 and H2
+-------  .R<WAT 417>.A<H1 2> and .R<WAT 426>.A<H2 3>
+
+/root/cqc-sfa-tools/md/bin/teLeap: Warning!
+Close contact of 1.402 angstroms between nonbonded atoms H2 and H1
+-------  .R<WAT 418>.A<H2 3> and .R<WAT 464>.A<H1 2>
+
+/root/cqc-sfa-tools/md/bin/teLeap: Warning!
+Close contact of 1.020 angstroms between nonbonded atoms H1 and H2
+-------  .R<WAT 439>.A<H1 2> and .R<WAT 447>.A<H2 3>
+
+/root/cqc-sfa-tools/md/bin/teLeap: Warning!
+Close contact of 1.404 angstroms between nonbonded atoms H2 and H1
+-------  .R<WAT 456>.A<H2 3> and .R<WAT 458>.A<H1 2>
+Checking parameters for unit 'sys'.
+Checking for bond parameters.
+Checking for angle parameters.
+check:  Warnings: 46
+Unit is OK.
+Total unperturbed charge:  -2.000000
+Total perturbed charge:    -2.000000
+Checking Unit.
+
+/root/cqc-sfa-tools/md/bin/teLeap: Warning!
+The unperturbed charge of the unit (-2.000000) is not zero.
+
+/root/cqc-sfa-tools/md/bin/teLeap: Note.
+Ignoring the warning from Unit Checking.
+
+Building topology.
+Building atom parameters.
+Building bond parameters.
+Building angle parameters.
+Building proper torsion parameters.
+Building improper torsion parameters.
+ total 850 improper torsions applied
+Building H-Bond parameters.
+Incorporating Non-Bonded adjustments.
+Not Marking per-residue atom chain types.
+Marking per-residue atom chain types.
+  (Residues lacking connect0/connect1 - 
+   these don't have chain types marked:
+
+	res	total affected
+
+	CLYS	1
+	WAT	215
+  )
+ (no restraints)
+Writing pdb file: X.pdb
+
+/root/cqc-sfa-tools/md/bin/teLeap: Warning!
+ Converting C-terminal residue name to PDB format: CLYS -> LYS
+	Quit
+
+Exiting LEaP: Errors = 0; Warnings = 48; Notes = 1.

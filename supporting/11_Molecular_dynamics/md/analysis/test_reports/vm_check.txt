@@ -1,0 +1,39 @@
+# read-only look at the rented machine (cqc-md-gpu-01) from the Pi, 06 Oct 2026, 11:18 AM IST: checksums of four files of its md/ folder, the hydration block of its protocol, its queue, what its runs folders hold (names only)
+decda42f5340d06f5f695b4c56b59a7bb796e5872b3a8af1c1a5b426f9c09d9a  /root/workspace/cqc-4-sulfamoylanilinium-dihydrogen-phosphate/md/protocol.json
+6d797f080ff7567923469dabd86af71ca34183f5c482c14d55bf8038eb9d1822  /root/workspace/cqc-4-sulfamoylanilinium-dihydrogen-phosphate/md/run_md.py
+d7fea4c861bacf7022ea64274ad292cd1e0bec887f6642151d9ac86b59973945  /root/workspace/cqc-4-sulfamoylanilinium-dihydrogen-phosphate/md/analysis/analyse_md.py
+8da1a130485e308092d1785d254709e28a77beded3071e98c256ebf2e27ff7ce  /root/workspace/cqc-4-sulfamoylanilinium-dihydrogen-phosphate/md/analysis/SPEC.md
+machine protocol: site_atoms ['C1', 'C2', 'C3', 'C4', 'C5', 'C6'] water_cutoff_nm 0.25
+runner: running, pid 26277 on cqc-md-gpu-01, started 6 Oct 2026, 8:55:43 AM IST by systemd; last heartbeat 6 Oct 2026, 11:17:54 AM IST (57 s ago); starts at boot: True
+in use: 23 of 24 CPUs, 0 of 1 GPU; tasks: 8 done, 5 pending, 2 running
+task                         state        resources  tries intr since (IST)                  note
+gr_check_x                   done         cpu:7      1     0    6 Oct 2026, 9:10:36 AM IST   exit code 0 and the success test holds; 168 s
+gr_points                    done         cpu:7      2     0    6 Oct 2026, 10:46:41 AM IST  exit code 0 and the success test holds; 4010 s
+gr_relax_Rx                  running      cpu:7      0     0    6 Oct 2026, 10:46:41 AM IST  attempt 1, pid 46995
+gr_relax_X                   pending      cpu:7      0     0    6 Oct 2026, 10:19:39 AM IST  read from tasks_gr.json [waits for gr_relax_Rx]
+gr_binding                   pending      cpu:1      0     0    6 Oct 2026, 10:32:52 AM IST  read from tasks_gr.json [waits for qm_opt]
+gr_binding_final             pending      cpu:1      0     0    6 Oct 2026, 10:32:52 AM IST  read from tasks_gr.json [waits for qm_write, gr_binding]
+preflight_gpu                done         gpu        1     0    6 Oct 2026, 8:55:54 AM IST   exit code 0 and the success test holds; 11 s
+preflight_speed              done         gpu        1     0    6 Oct 2026, 9:06:34 AM IST   exit code 0 and the success test holds; 640 s
+preflight_interrupt          done         gpu        1     0    6 Oct 2026, 9:10:32 AM IST   exit code 0 and the success test holds; 238 s
+qm_opt                       running      cpu:16     0     0    6 Oct 2026, 8:55:43 AM IST   attempt 1, pid 26282
+qm_hess                      pending      cpu:16     0     0    6 Oct 2026, 10:23:19 AM IST  definition changed; attempts counted from zero [waits for qm_opt]
+qm_write                     pending      cpu:1      0     0    6 Oct 2026, 8:55:43 AM IST   read from tasks_initial.json [waits for qm_hess]
+reh2e_TX0                    done         gpu        1     0    6 Oct 2026, 10:45:23 AM IST  exit code 0 and the success test holds; 852 s
+reh2e_TR0                    done         gpu        1     0    6 Oct 2026, 10:59:52 AM IST  exit code 0 and the success test holds; 869 s
+reh2e_TN0                    done         gpu        1     0    6 Oct 2026, 11:14:21 AM IST  exit code 0 and the success test holds; 869 s
+runs:
+bench
+preflight_a
+preflight_b
+runs_test:
+/root/cqc-sfa-md/runs_test/:
+bonded_2e
+
+/root/cqc-sfa-md/runs_test/bonded_2e:
+TN0
+TR0
+TX0
+# on the Pi at the same time:
+decda42f5340d06f5f695b4c56b59a7bb796e5872b3a8af1c1a5b426f9c09d9a  /root/workspace/cqc-4-sulfamoylanilinium-dihydrogen-phosphate/md/protocol.json
+6d797f080ff7567923469dabd86af71ca34183f5c482c14d55bf8038eb9d1822  /root/workspace/cqc-4-sulfamoylanilinium-dihydrogen-phosphate/md/run_md.py

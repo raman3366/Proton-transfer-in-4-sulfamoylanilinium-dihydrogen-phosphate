@@ -1,0 +1,173 @@
+{
+ "tag": "eq03",
+ "kind": "equilibration",
+ "started": {
+  "utc": "2026-10-06T05:32:06Z",
+  "ist": "6 Oct 2026, 11:02:06 AM IST"
+ },
+ "host": "cqc-md-gpu-01",
+ "openmm": "8.6.1",
+ "state_in": {
+  "sha256": "ee42e912bb1a9a75cbb6b9f57f43fc1b66ba51fb588b3a817f745db927396f3d",
+  "bytes": 6707401,
+  "file": "state_eq02.xml"
+ },
+ "seeds": {
+  "integrator": 1922408332,
+  "barostat": 2065324111
+ },
+ "platform": {
+  "requested": "CUDA",
+  "name": "CUDA",
+  "properties_set": {
+   "Precision": "mixed",
+   "DeterministicForces": "true"
+  },
+  "properties_actual": {
+   "DeviceIndex": "0",
+   "DeviceName": "NVIDIA L40S",
+   "UseBlockingSync": "false",
+   "Precision": "mixed",
+   "UseCpuPme": "false",
+   "CudaCompiler": "",
+   "TempDirectory": "/tmp",
+   "CudaHostCompiler": "",
+   "DisablePmeStream": "false",
+   "DeterministicForces": "true"
+  },
+  "gpu_name": "NVIDIA L40S",
+  "deterministic_forces_set": true,
+  "precision_set": "mixed",
+  "repeatability": "DeterministicForces is set; whether a repeated segment is bit for bit the same has to be checked on the machine (pre-flight test of md/RUN.md)",
+  "attempts": [
+   {
+    "platform": "CUDA",
+    "usable": true
+   }
+  ]
+ },
+ "settings": {
+  "name": "loosen",
+  "ensemble": "NPT",
+  "timestep_fs": 2.0,
+  "n_steps": 150000,
+  "length_ps": 300.0,
+  "temperature_K": 300.0,
+  "restraint_atoms": "solute_heavy",
+  "restraint_k_kj_per_mol_nm2": 250.0,
+  "n_restrained_atoms": 2074,
+  "barostat": true
+ },
+ "first_step": 200000,
+ "last_step": 350000,
+ "time_start_ps": 400.0,
+ "time_end_ps": 700.0,
+ "frames": {
+  "solute": 30,
+  "full": 3,
+  "state_log_rows": 30
+ },
+ "final": {
+  "potential_energy_kj_per_mol": -542466.772,
+  "kinetic_energy_kj_per_mol": 104602.792,
+  "temperature_K": 299.69,
+  "volume_nm3": 406.4405,
+  "density_g_per_cm3": 1.02937
+ },
+ "mean_over_state_log": {
+  "temperature_K": 299.85,
+  "density_g_per_cm3": 1.02661,
+  "potential_energy_kj_per_mol": -542598.14
+ },
+ "monitor": {
+  "zn_to_lig_N2_A": 1.884,
+  "lig_N2_to_thr199_OG1_A": 2.973,
+  "lig_N1_to_phe131_CZ_A": 3.859,
+  "lig_N1_to_asn67_OD1_A": 7.498,
+  "zn_to_his94_NE2_A": 1.964,
+  "zn_to_his96_NE2_A": 1.971,
+  "zn_to_his119_ND1_A": 2.015,
+  "n_water_O_within_3.5_A_of_ligand_heavy_atoms": 6,
+  "solute_heavy_rms_displacement_from_start_A": 0.463,
+  "solute_heavy_rms_displacement_note": "translation removed, no rotational fit",
+  "crystal_ring_site": {
+   "n_water_O_within_2.5_A": 0,
+   "nearest_water_O_A": 3.188,
+   "ligand_mean_distance_from_site_A": 0.322
+  }
+ },
+ "wall_s": 67.92,
+ "ns_per_day": 381.63,
+ "ended": {
+  "utc": "2026-10-06T05:33:22Z",
+  "ist": "6 Oct 2026, 11:03:22 AM IST"
+ },
+ "hydration_check": {
+  "made_on": "the coordinates at the end of this step (state_eq03.xml)",
+  "site_atoms": [
+   "C1",
+   "C2",
+   "C3",
+   "C4",
+   "C5",
+   "C6"
+  ],
+  "site_positions": "reference.pdb, carried into the frame of the coordinates by the fit of the protein CA atoms",
+  "ca_fit": {
+   "n_ca": 258,
+   "rmsd_A": 0.3303
+  },
+  "ligand_distance_from_site_A": {
+   "C1": 0.246,
+   "C2": 0.356,
+   "C3": 0.24,
+   "C4": 0.223,
+   "C5": 0.457,
+   "C6": 0.409
+  },
+  "ligand_mean_distance_from_site_A": 0.322,
+  "applies_if_ligand_mean_distance_above_A": 2.0,
+  "applies": false,
+  "skipped": true,
+  "water_cutoff_A": 2.5,
+  "n_water_O": 0,
+  "water_O": [],
+  "nearest_water_O": {
+   "atom_index": 33492,
+   "atom": "WAT10106:O",
+   "distance_A": 3.188
+  },
+  "nearest_water_O_per_site_atom_A": {
+   "C1": 3.35,
+   "C2": 3.188,
+   "C3": 3.266,
+   "C4": 3.486,
+   "C5": 3.403,
+   "C6": 3.576
+  },
+  "n_extensions_done": 0,
+  "max_extensions": 4,
+  "decision": "go on",
+  "reason": "check skipped: the ligand itself is at the site",
+  "next_step": "eq04"
+ },
+ "files": {
+  "log_eq03.csv": {
+   "sha256": "a2a1864f5fa4178e59d3844332b73628e891fb8188fafd73ae8d3dd367130b8c",
+   "bytes": 3128
+  },
+  "solute_eq03.dcd": {
+   "sha256": "3d3a8240c50e76353e1284d8771cf16bc45ca25b1690787fae2aee7303861de6",
+   "bytes": 1476516
+  },
+  "full_eq03.dcd": {
+   "sha256": "f9b21b6825aa446a600091ada785f211a052e234326d28ff1ebc8fe0e2d948c3",
+   "bytes": 1473312
+  },
+  "state_eq03.xml": {
+   "sha256": "a037213dacb0895adce0f77ee3e8996ca27a3fa23cecbf6df2c2595dc326d731",
+   "bytes": 6712640
+  }
+ },
+ "complete": true
+}

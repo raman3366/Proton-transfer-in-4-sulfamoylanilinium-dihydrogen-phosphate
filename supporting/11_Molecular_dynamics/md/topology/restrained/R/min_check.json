@@ -1,0 +1,544 @@
+{
+ "what": "minimisation of the built system by md/run_md.py --stage min, CPU platform; md/protocol.json with at most 300 L-BFGS iterations per pass (a test protocol; the production protocol allows 5000)",
+ "model": "restrained",
+ "start": "R",
+ "threads": 2,
+ "run_folder": "/root/cqc-sfa-md/systems/_checks/restrained/R/min_300",
+ "system_prmtop_sha256": "6446066b509edee3345cd89324812afddf01710b5b2f8299ac83b36c192fd892",
+ "system_inpcrd_sha256": "7789f44966c81b4ee724ffec5c44b616ff471dff34c15db12f89a1d4551e42bd",
+ "extra_forces_sha256": "f3eebc9cf08b6472f870932131b33a2eba13820d6252eb3fe7c74ee1fa69a1d8",
+ "selections_sha256": "3ebabef9c1864077cf784b7fb64ac4e5f45ab18902a8b2534d9ec62c375895fb",
+ "run_md_sha256": "45e4cf2872beddbfc44696e178a6721d574965c8beb4ec5bb0d83814f6f3bc29",
+ "protocol_sha256": "82200c41ff745a3987fffb2f21a95243fda60a9f1fdb755aa605dfb606a67c7f",
+ "limits_fixed_beforehand": {
+  "zn_distance_tolerance_A": 0.1,
+  "max_displacement_zinc_and_ligand_heavy_A": {
+   "X": 0.3,
+   "N": 0.5,
+   "R": 0.5
+  },
+  "why": "heavy atoms are held at k = 1000 kJ mol-1 nm-2; in N and R the docked Zn-N2 distance (2.21, 2.24 A) is drawn to 1.93 A and the S-N bond of the neutral molecule (1.677 A) shortens, so zinc and ligand must move by a few tenths of an Angstrom"
+ },
+ "energies_before_kj_per_mol": {
+  "potential_energy_kj_per_mol": -445147.263,
+  "force_field_kj_per_mol": -445377.92,
+  "extra_bonds_kj_per_mol": 230.656,
+  "position_restraints_kj_per_mol": 0.0
+ },
+ "energies_after_kj_per_mol": {
+  "potential_energy_kj_per_mol": -623567.71,
+  "force_field_kj_per_mol": -624268.592,
+  "extra_bonds_kj_per_mol": 14.165,
+  "position_restraints_kj_per_mol": 686.718
+ },
+ "lbfgs_iterations_per_pass": [
+  300,
+  300,
+  300,
+  300,
+  105
+ ],
+ "passes_stopped_by_the_iteration_limit": 4,
+ "n_restrained_atoms": 2285,
+ "restrained_atoms_displacement_A": {
+  "rms": 0.2452,
+  "max": 1.3834
+ },
+ "restrained_atoms_that_moved_most_A": {
+  "GLU26:OE1": 1.383,
+  "LYS39:NZ": 1.326,
+  "ASP41:OD2": 1.295,
+  "GLU234:OE1": 1.265,
+  "HOH565:O": 1.164
+ },
+ "all_atoms_max_displacement_A": 3.278,
+ "wall_s": 553.9,
+ "site_before": {
+  "lig_rmsd_symmetry_corrected_A": 3.5732,
+  "ca_rmsd_A": 0.0,
+  "d1_N1_Phe131CZ_A": 9.585,
+  "d2_N1_Asn67OD1_A": 2.597,
+  "zn_distances_A": {
+   "N2": 2.2351,
+   "H94NE2": 2.0099,
+   "H96NE2": 2.0206,
+   "H119ND1": 2.0183
+  },
+  "zn_distance_minus_r0_A": {
+   "N2": 0.3037,
+   "H94NE2": -0.0,
+   "H96NE2": 0.0,
+   "H119ND1": -0.0
+  },
+  "N_Zn_N_deg": {
+   "N2-Zn-H94NE2": 116.34,
+   "N2-Zn-H96NE2": 112.57,
+   "N2-Zn-H119ND1": 110.5,
+   "H94NE2-Zn-H96NE2": 103.82,
+   "H94NE2-Zn-H119ND1": 113.59,
+   "H96NE2-Zn-H119ND1": 98.41
+  },
+  "Zn_O1_A": 4.53,
+  "Zn_O2_A": 3.907,
+  "S_N2_A": 1.6773,
+  "C4_S_N2_deg": 109.43,
+  "tau_fold_deg": 142.74,
+  "Zn_N2_S_C4_deg": -32.12,
+  "N2_Thr199OG1_A": 2.585,
+  "N2_HN21_Thr199OG1_deg": 140.2
+ },
+ "site_after": {
+  "lig_rmsd_symmetry_corrected_A": 3.4027,
+  "ca_rmsd_A": 0.1243,
+  "d1_N1_Phe131CZ_A": 9.567,
+  "d2_N1_Asn67OD1_A": 2.846,
+  "zn_distances_A": {
+   "N2": 1.8807,
+   "H94NE2": 1.9807,
+   "H96NE2": 1.9804,
+   "H119ND1": 1.9933
+  },
+  "zn_distance_minus_r0_A": {
+   "N2": -0.0507,
+   "H94NE2": -0.0292,
+   "H96NE2": -0.0402,
+   "H119ND1": -0.025
+  },
+  "N_Zn_N_deg": {
+   "N2-Zn-H94NE2": 106.67,
+   "N2-Zn-H96NE2": 120.02,
+   "N2-Zn-H119ND1": 111.32,
+   "H94NE2-Zn-H96NE2": 97.61,
+   "H94NE2-Zn-H119ND1": 111.35,
+   "H96NE2-Zn-H119ND1": 108.95
+  },
+  "Zn_O1_A": 4.322,
+  "Zn_O2_A": 3.678,
+  "S_N2_A": 1.5642,
+  "C4_S_N2_deg": 109.22,
+  "tau_fold_deg": 137.11,
+  "Zn_N2_S_C4_deg": -50.75,
+  "N2_Thr199OG1_A": 2.742,
+  "N2_HN21_Thr199OG1_deg": 152.4
+ },
+ "displacement_A": {
+  "zinc_and_ligand_heavy": {
+   "ZN": 0.2075,
+   "C1": 0.307,
+   "C2": 0.1302,
+   "C3": 0.121,
+   "C4": 0.1831,
+   "C5": 0.3739,
+   "C6": 0.4214,
+   "N1": 0.3752,
+   "N2": 0.3573,
+   "O1": 0.6248,
+   "O2": 0.5523,
+   "S": 0.4225
+  },
+  "ligand_hydrogens": {
+   "H2": 0.1107,
+   "H3": 0.2244,
+   "H5": 0.4095,
+   "H6": 0.5945,
+   "HN11": 0.7057,
+   "HN12": 1.137,
+   "HN21": 0.3667
+  },
+  "his94_NE2": 0.2407,
+  "his96_NE2": 0.1845,
+  "his119_ND1": 0.1547,
+  "crystal_water_O_max": 1.1642,
+  "crystal_water_O_rms": 0.457
+ },
+ "checks": {
+  "energy_lower": true,
+  "zn_distances_within_tolerance_of_r0": true,
+  "zinc_and_ligand_heavy_moved_at_most_limit": false
+ },
+ "note": "with one thread the CPU platform repeats itself (md/RUN.md, test 0); with two threads a second run gives slightly different numbers",
+ "checks_failed": [
+  "zinc_and_ligand_heavy_moved_at_most_limit"
+ ],
+ "short_md": {
+  "what": "md/run_md.py --equil-scale 0.002: stages of 0.2, 0.6, 0.6 ps at 2 fs and 0.8, 0.8, 1.0 ps at 4 fs; a smoke test of the built system, not an equilibration",
+  "exit_code": 0,
+  "stages": [
+   {
+    "stage": "eq01",
+    "settings": {
+     "ensemble": "NVT",
+     "timestep_fs": 2.0,
+     "n_steps": 100,
+     "length_ps": 0.2,
+     "restraint_atoms": "solute_heavy",
+     "restraint_k_kj_per_mol_nm2": 1000.0
+    },
+    "final_temperature_K": 104.82,
+    "final_density_g_per_cm3": 0.91184,
+    "final_potential_energy_kj_per_mol": -610323.107,
+    "mean_temperature_K": 86.77,
+    "ns_per_day": 0.47,
+    "wall_s": 36.66,
+    "monitor_at_end": {
+     "zn_to_lig_N2_A": 1.864,
+     "lig_N2_to_thr199_OG1_A": 2.724,
+     "lig_N1_to_phe131_CZ_A": 9.79,
+     "lig_N1_to_asn67_OD1_A": 2.944,
+     "zn_to_his94_NE2_A": 2.011,
+     "zn_to_his96_NE2_A": 1.977,
+     "zn_to_his119_ND1_A": 1.99,
+     "n_water_O_within_3.5_A_of_ligand_heavy_atoms": 1,
+     "solute_heavy_rms_displacement_from_start_A": 0.278,
+     "solute_heavy_rms_displacement_note": "translation removed, no rotational fit",
+     "extra_bond_distances_A": [
+      1.864,
+      2.011,
+      1.977,
+      1.99
+     ]
+    },
+    "n_frames": 2,
+    "zn_distances_mean_A": {
+     "N2": 1.8728,
+     "H94NE2": 2.0052,
+     "H96NE2": 1.9852,
+     "H119ND1": 1.9904
+    },
+    "zn_distances_sd_A": {
+     "N2": 0.0089,
+     "H94NE2": 0.0057,
+     "H96NE2": 0.008,
+     "H119ND1": 0.0005
+    }
+   },
+   {
+    "stage": "eq02",
+    "settings": {
+     "ensemble": "NPT",
+     "timestep_fs": 2.0,
+     "n_steps": 300,
+     "length_ps": 0.6,
+     "restraint_atoms": "solute_heavy",
+     "restraint_k_kj_per_mol_nm2": 1000.0
+    },
+    "final_temperature_K": 197.94,
+    "final_density_g_per_cm3": 0.92403,
+    "final_potential_energy_kj_per_mol": -583373.84,
+    "mean_temperature_K": 165.45,
+    "ns_per_day": 0.42,
+    "wall_s": 123.25,
+    "monitor_at_end": {
+     "zn_to_lig_N2_A": 1.897,
+     "lig_N2_to_thr199_OG1_A": 2.729,
+     "lig_N1_to_phe131_CZ_A": 9.394,
+     "lig_N1_to_asn67_OD1_A": 2.762,
+     "zn_to_his94_NE2_A": 2.003,
+     "zn_to_his96_NE2_A": 2.004,
+     "zn_to_his119_ND1_A": 2.015,
+     "n_water_O_within_3.5_A_of_ligand_heavy_atoms": 2,
+     "solute_heavy_rms_displacement_from_start_A": 0.302,
+     "solute_heavy_rms_displacement_note": "translation removed, no rotational fit",
+     "extra_bond_distances_A": [
+      1.897,
+      2.003,
+      2.004,
+      2.015
+     ]
+    },
+    "n_frames": 6,
+    "zn_distances_mean_A": {
+     "N2": 1.8732,
+     "H94NE2": 1.9938,
+     "H96NE2": 1.999,
+     "H119ND1": 2.0067
+    },
+    "zn_distances_sd_A": {
+     "N2": 0.0121,
+     "H94NE2": 0.0218,
+     "H96NE2": 0.0178,
+     "H119ND1": 0.0167
+    }
+   },
+   {
+    "stage": "eq03",
+    "settings": {
+     "ensemble": "NPT",
+     "timestep_fs": 2.0,
+     "n_steps": 300,
+     "length_ps": 0.6,
+     "restraint_atoms": "solute_heavy",
+     "restraint_k_kj_per_mol_nm2": 250.0
+    },
+    "final_temperature_K": 242.44,
+    "final_density_g_per_cm3": 0.93761,
+    "final_potential_energy_kj_per_mol": -568635.072,
+    "mean_temperature_K": 227.78,
+    "ns_per_day": 0.44,
+    "wall_s": 118.91,
+    "monitor_at_end": {
+     "zn_to_lig_N2_A": 1.904,
+     "lig_N2_to_thr199_OG1_A": 2.778,
+     "lig_N1_to_phe131_CZ_A": 9.744,
+     "lig_N1_to_asn67_OD1_A": 3.268,
+     "zn_to_his94_NE2_A": 2.036,
+     "zn_to_his96_NE2_A": 1.998,
+     "zn_to_his119_ND1_A": 1.998,
+     "n_water_O_within_3.5_A_of_ligand_heavy_atoms": 2,
+     "solute_heavy_rms_displacement_from_start_A": 0.459,
+     "solute_heavy_rms_displacement_note": "translation removed, no rotational fit",
+     "extra_bond_distances_A": [
+      1.904,
+      2.036,
+      1.998,
+      1.998
+     ]
+    },
+    "n_frames": 6,
+    "zn_distances_mean_A": {
+     "N2": 1.8835,
+     "H94NE2": 2.0125,
+     "H96NE2": 2.0081,
+     "H119ND1": 2.0123
+    },
+    "zn_distances_sd_A": {
+     "N2": 0.0234,
+     "H94NE2": 0.02,
+     "H96NE2": 0.0208,
+     "H119ND1": 0.0302
+    }
+   },
+   {
+    "stage": "eq04",
+    "settings": {
+     "ensemble": "NPT",
+     "timestep_fs": 4.0,
+     "n_steps": 200,
+     "length_ps": 0.8,
+     "restraint_atoms": "protein_backbone",
+     "restraint_k_kj_per_mol_nm2": 250.0
+    },
+    "final_temperature_K": 273.7,
+    "final_density_g_per_cm3": 0.95567,
+    "final_potential_energy_kj_per_mol": -555453.779,
+    "mean_temperature_K": 264.53,
+    "ns_per_day": 0.87,
+    "wall_s": 79.66,
+    "monitor_at_end": {
+     "zn_to_lig_N2_A": 1.882,
+     "lig_N2_to_thr199_OG1_A": 2.729,
+     "lig_N1_to_phe131_CZ_A": 8.364,
+     "lig_N1_to_asn67_OD1_A": 2.87,
+     "zn_to_his94_NE2_A": 2.025,
+     "zn_to_his96_NE2_A": 2.024,
+     "zn_to_his119_ND1_A": 1.992,
+     "n_water_O_within_3.5_A_of_ligand_heavy_atoms": 1,
+     "solute_heavy_rms_displacement_from_start_A": 0.57,
+     "solute_heavy_rms_displacement_note": "translation removed, no rotational fit",
+     "extra_bond_distances_A": [
+      1.882,
+      2.025,
+      2.024,
+      1.992
+     ]
+    },
+    "n_frames": 8,
+    "zn_distances_mean_A": {
+     "N2": 1.8908,
+     "H94NE2": 2.0175,
+     "H96NE2": 2.0215,
+     "H119ND1": 2.0163
+    },
+    "zn_distances_sd_A": {
+     "N2": 0.0169,
+     "H94NE2": 0.0123,
+     "H96NE2": 0.0207,
+     "H119ND1": 0.0243
+    }
+   },
+   {
+    "stage": "eq05",
+    "settings": {
+     "ensemble": "NPT",
+     "timestep_fs": 4.0,
+     "n_steps": 200,
+     "length_ps": 0.8,
+     "restraint_atoms": "protein_backbone",
+     "restraint_k_kj_per_mol_nm2": 50.0
+    },
+    "final_temperature_K": 285.4,
+    "final_density_g_per_cm3": 0.97041,
+    "final_potential_energy_kj_per_mol": -548864.598,
+    "mean_temperature_K": 281.42,
+    "ns_per_day": 0.83,
+    "wall_s": 83.33,
+    "monitor_at_end": {
+     "zn_to_lig_N2_A": 1.878,
+     "lig_N2_to_thr199_OG1_A": 2.751,
+     "lig_N1_to_phe131_CZ_A": 7.416,
+     "lig_N1_to_asn67_OD1_A": 3.485,
+     "zn_to_his94_NE2_A": 2.06,
+     "zn_to_his96_NE2_A": 2.042,
+     "zn_to_his119_ND1_A": 2.028,
+     "n_water_O_within_3.5_A_of_ligand_heavy_atoms": 1,
+     "solute_heavy_rms_displacement_from_start_A": 0.663,
+     "solute_heavy_rms_displacement_note": "translation removed, no rotational fit",
+     "extra_bond_distances_A": [
+      1.878,
+      2.06,
+      2.042,
+      2.028
+     ]
+    },
+    "n_frames": 8,
+    "zn_distances_mean_A": {
+     "N2": 1.894,
+     "H94NE2": 2.0324,
+     "H96NE2": 2.0314,
+     "H119ND1": 2.0152
+    },
+    "zn_distances_sd_A": {
+     "N2": 0.0166,
+     "H94NE2": 0.0157,
+     "H96NE2": 0.0193,
+     "H119ND1": 0.0235
+    }
+   },
+   {
+    "stage": "eq06",
+    "settings": {
+     "ensemble": "NPT",
+     "timestep_fs": 4.0,
+     "n_steps": 250,
+     "length_ps": 1.0,
+     "restraint_atoms": "none",
+     "restraint_k_kj_per_mol_nm2": 0.0
+    },
+    "final_temperature_K": 292.7,
+    "final_density_g_per_cm3": 0.97956,
+    "final_potential_energy_kj_per_mol": -545621.644,
+    "mean_temperature_K": 289.22,
+    "ns_per_day": 0.81,
+    "wall_s": 106.58,
+    "monitor_at_end": {
+     "zn_to_lig_N2_A": 1.881,
+     "lig_N2_to_thr199_OG1_A": 2.797,
+     "lig_N1_to_phe131_CZ_A": 8.217,
+     "lig_N1_to_asn67_OD1_A": 3.763,
+     "zn_to_his94_NE2_A": 2.019,
+     "zn_to_his96_NE2_A": 2.036,
+     "zn_to_his119_ND1_A": 2.005,
+     "n_water_O_within_3.5_A_of_ligand_heavy_atoms": 1,
+     "solute_heavy_rms_displacement_from_start_A": 0.746,
+     "solute_heavy_rms_displacement_note": "translation removed, no rotational fit",
+     "extra_bond_distances_A": [
+      1.881,
+      2.019,
+      2.036,
+      2.005
+     ]
+    },
+    "n_frames": 10,
+    "zn_distances_mean_A": {
+     "N2": 1.8984,
+     "H94NE2": 2.0259,
+     "H96NE2": 2.0321,
+     "H119ND1": 2.0356
+    },
+    "zn_distances_sd_A": {
+     "N2": 0.0225,
+     "H94NE2": 0.0138,
+     "H96NE2": 0.0143,
+     "H119ND1": 0.0216
+    }
+   }
+  ],
+  "zinc_and_ligand_free_stages_4_to_6": {
+   "n_frames": 26,
+   "zn_distances_mean_A": {
+    "N2": 1.8947,
+    "H94NE2": 2.0253,
+    "H96NE2": 2.0286,
+    "H119ND1": 2.0234
+   },
+   "zn_distances_sd_A": {
+    "N2": 0.0194,
+    "H94NE2": 0.0151,
+    "H96NE2": 0.0186,
+    "H119ND1": 0.025
+   },
+   "zn_distance_mean_minus_r0_A": {
+    "N2": -0.0367,
+    "H94NE2": 0.0154,
+    "H96NE2": 0.008,
+    "H119ND1": 0.0051
+   },
+   "largest_abs_deviation_from_r0_A": 0.0785,
+   "Zn_O1_A": {
+    "mean": 4.39,
+    "min": 4.292
+   },
+   "Zn_O2_A": {
+    "mean": 3.782,
+    "min": 3.443
+   },
+   "frames_with_a_sulfonyl_O_within_2.6_A_of_the_zinc": 0,
+   "N_Zn_N_mean_deg": {
+    "N2-Zn-H94NE2": 94.3,
+    "N2-Zn-H96NE2": 123.3,
+    "N2-Zn-H119ND1": 112.6,
+    "H94NE2-Zn-H96NE2": 86.1,
+    "H94NE2-Zn-H119ND1": 94.2,
+    "H96NE2-Zn-H119ND1": 123.7
+   },
+   "note": "2.6 ps in all, the first picoseconds after the release: a look, not a measurement"
+  },
+  "site_at_the_end": {
+   "lig_rmsd_symmetry_corrected_A": 2.6413,
+   "ca_rmsd_A": 0.5803,
+   "d1_N1_Phe131CZ_A": 8.217,
+   "d2_N1_Asn67OD1_A": 3.763,
+   "zn_distances_A": {
+    "N2": 1.8815,
+    "H94NE2": 2.019,
+    "H96NE2": 2.0365,
+    "H119ND1": 2.0055
+   },
+   "zn_distance_minus_r0_A": {
+    "N2": -0.0499,
+    "H94NE2": 0.0091,
+    "H96NE2": 0.0159,
+    "H119ND1": -0.0128
+   },
+   "N_Zn_N_deg": {
+    "N2-Zn-H94NE2": 91.15,
+    "N2-Zn-H96NE2": 127.82,
+    "N2-Zn-H119ND1": 114.58,
+    "H94NE2-Zn-H96NE2": 88.88,
+    "H94NE2-Zn-H119ND1": 86.02,
+    "H96NE2-Zn-H119ND1": 117.46
+   },
+   "Zn_O1_A": 4.292,
+   "Zn_O2_A": 3.912,
+   "S_N2_A": 1.5653,
+   "C4_S_N2_deg": 110.63,
+   "tau_fold_deg": 155.42,
+   "Zn_N2_S_C4_deg": -71.5,
+   "N2_Thr199OG1_A": 2.797,
+   "N2_HN21_Thr199OG1_deg": 156.1
+  },
+  "checks": {
+   "all_six_stages_ran": true,
+   "temperatures_finite": true
+  },
+  "checks_failed": [],
+  "heavy_atoms_within_2.6_A_of_the_zinc_at_the_end": {
+   "GLU106:OE1": 1.804,
+   "SAN304:N2": 1.881,
+   "HIE119:ND1": 2.005,
+   "HID94:NE2": 2.019,
+   "HID96:NE2": 2.036
+  },
+  "n_heavy_atoms_within_2.6_A_of_the_zinc_at_the_end": 5
+ }
+}

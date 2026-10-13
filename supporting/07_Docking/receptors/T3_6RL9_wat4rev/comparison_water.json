@@ -1,0 +1,3714 @@
+{
+ "variant": "T3_6RL9_wat4rev",
+ "dry": "T3_6RL9",
+ "rule": "rev",
+ "waters": [
+  "423",
+  "516",
+  "553",
+  "568"
+ ],
+ "rotated_reference": {
+  "file": "T3_6RL9/runs/sfa_neutral__ad4zn__prod/seed14/out.pdbqt",
+  "mode": 3,
+  "frame": "T3_6RL9"
+ },
+ "definitions": "near-native: within 1.0 A of the crystal ligand; ring-rotated (paper): beyond 2.0 A; rotated pose: beyond 2.0 A and within 2.0 A of the rotated reference; RMSDs symmetry-corrected, heavy atoms, receptor frame; water sites: the oxygen positions of the kept waters",
+ "runs": {
+  "sfa_neutral__ad4zn__prod": {
+   "dry": {
+    "run": "T3_6RL9/runs/sfa_neutral__ad4zn__prod",
+    "n_seeds": 20,
+    "settings": {
+     "scoring": "ad4zn",
+     "exhaustiveness": 32,
+     "cpu": 3,
+     "box": {
+      "center": [
+       15.937,
+       2.942,
+       15.735
+      ],
+      "size": [
+       20.0,
+       20.0,
+       20.0
+      ]
+     },
+     "num_modes": null,
+     "energy_range": null,
+     "geometry": "dft",
+     "vina_version": null,
+     "maps": "T3_6RL9/ad4zn/receptor_tz"
+    },
+    "reference": {
+     "kind": "redock",
+     "reference": "ref_SAN.sdf"
+    },
+    "score": {
+     "mean": -8.836,
+     "sd": 0.004,
+     "per_seed": [
+      -8.836,
+      -8.836,
+      -8.843,
+      -8.833,
+      -8.835,
+      -8.834,
+      -8.829,
+      -8.83,
+      -8.84,
+      -8.839,
+      -8.837,
+      -8.831,
+      -8.838,
+      -8.84,
+      -8.832,
+      -8.838,
+      -8.839,
+      -8.835,
+      -8.84,
+      -8.835
+     ]
+    },
+    "wall_s_total": 687.3,
+    "rmsd": {
+     "mean": 0.614,
+     "sd": 0.04,
+     "best_of_seeds": 0.564,
+     "f_le_1A": 1.0,
+     "f_le_2A": 1.0,
+     "per_seed": [
+      0.632,
+      0.574,
+      0.61,
+      0.575,
+      0.584,
+      0.571,
+      0.72,
+      0.609,
+      0.599,
+      0.655,
+      0.61,
+      0.667,
+      0.664,
+      0.63,
+      0.616,
+      0.569,
+      0.612,
+      0.628,
+      0.595,
+      0.564
+     ],
+     "best_of_modes_per_seed": [
+      0.546,
+      0.574,
+      0.585,
+      0.575,
+      0.584,
+      0.514,
+      0.59,
+      0.574,
+      0.485,
+      0.655,
+      0.47,
+      0.605,
+      0.664,
+      0.478,
+      0.616,
+      0.489,
+      0.612,
+      0.628,
+      0.595,
+      0.564
+     ],
+     "rank_of_first_pose_within_1A": {
+      "fraction_of_seeds_with_any": 1.0,
+      "median_rank": 1.0,
+      "worst_rank": 1,
+      "best_rank": 1
+     }
+    },
+    "orientation": {
+     "n_seeds": 20,
+     "top_near_native": 20,
+     "top_ring_rotated": 0,
+     "top_between": 0,
+     "seeds_with_near_native_mode": 20,
+     "seeds_with_both": 20,
+     "worst_rank_near": 1,
+     "gap_min": 0.0,
+     "gap_max": 0.0,
+     "sep_min": 0.014,
+     "sep_max": 0.07,
+     "near_minus_rotated_mean": -0.041,
+     "near_minus_rotated_min": -0.07,
+     "near_minus_rotated_max": -0.014,
+     "per_seed": [
+      {
+       "seed": 1,
+       "rmsd_top": 0.632,
+       "top": "near-native",
+       "rank_near": 1,
+       "gap": 0.0,
+       "sep": 0.018,
+       "near_minus_rotated": -0.018
+      },
+      {
+       "seed": 2,
+       "rmsd_top": 0.574,
+       "top": "near-native",
+       "rank_near": 1,
+       "gap": 0.0,
+       "sep": 0.034,
+       "near_minus_rotated": -0.034
+      },
+      {
+       "seed": 3,
+       "rmsd_top": 0.61,
+       "top": "near-native",
+       "rank_near": 1,
+       "gap": 0.0,
+       "sep": 0.034,
+       "near_minus_rotated": -0.034
+      },
+      {
+       "seed": 4,
+       "rmsd_top": 0.575,
+       "top": "near-native",
+       "rank_near": 1,
+       "gap": 0.0,
+       "sep": 0.014,
+       "near_minus_rotated": -0.014
+      },
+      {
+       "seed": 5,
+       "rmsd_top": 0.584,
+       "top": "near-native",
+       "rank_near": 1,
+       "gap": 0.0,
+       "sep": 0.023,
+       "near_minus_rotated": -0.023
+      },
+      {
+       "seed": 6,
+       "rmsd_top": 0.571,
+       "top": "near-native",
+       "rank_near": 1,
+       "gap": 0.0,
+       "sep": 0.068,
+       "near_minus_rotated": -0.068
+      },
+      {
+       "seed": 7,
+       "rmsd_top": 0.72,
+       "top": "near-native",
+       "rank_near": 1,
+       "gap": 0.0,
+       "sep": 0.022,
+       "near_minus_rotated": -0.022
+      },
+      {
+       "seed": 8,
+       "rmsd_top": 0.609,
+       "top": "near-native",
+       "rank_near": 1,
+       "gap": 0.0,
+       "sep": 0.049,
+       "near_minus_rotated": -0.049
+      },
+      {
+       "seed": 9,
+       "rmsd_top": 0.599,
+       "top": "near-native",
+       "rank_near": 1,
+       "gap": 0.0,
+       "sep": 0.065,
+       "near_minus_rotated": -0.065
+      },
+      {
+       "seed": 10,
+       "rmsd_top": 0.655,
+       "top": "near-native",
+       "rank_near": 1,
+       "gap": 0.0,
+       "sep": 0.066,
+       "near_minus_rotated": -0.066
+      },
+      {
+       "seed": 11,
+       "rmsd_top": 0.61,
+       "top": "near-native",
+       "rank_near": 1,
+       "gap": 0.0,
+       "sep": 0.041,
+       "near_minus_rotated": -0.041
+      },
+      {
+       "seed": 12,
+       "rmsd_top": 0.667,
+       "top": "near-native",
+       "rank_near": 1,
+       "gap": 0.0,
+       "sep": 0.053,
+       "near_minus_rotated": -0.053
+      },
+      {
+       "seed": 13,
+       "rmsd_top": 0.664,
+       "top": "near-native",
+       "rank_near": 1,
+       "gap": 0.0,
+       "sep": 0.025,
+       "near_minus_rotated": -0.025
+      },
+      {
+       "seed": 14,
+       "rmsd_top": 0.63,
+       "top": "near-native",
+       "rank_near": 1,
+       "gap": 0.0,
+       "sep": 0.017,
+       "near_minus_rotated": -0.017
+      },
+      {
+       "seed": 15,
+       "rmsd_top": 0.616,
+       "top": "near-native",
+       "rank_near": 1,
+       "gap": 0.0,
+       "sep": 0.07,
+       "near_minus_rotated": -0.07
+      },
+      {
+       "seed": 16,
+       "rmsd_top": 0.569,
+       "top": "near-native",
+       "rank_near": 1,
+       "gap": 0.0,
+       "sep": 0.036,
+       "near_minus_rotated": -0.036
+      },
+      {
+       "seed": 17,
+       "rmsd_top": 0.612,
+       "top": "near-native",
+       "rank_near": 1,
+       "gap": 0.0,
+       "sep": 0.035,
+       "near_minus_rotated": -0.035
+      },
+      {
+       "seed": 18,
+       "rmsd_top": 0.628,
+       "top": "near-native",
+       "rank_near": 1,
+       "gap": 0.0,
+       "sep": 0.037,
+       "near_minus_rotated": -0.037
+      },
+      {
+       "seed": 19,
+       "rmsd_top": 0.595,
+       "top": "near-native",
+       "rank_near": 1,
+       "gap": 0.0,
+       "sep": 0.057,
+       "near_minus_rotated": -0.057
+      },
+      {
+       "seed": 20,
+       "rmsd_top": 0.564,
+       "top": "near-native",
+       "rank_near": 1,
+       "gap": 0.0,
+       "sep": 0.059,
+       "near_minus_rotated": -0.059
+      }
+     ]
+    },
+    "site_checks": {
+     "Zn-N(sulfonamide)": {
+      "pass_fraction": 1.0,
+      "distance_mean": 2.2
+     },
+     "Thr199 OG1 H-bond": {
+      "pass_fraction": 1.0,
+      "distance_mean": 2.55
+     },
+     "Thr199 N H-bond to sulfonyl O": {
+      "pass_fraction": 1.0,
+      "distance_mean": 2.97
+     }
+    },
+    "site_checks_per_seed": [
+     {
+      "Zn-N(sulfonamide)": 2.23,
+      "Thr199 OG1 H-bond": 2.58,
+      "Thr199 N H-bond to sulfonyl O": 2.92
+     },
+     {
+      "Zn-N(sulfonamide)": 2.2,
+      "Thr199 OG1 H-bond": 2.55,
+      "Thr199 N H-bond to sulfonyl O": 2.99
+     },
+     {
+      "Zn-N(sulfonamide)": 2.21,
+      "Thr199 OG1 H-bond": 2.55,
+      "Thr199 N H-bond to sulfonyl O": 2.98
+     },
+     {
+      "Zn-N(sulfonamide)": 2.2,
+      "Thr199 OG1 H-bond": 2.55,
+      "Thr199 N H-bond to sulfonyl O": 2.99
+     },
+     {
+      "Zn-N(sulfonamide)": 2.19,
+      "Thr199 OG1 H-bond": 2.54,
+      "Thr199 N H-bond to sulfonyl O": 2.96
+     },
+     {
+      "Zn-N(sulfonamide)": 2.19,
+      "Thr199 OG1 H-bond": 2.52,
+      "Thr199 N H-bond to sulfonyl O": 2.97
+     },
+     {
+      "Zn-N(sulfonamide)": 2.22,
+      "Thr199 OG1 H-bond": 2.57,
+      "Thr199 N H-bond to sulfonyl O": 2.97
+     },
+     {
+      "Zn-N(sulfonamide)": 2.2,
+      "Thr199 OG1 H-bond": 2.54,
+      "Thr199 N H-bond to sulfonyl O": 2.93
+     },
+     {
+      "Zn-N(sulfonamide)": 2.2,
+      "Thr199 OG1 H-bond": 2.54,
+      "Thr199 N H-bond to sulfonyl O": 2.95
+     },
+     {
+      "Zn-N(sulfonamide)": 2.19,
+      "Thr199 OG1 H-bond": 2.53,
+      "Thr199 N H-bond to sulfonyl O": 2.95
+     },
+     {
+      "Zn-N(sulfonamide)": 2.2,
+      "Thr199 OG1 H-bond": 2.53,
+      "Thr199 N H-bond to sulfonyl O": 2.99
+     },
+     {
+      "Zn-N(sulfonamide)": 2.2,
+      "Thr199 OG1 H-bond": 2.53,
+      "Thr199 N H-bond to sulfonyl O": 2.88
+     },
+     {
+      "Zn-N(sulfonamide)": 2.19,
+      "Thr199 OG1 H-bond": 2.52,
+      "Thr199 N H-bond to sulfonyl O": 2.96
+     },
+     {
+      "Zn-N(sulfonamide)": 2.23,
+      "Thr199 OG1 H-bond": 2.57,
+      "Thr199 N H-bond to sulfonyl O": 2.99
+     },
+     {
+      "Zn-N(sulfonamide)": 2.19,
+      "Thr199 OG1 H-bond": 2.54,
+      "Thr199 N H-bond to sulfonyl O": 2.96
+     },
+     {
+      "Zn-N(sulfonamide)": 2.23,
+      "Thr199 OG1 H-bond": 2.58,
+      "Thr199 N H-bond to sulfonyl O": 3.01
+     },
+     {
+      "Zn-N(sulfonamide)": 2.23,
+      "Thr199 OG1 H-bond": 2.57,
+      "Thr199 N H-bond to sulfonyl O": 3.0
+     },
+     {
+      "Zn-N(sulfonamide)": 2.19,
+      "Thr199 OG1 H-bond": 2.53,
+      "Thr199 N H-bond to sulfonyl O": 2.96
+     },
+     {
+      "Zn-N(sulfonamide)": 2.19,
+      "Thr199 OG1 H-bond": 2.52,
+      "Thr199 N H-bond to sulfonyl O": 2.96
+     },
+     {
+      "Zn-N(sulfonamide)": 2.21,
+      "Thr199 OG1 H-bond": 2.55,
+      "Thr199 N H-bond to sulfonyl O": 2.99
+     }
+    ],
+    "site_checks_on_crystal_reference": [
+     {
+      "check": "Zn-N(sulfonamide)",
+      "distance": 1.93,
+      "cutoff": 2.3,
+      "passed": true
+     },
+     {
+      "check": "Thr199 OG1 H-bond",
+      "distance": 2.86,
+      "cutoff": 3.3,
+      "passed": true
+     },
+     {
+      "check": "Thr199 N H-bond to sulfonyl O",
+      "distance": 2.94,
+      "cutoff": 3.3,
+      "passed": true
+     }
+    ],
+    "posebusters_physics_pass_fraction": null,
+    "posebusters_source": null,
+    "posebusters_physics_failed_checks": null,
+    "clusters": [
+     {
+      "id": 1,
+      "population": 20,
+      "seeds": [
+       3,
+       9,
+       14,
+       19,
+       10,
+       17,
+       13,
+       16,
+       11,
+       1,
+       2,
+       5,
+       18,
+       20,
+       6,
+       4,
+       15,
+       12,
+       8,
+       7
+      ],
+      "representative_seed": 3,
+      "score_best": -8.843,
+      "representative_rmsd": 0.61,
+      "representative_site_checks": {
+       "Zn-N(sulfonamide)": 2.21,
+       "Thr199 OG1 H-bond": 2.55,
+       "Thr199 N H-bond to sulfonyl O": 2.98
+      }
+     }
+    ],
+    "tau_fold_deg": {
+     "mean": 147.0,
+     "min": 140.5,
+     "max": 151.8,
+     "per_seed": [
+      147.7,
+      145.4,
+      148.6,
+      145.9,
+      140.5,
+      143.6,
+      151.8,
+      146.2,
+      146.7,
+      148.1,
+      147.6,
+      146.4,
+      151.0,
+      149.8,
+      144.9,
+      145.7,
+      149.3,
+      148.8,
+      146.2,
+      145.6
+     ]
+    },
+    "gate": {
+     "passes_G2": null,
+     "passes_2A_criterion": null,
+     "rmsd_and_site_part_G2": true,
+     "rmsd_and_site_part_2A": true,
+     "site_ok": true
+    },
+    "mode_summary": {
+     "n_seeds": 20,
+     "n_modes": 138,
+     "top_pose": {
+      "near_native": 20,
+      "ring_rotated_paper": 0,
+      "between": 0,
+      "rotated_pose": 0,
+      "other_beyond_2A": 0
+     },
+     "modes": {
+      "near_native": 41,
+      "ring_rotated_paper": 62,
+      "between": 35,
+      "rotated_pose": 40,
+      "other_beyond_2A": 22
+     },
+     "seeds_holding": {
+      "near_native": 20,
+      "ring_rotated_paper": 20,
+      "rotated_pose": 20
+     },
+     "best_score": {
+      "near_native": -8.843,
+      "ring_rotated_paper": -8.823,
+      "rotated_pose": -8.823,
+      "other_beyond_2A": -7.802,
+      "any": -8.843
+     },
+     "gap_to_best_near_native": {
+      "ring_rotated_paper": {
+       "n_seeds": 20,
+       "mean": 0.041,
+       "min": 0.014,
+       "max": 0.07
+      },
+      "rotated_pose": {
+       "n_seeds": 20,
+       "mean": 0.041,
+       "min": 0.014,
+       "max": 0.07
+      }
+     },
+     "modes_within_2_kcal_of_the_seed_best": {
+      "ring_rotated_paper": {
+       "n_modes": 57,
+       "n_seeds": 20
+      },
+      "rotated_pose": {
+       "n_modes": 39,
+       "n_seeds": 20
+      }
+     },
+     "largest_score_span_of_a_seed": 2.724,
+     "min_dist_water_site": {
+      "top_poses": [
+       3.12,
+       3.19
+      ],
+      "all_modes": 0.07,
+      "modes_within_2p4A_of_a_site": 84
+     }
+    },
+    "families_beyond_1A": [
+     {
+      "n_modes": 40,
+      "n_seeds": 20,
+      "n_top_poses": 0,
+      "best_score": -8.823,
+      "behind_best_of_run": 0.02,
+      "representative": {
+       "seed": 14,
+       "mode": 3
+      },
+      "rmsd_crystal": 3.573,
+      "rmsd_rotated_ref": 0.0,
+      "cls": "rotated pose",
+      "zn_n": 2.24,
+      "thr199_og1_n": 2.58,
+      "aniline_n_asn67_od1": 2.57,
+      "min_dist_water_site": 0.19
+     },
+     {
+      "n_modes": 39,
+      "n_seeds": 20,
+      "n_top_poses": 0,
+      "best_score": -8.404,
+      "behind_best_of_run": 0.439,
+      "representative": {
+       "seed": 3,
+       "mode": 4
+      },
+      "rmsd_crystal": 1.169,
+      "rmsd_rotated_ref": 2.753,
+      "cls": "between",
+      "zn_n": 2.19,
+      "thr199_og1_n": 2.56,
+      "aniline_n_asn67_od1": 5.79,
+      "min_dist_water_site": 1.49
+     },
+     {
+      "n_modes": 8,
+      "n_seeds": 7,
+      "n_top_poses": 0,
+      "best_score": -7.657,
+      "behind_best_of_run": 1.186,
+      "representative": {
+       "seed": 2,
+       "mode": 7
+      },
+      "rmsd_crystal": 2.138,
+      "rmsd_rotated_ref": 3.638,
+      "cls": "other, beyond 2.0 A",
+      "zn_n": 2.0,
+      "thr199_og1_n": 2.8,
+      "aniline_n_asn67_od1": 7.52,
+      "min_dist_water_site": 0.9
+     },
+     {
+      "n_modes": 9,
+      "n_seeds": 9,
+      "n_top_poses": 0,
+      "best_score": -7.635,
+      "behind_best_of_run": 1.208,
+      "representative": {
+       "seed": 19,
+       "mode": 8
+      },
+      "rmsd_crystal": 3.097,
+      "rmsd_rotated_ref": 4.989,
+      "cls": "other, beyond 2.0 A",
+      "zn_n": 1.95,
+      "thr199_og1_n": 2.57,
+      "aniline_n_asn67_od1": 10.42,
+      "min_dist_water_site": 1.18
+     },
+     {
+      "n_modes": 1,
+      "n_seeds": 1,
+      "n_top_poses": 0,
+      "best_score": -6.115,
+      "behind_best_of_run": 2.728,
+      "representative": {
+       "seed": 10,
+       "mode": 7
+      },
+      "rmsd_crystal": 2.914,
+      "rmsd_rotated_ref": 2.153,
+      "cls": "other, beyond 2.0 A",
+      "zn_n": 1.86,
+      "thr199_og1_n": 2.96,
+      "aniline_n_asn67_od1": 4.59,
+      "min_dist_water_site": 0.55
+     }
+    ],
+    "modes": [
+     {
+      "seed": 1,
+      "mode": 1,
+      "score": -8.836,
+      "rmsd_crystal": 0.632,
+      "rmsd_rotated_ref": 3.865,
+      "cls": "near-native",
+      "zn_n": 2.23,
+      "thr199_og1_n": 2.58,
+      "aniline_n_asn67_od1": 7.71,
+      "min_dist_water_site": 3.17,
+      "water_sites_within_2p4A": 0
+     },
+     {
+      "seed": 1,
+      "mode": 2,
+      "score": -8.819,
+      "rmsd_crystal": 0.546,
+      "rmsd_rotated_ref": 3.859,
+      "cls": "near-native",
+      "zn_n": 2.2,
+      "thr199_og1_n": 2.53,
+      "aniline_n_asn67_od1": 7.89,
+      "min_dist_water_site": 3.18,
+      "water_sites_within_2p4A": 0
+     },
+     {
+      "seed": 1,
+      "mode": 3,
+      "score": -8.818,
+      "rmsd_crystal": 3.495,
+      "rmsd_rotated_ref": 0.106,
+      "cls": "rotated pose",
+      "zn_n": 2.23,
+      "thr199_og1_n": 2.58,
+      "aniline_n_asn67_od1": 2.61,
+      "min_dist_water_site": 0.17,
+      "water_sites_within_2p4A": 4
+     },
+     {
+      "seed": 1,
+      "mode": 4,
+      "score": -8.651,
+      "rmsd_crystal": 3.242,
+      "rmsd_rotated_ref": 0.411,
+      "cls": "rotated pose",
+      "zn_n": 2.22,
+      "thr199_og1_n": 2.56,
+      "aniline_n_asn67_od1": 2.97,
+      "min_dist_water_site": 0.38,
+      "water_sites_within_2p4A": 4
+     },
+     {
+      "seed": 1,
+      "mode": 5,
+      "score": -8.297,
+      "rmsd_crystal": 1.266,
+      "rmsd_rotated_ref": 2.554,
+      "cls": "between",
+      "zn_n": 2.18,
+      "thr199_og1_n": 2.52,
+      "aniline_n_asn67_od1": 5.65,
+      "min_dist_water_site": 1.54,
+      "water_sites_within_2p4A": 2
+     },
+     {
+      "seed": 1,
+      "mode": 6,
+      "score": -7.428,
+      "rmsd_crystal": 3.093,
+      "rmsd_rotated_ref": 4.968,
+      "cls": "other, beyond 2.0 A",
+      "zn_n": 1.97,
+      "thr199_og1_n": 2.48,
+      "aniline_n_asn67_od1": 10.4,
+      "min_dist_water_site": 1.19,
+      "water_sites_within_2p4A": 1
+     },
+     {
+      "seed": 1,
+      "mode": 7,
+      "score": -6.561,
+      "rmsd_crystal": 2.189,
+      "rmsd_rotated_ref": 3.349,
+      "cls": "other, beyond 2.0 A",
+      "zn_n": 1.86,
+      "thr199_og1_n": 2.98,
+      "aniline_n_asn67_od1": 7.1,
+      "min_dist_water_site": 0.89,
+      "water_sites_within_2p4A": 2
+     },
+     {
+      "seed": 2,
+      "mode": 1,
+      "score": -8.836,
+      "rmsd_crystal": 0.574,
+      "rmsd_rotated_ref": 3.818,
+      "cls": "near-native",
+      "zn_n": 2.2,
+      "thr199_og1_n": 2.55,
+      "aniline_n_asn67_od1": 7.66,
+      "min_dist_water_site": 3.18,
+      "water_sites_within_2p4A": 0
+     },
+     {
+      "seed": 2,
+      "mode": 2,
+      "score": -8.835,
+      "rmsd_crystal": 0.61,
+      "rmsd_rotated_ref": 3.881,
+      "cls": "near-native",
+      "zn_n": 2.21,
+      "thr199_og1_n": 2.55,
+      "aniline_n_asn67_od1": 7.9,
+      "min_dist_water_site": 3.16,
+      "water_sites_within_2p4A": 0
+     },
+     {
+      "seed": 2,
+      "mode": 3,
+      "score": -8.802,
+      "rmsd_crystal": 3.523,
+      "rmsd_rotated_ref": 0.08,
+      "cls": "rotated pose",
+      "zn_n": 2.24,
+      "thr199_og1_n": 2.58,
+      "aniline_n_asn67_od1": 2.64,
+      "min_dist_water_site": 0.16,
+      "water_sites_within_2p4A": 4
+     },
+     {
+      "seed": 2,
+      "mode": 4,
+      "score": -8.271,
+      "rmsd_crystal": 3.237,
+      "rmsd_rotated_ref": 0.472,
+      "cls": "rotated pose",
+      "zn_n": 2.23,
+      "thr199_og1_n": 2.58,
+      "aniline_n_asn67_od1": 3.07,
+      "min_dist_water_site": 0.49,
+      "water_sites_within_2p4A": 4
+     },
+     {
+      "seed": 2,
+      "mode": 5,
+      "score": -8.183,
+      "rmsd_crystal": 1.21,
+      "rmsd_rotated_ref": 2.541,
+      "cls": "between",
+      "zn_n": 2.1,
+      "thr199_og1_n": 2.41,
+      "aniline_n_asn67_od1": 5.86,
+      "min_dist_water_site": 1.56,
+      "water_sites_within_2p4A": 2
+     },
+     {
+      "seed": 2,
+      "mode": 6,
+      "score": -8.015,
+      "rmsd_crystal": 1.605,
+      "rmsd_rotated_ref": 3.623,
+      "cls": "between",
+      "zn_n": 2.27,
+      "thr199_og1_n": 2.97,
+      "aniline_n_asn67_od1": 7.03,
+      "min_dist_water_site": 2.79,
+      "water_sites_within_2p4A": 0
+     },
+     {
+      "seed": 2,
+      "mode": 7,
+      "score": -7.657,
+      "rmsd_crystal": 2.138,
+      "rmsd_rotated_ref": 3.638,
+      "cls": "other, beyond 2.0 A",
+      "zn_n": 2.0,
+      "thr199_og1_n": 2.8,
+      "aniline_n_asn67_od1": 7.52,
+      "min_dist_water_site": 0.9,
+      "water_sites_within_2p4A": 2
+     },
+     {
+      "seed": 3,
+      "mode": 1,
+      "score": -8.843,
+      "rmsd_crystal": 0.61,
+      "rmsd_rotated_ref": 3.847,
+      "cls": "near-native",
+      "zn_n": 2.21,
+      "thr199_og1_n": 2.55,
+      "aniline_n_asn67_od1": 7.71,
+      "min_dist_water_site": 3.15,
+      "water_sites_within_2p4A": 0
+     },
+     {
+      "seed": 3,
+      "mode": 2,
+      "score": -8.836,
+      "rmsd_crystal": 0.585,
+      "rmsd_rotated_ref": 3.843,
+      "cls": "near-native",
+      "zn_n": 2.19,
+      "thr199_og1_n": 2.53,
+      "aniline_n_asn67_od1": 7.84,
+      "min_dist_water_site": 3.13,
+      "water_sites_within_2p4A": 0
+     },
+     {
+      "seed": 3,
+      "mode": 3,
+      "score": -8.809,
+      "rmsd_crystal": 3.677,
+      "rmsd_rotated_ref": 0.126,
+      "cls": "rotated pose",
+      "zn_n": 2.24,
+      "thr199_og1_n": 2.58,
+      "aniline_n_asn67_od1": 2.6,
+      "min_dist_water_site": 0.07,
+      "water_sites_within_2p4A": 4
+     },
+     {
+      "seed": 3,
+      "mode": 4,
+      "score": -8.404,
+      "rmsd_crystal": 1.169,
+      "rmsd_rotated_ref": 2.753,
+      "cls": "between",
+      "zn_n": 2.19,
+      "thr199_og1_n": 2.56,
+      "aniline_n_asn67_od1": 5.79,
+      "min_dist_water_site": 1.49,
+      "water_sites_within_2p4A": 2
+     },
+     {
+      "seed": 3,
+      "mode": 5,
+      "score": -8.053,
+      "rmsd_crystal": 1.831,
+      "rmsd_rotated_ref": 3.777,
+      "cls": "between",
+      "zn_n": 1.88,
+      "thr199_og1_n": 2.94,
+      "aniline_n_asn67_od1": 7.41,
+      "min_dist_water_site": 2.63,
+      "water_sites_within_2p4A": 0
+     },
+     {
+      "seed": 3,
+      "mode": 6,
+      "score": -7.37,
+      "rmsd_crystal": 2.158,
+      "rmsd_rotated_ref": 3.678,
+      "cls": "other, beyond 2.0 A",
+      "zn_n": 1.99,
+      "thr199_og1_n": 2.81,
+      "aniline_n_asn67_od1": 7.58,
+      "min_dist_water_site": 1.0,
+      "water_sites_within_2p4A": 2
+     },
+     {
+      "seed": 3,
+      "mode": 7,
+      "score": -7.15,
+      "rmsd_crystal": 3.127,
+      "rmsd_rotated_ref": 5.047,
+      "cls": "other, beyond 2.0 A",
+      "zn_n": 2.04,
+      "thr199_og1_n": 2.74,
+      "aniline_n_asn67_od1": 10.45,
+      "min_dist_water_site": 1.33,
+      "water_sites_within_2p4A": 1
+     },
+     {
+      "seed": 3,
+      "mode": 8,
+      "score": -6.172,
+      "rmsd_crystal": 2.892,
+      "rmsd_rotated_ref": 1.977,
+      "cls": "rotated pose",
+      "zn_n": 1.87,
+      "thr199_og1_n": 2.94,
+      "aniline_n_asn67_od1": 4.48,
+      "min_dist_water_site": 0.73,
+      "water_sites_within_2p4A": 2
+     },
+     {
+      "seed": 4,
+      "mode": 1,
+      "score": -8.833,
+      "rmsd_crystal": 0.575,
+      "rmsd_rotated_ref": 3.795,
+      "cls": "near-native",
+      "zn_n": 2.2,
+      "thr199_og1_n": 2.55,
+      "aniline_n_asn67_od1": 7.6,
+      "min_dist_water_site": 3.15,
+      "water_sites_within_2p4A": 0
+     },
+     {
+      "seed": 4,
+      "mode": 2,
+      "score": -8.829,
+      "rmsd_crystal": 0.602,
+      "rmsd_rotated_ref": 3.875,
+      "cls": "near-native",
+      "zn_n": 2.22,
+      "thr199_og1_n": 2.56,
+      "aniline_n_asn67_od1": 7.89,
+      "min_dist_water_site": 3.17,
+      "water_sites_within_2p4A": 0
+     },
+     {
+      "seed": 4,
+      "mode": 3,
+      "score": -8.819,
+      "rmsd_crystal": 3.571,
+      "rmsd_rotated_ref": 0.036,
+      "cls": "rotated pose",
+      "zn_n": 2.22,
+      "thr199_og1_n": 2.56,
+      "aniline_n_asn67_od1": 2.55,
+      "min_dist_water_site": 0.18,
+      "water_sites_within_2p4A": 4
+     },
+     {
+      "seed": 4,
+      "mode": 4,
+      "score": -8.585,
+      "rmsd_crystal": 3.167,
+      "rmsd_rotated_ref": 0.511,
+      "cls": "rotated pose",
+      "zn_n": 2.24,
+      "thr199_og1_n": 2.58,
+      "aniline_n_asn67_od1": 3.07,
+      "min_dist_water_site": 0.22,
+      "water_sites_within_2p4A": 4
+     },
+     {
+      "seed": 4,
+      "mode": 5,
+      "score": -8.139,
+      "rmsd_crystal": 1.282,
+      "rmsd_rotated_ref": 2.572,
+      "cls": "between",
+      "zn_n": 2.2,
+      "thr199_og1_n": 2.54,
+      "aniline_n_asn67_od1": 5.64,
+      "min_dist_water_site": 1.43,
+      "water_sites_within_2p4A": 2
+     },
+     {
+      "seed": 4,
+      "mode": 6,
+      "score": -8.066,
+      "rmsd_crystal": 1.677,
+      "rmsd_rotated_ref": 3.667,
+      "cls": "between",
+      "zn_n": 2.32,
+      "thr199_og1_n": 3.01,
+      "aniline_n_asn67_od1": 7.06,
+      "min_dist_water_site": 2.79,
+      "water_sites_within_2p4A": 0
+     },
+     {
+      "seed": 4,
+      "mode": 7,
+      "score": -7.19,
+      "rmsd_crystal": 2.106,
+      "rmsd_rotated_ref": 4.083,
+      "cls": "other, beyond 2.0 A",
+      "zn_n": 1.88,
+      "thr199_og1_n": 2.7,
+      "aniline_n_asn67_od1": 8.74,
+      "min_dist_water_site": 1.06,
+      "water_sites_within_2p4A": 1
+     },
+     {
+      "seed": 4,
+      "mode": 8,
+      "score": -6.274,
+      "rmsd_crystal": 2.336,
+      "rmsd_rotated_ref": 2.992,
+      "cls": "other, beyond 2.0 A",
+      "zn_n": 1.91,
+      "thr199_og1_n": 2.9,
+      "aniline_n_asn67_od1": 6.54,
+      "min_dist_water_site": 1.28,
+      "water_sites_within_2p4A": 2
+     },
+     {
+      "seed": 5,
+      "mode": 1,
+      "score": -8.835,
+      "rmsd_crystal": 0.584,
+      "rmsd_rotated_ref": 3.875,
+      "cls": "near-native",
+      "zn_n": 2.19,
+      "thr199_og1_n": 2.54,
+      "aniline_n_asn67_od1": 7.79,
+      "min_dist_water_site": 3.19,
+      "water_sites_within_2p4A": 0
+     },
+     {
+      "seed": 5,
+      "mode": 2,
+      "score": -8.834,
+      "rmsd_crystal": 0.604,
+      "rmsd_rotated_ref": 3.94,
+      "cls": "near-native",
+      "zn_n": 2.23,
+      "thr199_og1_n": 2.57,
+      "aniline_n_asn67_od1": 8.03,
+      "min_dist_water_site": 3.17,
+      "water_sites_within_2p4A": 0
+     },
+     {
+      "seed": 5,
+      "mode": 3,
+      "score": -8.812,
+      "rmsd_crystal": 3.476,
+      "rmsd_rotated_ref": 0.137,
+      "cls": "rotated pose",
+      "zn_n": 2.23,
+      "thr199_og1_n": 2.58,
+      "aniline_n_asn67_od1": 2.69,
+      "min_dist_water_site": 0.23,
+      "water_sites_within_2p4A": 4
+     },
+     {
+      "seed": 5,
+      "mode": 4,
+      "score": -8.632,
+      "rmsd_crystal": 3.22,
+      "rmsd_rotated_ref": 0.459,
+      "cls": "rotated pose",
+      "zn_n": 2.23,
+      "thr199_og1_n": 2.57,
+      "aniline_n_asn67_od1": 3.07,
+      "min_dist_water_site": 0.42,
+      "water_sites_within_2p4A": 4
+     },
+     {
+      "seed": 5,
+      "mode": 5,
+      "score": -7.989,
+      "rmsd_crystal": 1.529,
+      "rmsd_rotated_ref": 3.439,
+      "cls": "between",
+      "zn_n": 2.28,
+      "thr199_og1_n": 2.97,
+      "aniline_n_asn67_od1": 6.88,
+      "min_dist_water_site": 2.71,
+      "water_sites_within_2p4A": 0
+     },
+     {
+      "seed": 6,
+      "mode": 1,
+      "score": -8.834,
+      "rmsd_crystal": 0.571,
+      "rmsd_rotated_ref": 3.869,
+      "cls": "near-native",
+      "zn_n": 2.19,
+      "thr199_og1_n": 2.52,
+      "aniline_n_asn67_od1": 7.81,
+      "min_dist_water_site": 3.19,
+      "water_sites_within_2p4A": 0
+     },
+     {
+      "seed": 6,
+      "mode": 2,
+      "score": -8.832,
+      "rmsd_crystal": 0.514,
+      "rmsd_rotated_ref": 3.834,
+      "cls": "near-native",
+      "zn_n": 2.23,
+      "thr199_og1_n": 2.57,
+      "aniline_n_asn67_od1": 7.86,
+      "min_dist_water_site": 3.15,
+      "water_sites_within_2p4A": 0
+     },
+     {
+      "seed": 6,
+      "mode": 3,
+      "score": -8.766,
+      "rmsd_crystal": 3.5,
+      "rmsd_rotated_ref": 0.1,
+      "cls": "rotated pose",
+      "zn_n": 2.23,
+      "thr199_og1_n": 2.57,
+      "aniline_n_asn67_od1": 2.65,
+      "min_dist_water_site": 0.19,
+      "water_sites_within_2p4A": 4
+     },
+     {
+      "seed": 6,
+      "mode": 4,
+      "score": -8.667,
+      "rmsd_crystal": 3.273,
+      "rmsd_rotated_ref": 0.422,
+      "cls": "rotated pose",
+      "zn_n": 2.23,
+      "thr199_og1_n": 2.57,
+      "aniline_n_asn67_od1": 3.03,
+      "min_dist_water_site": 0.49,
+      "water_sites_within_2p4A": 4
+     },
+     {
+      "seed": 6,
+      "mode": 5,
+      "score": -7.554,
+      "rmsd_crystal": 1.666,
+      "rmsd_rotated_ref": 2.959,
+      "cls": "between",
+      "zn_n": 2.27,
+      "thr199_og1_n": 2.97,
+      "aniline_n_asn67_od1": 6.19,
+      "min_dist_water_site": 1.65,
+      "water_sites_within_2p4A": 2
+     },
+     {
+      "seed": 6,
+      "mode": 6,
+      "score": -6.791,
+      "rmsd_crystal": 2.079,
+      "rmsd_rotated_ref": 3.534,
+      "cls": "other, beyond 2.0 A",
+      "zn_n": 2.19,
+      "thr199_og1_n": 2.83,
+      "aniline_n_asn67_od1": 7.29,
+      "min_dist_water_site": 0.74,
+      "water_sites_within_2p4A": 1
+     },
+     {
+      "seed": 7,
+      "mode": 1,
+      "score": -8.829,
+      "rmsd_crystal": 0.72,
+      "rmsd_rotated_ref": 3.948,
+      "cls": "near-native",
+      "zn_n": 2.22,
+      "thr199_og1_n": 2.57,
+      "aniline_n_asn67_od1": 7.85,
+      "min_dist_water_site": 3.17,
+      "water_sites_within_2p4A": 0
+     },
+     {
+      "seed": 7,
+      "mode": 2,
+      "score": -8.824,
+      "rmsd_crystal": 0.59,
+      "rmsd_rotated_ref": 3.886,
+      "cls": "near-native",
+      "zn_n": 2.23,
+      "thr199_og1_n": 2.57,
+      "aniline_n_asn67_od1": 7.91,
+      "min_dist_water_site": 3.17,
+      "water_sites_within_2p4A": 0
+     },
+     {
+      "seed": 7,
+      "mode": 3,
+      "score": -8.807,
+      "rmsd_crystal": 3.635,
+      "rmsd_rotated_ref": 0.075,
+      "cls": "rotated pose",
+      "zn_n": 2.23,
+      "thr199_og1_n": 2.58,
+      "aniline_n_asn67_od1": 2.58,
+      "min_dist_water_site": 0.16,
+      "water_sites_within_2p4A": 4
+     },
+     {
+      "seed": 7,
+      "mode": 4,
+      "score": -8.671,
+      "rmsd_crystal": 3.212,
+      "rmsd_rotated_ref": 0.474,
+      "cls": "rotated pose",
+      "zn_n": 2.23,
+      "thr199_og1_n": 2.57,
+      "aniline_n_asn67_od1": 2.98,
+      "min_dist_water_site": 0.5,
+      "water_sites_within_2p4A": 4
+     },
+     {
+      "seed": 7,
+      "mode": 5,
+      "score": -8.05,
+      "rmsd_crystal": 0.916,
+      "rmsd_rotated_ref": 2.878,
+      "cls": "near-native",
+      "zn_n": 2.15,
+      "thr199_og1_n": 2.61,
+      "aniline_n_asn67_od1": 6.45,
+      "min_dist_water_site": 1.96,
+      "water_sites_within_2p4A": 2
+     },
+     {
+      "seed": 7,
+      "mode": 6,
+      "score": -7.702,
+      "rmsd_crystal": 1.744,
+      "rmsd_rotated_ref": 2.2,
+      "cls": "between",
+      "zn_n": 2.08,
+      "thr199_og1_n": 2.66,
+      "aniline_n_asn67_od1": 5.08,
+      "min_dist_water_site": 0.87,
+      "water_sites_within_2p4A": 2
+     },
+     {
+      "seed": 8,
+      "mode": 1,
+      "score": -8.83,
+      "rmsd_crystal": 0.609,
+      "rmsd_rotated_ref": 3.865,
+      "cls": "near-native",
+      "zn_n": 2.2,
+      "thr199_og1_n": 2.54,
+      "aniline_n_asn67_od1": 7.85,
+      "min_dist_water_site": 3.18,
+      "water_sites_within_2p4A": 0
+     },
+     {
+      "seed": 8,
+      "mode": 2,
+      "score": -8.829,
+      "rmsd_crystal": 0.574,
+      "rmsd_rotated_ref": 3.916,
+      "cls": "near-native",
+      "zn_n": 2.24,
+      "thr199_og1_n": 2.58,
+      "aniline_n_asn67_od1": 7.89,
+      "min_dist_water_site": 3.17,
+      "water_sites_within_2p4A": 0
+     },
+     {
+      "seed": 8,
+      "mode": 3,
+      "score": -8.781,
+      "rmsd_crystal": 3.468,
+      "rmsd_rotated_ref": 0.174,
+      "cls": "rotated pose",
+      "zn_n": 2.24,
+      "thr199_og1_n": 2.58,
+      "aniline_n_asn67_od1": 2.7,
+      "min_dist_water_site": 0.36,
+      "water_sites_within_2p4A": 4
+     },
+     {
+      "seed": 8,
+      "mode": 4,
+      "score": -8.641,
+      "rmsd_crystal": 3.194,
+      "rmsd_rotated_ref": 0.491,
+      "cls": "rotated pose",
+      "zn_n": 2.23,
+      "thr199_og1_n": 2.57,
+      "aniline_n_asn67_od1": 3.02,
+      "min_dist_water_site": 0.46,
+      "water_sites_within_2p4A": 4
+     },
+     {
+      "seed": 8,
+      "mode": 5,
+      "score": -8.377,
+      "rmsd_crystal": 1.189,
+      "rmsd_rotated_ref": 2.762,
+      "cls": "between",
+      "zn_n": 2.17,
+      "thr199_og1_n": 2.51,
+      "aniline_n_asn67_od1": 5.78,
+      "min_dist_water_site": 1.47,
+      "water_sites_within_2p4A": 2
+     },
+     {
+      "seed": 8,
+      "mode": 6,
+      "score": -8.081,
+      "rmsd_crystal": 1.587,
+      "rmsd_rotated_ref": 3.5,
+      "cls": "between",
+      "zn_n": 2.27,
+      "thr199_og1_n": 2.97,
+      "aniline_n_asn67_od1": 6.96,
+      "min_dist_water_site": 2.79,
+      "water_sites_within_2p4A": 0
+     },
+     {
+      "seed": 8,
+      "mode": 7,
+      "score": -8.07,
+      "rmsd_crystal": 1.639,
+      "rmsd_rotated_ref": 2.133,
+      "cls": "between",
+      "zn_n": 2.16,
+      "thr199_og1_n": 2.5,
+      "aniline_n_asn67_od1": 4.93,
+      "min_dist_water_site": 1.35,
+      "water_sites_within_2p4A": 2
+     },
+     {
+      "seed": 8,
+      "mode": 8,
+      "score": -7.58,
+      "rmsd_crystal": 3.093,
+      "rmsd_rotated_ref": 4.993,
+      "cls": "other, beyond 2.0 A",
+      "zn_n": 2.05,
+      "thr199_og1_n": 2.49,
+      "aniline_n_asn67_od1": 10.42,
+      "min_dist_water_site": 1.3,
+      "water_sites_within_2p4A": 1
+     },
+     {
+      "seed": 8,
+      "mode": 9,
+      "score": -7.47,
+      "rmsd_crystal": 2.119,
+      "rmsd_rotated_ref": 3.65,
+      "cls": "other, beyond 2.0 A",
+      "zn_n": 2.01,
+      "thr199_og1_n": 2.82,
+      "aniline_n_asn67_od1": 7.55,
+      "min_dist_water_site": 0.9,
+      "water_sites_within_2p4A": 2
+     },
+     {
+      "seed": 9,
+      "mode": 1,
+      "score": -8.84,
+      "rmsd_crystal": 0.599,
+      "rmsd_rotated_ref": 3.82,
+      "cls": "near-native",
+      "zn_n": 2.2,
+      "thr199_og1_n": 2.54,
+      "aniline_n_asn67_od1": 7.65,
+      "min_dist_water_site": 3.15,
+      "water_sites_within_2p4A": 0
+     },
+     {
+      "seed": 9,
+      "mode": 2,
+      "score": -8.831,
+      "rmsd_crystal": 0.485,
+      "rmsd_rotated_ref": 3.853,
+      "cls": "near-native",
+      "zn_n": 2.23,
+      "thr199_og1_n": 2.57,
+      "aniline_n_asn67_od1": 7.94,
+      "min_dist_water_site": 3.17,
+      "water_sites_within_2p4A": 0
+     },
+     {
+      "seed": 9,
+      "mode": 3,
+      "score": -8.775,
+      "rmsd_crystal": 3.677,
+      "rmsd_rotated_ref": 0.126,
+      "cls": "rotated pose",
+      "zn_n": 2.22,
+      "thr199_og1_n": 2.59,
+      "aniline_n_asn67_od1": 2.54,
+      "min_dist_water_site": 0.12,
+      "water_sites_within_2p4A": 4
+     },
+     {
+      "seed": 9,
+      "mode": 4,
+      "score": -8.628,
+      "rmsd_crystal": 3.251,
+      "rmsd_rotated_ref": 0.479,
+      "cls": "rotated pose",
+      "zn_n": 2.24,
+      "thr199_og1_n": 2.58,
+      "aniline_n_asn67_od1": 3.15,
+      "min_dist_water_site": 0.46,
+      "water_sites_within_2p4A": 4
+     },
+     {
+      "seed": 9,
+      "mode": 5,
+      "score": -8.215,
+      "rmsd_crystal": 1.236,
+      "rmsd_rotated_ref": 3.263,
+      "cls": "between",
+      "zn_n": 2.17,
+      "thr199_og1_n": 2.54,
+      "aniline_n_asn67_od1": 7.63,
+      "min_dist_water_site": 2.21,
+      "water_sites_within_2p4A": 1
+     },
+     {
+      "seed": 9,
+      "mode": 6,
+      "score": -7.582,
+      "rmsd_crystal": 3.087,
+      "rmsd_rotated_ref": 5.01,
+      "cls": "other, beyond 2.0 A",
+      "zn_n": 2.0,
+      "thr199_og1_n": 2.59,
+      "aniline_n_asn67_od1": 10.44,
+      "min_dist_water_site": 1.23,
+      "water_sites_within_2p4A": 1
+     },
+     {
+      "seed": 9,
+      "mode": 7,
+      "score": -7.523,
+      "rmsd_crystal": 2.086,
+      "rmsd_rotated_ref": 3.653,
+      "cls": "other, beyond 2.0 A",
+      "zn_n": 2.0,
+      "thr199_og1_n": 2.82,
+      "aniline_n_asn67_od1": 7.56,
+      "min_dist_water_site": 0.91,
+      "water_sites_within_2p4A": 1
+     },
+     {
+      "seed": 10,
+      "mode": 1,
+      "score": -8.839,
+      "rmsd_crystal": 0.655,
+      "rmsd_rotated_ref": 3.875,
+      "cls": "near-native",
+      "zn_n": 2.19,
+      "thr199_og1_n": 2.53,
+      "aniline_n_asn67_od1": 7.74,
+      "min_dist_water_site": 3.18,
+      "water_sites_within_2p4A": 0
+     },
+     {
+      "seed": 10,
+      "mode": 2,
+      "score": -8.832,
+      "rmsd_crystal": 0.692,
+      "rmsd_rotated_ref": 3.93,
+      "cls": "near-native",
+      "zn_n": 2.21,
+      "thr199_og1_n": 2.55,
+      "aniline_n_asn67_od1": 7.97,
+      "min_dist_water_site": 3.11,
+      "water_sites_within_2p4A": 0
+     },
+     {
+      "seed": 10,
+      "mode": 3,
+      "score": -8.773,
+      "rmsd_crystal": 3.92,
+      "rmsd_rotated_ref": 0.517,
+      "cls": "rotated pose",
+      "zn_n": 2.23,
+      "thr199_og1_n": 2.58,
+      "aniline_n_asn67_od1": 3.12,
+      "min_dist_water_site": 0.67,
+      "water_sites_within_2p4A": 4
+     },
+     {
+      "seed": 10,
+      "mode": 4,
+      "score": -8.296,
+      "rmsd_crystal": 1.176,
+      "rmsd_rotated_ref": 2.822,
+      "cls": "between",
+      "zn_n": 2.19,
+      "thr199_og1_n": 2.53,
+      "aniline_n_asn67_od1": 6.0,
+      "min_dist_water_site": 1.4,
+      "water_sites_within_2p4A": 2
+     },
+     {
+      "seed": 10,
+      "mode": 5,
+      "score": -8.01,
+      "rmsd_crystal": 1.854,
+      "rmsd_rotated_ref": 3.821,
+      "cls": "between",
+      "zn_n": 2.28,
+      "thr199_og1_n": 2.97,
+      "aniline_n_asn67_od1": 7.27,
+      "min_dist_water_site": 2.79,
+      "water_sites_within_2p4A": 0
+     },
+     {
+      "seed": 10,
+      "mode": 6,
+      "score": -7.467,
+      "rmsd_crystal": 3.098,
+      "rmsd_rotated_ref": 4.894,
+      "cls": "other, beyond 2.0 A",
+      "zn_n": 1.88,
+      "thr199_og1_n": 2.57,
+      "aniline_n_asn67_od1": 10.32,
+      "min_dist_water_site": 1.13,
+      "water_sites_within_2p4A": 1
+     },
+     {
+      "seed": 10,
+      "mode": 7,
+      "score": -6.115,
+      "rmsd_crystal": 2.914,
+      "rmsd_rotated_ref": 2.153,
+      "cls": "other, beyond 2.0 A",
+      "zn_n": 1.86,
+      "thr199_og1_n": 2.96,
+      "aniline_n_asn67_od1": 4.59,
+      "min_dist_water_site": 0.55,
+      "water_sites_within_2p4A": 2
+     },
+     {
+      "seed": 11,
+      "mode": 1,
+      "score": -8.837,
+      "rmsd_crystal": 0.61,
+      "rmsd_rotated_ref": 3.9,
+      "cls": "near-native",
+      "zn_n": 2.2,
+      "thr199_og1_n": 2.53,
+      "aniline_n_asn67_od1": 7.95,
+      "min_dist_water_site": 3.18,
+      "water_sites_within_2p4A": 0
+     },
+     {
+      "seed": 11,
+      "mode": 2,
+      "score": -8.821,
+      "rmsd_crystal": 0.47,
+      "rmsd_rotated_ref": 3.859,
+      "cls": "near-native",
+      "zn_n": 2.23,
+      "thr199_og1_n": 2.58,
+      "aniline_n_asn67_od1": 7.84,
+      "min_dist_water_site": 3.17,
+      "water_sites_within_2p4A": 0
+     },
+     {
+      "seed": 11,
+      "mode": 3,
+      "score": -8.796,
+      "rmsd_crystal": 3.479,
+      "rmsd_rotated_ref": 0.12,
+      "cls": "rotated pose",
+      "zn_n": 2.23,
+      "thr199_og1_n": 2.58,
+      "aniline_n_asn67_od1": 2.67,
+      "min_dist_water_site": 0.18,
+      "water_sites_within_2p4A": 4
+     },
+     {
+      "seed": 11,
+      "mode": 4,
+      "score": -8.565,
+      "rmsd_crystal": 3.148,
+      "rmsd_rotated_ref": 0.607,
+      "cls": "rotated pose",
+      "zn_n": 2.2,
+      "thr199_og1_n": 2.61,
+      "aniline_n_asn67_od1": 3.17,
+      "min_dist_water_site": 0.52,
+      "water_sites_within_2p4A": 4
+     },
+     {
+      "seed": 11,
+      "mode": 5,
+      "score": -8.093,
+      "rmsd_crystal": 1.767,
+      "rmsd_rotated_ref": 2.001,
+      "cls": "between",
+      "zn_n": 2.18,
+      "thr199_og1_n": 2.51,
+      "aniline_n_asn67_od1": 4.87,
+      "min_dist_water_site": 1.21,
+      "water_sites_within_2p4A": 2
+     },
+     {
+      "seed": 11,
+      "mode": 6,
+      "score": -8.015,
+      "rmsd_crystal": 1.86,
+      "rmsd_rotated_ref": 3.728,
+      "cls": "between",
+      "zn_n": 1.97,
+      "thr199_og1_n": 2.85,
+      "aniline_n_asn67_od1": 7.3,
+      "min_dist_water_site": 2.55,
+      "water_sites_within_2p4A": 0
+     },
+     {
+      "seed": 12,
+      "mode": 1,
+      "score": -8.831,
+      "rmsd_crystal": 0.667,
+      "rmsd_rotated_ref": 3.882,
+      "cls": "near-native",
+      "zn_n": 2.2,
+      "thr199_og1_n": 2.53,
+      "aniline_n_asn67_od1": 7.74,
+      "min_dist_water_site": 3.18,
+      "water_sites_within_2p4A": 0
+     },
+     {
+      "seed": 12,
+      "mode": 2,
+      "score": -8.829,
+      "rmsd_crystal": 0.605,
+      "rmsd_rotated_ref": 3.937,
+      "cls": "near-native",
+      "zn_n": 2.22,
+      "thr199_og1_n": 2.56,
+      "aniline_n_asn67_od1": 8.03,
+      "min_dist_water_site": 3.18,
+      "water_sites_within_2p4A": 0
+     },
+     {
+      "seed": 12,
+      "mode": 3,
+      "score": -8.778,
+      "rmsd_crystal": 3.633,
+      "rmsd_rotated_ref": 0.101,
+      "cls": "rotated pose",
+      "zn_n": 2.24,
+      "thr199_og1_n": 2.58,
+      "aniline_n_asn67_od1": 2.66,
+      "min_dist_water_site": 0.19,
+      "water_sites_within_2p4A": 4
+     },
+     {
+      "seed": 12,
+      "mode": 4,
+      "score": -8.641,
+      "rmsd_crystal": 3.285,
+      "rmsd_rotated_ref": 0.448,
+      "cls": "rotated pose",
+      "zn_n": 2.23,
+      "thr199_og1_n": 2.57,
+      "aniline_n_asn67_od1": 3.13,
+      "min_dist_water_site": 0.49,
+      "water_sites_within_2p4A": 4
+     },
+     {
+      "seed": 12,
+      "mode": 5,
+      "score": -8.11,
+      "rmsd_crystal": 1.057,
+      "rmsd_rotated_ref": 2.644,
+      "cls": "between",
+      "zn_n": 2.21,
+      "thr199_og1_n": 2.54,
+      "aniline_n_asn67_od1": 5.9,
+      "min_dist_water_site": 1.97,
+      "water_sites_within_2p4A": 2
+     },
+     {
+      "seed": 12,
+      "mode": 6,
+      "score": -8.11,
+      "rmsd_crystal": 1.745,
+      "rmsd_rotated_ref": 2.02,
+      "cls": "between",
+      "zn_n": 2.11,
+      "thr199_og1_n": 2.44,
+      "aniline_n_asn67_od1": 4.91,
+      "min_dist_water_site": 1.23,
+      "water_sites_within_2p4A": 2
+     },
+     {
+      "seed": 12,
+      "mode": 7,
+      "score": -8.021,
+      "rmsd_crystal": 1.782,
+      "rmsd_rotated_ref": 3.78,
+      "cls": "between",
+      "zn_n": 2.3,
+      "thr199_og1_n": 3.0,
+      "aniline_n_asn67_od1": 7.21,
+      "min_dist_water_site": 2.79,
+      "water_sites_within_2p4A": 0
+     },
+     {
+      "seed": 12,
+      "mode": 8,
+      "score": -7.439,
+      "rmsd_crystal": 2.149,
+      "rmsd_rotated_ref": 4.05,
+      "cls": "other, beyond 2.0 A",
+      "zn_n": 1.93,
+      "thr199_og1_n": 2.73,
+      "aniline_n_asn67_od1": 8.48,
+      "min_dist_water_site": 0.86,
+      "water_sites_within_2p4A": 1
+     },
+     {
+      "seed": 13,
+      "mode": 1,
+      "score": -8.838,
+      "rmsd_crystal": 0.664,
+      "rmsd_rotated_ref": 3.896,
+      "cls": "near-native",
+      "zn_n": 2.19,
+      "thr199_og1_n": 2.52,
+      "aniline_n_asn67_od1": 7.81,
+      "min_dist_water_site": 3.14,
+      "water_sites_within_2p4A": 0
+     },
+     {
+      "seed": 13,
+      "mode": 2,
+      "score": -8.826,
+      "rmsd_crystal": 0.677,
+      "rmsd_rotated_ref": 3.903,
+      "cls": "near-native",
+      "zn_n": 2.2,
+      "thr199_og1_n": 2.54,
+      "aniline_n_asn67_od1": 7.92,
+      "min_dist_water_site": 3.08,
+      "water_sites_within_2p4A": 0
+     },
+     {
+      "seed": 13,
+      "mode": 3,
+      "score": -8.813,
+      "rmsd_crystal": 3.652,
+      "rmsd_rotated_ref": 0.109,
+      "cls": "rotated pose",
+      "zn_n": 2.23,
+      "thr199_og1_n": 2.58,
+      "aniline_n_asn67_od1": 2.63,
+      "min_dist_water_site": 0.11,
+      "water_sites_within_2p4A": 4
+     },
+     {
+      "seed": 13,
+      "mode": 4,
+      "score": -8.656,
+      "rmsd_crystal": 3.195,
+      "rmsd_rotated_ref": 0.502,
+      "cls": "rotated pose",
+      "zn_n": 2.23,
+      "thr199_og1_n": 2.59,
+      "aniline_n_asn67_od1": 3.1,
+      "min_dist_water_site": 0.39,
+      "water_sites_within_2p4A": 4
+     },
+     {
+      "seed": 13,
+      "mode": 5,
+      "score": -8.084,
+      "rmsd_crystal": 1.556,
+      "rmsd_rotated_ref": 3.07,
+      "cls": "between",
+      "zn_n": 2.18,
+      "thr199_og1_n": 2.56,
+      "aniline_n_asn67_od1": 7.32,
+      "min_dist_water_site": 1.91,
+      "water_sites_within_2p4A": 2
+     },
+     {
+      "seed": 13,
+      "mode": 6,
+      "score": -7.972,
+      "rmsd_crystal": 1.806,
+      "rmsd_rotated_ref": 3.734,
+      "cls": "between",
+      "zn_n": 2.16,
+      "thr199_og1_n": 2.86,
+      "aniline_n_asn67_od1": 7.19,
+      "min_dist_water_site": 2.73,
+      "water_sites_within_2p4A": 0
+     },
+     {
+      "seed": 13,
+      "mode": 7,
+      "score": -7.839,
+      "rmsd_crystal": 2.408,
+      "rmsd_rotated_ref": 1.461,
+      "cls": "rotated pose",
+      "zn_n": 2.22,
+      "thr199_og1_n": 2.56,
+      "aniline_n_asn67_od1": 4.25,
+      "min_dist_water_site": 0.96,
+      "water_sites_within_2p4A": 2
+     },
+     {
+      "seed": 13,
+      "mode": 8,
+      "score": -6.902,
+      "rmsd_crystal": 3.064,
+      "rmsd_rotated_ref": 4.961,
+      "cls": "other, beyond 2.0 A",
+      "zn_n": 2.08,
+      "thr199_og1_n": 2.4,
+      "aniline_n_asn67_od1": 10.37,
+      "min_dist_water_site": 1.31,
+      "water_sites_within_2p4A": 1
+     },
+     {
+      "seed": 14,
+      "mode": 1,
+      "score": -8.84,
+      "rmsd_crystal": 0.63,
+      "rmsd_rotated_ref": 3.855,
+      "cls": "near-native",
+      "zn_n": 2.23,
+      "thr199_og1_n": 2.57,
+      "aniline_n_asn67_od1": 7.69,
+      "min_dist_water_site": 3.16,
+      "water_sites_within_2p4A": 0
+     },
+     {
+      "seed": 14,
+      "mode": 2,
+      "score": -8.831,
+      "rmsd_crystal": 0.478,
+      "rmsd_rotated_ref": 3.831,
+      "cls": "near-native",
+      "zn_n": 2.2,
+      "thr199_og1_n": 2.54,
+      "aniline_n_asn67_od1": 7.91,
+      "min_dist_water_site": 3.17,
+      "water_sites_within_2p4A": 0
+     },
+     {
+      "seed": 14,
+      "mode": 3,
+      "score": -8.823,
+      "rmsd_crystal": 3.573,
+      "rmsd_rotated_ref": 0.0,
+      "cls": "rotated pose",
+      "zn_n": 2.24,
+      "thr199_og1_n": 2.58,
+      "aniline_n_asn67_od1": 2.57,
+      "min_dist_water_site": 0.19,
+      "water_sites_within_2p4A": 4
+     },
+     {
+      "seed": 14,
+      "mode": 4,
+      "score": -8.598,
+      "rmsd_crystal": 3.213,
+      "rmsd_rotated_ref": 0.476,
+      "cls": "rotated pose",
+      "zn_n": 2.22,
+      "thr199_og1_n": 2.57,
+      "aniline_n_asn67_od1": 2.97,
+      "min_dist_water_site": 0.49,
+      "water_sites_within_2p4A": 4
+     },
+     {
+      "seed": 14,
+      "mode": 5,
+      "score": -8.147,
+      "rmsd_crystal": 1.278,
+      "rmsd_rotated_ref": 3.057,
+      "cls": "between",
+      "zn_n": 2.12,
+      "thr199_og1_n": 2.46,
+      "aniline_n_asn67_od1": 7.04,
+      "min_dist_water_site": 1.72,
+      "water_sites_within_2p4A": 1
+     },
+     {
+      "seed": 14,
+      "mode": 6,
+      "score": -8.017,
+      "rmsd_crystal": 1.598,
+      "rmsd_rotated_ref": 3.695,
+      "cls": "between",
+      "zn_n": 2.29,
+      "thr199_og1_n": 2.98,
+      "aniline_n_asn67_od1": 7.14,
+      "min_dist_water_site": 2.79,
+      "water_sites_within_2p4A": 0
+     },
+     {
+      "seed": 15,
+      "mode": 1,
+      "score": -8.832,
+      "rmsd_crystal": 0.616,
+      "rmsd_rotated_ref": 3.898,
+      "cls": "near-native",
+      "zn_n": 2.19,
+      "thr199_og1_n": 2.54,
+      "aniline_n_asn67_od1": 7.82,
+      "min_dist_water_site": 3.19,
+      "water_sites_within_2p4A": 0
+     },
+     {
+      "seed": 15,
+      "mode": 2,
+      "score": -8.826,
+      "rmsd_crystal": 0.664,
+      "rmsd_rotated_ref": 3.937,
+      "cls": "near-native",
+      "zn_n": 2.21,
+      "thr199_og1_n": 2.54,
+      "aniline_n_asn67_od1": 8.02,
+      "min_dist_water_site": 3.13,
+      "water_sites_within_2p4A": 0
+     },
+     {
+      "seed": 15,
+      "mode": 3,
+      "score": -8.762,
+      "rmsd_crystal": 3.626,
+      "rmsd_rotated_ref": 0.115,
+      "cls": "rotated pose",
+      "zn_n": 2.23,
+      "thr199_og1_n": 2.58,
+      "aniline_n_asn67_od1": 2.69,
+      "min_dist_water_site": 0.21,
+      "water_sites_within_2p4A": 4
+     },
+     {
+      "seed": 15,
+      "mode": 4,
+      "score": -8.59,
+      "rmsd_crystal": 3.213,
+      "rmsd_rotated_ref": 0.494,
+      "cls": "rotated pose",
+      "zn_n": 2.24,
+      "thr199_og1_n": 2.58,
+      "aniline_n_asn67_od1": 3.09,
+      "min_dist_water_site": 0.54,
+      "water_sites_within_2p4A": 4
+     },
+     {
+      "seed": 15,
+      "mode": 5,
+      "score": -8.11,
+      "rmsd_crystal": 1.43,
+      "rmsd_rotated_ref": 3.121,
+      "cls": "between",
+      "zn_n": 1.91,
+      "thr199_og1_n": 2.5,
+      "aniline_n_asn67_od1": 7.34,
+      "min_dist_water_site": 1.88,
+      "water_sites_within_2p4A": 2
+     },
+     {
+      "seed": 15,
+      "mode": 6,
+      "score": -7.536,
+      "rmsd_crystal": 3.064,
+      "rmsd_rotated_ref": 4.923,
+      "cls": "other, beyond 2.0 A",
+      "zn_n": 1.92,
+      "thr199_og1_n": 2.52,
+      "aniline_n_asn67_od1": 10.35,
+      "min_dist_water_site": 1.15,
+      "water_sites_within_2p4A": 1
+     },
+     {
+      "seed": 16,
+      "mode": 1,
+      "score": -8.838,
+      "rmsd_crystal": 0.569,
+      "rmsd_rotated_ref": 3.837,
+      "cls": "near-native",
+      "zn_n": 2.23,
+      "thr199_og1_n": 2.58,
+      "aniline_n_asn67_od1": 7.69,
+      "min_dist_water_site": 3.17,
+      "water_sites_within_2p4A": 0
+     },
+     {
+      "seed": 16,
+      "mode": 2,
+      "score": -8.819,
+      "rmsd_crystal": 0.489,
+      "rmsd_rotated_ref": 3.894,
+      "cls": "near-native",
+      "zn_n": 2.21,
+      "thr199_og1_n": 2.55,
+      "aniline_n_asn67_od1": 8.04,
+      "min_dist_water_site": 3.18,
+      "water_sites_within_2p4A": 0
+     },
+     {
+      "seed": 16,
+      "mode": 3,
+      "score": -8.802,
+      "rmsd_crystal": 3.56,
+      "rmsd_rotated_ref": 0.042,
+      "cls": "rotated pose",
+      "zn_n": 2.23,
+      "thr199_og1_n": 2.58,
+      "aniline_n_asn67_od1": 2.62,
+      "min_dist_water_site": 0.19,
+      "water_sites_within_2p4A": 4
+     },
+     {
+      "seed": 16,
+      "mode": 4,
+      "score": -8.644,
+      "rmsd_crystal": 3.19,
+      "rmsd_rotated_ref": 0.504,
+      "cls": "rotated pose",
+      "zn_n": 2.23,
+      "thr199_og1_n": 2.57,
+      "aniline_n_asn67_od1": 3.09,
+      "min_dist_water_site": 0.39,
+      "water_sites_within_2p4A": 4
+     },
+     {
+      "seed": 16,
+      "mode": 5,
+      "score": -8.078,
+      "rmsd_crystal": 1.208,
+      "rmsd_rotated_ref": 3.107,
+      "cls": "between",
+      "zn_n": 2.17,
+      "thr199_og1_n": 2.51,
+      "aniline_n_asn67_od1": 7.12,
+      "min_dist_water_site": 1.85,
+      "water_sites_within_2p4A": 1
+     },
+     {
+      "seed": 16,
+      "mode": 6,
+      "score": -7.973,
+      "rmsd_crystal": 1.76,
+      "rmsd_rotated_ref": 3.722,
+      "cls": "between",
+      "zn_n": 1.85,
+      "thr199_og1_n": 2.98,
+      "aniline_n_asn67_od1": 7.26,
+      "min_dist_water_site": 2.59,
+      "water_sites_within_2p4A": 0
+     },
+     {
+      "seed": 17,
+      "mode": 1,
+      "score": -8.839,
+      "rmsd_crystal": 0.612,
+      "rmsd_rotated_ref": 3.907,
+      "cls": "near-native",
+      "zn_n": 2.23,
+      "thr199_og1_n": 2.57,
+      "aniline_n_asn67_od1": 7.95,
+      "min_dist_water_site": 3.17,
+      "water_sites_within_2p4A": 0
+     },
+     {
+      "seed": 17,
+      "mode": 2,
+      "score": -8.836,
+      "rmsd_crystal": 0.664,
+      "rmsd_rotated_ref": 3.889,
+      "cls": "near-native",
+      "zn_n": 2.2,
+      "thr199_og1_n": 2.54,
+      "aniline_n_asn67_od1": 7.77,
+      "min_dist_water_site": 3.17,
+      "water_sites_within_2p4A": 0
+     },
+     {
+      "seed": 17,
+      "mode": 3,
+      "score": -8.804,
+      "rmsd_crystal": 3.593,
+      "rmsd_rotated_ref": 0.041,
+      "cls": "rotated pose",
+      "zn_n": 2.23,
+      "thr199_og1_n": 2.57,
+      "aniline_n_asn67_od1": 2.61,
+      "min_dist_water_site": 0.25,
+      "water_sites_within_2p4A": 4
+     },
+     {
+      "seed": 17,
+      "mode": 4,
+      "score": -8.614,
+      "rmsd_crystal": 3.258,
+      "rmsd_rotated_ref": 0.448,
+      "cls": "rotated pose",
+      "zn_n": 2.22,
+      "thr199_og1_n": 2.56,
+      "aniline_n_asn67_od1": 3.1,
+      "min_dist_water_site": 0.48,
+      "water_sites_within_2p4A": 4
+     },
+     {
+      "seed": 17,
+      "mode": 5,
+      "score": -7.898,
+      "rmsd_crystal": 1.225,
+      "rmsd_rotated_ref": 3.681,
+      "cls": "between",
+      "zn_n": 2.22,
+      "thr199_og1_n": 2.57,
+      "aniline_n_asn67_od1": 8.56,
+      "min_dist_water_site": 3.08,
+      "water_sites_within_2p4A": 0
+     },
+     {
+      "seed": 17,
+      "mode": 6,
+      "score": -6.956,
+      "rmsd_crystal": 2.147,
+      "rmsd_rotated_ref": 3.146,
+      "cls": "other, beyond 2.0 A",
+      "zn_n": 1.91,
+      "thr199_og1_n": 2.9,
+      "aniline_n_asn67_od1": 6.73,
+      "min_dist_water_site": 1.1,
+      "water_sites_within_2p4A": 2
+     },
+     {
+      "seed": 18,
+      "mode": 1,
+      "score": -8.835,
+      "rmsd_crystal": 0.628,
+      "rmsd_rotated_ref": 3.822,
+      "cls": "near-native",
+      "zn_n": 2.19,
+      "thr199_og1_n": 2.53,
+      "aniline_n_asn67_od1": 7.64,
+      "min_dist_water_site": 3.12,
+      "water_sites_within_2p4A": 0
+     },
+     {
+      "seed": 18,
+      "mode": 2,
+      "score": -8.833,
+      "rmsd_crystal": 0.636,
+      "rmsd_rotated_ref": 3.914,
+      "cls": "near-native",
+      "zn_n": 2.2,
+      "thr199_og1_n": 2.53,
+      "aniline_n_asn67_od1": 7.96,
+      "min_dist_water_site": 3.18,
+      "water_sites_within_2p4A": 0
+     },
+     {
+      "seed": 18,
+      "mode": 3,
+      "score": -8.798,
+      "rmsd_crystal": 3.448,
+      "rmsd_rotated_ref": 0.158,
+      "cls": "rotated pose",
+      "zn_n": 2.23,
+      "thr199_og1_n": 2.58,
+      "aniline_n_asn67_od1": 2.68,
+      "min_dist_water_site": 0.18,
+      "water_sites_within_2p4A": 4
+     },
+     {
+      "seed": 18,
+      "mode": 4,
+      "score": -8.674,
+      "rmsd_crystal": 3.197,
+      "rmsd_rotated_ref": 0.505,
+      "cls": "rotated pose",
+      "zn_n": 2.23,
+      "thr199_og1_n": 2.58,
+      "aniline_n_asn67_od1": 3.05,
+      "min_dist_water_site": 0.49,
+      "water_sites_within_2p4A": 4
+     },
+     {
+      "seed": 18,
+      "mode": 5,
+      "score": -8.088,
+      "rmsd_crystal": 1.858,
+      "rmsd_rotated_ref": 3.839,
+      "cls": "between",
+      "zn_n": 2.19,
+      "thr199_og1_n": 2.89,
+      "aniline_n_asn67_od1": 7.45,
+      "min_dist_water_site": 2.8,
+      "water_sites_within_2p4A": 0
+     },
+     {
+      "seed": 18,
+      "mode": 6,
+      "score": -7.278,
+      "rmsd_crystal": 2.027,
+      "rmsd_rotated_ref": 2.168,
+      "cls": "other, beyond 2.0 A",
+      "zn_n": 2.19,
+      "thr199_og1_n": 2.85,
+      "aniline_n_asn67_od1": 4.88,
+      "min_dist_water_site": 0.98,
+      "water_sites_within_2p4A": 2
+     },
+     {
+      "seed": 19,
+      "mode": 1,
+      "score": -8.84,
+      "rmsd_crystal": 0.595,
+      "rmsd_rotated_ref": 3.818,
+      "cls": "near-native",
+      "zn_n": 2.19,
+      "thr199_og1_n": 2.52,
+      "aniline_n_asn67_od1": 7.66,
+      "min_dist_water_site": 3.15,
+      "water_sites_within_2p4A": 0
+     },
+     {
+      "seed": 19,
+      "mode": 2,
+      "score": -8.832,
+      "rmsd_crystal": 0.602,
+      "rmsd_rotated_ref": 3.884,
+      "cls": "near-native",
+      "zn_n": 2.2,
+      "thr199_og1_n": 2.54,
+      "aniline_n_asn67_od1": 7.91,
+      "min_dist_water_site": 3.18,
+      "water_sites_within_2p4A": 0
+     },
+     {
+      "seed": 19,
+      "mode": 3,
+      "score": -8.783,
+      "rmsd_crystal": 3.503,
+      "rmsd_rotated_ref": 0.089,
+      "cls": "rotated pose",
+      "zn_n": 2.24,
+      "thr199_og1_n": 2.58,
+      "aniline_n_asn67_od1": 2.59,
+      "min_dist_water_site": 0.17,
+      "water_sites_within_2p4A": 4
+     },
+     {
+      "seed": 19,
+      "mode": 4,
+      "score": -8.65,
+      "rmsd_crystal": 3.289,
+      "rmsd_rotated_ref": 0.405,
+      "cls": "rotated pose",
+      "zn_n": 2.2,
+      "thr199_og1_n": 2.54,
+      "aniline_n_asn67_od1": 3.03,
+      "min_dist_water_site": 0.52,
+      "water_sites_within_2p4A": 4
+     },
+     {
+      "seed": 19,
+      "mode": 5,
+      "score": -8.149,
+      "rmsd_crystal": 1.813,
+      "rmsd_rotated_ref": 3.687,
+      "cls": "between",
+      "zn_n": 1.89,
+      "thr199_og1_n": 2.92,
+      "aniline_n_asn67_od1": 7.24,
+      "min_dist_water_site": 2.48,
+      "water_sites_within_2p4A": 0
+     },
+     {
+      "seed": 19,
+      "mode": 6,
+      "score": -8.133,
+      "rmsd_crystal": 1.627,
+      "rmsd_rotated_ref": 2.846,
+      "cls": "between",
+      "zn_n": 2.06,
+      "thr199_og1_n": 2.46,
+      "aniline_n_asn67_od1": 6.97,
+      "min_dist_water_site": 1.72,
+      "water_sites_within_2p4A": 2
+     },
+     {
+      "seed": 19,
+      "mode": 7,
+      "score": -7.802,
+      "rmsd_crystal": 2.238,
+      "rmsd_rotated_ref": 2.046,
+      "cls": "other, beyond 2.0 A",
+      "zn_n": 2.2,
+      "thr199_og1_n": 2.56,
+      "aniline_n_asn67_od1": 5.54,
+      "min_dist_water_site": 1.27,
+      "water_sites_within_2p4A": 2
+     },
+     {
+      "seed": 19,
+      "mode": 8,
+      "score": -7.635,
+      "rmsd_crystal": 3.097,
+      "rmsd_rotated_ref": 4.989,
+      "cls": "other, beyond 2.0 A",
+      "zn_n": 1.95,
+      "thr199_og1_n": 2.57,
+      "aniline_n_asn67_od1": 10.42,
+      "min_dist_water_site": 1.18,
+      "water_sites_within_2p4A": 1
+     },
+     {
+      "seed": 20,
+      "mode": 1,
+      "score": -8.835,
+      "rmsd_crystal": 0.564,
+      "rmsd_rotated_ref": 3.813,
+      "cls": "near-native",
+      "zn_n": 2.21,
+      "thr199_og1_n": 2.55,
+      "aniline_n_asn67_od1": 7.65,
+      "min_dist_water_site": 3.18,
+      "water_sites_within_2p4A": 0
+     },
+     {
+      "seed": 20,
+      "mode": 2,
+      "score": -8.833,
+      "rmsd_crystal": 0.61,
+      "rmsd_rotated_ref": 3.874,
+      "cls": "near-native",
+      "zn_n": 2.18,
+      "thr199_og1_n": 2.52,
+      "aniline_n_asn67_od1": 7.9,
+      "min_dist_water_site": 3.17,
+      "water_sites_within_2p4A": 0
+     },
+     {
+      "seed": 20,
+      "mode": 3,
+      "score": -8.776,
+      "rmsd_crystal": 3.31,
+      "rmsd_rotated_ref": 0.332,
+      "cls": "rotated pose",
+      "zn_n": 2.24,
+      "thr199_og1_n": 2.58,
+      "aniline_n_asn67_od1": 2.78,
+      "min_dist_water_site": 0.39,
+      "water_sites_within_2p4A": 4
+     },
+     {
+      "seed": 20,
+      "mode": 4,
+      "score": -8.548,
+      "rmsd_crystal": 3.185,
+      "rmsd_rotated_ref": 0.512,
+      "cls": "rotated pose",
+      "zn_n": 2.24,
+      "thr199_og1_n": 2.58,
+      "aniline_n_asn67_od1": 3.07,
+      "min_dist_water_site": 0.44,
+      "water_sites_within_2p4A": 4
+     },
+     {
+      "seed": 20,
+      "mode": 5,
+      "score": -8.337,
+      "rmsd_crystal": 1.185,
+      "rmsd_rotated_ref": 2.746,
+      "cls": "between",
+      "zn_n": 2.18,
+      "thr199_og1_n": 2.52,
+      "aniline_n_asn67_od1": 5.89,
+      "min_dist_water_site": 1.43,
+      "water_sites_within_2p4A": 2
+     },
+     {
+      "seed": 20,
+      "mode": 6,
+      "score": -8.131,
+      "rmsd_crystal": 1.65,
+      "rmsd_rotated_ref": 2.988,
+      "cls": "between",
+      "zn_n": 2.15,
+      "thr199_og1_n": 2.49,
+      "aniline_n_asn67_od1": 7.25,
+      "min_dist_water_site": 1.83,
+      "water_sites_within_2p4A": 2
+     },
+     {
+      "seed": 20,
+      "mode": 7,
+      "score": -7.833,
+      "rmsd_crystal": 1.772,
+      "rmsd_rotated_ref": 3.357,
+      "cls": "between",
+      "zn_n": 2.11,
+      "thr199_og1_n": 2.81,
+      "aniline_n_asn67_od1": 8.06,
+      "min_dist_water_site": 2.23,
+      "water_sites_within_2p4A": 2
+     },
+     {
+      "seed": 20,
+      "mode": 8,
+      "score": -7.566,
+      "rmsd_crystal": 3.12,
+      "rmsd_rotated_ref": 5.088,
+      "cls": "other, beyond 2.0 A",
+      "zn_n": 2.13,
+      "thr199_og1_n": 2.47,
+      "aniline_n_asn67_od1": 10.56,
+      "min_dist_water_site": 1.39,
+      "water_sites_within_2p4A": 1
+     }
+    ]
+   },
+   "water": {
+    "run": "T3_6RL9_wat4rev/runs/sfa_neutral__ad4zn__prod",
+    "n_seeds": 20,
+    "settings": {
+     "scoring": "ad4zn",
+     "exhaustiveness": 32,
+     "cpu": 2,
+     "box": {
+      "center": [
+       15.937,
+       2.942,
+       15.735
+      ],
+      "size": [
+       20.0,
+       20.0,
+       20.0
+      ]
+     },
+     "num_modes": null,
+     "energy_range": null,
+     "geometry": "dft",
+     "vina_version": null,
+     "maps": "T3_6RL9_wat4rev/ad4zn/receptor_tz"
+    },
+    "reference": {
+     "kind": "redock",
+     "reference": "ref_SAN.sdf"
+    },
+    "score": {
+     "mean": -9.242,
+     "sd": 0.003,
+     "per_seed": [
+      -9.242,
+      -9.243,
+      -9.24,
+      -9.24,
+      -9.245,
+      -9.244,
+      -9.246,
+      -9.244,
+      -9.239,
+      -9.239,
+      -9.241,
+      -9.243,
+      -9.249,
+      -9.241,
+      -9.241,
+      -9.24,
+      -9.239,
+      -9.242,
+      -9.24,
+      -9.24
+     ]
+    },
+    "wall_s_total": 4230.6,
+    "rmsd": {
+     "mean": 0.51,
+     "sd": 0.034,
+     "best_of_seeds": 0.451,
+     "f_le_1A": 1.0,
+     "f_le_2A": 1.0,
+     "per_seed": [
+      0.477,
+      0.513,
+      0.559,
+      0.536,
+      0.563,
+      0.533,
+      0.487,
+      0.509,
+      0.477,
+      0.483,
+      0.546,
+      0.503,
+      0.517,
+      0.533,
+      0.488,
+      0.572,
+      0.482,
+      0.503,
+      0.451,
+      0.476
+     ],
+     "best_of_modes_per_seed": [
+      0.477,
+      0.489,
+      0.487,
+      0.48,
+      0.525,
+      0.451,
+      0.487,
+      0.509,
+      0.418,
+      0.483,
+      0.372,
+      0.503,
+      0.517,
+      0.533,
+      0.468,
+      0.488,
+      0.482,
+      0.503,
+      0.437,
+      0.438
+     ],
+     "rank_of_first_pose_within_1A": {
+      "fraction_of_seeds_with_any": 1.0,
+      "median_rank": 1.0,
+      "worst_rank": 1,
+      "best_rank": 1
+     }
+    },
+    "orientation": {
+     "n_seeds": 20,
+     "top_near_native": 20,
+     "top_ring_rotated": 0,
+     "top_between": 0,
+     "seeds_with_near_native_mode": 20,
+     "seeds_with_both": 1,
+     "worst_rank_near": 1,
+     "gap_min": 0.0,
+     "gap_max": 0.0,
+     "sep_min": 2.743,
+     "sep_max": 2.743,
+     "near_minus_rotated_mean": -2.743,
+     "near_minus_rotated_min": -2.743,
+     "near_minus_rotated_max": -2.743,
+     "per_seed": [
+      {
+       "seed": 1,
+       "rmsd_top": 0.477,
+       "top": "near-native",
+       "rank_near": 1,
+       "gap": 0.0,
+       "sep": null,
+       "near_minus_rotated": null
+      },
+      {
+       "seed": 2,
+       "rmsd_top": 0.513,
+       "top": "near-native",
+       "rank_near": 1,
+       "gap": 0.0,
+       "sep": 2.743,
+       "near_minus_rotated": -2.743
+      },
+      {
+       "seed": 3,
+       "rmsd_top": 0.559,
+       "top": "near-native",
+       "rank_near": 1,
+       "gap": 0.0,
+       "sep": null,
+       "near_minus_rotated": null
+      },
+      {
+       "seed": 4,
+       "rmsd_top": 0.536,
+       "top": "near-native",
+       "rank_near": 1,
+       "gap": 0.0,
+       "sep": null,
+       "near_minus_rotated": null
+      },
+      {
+       "seed": 5,
+       "rmsd_top": 0.563,
+       "top": "near-native",
+       "rank_near": 1,
+       "gap": 0.0,
+       "sep": null,
+       "near_minus_rotated": null
+      },
+      {
+       "seed": 6,
+       "rmsd_top": 0.533,
+       "top": "near-native",
+       "rank_near": 1,
+       "gap": 0.0,
+       "sep": null,
+       "near_minus_rotated": null
+      },
+      {
+       "seed": 7,
+       "rmsd_top": 0.487,
+       "top": "near-native",
+       "rank_near": 1,
+       "gap": 0.0,
+       "sep": null,
+       "near_minus_rotated": null
+      },
+      {
+       "seed": 8,
+       "rmsd_top": 0.509,
+       "top": "near-native",
+       "rank_near": 1,
+       "gap": 0.0,
+       "sep": null,
+       "near_minus_rotated": null
+      },
+      {
+       "seed": 9,
+       "rmsd_top": 0.477,
+       "top": "near-native",
+       "rank_near": 1,
+       "gap": 0.0,
+       "sep": null,
+       "near_minus_rotated": null
+      },
+      {
+       "seed": 10,
+       "rmsd_top": 0.483,
+       "top": "near-native",
+       "rank_near": 1,
+       "gap": 0.0,
+       "sep": null,
+       "near_minus_rotated": null
+      },
+      {
+       "seed": 11,
+       "rmsd_top": 0.546,
+       "top": "near-native",
+       "rank_near": 1,
+       "gap": 0.0,
+       "sep": null,
+       "near_minus_rotated": null
+      },
+      {
+       "seed": 12,
+       "rmsd_top": 0.503,
+       "top": "near-native",
+       "rank_near": 1,
+       "gap": 0.0,
+       "sep": null,
+       "near_minus_rotated": null
+      },
+      {
+       "seed": 13,
+       "rmsd_top": 0.517,
+       "top": "near-native",
+       "rank_near": 1,
+       "gap": 0.0,
+       "sep": null,
+       "near_minus_rotated": null
+      },
+      {
+       "seed": 14,
+       "rmsd_top": 0.533,
+       "top": "near-native",
+       "rank_near": 1,
+       "gap": 0.0,
+       "sep": null,
+       "near_minus_rotated": null
+      },
+      {
+       "seed": 15,
+       "rmsd_top": 0.488,
+       "top": "near-native",
+       "rank_near": 1,
+       "gap": 0.0,
+       "sep": null,
+       "near_minus_rotated": null
+      },
+      {
+       "seed": 16,
+       "rmsd_top": 0.572,
+       "top": "near-native",
+       "rank_near": 1,
+       "gap": 0.0,
+       "sep": null,
+       "near_minus_rotated": null
+      },
+      {
+       "seed": 17,
+       "rmsd_top": 0.482,
+       "top": "near-native",
+       "rank_near": 1,
+       "gap": 0.0,
+       "sep": null,
+       "near_minus_rotated": null
+      },
+      {
+       "seed": 18,
+       "rmsd_top": 0.503,
+       "top": "near-native",
+       "rank_near": 1,
+       "gap": 0.0,
+       "sep": null,
+       "near_minus_rotated": null
+      },
+      {
+       "seed": 19,
+       "rmsd_top": 0.451,
+       "top": "near-native",
+       "rank_near": 1,
+       "gap": 0.0,
+       "sep": null,
+       "near_minus_rotated": null
+      },
+      {
+       "seed": 20,
+       "rmsd_top": 0.476,
+       "top": "near-native",
+       "rank_near": 1,
+       "gap": 0.0,
+       "sep": null,
+       "near_minus_rotated": null
+      }
+     ]
+    },
+    "site_checks": {
+     "Zn-N(sulfonamide)": {
+      "pass_fraction": 1.0,
+      "distance_mean": 2.16
+     },
+     "Thr199 OG1 H-bond": {
+      "pass_fraction": 1.0,
+      "distance_mean": 2.65
+     },
+     "Thr199 N H-bond to sulfonyl O": {
+      "pass_fraction": 1.0,
+      "distance_mean": 2.98
+     }
+    },
+    "site_checks_per_seed": [
+     {
+      "Zn-N(sulfonamide)": 2.17,
+      "Thr199 OG1 H-bond": 2.64,
+      "Thr199 N H-bond to sulfonyl O": 3.01
+     },
+     {
+      "Zn-N(sulfonamide)": 2.17,
+      "Thr199 OG1 H-bond": 2.64,
+      "Thr199 N H-bond to sulfonyl O": 2.92
+     },
+     {
+      "Zn-N(sulfonamide)": 2.14,
+      "Thr199 OG1 H-bond": 2.68,
+      "Thr199 N H-bond to sulfonyl O": 3.0
+     },
+     {
+      "Zn-N(sulfonamide)": 2.16,
+      "Thr199 OG1 H-bond": 2.65,
+      "Thr199 N H-bond to sulfonyl O": 3.0
+     },
+     {
+      "Zn-N(sulfonamide)": 2.17,
+      "Thr199 OG1 H-bond": 2.64,
+      "Thr199 N H-bond to sulfonyl O": 3.01
+     },
+     {
+      "Zn-N(sulfonamide)": 2.17,
+      "Thr199 OG1 H-bond": 2.65,
+      "Thr199 N H-bond to sulfonyl O": 3.0
+     },
+     {
+      "Zn-N(sulfonamide)": 2.16,
+      "Thr199 OG1 H-bond": 2.65,
+      "Thr199 N H-bond to sulfonyl O": 3.02
+     },
+     {
+      "Zn-N(sulfonamide)": 2.17,
+      "Thr199 OG1 H-bond": 2.64,
+      "Thr199 N H-bond to sulfonyl O": 3.02
+     },
+     {
+      "Zn-N(sulfonamide)": 2.17,
+      "Thr199 OG1 H-bond": 2.64,
+      "Thr199 N H-bond to sulfonyl O": 2.91
+     },
+     {
+      "Zn-N(sulfonamide)": 2.16,
+      "Thr199 OG1 H-bond": 2.66,
+      "Thr199 N H-bond to sulfonyl O": 2.88
+     },
+     {
+      "Zn-N(sulfonamide)": 2.18,
+      "Thr199 OG1 H-bond": 2.63,
+      "Thr199 N H-bond to sulfonyl O": 3.0
+     },
+     {
+      "Zn-N(sulfonamide)": 2.17,
+      "Thr199 OG1 H-bond": 2.64,
+      "Thr199 N H-bond to sulfonyl O": 3.01
+     },
+     {
+      "Zn-N(sulfonamide)": 2.17,
+      "Thr199 OG1 H-bond": 2.65,
+      "Thr199 N H-bond to sulfonyl O": 3.02
+     },
+     {
+      "Zn-N(sulfonamide)": 2.17,
+      "Thr199 OG1 H-bond": 2.65,
+      "Thr199 N H-bond to sulfonyl O": 3.01
+     },
+     {
+      "Zn-N(sulfonamide)": 2.17,
+      "Thr199 OG1 H-bond": 2.64,
+      "Thr199 N H-bond to sulfonyl O": 2.99
+     },
+     {
+      "Zn-N(sulfonamide)": 2.15,
+      "Thr199 OG1 H-bond": 2.65,
+      "Thr199 N H-bond to sulfonyl O": 2.97
+     },
+     {
+      "Zn-N(sulfonamide)": 2.16,
+      "Thr199 OG1 H-bond": 2.66,
+      "Thr199 N H-bond to sulfonyl O": 3.0
+     },
+     {
+      "Zn-N(sulfonamide)": 2.17,
+      "Thr199 OG1 H-bond": 2.64,
+      "Thr199 N H-bond to sulfonyl O": 2.99
+     },
+     {
+      "Zn-N(sulfonamide)": 2.16,
+      "Thr199 OG1 H-bond": 2.66,
+      "Thr199 N H-bond to sulfonyl O": 2.94
+     },
+     {
+      "Zn-N(sulfonamide)": 2.15,
+      "Thr199 OG1 H-bond": 2.66,
+      "Thr199 N H-bond to sulfonyl O": 2.96
+     }
+    ],
+    "site_checks_on_crystal_reference": [
+     {
+      "check": "Zn-N(sulfonamide)",
+      "distance": 1.93,
+      "cutoff": 2.3,
+      "passed": true
+     },
+     {
+      "check": "Thr199 OG1 H-bond",
+      "distance": 2.86,
+      "cutoff": 3.3,
+      "passed": true
+     },
+     {
+      "check": "Thr199 N H-bond to sulfonyl O",
+      "distance": 2.94,
+      "cutoff": 3.3,
+      "passed": true
+     }
+    ],
+    "posebusters_physics_pass_fraction": null,
+    "posebusters_source": null,
+    "posebusters_physics_failed_checks": null,
+    "clusters": [
+     {
+      "id": 1,
+      "population": 20,
+      "seeds": [
+       13,
+       7,
+       5,
+       6,
+       8,
+       2,
+       12,
+       1,
+       18,
+       11,
+       14,
+       15,
+       3,
+       4,
+       16,
+       19,
+       20,
+       9,
+       10,
+       17
+      ],
+      "representative_seed": 13,
+      "score_best": -9.249,
+      "representative_rmsd": 0.517,
+      "representative_site_checks": {
+       "Zn-N(sulfonamide)": 2.17,
+       "Thr199 OG1 H-bond": 2.65,
+       "Thr199 N H-bond to sulfonyl O": 3.02
+      }
+     }
+    ],
+    "tau_fold_deg": {
+     "mean": 140.8,
+     "min": 134.2,
+     "max": 146.1,
+     "per_seed": [
+      138.7,
+      140.1,
+      143.4,
+      144.9,
+      143.7,
+      141.6,
+      141.0,
+      140.3,
+      134.9,
+      135.1,
+      146.1,
+      141.9,
+      142.0,
+      142.3,
+      136.7,
+      143.3,
+      142.5,
+      143.0,
+      134.2,
+      140.2
+     ]
+    },
+    "gate": {
+     "passes_G2": null,
+     "passes_2A_criterion": null,
+     "rmsd_and_site_part_G2": true,
+     "rmsd_and_site_part_2A": true,
+     "site_ok": true
+    },
+    "mode_summary": {
+     "n_seeds": 20,
+     "n_modes": 47,
+     "top_pose": {
+      "near_native": 20,
+      "ring_rotated_paper": 0,
+      "between": 0,
+      "rotated_pose": 0,
+      "other_beyond_2A": 0
+     },
+     "modes": {
+      "near_native": 39,
+      "ring_rotated_paper": 1,
+      "between": 7,
+      "rotated_pose": 0,
+      "other_beyond_2A": 1
+     },
+     "seeds_holding": {
+      "near_native": 20,
+      "ring_rotated_paper": 1,
+      "rotated_pose": 0
+     },
+     "best_score": {
+      "near_native": -9.249,
+      "ring_rotated_paper": -6.5,
+      "rotated_pose": null,
+      "other_beyond_2A": -6.5,
+      "any": -9.249
+     },
+     "gap_to_best_near_native": {
+      "ring_rotated_paper": {
+       "n_seeds": 1,
+       "mean": 2.743,
+       "min": 2.743,
+       "max": 2.743
+      },
+      "rotated_pose": null
+     },
+     "modes_within_2_kcal_of_the_seed_best": {
+      "ring_rotated_paper": {
+       "n_modes": 0,
+       "n_seeds": 0
+      },
+      "rotated_pose": {
+       "n_modes": 0,
+       "n_seeds": 0
+      }
+     },
+     "largest_score_span_of_a_seed": 2.743,
+     "min_dist_water_site": {
+      "top_poses": [
+       2.98,
+       3.07
+      ],
+      "all_modes": 2.79,
+      "modes_within_2p4A_of_a_site": 0
+     }
+    },
+    "families_beyond_1A": [
+     {
+      "n_modes": 8,
+      "n_seeds": 8,
+      "n_top_poses": 0,
+      "best_score": -8.822,
+      "behind_best_of_run": 0.427,
+      "representative": {
+       "seed": 6,
+       "mode": 3
+      },
+      "rmsd_crystal": 1.588,
+      "rmsd_rotated_ref": 3.58,
+      "cls": "between",
+      "zn_n": 2.29,
+      "thr199_og1_n": 2.99,
+      "aniline_n_asn67_od1": 7.1,
+      "min_dist_water_site": 2.79
+     }
+    ],
+    "modes": [
+     {
+      "seed": 1,
+      "mode": 1,
+      "score": -9.242,
+      "rmsd_crystal": 0.477,
+      "rmsd_rotated_ref": 3.778,
+      "cls": "near-native",
+      "zn_n": 2.17,
+      "thr199_og1_n": 2.64,
+      "aniline_n_asn67_od1": 7.65,
+      "min_dist_water_site": 3.05,
+      "water_sites_within_2p4A": 0
+     },
+     {
+      "seed": 1,
+      "mode": 2,
+      "score": -9.233,
+      "rmsd_crystal": 0.479,
+      "rmsd_rotated_ref": 3.892,
+      "cls": "near-native",
+      "zn_n": 2.15,
+      "thr199_og1_n": 2.66,
+      "aniline_n_asn67_od1": 8.08,
+      "min_dist_water_site": 3.01,
+      "water_sites_within_2p4A": 0
+     },
+     {
+      "seed": 1,
+      "mode": 3,
+      "score": -8.816,
+      "rmsd_crystal": 1.558,
+      "rmsd_rotated_ref": 3.644,
+      "cls": "between",
+      "zn_n": 2.31,
+      "thr199_og1_n": 3.0,
+      "aniline_n_asn67_od1": 7.06,
+      "min_dist_water_site": 2.79,
+      "water_sites_within_2p4A": 0
+     },
+     {
+      "seed": 2,
+      "mode": 1,
+      "score": -9.243,
+      "rmsd_crystal": 0.513,
+      "rmsd_rotated_ref": 3.774,
+      "cls": "near-native",
+      "zn_n": 2.17,
+      "thr199_og1_n": 2.64,
+      "aniline_n_asn67_od1": 7.61,
+      "min_dist_water_site": 3.04,
+      "water_sites_within_2p4A": 0
+     },
+     {
+      "seed": 2,
+      "mode": 2,
+      "score": -9.233,
+      "rmsd_crystal": 0.489,
+      "rmsd_rotated_ref": 3.803,
+      "cls": "near-native",
+      "zn_n": 2.17,
+      "thr199_og1_n": 2.64,
+      "aniline_n_asn67_od1": 7.82,
+      "min_dist_water_site": 3.05,
+      "water_sites_within_2p4A": 0
+     },
+     {
+      "seed": 2,
+      "mode": 3,
+      "score": -6.5,
+      "rmsd_crystal": 2.364,
+      "rmsd_rotated_ref": 4.809,
+      "cls": "other, beyond 2.0 A",
+      "zn_n": 1.87,
+      "thr199_og1_n": 3.03,
+      "aniline_n_asn67_od1": 9.39,
+      "min_dist_water_site": 3.01,
+      "water_sites_within_2p4A": 0
+     },
+     {
+      "seed": 3,
+      "mode": 1,
+      "score": -9.24,
+      "rmsd_crystal": 0.559,
+      "rmsd_rotated_ref": 3.884,
+      "cls": "near-native",
+      "zn_n": 2.14,
+      "thr199_og1_n": 2.68,
+      "aniline_n_asn67_od1": 7.87,
+      "min_dist_water_site": 2.98,
+      "water_sites_within_2p4A": 0
+     },
+     {
+      "seed": 3,
+      "mode": 2,
+      "score": -9.23,
+      "rmsd_crystal": 0.487,
+      "rmsd_rotated_ref": 3.874,
+      "cls": "near-native",
+      "zn_n": 2.17,
+      "thr199_og1_n": 2.64,
+      "aniline_n_asn67_od1": 8.01,
+      "min_dist_water_site": 3.06,
+      "water_sites_within_2p4A": 0
+     },
+     {
+      "seed": 4,
+      "mode": 1,
+      "score": -9.24,
+      "rmsd_crystal": 0.536,
+      "rmsd_rotated_ref": 3.878,
+      "cls": "near-native",
+      "zn_n": 2.16,
+      "thr199_og1_n": 2.65,
+      "aniline_n_asn67_od1": 7.86,
+      "min_dist_water_site": 3.03,
+      "water_sites_within_2p4A": 0
+     },
+     {
+      "seed": 4,
+      "mode": 2,
+      "score": -9.232,
+      "rmsd_crystal": 0.48,
+      "rmsd_rotated_ref": 3.815,
+      "cls": "near-native",
+      "zn_n": 2.18,
+      "thr199_og1_n": 2.64,
+      "aniline_n_asn67_od1": 7.86,
+      "min_dist_water_site": 3.06,
+      "water_sites_within_2p4A": 0
+     },
+     {
+      "seed": 5,
+      "mode": 1,
+      "score": -9.245,
+      "rmsd_crystal": 0.563,
+      "rmsd_rotated_ref": 3.867,
+      "cls": "near-native",
+      "zn_n": 2.17,
+      "thr199_og1_n": 2.64,
+      "aniline_n_asn67_od1": 7.8,
+      "min_dist_water_site": 3.05,
+      "water_sites_within_2p4A": 0
+     },
+     {
+      "seed": 5,
+      "mode": 2,
+      "score": -9.233,
+      "rmsd_crystal": 0.525,
+      "rmsd_rotated_ref": 3.864,
+      "cls": "near-native",
+      "zn_n": 2.16,
+      "thr199_og1_n": 2.64,
+      "aniline_n_asn67_od1": 7.94,
+      "min_dist_water_site": 3.05,
+      "water_sites_within_2p4A": 0
+     },
+     {
+      "seed": 6,
+      "mode": 1,
+      "score": -9.244,
+      "rmsd_crystal": 0.533,
+      "rmsd_rotated_ref": 3.819,
+      "cls": "near-native",
+      "zn_n": 2.17,
+      "thr199_og1_n": 2.65,
+      "aniline_n_asn67_od1": 7.7,
+      "min_dist_water_site": 3.04,
+      "water_sites_within_2p4A": 0
+     },
+     {
+      "seed": 6,
+      "mode": 2,
+      "score": -9.231,
+      "rmsd_crystal": 0.451,
+      "rmsd_rotated_ref": 3.851,
+      "cls": "near-native",
+      "zn_n": 2.15,
+      "thr199_og1_n": 2.66,
+      "aniline_n_asn67_od1": 7.99,
+      "min_dist_water_site": 3.01,
+      "water_sites_within_2p4A": 0
+     },
+     {
+      "seed": 6,
+      "mode": 3,
+      "score": -8.822,
+      "rmsd_crystal": 1.588,
+      "rmsd_rotated_ref": 3.58,
+      "cls": "between",
+      "zn_n": 2.29,
+      "thr199_og1_n": 2.99,
+      "aniline_n_asn67_od1": 7.1,
+      "min_dist_water_site": 2.79,
+      "water_sites_within_2p4A": 0
+     },
+     {
+      "seed": 7,
+      "mode": 1,
+      "score": -9.246,
+      "rmsd_crystal": 0.487,
+      "rmsd_rotated_ref": 3.811,
+      "cls": "near-native",
+      "zn_n": 2.16,
+      "thr199_og1_n": 2.65,
+      "aniline_n_asn67_od1": 7.73,
+      "min_dist_water_site": 3.03,
+      "water_sites_within_2p4A": 0
+     },
+     {
+      "seed": 7,
+      "mode": 2,
+      "score": -9.231,
+      "rmsd_crystal": 0.517,
+      "rmsd_rotated_ref": 3.817,
+      "cls": "near-native",
+      "zn_n": 2.16,
+      "thr199_og1_n": 2.65,
+      "aniline_n_asn67_od1": 7.82,
+      "min_dist_water_site": 3.03,
+      "water_sites_within_2p4A": 0
+     },
+     {
+      "seed": 8,
+      "mode": 1,
+      "score": -9.244,
+      "rmsd_crystal": 0.509,
+      "rmsd_rotated_ref": 3.794,
+      "cls": "near-native",
+      "zn_n": 2.17,
+      "thr199_og1_n": 2.64,
+      "aniline_n_asn67_od1": 7.66,
+      "min_dist_water_site": 3.05,
+      "water_sites_within_2p4A": 0
+     },
+     {
+      "seed": 8,
+      "mode": 2,
+      "score": -9.231,
+      "rmsd_crystal": 0.519,
+      "rmsd_rotated_ref": 3.852,
+      "cls": "near-native",
+      "zn_n": 2.17,
+      "thr199_og1_n": 2.65,
+      "aniline_n_asn67_od1": 7.92,
+      "min_dist_water_site": 3.04,
+      "water_sites_within_2p4A": 0
+     },
+     {
+      "seed": 9,
+      "mode": 1,
+      "score": -9.239,
+      "rmsd_crystal": 0.477,
+      "rmsd_rotated_ref": 3.744,
+      "cls": "near-native",
+      "zn_n": 2.17,
+      "thr199_og1_n": 2.64,
+      "aniline_n_asn67_od1": 7.56,
+      "min_dist_water_site": 3.04,
+      "water_sites_within_2p4A": 0
+     },
+     {
+      "seed": 9,
+      "mode": 2,
+      "score": -9.233,
+      "rmsd_crystal": 0.418,
+      "rmsd_rotated_ref": 3.863,
+      "cls": "near-native",
+      "zn_n": 2.17,
+      "thr199_og1_n": 2.64,
+      "aniline_n_asn67_od1": 8.06,
+      "min_dist_water_site": 3.05,
+      "water_sites_within_2p4A": 0
+     },
+     {
+      "seed": 10,
+      "mode": 1,
+      "score": -9.239,
+      "rmsd_crystal": 0.483,
+      "rmsd_rotated_ref": 3.758,
+      "cls": "near-native",
+      "zn_n": 2.16,
+      "thr199_og1_n": 2.66,
+      "aniline_n_asn67_od1": 7.59,
+      "min_dist_water_site": 3.02,
+      "water_sites_within_2p4A": 0
+     },
+     {
+      "seed": 10,
+      "mode": 2,
+      "score": -9.231,
+      "rmsd_crystal": 0.52,
+      "rmsd_rotated_ref": 3.816,
+      "cls": "near-native",
+      "zn_n": 2.16,
+      "thr199_og1_n": 2.64,
+      "aniline_n_asn67_od1": 7.83,
+      "min_dist_water_site": 3.04,
+      "water_sites_within_2p4A": 0
+     },
+     {
+      "seed": 10,
+      "mode": 3,
+      "score": -8.808,
+      "rmsd_crystal": 1.559,
+      "rmsd_rotated_ref": 3.463,
+      "cls": "between",
+      "zn_n": 2.25,
+      "thr199_og1_n": 2.95,
+      "aniline_n_asn67_od1": 6.9,
+      "min_dist_water_site": 2.8,
+      "water_sites_within_2p4A": 0
+     },
+     {
+      "seed": 11,
+      "mode": 1,
+      "score": -9.241,
+      "rmsd_crystal": 0.546,
+      "rmsd_rotated_ref": 3.818,
+      "cls": "near-native",
+      "zn_n": 2.18,
+      "thr199_og1_n": 2.63,
+      "aniline_n_asn67_od1": 7.7,
+      "min_dist_water_site": 3.07,
+      "water_sites_within_2p4A": 0
+     },
+     {
+      "seed": 11,
+      "mode": 2,
+      "score": -9.217,
+      "rmsd_crystal": 0.372,
+      "rmsd_rotated_ref": 3.756,
+      "cls": "near-native",
+      "zn_n": 2.17,
+      "thr199_og1_n": 2.64,
+      "aniline_n_asn67_od1": 7.8,
+      "min_dist_water_site": 3.05,
+      "water_sites_within_2p4A": 0
+     },
+     {
+      "seed": 11,
+      "mode": 3,
+      "score": -8.817,
+      "rmsd_crystal": 1.646,
+      "rmsd_rotated_ref": 3.57,
+      "cls": "between",
+      "zn_n": 2.27,
+      "thr199_og1_n": 2.96,
+      "aniline_n_asn67_od1": 7.01,
+      "min_dist_water_site": 2.79,
+      "water_sites_within_2p4A": 0
+     },
+     {
+      "seed": 12,
+      "mode": 1,
+      "score": -9.243,
+      "rmsd_crystal": 0.503,
+      "rmsd_rotated_ref": 3.791,
+      "cls": "near-native",
+      "zn_n": 2.17,
+      "thr199_og1_n": 2.64,
+      "aniline_n_asn67_od1": 7.66,
+      "min_dist_water_site": 3.05,
+      "water_sites_within_2p4A": 0
+     },
+     {
+      "seed": 12,
+      "mode": 2,
+      "score": -9.231,
+      "rmsd_crystal": 0.514,
+      "rmsd_rotated_ref": 3.88,
+      "cls": "near-native",
+      "zn_n": 2.15,
+      "thr199_og1_n": 2.66,
+      "aniline_n_asn67_od1": 8.01,
+      "min_dist_water_site": 3.02,
+      "water_sites_within_2p4A": 0
+     },
+     {
+      "seed": 13,
+      "mode": 1,
+      "score": -9.249,
+      "rmsd_crystal": 0.517,
+      "rmsd_rotated_ref": 3.807,
+      "cls": "near-native",
+      "zn_n": 2.17,
+      "thr199_og1_n": 2.65,
+      "aniline_n_asn67_od1": 7.69,
+      "min_dist_water_site": 3.04,
+      "water_sites_within_2p4A": 0
+     },
+     {
+      "seed": 13,
+      "mode": 2,
+      "score": -8.72,
+      "rmsd_crystal": 1.645,
+      "rmsd_rotated_ref": 3.499,
+      "cls": "between",
+      "zn_n": 2.31,
+      "thr199_og1_n": 3.01,
+      "aniline_n_asn67_od1": 6.92,
+      "min_dist_water_site": 2.79,
+      "water_sites_within_2p4A": 0
+     },
+     {
+      "seed": 14,
+      "mode": 1,
+      "score": -9.241,
+      "rmsd_crystal": 0.533,
+      "rmsd_rotated_ref": 3.842,
+      "cls": "near-native",
+      "zn_n": 2.17,
+      "thr199_og1_n": 2.65,
+      "aniline_n_asn67_od1": 7.76,
+      "min_dist_water_site": 3.04,
+      "water_sites_within_2p4A": 0
+     },
+     {
+      "seed": 14,
+      "mode": 2,
+      "score": -9.224,
+      "rmsd_crystal": 0.565,
+      "rmsd_rotated_ref": 3.863,
+      "cls": "near-native",
+      "zn_n": 2.14,
+      "thr199_og1_n": 2.67,
+      "aniline_n_asn67_od1": 7.93,
+      "min_dist_water_site": 3.0,
+      "water_sites_within_2p4A": 0
+     },
+     {
+      "seed": 15,
+      "mode": 1,
+      "score": -9.241,
+      "rmsd_crystal": 0.488,
+      "rmsd_rotated_ref": 3.733,
+      "cls": "near-native",
+      "zn_n": 2.17,
+      "thr199_og1_n": 2.64,
+      "aniline_n_asn67_od1": 7.52,
+      "min_dist_water_site": 3.06,
+      "water_sites_within_2p4A": 0
+     },
+     {
+      "seed": 15,
+      "mode": 2,
+      "score": -9.233,
+      "rmsd_crystal": 0.468,
+      "rmsd_rotated_ref": 3.762,
+      "cls": "near-native",
+      "zn_n": 2.18,
+      "thr199_og1_n": 2.63,
+      "aniline_n_asn67_od1": 7.72,
+      "min_dist_water_site": 3.07,
+      "water_sites_within_2p4A": 0
+     },
+     {
+      "seed": 16,
+      "mode": 1,
+      "score": -9.24,
+      "rmsd_crystal": 0.572,
+      "rmsd_rotated_ref": 3.853,
+      "cls": "near-native",
+      "zn_n": 2.15,
+      "thr199_og1_n": 2.65,
+      "aniline_n_asn67_od1": 7.76,
+      "min_dist_water_site": 3.02,
+      "water_sites_within_2p4A": 0
+     },
+     {
+      "seed": 16,
+      "mode": 2,
+      "score": -9.229,
+      "rmsd_crystal": 0.488,
+      "rmsd_rotated_ref": 3.862,
+      "cls": "near-native",
+      "zn_n": 2.17,
+      "thr199_og1_n": 2.65,
+      "aniline_n_asn67_od1": 7.97,
+      "min_dist_water_site": 3.05,
+      "water_sites_within_2p4A": 0
+     },
+     {
+      "seed": 16,
+      "mode": 3,
+      "score": -8.748,
+      "rmsd_crystal": 1.644,
+      "rmsd_rotated_ref": 3.733,
+      "cls": "between",
+      "zn_n": 2.27,
+      "thr199_og1_n": 2.97,
+      "aniline_n_asn67_od1": 7.2,
+      "min_dist_water_site": 2.79,
+      "water_sites_within_2p4A": 0
+     },
+     {
+      "seed": 17,
+      "mode": 1,
+      "score": -9.239,
+      "rmsd_crystal": 0.482,
+      "rmsd_rotated_ref": 3.787,
+      "cls": "near-native",
+      "zn_n": 2.16,
+      "thr199_og1_n": 2.66,
+      "aniline_n_asn67_od1": 7.68,
+      "min_dist_water_site": 3.02,
+      "water_sites_within_2p4A": 0
+     },
+     {
+      "seed": 17,
+      "mode": 2,
+      "score": -9.234,
+      "rmsd_crystal": 0.491,
+      "rmsd_rotated_ref": 3.839,
+      "cls": "near-native",
+      "zn_n": 2.17,
+      "thr199_og1_n": 2.63,
+      "aniline_n_asn67_od1": 7.91,
+      "min_dist_water_site": 3.06,
+      "water_sites_within_2p4A": 0
+     },
+     {
+      "seed": 17,
+      "mode": 3,
+      "score": -8.818,
+      "rmsd_crystal": 1.59,
+      "rmsd_rotated_ref": 3.569,
+      "cls": "between",
+      "zn_n": 2.26,
+      "thr199_og1_n": 2.95,
+      "aniline_n_asn67_od1": 7.06,
+      "min_dist_water_site": 2.79,
+      "water_sites_within_2p4A": 0
+     },
+     {
+      "seed": 18,
+      "mode": 1,
+      "score": -9.242,
+      "rmsd_crystal": 0.503,
+      "rmsd_rotated_ref": 3.831,
+      "cls": "near-native",
+      "zn_n": 2.17,
+      "thr199_og1_n": 2.64,
+      "aniline_n_asn67_od1": 7.77,
+      "min_dist_water_site": 3.05,
+      "water_sites_within_2p4A": 0
+     },
+     {
+      "seed": 18,
+      "mode": 2,
+      "score": -9.236,
+      "rmsd_crystal": 0.574,
+      "rmsd_rotated_ref": 3.904,
+      "cls": "near-native",
+      "zn_n": 2.18,
+      "thr199_og1_n": 2.63,
+      "aniline_n_asn67_od1": 7.99,
+      "min_dist_water_site": 3.07,
+      "water_sites_within_2p4A": 0
+     },
+     {
+      "seed": 19,
+      "mode": 1,
+      "score": -9.24,
+      "rmsd_crystal": 0.451,
+      "rmsd_rotated_ref": 3.712,
+      "cls": "near-native",
+      "zn_n": 2.16,
+      "thr199_og1_n": 2.66,
+      "aniline_n_asn67_od1": 7.52,
+      "min_dist_water_site": 3.02,
+      "water_sites_within_2p4A": 0
+     },
+     {
+      "seed": 19,
+      "mode": 2,
+      "score": -9.229,
+      "rmsd_crystal": 0.437,
+      "rmsd_rotated_ref": 3.797,
+      "cls": "near-native",
+      "zn_n": 2.18,
+      "thr199_og1_n": 2.63,
+      "aniline_n_asn67_od1": 7.85,
+      "min_dist_water_site": 3.07,
+      "water_sites_within_2p4A": 0
+     },
+     {
+      "seed": 20,
+      "mode": 1,
+      "score": -9.24,
+      "rmsd_crystal": 0.476,
+      "rmsd_rotated_ref": 3.793,
+      "cls": "near-native",
+      "zn_n": 2.15,
+      "thr199_og1_n": 2.66,
+      "aniline_n_asn67_od1": 7.7,
+      "min_dist_water_site": 3.01,
+      "water_sites_within_2p4A": 0
+     },
+     {
+      "seed": 20,
+      "mode": 2,
+      "score": -9.231,
+      "rmsd_crystal": 0.438,
+      "rmsd_rotated_ref": 3.824,
+      "cls": "near-native",
+      "zn_n": 2.17,
+      "thr199_og1_n": 2.64,
+      "aniline_n_asn67_od1": 7.93,
+      "min_dist_water_site": 3.05,
+      "water_sites_within_2p4A": 0
+     }
+    ]
+   },
+   "check": {
+    "ligand_inputs_identical_all_seeds": true,
+    "settings_that_differ": {
+     "cpu": [
+      3,
+      2
+     ]
+    }
+   }
+  }
+ }
+}

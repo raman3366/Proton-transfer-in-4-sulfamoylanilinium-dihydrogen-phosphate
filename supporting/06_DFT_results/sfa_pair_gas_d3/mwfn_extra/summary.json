@@ -1,0 +1,277 @@
+{
+  "wavefunction_sha256": "fdf3241d90004a23c885517d21812b871b05ae91f5a3257373119194d0838105",
+  "runs": {
+    "qtaim": {
+      "menu_sequence": [
+        "2",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "10",
+        "1.5",
+        "11",
+        "200",
+        "-1",
+        "-9",
+        "8",
+        "0",
+        "7",
+        "0",
+        "-4",
+        "4",
+        "0",
+        "-5",
+        "4",
+        "0",
+        "-10",
+        "q"
+      ],
+      "exit": 0,
+      "wall_s": 3.7,
+      "threads": 4,
+      "esp_code": null
+    },
+    "igmh": {
+      "menu_sequence": [
+        "20",
+        "11",
+        "2",
+        "1-15,17-20",
+        "16,21-27",
+        "3",
+        "2",
+        "3",
+        "6",
+        "2",
+        "y",
+        "0",
+        "0",
+        "q"
+      ],
+      "exit": 0,
+      "wall_s": 81.3,
+      "threads": 4,
+      "esp_code": null
+    },
+    "charges": {
+      "menu_sequence": [
+        "7",
+        "1",
+        "1",
+        "y",
+        "11",
+        "1",
+        "y",
+        "16",
+        "1",
+        "y",
+        "0",
+        "q"
+      ],
+      "exit": 0,
+      "wall_s": 8.7,
+      "threads": 4,
+      "esp_code": null
+    },
+    "mep_fragments": {
+      "menu_sequence": [
+        "12",
+        "0",
+        "11",
+        "n",
+        "12",
+        "1-15,17-20",
+        "n",
+        "12",
+        "16,21-27",
+        "n",
+        "-1",
+        "-1",
+        "q"
+      ],
+      "exit": 0,
+      "wall_s": 32.7,
+      "threads": 4,
+      "esp_code": null
+    },
+    "dos": {
+      "menu_sequence": [
+        "10",
+        "8",
+        "7",
+        "3",
+        "-1",
+        "1",
+        "1-15,17-20",
+        "2",
+        "16,21-27",
+        "0",
+        "2",
+        "-30.0,5.0,5",
+        "3",
+        "0.3",
+        "0",
+        "3",
+        "0",
+        "-10",
+        "q"
+      ],
+      "exit": 0,
+      "wall_s": 1.6,
+      "threads": 4,
+      "esp_code": null
+    }
+  },
+  "case": "sfa_pair_gas_d3",
+  "wavefunction": "molecules/sfa/results/sfa_pair_gas_d3/final.molden",
+  "fragments": [
+    {
+      "name": "4-sulfamoylanilinium cation (-H1A)",
+      "charge": 0,
+      "h_gained": [],
+      "h_lost": [
+        "H1A"
+      ],
+      "atoms": "1-15,17-20"
+    },
+    {
+      "name": "dihydrogen phosphate anion (+H1A)",
+      "charge": 0,
+      "h_gained": [
+        "H1A"
+      ],
+      "h_lost": [],
+      "atoms": "16,21-27"
+    }
+  ],
+  "multiwfn_version": "2026.9.20",
+  "qtaim": {
+    "n_cp": 59,
+    "counts": {
+      "(3,-3)": 27,
+      "(3,-1)": 29,
+      "(3,+1)": 3,
+      "(3,+3)": 0
+    },
+    "cp_searches_logged": {
+      "n": 5,
+      "new_cps_each": [
+        27,
+        32,
+        0,
+        0,
+        0
+      ],
+      "expected_n": 5,
+      "note": "nuclei, midpoints, triangles, pyramids, spheres"
+    },
+    "poincare_hopf": {
+      "n-b+r-c": 1,
+      "satisfied": true
+    },
+    "n_noncovalent_bcp": 3,
+    "case_hbonds_without_bcp": [],
+    "n_bcp_without_bond_path": 0
+  },
+  "status": {
+    "qtaim": {
+      "ok": true,
+      "wall_s": 3.7
+    },
+    "igmh": {
+      "ok": true,
+      "wall_s": 82.3
+    },
+    "charges": {
+      "ok": true,
+      "wall_s": 8.7
+    },
+    "npa": {
+      "ok": true,
+      "wall_s": 0.3
+    },
+    "mep": {
+      "ok": true,
+      "wall_s": 32.7
+    },
+    "dos": {
+      "ok": true,
+      "wall_s": 1.6
+    }
+  },
+  "igmh": {
+    "int_dg_inter_au": 0.239891,
+    "grid_points": [
+      91,
+      119,
+      164
+    ]
+  },
+  "charges": {
+    "schemes": [
+      "NPA",
+      "Hirshfeld",
+      "ADCH",
+      "CM5"
+    ],
+    "fragment_sums": {
+      "4-sulfamoylanilinium cation (-H1A)": {
+        "NPA": 0.06218275371745874,
+        "Hirshfeld": 0.12412565000000014,
+        "ADCH": 0.1152975799999999,
+        "CM5": 0.10252030000000023,
+        "formal_charge": 0
+      },
+      "dihydrogen phosphate anion (+H1A)": {
+        "NPA": -0.062182753717566985,
+        "Hirshfeld": -0.12412565999999994,
+        "ADCH": -0.11529758000000001,
+        "CM5": -0.10252032999999999,
+        "formal_charge": 0
+      }
+    }
+  },
+  "mep": {
+    "n_extrema": 20,
+    "fragments": [
+      {
+        "fragment": "4-sulfamoylanilinium cation (-H1A)",
+        "min_kcal": -38.617104,
+        "max_kcal": 52.421086
+      },
+      {
+        "fragment": "dihydrogen phosphate anion (+H1A)",
+        "min_kcal": -39.115583,
+        "max_kcal": 62.387566
+      }
+    ]
+  },
+  "dos": {
+    "HOMO-1": {
+      "mo": 69,
+      "E_eV": -7.990522894447543,
+      "4-sulfamoylanilinium cation (-H1A)": 99.65713352744294,
+      "dihydrogen phosphate anion (+H1A)": 0.3428664725570764
+    },
+    "HOMO": {
+      "mo": 70,
+      "E_eV": -7.158520346105165,
+      "4-sulfamoylanilinium cation (-H1A)": 96.5359601621813,
+      "dihydrogen phosphate anion (+H1A)": 3.4640398378187163
+    },
+    "LUMO": {
+      "mo": 71,
+      "E_eV": -1.521150173948852,
+      "4-sulfamoylanilinium cation (-H1A)": 98.32920623690441,
+      "dihydrogen phosphate anion (+H1A)": 1.6707937630955945
+    },
+    "LUMO+1": {
+      "mo": 72,
+      "E_eV": -1.3862366893871023,
+      "4-sulfamoylanilinium cation (-H1A)": 98.96051593240632,
+      "dihydrogen phosphate anion (+H1A)": 1.0394840675936763
+    }
+  }
+}

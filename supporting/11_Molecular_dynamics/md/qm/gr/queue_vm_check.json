@@ -1,0 +1,20 @@
+{
+ "label": "gate G-R, check of the rented machine against the Pi: point X again, from the atomic guess",
+ "comment": "Used by task gr_check_x of md/gpu/tasks_gr.json with `gr_queue.py point`. Own folders, so that no result of the gate is touched: the energy goes to md/qm/gr/check_vm/qm/X.json.",
+ "bulk": "/root/cqc-sfa-md/qm/gr_check",
+ "small_out": "md/qm/gr/check_vm",
+ "points": "md/qm/gr/points.json",
+ "qm_config": "md/qm/config_prod.json",
+ "threads": 7,
+ "nice": 10,
+ "wait_for": null,
+ "mcpb_source": "md/qm/mcpb",
+ "step2": "2e",
+ "placeholder_params": null,
+ "guess": "atomic",
+ "guess_checkpoint": null,
+ "timing_reference_status": null,
+ "only": ["X"],
+ "method_override": null,
+ "poll_seconds": 30
+}

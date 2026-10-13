@@ -1,0 +1,26 @@
+{
+ "label": "gate G-R: B3LYP/6-31G* single points of the small zinc model, settings of stage S2",
+ "comment": "md/qm/gr/queue_vm.json with another `relax` block, for task gr_relax_Rx_cont of md/gpu/tasks_gr3.json: the relaxation from Rx CONTINUED to convergence (md/PLAN.md, 6 Oct 2026, 1:09 PM IST, point 1; check of the gate, finding 1). Same points, same quantum chemistry (md/qm/config_prod.json: B3LYP/6-31G*, pure functions, density fitting, grid 3; D3(BJ) in the optimisation), same folders, so the run goes on from /root/cqc-sfa-md/qm/gr/relax/Rx_last.npy, step 16. Different: `enforce` 0.1, which makes geomeTRIC hold the frozen atoms 1-46 exactly once they are within 0.1 bohr of their places (without it they drifted by up to 0.005 A in the first 16 steps; tested on the Pi with a surrogate energy, md/GR.md section 6.6); no `on_crossing` (the key is no longer acted on: a run is never stopped at a change of sign). queue_vm.json itself is left as it is, because task gr_relax_X reads it.",
+ "bulk": "/root/cqc-sfa-md/qm/gr",
+ "small_out": "md/qm/gr",
+ "points": "md/qm/gr/points.json",
+ "qm_config": "md/qm/config_prod.json",
+ "threads": 7,
+ "nice": 10,
+ "wait_for": null,
+ "mcpb_source": "md/qm/mcpb",
+ "step2": "2e",
+ "placeholder_params": null,
+ "guess": "atomic",
+ "guess_checkpoint": null,
+ "timing_reference_status": null,
+ "only": null,
+ "method_override": null,
+ "poll_seconds": 30,
+ "relax": {
+  "maxsteps": 150,
+  "convergence": {
+   "enforce": 0.1
+  }
+ }
+}

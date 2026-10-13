@@ -1,0 +1,32 @@
+- 2026-09-27 19:47  pre-optimisation at B3LYP/6-31g(d) (172 basis functions)
+- 2026-09-27 19:57  pre-optimisation converged in 12 steps, 9.8 min
+- 2026-09-27 19:57  optimisation started from preopt.xyz; solvent=water
+- 2026-09-27 20:11  optimisation converged in 8 steps, 13.6 min, E = -891.29450890 Ha
+- 2026-09-27 20:11  FMO: HOMO -5.694 eV, LUMO -0.555 eV, gap 5.138 eV; fragment composition None / None
+- 2026-09-27 20:11  molden padded from 298 to 299 MOs for Multiwfn compatibility
+- 2026-09-27 20:17  cubes written (ESP 64^3 in 5.2 min)
+- 2026-09-28 04:53  QTAIM: 37 CPs {'(3,-3)': 18, '(3,-1)': 18, '(3,+1)': 1, '(3,+3)': 0}, Poincare-Hopf OK; no H-bond BCPs
+- 2026-09-28 04:53  charges (Hirshfeld/ADCH/CM5): fragment sums sulfonamidate_pcm_d3: Hirshfeld -1.000, ADCH -1.000, CM5 -1.000
+- 2026-09-28 04:53  charges (NPA/Hirshfeld/ADCH/CM5): fragment sums sulfonamidate_pcm_d3: NPA -1.000, Hirshfeld -1.000, ADCH -1.000, CM5 -1.000
+- 2026-09-28 04:54  MEP surface: min -0.256655 a.u., max 0.013383 a.u.; 3 minima, 4 maxima
+- 2026-09-28 04:54  DOS/PDOS (Hirshfeld): HOMO sulfonamidate_pcm_d3 100%; LUMO sulfonamidate_pcm_d3 100%
+- 2026-09-28 18:10  functional check (dock_strain.json): B3LYP-D3(BJ) +4.72, +4.64, +6.00, +5.99, +5.97, +4.69, +4.76, +4.77, +8.72, +10.91, +6.66, +9.42, +8.10, +3.94, +6.87, +4.90 kcal/mol vs opt
+- 2026-09-29 05:18  torsion scan (ref): converged, 4 steps, E = -891.29450946
+- 2026-09-29 05:24  torsion scan (tau10560): converged, 5 steps, E = -891.29450470
+- 2026-09-29 05:26  torsion scan (tau10000): converged, 4 steps, E = -891.29451119
+- 2026-09-29 06:09  torsion scan (tau18000): converged, 9 steps, E = -891.29459904
+- 2026-09-29 06:13  torsion scan (tau16000): converged, 10 steps, E = -891.29465356
+- 2026-09-29 06:14  torsion scan (tau15580): converged, 10 steps, E = -891.29463207
+- 2026-09-29 06:15  torsion scan (tau17000): converged, 11 steps, E = -891.29465910
+- 2026-09-29 06:35  torsion scan (tau14000): converged, 8 steps, E = -891.29461842
+- 2026-09-29 06:41  torsion scan (tau15000): converged, 10 steps, E = -891.29464738
+- 2026-09-29 06:57  torsion scan (tau13000): converged, 8 steps, E = -891.29457818
+- 2026-09-29 06:57  torsion scan (tau09000): converged, 5 steps, E = -891.29451744
+- 2026-09-29 07:00  torsion scan (tau13210): converged, 8 steps, E = -891.29459641
+- 2026-09-29 07:02  torsion scan (tau11000): converged, 6 steps, E = -891.29450233
+- 2026-09-29 07:12  torsion scan (tau11130): converged, 7 steps, E = -891.29450272
+- 2026-09-29 07:16  torsion scan (tau11500): converged, 8 steps, E = -891.29450725
+- 2026-09-29 07:17  torsion scan (tau12000): converged, 8 steps, E = -891.29452704
+- 2026-09-29 07:30  torsion scan (tau15320): converged, 10 steps, E = -891.29463751
+- 2026-09-29 07:36  torsion scan (tau11380): converged, 8 steps, E = -891.29450481
+- 2026-09-29 07:39  torsion scan (tau14940): converged, 10 steps, E = -891.29464968

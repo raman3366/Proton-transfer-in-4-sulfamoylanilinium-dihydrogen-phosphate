@@ -1,0 +1,134 @@
+{
+  "provenance": {
+    "script": "interaction.py",
+    "argv": [
+      "sfa_pair_pcm_d3"
+    ],
+    "case": "sfa_pair_pcm_d3",
+    "case_file": "molecules/sfa/cases/sfa_pair_pcm_d3.json",
+    "charge": 0,
+    "spin": 0,
+    "basis": "6-311++G(d,p)",
+    "grid_level": 4,
+    "environment": "IEF-PCM (water, eps = 78.3553, Lebedev order 29)",
+    "case_xc": "b3lyp",
+    "case_disp": "d3bj",
+    "density_fitting": true,
+    "pyscf_version": "2.14.0",
+    "threads": 8,
+    "host": "cqc-dft-01",
+    "finished": "2026-09-28T12:30:38",
+    "geometry": "molecules/sfa/results/sfa_pair_pcm_d3/opt.xyz",
+    "geometry_sha256": "a21dd40f42c1ec9fc8ddab752a9067f7c6c816d8d881afab0c3d53a8cbb6e870",
+    "proton": {
+      "d_H_N_A": 1.0974250194056019,
+      "d_H_O_A": 1.4840939777321678,
+      "on": "N (ionic pair)"
+    },
+    "wall_min": 13.55
+  },
+  "partition": "ionic",
+  "proton_transferred_in_geometry": false,
+  "fragments": {
+    "4-sulfamoylanilinium cation": {
+      "atoms": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ],
+      "charge": 1,
+      "relaxed_case": "cation_pcm_d3",
+      "chemical_name": "4-sulfamoylanilinium cation",
+      "relaxed_geometry": "molecules/sfa/results/cation_pcm_d3/opt.xyz",
+      "relaxed_sha256": "834fd35cabe995f09d194ab65e718c9daf4810553dde8798df0915a7c45aec59"
+    },
+    "dihydrogen phosphate anion": {
+      "atoms": [
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26
+      ],
+      "charge": -1,
+      "relaxed_case": "h2po4_pcm_d3",
+      "chemical_name": "dihydrogen phosphate anion",
+      "relaxed_geometry": "molecules/sfa/results/h2po4_pcm_d3/opt.xyz",
+      "relaxed_sha256": "5d5b5a41363265aa0026e9c2628adeb2c0185b416b862f3f56b412336cf93376"
+    }
+  },
+  "energies_Ha": {
+    "pcm": {
+      "AB": -1536.053521008019,
+      "4-sulfamoylanilinium cation|AB": -892.1697651037109,
+      "4-sulfamoylanilinium cation|own": -892.1694174454296,
+      "dihydrogen phosphate anion|AB": -643.8644114919658,
+      "dihydrogen phosphate anion|own": -643.8625397925086,
+      "4-sulfamoylanilinium cation|relaxed": -892.1731334140368,
+      "4-sulfamoylanilinium cation|relaxed_D3": -0.04093565386327258,
+      "dihydrogen phosphate anion|relaxed": -643.8633615863266,
+      "dihydrogen phosphate anion|relaxed_D3": -0.008875576187184554
+    },
+    "gas_bsse_crosscheck": {
+      "AB": -1535.9729685502864,
+      "4-sulfamoylanilinium cation|AB": -892.0280333442413,
+      "4-sulfamoylanilinium cation|own": -892.027637898798,
+      "dihydrogen phosphate anion|AB": -643.7472966952741,
+      "dihydrogen phosphate anion|own": -643.7448657435056
+    }
+  },
+  "D3_Ha": {
+    "AB": -0.05712564096512803,
+    "4-sulfamoylanilinium cation": -0.040954630703543805,
+    "dihydrogen phosphate anion": -0.00886614222628229
+  },
+  "results": {
+    "E_int_raw_kcal": -18.1153439193156,
+    "E_int_CP_kcal": -16.722675912240398,
+    "BSSE_kcal": 1.392668007075202,
+    "E_int_CP_electronic_kcal": -12.138802013768668,
+    "E_int_D3_kcal": -4.58387389847173,
+    "E_def_kcal": {
+      "4-sulfamoylanilinium cation": 2.319897358959158,
+      "dihydrogen phosphate anion": 0.5216033062512495
+    },
+    "E_bind_kcal": -13.88117524702999
+  },
+  "results_kJ": {
+    "E_int_raw_kJ": -75.79459895218085,
+    "E_int_CP_kJ": -69.96767601105758,
+    "BSSE_kJ": 5.826922941123264,
+    "E_int_CP_electronic_kJ": -50.78874762142972,
+    "E_int_D3_kJ": -19.17892838962787,
+    "E_def_kJ": {
+      "4-sulfamoylanilinium cation": 9.706450549086568,
+      "dihydrogen phosphate anion": 2.182388233175683
+    },
+    "E_bind_kJ": -58.07883722879533
+  },
+  "gas_crosscheck_for_pcm": {
+    "BSSE_gas_same_geometry_kcal": 1.7735910277129345,
+    "E_int_CP_gas_same_geometry_kcal": -128.6039118344986
+  },
+  "definitions": "E_int(CP)=E_AB-E_A(AB basis)-E_B(AB basis); BSSE=E_int(CP)-E_int(raw); E_def(X)=E_X(cplx)-E_X(relaxed); E_bind=E_int(CP)+sum E_def; D3 added on real atoms (no BSSE)",
+  "pcm_note": "Approximate counterpoise in PCM: each species in its own cavity (fragments: real atoms only); ghost functions extend into the solvent region where the partner was."
+}

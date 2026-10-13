@@ -1,0 +1,206 @@
+{
+ "_meta": {
+  "what": "Rendering parameters of figure group B (Figs. 5-10 and SI figures): isovalues, colour ranges, broadenings and similar choices that are NOT results. Same schema as facts.json (value, unit, meaning, source) so that they can be merged into facts.json as fig.* keys for numbers_audit.",
+  "written_by": "paper/main/figures/scripts/_figb.py users (figure group B)"
+ },
+ "igmh_iso": {
+  "value": 0.005,
+  "unit": "a.u.",
+  "precision": 3,
+  "meaning": "isovalue of the IGMH inter-fragment delta-g (delta g_inter) isosurface, Fig. 5a",
+  "source": "paper/main/figures/scripts/fig05_qtaim_nci.py (Multiwfn igmh.json figure_hint 0.005 a.u.)"
+ },
+ "igmh_range": {
+  "value": [
+   -0.08,
+   0.02
+  ],
+  "unit": "a.u.",
+  "precision": 2,
+  "meaning": "sign(lambda2)rho colour range of the IGMH isosurface (blue -> green at 0 -> red, two slopes); covers rho at the N1-H1A...O5 BCP (0.078 a.u.)",
+  "source": "paper/main/figures/scripts/fig05_qtaim_nci.py"
+ },
+ "orbital_iso": {
+  "value": 0.03,
+  "unit": "a.u.",
+  "precision": 2,
+  "meaning": "orbital isovalue (+ orange, - violet) of the HOMO/LUMO renders, Fig. 7a,b",
+  "source": "paper/main/figures/scripts/fig07_fmo_tddft.py"
+ },
+ "dos_window": {
+  "value": [
+   -12.0,
+   0.0
+  ],
+  "unit": "eV",
+  "precision": 0,
+  "meaning": "energy window of the TDOS/PDOS panel, Fig. 7c (Multiwfn curve, FWHM facts dos.fwhm)",
+  "source": "paper/main/figures/scripts/fig07_fmo_tddft.py"
+ },
+ "mep_iso": {
+  "value": 0.001,
+  "unit": "a.u.",
+  "precision": 3,
+  "meaning": "electron-density isovalue of the surface on which the MEP is mapped (Multiwfn quantitative surface analysis default), Fig. 8",
+  "source": "paper/main/figures/scripts/fig08_mep.py"
+ },
+ "mep_range": {
+  "value": [
+   -80,
+   100
+  ],
+  "unit": "kcal mol-1",
+  "precision": 0,
+  "meaning": "MEP colour range shared by both panels of Fig. 8 (two slopes, green at 0)",
+  "source": "paper/main/figures/scripts/fig08_mep.py"
+ },
+ "mep_label_min_abs": {
+  "value": 40,
+  "unit": "kcal mol-1",
+  "precision": 0,
+  "meaning": "extrema of the ion pair with |V| below this are drawn but not labelled (Fig. 8a); every labelled value is a facts.json bulk.mep value",
+  "source": "paper/main/figures/scripts/fig08_mep.py"
+ },
+ "mep_hist_bin": {
+  "value": 2.5,
+  "unit": "kcal mol-1",
+  "precision": 1,
+  "meaning": "bin width of the surface-area histogram of the ESP, Fig. 8c",
+  "source": "paper/main/figures/scripts/fig08_mep.py"
+ },
+ "hs_dnorm_range": {
+  "value": [
+   -0.85,
+   2.1
+  ],
+  "unit": "",
+  "precision": 2,
+  "meaning": "d_norm colour range of the Hirshfeld surfaces (red at the minimum, white at 0, blue at the maximum; two slopes), Fig. 6a,b and SI",
+  "source": "paper/main/figures/scripts/fig06_hirshfeld.py"
+ },
+ "hs_fp_range": {
+  "value": [
+   0.6,
+   2.6
+  ],
+  "unit": "A",
+  "precision": 1,
+  "meaning": "d_i and d_e axis range of the fingerprint plots (bins of 0.01 A from hirshfeld_xray/*_fingerprint.npz)",
+  "source": "paper/main/figures/scripts/fig06_hirshfeld.py"
+ },
+ "hs_opacity": {
+  "value": 1.0,
+  "unit": "",
+  "precision": 2,
+  "meaning": "opacity of the d_norm surface (1 = opaque; translucent surfaces showed depth-peeling artefacts on the Pi renderer)",
+  "source": "paper/main/figures/scripts/fig06_hirshfeld.py"
+ },
+ "hs_fp_rebin": {
+  "value": 2,
+  "unit": "",
+  "precision": 0,
+  "meaning": "fingerprint bins merged 2 x 2 (0.01 A bins of the npz -> 0.02 A)",
+  "source": "paper/main/figures/scripts/fig06_hirshfeld.py"
+ },
+ "elf_atom_tol": {
+  "value": 0.6,
+  "unit": "A",
+  "precision": 1,
+  "meaning": "atoms within this distance of an ELF/LOL plane are drawn and labelled (SI ELF/LOL figure)",
+  "source": "paper/si/figures/scripts/figS_elf_lol.py"
+ },
+ "dock_pocket_cut": {
+  "value": 3.8,
+  "unit": "A",
+  "precision": 1,
+  "meaning": "pocket residues drawn in the docking renders: any heavy atom within this distance of a drawn ligand (Fig. 9a, 9b)",
+  "source": "paper/main/figures/scripts/_dock3d.py users"
+ },
+ "rdg_xlim": {
+  "value": [
+   -0.09,
+   0.04
+  ],
+  "unit": "a.u.",
+  "precision": 2,
+  "meaning": "sign(lambda2)rho window of the SI RDG scatter plots (includes the N1-H1A...O5 spike at facts nci.pcm.hb_spike)",
+  "source": "paper/si/figures/scripts/figS_rdg.py"
+ },
+ "rdg_ymax": {
+  "value": 1.0,
+  "unit": "",
+  "precision": 1,
+  "meaning": "RDG upper limit of the SI RDG scatter plots",
+  "source": "paper/si/figures/scripts/figS_rdg.py"
+ },
+ "ir_fwhm": {
+  "value": 10,
+  "unit": "cm-1",
+  "precision": 0,
+  "meaning": "FWHM of the Lorentzian bands of the SI IR spectrum",
+  "source": "paper/si/figures/scripts/figS_ir.py"
+ },
+ "hs_decomp_min": {
+  "value": 0.5,
+  "unit": "%",
+  "precision": 1,
+  "meaning": "contact types with at least this share of the surface get a decomposed fingerprint panel (SI Hirshfeld decomposition)",
+  "source": "paper/si/figures/scripts/figS_hirshfeld_decomp.py"
+ },
+ "hs_fp_bin": {
+  "value": 0.02,
+  "unit": "A",
+  "precision": 2,
+  "meaning": "bin width of the plotted fingerprint plots (0.01 A npz bins merged 2 x 2, PARAM hs_fp_rebin)",
+  "source": "paper/main/figures/scripts/fig06_hirshfeld.py"
+ },
+ "dock_bb_cut": {
+  "value": 3.5,
+  "unit": "A",
+  "precision": 1,
+  "meaning": "docking renders: backbone N, C, O of a pocket residue drawn only when its N or O is within this distance of a ligand",
+  "source": "paper/main/figures/scripts/_dock3d.py"
+ },
+ "dock_polar_max": {
+  "value": 3.2,
+  "unit": "A",
+  "precision": 1,
+  "meaning": "interaction maps (Fig. 10 right): receptor N/O ... ligand N/O pairs drawn when at most this far apart (geometric criterion; distances from dock/results/production_contacts.json)",
+  "source": "paper/main/figures/scripts/_dockmap.py"
+ },
+ "dock_contact_cut": {
+  "value": 4.0,
+  "unit": "A",
+  "precision": 1,
+  "meaning": "contact cutoff of dock/contacts.py (residues_within_4A) quoted in the Fig. 10 caption (protocol value, dock/RESULTS.md section 4)",
+  "source": "dock/contacts.py"
+ },
+ "dock_gate_rmsd": {
+  "value": 1.0,
+  "unit": "A",
+  "precision": 1,
+  "meaning": "gate G2 top-pose RMSD threshold (PLAN.md P3; dock/VALIDATION.md section 4), drawn in the SI seed figure and quoted in captions",
+  "source": "dock/VALIDATION.md"
+ },
+ "dock_crit_2A": {
+  "value": 2.0,
+  "unit": "A",
+  "precision": 1,
+  "meaning": "conventional 2.0 A redocking criterion (dock/VALIDATION.md section 4), quoted in captions",
+  "source": "dock/VALIDATION.md"
+ },
+ "dock_ca_n": {
+  "value": 257,
+  "unit": "",
+  "precision": 0,
+  "meaning": "C-alpha atoms in the 6RL9/3HS4 superposition that carries the cross-docking references (production_summary.json rmsd_to_crystal n_ca_atoms; its RMSD is facts dock.val.ca_rmsd_6RL9_3HS4)",
+  "source": "dock/results/production_summary.json"
+ },
+ "dock_label_cut": {
+  "value": 3.5,
+  "unit": "A",
+  "precision": 1,
+  "meaning": "docking renders: residues with a heavy atom within this distance of a drawn ligand are named (farther ones are drawn unlabelled)",
+  "source": "paper/main/figures/scripts/_dock3d.py"
+ }
+}

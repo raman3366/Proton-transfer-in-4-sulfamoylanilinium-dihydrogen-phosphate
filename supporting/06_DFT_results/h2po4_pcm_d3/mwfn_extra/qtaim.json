@@ -1,0 +1,38 @@
+{
+  "n_cp": 13,
+  "counts": {
+    "(3,-3)": 7,
+    "(3,-1)": 6,
+    "(3,+1)": 0,
+    "(3,+3)": 0
+  },
+  "cp_searches_logged": {
+    "n": 5,
+    "new_cps_each": [
+      7,
+      6,
+      0,
+      0,
+      0
+    ],
+    "expected_n": 5,
+    "note": "nuclei, midpoints, triangles, pyramids, spheres"
+  },
+  "poincare_hopf": {
+    "n-b+r-c": 1,
+    "satisfied": true
+  },
+  "n_noncovalent_bcp": 0,
+  "case_hbonds_without_bcp": [],
+  "n_bcp_without_bond_path": 0,
+  "hbonds": [],
+  "other_noncovalent": [],
+  "formulae": {
+    "E_HB_Espinosa": "V(r_BCP)/2 [Espinosa, Molins, Lecomte, CPL 285 (1998) 170, doi:10.1016/S0009-2614(98)00036-0]",
+    "BE_Emamian_neutral": "BE/kcal mol-1 = -223.08 rho_BCP/a.u. + 0.7423 [doi:10.1002/jcc.26068]",
+    "BE_Emamian_charged": "BE/kcal mol-1 = -332.34 rho_BCP/a.u. - 1.0661 [doi:10.1002/jcc.26068]",
+    "fit_choice": "charged if either fragment has a net charge; ion pairs are outside both training sets",
+    "nature": "Rozas, Alkorta, Elguero, JACS 122 (2000) 11154, doi:10.1021/ja0017864",
+    "hbond_criteria": "BCP between H (bonded to D) and acceptor A, H...A < Bondi sum, D-H...A >= 110 deg"
+  }
+}

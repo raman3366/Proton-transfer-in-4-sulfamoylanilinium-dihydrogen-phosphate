@@ -1,0 +1,498 @@
+{
+ "step2": "2e",
+ "hard": [
+  {
+   "check": "H1 ligand terms with the ligating nitrogen arrive under the new type",
+   "passed": true,
+   "terms": [
+    {
+     "kind": "bond",
+     "types": "Y4-sy",
+     "wanted": [
+      461.21,
+      1.5906
+     ],
+     "arrived": [
+      461.21,
+      1.5906
+     ],
+     "passed": true
+    },
+    {
+     "kind": "angle",
+     "types": "ca-sy-Y4",
+     "wanted": [
+      101.19,
+      117.133
+     ],
+     "arrived": [
+      101.19,
+      117.133
+     ],
+     "passed": true
+    },
+    {
+     "kind": "angle",
+     "types": "hn-Y4-sy",
+     "wanted": [
+      61.55,
+      118.059
+     ],
+     "arrived": [
+      61.55,
+      118.059
+     ],
+     "passed": true
+    },
+    {
+     "kind": "angle",
+     "types": "Y4-sy-o",
+     "wanted": [
+      132.73,
+      122.18
+     ],
+     "arrived": [
+      132.73,
+      122.18
+     ],
+     "passed": true
+    },
+    {
+     "kind": "bond",
+     "types": "Y4-hn",
+     "wanted": [
+      454.59,
+      1.022
+     ],
+     "arrived": [
+      454.59,
+      1.0221
+     ],
+     "passed": true
+    },
+    {
+     "kind": "dihedral",
+     "types": "hn-Y4-sy-ca",
+     "wanted": [
+      [
+       0.2624,
+       180.0,
+       1
+      ],
+      [
+       2.703,
+       0.0,
+       2
+      ]
+     ],
+     "arrived": [
+      [
+       0.2624,
+       180.0,
+       1
+      ],
+      [
+       2.703,
+       0.0,
+       2
+      ]
+     ],
+     "passed": true
+    },
+    {
+     "kind": "dihedral",
+     "types": "hn-Y4-sy-o",
+     "wanted": [
+      [
+       0.0,
+       null,
+       null
+      ]
+     ],
+     "arrived": [
+      [
+       0.0,
+       0.0,
+       2
+      ]
+     ],
+     "passed": true
+    }
+   ]
+  },
+  {
+   "check": "H2 tleap: no error, 4,094 atoms, net charge -1",
+   "passed": true,
+   "messages": [],
+   "n_atoms": 4094,
+   "net_charge": -1.0,
+   "warnings": [
+    "/root/cqc-sfa-tools/md/bin/teLeap: Warning!",
+    "/root/cqc-sfa-tools/md/bin/teLeap: Warning!",
+    "/root/cqc-sfa-tools/md/bin/teLeap: Warning!",
+    "/root/cqc-sfa-tools/md/bin/teLeap: Warning!",
+    "/root/cqc-sfa-tools/md/bin/teLeap: Warning!",
+    "/root/cqc-sfa-tools/md/bin/teLeap: Warning!"
+   ]
+  },
+  {
+   "check": "H3 four Zn-N bonds, 14 angles with zinc, torsions through zinc all zero",
+   "passed": true,
+   "n_bonds": 4,
+   "n_angles": 14,
+   "n_torsions_with_zinc": 39,
+   "n_nonzero_torsions": 0
+  },
+  {
+   "check": "H4 charges of the site: five residues sum to +1, ligand charges refitted",
+   "passed": true,
+   "residue_charges": {
+    "HD1": 0.3344,
+    "HD2": 0.4132,
+    "HE1": 0.4472,
+    "ZN1": 0.3356,
+    "SN1": -0.5304
+   },
+   "sum": 1.0,
+   "ligand_charges_left_at_input_value": 0
+  }
+ ],
+ "reported": {
+  "zinc_bonds": [
+   {
+    "atom": "HD1@NE2",
+    "residue_index": 93,
+    "k": 78.0,
+    "r0": 2.01,
+    "r_structure": 2.0099,
+    "r_6RL9": 2.01
+   },
+   {
+    "atom": "HD2@NE2",
+    "residue_index": 95,
+    "k": 73.3,
+    "r0": 2.021,
+    "r_structure": 2.0206,
+    "r_6RL9": 2.021
+   },
+   {
+    "atom": "HE1@ND1",
+    "residue_index": 118,
+    "k": 74.3,
+    "r0": 2.018,
+    "r_structure": 2.0183,
+    "r_6RL9": 2.018
+   },
+   {
+    "atom": "SN1@N2",
+    "residue_index": 261,
+    "k": 122.1,
+    "r0": 1.931,
+    "r_structure": 1.9314,
+    "r_6RL9": 1.931
+   }
+  ],
+  "zinc_angles": [
+   {
+    "atoms": "HD1@CD2-HD1@NE2-ZN1@ZN",
+    "k": 50.0,
+    "theta0": 124.21,
+    "theta_structure": 124.21
+   },
+   {
+    "atoms": "HD1@CE1-HD1@NE2-ZN1@ZN",
+    "k": 50.0,
+    "theta0": 127.89,
+    "theta_structure": 127.89
+   },
+   {
+    "atoms": "HD1@NE2-ZN1@ZN-HD2@NE2",
+    "k": 35.0,
+    "theta0": 103.82,
+    "theta_structure": 103.82
+   },
+   {
+    "atoms": "HD1@NE2-ZN1@ZN-HE1@ND1",
+    "k": 35.0,
+    "theta0": 113.59,
+    "theta_structure": 113.59
+   },
+   {
+    "atoms": "HD1@NE2-ZN1@ZN-SN1@N2",
+    "k": 35.0,
+    "theta0": 108.92,
+    "theta_structure": 108.92
+   },
+   {
+    "atoms": "HD2@CD2-HD2@NE2-ZN1@ZN",
+    "k": 50.0,
+    "theta0": 122.91,
+    "theta_structure": 122.91
+   },
+   {
+    "atoms": "HD2@CE1-HD2@NE2-ZN1@ZN",
+    "k": 50.0,
+    "theta0": 129.31,
+    "theta_structure": 129.31
+   },
+   {
+    "atoms": "HD2@NE2-ZN1@ZN-HE1@ND1",
+    "k": 35.0,
+    "theta0": 98.41,
+    "theta_structure": 98.41
+   },
+   {
+    "atoms": "HD2@NE2-ZN1@ZN-SN1@N2",
+    "k": 35.0,
+    "theta0": 114.28,
+    "theta_structure": 114.28
+   },
+   {
+    "atoms": "HE1@CE1-HE1@ND1-ZN1@ZN",
+    "k": 50.0,
+    "theta0": 121.05,
+    "theta_structure": 121.05
+   },
+   {
+    "atoms": "HE1@CG-HE1@ND1-ZN1@ZN",
+    "k": 50.0,
+    "theta0": 131.22,
+    "theta_structure": 131.22
+   },
+   {
+    "atoms": "HE1@ND1-ZN1@ZN-SN1@N2",
+    "k": 35.0,
+    "theta0": 116.83,
+    "theta_structure": 116.83
+   },
+   {
+    "atoms": "ZN1@ZN-SN1@N2-SN1@HN21",
+    "k": 50.0,
+    "theta0": 120.0,
+    "theta_structure": 107.41
+   },
+   {
+    "atoms": "ZN1@ZN-SN1@N2-SN1@S",
+    "k": 50.0,
+    "theta0": 117.55,
+    "theta_structure": 117.55
+   }
+  ],
+  "ligand_charges": [
+   {
+    "atom": "C1",
+    "type": "ca",
+    "resp": 0.4649,
+    "am1bcc": 0.0924
+   },
+   {
+    "atom": "C2",
+    "type": "ca",
+    "resp": -0.2747,
+    "am1bcc": -0.2122
+   },
+   {
+    "atom": "C3",
+    "type": "ca",
+    "resp": -0.153,
+    "am1bcc": -0.0302
+   },
+   {
+    "atom": "C4",
+    "type": "ca",
+    "resp": 0.0802,
+    "am1bcc": -0.2537
+   },
+   {
+    "atom": "C5",
+    "type": "ca",
+    "resp": -0.153,
+    "am1bcc": -0.0302
+   },
+   {
+    "atom": "C6",
+    "type": "ca",
+    "resp": -0.2747,
+    "am1bcc": -0.2122
+   },
+   {
+    "atom": "N1",
+    "type": "nv",
+    "resp": -0.9549,
+    "am1bcc": -0.8024
+   },
+   {
+    "atom": "N2",
+    "type": "Y4",
+    "resp": -0.9142,
+    "am1bcc": -1.2501
+   },
+   {
+    "atom": "O1",
+    "type": "o",
+    "resp": -0.4886,
+    "am1bcc": -0.7364
+   },
+   {
+    "atom": "O2",
+    "type": "o",
+    "resp": -0.4886,
+    "am1bcc": -0.78
+   },
+   {
+    "atom": "S",
+    "type": "sy",
+    "resp": 0.7903,
+    "am1bcc": 1.5118
+   },
+   {
+    "atom": "H2",
+    "type": "ha",
+    "resp": 0.1461,
+    "am1bcc": 0.1058
+   },
+   {
+    "atom": "H3",
+    "type": "ha",
+    "resp": 0.1554,
+    "am1bcc": 0.1388
+   },
+   {
+    "atom": "H5",
+    "type": "ha",
+    "resp": 0.1554,
+    "am1bcc": 0.1388
+   },
+   {
+    "atom": "H6",
+    "type": "ha",
+    "resp": 0.1461,
+    "am1bcc": 0.1058
+   },
+   {
+    "atom": "HN11",
+    "type": "hn",
+    "resp": 0.417,
+    "am1bcc": 0.3546
+   },
+   {
+    "atom": "HN12",
+    "type": "hn",
+    "resp": 0.417,
+    "am1bcc": 0.3546
+   },
+   {
+    "atom": "HN21",
+    "type": "hn",
+    "resp": 0.3988,
+    "am1bcc": 0.5042
+   }
+  ],
+  "zinc_charge": 0.3356,
+  "mcpb_rules_of_thumb": {
+   "A_bond_k_below_200_and_r_below_2p8": true,
+   "B_angle_k_below_100_and_theta_above_100": false,
+   "B_exceptions": [
+    {
+     "atoms": "HD2@NE2-ZN1@ZN-HE1@ND1",
+     "k": 35.0,
+     "theta0": 98.41,
+     "theta_structure": 98.41
+    }
+   ],
+   "C_torsions_through_zinc_zero": true,
+   "D_zinc_charge_below_plus_one": true,
+   "zinc_charge": 0.3356,
+   "E_zinc_lj_rmin_half_above_1": true,
+   "zinc_rmin_half": 1.395
+  },
+  "first_look_minimisation": {
+   "note": "vacuum, no cutoff, atoms beyond 12 A of the zinc fixed; a first look, NOT gate G-Z",
+   "n_free_atoms": 738,
+   "energy_before": -3781.9,
+   "energy_after": -4043.1,
+   "bonds": [
+    {
+     "atom": "HD1@NE2",
+     "before": 2.01,
+     "after": 2.004
+    },
+    {
+     "atom": "HD2@NE2",
+     "before": 2.021,
+     "after": 2.023
+    },
+    {
+     "atom": "HE1@ND1",
+     "before": 2.018,
+     "after": 2.022
+    },
+    {
+     "atom": "SN1@N2",
+     "before": 1.931,
+     "after": 1.904
+    }
+   ],
+   "angles": [
+    {
+     "atoms": "HD1@NE2-Zn-HD2@NE2",
+     "before": 103.8,
+     "after": 103.2
+    },
+    {
+     "atoms": "HD1@NE2-Zn-HE1@ND1",
+     "before": 113.6,
+     "after": 115.6
+    },
+    {
+     "atoms": "HD1@NE2-Zn-SN1@N2",
+     "before": 108.9,
+     "after": 105.8
+    },
+    {
+     "atoms": "HD2@NE2-Zn-HE1@ND1",
+     "before": 98.4,
+     "after": 99.2
+    },
+    {
+     "atoms": "HD2@NE2-Zn-SN1@N2",
+     "before": 114.3,
+     "after": 115.4
+    },
+    {
+     "atoms": "HE1@ND1-Zn-SN1@N2",
+     "before": 116.8,
+     "after": 117.1
+    }
+   ],
+   "ligand": {
+    "C4_S_N2": {
+     "before": 108.79,
+     "after": 109.75
+    },
+    "S_N2": {
+     "before": 1.5963,
+     "after": 1.569
+    },
+    "Zn_N2_S": {
+     "before": 117.55,
+     "after": 113.04
+    },
+    "Zn_N2_H": {
+     "before": 107.41,
+     "after": 115.76
+    },
+    "Zn_N2_S_C4": {
+     "before": -117.0,
+     "after": -120.6
+    },
+    "C3_C4_S_N2": {
+     "before": 132.1,
+     "after": 145.5
+    },
+    "heavy_atom_rmsd_no_fit": 0.216
+   }
+  }
+ },
+ "all_hard_checks_passed": true
+}

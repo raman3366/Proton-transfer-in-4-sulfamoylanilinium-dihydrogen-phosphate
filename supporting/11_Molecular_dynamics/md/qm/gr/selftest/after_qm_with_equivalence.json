@@ -1,0 +1,79 @@
+{
+ "what": "md/qm/after_qm.sh with the new step md/qm/resp_equiv.py, run on the synthetic files of md/qm/test_after_qm.py (potential of known charges, Hessian of a known harmonic model); 6 Oct 2026; NOT the model",
+ "runs": {
+  "2e (in the rehearsal of the queue)": {
+   "all_hard_checks_passed": true,
+   "hard": [
+    {
+     "check": "H1 ligand terms with the ligating nitrogen arrive under the new type",
+     "passed": true
+    },
+    {
+     "check": "H2 tleap: no error, 4,094 atoms, net charge -1",
+     "passed": true
+    },
+    {
+     "check": "H3 four Zn-N bonds, 14 angles with zinc, torsions through zinc all zero",
+     "passed": true
+    },
+    {
+     "check": "H4 charges of the site: five residues sum to +1, ligand charges refitted",
+     "passed": true
+    }
+   ],
+   "zinc_charge": 1.8375
+  },
+  "2s (scratch copy of the known-content folder)": {
+   "all_hard_checks_passed": true,
+   "hard": [
+    {
+     "check": "H1 ligand terms with the ligating nitrogen arrive under the new type",
+     "passed": true
+    },
+    {
+     "check": "H2 tleap: no error, 4,094 atoms, net charge -1",
+     "passed": true
+    },
+    {
+     "check": "H3 four Zn-N bonds, 14 angles with zinc, torsions through zinc all zero",
+     "passed": true
+    },
+    {
+     "check": "H4 charges of the site: five residues sum to +1, ligand charges refitted",
+     "passed": true
+    }
+   ],
+   "zinc_charge": 1.8375
+  },
+  "gr_mm_on_the_2s_folder": {
+   "n2h": {
+    "mode": "structure",
+    "k": 56.0,
+    "theta0": 107.4065,
+    "replaced_line": "M1-Y4-hn    56.00     107.41    Created by Seminario method using MCPB.py"
+   },
+   "fit_terms_in_topology": {
+    "Zn_N2_H": {
+     "k": 56.0,
+     "theta0": 107.40604604305861
+    },
+    "S_N2_H": {
+     "k": 61.55,
+     "theta0": 118.059050327926
+    },
+    "Zn_N2_S": {
+     "k": 61.24999999999999,
+     "theta0": 117.55005066555006
+    }
+   },
+   "topology_check": {
+    "bonds": 61,
+    "angles": 102,
+    "dihedrals": 170
+   },
+   "different": [
+    "angle ZN-N2-HN21 56.0 107.40604604305861 / (56.0, 107.41004586142641)"
+   ]
+  }
+ }
+}

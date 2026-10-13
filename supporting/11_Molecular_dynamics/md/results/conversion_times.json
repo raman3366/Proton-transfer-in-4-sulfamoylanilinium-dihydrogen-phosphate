@@ -1,0 +1,2100 @@
+{
+ "what": "Time of a conversion from the release of the ligand, for every run, by the rule of md/PLAN.md (entry of 7 Oct 2026, 12:10 AM IST, point 1). Read from the column `state` of timeseries_equil_solute.csv (stages 4, 5, 6) and timeseries_solute.csv of both programs.",
+ "rule": {
+  "released_stages": [
+   4,
+   5,
+   6
+  ],
+  "dwell_frames": 100,
+  "assigned_state": "the state of the frame if C or R, else that of the frame before; before the first joined frame the state of the start (specification, section 4)",
+  "time": "first frame of the first long visit in the opposite state, counted from the start of stage 4"
+ },
+ "script": {
+  "name": "md/production/conversion_time.py",
+  "sha256": "f46c14eec0da74a08464af9c6b99205d275a04cc88661c047ffceefb32b30c33"
+ },
+ "runs_dir": "/root/cqc-sfa-md/runs",
+ "written": "8 Oct 2026, 6:38 AM IST",
+ "runs": [
+  {
+   "run_dir": "/root/cqc-sfa-md/runs/bonded_2e/N1",
+   "label": "bonded_2e/N1",
+   "start": "N",
+   "model": "bonded_2e",
+   "role": "production",
+   "state_of_start": "C",
+   "opposite_state": "R",
+   "programs": {
+    "analysis": {
+     "folder": "/root/cqc-sfa-md/runs/bonded_2e/N1/analysis",
+     "files": {
+      "timeseries_equil_solute.csv": "f97b4846f172eba4e4c84f6cb46df4ac4deabfc98f08bdee8f46c98b96b2928c",
+      "timeseries_solute.csv": "2ed9692c2a7c5ef24b797d07a602568bb587bed93a17fe6844f89ec6bbd693bf"
+     },
+     "n_equilibration_frames_in_file": 200,
+     "n_released_equilibration_frames": 130,
+     "n_production_frames": 10000,
+     "n_joined_frames": 10130,
+     "release_time_ns_on_production_clock": -1.3,
+     "released_part_of_equilibration_ps": 1300.0,
+     "time_axis_max_deviation_ps": 0.0,
+     "n_visits": 1,
+     "n_long_visits": 1,
+     "long_visits": [
+      {
+       "state": "C",
+       "first_joined_index": 0,
+       "n_frames": 10130,
+       "part_of_first_frame": "equilibration",
+       "time_from_release_ps": 10.0
+      }
+     ],
+     "n_transitions_joined": 0,
+     "state_first_released_frame": "C",
+     "counts_released_equilibration": {
+      "C": 129,
+      "R": 0,
+      "I": 1
+     },
+     "conversion": null,
+     "program": "first program (analyse_md.py)",
+     "start": "N",
+     "model": "bonded_2e",
+     "role": "production",
+     "state_of_start": "C",
+     "opposite_state": "R",
+     "verdict_of_the_run_last_20_ns": "STAYED",
+     "first_passage_ns_production_only": null,
+     "first_passage_frame_production_only": null,
+     "equilibration_total_ps": 2000.0,
+     "equilibration_steps": [
+      "eq01",
+      "eq02",
+      "eq03",
+      "eq04",
+      "eq05",
+      "eq06"
+     ]
+    },
+    "analysis_recheck": {
+     "folder": "/root/cqc-sfa-md/runs/bonded_2e/N1/analysis_recheck",
+     "files": {
+      "timeseries_equil_solute.csv": "f97b4846f172eba4e4c84f6cb46df4ac4deabfc98f08bdee8f46c98b96b2928c",
+      "timeseries_solute.csv": "2ed9692c2a7c5ef24b797d07a602568bb587bed93a17fe6844f89ec6bbd693bf"
+     },
+     "n_equilibration_frames_in_file": 200,
+     "n_released_equilibration_frames": 130,
+     "n_production_frames": 10000,
+     "n_joined_frames": 10130,
+     "release_time_ns_on_production_clock": -1.3,
+     "released_part_of_equilibration_ps": 1300.0,
+     "time_axis_max_deviation_ps": 0.0,
+     "n_visits": 1,
+     "n_long_visits": 1,
+     "long_visits": [
+      {
+       "state": "C",
+       "first_joined_index": 0,
+       "n_frames": 10130,
+       "part_of_first_frame": "equilibration",
+       "time_from_release_ps": 10.0
+      }
+     ],
+     "n_transitions_joined": 0,
+     "state_first_released_frame": "C",
+     "counts_released_equilibration": {
+      "C": 129,
+      "R": 0,
+      "I": 1
+     },
+     "conversion": null,
+     "program": "second program (recheck_md.py)",
+     "start": "N",
+     "model": "bonded_2e",
+     "role": "production",
+     "state_of_start": "C",
+     "opposite_state": "R",
+     "verdict_of_the_run_last_20_ns": "STAYED",
+     "first_passage_ns_production_only": null,
+     "first_passage_frame_production_only": null,
+     "equilibration_total_ps": 2000.0,
+     "equilibration_steps": [
+      "eq01",
+      "eq02",
+      "eq03",
+      "eq04",
+      "eq05",
+      "eq06"
+     ]
+    }
+   },
+   "n_joined_frames_equal": true,
+   "n_frames_with_different_state": 0,
+   "same_frame": true,
+   "same_start_state": true,
+   "conversion": null,
+   "reported_as": "none (no visit of at least 1 ns in the opposite state after the release)",
+   "first_passage_ns_production_only": null
+  },
+  {
+   "run_dir": "/root/cqc-sfa-md/runs/bonded_2e/N2",
+   "label": "bonded_2e/N2",
+   "start": "N",
+   "model": "bonded_2e",
+   "role": "production",
+   "state_of_start": "C",
+   "opposite_state": "R",
+   "programs": {
+    "analysis": {
+     "folder": "/root/cqc-sfa-md/runs/bonded_2e/N2/analysis",
+     "files": {
+      "timeseries_equil_solute.csv": "62c133bd51715ce4fcc5e1177b2c5d97ed0acac45d8c34d829df2d79fb204819",
+      "timeseries_solute.csv": "7e0eff7ef65b4ae46b6f319d763e42b77f5b486b76b170ae55d73abbb08b1711"
+     },
+     "n_equilibration_frames_in_file": 200,
+     "n_released_equilibration_frames": 130,
+     "n_production_frames": 10000,
+     "n_joined_frames": 10130,
+     "release_time_ns_on_production_clock": -1.3,
+     "released_part_of_equilibration_ps": 1300.0,
+     "time_axis_max_deviation_ps": 0.0,
+     "n_visits": 1,
+     "n_long_visits": 1,
+     "long_visits": [
+      {
+       "state": "C",
+       "first_joined_index": 0,
+       "n_frames": 10130,
+       "part_of_first_frame": "equilibration",
+       "time_from_release_ps": 10.0
+      }
+     ],
+     "n_transitions_joined": 0,
+     "state_first_released_frame": "C",
+     "counts_released_equilibration": {
+      "C": 130,
+      "R": 0,
+      "I": 0
+     },
+     "conversion": null,
+     "program": "first program (analyse_md.py)",
+     "start": "N",
+     "model": "bonded_2e",
+     "role": "production",
+     "state_of_start": "C",
+     "opposite_state": "R",
+     "verdict_of_the_run_last_20_ns": "STAYED",
+     "first_passage_ns_production_only": null,
+     "first_passage_frame_production_only": null,
+     "equilibration_total_ps": 2000.0,
+     "equilibration_steps": [
+      "eq01",
+      "eq02",
+      "eq03",
+      "eq04",
+      "eq05",
+      "eq06"
+     ]
+    },
+    "analysis_recheck": {
+     "folder": "/root/cqc-sfa-md/runs/bonded_2e/N2/analysis_recheck",
+     "files": {
+      "timeseries_equil_solute.csv": "62c133bd51715ce4fcc5e1177b2c5d97ed0acac45d8c34d829df2d79fb204819",
+      "timeseries_solute.csv": "7e0eff7ef65b4ae46b6f319d763e42b77f5b486b76b170ae55d73abbb08b1711"
+     },
+     "n_equilibration_frames_in_file": 200,
+     "n_released_equilibration_frames": 130,
+     "n_production_frames": 10000,
+     "n_joined_frames": 10130,
+     "release_time_ns_on_production_clock": -1.3,
+     "released_part_of_equilibration_ps": 1300.0,
+     "time_axis_max_deviation_ps": 0.0,
+     "n_visits": 1,
+     "n_long_visits": 1,
+     "long_visits": [
+      {
+       "state": "C",
+       "first_joined_index": 0,
+       "n_frames": 10130,
+       "part_of_first_frame": "equilibration",
+       "time_from_release_ps": 10.0
+      }
+     ],
+     "n_transitions_joined": 0,
+     "state_first_released_frame": "C",
+     "counts_released_equilibration": {
+      "C": 130,
+      "R": 0,
+      "I": 0
+     },
+     "conversion": null,
+     "program": "second program (recheck_md.py)",
+     "start": "N",
+     "model": "bonded_2e",
+     "role": "production",
+     "state_of_start": "C",
+     "opposite_state": "R",
+     "verdict_of_the_run_last_20_ns": "STAYED",
+     "first_passage_ns_production_only": null,
+     "first_passage_frame_production_only": null,
+     "equilibration_total_ps": 2000.0,
+     "equilibration_steps": [
+      "eq01",
+      "eq02",
+      "eq03",
+      "eq04",
+      "eq05",
+      "eq06"
+     ]
+    }
+   },
+   "n_joined_frames_equal": true,
+   "n_frames_with_different_state": 0,
+   "same_frame": true,
+   "same_start_state": true,
+   "conversion": null,
+   "reported_as": "none (no visit of at least 1 ns in the opposite state after the release)",
+   "first_passage_ns_production_only": null
+  },
+  {
+   "run_dir": "/root/cqc-sfa-md/runs/bonded_2e/N3",
+   "label": "bonded_2e/N3",
+   "start": "N",
+   "model": "bonded_2e",
+   "role": "production",
+   "state_of_start": "C",
+   "opposite_state": "R",
+   "programs": {
+    "analysis": {
+     "folder": "/root/cqc-sfa-md/runs/bonded_2e/N3/analysis",
+     "files": {
+      "timeseries_equil_solute.csv": "c243f41b84e8fab19db79d560e01bd19fcf4179479f505034e7e8c40e84a0149",
+      "timeseries_solute.csv": "ac154383447940b800834d0e198de8b361a2839dcd0aa690e6700f035c189e78"
+     },
+     "n_equilibration_frames_in_file": 200,
+     "n_released_equilibration_frames": 130,
+     "n_production_frames": 10000,
+     "n_joined_frames": 10130,
+     "release_time_ns_on_production_clock": -1.3,
+     "released_part_of_equilibration_ps": 1300.0,
+     "time_axis_max_deviation_ps": 0.0,
+     "n_visits": 1,
+     "n_long_visits": 1,
+     "long_visits": [
+      {
+       "state": "C",
+       "first_joined_index": 0,
+       "n_frames": 10130,
+       "part_of_first_frame": "equilibration",
+       "time_from_release_ps": 10.0
+      }
+     ],
+     "n_transitions_joined": 0,
+     "state_first_released_frame": "C",
+     "counts_released_equilibration": {
+      "C": 130,
+      "R": 0,
+      "I": 0
+     },
+     "conversion": null,
+     "program": "first program (analyse_md.py)",
+     "start": "N",
+     "model": "bonded_2e",
+     "role": "production",
+     "state_of_start": "C",
+     "opposite_state": "R",
+     "verdict_of_the_run_last_20_ns": "STAYED",
+     "first_passage_ns_production_only": null,
+     "first_passage_frame_production_only": null,
+     "equilibration_total_ps": 2000.0,
+     "equilibration_steps": [
+      "eq01",
+      "eq02",
+      "eq03",
+      "eq04",
+      "eq05",
+      "eq06"
+     ]
+    },
+    "analysis_recheck": {
+     "folder": "/root/cqc-sfa-md/runs/bonded_2e/N3/analysis_recheck",
+     "files": {
+      "timeseries_equil_solute.csv": "c243f41b84e8fab19db79d560e01bd19fcf4179479f505034e7e8c40e84a0149",
+      "timeseries_solute.csv": "ac154383447940b800834d0e198de8b361a2839dcd0aa690e6700f035c189e78"
+     },
+     "n_equilibration_frames_in_file": 200,
+     "n_released_equilibration_frames": 130,
+     "n_production_frames": 10000,
+     "n_joined_frames": 10130,
+     "release_time_ns_on_production_clock": -1.3,
+     "released_part_of_equilibration_ps": 1300.0,
+     "time_axis_max_deviation_ps": 0.0,
+     "n_visits": 1,
+     "n_long_visits": 1,
+     "long_visits": [
+      {
+       "state": "C",
+       "first_joined_index": 0,
+       "n_frames": 10130,
+       "part_of_first_frame": "equilibration",
+       "time_from_release_ps": 10.0
+      }
+     ],
+     "n_transitions_joined": 0,
+     "state_first_released_frame": "C",
+     "counts_released_equilibration": {
+      "C": 130,
+      "R": 0,
+      "I": 0
+     },
+     "conversion": null,
+     "program": "second program (recheck_md.py)",
+     "start": "N",
+     "model": "bonded_2e",
+     "role": "production",
+     "state_of_start": "C",
+     "opposite_state": "R",
+     "verdict_of_the_run_last_20_ns": "STAYED",
+     "first_passage_ns_production_only": null,
+     "first_passage_frame_production_only": null,
+     "equilibration_total_ps": 2000.0,
+     "equilibration_steps": [
+      "eq01",
+      "eq02",
+      "eq03",
+      "eq04",
+      "eq05",
+      "eq06"
+     ]
+    }
+   },
+   "n_joined_frames_equal": true,
+   "n_frames_with_different_state": 0,
+   "same_frame": true,
+   "same_start_state": true,
+   "conversion": null,
+   "reported_as": "none (no visit of at least 1 ns in the opposite state after the release)",
+   "first_passage_ns_production_only": null
+  },
+  {
+   "run_dir": "/root/cqc-sfa-md/runs/bonded_2e/R1",
+   "label": "bonded_2e/R1",
+   "start": "R",
+   "model": "bonded_2e",
+   "role": "production",
+   "state_of_start": "R",
+   "opposite_state": "C",
+   "programs": {
+    "analysis": {
+     "folder": "/root/cqc-sfa-md/runs/bonded_2e/R1/analysis",
+     "files": {
+      "timeseries_equil_solute.csv": "50ab9ed4cac0f3cf6ab293aab10c0bf1d3c8466bb0573450e1de25347f10674f",
+      "timeseries_solute.csv": "6843c142695c719714b3f05cff4c120e3c94c42ce661de90890e82f27392e486"
+     },
+     "n_equilibration_frames_in_file": 250,
+     "n_released_equilibration_frames": 130,
+     "n_production_frames": 10000,
+     "n_joined_frames": 10130,
+     "release_time_ns_on_production_clock": -1.3,
+     "released_part_of_equilibration_ps": 1300.0,
+     "time_axis_max_deviation_ps": 0.0,
+     "n_visits": 4,
+     "n_long_visits": 1,
+     "long_visits": [
+      {
+       "state": "C",
+       "first_joined_index": 53,
+       "n_frames": 10077,
+       "part_of_first_frame": "equilibration",
+       "time_from_release_ps": 540.0
+      }
+     ],
+     "n_transitions_joined": 1,
+     "state_first_released_frame": "R",
+     "counts_released_equilibration": {
+      "C": 92,
+      "R": 27,
+      "I": 11
+     },
+     "conversion": {
+      "joined_index": 53,
+      "part": "equilibration",
+      "in_equilibration": true,
+      "frame_in_its_file": 173,
+      "stage": 5,
+      "extension": 0,
+      "time_ns_in_file": -0.76,
+      "n_frames_of_the_visit": 10077,
+      "time_from_release_ps": 540.0,
+      "time_from_release_ns": 0.54,
+      "time_in_production_ns": null
+     },
+     "program": "first program (analyse_md.py)",
+     "start": "R",
+     "model": "bonded_2e",
+     "role": "production",
+     "state_of_start": "R",
+     "opposite_state": "C",
+     "verdict_of_the_run_last_20_ns": "CONVERTED",
+     "first_passage_ns_production_only": 0.01,
+     "first_passage_frame_production_only": 0,
+     "equilibration_total_ps": 2500.0,
+     "equilibration_steps": [
+      "eq01",
+      "eq02",
+      "eq03",
+      "eq03x1",
+      "eq04",
+      "eq05",
+      "eq06"
+     ]
+    },
+    "analysis_recheck": {
+     "folder": "/root/cqc-sfa-md/runs/bonded_2e/R1/analysis_recheck",
+     "files": {
+      "timeseries_equil_solute.csv": "50ab9ed4cac0f3cf6ab293aab10c0bf1d3c8466bb0573450e1de25347f10674f",
+      "timeseries_solute.csv": "6843c142695c719714b3f05cff4c120e3c94c42ce661de90890e82f27392e486"
+     },
+     "n_equilibration_frames_in_file": 250,
+     "n_released_equilibration_frames": 130,
+     "n_production_frames": 10000,
+     "n_joined_frames": 10130,
+     "release_time_ns_on_production_clock": -1.3,
+     "released_part_of_equilibration_ps": 1300.0,
+     "time_axis_max_deviation_ps": 0.0,
+     "n_visits": 4,
+     "n_long_visits": 1,
+     "long_visits": [
+      {
+       "state": "C",
+       "first_joined_index": 53,
+       "n_frames": 10077,
+       "part_of_first_frame": "equilibration",
+       "time_from_release_ps": 540.0
+      }
+     ],
+     "n_transitions_joined": 1,
+     "state_first_released_frame": "R",
+     "counts_released_equilibration": {
+      "C": 92,
+      "R": 27,
+      "I": 11
+     },
+     "conversion": {
+      "joined_index": 53,
+      "part": "equilibration",
+      "in_equilibration": true,
+      "frame_in_its_file": 173,
+      "stage": 5,
+      "extension": 0,
+      "time_ns_in_file": -0.76,
+      "n_frames_of_the_visit": 10077,
+      "time_from_release_ps": 540.0,
+      "time_from_release_ns": 0.54,
+      "time_in_production_ns": null
+     },
+     "program": "second program (recheck_md.py)",
+     "start": "R",
+     "model": "bonded_2e",
+     "role": "production",
+     "state_of_start": "R",
+     "opposite_state": "C",
+     "verdict_of_the_run_last_20_ns": "CONVERTED",
+     "first_passage_ns_production_only": 0.01,
+     "first_passage_frame_production_only": 0,
+     "equilibration_total_ps": 2500.0,
+     "equilibration_steps": [
+      "eq01",
+      "eq02",
+      "eq03",
+      "eq03x1",
+      "eq04",
+      "eq05",
+      "eq06"
+     ]
+    }
+   },
+   "n_joined_frames_equal": true,
+   "n_frames_with_different_state": 0,
+   "same_frame": true,
+   "same_start_state": true,
+   "conversion": {
+    "joined_index": 53,
+    "part": "equilibration",
+    "in_equilibration": true,
+    "frame_in_its_file": 173,
+    "stage": 5,
+    "extension": 0,
+    "time_ns_in_file": -0.76,
+    "n_frames_of_the_visit": 10077,
+    "time_from_release_ps": 540.0,
+    "time_from_release_ns": 0.54,
+    "time_in_production_ns": null
+   },
+   "reported_as": "converted during the equilibration, 540 ps after release",
+   "first_passage_ns_production_only": 0.01
+  },
+  {
+   "run_dir": "/root/cqc-sfa-md/runs/bonded_2e/R2",
+   "label": "bonded_2e/R2",
+   "start": "R",
+   "model": "bonded_2e",
+   "role": "production",
+   "state_of_start": "R",
+   "opposite_state": "C",
+   "programs": {
+    "analysis": {
+     "folder": "/root/cqc-sfa-md/runs/bonded_2e/R2/analysis",
+     "files": {
+      "timeseries_equil_solute.csv": "a4100e59aeb1a46fce34c9b5769da298a08c4417e082de396e80ad2e5dfc240b",
+      "timeseries_solute.csv": "a0f8a9ea548aafdbf2d9e796ccf7e09b46cfbd090708e12436a9f8a17e6d22f3"
+     },
+     "n_equilibration_frames_in_file": 200,
+     "n_released_equilibration_frames": 130,
+     "n_production_frames": 10000,
+     "n_joined_frames": 10130,
+     "release_time_ns_on_production_clock": -1.3,
+     "released_part_of_equilibration_ps": 1300.0,
+     "time_axis_max_deviation_ps": 0.0,
+     "n_visits": 2,
+     "n_long_visits": 1,
+     "long_visits": [
+      {
+       "state": "C",
+       "first_joined_index": 36,
+       "n_frames": 10094,
+       "part_of_first_frame": "equilibration",
+       "time_from_release_ps": 370.0
+      }
+     ],
+     "n_transitions_joined": 1,
+     "state_first_released_frame": "R",
+     "counts_released_equilibration": {
+      "C": 94,
+      "R": 35,
+      "I": 1
+     },
+     "conversion": {
+      "joined_index": 36,
+      "part": "equilibration",
+      "in_equilibration": true,
+      "frame_in_its_file": 106,
+      "stage": 4,
+      "extension": 0,
+      "time_ns_in_file": -0.93,
+      "n_frames_of_the_visit": 10094,
+      "time_from_release_ps": 370.0,
+      "time_from_release_ns": 0.37,
+      "time_in_production_ns": null
+     },
+     "program": "first program (analyse_md.py)",
+     "start": "R",
+     "model": "bonded_2e",
+     "role": "production",
+     "state_of_start": "R",
+     "opposite_state": "C",
+     "verdict_of_the_run_last_20_ns": "CONVERTED",
+     "first_passage_ns_production_only": 0.01,
+     "first_passage_frame_production_only": 0,
+     "equilibration_total_ps": 2000.0,
+     "equilibration_steps": [
+      "eq01",
+      "eq02",
+      "eq03",
+      "eq04",
+      "eq05",
+      "eq06"
+     ]
+    },
+    "analysis_recheck": {
+     "folder": "/root/cqc-sfa-md/runs/bonded_2e/R2/analysis_recheck",
+     "files": {
+      "timeseries_equil_solute.csv": "a4100e59aeb1a46fce34c9b5769da298a08c4417e082de396e80ad2e5dfc240b",
+      "timeseries_solute.csv": "a0f8a9ea548aafdbf2d9e796ccf7e09b46cfbd090708e12436a9f8a17e6d22f3"
+     },
+     "n_equilibration_frames_in_file": 200,
+     "n_released_equilibration_frames": 130,
+     "n_production_frames": 10000,
+     "n_joined_frames": 10130,
+     "release_time_ns_on_production_clock": -1.3,
+     "released_part_of_equilibration_ps": 1300.0,
+     "time_axis_max_deviation_ps": 0.0,
+     "n_visits": 2,
+     "n_long_visits": 1,
+     "long_visits": [
+      {
+       "state": "C",
+       "first_joined_index": 36,
+       "n_frames": 10094,
+       "part_of_first_frame": "equilibration",
+       "time_from_release_ps": 370.0
+      }
+     ],
+     "n_transitions_joined": 1,
+     "state_first_released_frame": "R",
+     "counts_released_equilibration": {
+      "C": 94,
+      "R": 35,
+      "I": 1
+     },
+     "conversion": {
+      "joined_index": 36,
+      "part": "equilibration",
+      "in_equilibration": true,
+      "frame_in_its_file": 106,
+      "stage": 4,
+      "extension": 0,
+      "time_ns_in_file": -0.93,
+      "n_frames_of_the_visit": 10094,
+      "time_from_release_ps": 370.0,
+      "time_from_release_ns": 0.37,
+      "time_in_production_ns": null
+     },
+     "program": "second program (recheck_md.py)",
+     "start": "R",
+     "model": "bonded_2e",
+     "role": "production",
+     "state_of_start": "R",
+     "opposite_state": "C",
+     "verdict_of_the_run_last_20_ns": "CONVERTED",
+     "first_passage_ns_production_only": 0.01,
+     "first_passage_frame_production_only": 0,
+     "equilibration_total_ps": 2000.0,
+     "equilibration_steps": [
+      "eq01",
+      "eq02",
+      "eq03",
+      "eq04",
+      "eq05",
+      "eq06"
+     ]
+    }
+   },
+   "n_joined_frames_equal": true,
+   "n_frames_with_different_state": 0,
+   "same_frame": true,
+   "same_start_state": true,
+   "conversion": {
+    "joined_index": 36,
+    "part": "equilibration",
+    "in_equilibration": true,
+    "frame_in_its_file": 106,
+    "stage": 4,
+    "extension": 0,
+    "time_ns_in_file": -0.93,
+    "n_frames_of_the_visit": 10094,
+    "time_from_release_ps": 370.0,
+    "time_from_release_ns": 0.37,
+    "time_in_production_ns": null
+   },
+   "reported_as": "converted during the equilibration, 370 ps after release",
+   "first_passage_ns_production_only": 0.01
+  },
+  {
+   "run_dir": "/root/cqc-sfa-md/runs/bonded_2e/R3",
+   "label": "bonded_2e/R3",
+   "start": "R",
+   "model": "bonded_2e",
+   "role": "production",
+   "state_of_start": "R",
+   "opposite_state": "C",
+   "programs": {
+    "analysis": {
+     "folder": "/root/cqc-sfa-md/runs/bonded_2e/R3/analysis",
+     "files": {
+      "timeseries_equil_solute.csv": "5a26c9fd8bdc4241463c1e69b4fabd618da408d5912a51444faab3dbe6c22f40",
+      "timeseries_solute.csv": "3f25434115af84647f4ba260dbde8743f58db8de699e01e695f2fe57b50aa358"
+     },
+     "n_equilibration_frames_in_file": 200,
+     "n_released_equilibration_frames": 130,
+     "n_production_frames": 10000,
+     "n_joined_frames": 10130,
+     "release_time_ns_on_production_clock": -1.3,
+     "released_part_of_equilibration_ps": 1300.0,
+     "time_axis_max_deviation_ps": 0.0,
+     "n_visits": 2,
+     "n_long_visits": 1,
+     "long_visits": [
+      {
+       "state": "C",
+       "first_joined_index": 15,
+       "n_frames": 10115,
+       "part_of_first_frame": "equilibration",
+       "time_from_release_ps": 160.0
+      }
+     ],
+     "n_transitions_joined": 1,
+     "state_first_released_frame": "R",
+     "counts_released_equilibration": {
+      "C": 115,
+      "R": 14,
+      "I": 1
+     },
+     "conversion": {
+      "joined_index": 15,
+      "part": "equilibration",
+      "in_equilibration": true,
+      "frame_in_its_file": 85,
+      "stage": 4,
+      "extension": 0,
+      "time_ns_in_file": -1.14,
+      "n_frames_of_the_visit": 10115,
+      "time_from_release_ps": 160.0,
+      "time_from_release_ns": 0.16,
+      "time_in_production_ns": null
+     },
+     "program": "first program (analyse_md.py)",
+     "start": "R",
+     "model": "bonded_2e",
+     "role": "production",
+     "state_of_start": "R",
+     "opposite_state": "C",
+     "verdict_of_the_run_last_20_ns": "CONVERTED",
+     "first_passage_ns_production_only": 0.01,
+     "first_passage_frame_production_only": 0,
+     "equilibration_total_ps": 2000.0,
+     "equilibration_steps": [
+      "eq01",
+      "eq02",
+      "eq03",
+      "eq04",
+      "eq05",
+      "eq06"
+     ]
+    },
+    "analysis_recheck": {
+     "folder": "/root/cqc-sfa-md/runs/bonded_2e/R3/analysis_recheck",
+     "files": {
+      "timeseries_equil_solute.csv": "5a26c9fd8bdc4241463c1e69b4fabd618da408d5912a51444faab3dbe6c22f40",
+      "timeseries_solute.csv": "3f25434115af84647f4ba260dbde8743f58db8de699e01e695f2fe57b50aa358"
+     },
+     "n_equilibration_frames_in_file": 200,
+     "n_released_equilibration_frames": 130,
+     "n_production_frames": 10000,
+     "n_joined_frames": 10130,
+     "release_time_ns_on_production_clock": -1.3,
+     "released_part_of_equilibration_ps": 1300.0,
+     "time_axis_max_deviation_ps": 0.0,
+     "n_visits": 2,
+     "n_long_visits": 1,
+     "long_visits": [
+      {
+       "state": "C",
+       "first_joined_index": 15,
+       "n_frames": 10115,
+       "part_of_first_frame": "equilibration",
+       "time_from_release_ps": 160.0
+      }
+     ],
+     "n_transitions_joined": 1,
+     "state_first_released_frame": "R",
+     "counts_released_equilibration": {
+      "C": 115,
+      "R": 14,
+      "I": 1
+     },
+     "conversion": {
+      "joined_index": 15,
+      "part": "equilibration",
+      "in_equilibration": true,
+      "frame_in_its_file": 85,
+      "stage": 4,
+      "extension": 0,
+      "time_ns_in_file": -1.14,
+      "n_frames_of_the_visit": 10115,
+      "time_from_release_ps": 160.0,
+      "time_from_release_ns": 0.16,
+      "time_in_production_ns": null
+     },
+     "program": "second program (recheck_md.py)",
+     "start": "R",
+     "model": "bonded_2e",
+     "role": "production",
+     "state_of_start": "R",
+     "opposite_state": "C",
+     "verdict_of_the_run_last_20_ns": "CONVERTED",
+     "first_passage_ns_production_only": 0.01,
+     "first_passage_frame_production_only": 0,
+     "equilibration_total_ps": 2000.0,
+     "equilibration_steps": [
+      "eq01",
+      "eq02",
+      "eq03",
+      "eq04",
+      "eq05",
+      "eq06"
+     ]
+    }
+   },
+   "n_joined_frames_equal": true,
+   "n_frames_with_different_state": 0,
+   "same_frame": true,
+   "same_start_state": true,
+   "conversion": {
+    "joined_index": 15,
+    "part": "equilibration",
+    "in_equilibration": true,
+    "frame_in_its_file": 85,
+    "stage": 4,
+    "extension": 0,
+    "time_ns_in_file": -1.14,
+    "n_frames_of_the_visit": 10115,
+    "time_from_release_ps": 160.0,
+    "time_from_release_ns": 0.16,
+    "time_in_production_ns": null
+   },
+   "reported_as": "converted during the equilibration, 160 ps after release",
+   "first_passage_ns_production_only": 0.01
+  },
+  {
+   "run_dir": "/root/cqc-sfa-md/runs/bonded_2e/X0",
+   "label": "bonded_2e/X0",
+   "start": "X",
+   "model": "bonded_2e",
+   "role": "validation",
+   "state_of_start": "C",
+   "opposite_state": "R",
+   "programs": {
+    "analysis": {
+     "folder": "/root/cqc-sfa-md/runs/bonded_2e/X0/analysis",
+     "files": {
+      "timeseries_equil_solute.csv": "c58771cc12f5786586a80eeb22ffe12164b18f33e257739ca337283506b1d24a",
+      "timeseries_solute.csv": "36a333ec7b6ee097634dcc6de633216d00e0af3e459521a5f2d9ce1ea2bfe131"
+     },
+     "n_equilibration_frames_in_file": 200,
+     "n_released_equilibration_frames": 130,
+     "n_production_frames": 500,
+     "n_joined_frames": 630,
+     "release_time_ns_on_production_clock": -1.3,
+     "released_part_of_equilibration_ps": 1300.0,
+     "time_axis_max_deviation_ps": 0.0,
+     "n_visits": 1,
+     "n_long_visits": 1,
+     "long_visits": [
+      {
+       "state": "C",
+       "first_joined_index": 0,
+       "n_frames": 630,
+       "part_of_first_frame": "equilibration",
+       "time_from_release_ps": 10.0
+      }
+     ],
+     "n_transitions_joined": 0,
+     "state_first_released_frame": "C",
+     "counts_released_equilibration": {
+      "C": 130,
+      "R": 0,
+      "I": 0
+     },
+     "conversion": null,
+     "program": "first program (analyse_md.py)",
+     "start": "X",
+     "model": "bonded_2e",
+     "role": "validation",
+     "state_of_start": "C",
+     "opposite_state": "R",
+     "verdict_of_the_run_last_20_ns": "STAYED",
+     "first_passage_ns_production_only": null,
+     "first_passage_frame_production_only": null,
+     "equilibration_total_ps": 2000.0,
+     "equilibration_steps": [
+      "eq01",
+      "eq02",
+      "eq03",
+      "eq04",
+      "eq05",
+      "eq06"
+     ]
+    },
+    "analysis_recheck": {
+     "folder": "/root/cqc-sfa-md/runs/bonded_2e/X0/analysis_recheck",
+     "files": {
+      "timeseries_equil_solute.csv": "c58771cc12f5786586a80eeb22ffe12164b18f33e257739ca337283506b1d24a",
+      "timeseries_solute.csv": "36a333ec7b6ee097634dcc6de633216d00e0af3e459521a5f2d9ce1ea2bfe131"
+     },
+     "n_equilibration_frames_in_file": 200,
+     "n_released_equilibration_frames": 130,
+     "n_production_frames": 500,
+     "n_joined_frames": 630,
+     "release_time_ns_on_production_clock": -1.3,
+     "released_part_of_equilibration_ps": 1300.0,
+     "time_axis_max_deviation_ps": 0.0,
+     "n_visits": 1,
+     "n_long_visits": 1,
+     "long_visits": [
+      {
+       "state": "C",
+       "first_joined_index": 0,
+       "n_frames": 630,
+       "part_of_first_frame": "equilibration",
+       "time_from_release_ps": 10.0
+      }
+     ],
+     "n_transitions_joined": 0,
+     "state_first_released_frame": "C",
+     "counts_released_equilibration": {
+      "C": 130,
+      "R": 0,
+      "I": 0
+     },
+     "conversion": null,
+     "program": "second program (recheck_md.py)",
+     "start": "X",
+     "model": "bonded_2e",
+     "role": "validation",
+     "state_of_start": "C",
+     "opposite_state": "R",
+     "verdict_of_the_run_last_20_ns": "STAYED",
+     "first_passage_ns_production_only": null,
+     "first_passage_frame_production_only": null,
+     "equilibration_total_ps": 2000.0,
+     "equilibration_steps": [
+      "eq01",
+      "eq02",
+      "eq03",
+      "eq04",
+      "eq05",
+      "eq06"
+     ]
+    }
+   },
+   "n_joined_frames_equal": true,
+   "n_frames_with_different_state": 0,
+   "same_frame": true,
+   "same_start_state": true,
+   "conversion": null,
+   "reported_as": "none (no visit of at least 1 ns in the opposite state after the release)",
+   "first_passage_ns_production_only": null
+  },
+  {
+   "run_dir": "/root/cqc-sfa-md/runs/bonded_2e/X1",
+   "label": "bonded_2e/X1",
+   "start": "X",
+   "model": "bonded_2e",
+   "role": "production",
+   "state_of_start": "C",
+   "opposite_state": "R",
+   "programs": {
+    "analysis": {
+     "folder": "/root/cqc-sfa-md/runs/bonded_2e/X1/analysis",
+     "files": {
+      "timeseries_equil_solute.csv": "1a0857aa0cce0317bd214c2d95832713aaa172bd7901456dee1b72f6a8107223",
+      "timeseries_solute.csv": "89fae59cf60a28cae13c7d691aaa6cd1b23a02cee94d8d6b1dba9682bc1d657d"
+     },
+     "n_equilibration_frames_in_file": 200,
+     "n_released_equilibration_frames": 130,
+     "n_production_frames": 10000,
+     "n_joined_frames": 10130,
+     "release_time_ns_on_production_clock": -1.3,
+     "released_part_of_equilibration_ps": 1300.0,
+     "time_axis_max_deviation_ps": 0.0,
+     "n_visits": 1,
+     "n_long_visits": 1,
+     "long_visits": [
+      {
+       "state": "C",
+       "first_joined_index": 0,
+       "n_frames": 10130,
+       "part_of_first_frame": "equilibration",
+       "time_from_release_ps": 10.0
+      }
+     ],
+     "n_transitions_joined": 0,
+     "state_first_released_frame": "C",
+     "counts_released_equilibration": {
+      "C": 127,
+      "R": 0,
+      "I": 3
+     },
+     "conversion": null,
+     "program": "first program (analyse_md.py)",
+     "start": "X",
+     "model": "bonded_2e",
+     "role": "production",
+     "state_of_start": "C",
+     "opposite_state": "R",
+     "verdict_of_the_run_last_20_ns": "STAYED",
+     "first_passage_ns_production_only": null,
+     "first_passage_frame_production_only": null,
+     "equilibration_total_ps": 2000.0,
+     "equilibration_steps": [
+      "eq01",
+      "eq02",
+      "eq03",
+      "eq04",
+      "eq05",
+      "eq06"
+     ]
+    },
+    "analysis_recheck": {
+     "folder": "/root/cqc-sfa-md/runs/bonded_2e/X1/analysis_recheck",
+     "files": {
+      "timeseries_equil_solute.csv": "1a0857aa0cce0317bd214c2d95832713aaa172bd7901456dee1b72f6a8107223",
+      "timeseries_solute.csv": "89fae59cf60a28cae13c7d691aaa6cd1b23a02cee94d8d6b1dba9682bc1d657d"
+     },
+     "n_equilibration_frames_in_file": 200,
+     "n_released_equilibration_frames": 130,
+     "n_production_frames": 10000,
+     "n_joined_frames": 10130,
+     "release_time_ns_on_production_clock": -1.3,
+     "released_part_of_equilibration_ps": 1300.0,
+     "time_axis_max_deviation_ps": 0.0,
+     "n_visits": 1,
+     "n_long_visits": 1,
+     "long_visits": [
+      {
+       "state": "C",
+       "first_joined_index": 0,
+       "n_frames": 10130,
+       "part_of_first_frame": "equilibration",
+       "time_from_release_ps": 10.0
+      }
+     ],
+     "n_transitions_joined": 0,
+     "state_first_released_frame": "C",
+     "counts_released_equilibration": {
+      "C": 127,
+      "R": 0,
+      "I": 3
+     },
+     "conversion": null,
+     "program": "second program (recheck_md.py)",
+     "start": "X",
+     "model": "bonded_2e",
+     "role": "production",
+     "state_of_start": "C",
+     "opposite_state": "R",
+     "verdict_of_the_run_last_20_ns": "STAYED",
+     "first_passage_ns_production_only": null,
+     "first_passage_frame_production_only": null,
+     "equilibration_total_ps": 2000.0,
+     "equilibration_steps": [
+      "eq01",
+      "eq02",
+      "eq03",
+      "eq04",
+      "eq05",
+      "eq06"
+     ]
+    }
+   },
+   "n_joined_frames_equal": true,
+   "n_frames_with_different_state": 0,
+   "same_frame": true,
+   "same_start_state": true,
+   "conversion": null,
+   "reported_as": "none (no visit of at least 1 ns in the opposite state after the release)",
+   "first_passage_ns_production_only": null
+  },
+  {
+   "run_dir": "/root/cqc-sfa-md/runs/bonded_2e/X2",
+   "label": "bonded_2e/X2",
+   "start": "X",
+   "model": "bonded_2e",
+   "role": "production",
+   "state_of_start": "C",
+   "opposite_state": "R",
+   "programs": {
+    "analysis": {
+     "folder": "/root/cqc-sfa-md/runs/bonded_2e/X2/analysis",
+     "files": {
+      "timeseries_equil_solute.csv": "ffff3bc69b864af6af7580e83fec8992689dbe63595516b6cb9a09ca3844c8a9",
+      "timeseries_solute.csv": "c89d192c3b0cc9321292682bdd9f1dd946fa8ba4dffec24499bada92f1148b95"
+     },
+     "n_equilibration_frames_in_file": 200,
+     "n_released_equilibration_frames": 130,
+     "n_production_frames": 10000,
+     "n_joined_frames": 10130,
+     "release_time_ns_on_production_clock": -1.3,
+     "released_part_of_equilibration_ps": 1300.0,
+     "time_axis_max_deviation_ps": 0.0,
+     "n_visits": 1,
+     "n_long_visits": 1,
+     "long_visits": [
+      {
+       "state": "C",
+       "first_joined_index": 0,
+       "n_frames": 10130,
+       "part_of_first_frame": "equilibration",
+       "time_from_release_ps": 10.0
+      }
+     ],
+     "n_transitions_joined": 0,
+     "state_first_released_frame": "C",
+     "counts_released_equilibration": {
+      "C": 130,
+      "R": 0,
+      "I": 0
+     },
+     "conversion": null,
+     "program": "first program (analyse_md.py)",
+     "start": "X",
+     "model": "bonded_2e",
+     "role": "production",
+     "state_of_start": "C",
+     "opposite_state": "R",
+     "verdict_of_the_run_last_20_ns": "STAYED",
+     "first_passage_ns_production_only": null,
+     "first_passage_frame_production_only": null,
+     "equilibration_total_ps": 2000.0,
+     "equilibration_steps": [
+      "eq01",
+      "eq02",
+      "eq03",
+      "eq04",
+      "eq05",
+      "eq06"
+     ]
+    },
+    "analysis_recheck": {
+     "folder": "/root/cqc-sfa-md/runs/bonded_2e/X2/analysis_recheck",
+     "files": {
+      "timeseries_equil_solute.csv": "ffff3bc69b864af6af7580e83fec8992689dbe63595516b6cb9a09ca3844c8a9",
+      "timeseries_solute.csv": "c89d192c3b0cc9321292682bdd9f1dd946fa8ba4dffec24499bada92f1148b95"
+     },
+     "n_equilibration_frames_in_file": 200,
+     "n_released_equilibration_frames": 130,
+     "n_production_frames": 10000,
+     "n_joined_frames": 10130,
+     "release_time_ns_on_production_clock": -1.3,
+     "released_part_of_equilibration_ps": 1300.0,
+     "time_axis_max_deviation_ps": 0.0,
+     "n_visits": 1,
+     "n_long_visits": 1,
+     "long_visits": [
+      {
+       "state": "C",
+       "first_joined_index": 0,
+       "n_frames": 10130,
+       "part_of_first_frame": "equilibration",
+       "time_from_release_ps": 10.0
+      }
+     ],
+     "n_transitions_joined": 0,
+     "state_first_released_frame": "C",
+     "counts_released_equilibration": {
+      "C": 130,
+      "R": 0,
+      "I": 0
+     },
+     "conversion": null,
+     "program": "second program (recheck_md.py)",
+     "start": "X",
+     "model": "bonded_2e",
+     "role": "production",
+     "state_of_start": "C",
+     "opposite_state": "R",
+     "verdict_of_the_run_last_20_ns": "STAYED",
+     "first_passage_ns_production_only": null,
+     "first_passage_frame_production_only": null,
+     "equilibration_total_ps": 2000.0,
+     "equilibration_steps": [
+      "eq01",
+      "eq02",
+      "eq03",
+      "eq04",
+      "eq05",
+      "eq06"
+     ]
+    }
+   },
+   "n_joined_frames_equal": true,
+   "n_frames_with_different_state": 0,
+   "same_frame": true,
+   "same_start_state": true,
+   "conversion": null,
+   "reported_as": "none (no visit of at least 1 ns in the opposite state after the release)",
+   "first_passage_ns_production_only": null
+  },
+  {
+   "run_dir": "/root/cqc-sfa-md/runs/bonded_2e/X3",
+   "label": "bonded_2e/X3",
+   "start": "X",
+   "model": "bonded_2e",
+   "role": "production",
+   "state_of_start": "C",
+   "opposite_state": "R",
+   "programs": {
+    "analysis": {
+     "folder": "/root/cqc-sfa-md/runs/bonded_2e/X3/analysis",
+     "files": {
+      "timeseries_equil_solute.csv": "492595c3fbc3d735b5f827b5c446e6a2b21bb6db045106d34bf69d7f764935b9",
+      "timeseries_solute.csv": "eb099833e8f504c24298d193e6ff69dfe9d0d6cc53457863fd21d953639972d7"
+     },
+     "n_equilibration_frames_in_file": 200,
+     "n_released_equilibration_frames": 130,
+     "n_production_frames": 10000,
+     "n_joined_frames": 10130,
+     "release_time_ns_on_production_clock": -1.3,
+     "released_part_of_equilibration_ps": 1300.0,
+     "time_axis_max_deviation_ps": 0.0,
+     "n_visits": 1,
+     "n_long_visits": 1,
+     "long_visits": [
+      {
+       "state": "C",
+       "first_joined_index": 0,
+       "n_frames": 10130,
+       "part_of_first_frame": "equilibration",
+       "time_from_release_ps": 10.0
+      }
+     ],
+     "n_transitions_joined": 0,
+     "state_first_released_frame": "C",
+     "counts_released_equilibration": {
+      "C": 130,
+      "R": 0,
+      "I": 0
+     },
+     "conversion": null,
+     "program": "first program (analyse_md.py)",
+     "start": "X",
+     "model": "bonded_2e",
+     "role": "production",
+     "state_of_start": "C",
+     "opposite_state": "R",
+     "verdict_of_the_run_last_20_ns": "STAYED",
+     "first_passage_ns_production_only": null,
+     "first_passage_frame_production_only": null,
+     "equilibration_total_ps": 2000.0,
+     "equilibration_steps": [
+      "eq01",
+      "eq02",
+      "eq03",
+      "eq04",
+      "eq05",
+      "eq06"
+     ]
+    },
+    "analysis_recheck": {
+     "folder": "/root/cqc-sfa-md/runs/bonded_2e/X3/analysis_recheck",
+     "files": {
+      "timeseries_equil_solute.csv": "492595c3fbc3d735b5f827b5c446e6a2b21bb6db045106d34bf69d7f764935b9",
+      "timeseries_solute.csv": "eb099833e8f504c24298d193e6ff69dfe9d0d6cc53457863fd21d953639972d7"
+     },
+     "n_equilibration_frames_in_file": 200,
+     "n_released_equilibration_frames": 130,
+     "n_production_frames": 10000,
+     "n_joined_frames": 10130,
+     "release_time_ns_on_production_clock": -1.3,
+     "released_part_of_equilibration_ps": 1300.0,
+     "time_axis_max_deviation_ps": 0.0,
+     "n_visits": 1,
+     "n_long_visits": 1,
+     "long_visits": [
+      {
+       "state": "C",
+       "first_joined_index": 0,
+       "n_frames": 10130,
+       "part_of_first_frame": "equilibration",
+       "time_from_release_ps": 10.0
+      }
+     ],
+     "n_transitions_joined": 0,
+     "state_first_released_frame": "C",
+     "counts_released_equilibration": {
+      "C": 130,
+      "R": 0,
+      "I": 0
+     },
+     "conversion": null,
+     "program": "second program (recheck_md.py)",
+     "start": "X",
+     "model": "bonded_2e",
+     "role": "production",
+     "state_of_start": "C",
+     "opposite_state": "R",
+     "verdict_of_the_run_last_20_ns": "STAYED",
+     "first_passage_ns_production_only": null,
+     "first_passage_frame_production_only": null,
+     "equilibration_total_ps": 2000.0,
+     "equilibration_steps": [
+      "eq01",
+      "eq02",
+      "eq03",
+      "eq04",
+      "eq05",
+      "eq06"
+     ]
+    }
+   },
+   "n_joined_frames_equal": true,
+   "n_frames_with_different_state": 0,
+   "same_frame": true,
+   "same_start_state": true,
+   "conversion": null,
+   "reported_as": "none (no visit of at least 1 ns in the opposite state after the release)",
+   "first_passage_ns_production_only": null
+  },
+  {
+   "run_dir": "/root/cqc-sfa-md/runs/bonded_2e_n2fit/R1",
+   "label": "bonded_2e_n2fit/R1",
+   "start": "R",
+   "model": "bonded_2e_n2fit",
+   "role": "production",
+   "state_of_start": "R",
+   "opposite_state": "C",
+   "programs": {
+    "analysis": {
+     "folder": "/root/cqc-sfa-md/runs/bonded_2e_n2fit/R1/analysis",
+     "files": {
+      "timeseries_equil_solute.csv": "8c385c00eb690a2b3f3c883fb068be98d6f65b0576322726cb6f5a119d925390",
+      "timeseries_solute.csv": "91cd4edb0ed8e295956f431d2ba0c571e410c0d8052931e6fe43f0aa8d067d76"
+     },
+     "n_equilibration_frames_in_file": 200,
+     "n_released_equilibration_frames": 130,
+     "n_production_frames": 10000,
+     "n_joined_frames": 10130,
+     "release_time_ns_on_production_clock": -1.3,
+     "released_part_of_equilibration_ps": 1300.0,
+     "time_axis_max_deviation_ps": 0.0,
+     "n_visits": 252,
+     "n_long_visits": 24,
+     "long_visits": [
+      {
+       "state": "C",
+       "first_joined_index": 5,
+       "n_frames": 227,
+       "part_of_first_frame": "equilibration",
+       "time_from_release_ps": 60.0
+      },
+      {
+       "state": "C",
+       "first_joined_index": 298,
+       "n_frames": 654,
+       "part_of_first_frame": "production",
+       "time_from_release_ps": 2990.0
+      },
+      {
+       "state": "C",
+       "first_joined_index": 982,
+       "n_frames": 156,
+       "part_of_first_frame": "production",
+       "time_from_release_ps": 9830.0
+      },
+      {
+       "state": "C",
+       "first_joined_index": 1223,
+       "n_frames": 271,
+       "part_of_first_frame": "production",
+       "time_from_release_ps": 12240.0
+      },
+      {
+       "state": "C",
+       "first_joined_index": 1604,
+       "n_frames": 105,
+       "part_of_first_frame": "production",
+       "time_from_release_ps": 16050.0
+      },
+      {
+       "state": "C",
+       "first_joined_index": 1733,
+       "n_frames": 642,
+       "part_of_first_frame": "production",
+       "time_from_release_ps": 17340.0
+      },
+      {
+       "state": "C",
+       "first_joined_index": 2377,
+       "n_frames": 192,
+       "part_of_first_frame": "production",
+       "time_from_release_ps": 23780.0
+      },
+      {
+       "state": "C",
+       "first_joined_index": 2570,
+       "n_frames": 395,
+       "part_of_first_frame": "production",
+       "time_from_release_ps": 25710.0
+      },
+      {
+       "state": "C",
+       "first_joined_index": 2966,
+       "n_frames": 176,
+       "part_of_first_frame": "production",
+       "time_from_release_ps": 29670.0
+      },
+      {
+       "state": "C",
+       "first_joined_index": 3143,
+       "n_frames": 565,
+       "part_of_first_frame": "production",
+       "time_from_release_ps": 31440.0
+      },
+      {
+       "state": "C",
+       "first_joined_index": 3737,
+       "n_frames": 477,
+       "part_of_first_frame": "production",
+       "time_from_release_ps": 37380.0
+      },
+      {
+       "state": "C",
+       "first_joined_index": 4286,
+       "n_frames": 603,
+       "part_of_first_frame": "production",
+       "time_from_release_ps": 42870.0
+      },
+      {
+       "state": "C",
+       "first_joined_index": 4906,
+       "n_frames": 271,
+       "part_of_first_frame": "production",
+       "time_from_release_ps": 49070.0
+      },
+      {
+       "state": "C",
+       "first_joined_index": 5357,
+       "n_frames": 149,
+       "part_of_first_frame": "production",
+       "time_from_release_ps": 53580.0
+      },
+      {
+       "state": "C",
+       "first_joined_index": 5507,
+       "n_frames": 126,
+       "part_of_first_frame": "production",
+       "time_from_release_ps": 55080.0
+      },
+      {
+       "state": "C",
+       "first_joined_index": 5715,
+       "n_frames": 268,
+       "part_of_first_frame": "production",
+       "time_from_release_ps": 57160.0
+      },
+      {
+       "state": "C",
+       "first_joined_index": 6314,
+       "n_frames": 331,
+       "part_of_first_frame": "production",
+       "time_from_release_ps": 63150.0
+      },
+      {
+       "state": "C",
+       "first_joined_index": 6869,
+       "n_frames": 230,
+       "part_of_first_frame": "production",
+       "time_from_release_ps": 68700.0
+      },
+      {
+       "state": "C",
+       "first_joined_index": 7230,
+       "n_frames": 176,
+       "part_of_first_frame": "production",
+       "time_from_release_ps": 72310.0
+      },
+      {
+       "state": "C",
+       "first_joined_index": 7476,
+       "n_frames": 833,
+       "part_of_first_frame": "production",
+       "time_from_release_ps": 74770.0
+      },
+      {
+       "state": "C",
+       "first_joined_index": 8906,
+       "n_frames": 307,
+       "part_of_first_frame": "production",
+       "time_from_release_ps": 89070.0
+      },
+      {
+       "state": "C",
+       "first_joined_index": 9231,
+       "n_frames": 111,
+       "part_of_first_frame": "production",
+       "time_from_release_ps": 92320.0
+      },
+      {
+       "state": "C",
+       "first_joined_index": 9451,
+       "n_frames": 202,
+       "part_of_first_frame": "production",
+       "time_from_release_ps": 94520.0
+      },
+      {
+       "state": "C",
+       "first_joined_index": 9916,
+       "n_frames": 214,
+       "part_of_first_frame": "production",
+       "time_from_release_ps": 99170.0
+      }
+     ],
+     "n_transitions_joined": 1,
+     "state_first_released_frame": "R",
+     "counts_released_equilibration": {
+      "C": 126,
+      "R": 3,
+      "I": 1
+     },
+     "conversion": {
+      "joined_index": 5,
+      "part": "equilibration",
+      "in_equilibration": true,
+      "frame_in_its_file": 75,
+      "stage": 4,
+      "extension": 0,
+      "time_ns_in_file": -1.24,
+      "n_frames_of_the_visit": 227,
+      "time_from_release_ps": 60.0,
+      "time_from_release_ns": 0.06,
+      "time_in_production_ns": null
+     },
+     "program": "first program (analyse_md.py)",
+     "start": "R",
+     "model": "bonded_2e_n2fit",
+     "role": "production",
+     "state_of_start": "R",
+     "opposite_state": "C",
+     "verdict_of_the_run_last_20_ns": "MIXED",
+     "first_passage_ns_production_only": 0.01,
+     "first_passage_frame_production_only": 0,
+     "equilibration_total_ps": 2000.0,
+     "equilibration_steps": [
+      "eq01",
+      "eq02",
+      "eq03",
+      "eq04",
+      "eq05",
+      "eq06"
+     ]
+    },
+    "analysis_recheck": {
+     "folder": "/root/cqc-sfa-md/runs/bonded_2e_n2fit/R1/analysis_recheck",
+     "files": {
+      "timeseries_equil_solute.csv": "8c385c00eb690a2b3f3c883fb068be98d6f65b0576322726cb6f5a119d925390",
+      "timeseries_solute.csv": "91cd4edb0ed8e295956f431d2ba0c571e410c0d8052931e6fe43f0aa8d067d76"
+     },
+     "n_equilibration_frames_in_file": 200,
+     "n_released_equilibration_frames": 130,
+     "n_production_frames": 10000,
+     "n_joined_frames": 10130,
+     "release_time_ns_on_production_clock": -1.3,
+     "released_part_of_equilibration_ps": 1300.0,
+     "time_axis_max_deviation_ps": 0.0,
+     "n_visits": 252,
+     "n_long_visits": 24,
+     "long_visits": [
+      {
+       "state": "C",
+       "first_joined_index": 5,
+       "n_frames": 227,
+       "part_of_first_frame": "equilibration",
+       "time_from_release_ps": 60.0
+      },
+      {
+       "state": "C",
+       "first_joined_index": 298,
+       "n_frames": 654,
+       "part_of_first_frame": "production",
+       "time_from_release_ps": 2990.0
+      },
+      {
+       "state": "C",
+       "first_joined_index": 982,
+       "n_frames": 156,
+       "part_of_first_frame": "production",
+       "time_from_release_ps": 9830.0
+      },
+      {
+       "state": "C",
+       "first_joined_index": 1223,
+       "n_frames": 271,
+       "part_of_first_frame": "production",
+       "time_from_release_ps": 12240.0
+      },
+      {
+       "state": "C",
+       "first_joined_index": 1604,
+       "n_frames": 105,
+       "part_of_first_frame": "production",
+       "time_from_release_ps": 16050.0
+      },
+      {
+       "state": "C",
+       "first_joined_index": 1733,
+       "n_frames": 642,
+       "part_of_first_frame": "production",
+       "time_from_release_ps": 17340.0
+      },
+      {
+       "state": "C",
+       "first_joined_index": 2377,
+       "n_frames": 192,
+       "part_of_first_frame": "production",
+       "time_from_release_ps": 23780.0
+      },
+      {
+       "state": "C",
+       "first_joined_index": 2570,
+       "n_frames": 395,
+       "part_of_first_frame": "production",
+       "time_from_release_ps": 25710.0
+      },
+      {
+       "state": "C",
+       "first_joined_index": 2966,
+       "n_frames": 176,
+       "part_of_first_frame": "production",
+       "time_from_release_ps": 29670.0
+      },
+      {
+       "state": "C",
+       "first_joined_index": 3143,
+       "n_frames": 565,
+       "part_of_first_frame": "production",
+       "time_from_release_ps": 31440.0
+      },
+      {
+       "state": "C",
+       "first_joined_index": 3737,
+       "n_frames": 477,
+       "part_of_first_frame": "production",
+       "time_from_release_ps": 37380.0
+      },
+      {
+       "state": "C",
+       "first_joined_index": 4286,
+       "n_frames": 603,
+       "part_of_first_frame": "production",
+       "time_from_release_ps": 42870.0
+      },
+      {
+       "state": "C",
+       "first_joined_index": 4906,
+       "n_frames": 271,
+       "part_of_first_frame": "production",
+       "time_from_release_ps": 49070.0
+      },
+      {
+       "state": "C",
+       "first_joined_index": 5357,
+       "n_frames": 149,
+       "part_of_first_frame": "production",
+       "time_from_release_ps": 53580.0
+      },
+      {
+       "state": "C",
+       "first_joined_index": 5507,
+       "n_frames": 126,
+       "part_of_first_frame": "production",
+       "time_from_release_ps": 55080.0
+      },
+      {
+       "state": "C",
+       "first_joined_index": 5715,
+       "n_frames": 268,
+       "part_of_first_frame": "production",
+       "time_from_release_ps": 57160.0
+      },
+      {
+       "state": "C",
+       "first_joined_index": 6314,
+       "n_frames": 331,
+       "part_of_first_frame": "production",
+       "time_from_release_ps": 63150.0
+      },
+      {
+       "state": "C",
+       "first_joined_index": 6869,
+       "n_frames": 230,
+       "part_of_first_frame": "production",
+       "time_from_release_ps": 68700.0
+      },
+      {
+       "state": "C",
+       "first_joined_index": 7230,
+       "n_frames": 176,
+       "part_of_first_frame": "production",
+       "time_from_release_ps": 72310.0
+      },
+      {
+       "state": "C",
+       "first_joined_index": 7476,
+       "n_frames": 833,
+       "part_of_first_frame": "production",
+       "time_from_release_ps": 74770.0
+      },
+      {
+       "state": "C",
+       "first_joined_index": 8906,
+       "n_frames": 307,
+       "part_of_first_frame": "production",
+       "time_from_release_ps": 89070.0
+      },
+      {
+       "state": "C",
+       "first_joined_index": 9231,
+       "n_frames": 111,
+       "part_of_first_frame": "production",
+       "time_from_release_ps": 92320.0
+      },
+      {
+       "state": "C",
+       "first_joined_index": 9451,
+       "n_frames": 202,
+       "part_of_first_frame": "production",
+       "time_from_release_ps": 94520.0
+      },
+      {
+       "state": "C",
+       "first_joined_index": 9916,
+       "n_frames": 214,
+       "part_of_first_frame": "production",
+       "time_from_release_ps": 99170.0
+      }
+     ],
+     "n_transitions_joined": 1,
+     "state_first_released_frame": "R",
+     "counts_released_equilibration": {
+      "C": 126,
+      "R": 3,
+      "I": 1
+     },
+     "conversion": {
+      "joined_index": 5,
+      "part": "equilibration",
+      "in_equilibration": true,
+      "frame_in_its_file": 75,
+      "stage": 4,
+      "extension": 0,
+      "time_ns_in_file": -1.24,
+      "n_frames_of_the_visit": 227,
+      "time_from_release_ps": 60.0,
+      "time_from_release_ns": 0.06,
+      "time_in_production_ns": null
+     },
+     "program": "second program (recheck_md.py)",
+     "start": "R",
+     "model": "bonded_2e_n2fit",
+     "role": "production",
+     "state_of_start": "R",
+     "opposite_state": "C",
+     "verdict_of_the_run_last_20_ns": "MIXED",
+     "first_passage_ns_production_only": 0.01,
+     "first_passage_frame_production_only": 0,
+     "equilibration_total_ps": 2000.0,
+     "equilibration_steps": [
+      "eq01",
+      "eq02",
+      "eq03",
+      "eq04",
+      "eq05",
+      "eq06"
+     ]
+    }
+   },
+   "n_joined_frames_equal": true,
+   "n_frames_with_different_state": 0,
+   "same_frame": true,
+   "same_start_state": true,
+   "conversion": {
+    "joined_index": 5,
+    "part": "equilibration",
+    "in_equilibration": true,
+    "frame_in_its_file": 75,
+    "stage": 4,
+    "extension": 0,
+    "time_ns_in_file": -1.24,
+    "n_frames_of_the_visit": 227,
+    "time_from_release_ps": 60.0,
+    "time_from_release_ns": 0.06,
+    "time_in_production_ns": null
+   },
+   "reported_as": "converted during the equilibration, 60 ps after release",
+   "first_passage_ns_production_only": 0.01
+  },
+  {
+   "run_dir": "/root/cqc-sfa-md/runs/bonded_2s/R1",
+   "label": "bonded_2s/R1",
+   "start": "R",
+   "model": "bonded_2s",
+   "role": "production",
+   "state_of_start": "R",
+   "opposite_state": "C",
+   "programs": {
+    "analysis": {
+     "folder": "/root/cqc-sfa-md/runs/bonded_2s/R1/analysis",
+     "files": {
+      "timeseries_equil_solute.csv": "4cc03628c9f85c8675d56eab8d530960c48def53c1566eee7f8986984da2bf36",
+      "timeseries_solute.csv": "993816586727e13b67c2ccf2b6c8b6fb05ec3ece7188eb430e2639e1e23b3576"
+     },
+     "n_equilibration_frames_in_file": 200,
+     "n_released_equilibration_frames": 130,
+     "n_production_frames": 10000,
+     "n_joined_frames": 10130,
+     "release_time_ns_on_production_clock": -1.3,
+     "released_part_of_equilibration_ps": 1300.0,
+     "time_axis_max_deviation_ps": 0.0,
+     "n_visits": 10,
+     "n_long_visits": 2,
+     "long_visits": [
+      {
+       "state": "C",
+       "first_joined_index": 88,
+       "n_frames": 4028,
+       "part_of_first_frame": "equilibration",
+       "time_from_release_ps": 890.0
+      },
+      {
+       "state": "C",
+       "first_joined_index": 4117,
+       "n_frames": 6013,
+       "part_of_first_frame": "production",
+       "time_from_release_ps": 41180.0
+      }
+     ],
+     "n_transitions_joined": 1,
+     "state_first_released_frame": "R",
+     "counts_released_equilibration": {
+      "C": 77,
+      "R": 17,
+      "I": 36
+     },
+     "conversion": {
+      "joined_index": 88,
+      "part": "equilibration",
+      "in_equilibration": true,
+      "frame_in_its_file": 158,
+      "stage": 6,
+      "extension": 0,
+      "time_ns_in_file": -0.41,
+      "n_frames_of_the_visit": 4028,
+      "time_from_release_ps": 890.0,
+      "time_from_release_ns": 0.89,
+      "time_in_production_ns": null
+     },
+     "program": "first program (analyse_md.py)",
+     "start": "R",
+     "model": "bonded_2s",
+     "role": "production",
+     "state_of_start": "R",
+     "opposite_state": "C",
+     "verdict_of_the_run_last_20_ns": "CONVERTED",
+     "first_passage_ns_production_only": 0.01,
+     "first_passage_frame_production_only": 0,
+     "equilibration_total_ps": 2000.0,
+     "equilibration_steps": [
+      "eq01",
+      "eq02",
+      "eq03",
+      "eq04",
+      "eq05",
+      "eq06"
+     ]
+    },
+    "analysis_recheck": {
+     "folder": "/root/cqc-sfa-md/runs/bonded_2s/R1/analysis_recheck",
+     "files": {
+      "timeseries_equil_solute.csv": "4cc03628c9f85c8675d56eab8d530960c48def53c1566eee7f8986984da2bf36",
+      "timeseries_solute.csv": "993816586727e13b67c2ccf2b6c8b6fb05ec3ece7188eb430e2639e1e23b3576"
+     },
+     "n_equilibration_frames_in_file": 200,
+     "n_released_equilibration_frames": 130,
+     "n_production_frames": 10000,
+     "n_joined_frames": 10130,
+     "release_time_ns_on_production_clock": -1.3,
+     "released_part_of_equilibration_ps": 1300.0,
+     "time_axis_max_deviation_ps": 0.0,
+     "n_visits": 10,
+     "n_long_visits": 2,
+     "long_visits": [
+      {
+       "state": "C",
+       "first_joined_index": 88,
+       "n_frames": 4028,
+       "part_of_first_frame": "equilibration",
+       "time_from_release_ps": 890.0
+      },
+      {
+       "state": "C",
+       "first_joined_index": 4117,
+       "n_frames": 6013,
+       "part_of_first_frame": "production",
+       "time_from_release_ps": 41180.0
+      }
+     ],
+     "n_transitions_joined": 1,
+     "state_first_released_frame": "R",
+     "counts_released_equilibration": {
+      "C": 77,
+      "R": 17,
+      "I": 36
+     },
+     "conversion": {
+      "joined_index": 88,
+      "part": "equilibration",
+      "in_equilibration": true,
+      "frame_in_its_file": 158,
+      "stage": 6,
+      "extension": 0,
+      "time_ns_in_file": -0.41,
+      "n_frames_of_the_visit": 4028,
+      "time_from_release_ps": 890.0,
+      "time_from_release_ns": 0.89,
+      "time_in_production_ns": null
+     },
+     "program": "second program (recheck_md.py)",
+     "start": "R",
+     "model": "bonded_2s",
+     "role": "production",
+     "state_of_start": "R",
+     "opposite_state": "C",
+     "verdict_of_the_run_last_20_ns": "CONVERTED",
+     "first_passage_ns_production_only": 0.01,
+     "first_passage_frame_production_only": 0,
+     "equilibration_total_ps": 2000.0,
+     "equilibration_steps": [
+      "eq01",
+      "eq02",
+      "eq03",
+      "eq04",
+      "eq05",
+      "eq06"
+     ]
+    }
+   },
+   "n_joined_frames_equal": true,
+   "n_frames_with_different_state": 0,
+   "same_frame": true,
+   "same_start_state": true,
+   "conversion": {
+    "joined_index": 88,
+    "part": "equilibration",
+    "in_equilibration": true,
+    "frame_in_its_file": 158,
+    "stage": 6,
+    "extension": 0,
+    "time_ns_in_file": -0.41,
+    "n_frames_of_the_visit": 4028,
+    "time_from_release_ps": 890.0,
+    "time_from_release_ns": 0.89,
+    "time_in_production_ns": null
+   },
+   "reported_as": "converted during the equilibration, 890 ps after release",
+   "first_passage_ns_production_only": 0.01
+  },
+  {
+   "run_dir": "/root/cqc-sfa-md/runs/bonded_2s/X0",
+   "label": "bonded_2s/X0",
+   "start": "X",
+   "model": "bonded_2s",
+   "role": "validation",
+   "state_of_start": "C",
+   "opposite_state": "R",
+   "programs": {
+    "analysis": {
+     "folder": "/root/cqc-sfa-md/runs/bonded_2s/X0/analysis",
+     "files": {
+      "timeseries_equil_solute.csv": "b6ceaf89e7fbb11d359a9c52811888db554ad5830f0cf9392fcae0362bc841c5",
+      "timeseries_solute.csv": "615e0d89e0194f3c348335f0662ac5894b6852ba0c008446cf29bd85898fd847"
+     },
+     "n_equilibration_frames_in_file": 200,
+     "n_released_equilibration_frames": 130,
+     "n_production_frames": 500,
+     "n_joined_frames": 630,
+     "release_time_ns_on_production_clock": -1.3,
+     "released_part_of_equilibration_ps": 1300.0,
+     "time_axis_max_deviation_ps": 0.0,
+     "n_visits": 1,
+     "n_long_visits": 1,
+     "long_visits": [
+      {
+       "state": "C",
+       "first_joined_index": 0,
+       "n_frames": 630,
+       "part_of_first_frame": "equilibration",
+       "time_from_release_ps": 10.0
+      }
+     ],
+     "n_transitions_joined": 0,
+     "state_first_released_frame": "C",
+     "counts_released_equilibration": {
+      "C": 110,
+      "R": 0,
+      "I": 20
+     },
+     "conversion": null,
+     "program": "first program (analyse_md.py)",
+     "start": "X",
+     "model": "bonded_2s",
+     "role": "validation",
+     "state_of_start": "C",
+     "opposite_state": "R",
+     "verdict_of_the_run_last_20_ns": "STAYED",
+     "first_passage_ns_production_only": null,
+     "first_passage_frame_production_only": null,
+     "equilibration_total_ps": 2000.0,
+     "equilibration_steps": [
+      "eq01",
+      "eq02",
+      "eq03",
+      "eq04",
+      "eq05",
+      "eq06"
+     ]
+    },
+    "analysis_recheck": {
+     "folder": "/root/cqc-sfa-md/runs/bonded_2s/X0/analysis_recheck",
+     "files": {
+      "timeseries_equil_solute.csv": "b6ceaf89e7fbb11d359a9c52811888db554ad5830f0cf9392fcae0362bc841c5",
+      "timeseries_solute.csv": "615e0d89e0194f3c348335f0662ac5894b6852ba0c008446cf29bd85898fd847"
+     },
+     "n_equilibration_frames_in_file": 200,
+     "n_released_equilibration_frames": 130,
+     "n_production_frames": 500,
+     "n_joined_frames": 630,
+     "release_time_ns_on_production_clock": -1.3,
+     "released_part_of_equilibration_ps": 1300.0,
+     "time_axis_max_deviation_ps": 0.0,
+     "n_visits": 1,
+     "n_long_visits": 1,
+     "long_visits": [
+      {
+       "state": "C",
+       "first_joined_index": 0,
+       "n_frames": 630,
+       "part_of_first_frame": "equilibration",
+       "time_from_release_ps": 10.0
+      }
+     ],
+     "n_transitions_joined": 0,
+     "state_first_released_frame": "C",
+     "counts_released_equilibration": {
+      "C": 110,
+      "R": 0,
+      "I": 20
+     },
+     "conversion": null,
+     "program": "second program (recheck_md.py)",
+     "start": "X",
+     "model": "bonded_2s",
+     "role": "validation",
+     "state_of_start": "C",
+     "opposite_state": "R",
+     "verdict_of_the_run_last_20_ns": "STAYED",
+     "first_passage_ns_production_only": null,
+     "first_passage_frame_production_only": null,
+     "equilibration_total_ps": 2000.0,
+     "equilibration_steps": [
+      "eq01",
+      "eq02",
+      "eq03",
+      "eq04",
+      "eq05",
+      "eq06"
+     ]
+    }
+   },
+   "n_joined_frames_equal": true,
+   "n_frames_with_different_state": 0,
+   "same_frame": true,
+   "same_start_state": true,
+   "conversion": null,
+   "reported_as": "none (no visit of at least 1 ns in the opposite state after the release)",
+   "first_passage_ns_production_only": null
+  }
+ ],
+ "all_runs_same_frame_in_both_programs": true
+}

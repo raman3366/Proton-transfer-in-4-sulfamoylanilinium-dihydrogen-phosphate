@@ -1,0 +1,114 @@
+{
+  "case": "sfa_pair_pcm_d3",
+  "inputs": {
+    "scan_dir": "/home/ubuntu/cqc-sfa/molecules/sfa/results/sfa_pair_pcm_d3/scan",
+    "hessian": "/home/ubuntu/cqc-sfa/molecules/sfa/results/sfa_pair_pcm_d3/hessian.npy",
+    "hessian_geometry": "/home/ubuntu/cqc-sfa/molecules/sfa/results/sfa_pair_pcm_d3/opt.xyz",
+    "freq_json": "/home/ubuntu/cqc-sfa/molecules/sfa/results/sfa_pair_pcm_d3/freq.json",
+    "max_freq_diff_vs_freq_json_cm-1": 1.4722445484949276e-11,
+    "n_scan_points": 8,
+    "n_envelope_points": 7
+  },
+  "effective_mass_amu": 0.94033006993007,
+  "mass_model": "nh",
+  "nh_stretch": {
+    "n_imaginary": 0,
+    "normal_mode": {
+      "index": 64,
+      "freq_cm-1": 2190.207496909957,
+      "nh_stretch_character": 0.9732758795177766,
+      "zpe_half_h_nu_kcal": 3.131058804865097,
+      "top3": [
+        {
+          "freq_cm-1": 2190.207496909957,
+          "nh_stretch_character": 0.9732758795177766
+        },
+        {
+          "freq_cm-1": 1197.4640415978533,
+          "nh_stretch_character": 0.006904511740056856
+        },
+        {
+          "freq_cm-1": 1635.380176038309,
+          "nh_stretch_character": 0.004336536234964343
+        }
+      ]
+    },
+    "local_mode": {
+      "k_a_mdyn_per_A": 1.990610699741549,
+      "freq_cm-1": 1895.5050961592212,
+      "zpe_half_h_nu_kcal": 2.709760572625776,
+      "note": "Konkoli-Cremer adiabatic local mode (compliance) of the N1-H1A bond"
+    }
+  },
+  "headline_zpe_kcal": 3.131058804865097,
+  "headline_zpe_source": "normal mode",
+  "scan_curvature": {
+    "k_mdyn_per_A": 1.937998791461644,
+    "freq_cm-1": 1870.2882277697279,
+    "note": "cubic fit E0 + k/2 x^2 + c x^3 through the two scan points above d0; compare with the local-mode k_a"
+  },
+  "profile": {
+    "N_minimum": true,
+    "E_N_min_Ha": -1536.1106472215747,
+    "d_N_min_A": 1.0984582687191042,
+    "N_min_is_unconstrained_minimum": true,
+    "N_min_at_scan_edge": false,
+    "barrier_kcal": 0.7232956102577855,
+    "d_barrier_A": 1.2501776992467009,
+    "O_side_min_kcal": -0.5421592935448669,
+    "d_O_side_min_A": 1.6305409733237815,
+    "O_side_min_is_end_of_scan": true,
+    "O_side_min_is_open_end": false,
+    "reverse_barrier_kcal": 1.2654549038026526,
+    "barrier_cubic_spline_kcal": 0.7488924055133104,
+    "d_barrier_cubic_spline_A": 1.2767951431989109
+  },
+  "one_d_model": {
+    "levels": [
+      {
+        "E_kcal": 0.6631851209000982,
+        "<d>_A": 1.4392471687169237,
+        "P_O_side": 0.8377872529802415
+      },
+      {
+        "E_kcal": 2.1422743027252817,
+        "<d>_A": 1.308900976413991,
+        "P_O_side": 0.4319203644962553
+      },
+      {
+        "E_kcal": 4.643319006199945,
+        "<d>_A": 1.3738644153871609,
+        "P_O_side": 0.6638027237720506
+      },
+      {
+        "E_kcal": 7.642917288838842,
+        "<d>_A": 1.3645833041846707,
+        "P_O_side": 0.5828962400011748
+      },
+      {
+        "E_kcal": 10.879810123309605,
+        "<d>_A": 1.3630647969336656,
+        "P_O_side": 0.569566510817721
+      },
+      {
+        "E_kcal": 14.295970558608115,
+        "<d>_A": 1.3664227874325074,
+        "P_O_side": 0.5908073717253699
+      }
+    ],
+    "energy_reference": "N-protonated minimum",
+    "E0_above_reference_kcal": 0.6631851209000982,
+    "E0_minus_barrier_top_kcal": -0.06011048935768737,
+    "interpolation": "PCHIP slopes (zero at unconstrained minima), cubic Hermite; harmonic walls outside the scanned range",
+    "wall_k_mdyn_per_A": 1.990610699741549,
+    "wall_k_source": "k_a of the N1-H1A local mode",
+    "dvr": "Colbert-Miller sinc DVR, 801 points, range scanned +/- 0.6 A"
+  },
+  "verdict": "Barrier 0.72 kcal/mol (cubic-spline estimate 0.75; O-side minimum -0.54) vs harmonic N-H ZPE (normal mode) 3.13 kcal/mol (ratio ZPE/barrier 4.33); 1-D ground level 0.66 kcal/mol (below the barrier top), P(O side) = 0.838.",
+  "approximations": [
+    "1-D: d(N1-H1A) is the only quantum coordinate; all others follow the relaxed scan (adiabatic); the ZPE of the other 3N-7 modes (notably the H1A bends) is not followed along the path; no multidimensional tunnelling.",
+    "Effective mass 0.940 u (N-H reduced mass); heavy-atom relaxation adds inertia that is ignored (upper bound on ZPE and delocalisation).",
+    "Harmonic ZPE (1/2 h nu) of the normal mode with the largest N1-H1A stretch character; no anharmonicity.",
+    "Electronic energies from the relaxed scan (lower envelope of both chains, 0.10 A grid); equilibrium IEF-PCM at every point; B3LYP-D3(BJ) tends to underestimate proton-transfer barriers."
+  ]
+}

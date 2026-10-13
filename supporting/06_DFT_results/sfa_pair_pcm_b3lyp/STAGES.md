@@ -1,0 +1,6 @@
+- 2026-09-27 14:29  pre-optimisation at B3LYP/6-31g(d) (254 basis functions)
+- 2026-09-27 15:42  pre-optimisation converged in 35 steps, 73.0 min
+- 2026-09-27 15:42  optimisation started from preopt.xyz; solvent=water
+- 2026-09-27 20:07  optimize FAILED: exit code -15, see logs/optimize.log
+- 2026-09-27 20:07  optimisation accepted on negligible forces (rms 5.92e-05, max 1.21e-04) after 68 steps; minimum to be confirmed by frequencies
+- 2026-09-27 20:07  proton check: H-N 1.100 A, H-O 1.486 A -> proton retained on the donor; bonds broken none, formed none

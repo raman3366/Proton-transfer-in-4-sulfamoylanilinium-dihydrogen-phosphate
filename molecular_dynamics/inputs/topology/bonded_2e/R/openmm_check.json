@@ -1,0 +1,46 @@
+{
+ "what": "system.prmtop and system.inpcrd read by OpenMM with the settings of md/protocol.json; energy of the built coordinates (before any minimisation; hydrogens as tleap placed them)",
+ "openmm": "8.6.1",
+ "platform": "CPU",
+ "threads": 2,
+ "n_particles": 40857,
+ "n_constraints": 38716,
+ "total_mass_amu": 251627.822,
+ "box_vectors_nm": [
+  [
+   8.412089,
+   0.0,
+   0.0
+  ],
+  [
+   -2.80403,
+   7.930994,
+   0.0
+  ],
+  [
+   -2.80403,
+   -3.965497,
+   6.868443
+  ]
+ ],
+ "potential_energy_kj_per_mol": -443130.2,
+ "by_force_kj_per_mol": {
+  "HarmonicBondForce": 605.4,
+  "HarmonicAngleForce": 3079.7,
+  "PeriodicTorsionForce": 12116.0,
+  "NonbondedForce": -458931.4,
+  "CMMotionRemover": 0.0
+ },
+ "energy_is_finite": true,
+ "note": "the energy is not repeatable to the last digit with more than one thread; this file is not part of the built system",
+ "pairs_across_the_zinc": {
+  "what": "exceptions of OpenMM's NonbondedForce for the pairs whose bonds run through the zinc: one or two bonds apart, no interaction; three bonds apart, charge product / 1.2 and epsilon / 2.0; four bonds apart, no exception (full interaction)",
+  "n_pairs_1_or_2_bonds_apart": 18,
+  "n_pairs_3_bonds_apart": 39,
+  "n_pairs_4_bonds_apart": 80,
+  "1_or_2_bonds_no_interaction": true,
+  "3_bonds_scaled_as_amber_1_4": true,
+  "4_bonds_no_exception": true,
+  "as_amber_rules": true
+ }
+}

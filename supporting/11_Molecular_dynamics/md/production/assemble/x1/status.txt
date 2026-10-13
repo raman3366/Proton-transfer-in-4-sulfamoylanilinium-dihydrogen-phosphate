@@ -1,0 +1,80 @@
+### GPU machine cqc-md-gpu-01: 6 Oct 2026, 10:44 PM IST
+
+**ALERT_PULL_CONFLICT** (info, since 6 Oct, 9:00 AM): 21 file(s) of the machine have the name of a file the Pi made itself (or of a finished file that changed afterwards): the Pi's file is untouched, the machine's version is under /root/cqc-sfa-md/from_gpu/conflicts. First: qm/gr/fit.log, qm/gr/gate.log, qm/gr/logs/Rx.pyscf.log, qm/gr/mm.log
+
+| Item | Value |
+|---|---|
+| Machine | **running** (IBM, read 6 Oct, 10:40 PM); zone us-south-1, spot class, gx3-24x120x1l40s; ssh answers; KEEP_RUNNING file present |
+| Hours | 14.13 h running in 2 intervals; 14.14 h in existence |
+| Cost against the cap | **US$11.97 of US$60.00 (19.9 %)** = 14.13 h x 0.808 + 14.14 h x 0.030 + 1.34 GB pulled x 0.092 |
+| Left under the cap | US$48.03; the guard stops the machine at US$58.14 (the cap less 0.5 h of running and 48 h of a stopped machine), after 55.1 h more of running (about 9 Oct, 5:50 AM if it runs through) |
+| Pre-emptions | 1; last seen 6 Oct, 9:20 PM, running again 6 Oct, 9:20 PM (0.0 h down) |
+| Credit ibm01 | about **US$171.16** = balance US$175.36 (read 6 Oct, 10:30 PM) - US$4.20 of this machine not yet billed; after the cost still to come (at most US$24.33) US$146.83; expires 21 Oct 2026, 1:02 PM IST (in 14.6 days) |
+| Results on the Pi | last complete pull 6 Oct, 10:40 PM; 2193 files seen on the machine, 3 of unfinished steps and 0 being written left for later, 21 kept apart (the Pi has its own file of that name); driver checksums: 158 files of 44 finished steps in 6 runs match |
+| Guard | last run 6 Oct, 10:40 PM (5 min ago), live; switch on the machine armed |
+
+**Queue** (as pulled; the runner's state of 6 Oct, 10:40 PM): 22 done, 1 running, 10 waiting, 0 failed
+
+| Task | State | Started (IST) | Ended (IST) | Note |
+|---|---|---|---|---|
+| gr_check_x | done | 6 Oct, 9:07 AM | 6 Oct, 9:10 AM |  |
+| gr_points | done | 6 Oct, 9:10 AM | 6 Oct, 10:46 AM |  |
+| gr_relax_Rx | done | 6 Oct, 10:46 AM | 6 Oct, 11:57 AM |  |
+| gr_relax_X | done | 6 Oct, 11:57 AM | 6 Oct, 3:11 PM |  |
+| gr_binding | done | 6 Oct, 12:46 PM | 6 Oct, 12:46 PM |  |
+| gr_binding_final | done | 6 Oct, 8:47 PM | 6 Oct, 8:47 PM |  |
+| gr_relax_Rx_cont | done | 6 Oct, 3:11 PM | 6 Oct, 6:49 PM |  |
+| preflight_gpu | done | 6 Oct, 8:55 AM | 6 Oct, 8:55 AM |  |
+| preflight_speed | done | 6 Oct, 8:55 AM | 6 Oct, 9:06 AM |  |
+| preflight_interrupt | done | 6 Oct, 9:06 AM | 6 Oct, 9:10 AM |  |
+| qm_opt | done | 6 Oct, 8:55 AM | 6 Oct, 12:46 PM |  |
+| qm_hess | done | 6 Oct, 12:46 PM | 6 Oct, 8:47 PM |  |
+| qm_write | done | 6 Oct, 8:47 PM | 6 Oct, 8:47 PM |  |
+| n2_check | done | 6 Oct, 2:35 PM | 6 Oct, 2:37 PM |  |
+| n2_points | done | 6 Oct, 2:37 PM | 6 Oct, 5:21 PM |  |
+| n2_esp_Rx | done | 6 Oct, 5:21 PM | 6 Oct, 5:41 PM |  |
+| n2_reserve | done | 6 Oct, 5:41 PM | 6 Oct, 6:31 PM |  |
+| X1 | **running** | 6 Oct, 10:14 PM |  |  |
+| N1 | waiting |  |  | after X1 |
+| R1 | waiting |  |  | after N1 |
+| X2 | waiting |  |  | after R1 |
+| N2 | waiting |  |  | after X2 |
+| R2 | waiting |  |  | after N2 |
+| X3 | waiting |  |  | after R2 |
+| N3 | waiting |  |  | after X3 |
+| R3 | waiting |  |  | after N3 |
+| reh2e_TX0 | done | 6 Oct, 10:31 AM | 6 Oct, 10:45 AM |  |
+| reh2e_TR0 | done | 6 Oct, 10:45 AM | 6 Oct, 10:59 AM |  |
+| reh2e_TN0 | done | 6 Oct, 10:59 AM | 6 Oct, 11:14 AM |  |
+| R_zn | waiting |  |  | after R3 |
+| R_n2 | waiting |  |  | after R_zn |
+| X0_2s | done | 6 Oct, 9:37 PM | 6 Oct, 9:49 PM |  |
+| X0_2e | done | 6 Oct, 9:49 PM | 6 Oct, 10:01 PM |  |
+
+**MD runs** (speed now: 924.3 ns per day, from the last 5 finished production segment(s))
+
+| Run | State | ns done / planned | ns per day (measured) |
+|---|---|---|---|
+| bonded_2e/X1 | **running** | 15 / 100 | 922.1 |
+| bonded_2e/N1 | waiting | 0 / 100 |  |
+| bonded_2e/R1 | waiting | 0 / 100 |  |
+| bonded_2e/X2 | waiting | 0 / 100 |  |
+| bonded_2e/N2 | waiting | 0 / 100 |  |
+| bonded_2e/R2 | waiting | 0 / 100 |  |
+| bonded_2e/X3 | waiting | 0 / 100 |  |
+| bonded_2e/N3 | waiting | 0 / 100 |  |
+| bonded_2e/R3 | waiting | 0 / 100 |  |
+| runs_test/bonded_2e/TX0 | done, pull pending | 0 / 5 |  |
+| runs_test/bonded_2e/TR0 | done, pull pending | 0 / 5 |  |
+| runs_test/bonded_2e/TN0 | done, pull pending | 0 / 5 |  |
+| bonded_2s/R1 | waiting | 0 / 100 |  |
+| bonded_2e_n2fit/R1 | waiting | 0 / 100 |  |
+| bonded_2s/X0 | done | 5 / 5 | 930.1 |
+| bonded_2e/X0 | done | 5 / 5 | 925 |
+| all 16 | 2 done | 25 / 1125 | |
+
+Test and speed-test folders (not counted): bench, preflight_a, preflight_b.
+
+**Production ends: about 8 Oct 2026, 3:35 AM IST**, if the machine runs through and the GPU does nothing else (1085 ns of production and 27 ns-equivalents of equilibration, less 1.48 ns of the step now running = 28.8 h at 924.3 ns per day).
+Cost at that end: about US$36.14 of the cap US$60.00.
+Not in this estimate: extensions of the held equilibration of the R runs (0 to 2 ns each), pre-emptions and their waiting times.

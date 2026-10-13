@@ -1,0 +1,1114 @@
+{
+  "purpose": "M9 requested torsions (dft/torsion_scan.py); written by `torsion_scan.py plan --write`",
+  "generated": "2026-09-29T08:27:40",
+  "definition": "tau_fold = max(|C3-C4-S1-N2|, |C5-C4-S1-N2|); computed as C3-C4-S1-N2 = +tau",
+  "merge_deg": 0.5,
+  "cases": {
+    "sulfanilamide_pcm_d3": {
+      "species": "sfa_neutral",
+      "requested": [
+        {
+          "tau": 90.0,
+          "tau_full": 90.0,
+          "kind": "grid",
+          "label": "grid 90",
+          "source": "grid",
+          "tier": "critical",
+          "compute": "exact"
+        },
+        {
+          "tau": 100.0,
+          "tau_full": 100.0,
+          "kind": "grid",
+          "label": "grid 100",
+          "source": "grid",
+          "tier": "critical",
+          "compute": "exact"
+        },
+        {
+          "tau": 102.7,
+          "tau_full": 102.66,
+          "kind": "SAPH crystal",
+          "label": "SAPH crystal (cation, CIF)",
+          "source": "facts dock.tors.crystal",
+          "compute": "interp",
+          "tier": "-"
+        },
+        {
+          "tau": 105.6,
+          "tau_full": 105.56234475439294,
+          "kind": "co-crystal",
+          "label": "3TZF Y. pestis DHPS, bound sulfamethoxazole",
+          "source": "dock/T1_3TZF/ref_08D.sdf (heavy atoms; C3-C4-S1-N2 105.56, C5-C4-S1-N2 -73.58)",
+          "tier": "critical",
+          "compute": "exact"
+        },
+        {
+          "tau": 107.7,
+          "tau_full": 107.7,
+          "kind": "docked pose",
+          "label": "3TZF (DHPS), Vina, representative (seed 2, Table S27)",
+          "target": "T1_3TZF",
+          "scoring": "vina",
+          "pose": "T1_3TZF__sfa_neutral__vina__cl1_seed02",
+          "strain_mmff_relaxed": 0.1,
+          "strain_mmff_rigid": 0.1,
+          "source": "dock/results/poses_for_dft/manifest.json",
+          "tier": "critical",
+          "compute": "exact"
+        },
+        {
+          "tau": 108.1,
+          "tau_full": 108.1,
+          "kind": "docked pose",
+          "label": "3TZF (DHPS), Vinardo, representative (seed 1, Table S27)",
+          "target": "T1_3TZF",
+          "scoring": "vinardo",
+          "pose": "T1_3TZF__sfa_neutral__vinardo__cl1_seed01",
+          "strain_mmff_relaxed": 0.1,
+          "strain_mmff_rigid": 0.11,
+          "source": "dock/results/poses_for_dft/manifest.json",
+          "compute": "interp",
+          "tier": "-"
+        },
+        {
+          "tau": 110.0,
+          "tau_full": 110.0,
+          "kind": "grid",
+          "label": "grid 110",
+          "source": "grid",
+          "tier": "critical",
+          "compute": "exact"
+        },
+        {
+          "tau": 110.5,
+          "tau_full": 110.45,
+          "kind": "docked mean",
+          "label": "3TZF (DHPS), Vina, mean of the top poses",
+          "target": "T1_3TZF",
+          "scoring": "vina",
+          "source": "facts bulk.docktors.T1_3TZF.sfa_neutral__vina__prod.tau_fold.mean",
+          "compute": "interp",
+          "tier": "-"
+        },
+        {
+          "tau": 111.3,
+          "tau_full": 111.34746585102629,
+          "kind": "co-crystal",
+          "label": "1AJ0 E. coli DHPS, bound sulfanilamide",
+          "source": "dock/T2_1AJ0/ref_SAN.sdf (heavy atoms; C3-C4-S1-N2 111.35, C5-C4-S1-N2 -67.02)",
+          "tier": "critical",
+          "compute": "exact"
+        },
+        {
+          "tau": 119.4,
+          "tau_full": 119.4,
+          "kind": "docked pose",
+          "label": "7S2K (Sul2), Vina, representative (seed 4, Table S27)",
+          "target": "T5_7S2K",
+          "scoring": "vina",
+          "pose": "T5_7S2K__sfa_neutral__vina__cl1_seed04",
+          "strain_mmff_relaxed": 0.28,
+          "strain_mmff_rigid": 0.36,
+          "source": "dock/results/poses_for_dft/manifest.json",
+          "compute": "interp",
+          "tier": "-"
+        },
+        {
+          "tau": 120.0,
+          "tau_full": 120.0,
+          "kind": "grid",
+          "label": "grid 120",
+          "source": "grid",
+          "tier": "critical",
+          "compute": "exact"
+        },
+        {
+          "tau": 124.6,
+          "tau_full": 124.57,
+          "kind": "docked mean",
+          "label": "3TZF (DHPS), Vinardo, mean of the top poses",
+          "target": "T1_3TZF",
+          "scoring": "vinardo",
+          "source": "facts bulk.docktors.T1_3TZF.sfa_neutral__vinardo__prod.tau_fold.mean",
+          "compute": "exact",
+          "tier": "optional"
+        },
+        {
+          "tau": 129.2,
+          "tau_full": 129.2,
+          "kind": "docked mean",
+          "label": "3HS4 (hCA II), Vinardo, mean of the top poses",
+          "target": "T4_3HS4",
+          "scoring": "vinardo",
+          "source": "facts bulk.docktors.T4_3HS4.sfa_neutral__vinardo__prod.tau_fold.mean",
+          "compute": "exact",
+          "tier": "optional"
+        },
+        {
+          "tau": 130.0,
+          "tau_full": 130.0,
+          "kind": "grid",
+          "label": "grid 130",
+          "source": "grid",
+          "tier": "critical",
+          "compute": "exact"
+        },
+        {
+          "tau": 130.3,
+          "tau_full": 130.3,
+          "kind": "docked pose",
+          "label": "3HS4 (hCA II), Vinardo, representative (seed 1, Table S27)",
+          "target": "T4_3HS4",
+          "scoring": "vinardo",
+          "pose": "T4_3HS4__sfa_neutral__vinardo__cl1_seed01",
+          "strain_mmff_relaxed": 0.47,
+          "strain_mmff_rigid": 0.49,
+          "source": "dock/results/poses_for_dft/manifest.json",
+          "compute": "interp",
+          "tier": "-"
+        },
+        {
+          "tau": 132.1,
+          "tau_full": 132.0560689577839,
+          "kind": "co-crystal",
+          "label": "6RL9 hCA II, bound sulfanilamide",
+          "source": "dock/T3_6RL9/ref_SAN.sdf (heavy atoms; C3-C4-S1-N2 132.06, C5-C4-S1-N2 -50.09)",
+          "tier": "critical",
+          "compute": "exact"
+        },
+        {
+          "tau": 140.0,
+          "tau_full": 140.0,
+          "kind": "grid",
+          "label": "grid 140",
+          "source": "grid",
+          "tier": "critical",
+          "compute": "exact"
+        },
+        {
+          "tau": 140.2,
+          "tau_full": 140.2,
+          "kind": "docked pose",
+          "label": "3HS4 (hCA II), Vina, representative (seed 2, Table S27)",
+          "target": "T4_3HS4",
+          "scoring": "vina",
+          "pose": "T4_3HS4__sfa_neutral__vina__cl1_seed02",
+          "strain_mmff_relaxed": 0.85,
+          "strain_mmff_rigid": 0.43,
+          "source": "dock/results/poses_for_dft/manifest.json",
+          "compute": "interp",
+          "tier": "-"
+        },
+        {
+          "tau": 144.1,
+          "tau_full": 144.13,
+          "kind": "docked mean",
+          "label": "3HS4 (hCA II), AD4Zn, mean of the top poses",
+          "target": "T4_3HS4",
+          "scoring": "ad4zn",
+          "source": "facts bulk.docktors.T4_3HS4.sfa_neutral__ad4zn__prod.tau_fold.mean",
+          "compute": "exact",
+          "tier": "optional"
+        },
+        {
+          "tau": 145.9,
+          "tau_full": 145.9,
+          "kind": "docked pose",
+          "label": "3HS4 (hCA II), AD4Zn, representative (seed 13, Table S27)",
+          "target": "T4_3HS4",
+          "scoring": "ad4zn",
+          "pose": "T4_3HS4__sfa_neutral__ad4zn__cl1_seed13",
+          "strain_mmff_relaxed": 1.05,
+          "strain_mmff_rigid": 0.54,
+          "source": "dock/results/poses_for_dft/manifest.json",
+          "compute": "interp",
+          "tier": "-"
+        },
+        {
+          "tau": 146.3,
+          "tau_full": 146.32,
+          "kind": "docked mean",
+          "label": "3HS4 (hCA II), Vina, mean of the top poses",
+          "target": "T4_3HS4",
+          "scoring": "vina",
+          "source": "facts bulk.docktors.T4_3HS4.sfa_neutral__vina__prod.tau_fold.mean",
+          "compute": "exact",
+          "tier": "optional"
+        },
+        {
+          "tau": 147.0,
+          "tau_full": 146.985,
+          "kind": "docked mean",
+          "label": "6RL9 (hCA II), AD4Zn, mean of the top poses",
+          "target": "T3_6RL9",
+          "scoring": "ad4zn",
+          "source": "facts bulk.docktors.T3_6RL9.sfa_neutral__ad4zn__prod.tau_fold.mean",
+          "tier": "critical",
+          "compute": "exact"
+        },
+        {
+          "tau": 148.6,
+          "tau_full": 148.6,
+          "kind": "docked pose",
+          "label": "6RL9 (hCA II), AD4Zn, representative (seed 3, Table S27)",
+          "target": "T3_6RL9",
+          "scoring": "ad4zn",
+          "pose": "T3_6RL9__sfa_neutral__ad4zn__cl1_seed03",
+          "strain_mmff_relaxed": 1.14,
+          "strain_mmff_rigid": 0.59,
+          "source": "dock/results/poses_for_dft/manifest.json",
+          "compute": "interp",
+          "tier": "-"
+        },
+        {
+          "tau": 150.0,
+          "tau_full": 150.0,
+          "kind": "grid",
+          "label": "grid 150",
+          "source": "grid",
+          "tier": "critical",
+          "compute": "exact"
+        },
+        {
+          "tau": 156.0,
+          "tau_full": 155.98,
+          "kind": "docked mean",
+          "label": "6RL9 (hCA II), Vinardo, mean of the top poses",
+          "target": "T3_6RL9",
+          "scoring": "vinardo",
+          "source": "facts bulk.docktors.T3_6RL9.sfa_neutral__vinardo__prod.tau_fold.mean",
+          "compute": "exact",
+          "tier": "optional"
+        },
+        {
+          "tau": 156.7,
+          "tau_full": 156.7,
+          "kind": "docked pose",
+          "label": "6RL9 (hCA II), Vinardo, representative (seed 9, Table S27)",
+          "target": "T3_6RL9",
+          "scoring": "vinardo",
+          "pose": "T3_6RL9__sfa_neutral__vinardo__cl1_seed09",
+          "strain_mmff_relaxed": 1.44,
+          "strain_mmff_rigid": 0.79,
+          "source": "dock/results/poses_for_dft/manifest.json",
+          "compute": "interp",
+          "tier": "-"
+        },
+        {
+          "tau": 160.0,
+          "tau_full": 160.0,
+          "kind": "grid",
+          "label": "grid 160",
+          "source": "grid",
+          "tier": "critical",
+          "compute": "exact"
+        },
+        {
+          "tau": 160.3,
+          "tau_full": 160.3,
+          "kind": "docked pose",
+          "label": "6RL9 (hCA II), Vina, representative (seed 9, Table S27)",
+          "target": "T3_6RL9",
+          "scoring": "vina",
+          "pose": "T3_6RL9__sfa_neutral__vina__cl1_seed09",
+          "strain_mmff_relaxed": 1.56,
+          "strain_mmff_rigid": 0.88,
+          "source": "dock/results/poses_for_dft/manifest.json",
+          "compute": "interp",
+          "tier": "-"
+        },
+        {
+          "tau": 160.4,
+          "tau_full": 160.36,
+          "kind": "docked mean",
+          "label": "6RL9 (hCA II), Vina, mean of the top poses",
+          "target": "T3_6RL9",
+          "scoring": "vina",
+          "source": "facts bulk.docktors.T3_6RL9.sfa_neutral__vina__prod.tau_fold.mean",
+          "tier": "critical",
+          "compute": "interp"
+        },
+        {
+          "tau": 162.5,
+          "tau_full": 162.47,
+          "kind": "docked mean",
+          "label": "7S2K (Sul2), Vina, mean of the top poses",
+          "target": "T5_7S2K",
+          "scoring": "vina",
+          "source": "facts bulk.docktors.T5_7S2K.sfa_neutral__vina__prod.tau_fold.mean",
+          "compute": "exact",
+          "tier": "optional"
+        },
+        {
+          "tau": 170.0,
+          "tau_full": 170.0,
+          "kind": "grid",
+          "label": "grid 170",
+          "source": "grid",
+          "tier": "critical",
+          "compute": "exact"
+        },
+        {
+          "tau": 170.1,
+          "tau_full": 170.1,
+          "kind": "docked pose",
+          "label": "7S2K (Sul2), Vinardo, representative (seed 1, Table S27)",
+          "target": "T5_7S2K",
+          "scoring": "vinardo",
+          "pose": "T5_7S2K__sfa_neutral__vinardo__cl1_seed01",
+          "strain_mmff_relaxed": 1.79,
+          "strain_mmff_rigid": 1.09,
+          "source": "dock/results/poses_for_dft/manifest.json",
+          "compute": "interp",
+          "tier": "-"
+        },
+        {
+          "tau": 170.4,
+          "tau_full": 170.38,
+          "kind": "docked mean",
+          "label": "7S2K (Sul2), Vinardo, mean of the top poses",
+          "target": "T5_7S2K",
+          "scoring": "vinardo",
+          "source": "facts bulk.docktors.T5_7S2K.sfa_neutral__vinardo__prod.tau_fold.mean",
+          "compute": "interp",
+          "tier": "-"
+        },
+        {
+          "tau": 180.0,
+          "tau_full": 180.0,
+          "kind": "grid",
+          "label": "grid 180",
+          "source": "grid",
+          "tier": "critical",
+          "compute": "exact"
+        }
+      ],
+      "points": [
+        {
+          "tau": 90.0,
+          "tier": "critical",
+          "labels": [
+            "grid 90"
+          ],
+          "kinds": [
+            "grid"
+          ]
+        },
+        {
+          "tau": 100.0,
+          "tier": "critical",
+          "labels": [
+            "grid 100"
+          ],
+          "kinds": [
+            "grid"
+          ]
+        },
+        {
+          "tau": 105.6,
+          "tier": "critical",
+          "labels": [
+            "3TZF Y. pestis DHPS, bound sulfamethoxazole"
+          ],
+          "kinds": [
+            "co-crystal"
+          ]
+        },
+        {
+          "tau": 107.7,
+          "tier": "critical",
+          "labels": [
+            "3TZF (DHPS), Vina, representative (seed 2, Table S27)"
+          ],
+          "kinds": [
+            "docked pose"
+          ]
+        },
+        {
+          "tau": 110.0,
+          "tier": "critical",
+          "labels": [
+            "grid 110"
+          ],
+          "kinds": [
+            "grid"
+          ]
+        },
+        {
+          "tau": 111.3,
+          "tier": "critical",
+          "labels": [
+            "1AJ0 E. coli DHPS, bound sulfanilamide"
+          ],
+          "kinds": [
+            "co-crystal"
+          ]
+        },
+        {
+          "tau": 120.0,
+          "tier": "critical",
+          "labels": [
+            "grid 120"
+          ],
+          "kinds": [
+            "grid"
+          ]
+        },
+        {
+          "tau": 124.6,
+          "tier": "optional",
+          "labels": [
+            "3TZF (DHPS), Vinardo, mean of the top poses"
+          ],
+          "kinds": [
+            "docked mean"
+          ]
+        },
+        {
+          "tau": 129.2,
+          "tier": "optional",
+          "labels": [
+            "3HS4 (hCA II), Vinardo, mean of the top poses"
+          ],
+          "kinds": [
+            "docked mean"
+          ]
+        },
+        {
+          "tau": 130.0,
+          "tier": "critical",
+          "labels": [
+            "grid 130"
+          ],
+          "kinds": [
+            "grid"
+          ]
+        },
+        {
+          "tau": 132.1,
+          "tier": "critical",
+          "labels": [
+            "6RL9 hCA II, bound sulfanilamide"
+          ],
+          "kinds": [
+            "co-crystal"
+          ]
+        },
+        {
+          "tau": 140.0,
+          "tier": "critical",
+          "labels": [
+            "grid 140"
+          ],
+          "kinds": [
+            "grid"
+          ]
+        },
+        {
+          "tau": 144.1,
+          "tier": "optional",
+          "labels": [
+            "3HS4 (hCA II), AD4Zn, mean of the top poses"
+          ],
+          "kinds": [
+            "docked mean"
+          ]
+        },
+        {
+          "tau": 146.3,
+          "tier": "optional",
+          "labels": [
+            "3HS4 (hCA II), Vina, mean of the top poses"
+          ],
+          "kinds": [
+            "docked mean"
+          ]
+        },
+        {
+          "tau": 147.0,
+          "tier": "critical",
+          "labels": [
+            "6RL9 (hCA II), AD4Zn, mean of the top poses"
+          ],
+          "kinds": [
+            "docked mean"
+          ]
+        },
+        {
+          "tau": 150.0,
+          "tier": "critical",
+          "labels": [
+            "grid 150"
+          ],
+          "kinds": [
+            "grid"
+          ]
+        },
+        {
+          "tau": 156.0,
+          "tier": "optional",
+          "labels": [
+            "6RL9 (hCA II), Vinardo, mean of the top poses"
+          ],
+          "kinds": [
+            "docked mean"
+          ]
+        },
+        {
+          "tau": 160.0,
+          "tier": "critical",
+          "labels": [
+            "grid 160"
+          ],
+          "kinds": [
+            "grid"
+          ]
+        },
+        {
+          "tau": 162.5,
+          "tier": "optional",
+          "labels": [
+            "7S2K (Sul2), Vina, mean of the top poses"
+          ],
+          "kinds": [
+            "docked mean"
+          ]
+        },
+        {
+          "tau": 170.0,
+          "tier": "critical",
+          "labels": [
+            "grid 170"
+          ],
+          "kinds": [
+            "grid"
+          ]
+        },
+        {
+          "tau": 180.0,
+          "tier": "critical",
+          "labels": [
+            "grid 180"
+          ],
+          "kinds": [
+            "grid"
+          ]
+        }
+      ]
+    },
+    "sulfonamidate_pcm_d3": {
+      "species": "sfa_anion",
+      "requested": [
+        {
+          "tau": 90.0,
+          "tau_full": 90.0,
+          "kind": "grid",
+          "label": "grid 90",
+          "source": "grid",
+          "tier": "critical",
+          "compute": "exact"
+        },
+        {
+          "tau": 100.0,
+          "tau_full": 100.0,
+          "kind": "grid",
+          "label": "grid 100",
+          "source": "grid",
+          "tier": "critical",
+          "compute": "exact"
+        },
+        {
+          "tau": 102.7,
+          "tau_full": 102.66,
+          "kind": "SAPH crystal",
+          "label": "SAPH crystal (cation, CIF)",
+          "source": "facts dock.tors.crystal",
+          "compute": "interp",
+          "tier": "-"
+        },
+        {
+          "tau": 105.6,
+          "tau_full": 105.56234475439294,
+          "kind": "co-crystal",
+          "label": "3TZF Y. pestis DHPS, bound sulfamethoxazole",
+          "source": "dock/T1_3TZF/ref_08D.sdf (heavy atoms; C3-C4-S1-N2 105.56, C5-C4-S1-N2 -73.58)",
+          "tier": "critical",
+          "compute": "exact"
+        },
+        {
+          "tau": 110.0,
+          "tau_full": 110.0,
+          "kind": "grid",
+          "label": "grid 110",
+          "source": "grid",
+          "tier": "critical",
+          "compute": "exact"
+        },
+        {
+          "tau": 111.3,
+          "tau_full": 111.34746585102629,
+          "kind": "co-crystal",
+          "label": "1AJ0 E. coli DHPS, bound sulfanilamide",
+          "source": "dock/T2_1AJ0/ref_SAN.sdf (heavy atoms; C3-C4-S1-N2 111.35, C5-C4-S1-N2 -67.02)",
+          "tier": "critical",
+          "compute": "exact"
+        },
+        {
+          "tau": 113.7,
+          "tau_full": 113.7,
+          "kind": "docked pose",
+          "label": "3TZF (DHPS), Vinardo, representative (seed 1, Table S27)",
+          "target": "T1_3TZF",
+          "scoring": "vinardo",
+          "pose": "T1_3TZF__sfa_anion__vinardo__cl1_seed01",
+          "strain_mmff_relaxed": 0.2,
+          "strain_mmff_rigid": 0.45,
+          "source": "dock/results/poses_for_dft/manifest.json",
+          "compute": "interp",
+          "tier": "-"
+        },
+        {
+          "tau": 113.8,
+          "tau_full": 113.77,
+          "kind": "docked mean",
+          "label": "3TZF (DHPS), Vinardo, mean of the top poses",
+          "target": "T1_3TZF",
+          "scoring": "vinardo",
+          "source": "facts bulk.docktors.T1_3TZF.sfa_anion__vinardo__prod.tau_fold.mean",
+          "compute": "exact",
+          "tier": "optional"
+        },
+        {
+          "tau": 115.0,
+          "tau_full": 115.05,
+          "kind": "docked mean",
+          "label": "3TZF (DHPS), Vina, mean of the top poses",
+          "target": "T1_3TZF",
+          "scoring": "vina",
+          "source": "facts bulk.docktors.T1_3TZF.sfa_anion__vina__prod.tau_fold.mean",
+          "tier": "critical",
+          "compute": "exact"
+        },
+        {
+          "tau": 115.2,
+          "tau_full": 115.2,
+          "kind": "docked pose",
+          "label": "7S2K (Sul2), Vina, representative (seed 5, Table S27)",
+          "target": "T5_7S2K",
+          "scoring": "vina",
+          "pose": "T5_7S2K__sfa_anion__vina__cl1_seed05",
+          "strain_mmff_relaxed": 0.22,
+          "strain_mmff_rigid": 0.15,
+          "source": "dock/results/poses_for_dft/manifest.json",
+          "compute": "interp",
+          "tier": "-"
+        },
+        {
+          "tau": 115.3,
+          "tau_full": 115.3,
+          "kind": "docked mean",
+          "label": "7S2K (Sul2), Vinardo, mean of the top poses",
+          "target": "T5_7S2K",
+          "scoring": "vinardo",
+          "source": "facts bulk.docktors.T5_7S2K.sfa_anion__vinardo__prod.tau_fold.mean",
+          "compute": "interp",
+          "tier": "-"
+        },
+        {
+          "tau": 115.3,
+          "tau_full": 115.3,
+          "kind": "docked pose",
+          "label": "7S2K (Sul2), Vinardo, representative (seed 2, Table S27)",
+          "target": "T5_7S2K",
+          "scoring": "vinardo",
+          "pose": "T5_7S2K__sfa_anion__vinardo__cl1_seed02",
+          "strain_mmff_relaxed": 0.22,
+          "strain_mmff_rigid": 0.16,
+          "source": "dock/results/poses_for_dft/manifest.json",
+          "compute": "interp",
+          "tier": "-"
+        },
+        {
+          "tau": 115.5,
+          "tau_full": 115.51,
+          "kind": "docked mean",
+          "label": "7S2K (Sul2), Vina, mean of the top poses",
+          "target": "T5_7S2K",
+          "scoring": "vina",
+          "source": "facts bulk.docktors.T5_7S2K.sfa_anion__vina__prod.tau_fold.mean",
+          "compute": "interp",
+          "tier": "-"
+        },
+        {
+          "tau": 115.7,
+          "tau_full": 115.7,
+          "kind": "docked pose",
+          "label": "3TZF (DHPS), Vina, representative (seed 10, Table S27)",
+          "target": "T1_3TZF",
+          "scoring": "vina",
+          "pose": "T1_3TZF__sfa_anion__vina__cl1_seed10",
+          "strain_mmff_relaxed": 0.23,
+          "strain_mmff_rigid": 0.49,
+          "source": "dock/results/poses_for_dft/manifest.json",
+          "compute": "interp",
+          "tier": "-"
+        },
+        {
+          "tau": 120.0,
+          "tau_full": 120.0,
+          "kind": "grid",
+          "label": "grid 120",
+          "source": "grid",
+          "tier": "critical",
+          "compute": "exact"
+        },
+        {
+          "tau": 130.0,
+          "tau_full": 130.03,
+          "kind": "docked mean",
+          "label": "3HS4 (hCA II), Vinardo, mean of the top poses",
+          "target": "T4_3HS4",
+          "scoring": "vinardo",
+          "source": "facts bulk.docktors.T4_3HS4.sfa_anion__vinardo__prod.tau_fold.mean",
+          "compute": "interp",
+          "tier": "-"
+        },
+        {
+          "tau": 130.0,
+          "tau_full": 130.0,
+          "kind": "grid",
+          "label": "grid 130",
+          "source": "grid",
+          "tier": "critical",
+          "compute": "exact"
+        },
+        {
+          "tau": 132.0,
+          "tau_full": 132.0,
+          "kind": "docked pose",
+          "label": "3HS4 (hCA II), Vinardo, representative (seed 3, Table S27)",
+          "target": "T4_3HS4",
+          "scoring": "vinardo",
+          "pose": "T4_3HS4__sfa_anion__vinardo__cl1_seed03",
+          "strain_mmff_relaxed": 0.44,
+          "strain_mmff_rigid": 0.93,
+          "source": "dock/results/poses_for_dft/manifest.json",
+          "compute": "interp",
+          "tier": "-"
+        },
+        {
+          "tau": 132.1,
+          "tau_full": 132.0560689577839,
+          "kind": "co-crystal",
+          "label": "6RL9 hCA II, bound sulfanilamide",
+          "source": "dock/T3_6RL9/ref_SAN.sdf (heavy atoms; C3-C4-S1-N2 132.06, C5-C4-S1-N2 -50.09)",
+          "tier": "critical",
+          "compute": "exact"
+        },
+        {
+          "tau": 140.0,
+          "tau_full": 140.0,
+          "kind": "grid",
+          "label": "grid 140",
+          "source": "grid",
+          "tier": "critical",
+          "compute": "exact"
+        },
+        {
+          "tau": 149.4,
+          "tau_full": 149.37,
+          "kind": "docked mean",
+          "label": "3HS4 (hCA II), Vina, mean of the top poses",
+          "target": "T4_3HS4",
+          "scoring": "vina",
+          "source": "facts bulk.docktors.T4_3HS4.sfa_anion__vina__prod.tau_fold.mean",
+          "compute": "exact",
+          "tier": "optional"
+        },
+        {
+          "tau": 150.0,
+          "tau_full": 150.0,
+          "kind": "grid",
+          "label": "grid 150",
+          "source": "grid",
+          "tier": "critical",
+          "compute": "exact"
+        },
+        {
+          "tau": 150.4,
+          "tau_full": 150.4,
+          "kind": "docked pose",
+          "label": "3HS4 (hCA II), Vina, representative (seed 7, Table S27)",
+          "target": "T4_3HS4",
+          "scoring": "vina",
+          "pose": "T4_3HS4__sfa_anion__vina__cl1_seed07",
+          "strain_mmff_relaxed": 0.87,
+          "strain_mmff_rigid": 0.6,
+          "source": "dock/results/poses_for_dft/manifest.json",
+          "compute": "interp",
+          "tier": "-"
+        },
+        {
+          "tau": 153.2,
+          "tau_full": 153.19,
+          "kind": "docked mean",
+          "label": "6RL9 (hCA II), Vinardo, mean of the top poses",
+          "target": "T3_6RL9",
+          "scoring": "vinardo",
+          "source": "facts bulk.docktors.T3_6RL9.sfa_anion__vinardo__prod.tau_fold.mean",
+          "compute": "exact",
+          "tier": "optional"
+        },
+        {
+          "tau": 153.6,
+          "tau_full": 153.6,
+          "kind": "docked pose",
+          "label": "6RL9 (hCA II), Vinardo, representative (seed 7, Table S27)",
+          "target": "T3_6RL9",
+          "scoring": "vinardo",
+          "pose": "T3_6RL9__sfa_anion__vinardo__cl1_seed07",
+          "strain_mmff_relaxed": 0.91,
+          "strain_mmff_rigid": 0.68,
+          "source": "dock/results/poses_for_dft/manifest.json",
+          "compute": "interp",
+          "tier": "-"
+        },
+        {
+          "tau": 155.8,
+          "tau_full": 155.82,
+          "kind": "docked mean",
+          "label": "6RL9 (hCA II), Vina, mean of the top poses",
+          "target": "T3_6RL9",
+          "scoring": "vina",
+          "source": "facts bulk.docktors.T3_6RL9.sfa_anion__vina__prod.tau_fold.mean",
+          "tier": "critical",
+          "compute": "exact"
+        },
+        {
+          "tau": 155.8,
+          "tau_full": 155.8,
+          "kind": "docked pose",
+          "label": "6RL9 (hCA II), Vina, representative (seed 10, Table S27)",
+          "target": "T3_6RL9",
+          "scoring": "vina",
+          "pose": "T3_6RL9__sfa_anion__vina__cl1_seed10",
+          "strain_mmff_relaxed": 0.94,
+          "strain_mmff_rigid": 0.73,
+          "source": "dock/results/poses_for_dft/manifest.json",
+          "compute": "interp",
+          "tier": "-"
+        },
+        {
+          "tau": 160.0,
+          "tau_full": 160.0,
+          "kind": "grid",
+          "label": "grid 160",
+          "source": "grid",
+          "tier": "critical",
+          "compute": "exact"
+        },
+        {
+          "tau": 170.0,
+          "tau_full": 170.0,
+          "kind": "grid",
+          "label": "grid 170",
+          "source": "grid",
+          "tier": "critical",
+          "compute": "exact"
+        },
+        {
+          "tau": 180.0,
+          "tau_full": 180.0,
+          "kind": "grid",
+          "label": "grid 180",
+          "source": "grid",
+          "tier": "critical",
+          "compute": "exact"
+        }
+      ],
+      "points": [
+        {
+          "tau": 90.0,
+          "tier": "critical",
+          "labels": [
+            "grid 90"
+          ],
+          "kinds": [
+            "grid"
+          ]
+        },
+        {
+          "tau": 100.0,
+          "tier": "critical",
+          "labels": [
+            "grid 100"
+          ],
+          "kinds": [
+            "grid"
+          ]
+        },
+        {
+          "tau": 105.6,
+          "tier": "critical",
+          "labels": [
+            "3TZF Y. pestis DHPS, bound sulfamethoxazole"
+          ],
+          "kinds": [
+            "co-crystal"
+          ]
+        },
+        {
+          "tau": 110.0,
+          "tier": "critical",
+          "labels": [
+            "grid 110"
+          ],
+          "kinds": [
+            "grid"
+          ]
+        },
+        {
+          "tau": 111.3,
+          "tier": "critical",
+          "labels": [
+            "1AJ0 E. coli DHPS, bound sulfanilamide"
+          ],
+          "kinds": [
+            "co-crystal"
+          ]
+        },
+        {
+          "tau": 113.8,
+          "tier": "optional",
+          "labels": [
+            "3TZF (DHPS), Vinardo, mean of the top poses"
+          ],
+          "kinds": [
+            "docked mean"
+          ]
+        },
+        {
+          "tau": 115.0,
+          "tier": "critical",
+          "labels": [
+            "3TZF (DHPS), Vina, mean of the top poses"
+          ],
+          "kinds": [
+            "docked mean"
+          ]
+        },
+        {
+          "tau": 120.0,
+          "tier": "critical",
+          "labels": [
+            "grid 120"
+          ],
+          "kinds": [
+            "grid"
+          ]
+        },
+        {
+          "tau": 130.0,
+          "tier": "critical",
+          "labels": [
+            "grid 130"
+          ],
+          "kinds": [
+            "grid"
+          ]
+        },
+        {
+          "tau": 132.1,
+          "tier": "critical",
+          "labels": [
+            "6RL9 hCA II, bound sulfanilamide"
+          ],
+          "kinds": [
+            "co-crystal"
+          ]
+        },
+        {
+          "tau": 140.0,
+          "tier": "critical",
+          "labels": [
+            "grid 140"
+          ],
+          "kinds": [
+            "grid"
+          ]
+        },
+        {
+          "tau": 149.4,
+          "tier": "optional",
+          "labels": [
+            "3HS4 (hCA II), Vina, mean of the top poses"
+          ],
+          "kinds": [
+            "docked mean"
+          ]
+        },
+        {
+          "tau": 150.0,
+          "tier": "critical",
+          "labels": [
+            "grid 150"
+          ],
+          "kinds": [
+            "grid"
+          ]
+        },
+        {
+          "tau": 153.2,
+          "tier": "optional",
+          "labels": [
+            "6RL9 (hCA II), Vinardo, mean of the top poses"
+          ],
+          "kinds": [
+            "docked mean"
+          ]
+        },
+        {
+          "tau": 155.8,
+          "tier": "critical",
+          "labels": [
+            "6RL9 (hCA II), Vina, mean of the top poses"
+          ],
+          "kinds": [
+            "docked mean"
+          ]
+        },
+        {
+          "tau": 160.0,
+          "tier": "critical",
+          "labels": [
+            "grid 160"
+          ],
+          "kinds": [
+            "grid"
+          ]
+        },
+        {
+          "tau": 170.0,
+          "tier": "critical",
+          "labels": [
+            "grid 170"
+          ],
+          "kinds": [
+            "grid"
+          ]
+        },
+        {
+          "tau": 180.0,
+          "tier": "critical",
+          "labels": [
+            "grid 180"
+          ],
+          "kinds": [
+            "grid"
+          ]
+        }
+      ]
+    }
+  }
+}

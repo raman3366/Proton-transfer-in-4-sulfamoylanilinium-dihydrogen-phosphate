@@ -1,0 +1,3 @@
+- 2026-09-28 01:48  reused existing preopt.xyz (pre-optimisation skipped)
+- 2026-09-28 01:48  optimisation started from preopt.xyz; solvent=water
+- 2026-09-28 02:11  optimisation converged in 10 steps, 23.4 min, E = -891.88365832 Ha

@@ -1,0 +1,118 @@
+-I: Adding /root/cqc-sfa-tools/md/dat/leap/prep to search path.
+-I: Adding /root/cqc-sfa-tools/md/dat/leap/lib to search path.
+-I: Adding /root/cqc-sfa-tools/md/dat/leap/parm to search path.
+-I: Adding /root/cqc-sfa-tools/md/dat/leap/cmd to search path.
+-f: Source md/system/tleap/leap_protein.in.
+
+Welcome to LEaP!
+(no leaprc in search path)
+Sourcing: md/system/tleap/leap_protein.in
+----- Source: /root/cqc-sfa-tools/md/dat/leap/cmd/leaprc.protein.ff14SB
+----- Source of /root/cqc-sfa-tools/md/dat/leap/cmd/leaprc.protein.ff14SB done
+Log file: ./leap.log
+Loading parameters: /root/cqc-sfa-tools/md/dat/leap/parm/parm10.dat
+Reading title:
+PARM99 + frcmod.ff99SB + frcmod.parmbsc0 + OL3 for RNA
+Loading parameters: /root/cqc-sfa-tools/md/dat/leap/parm/frcmod.ff14SB
+Reading force field modification type file (frcmod)
+Reading title:
+ff14SB protein backbone and sidechain parameters
+Loading library: /root/cqc-sfa-tools/md/dat/leap/lib/amino12.lib
+Loading library: /root/cqc-sfa-tools/md/dat/leap/lib/aminoct12.lib
+Loading library: /root/cqc-sfa-tools/md/dat/leap/lib/aminont12.lib
+----- Source: /root/cqc-sfa-tools/md/dat/leap/cmd/leaprc.water.tip3p
+----- Source of /root/cqc-sfa-tools/md/dat/leap/cmd/leaprc.water.tip3p done
+Loading library: /root/cqc-sfa-tools/md/dat/leap/lib/atomic_ions.lib
+Loading library: /root/cqc-sfa-tools/md/dat/leap/lib/solvents.lib
+Loading parameters: /root/cqc-sfa-tools/md/dat/leap/parm/frcmod.tip3p
+Reading force field modification type file (frcmod)
+Reading title:
+This is the additional/replacement parameter set for TIP3P water
+Loading parameters: /root/cqc-sfa-tools/md/dat/leap/parm/frcmod.ions1lm_126_tip3p
+Reading force field modification type file (frcmod)
+Reading title:
+Li/Merz ion parameters of monovalent ions for TIP3P water model (12-6 normal usage set)
+Loading parameters: /root/cqc-sfa-tools/md/dat/leap/parm/frcmod.ionsjc_tip3p
+Reading force field modification type file (frcmod)
+Reading title:
+Monovalent ion parameters for Ewald and TIP3P water from Joung & Cheatham JPCB (2008)
+Loading parameters: /root/cqc-sfa-tools/md/dat/leap/parm/frcmod.ions234lm_126_tip3p
+Reading force field modification type file (frcmod)
+Reading title:
+Li/Merz ion parameters of divalent to tetravalent ions for TIP3P water model (12-6 normal usage set)
+Loading PDB file: md/system/protein_md.pdb
+  Added missing heavy atom: .R<LYS 9>.A<CG 8>
+  Added missing heavy atom: .R<LYS 9>.A<CD 11>
+  Added missing heavy atom: .R<LYS 9>.A<CE 14>
+  Added missing heavy atom: .R<LYS 9>.A<NZ 17>
+  Added missing heavy atom: .R<LYS 45>.A<CE 14>
+  Added missing heavy atom: .R<LYS 45>.A<NZ 17>
+  Added missing heavy atom: .R<ASP 52>.A<OD1 9>
+  Added missing heavy atom: .R<ASP 52>.A<OD2 10>
+  Added missing heavy atom: .R<LYS 80>.A<CE 14>
+  Added missing heavy atom: .R<LYS 80>.A<NZ 17>
+  Added missing heavy atom: .R<ASP 164>.A<CG 8>
+  Added missing heavy atom: .R<ASP 164>.A<OD1 9>
+  Added missing heavy atom: .R<ASP 164>.A<OD2 10>
+  Added missing heavy atom: .R<LYS 167>.A<NZ 17>
+  Added missing heavy atom: .R<LYS 169>.A<NZ 17>
+  Added missing heavy atom: .R<LYS 212>.A<NZ 17>
+  Added missing heavy atom: .R<LYS 227>.A<CE 14>
+  Added missing heavy atom: .R<LYS 227>.A<NZ 17>
+  Added missing heavy atom: .R<CLYS 260>.A<CG 8>
+  Added missing heavy atom: .R<CLYS 260>.A<CD 11>
+  Added missing heavy atom: .R<CLYS 260>.A<CE 14>
+  Added missing heavy atom: .R<CLYS 260>.A<NZ 17>
+  total atoms in file: 2040
+  Leap added 2035 missing atoms according to residue templates:
+       22 Heavy
+       2013 H / lone pairs
+Checking 'sys'....
+
+/root/cqc-sfa-tools/md/bin/teLeap: Warning!
+The unperturbed charge of the unit (-2.000000) is not zero.
+
+/root/cqc-sfa-tools/md/bin/teLeap: Warning!
+Close contact of 1.270 angstroms between nonbonded atoms HG1 and HZ1
+-------  .R<THR 55>.A<HG1 12> and .R<LYS 76>.A<HZ1 18>
+Checking parameters for unit 'sys'.
+Checking for bond parameters.
+Checking for angle parameters.
+check:  Warnings: 2
+Unit is OK.
+Total unperturbed charge:  -2.000000
+Total perturbed charge:    -2.000000
+Checking Unit.
+
+/root/cqc-sfa-tools/md/bin/teLeap: Warning!
+The unperturbed charge of the unit (-2.000000) is not zero.
+
+/root/cqc-sfa-tools/md/bin/teLeap: Note.
+Ignoring the warning from Unit Checking.
+
+Building topology.
+Building atom parameters.
+Building bond parameters.
+Building angle parameters.
+Building proper torsion parameters.
+Building improper torsion parameters.
+ total 850 improper torsions applied
+Building H-Bond parameters.
+Incorporating Non-Bonded adjustments.
+Not Marking per-residue atom chain types.
+Marking per-residue atom chain types.
+  (Residues lacking connect0/connect1 - 
+   these don't have chain types marked:
+
+	res	total affected
+
+	CLYS	1
+  )
+ (no restraints)
+Writing pdb file: protein.pdb
+
+/root/cqc-sfa-tools/md/bin/teLeap: Warning!
+ Converting C-terminal residue name to PDB format: CLYS -> LYS
+	Quit
+
+Exiting LEaP: Errors = 0; Warnings = 4; Notes = 1.

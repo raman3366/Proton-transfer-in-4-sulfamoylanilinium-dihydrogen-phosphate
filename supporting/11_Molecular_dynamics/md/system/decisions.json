@@ -1,0 +1,1927 @@
+{
+ "written_by": "md/build_system.py",
+ "stage": "S3 (system builder, part 1) of md/PLAN.md",
+ "pH": 7.4,
+ "sources": {
+  "dock/pdb/6RL9.cif.gz": "9b5246d7ab020c8f434cfd22c81b5f38b8f8de711c63e4b72ddded24cb507eea",
+  "dock/T3_6RL9/receptor.pdb": "b805158dc0881c3d60f4ed2157543b4c911f892d1bc550772d459aecb5935948",
+  "dock/T3_6RL9/prep_report.json": "4a3e59358df861a1aedf9385bbcf1c8ad2c50cf216a829b1c21832ae62df7a32",
+  "dock/T3_6RL9/runs/sfa_neutral__ad4zn__prod/seed03/out.pdbqt": "f78bad28d18299f81de46541ca4257b73d9881eba132460dd3fcf426d15b6de9",
+  "dock/T3_6RL9/runs/sfa_neutral__ad4zn__prod/seed14/out.pdbqt": "4bb39a666939d5f70ecfb16f5933153871ce086587da1206daa1546bdce2e13e",
+  "molecules/sfa/results/sulfonamidate_pcm_d3/opt.xyz": "5a829eaf430de9ae40535a26b40f0e74b73f3b4ed1b51f3a79a0f929d70d7ab5"
+ },
+ "software": {
+  "python": "3.11.16",
+  "gemmi": "0.7.5",
+  "rdkit": "2026.03.1",
+  "numpy": "1.26.4"
+ },
+ "random_numbers": "none",
+ "protein": {
+  "entry": "6RL9",
+  "chain": "A",
+  "residues": 258,
+  "first": "HIS3",
+  "last": "LYS261",
+  "numbering": "deposited numbers kept (no residue 126; Thr125 C - Lys127 N is a normal peptide bond)",
+  "residue_names": {
+   "ACE": 1,
+   "ALA": 13,
+   "ARG": 7,
+   "ASN": 10,
+   "ASP": 19,
+   "CYS": 1,
+   "GLN": 11,
+   "GLU": 13,
+   "GLY": 22,
+   "HID": 5,
+   "HIE": 7,
+   "ILE": 9,
+   "LEU": 26,
+   "LYS": 24,
+   "MET": 1,
+   "PHE": 12,
+   "PRO": 17,
+   "SER": 17,
+   "THR": 12,
+   "TRP": 7,
+   "TYR": 8,
+   "VAL": 17
+  },
+  "formal_charge": {
+   "negative": 33,
+   "positive": 31,
+   "net": -2,
+   "note": "Asp + Glu + C-terminus against Lys + Arg; no charged histidine; ACE cap neutral"
+  },
+  "histidines": {
+   "HIS3": {
+    "state": "HIE",
+    "docking": "HIE",
+    "differs_from_docking": false,
+    "reason": "surface, B 23 A2; NE2...HOH486 2.86 A, ND1 without partner: not decided by the structure; NMR gives 71-85 % of the neutral form as N(eps)-H and pKa 6.1 (Fisher 2025); the entry carries HE2"
+   },
+   "HIS4": {
+    "state": "HID",
+    "docking": "HIE",
+    "differs_from_docking": true,
+    "reason": "ND1 is 2.70 A from the carbonyl O of Trp5, which can only accept, and NE2 has no partner; the entry carries HD1. NMR in solution gives 60-72 % N(eps)-H (pKa 6.2), so the tautomer is mixed; surface residue, B 29 A2, 15 A from the zinc"
+   },
+   "HIS10": {
+    "state": "HIE",
+    "docking": "HIE",
+    "differs_from_docking": false,
+    "reason": "conformer A: no hydrogen-bond partner within 3.4 A; NMR 79-93 % N(eps)-H, pKa 5.6; the entry carries HE2"
+   },
+   "HIS15": {
+    "state": "HIE",
+    "docking": "HIE",
+    "differs_from_docking": false,
+    "reason": "conformer A: ND1 accepts from Lys18 NZ (2.94 A), NE2-H donates to the carbonyl O of Lys9 (2.74 A); NMR 76-90 % N(eps)-H and the neutron structures agree"
+   },
+   "HIS17": {
+    "state": "HIE",
+    "docking": "HIE",
+    "differs_from_docking": false,
+    "reason": "NE2-H donates to the carbonyl O of Glu187 (2.86 A); ND1...HOH525 2.85 A; NMR finds both tautomers (30-70 %)"
+   },
+   "HIS36": {
+    "state": "HIE",
+    "docking": "HIE",
+    "differs_from_docking": false,
+    "reason": "conformer A: ND1...HOH412 2.59 A, NE2 only a water of a neighbouring molecule; NMR 57-69 % N(eps)-H. Its pKa is 6.94 (NMR), so about a quarter is protonated at pH 7.4: the neutral majority state is taken; 25 A from the zinc"
+   },
+   "HIS64": {
+    "state": "HIE",
+    "docking": "HIE",
+    "differs_from_docking": false,
+    "reason": "ASSUMPTION. Conformer A (out, occupancy 0.55; in: B 0.39 + C 0.05) as in the docking. NMR: in and out about 1:1 at every pH, pKa 6.25 (in) and 7.60 (out), 6.27 and 7.43 with acetazolamide bound, the two neutral tautomers about 1:1 (Raum 2023). At pH 7.4 the neutral form is the majority (about two thirds if in and out are 1:1) but not the only one; ND1...HOH464 2.73 A decides nothing. HIE is kept as in the docking receptor and in the entry"
+   },
+   "HIS94": {
+    "state": "HID",
+    "docking": "HID",
+    "differs_from_docking": false,
+    "reason": "zinc ligand through NE2 (2.01 A): the hydrogen is on ND1 and donates to Gln92 OE1 (2.79 A); NMR and neutron: 100 % N(delta)-H"
+   },
+   "HIS96": {
+    "state": "HID",
+    "docking": "HID",
+    "differs_from_docking": false,
+    "reason": "zinc ligand through NE2 (2.02 A): the hydrogen is on ND1 and donates to the carbonyl O of Asn244 (2.80 A); NMR and neutron: 100 % N(delta)-H"
+   },
+   "HIS107": {
+    "state": "HID",
+    "docking": "HIE",
+    "differs_from_docking": true,
+    "reason": "buried; ND1-H donates to Glu117 OE2 (2.76 A), NE2 accepts from Tyr194 OH (2.63 A); NMR and neutron: 100 % N(delta)-H, pKa < 3.5; the entry carries HD1. The docking default (HIE) put the bare ND1 against the carboxylate"
+   },
+   "HIS119": {
+    "state": "HIE",
+    "docking": "HIE",
+    "differs_from_docking": false,
+    "reason": "zinc ligand through ND1 (2.02 A): the hydrogen is on NE2 and donates to Glu117 OE2 (2.72 A); NMR and neutron: 100 % N(eps)-H"
+   },
+   "HIS122": {
+    "state": "HID",
+    "docking": "HIE",
+    "differs_from_docking": true,
+    "reason": "buried; ND1-H donates to the carbonyl O of Ala142 (3.02 A) and Leu120 (3.02 A), NE2 accepts from Tyr51 OH (2.74 A); NMR and neutron: 100 % N(delta)-H, pKa < 3.5; the entry carries HD1"
+   }
+  },
+  "histidines_nmr": {
+   "source": "Fisher, Raum, Weininger 2025 (10.1002/cbic.202400930), Table 1, NMR at 308 K; His64: Raum, Fisher, Weininger 2023 (10.1007/s00018-023-04936-z), Table 1",
+   "pH": 7.4,
+   "values": {
+    "HIS3": {
+     "pKa": 6.1,
+     "hill": 0.62,
+     "percent_N_eps_H_of_neutral": "71-85",
+     "percent_protonated_at_pH_7p4": 13.5
+    },
+    "HIS4": {
+     "pKa": 6.2,
+     "hill": 0.74,
+     "percent_N_eps_H_of_neutral": "60-72",
+     "percent_protonated_at_pH_7p4": 11.5
+    },
+    "HIS10": {
+     "pKa": 5.6,
+     "hill": 0.79,
+     "percent_N_eps_H_of_neutral": "79-93",
+     "percent_protonated_at_pH_7p4": 3.6
+    },
+    "HIS15": {
+     "pKa": 5.6,
+     "hill": 0.92,
+     "percent_N_eps_H_of_neutral": "76-90",
+     "percent_protonated_at_pH_7p4": 2.2
+    },
+    "HIS17": {
+     "pKa": 5.6,
+     "hill": null,
+     "percent_N_eps_H_of_neutral": "30-70",
+     "percent_protonated_at_pH_7p4": 1.6
+    },
+    "HIS36": {
+     "pKa": 6.94,
+     "hill": null,
+     "percent_N_eps_H_of_neutral": "57-69",
+     "percent_protonated_at_pH_7p4": 25.7
+    },
+    "HIS64 in": {
+     "pKa": 6.25,
+     "hill": null,
+     "percent_N_eps_H_of_neutral": "44-56",
+     "percent_protonated_at_pH_7p4": 6.6
+    },
+    "HIS64 out": {
+     "pKa": 7.6,
+     "hill": null,
+     "percent_N_eps_H_of_neutral": "44-56",
+     "percent_protonated_at_pH_7p4": 61.3
+    },
+    "HIS64 in, acetazolamide bound": {
+     "pKa": 6.27,
+     "hill": null,
+     "percent_N_eps_H_of_neutral": null,
+     "percent_protonated_at_pH_7p4": 6.9
+    },
+    "HIS64 out, acetazolamide bound": {
+     "pKa": 7.43,
+     "hill": null,
+     "percent_N_eps_H_of_neutral": null,
+     "percent_protonated_at_pH_7p4": 51.7
+    },
+    "HIS94": {
+     "pKa": "<3.5",
+     "hill": null,
+     "percent_N_eps_H_of_neutral": "0",
+     "percent_protonated_at_pH_7p4": null
+    },
+    "HIS96": {
+     "pKa": "<3.5",
+     "hill": null,
+     "percent_N_eps_H_of_neutral": "0",
+     "percent_protonated_at_pH_7p4": null
+    },
+    "HIS107": {
+     "pKa": "<3.5",
+     "hill": null,
+     "percent_N_eps_H_of_neutral": "0",
+     "percent_protonated_at_pH_7p4": null
+    },
+    "HIS119": {
+     "pKa": "<3.5",
+     "hill": null,
+     "percent_N_eps_H_of_neutral": "100",
+     "percent_protonated_at_pH_7p4": null
+    },
+    "HIS122": {
+     "pKa": "<3.5",
+     "hill": null,
+     "percent_N_eps_H_of_neutral": "0",
+     "percent_protonated_at_pH_7p4": null
+    }
+   },
+   "HIS64_percent_protonated_if_in_and_out_are_1_to_1": {
+    "free": 33.9,
+    "acetazolamide_bound": 29.3
+   }
+  },
+  "other": {
+   "GLU106": {
+    "state": "GLU",
+    "docking": "GLH",
+    "differs_from_docking": true,
+    "reason": "deprotonated. PROPKA gave 8.91 only because the zinc was left out of its input; with the zinc it gives 5.33. OE1 accepts from Thr199 OG1 (2.62 A; the riding hydrogen of the entry points at it, 1.81 A, 162 deg), OE2 from the N-H of Arg246 (2.79 A) and from HOH415 (2.65 A); the zinc is 4.00 A from OE1; C-O 1.246 and 1.249 A. Thr199 OG1 must donate to Glu106 because it accepts the sulfonamide N-H (2.86 A), the scheme seen by neutron diffraction with acetazolamide (Fisher 2012)"
+   },
+   "GLU117": {
+    "state": "GLU",
+    "docking": "GLU",
+    "differs_from_docking": false,
+    "reason": "deprotonated (PROPKA 0.73 without, 3.60 with the zinc): accepts from His119 NE2-H (2.72 A), His107 ND1-H (2.76 A) and the N-H of Glu106 and His107 (2.83 A each)"
+   },
+   "TYR7": {
+    "state": "TYR",
+    "docking": "TYR",
+    "differs_from_docking": false,
+    "reason": "neutral; PROPKA 13.5-14.7; protonated at pH 7.8 and deprotonated at pH 10 in the neutron structures (Fisher 2011). Conformer B (0.61); OH...HOH415 2.58 A"
+   },
+   "CYS206": {
+    "state": "CYS",
+    "docking": "CYS",
+    "differs_from_docking": false,
+    "reason": "the only cysteine: free thiol (PROPKA 10.7). In the crystal it carries mercury (4-mercuribenzoate, component BE7, 310, occupancy 0.76, with conformer A; Hg 302, 0.24, with conformer B), a crystallisation additive that is removed; conformer A is taken; 14 A from the zinc"
+   },
+   "other Asp/Glu": {
+    "state": "ASP/GLU",
+    "docking": "ASP/GLU",
+    "differs_from_docking": false,
+    "reason": "all deprotonated: PROPKA pKa at most 4.83 (Glu187) apart from Glu106"
+   },
+   "Lys/Arg": {
+    "state": "LYS/ARG",
+    "docking": "LYS/ARG",
+    "differs_from_docking": false,
+    "reason": "all protonated: lowest PROPKA pKa 9.49 (Lys154) and 10.38 (Arg246)"
+   },
+   "Tyr": {
+    "state": "TYR",
+    "docking": "TYR",
+    "differs_from_docking": false,
+    "reason": "all neutral: lowest PROPKA pKa 10.43 (Tyr40)"
+   },
+   "N-terminus": {
+    "state": "ACE cap on His3",
+    "docking": "NH3+ on His3",
+    "differs_from_docking": true,
+    "reason": "His3 is the first residue with density; seven residues of the construct before it (GSPEF of the tag, Met1, Ser2) are not modelled. They are not built. A charged amino group on His3 would be a charge the protein does not have there, so His3 is capped with an acetyl group (three atoms placed here, no density)"
+   },
+   "C-terminus": {
+    "state": "COO- on Lys261",
+    "docking": "COO- on Lys261",
+    "differs_from_docking": false,
+    "reason": "Lys261 is the true C-terminus and OXT is in the entry"
+   }
+  },
+  "ace_cap": {
+   "phi_His3_deg": -100,
+   "min_distance_to_other_heavy_atoms_A": 3.31,
+   "geometry": "C-N 1.335 A, C-N-CA 121.9 deg, C=O 1.229 A, N-C-O 122.9 deg, C-CH3 1.522 A, N-C-CH3 116.6 deg, omega 180 deg",
+   "note": "three atoms without density (written with occupancy 0.00)"
+  },
+  "conformer_rule": "(the rule of dock/prep_receptor.py, with coupling added):\n      1. residues with alternates form a group when they are neighbours in the sequence or when\n         atoms of two different labels of the two residues come closer than COUPLING_CUT (they\n         cannot be present together, so the labels are correlated); a group takes ONE label;\n      2. the label of a group is the one with the most modelled heavy atoms, then the highest\n         summed occupancy, then 'A'.",
+  "conformers": [
+   {
+    "residues": [
+     "TYR7"
+    ],
+    "label": "B",
+    "occupancy": {
+     "A": [
+      0.39
+     ],
+     "B": [
+      0.61
+     ]
+    },
+    "heavy_atoms": {
+     "A": 12,
+     "B": 12
+    },
+    "decided_by": "occupancy",
+    "coupling": [],
+    "docking_labels": [
+     "B"
+    ],
+    "differs_from_docking": []
+   },
+   {
+    "residues": [
+     "HIS10"
+    ],
+    "label": "A",
+    "occupancy": {
+     "A": [
+      0.56
+     ],
+     "B": [
+      0.44
+     ]
+    },
+    "heavy_atoms": {
+     "A": 10,
+     "B": 10
+    },
+    "decided_by": "occupancy",
+    "coupling": [],
+    "docking_labels": [
+     "A"
+    ],
+    "differs_from_docking": []
+   },
+   {
+    "residues": [
+     "HIS15",
+     "LYS18",
+     "ASP19"
+    ],
+    "label": "A",
+    "occupancy": {
+     "A": [
+      0.68
+     ],
+     "B": [
+      0.32
+     ]
+    },
+    "heavy_atoms": {
+     "A": 27,
+     "B": 27
+    },
+    "decided_by": "occupancy",
+    "coupling": [
+     "HIS15.ND1[B] - LYS18.NZ[A] 2.14 A"
+    ],
+    "docking_labels": [
+     "A",
+     "A",
+     "A"
+    ],
+    "differs_from_docking": []
+   },
+   {
+    "residues": [
+     "ILE22",
+     "ALA23"
+    ],
+    "label": "A",
+    "occupancy": {
+     "A": [
+      0.66
+     ],
+     "B": [
+      0.34
+     ]
+    },
+    "heavy_atoms": {
+     "A": 13,
+     "B": 13
+    },
+    "decided_by": "occupancy",
+    "coupling": [],
+    "docking_labels": [
+     "A",
+     "A"
+    ],
+    "differs_from_docking": []
+   },
+   {
+    "residues": [
+     "ARG27"
+    ],
+    "label": "B",
+    "occupancy": {
+     "A": [
+      0.31
+     ],
+     "B": [
+      0.48
+     ],
+     "C": [
+      0.21
+     ]
+    },
+    "heavy_atoms": {
+     "A": 11,
+     "B": 11,
+     "C": 11
+    },
+    "decided_by": "occupancy",
+    "coupling": [],
+    "docking_labels": [
+     "B"
+    ],
+    "differs_from_docking": []
+   },
+   {
+    "residues": [
+     "ASP34"
+    ],
+    "label": "A",
+    "occupancy": {
+     "A": [
+      0.59
+     ],
+     "B": [
+      0.41
+     ]
+    },
+    "heavy_atoms": {
+     "A": 8,
+     "B": 8
+    },
+    "decided_by": "occupancy",
+    "coupling": [],
+    "docking_labels": [
+     "A"
+    ],
+    "differs_from_docking": []
+   },
+   {
+    "residues": [
+     "HIS36",
+     "THR37",
+     "ALA38"
+    ],
+    "label": "A",
+    "occupancy": {
+     "A": [
+      0.59
+     ],
+     "B": [
+      0.41
+     ]
+    },
+    "heavy_atoms": {
+     "A": 22,
+     "B": 22
+    },
+    "decided_by": "occupancy",
+    "coupling": [],
+    "docking_labels": [
+     "A",
+     "A",
+     "A"
+    ],
+    "differs_from_docking": []
+   },
+   {
+    "residues": [
+     "SER48"
+    ],
+    "label": "A",
+    "occupancy": {
+     "A": [
+      0.79
+     ],
+     "B": [
+      0.21
+     ]
+    },
+    "heavy_atoms": {
+     "A": 6,
+     "B": 6
+    },
+    "decided_by": "occupancy",
+    "coupling": [],
+    "docking_labels": [
+     "A"
+    ],
+    "differs_from_docking": []
+   },
+   {
+    "residues": [
+     "SER50"
+    ],
+    "label": "A",
+    "occupancy": {
+     "A": [
+      0.67
+     ],
+     "B": [
+      0.33
+     ]
+    },
+    "heavy_atoms": {
+     "A": 6,
+     "B": 6
+    },
+    "decided_by": "occupancy",
+    "coupling": [],
+    "docking_labels": [
+     "A"
+    ],
+    "differs_from_docking": []
+   },
+   {
+    "residues": [
+     "LEU57"
+    ],
+    "label": "A",
+    "occupancy": {
+     "A": [
+      0.56
+     ],
+     "B": [
+      0.44
+     ]
+    },
+    "heavy_atoms": {
+     "A": 8,
+     "B": 8
+    },
+    "decided_by": "occupancy",
+    "coupling": [],
+    "docking_labels": [
+     "A"
+    ],
+    "differs_from_docking": []
+   },
+   {
+    "residues": [
+     "HIS64"
+    ],
+    "label": "A",
+    "occupancy": {
+     "A": [
+      0.55
+     ],
+     "B": [
+      0.39
+     ],
+     "C": [
+      0.05
+     ]
+    },
+    "heavy_atoms": {
+     "A": 10,
+     "B": 10,
+     "C": 10
+    },
+    "decided_by": "occupancy",
+    "coupling": [],
+    "docking_labels": [
+     "A"
+    ],
+    "differs_from_docking": []
+   },
+   {
+    "residues": [
+     "SER73",
+     "GLN74",
+     "ASP75",
+     "LYS76",
+     "ALA77",
+     "VAL78",
+     "LEU79",
+     "LYS80",
+     "GLY81",
+     "ARG89"
+    ],
+    "label": "B",
+    "occupancy": {
+     "A": [
+      0.5
+     ],
+     "B": [
+      0.5
+     ]
+    },
+    "heavy_atoms": {
+     "A": 71,
+     "B": 74
+    },
+    "decided_by": "number of modelled atoms",
+    "coupling": [
+     "ASP75.OD1[A] - ARG89.NE[B] 2.29 A"
+    ],
+    "docking_labels": [
+     "A",
+     "A",
+     "A",
+     "B",
+     "A",
+     "A",
+     "A",
+     "A",
+     "A",
+     "A"
+    ],
+    "differs_from_docking": [
+     "SER73",
+     "GLN74",
+     "ASP75",
+     "ALA77",
+     "VAL78",
+     "LEU79",
+     "LYS80",
+     "GLY81",
+     "ARG89"
+    ]
+   },
+   {
+    "residues": [
+     "LEU100",
+     "ASP101"
+    ],
+    "label": "A",
+    "occupancy": {
+     "A": [
+      0.59
+     ],
+     "B": [
+      0.41
+     ]
+    },
+    "heavy_atoms": {
+     "A": 16,
+     "B": 16
+    },
+    "decided_by": "occupancy",
+    "coupling": [],
+    "docking_labels": [
+     "A",
+     "A"
+    ],
+    "differs_from_docking": []
+   },
+   {
+    "residues": [
+     "GLN103"
+    ],
+    "label": "B",
+    "occupancy": {
+     "A": [
+      0.49
+     ],
+     "B": [
+      0.51
+     ]
+    },
+    "heavy_atoms": {
+     "A": 9,
+     "B": 9
+    },
+    "decided_by": "occupancy",
+    "coupling": [],
+    "docking_labels": [
+     "B"
+    ],
+    "differs_from_docking": []
+   },
+   {
+    "residues": [
+     "LYS112"
+    ],
+    "label": "A",
+    "occupancy": {
+     "A": [
+      0.68
+     ],
+     "B": [
+      0.32
+     ]
+    },
+    "heavy_atoms": {
+     "A": 9,
+     "B": 9
+    },
+    "decided_by": "occupancy",
+    "coupling": [],
+    "docking_labels": [
+     "A"
+    ],
+    "differs_from_docking": []
+   },
+   {
+    "residues": [
+     "ASP130"
+    ],
+    "label": "A",
+    "occupancy": {
+     "A": [
+      0.61
+     ],
+     "B": [
+      0.39
+     ]
+    },
+    "heavy_atoms": {
+     "A": 8,
+     "B": 8
+    },
+    "decided_by": "occupancy",
+    "coupling": [],
+    "docking_labels": [
+     "A"
+    ],
+    "differs_from_docking": []
+   },
+   {
+    "residues": [
+     "LYS133"
+    ],
+    "label": "A",
+    "occupancy": {
+     "A": [
+      0.49
+     ],
+     "B": [
+      0.51
+     ]
+    },
+    "heavy_atoms": {
+     "A": 9,
+     "B": 8
+    },
+    "decided_by": "number of modelled atoms",
+    "coupling": [],
+    "docking_labels": [
+     "A"
+    ],
+    "differs_from_docking": []
+   },
+   {
+    "residues": [
+     "GLN136"
+    ],
+    "label": "A",
+    "occupancy": {
+     "A": [
+      0.5
+     ],
+     "B": [
+      0.5
+     ]
+    },
+    "heavy_atoms": {
+     "A": 9,
+     "B": 9
+    },
+    "decided_by": "label A (tie)",
+    "coupling": [],
+    "docking_labels": [
+     "A"
+    ],
+    "differs_from_docking": []
+   },
+   {
+    "residues": [
+     "PRO138"
+    ],
+    "label": "A",
+    "occupancy": {
+     "A": [
+      0.53
+     ],
+     "B": [
+      0.47
+     ]
+    },
+    "heavy_atoms": {
+     "A": 7,
+     "B": 7
+    },
+    "decided_by": "occupancy",
+    "coupling": [],
+    "docking_labels": [
+     "A"
+    ],
+    "differs_from_docking": []
+   },
+   {
+    "residues": [
+     "SER152"
+    ],
+    "label": "A",
+    "occupancy": {
+     "A": [
+      0.62
+     ],
+     "B": [
+      0.38
+     ]
+    },
+    "heavy_atoms": {
+     "A": 6,
+     "B": 6
+    },
+    "decided_by": "occupancy",
+    "coupling": [],
+    "docking_labels": [
+     "A"
+    ],
+    "differs_from_docking": []
+   },
+   {
+    "residues": [
+     "PRO155"
+    ],
+    "label": "B",
+    "occupancy": {
+     "A": [
+      0.45
+     ],
+     "B": [
+      0.55
+     ]
+    },
+    "heavy_atoms": {
+     "A": 7,
+     "B": 7
+    },
+    "decided_by": "occupancy",
+    "coupling": [],
+    "docking_labels": [
+     "B"
+    ],
+    "differs_from_docking": []
+   },
+   {
+    "residues": [
+     "VAL161"
+    ],
+    "label": "A",
+    "occupancy": {
+     "A": [
+      0.62
+     ],
+     "B": [
+      0.38
+     ]
+    },
+    "heavy_atoms": {
+     "A": 7,
+     "B": 7
+    },
+    "decided_by": "occupancy",
+    "coupling": [],
+    "docking_labels": [
+     "A"
+    ],
+    "differs_from_docking": []
+   },
+   {
+    "residues": [
+     "LYS168"
+    ],
+    "label": "B",
+    "occupancy": {
+     "A": [
+      0.35
+     ],
+     "B": [
+      0.65
+     ]
+    },
+    "heavy_atoms": {
+     "A": 8,
+     "B": 8
+    },
+    "decided_by": "occupancy",
+    "coupling": [],
+    "docking_labels": [
+     "B"
+    ],
+    "differs_from_docking": []
+   },
+   {
+    "residues": [
+     "LYS170"
+    ],
+    "label": "A",
+    "occupancy": {
+     "A": [
+      0.57
+     ],
+     "B": [
+      0.43
+     ]
+    },
+    "heavy_atoms": {
+     "A": 8,
+     "B": 8
+    },
+    "decided_by": "occupancy",
+    "coupling": [],
+    "docking_labels": [
+     "A"
+    ],
+    "differs_from_docking": []
+   },
+   {
+    "residues": [
+     "ASP175",
+     "PHE176"
+    ],
+    "label": "A",
+    "occupancy": {
+     "A": [
+      0.46
+     ],
+     "B": [
+      0.54
+     ]
+    },
+    "heavy_atoms": {
+     "A": 19,
+     "B": 17
+    },
+    "decided_by": "number of modelled atoms",
+    "coupling": [],
+    "docking_labels": [
+     "A",
+     "B"
+    ],
+    "differs_from_docking": [
+     "PHE176"
+    ]
+   },
+   {
+    "residues": [
+     "LEU185"
+    ],
+    "label": "B",
+    "occupancy": {
+     "A": [
+      0.34
+     ],
+     "B": [
+      0.66
+     ]
+    },
+    "heavy_atoms": {
+     "A": 8,
+     "B": 8
+    },
+    "decided_by": "occupancy",
+    "coupling": [],
+    "docking_labels": [
+     "B"
+    ],
+    "differs_from_docking": []
+   },
+   {
+    "residues": [
+     "GLU187"
+    ],
+    "label": "A",
+    "occupancy": {
+     "A": [
+      0.68
+     ],
+     "B": [
+      0.32
+     ]
+    },
+    "heavy_atoms": {
+     "A": 9,
+     "B": 9
+    },
+    "decided_by": "occupancy",
+    "coupling": [],
+    "docking_labels": [
+     "A"
+    ],
+    "differs_from_docking": []
+   },
+   {
+    "residues": [
+     "ASP190"
+    ],
+    "label": "B",
+    "occupancy": {
+     "A": [
+      0.31
+     ],
+     "B": [
+      0.69
+     ]
+    },
+    "heavy_atoms": {
+     "A": 8,
+     "B": 8
+    },
+    "decided_by": "occupancy",
+    "coupling": [],
+    "docking_labels": [
+     "B"
+    ],
+    "differs_from_docking": []
+   },
+   {
+    "residues": [
+     "CYS206"
+    ],
+    "label": "A",
+    "occupancy": {
+     "A": [
+      0.76
+     ],
+     "B": [
+      0.24
+     ]
+    },
+    "heavy_atoms": {
+     "A": 6,
+     "B": 6
+    },
+    "decided_by": "occupancy",
+    "coupling": [],
+    "docking_labels": [
+     "A"
+    ],
+    "differs_from_docking": []
+   },
+   {
+    "residues": [
+     "GLU214",
+     "PRO215"
+    ],
+    "label": "A",
+    "occupancy": {
+     "A": [
+      0.68
+     ],
+     "B": [
+      0.32
+     ]
+    },
+    "heavy_atoms": {
+     "A": 16,
+     "B": 16
+    },
+    "decided_by": "occupancy",
+    "coupling": [],
+    "docking_labels": [
+     "A",
+     "A"
+    ],
+    "differs_from_docking": []
+   },
+   {
+    "residues": [
+     "SER217"
+    ],
+    "label": "A",
+    "occupancy": {
+     "A": [
+      0.69
+     ],
+     "B": [
+      0.31
+     ]
+    },
+    "heavy_atoms": {
+     "A": 6,
+     "B": 6
+    },
+    "decided_by": "occupancy",
+    "coupling": [],
+    "docking_labels": [
+     "A"
+    ],
+    "differs_from_docking": []
+   },
+   {
+    "residues": [
+     "SER220"
+    ],
+    "label": "B",
+    "occupancy": {
+     "A": [
+      0.32
+     ],
+     "B": [
+      0.68
+     ]
+    },
+    "heavy_atoms": {
+     "A": 6,
+     "B": 6
+    },
+    "decided_by": "occupancy",
+    "coupling": [],
+    "docking_labels": [
+     "B"
+    ],
+    "differs_from_docking": []
+   },
+   {
+    "residues": [
+     "GLY235"
+    ],
+    "label": "A",
+    "occupancy": {
+     "A": [
+      0.56
+     ],
+     "B": [
+      0.44
+     ]
+    },
+    "heavy_atoms": {
+     "A": 4,
+     "B": 4
+    },
+    "decided_by": "occupancy",
+    "coupling": [],
+    "docking_labels": [
+     "A"
+    ],
+    "differs_from_docking": []
+   },
+   {
+    "residues": [
+     "PRO247"
+    ],
+    "label": "B",
+    "occupancy": {
+     "A": [
+      0.46
+     ],
+     "B": [
+      0.54
+     ]
+    },
+    "heavy_atoms": {
+     "A": 7,
+     "B": 7
+    },
+    "decided_by": "occupancy",
+    "coupling": [],
+    "docking_labels": [
+     "B"
+    ],
+    "differs_from_docking": []
+   },
+   {
+    "residues": [
+     "LYS252",
+     "ASN253",
+     "ARG254"
+    ],
+    "label": "A",
+    "occupancy": {
+     "A": [
+      0.59
+     ],
+     "B": [
+      0.41
+     ]
+    },
+    "heavy_atoms": {
+     "A": 28,
+     "B": 25
+    },
+    "decided_by": "number of modelled atoms",
+    "coupling": [],
+    "docking_labels": [
+     "A",
+     "A",
+     "A"
+    ],
+    "differs_from_docking": []
+   },
+   {
+    "residues": [
+     "LYS257"
+    ],
+    "label": "A",
+    "occupancy": {
+     "A": [
+      0.7
+     ],
+     "B": [
+      0.3
+     ]
+    },
+    "heavy_atoms": {
+     "A": 9,
+     "B": 9
+    },
+    "decided_by": "occupancy",
+    "coupling": [],
+    "docking_labels": [
+     "A"
+    ],
+    "differs_from_docking": []
+   },
+   {
+    "residues": [
+     "PHE260"
+    ],
+    "label": "A",
+    "occupancy": {
+     "A": [
+      0.57
+     ],
+     "B": [
+      0.43
+     ]
+    },
+    "heavy_atoms": {
+     "A": 11,
+     "B": 11
+    },
+    "decided_by": "occupancy",
+    "coupling": [],
+    "docking_labels": [
+     "A"
+    ],
+    "differs_from_docking": []
+   }
+  ],
+  "heavy_atoms_not_in_the_entry": {
+   "LYS9": [
+    "CG",
+    "CD",
+    "CE",
+    "NZ"
+   ],
+   "LYS45": [
+    "CE",
+    "NZ"
+   ],
+   "ASP52": [
+    "OD1",
+    "OD2"
+   ],
+   "LYS80": [
+    "CE",
+    "NZ"
+   ],
+   "ASP165": [
+    "CG",
+    "OD1",
+    "OD2"
+   ],
+   "LYS168": [
+    "NZ"
+   ],
+   "LYS170": [
+    "NZ"
+   ],
+   "LYS213": [
+    "NZ"
+   ],
+   "LYS228": [
+    "CE",
+    "NZ"
+   ],
+   "LYS261": [
+    "CG",
+    "CD",
+    "CE",
+    "NZ"
+   ]
+  },
+  "expected_tleap_added_heavy_atoms": [
+   "ASP165.CG",
+   "ASP165.OD1",
+   "ASP165.OD2",
+   "ASP52.OD1",
+   "ASP52.OD2",
+   "LYS168.NZ",
+   "LYS170.NZ",
+   "LYS213.NZ",
+   "LYS228.CE",
+   "LYS228.NZ",
+   "LYS261.CD",
+   "LYS261.CE",
+   "LYS261.CG",
+   "LYS261.NZ",
+   "LYS45.CE",
+   "LYS45.NZ",
+   "LYS80.CE",
+   "LYS80.NZ",
+   "LYS9.CD",
+   "LYS9.CE",
+   "LYS9.CG",
+   "LYS9.NZ"
+  ],
+  "n_heavy_atoms_written": 2040
+ },
+ "removed_hetero_groups": {
+  "302": "Hg, occupancy 0.24, on Cys206 conformer B: crystallisation additive",
+  "303": "Hg, occupancy 0.05, at His64: crystallisation additive",
+  "305": "second sulfanilamide, occupancy 0.68, on the surface at His3/His4/His10/His15, 14 A from the zinc-bound one",
+  "306": "third sulfanilamide, occupancy 0.85, at the rim of the active site (Asn67, Glu69, Gln92) and in contact with a neighbouring molecule of the crystal, 5.7 A from the zinc-bound one; the simulation holds one ligand",
+  "307": "glucose (cryoprotectant), occupancy 0.74",
+  "308": "glucose, occupancy 0.85",
+  "309": "glucose, occupancy 0.54",
+  "310": "4-mercuribenzoate on Cys206 (component BE7, p-chloromercuribenzoic acid, modelled without its chlorine), occupancy 0.76: additive"
+ },
+ "zinc": {
+  "file": "zinc.pdb",
+  "note": "ZN 301, occupancy 1.00, B 5.5 A2; parameters of the site are made in stage S2"
+ },
+ "water": {
+  "rule": "Crystal water kept before the ligand is considered.  A copy with a label is kept when it does not\n    come within COUPLING_CUT of an atom of the conformers taken; of several such copies the one with the\n    highest occupancy; a site with no free copy is dropped.  Water without a label is kept.",
+  "sites_in_entry": 216,
+  "kept": 215,
+  "labelled_or_partial": [
+   {
+    "water": 410,
+    "label": "A",
+    "occupancy": 0.68,
+    "min_dist_protein_A": 2.6,
+    "kept": true,
+    "note": "kept"
+   },
+   {
+    "water": 412,
+    "label": "A",
+    "occupancy": 0.59,
+    "min_dist_protein_A": 2.54,
+    "kept": true,
+    "note": "kept"
+   },
+   {
+    "water": 414,
+    "label": "A",
+    "occupancy": 0.59,
+    "min_dist_protein_A": 2.57,
+    "kept": true,
+    "note": "kept"
+   },
+   {
+    "water": 414,
+    "label": "B",
+    "occupancy": 0.41,
+    "min_dist_protein_A": 2.69,
+    "kept": false,
+    "note": "another copy has the higher occupancy"
+   },
+   {
+    "water": 417,
+    "label": "A",
+    "occupancy": 0.46,
+    "min_dist_protein_A": 2.61,
+    "kept": true,
+    "note": "kept"
+   },
+   {
+    "water": 417,
+    "label": "B",
+    "occupancy": 0.54,
+    "min_dist_protein_A": 1.74,
+    "kept": false,
+    "note": "clashes with a conformer taken"
+   },
+   {
+    "water": 425,
+    "label": "A",
+    "occupancy": 0.31,
+    "min_dist_protein_A": 2.15,
+    "kept": false,
+    "note": "clashes with a conformer taken"
+   },
+   {
+    "water": 425,
+    "label": "B",
+    "occupancy": 0.48,
+    "min_dist_protein_A": 2.59,
+    "kept": true,
+    "note": "kept"
+   },
+   {
+    "water": 425,
+    "label": "C",
+    "occupancy": 0.21,
+    "min_dist_protein_A": 2.4,
+    "kept": false,
+    "note": "clashes with a conformer taken"
+   },
+   {
+    "water": 481,
+    "label": "B",
+    "occupancy": 0.32,
+    "min_dist_protein_A": 2.76,
+    "kept": true,
+    "note": "kept"
+   },
+   {
+    "water": 505,
+    "label": "A",
+    "occupancy": 0.59,
+    "min_dist_protein_A": 2.81,
+    "kept": true,
+    "note": "kept"
+   },
+   {
+    "water": 510,
+    "label": "B",
+    "occupancy": 0.32,
+    "min_dist_protein_A": 1.78,
+    "kept": false,
+    "note": "clashes with a conformer taken"
+   },
+   {
+    "water": 513,
+    "label": "A",
+    "occupancy": 0.68,
+    "min_dist_protein_A": 2.82,
+    "kept": true,
+    "note": "kept"
+   },
+   {
+    "water": 570,
+    "label": "B",
+    "occupancy": 0.51,
+    "min_dist_protein_A": 3.07,
+    "kept": true,
+    "note": "kept"
+   }
+  ],
+  "dropped": [
+   510
+  ],
+  "ligand_rule": "for each start a water whose O is within 2.2 A of a ligand heavy atom is removed; water between 2.2 and 2.6 A is listed and kept",
+  "kept_pairs_closer_than_2p4A": [
+   {
+    "waters": [
+     427,
+     569
+    ],
+    "dist_A": 2.37
+   },
+   {
+    "waters": [
+     502,
+     580
+    ],
+    "dist_A": 2.39
+   }
+  ],
+  "kept_water_closer_than_2p4A_to_protein": [],
+  "waters_within_4A_of_Thr199_N": [],
+  "waters_within_5A_of_zinc": [
+   {
+    "water": 553,
+    "dist_A": 3.69
+   },
+   {
+    "water": 516,
+    "dist_A": 4.89
+   }
+  ],
+  "deep_water": "no water lies within 4 A of Thr199 N: the sulfonyl O1 of the ligand takes the place of the deep water (Thr199 N...O1 2.94 A)",
+  "hydrogens": "tleap places the two hydrogens of every water in one standard orientation; they are relaxed in the equilibration"
+ },
+ "ligand": {
+  "species": "sulfonamidate anion ArSO2NH- of sulfanilamide, charge -1, 18 atoms",
+  "residue_name": "SAN",
+  "residue_number": 304,
+  "atom_names": [
+   "C1",
+   "C2",
+   "C3",
+   "C4",
+   "C5",
+   "C6",
+   "N1",
+   "N2",
+   "O1",
+   "O2",
+   "S",
+   "H2",
+   "H3",
+   "H5",
+   "H6",
+   "HN11",
+   "HN12",
+   "HN21"
+  ],
+  "atom_order": "the order of the paper's DFT files and of md/ligand/sfa_anion.mol2 (stage S1); the names are those of SAN in 6RL9 (heavy atoms) and of the chemical component SAN (hydrogens; HN22 is the hydrogen the anion lacks)",
+  "hydrogen_parents": {
+   "H2": "C2",
+   "H3": "C3",
+   "H5": "C5",
+   "H6": "C6",
+   "HN11": "N1",
+   "HN12": "N1",
+   "HN21": "N2"
+  },
+  "paper_labels": "C3-C4-S1-N2 of the paper is C3-C4-S-N2 here (S1 = S, N2 = sulfonamide N, N1 = aniline N)",
+  "docked_atom_names": "the ring (C2/C6, C3/C5) and the two sulfonyl oxygens are equivalent: the assignment with the lowest RMSD to the crystal pose is taken",
+  "sulfonamide_hydrogen": "The one hydrogen of the zinc-bound sulfonamidate nitrogen: N2 is taken as tetrahedral with S and\n    Zn as two of its substituents; of the two remaining directions the one nearer to Thr199 OG1 gets the\n    hydrogen (N-H 1.021 A, the paper's DFT value for the anion), the other is the lone pair.",
+  "dft_anion": {
+   "file": "molecules/sfa/results/sulfonamidate_pcm_d3/opt.xyz",
+   "N_H_A": 1.0214,
+   "S_N_H_deg": 107.47,
+   "S_N_A": 1.5799
+  },
+  "other_hydrogens": "ring hydrogens by RDKit on the given heavy atoms; aniline hydrogens of X by RDKit (planar NH2), of N and R as docked (pyramidal NH2 of the DFT geometry)",
+  "pose_rule": {
+   "job": "dock/T3_6RL9/runs/sfa_neutral__ad4zn__prod (AutoDock4Zn, neutral sulfanilamide docked from its B3LYP-D3(BJ)/IEF-PCM geometry, exhaustiveness 32, 20 seeds: the production job of the paper)",
+   "site_check": "Zn-N(sulfonamide) <= 2.3 A and Thr199 OG1...N <= 3.3 A (the site check of the paper)",
+   "N": "the best-scored mode, over all modes of all seeds, that passes the site check and lies within 1.0 A of the crystal pose (heavy atoms, symmetry-corrected, no superposition); ties: lower seed, then lower mode",
+   "R": "the best-scored mode, over all modes of all seeds, that passes the site check, lies more than 2.0 A from the crystal pose and has the aniline N within 3.5 A of Asn67 OD1 (the ring-rotated orientation of Section 3.6); ties: lower seed, then lower mode"
+  },
+  "pose_statistics": {
+   "modes": 138,
+   "pass_site_check": 136,
+   "near_native": 41,
+   "beyond_2A": 62,
+   "rotated_at_Asn67": 38,
+   "seeds": 20,
+   "best_mode_beyond_2A_without_the_Asn67_clause": {
+    "seed": 14,
+    "mode": 3,
+    "score": -8.823
+   },
+   "R_is_the_same_without_the_Asn67_clause": true,
+   "runner_up_N": {
+    "seed": 9,
+    "mode": 1,
+    "score": -8.84
+   },
+   "runner_up_R": {
+    "seed": 4,
+    "mode": 3,
+    "score": -8.819
+   },
+   "rotated_score_range": [
+    -8.271,
+    -8.823
+   ],
+   "rotated_N1_Phe131CZ_range": [
+    8.72,
+    10.32
+   ],
+   "rotated_N1_Asn67OD1_range": [
+    2.56,
+    3.2
+   ]
+  },
+  "pose_rule_note": "the rule proposed in the task; written down after all modes had been tabulated, so not fixed blind; the pick of R is the same without the clause on Asn67",
+  "note": "N and R keep the bond lengths of the docked NEUTRAL molecule (S-N 1.677 A; 1.596 A in the crystal pose, 1.580 A in the DFT anion) and the docked Zn-N distance (2.2 A); the force field relaxes both in the minimisation"
+ },
+ "starts": {
+  "X": {
+   "source": "crystal pose: SAN 304 of dock/pdb/6RL9.cif.gz (occupancy 1.00, no alternate conformer)",
+   "score_kcal_mol": null,
+   "rmsd_to_crystal_A": 0.0,
+   "Zn_N2": 1.931,
+   "Zn_O1": 4.051,
+   "Zn_O2": 2.986,
+   "Zn_O_min": 2.986,
+   "N2_OG1": 2.861,
+   "T199N_O_min": 2.941,
+   "C3_C4_S_N2": 132.056,
+   "C5_C4_S_N2": -50.092,
+   "tau_fold": 132.056,
+   "C4_S_N2": 108.795,
+   "S_N2": 1.596,
+   "C4_S": 1.771,
+   "S_N2_Zn": 117.552,
+   "N1_Phe131CZ": 3.897,
+   "N1_Asn67OD1": 7.744,
+   "N1_Asn67ND2": 6.551,
+   "H_OG1": 1.867,
+   "N2_H_OG1": 163.678,
+   "H_Zn": 2.44,
+   "Zn_N2_H": 107.409,
+   "S_N2_H": 107.409,
+   "N1_Phe131CZ_docking_frame": 3.883,
+   "N1_Asn67OD1_docking_frame": 7.722,
+   "N1_to_His64_ring": {
+    "A": 9.44,
+    "B": 6.79,
+    "C": 6.92
+   },
+   "min_heavy_distance_to_protein": {
+    "A": 2.86,
+    "protein_atom": "THR199.OG1",
+    "ligand_atom": "N2"
+   },
+   "min_distance_Zn_to_other_ligand_atom": {
+    "A": 2.99,
+    "atom": "O2"
+   },
+   "sulfonamide_hydrogen": {
+    "note": "the entry holds no ligand hydrogens; aniline and ring hydrogens placed by RDKit (aniline planar), the sulfonamide hydrogen by the tetrahedral construction",
+    "second_tetrahedral_position_H_OG1_A": 3.22
+   },
+   "waters_removed": [],
+   "waters_close_kept": [],
+   "waters_within_4A_of_aniline_N": [
+    {
+     "water": 582,
+     "dist_A": 3.8
+    }
+   ],
+   "waters_within_3p6A_of_ligand": [
+    {
+     "water": 553,
+     "dist_A": 2.93,
+     "ligand_atom": "N2"
+    },
+    {
+     "water": 568,
+     "dist_A": 3.59,
+     "ligand_atom": "C1"
+    }
+   ],
+   "n_waters": 215
+  },
+  "N": {
+   "source": "docked pose: dock/T3_6RL9/runs/sfa_neutral__ad4zn__prod/seed03/out.pdbqt, MODEL 1 (seed 3), neutral molecule, AutoDock4Zn score -8.843 kcal/mol",
+   "score_kcal_mol": -8.843,
+   "rmsd_to_crystal_A": 0.61,
+   "Zn_N2": 2.207,
+   "Zn_O1": 4.24,
+   "Zn_O2": 2.775,
+   "Zn_O_min": 2.775,
+   "N2_OG1": 2.552,
+   "T199N_O_min": 2.983,
+   "C3_C4_S_N2": 148.632,
+   "C5_C4_S_N2": -28.91,
+   "tau_fold": 148.632,
+   "C4_S_N2": 109.483,
+   "S_N2": 1.677,
+   "C4_S": 1.773,
+   "S_N2_Zn": 105.908,
+   "N1_Phe131CZ": 3.356,
+   "N1_Asn67OD1": 7.725,
+   "N1_Asn67ND2": 6.557,
+   "H_OG1": 1.621,
+   "N2_H_OG1": 149.15,
+   "H_Zn": 2.735,
+   "Zn_N2_H": 110.347,
+   "S_N2_H": 110.347,
+   "N1_Phe131CZ_docking_frame": 3.342,
+   "N1_Asn67OD1_docking_frame": 7.706,
+   "N1_to_His64_ring": {
+    "A": 10.16,
+    "B": 7.37,
+    "C": 7.52
+   },
+   "min_heavy_distance_to_protein": {
+    "A": 2.55,
+    "protein_atom": "THR199.OG1",
+    "ligand_atom": "N2"
+   },
+   "min_distance_Zn_to_other_ligand_atom": {
+    "A": 2.78,
+    "atom": "O2"
+   },
+   "sulfonamide_hydrogen": {
+    "docked_sulfonamide_H": [
+     {
+      "pdbqt_atom": 14,
+      "H_Zn": 1.88,
+      "Zn_N2_H": 57.9,
+      "H_OG1": 2.21,
+      "N2_H_OG1": 97.5,
+      "S_N2_H": 111.0
+     },
+     {
+      "pdbqt_atom": 15,
+      "H_Zn": 3.08,
+      "Zn_N2_H": 143.0,
+      "H_OG1": 2.07,
+      "N2_H_OG1": 106.7,
+      "S_N2_H": 110.9
+     }
+    ],
+    "deleted": 14,
+    "remaining": 15,
+    "remaining_donates_to_Thr199": false,
+    "criterion": "H...OG1 <= 2.5 A and N-H...OG1 >= 120 deg",
+    "constructed_H_from_remaining_docked_H_A": 1.02,
+    "note": "neither docked hydrogen meets the hydrogen-bond criterion to Thr199 OG1; the one pointing at the zinc is deleted and the other replaced by the tetrahedral construction",
+    "second_tetrahedral_position_H_OG1_A": 2.82
+   },
+   "waters_removed": [],
+   "waters_close_kept": [],
+   "waters_within_4A_of_aniline_N": [],
+   "waters_within_3p6A_of_ligand": [
+    {
+     "water": 553,
+     "dist_A": 3.15,
+     "ligand_atom": "C5"
+    },
+    {
+     "water": 568,
+     "dist_A": 3.52,
+     "ligand_atom": "C6"
+    }
+   ],
+   "n_waters": 215
+  },
+  "R": {
+   "source": "docked pose: dock/T3_6RL9/runs/sfa_neutral__ad4zn__prod/seed14/out.pdbqt, MODEL 3 (seed 14), neutral molecule, AutoDock4Zn score -8.823 kcal/mol",
+   "score_kcal_mol": -8.823,
+   "rmsd_to_crystal_A": 3.573,
+   "Zn_N2": 2.235,
+   "Zn_O1": 4.53,
+   "Zn_O2": 3.907,
+   "Zn_O_min": 3.907,
+   "N2_OG1": 2.585,
+   "T199N_O_min": 3.02,
+   "C3_C4_S_N2": 142.744,
+   "C5_C4_S_N2": -34.865,
+   "tau_fold": 142.744,
+   "C4_S_N2": 109.432,
+   "S_N2": 1.677,
+   "C4_S": 1.774,
+   "S_N2_Zn": 119.529,
+   "N1_Phe131CZ": 9.585,
+   "N1_Asn67OD1": 2.597,
+   "N1_Asn67ND2": 3.31,
+   "H_OG1": 1.717,
+   "N2_H_OG1": 140.178,
+   "H_Zn": 2.714,
+   "Zn_N2_H": 106.895,
+   "S_N2_H": 106.895,
+   "N1_Phe131CZ_docking_frame": 9.575,
+   "N1_Asn67OD1_docking_frame": 2.575,
+   "N1_to_His64_ring": {
+    "A": 5.43,
+    "B": 3.33,
+    "C": 3.48
+   },
+   "min_heavy_distance_to_protein": {
+    "A": 2.59,
+    "protein_atom": "THR199.OG1",
+    "ligand_atom": "N2"
+   },
+   "min_distance_Zn_to_other_ligand_atom": {
+    "A": 3.33,
+    "atom": "C5"
+   },
+   "sulfonamide_hydrogen": {
+    "docked_sulfonamide_H": [
+     {
+      "pdbqt_atom": 14,
+      "H_Zn": 2.93,
+      "Zn_N2_H": 124.4,
+      "H_OG1": 2.2,
+      "N2_H_OG1": 100.5,
+      "S_N2_H": 111.0
+     },
+     {
+      "pdbqt_atom": 15,
+      "H_Zn": 2.16,
+      "Zn_N2_H": 72.6,
+      "H_OG1": 2.14,
+      "N2_H_OG1": 104.2,
+      "S_N2_H": 111.0
+     }
+    ],
+    "deleted": 15,
+    "remaining": 14,
+    "remaining_donates_to_Thr199": false,
+    "criterion": "H...OG1 <= 2.5 A and N-H...OG1 >= 120 deg",
+    "constructed_H_from_remaining_docked_H_A": 1.27,
+    "note": "neither docked hydrogen meets the hydrogen-bond criterion to Thr199 OG1; the one pointing at the zinc is deleted and the other replaced by the tetrahedral construction",
+    "second_tetrahedral_position_H_OG1_A": 2.72
+   },
+   "waters_removed": [
+    {
+     "water": 423,
+     "dist_A": 0.28,
+     "ligand_atom": "N1"
+    },
+    {
+     "water": 516,
+     "dist_A": 1.43,
+     "ligand_atom": "C6"
+    },
+    {
+     "water": 553,
+     "dist_A": 0.55,
+     "ligand_atom": "C5"
+    },
+    {
+     "water": 568,
+     "dist_A": 0.19,
+     "ligand_atom": "C2"
+    }
+   ],
+   "waters_close_kept": [],
+   "waters_within_4A_of_aniline_N": [
+    {
+     "water": 423,
+     "dist_A": 0.28
+    },
+    {
+     "water": 568,
+     "dist_A": 2.56
+    },
+    {
+     "water": 516,
+     "dist_A": 2.86
+    },
+    {
+     "water": 582,
+     "dist_A": 3.29
+    },
+    {
+     "water": 553,
+     "dist_A": 3.87
+    }
+   ],
+   "waters_within_3p6A_of_ligand": [
+    {
+     "water": 568,
+     "dist_A": 0.19,
+     "ligand_atom": "C2"
+    },
+    {
+     "water": 423,
+     "dist_A": 0.28,
+     "ligand_atom": "N1"
+    },
+    {
+     "water": 553,
+     "dist_A": 0.55,
+     "ligand_atom": "C5"
+    },
+    {
+     "water": 516,
+     "dist_A": 1.43,
+     "ligand_atom": "C6"
+    },
+    {
+     "water": 582,
+     "dist_A": 2.67,
+     "ligand_atom": "C2"
+    }
+   ],
+   "n_waters": 211
+  }
+ },
+ "plan_section_5_check": {
+  "plan": {
+   "N1_Phe131CZ": {
+    "crystal": 3.9,
+    "rotated": [
+     9.3,
+     9.8
+    ]
+   },
+   "N1_Asn67OD1": {
+    "crystal": 7.7,
+    "rotated": [
+     2.6,
+     2.7
+    ]
+   }
+  },
+  "X": {
+   "N1_Phe131CZ": 3.897,
+   "N1_Asn67OD1": 7.744,
+   "matches": true
+  },
+  "R": {
+   "N1_Phe131CZ": 9.585,
+   "N1_Asn67OD1": 2.597,
+   "matches": true
+  },
+  "N": {
+   "N1_Phe131CZ": 3.356,
+   "N1_Asn67OD1": 7.725,
+   "note": "the plan gives no number for the near-native start"
+  },
+  "midpoints_X_to_R": {
+   "N1_Phe131CZ": 6.74,
+   "N1_Asn67OD1": 5.17
+  },
+  "all_rotated_modes_of_the_production_job": {
+   "N1_Phe131CZ": [
+    8.72,
+    10.32
+   ],
+   "N1_Asn67OD1": [
+    2.56,
+    3.2
+   ]
+  }
+ },
+ "differences_from_docking_receptor": [
+  "His4: HIE in the docking receptor, HID here",
+  "His107: HIE in the docking receptor, HID here",
+  "His122: HIE in the docking receptor, HID here",
+  "Glu106: GLH (protonated) in the docking receptor, GLU (deprotonated) here",
+  "N-terminus: NH3+ on His3 in the docking receptor, acetyl cap here (net charge of the protein -1 against the docking receptor from this, -1 from Glu106)",
+  "conformers: SER73, GLN74, ASP75, ALA77, VAL78, LEU79, LYS80, GLY81, ARG89, PHE176 take another label than in the docking receptor (coupled groups take one label)",
+  "water: none in the docking receptor, 215 crystal waters here",
+  "side-chain atoms without density: built by PDBFixer and minimised in the docking receptor, built by tleap here",
+  "hydrogens: placed by PDBFixer and minimised in vacuum in the docking receptor (heavy atoms moved by up to 0.175 A); here the deposited heavy-atom coordinates are used unchanged and tleap adds the hydrogens",
+  "ligand: neutral sulfanilamide in the AutoDock4Zn docking, the sulfonamidate anion here"
+ ]
+}

@@ -1,0 +1,1635 @@
+{
+ "what": "gate G-R: quantum chemistry against the force field on the small zinc model, read in two parts",
+ "plan": "md/PLAN.md, entries of 6 Oct 2026, 8:56 AM IST and 1:09 PM IST",
+ "reading": "2e",
+ "step2": "2e",
+ "written": "2026-10-06 08:47:30 PM IST",
+ "mm": "/root/workspace/cqc-4-sulfamoylanilinium-dihydrogen-phosphate/md/qm/gr/mm_2e_main.json",
+ "mm_label": "step 2e, RESP charges with the ligand pairs equal, Zn-N2-H at its value in start X",
+ "qm_dir": "/root/workspace/cqc-4-sulfamoylanilinium-dihydrogen-phosphate/md/qm/gr/qm",
+ "used_scheme": "methyl",
+ "d3": {
+  "file": "/root/workspace/cqc-4-sulfamoylanilinium-dihydrogen-phosphate/md/qm/gr/d3.json",
+  "routine": "md/qm/gr_queue.py (class D3, NumPy)",
+  "checks_passed": true,
+  "finished_points_without_d3": []
+ },
+ "n_points": 38,
+ "n_finished": 38,
+ "finished": [
+  "X",
+  "R",
+  "Rx",
+  "a4",
+  "a3",
+  "a5",
+  "a2",
+  "a6",
+  "d1",
+  "d3",
+  "d4",
+  "d5",
+  "d6",
+  "d2",
+  "Nx",
+  "c1_m030",
+  "c2_m015",
+  "c1_p030",
+  "c2_m030",
+  "c1_m060",
+  "c2_m120",
+  "c1_m090",
+  "c2_m150",
+  "c1_m120",
+  "c2_m180",
+  "N",
+  "e_p015",
+  "e_p030",
+  "e_m120",
+  "e_p120",
+  "f_p08",
+  "f_m08",
+  "g1",
+  "g2",
+  "g3",
+  "g4",
+  "g5",
+  "g6"
+ ],
+ "pending": [],
+ "points_not_in_the_mm_file": [],
+ "hosts": [
+  "arya",
+  "cqc-md-gpu-01"
+ ],
+ "with_d3": {
+  "part_A": {
+   "n_points": 25,
+   "n_expected": 25,
+   "complete": true,
+   "families": {
+    "X": {
+     "points": [
+      "X",
+      "a4",
+      "a3",
+      "a5",
+      "a2",
+      "a6",
+      "d1",
+      "d3",
+      "d4",
+      "d5",
+      "d6",
+      "d2",
+      "e_p015",
+      "e_p030",
+      "e_m120",
+      "e_p120",
+      "f_p08",
+      "f_m08"
+     ],
+     "reference": "e_p120",
+     "n_compared": 17,
+     "rms": 3.2573,
+     "rms_after_best_shift": 2.8429
+    },
+    "Rx": {
+     "points": [
+      "Rx",
+      "g1",
+      "g2",
+      "g3",
+      "g4",
+      "g5",
+      "g6"
+     ],
+     "reference": "g3",
+     "n_compared": 6,
+     "rms": 2.4883,
+     "rms_after_best_shift": 1.4311
+    }
+   },
+   "deviations": {
+    "X": -0.5144,
+    "a4": 6.6226,
+    "a3": 4.342,
+    "a5": 6.5687,
+    "a2": 1.2527,
+    "a6": 4.7635,
+    "d1": 4.2258,
+    "d3": 2.8261,
+    "d4": -1.0337,
+    "d5": -1.6245,
+    "d6": 1.359,
+    "d2": 2.1394,
+    "e_p015": -1.9335,
+    "e_p030": -2.9383,
+    "e_m120": -1.2617,
+    "f_p08": 0.0439,
+    "f_m08": 0.2237,
+    "Rx": -2.7223,
+    "g1": 0.0062,
+    "g2": -2.8429,
+    "g4": -2.1452,
+    "g5": -4.0298,
+    "g6": -0.9025
+   },
+   "n_compared": 23,
+   "rms": 3.0753,
+   "largest": 6.6226,
+   "largest_at": "a4",
+   "passed": false,
+   "rms_single_reference": 3.5039,
+   "single_reference": "e_p120",
+   "without_protein_contact": {
+    "n_points": 16,
+    "n_expected": 16,
+    "n_compared": 14,
+    "rms": 2.6474,
+    "largest": -4.4506,
+    "largest_at": "d5"
+   }
+  },
+  "part_B": {
+   "X_to_Rx": {
+    "against": "X",
+    "qm": 10.8444,
+    "mm": 14.2204,
+    "mm_minus_qm": 3.376,
+    "mm_split": {
+     "bond": -0.0,
+     "angle_N2": 1.347,
+     "angle_other": 0.954,
+     "torsion_N2S": -1.41,
+     "torsion_other": 0.0,
+     "nb_ligand": 0.703,
+     "lj_ligand_frame": 0.996,
+     "coulomb_ligand_frame": 11.631
+    }
+   },
+   "Nx": {
+    "against": "X",
+    "qm": 1.4215,
+    "mm": 2.6255,
+    "mm_minus_qm": 1.2039,
+    "mm_split": {
+     "bond": -0.0,
+     "angle_N2": -0.043,
+     "angle_other": 0.852,
+     "torsion_N2S": 1.063,
+     "torsion_other": 0.0,
+     "nb_ligand": -0.324,
+     "lj_ligand_frame": -0.151,
+     "coulomb_ligand_frame": 1.229
+    }
+   },
+   "turns": {
+    "c1_m030": {
+     "against": "X",
+     "qm": -0.8654,
+     "mm": 0.5324,
+     "mm_minus_qm": 1.3978,
+     "mm_split": {
+      "bond": 0.0,
+      "angle_N2": 0.0,
+      "angle_other": 0.0,
+      "torsion_N2S": -1.628,
+      "torsion_other": 0.0,
+      "nb_ligand": 1.577,
+      "lj_ligand_frame": 3.363,
+      "coulomb_ligand_frame": -2.779
+     },
+     "against_X": {
+      "against": "X",
+      "qm": -0.8654,
+      "mm": 0.5324,
+      "mm_minus_qm": 1.3978
+     },
+     "flags": [
+      "protein_contact"
+     ]
+    },
+    "c2_m015": {
+     "against": "Rx",
+     "qm": -4.9322,
+     "mm": -2.7379,
+     "mm_minus_qm": 2.1943,
+     "mm_split": {
+      "bond": 0.0,
+      "angle_N2": 0.0,
+      "angle_other": -0.0,
+      "torsion_N2S": -0.22,
+      "torsion_other": 0.0,
+      "nb_ligand": 0.997,
+      "lj_ligand_frame": -2.124,
+      "coulomb_ligand_frame": -1.391
+     },
+     "against_X": {
+      "against": "X",
+      "qm": 5.9122,
+      "mm": 11.4825,
+      "mm_minus_qm": 5.5703
+     },
+     "flags": [
+      "protein_contact"
+     ]
+    },
+    "c1_p030": {
+     "against": "X",
+     "qm": 3.1553,
+     "mm": 5.9853,
+     "mm_minus_qm": 2.83,
+     "mm_split": {
+      "bond": 0.0,
+      "angle_N2": 0.0,
+      "angle_other": 0.0,
+      "torsion_N2S": 2.79,
+      "torsion_other": 0.0,
+      "nb_ligand": -0.683,
+      "lj_ligand_frame": 1.145,
+      "coulomb_ligand_frame": 2.732
+     },
+     "against_X": {
+      "against": "X",
+      "qm": 3.1553,
+      "mm": 5.9853,
+      "mm_minus_qm": 2.83
+     },
+     "flags": [
+      "protein_contact"
+     ]
+    },
+    "c2_m030": {
+     "against": "Rx",
+     "qm": -6.8992,
+     "mm": -3.3465,
+     "mm_minus_qm": 3.5527,
+     "mm_split": {
+      "bond": 0.0,
+      "angle_N2": 0.0,
+      "angle_other": -0.0,
+      "torsion_N2S": 0.277,
+      "torsion_other": 0.0,
+      "nb_ligand": 2.063,
+      "lj_ligand_frame": -1.817,
+      "coulomb_ligand_frame": -3.869
+     },
+     "against_X": {
+      "against": "X",
+      "qm": 3.9452,
+      "mm": 10.8739,
+      "mm_minus_qm": 6.9287
+     },
+     "flags": [
+      "protein_contact"
+     ]
+    },
+    "c1_m060": {
+     "against": "X",
+     "qm": 1.7276,
+     "mm": 2.4793,
+     "mm_minus_qm": 0.7517,
+     "mm_split": {
+      "bond": 0.0,
+      "angle_N2": 0.0,
+      "angle_other": 0.0,
+      "torsion_N2S": -0.56,
+      "torsion_other": 0.0,
+      "nb_ligand": 3.582,
+      "lj_ligand_frame": 2.596,
+      "coulomb_ligand_frame": -3.139
+     },
+     "against_X": {
+      "against": "X",
+      "qm": 1.7276,
+      "mm": 2.4793,
+      "mm_minus_qm": 0.7517
+     },
+     "flags": [
+      "protein_contact"
+     ]
+    },
+    "c2_m120": {
+     "against": "Rx",
+     "qm": -1.6137,
+     "mm": -2.7707,
+     "mm_minus_qm": -1.157,
+     "mm_split": {
+      "bond": 0.0,
+      "angle_N2": 0.0,
+      "angle_other": -0.0,
+      "torsion_N2S": 4.331,
+      "torsion_other": 0.0,
+      "nb_ligand": 3.024,
+      "lj_ligand_frame": 0.153,
+      "coulomb_ligand_frame": -10.279
+     },
+     "against_X": {
+      "against": "X",
+      "qm": 9.2307,
+      "mm": 11.4497,
+      "mm_minus_qm": 2.219
+     },
+     "flags": [
+      "protein_contact"
+     ]
+    },
+    "c1_m090": {
+     "against": "X",
+     "qm": 5.6932,
+     "mm": 5.7312,
+     "mm_minus_qm": 0.038,
+     "mm_split": {
+      "bond": 0.0,
+      "angle_N2": 0.0,
+      "angle_other": 0.0,
+      "torsion_N2S": 2.039,
+      "torsion_other": 0.0,
+      "nb_ligand": 4.768,
+      "lj_ligand_frame": 0.505,
+      "coulomb_ligand_frame": -1.58
+     },
+     "against_X": {
+      "against": "X",
+      "qm": 5.6932,
+      "mm": 5.7312,
+      "mm_minus_qm": 0.038
+     },
+     "flags": [
+      "protein_contact"
+     ]
+    },
+    "c2_m150": {
+     "against": "Rx",
+     "qm": -7.4775,
+     "mm": -8.1671,
+     "mm_minus_qm": -0.6897,
+     "mm_split": {
+      "bond": 0.0,
+      "angle_N2": 0.0,
+      "angle_other": -0.0,
+      "torsion_N2S": 1.888,
+      "torsion_other": 0.0,
+      "nb_ligand": 1.658,
+      "lj_ligand_frame": 0.094,
+      "coulomb_ligand_frame": -11.808
+     },
+     "against_X": {
+      "against": "X",
+      "qm": 3.3669,
+      "mm": 6.0532,
+      "mm_minus_qm": 2.6863
+     },
+     "flags": [
+      "protein_contact"
+     ]
+    },
+    "c1_m120": {
+     "against": "X",
+     "qm": 5.3482,
+     "mm": 8.2817,
+     "mm_minus_qm": 2.9335,
+     "mm_split": {
+      "bond": 0.0,
+      "angle_N2": 0.0,
+      "angle_other": 0.0,
+      "torsion_N2S": 3.497,
+      "torsion_other": 0.0,
+      "nb_ligand": 4.576,
+      "lj_ligand_frame": -0.036,
+      "coulomb_ligand_frame": 0.245
+     },
+     "against_X": {
+      "against": "X",
+      "qm": 5.3482,
+      "mm": 8.2817,
+      "mm_minus_qm": 2.9335
+     },
+     "flags": [
+      "protein_contact"
+     ]
+    },
+    "c2_m180": {
+     "against": "Rx",
+     "qm": -8.982,
+     "mm": -9.7341,
+     "mm_minus_qm": -0.7521,
+     "mm_split": {
+      "bond": 0.0,
+      "angle_N2": 0.0,
+      "angle_other": -0.0,
+      "torsion_N2S": -0.097,
+      "torsion_other": 0.0,
+      "nb_ligand": -0.021,
+      "lj_ligand_frame": 2.829,
+      "coulomb_ligand_frame": -12.446
+     },
+     "against_X": {
+      "against": "X",
+      "qm": 1.8624,
+      "mm": 4.4863,
+      "mm_minus_qm": 2.6239
+     },
+     "flags": [
+      "protein_contact"
+     ]
+    }
+   },
+   "turns_rms_mm_minus_qm_against_base": 1.9736,
+   "turns_n": 10,
+   "relaxed": {
+    "force_field": {
+     "Rx_minus_X": 0.0,
+     "split": {
+      "bond": -0.0,
+      "angle_N2": 0.0,
+      "angle_other": 0.0,
+      "torsion_N2S": 0.0,
+      "torsion_other": 0.0,
+      "nb_ligand": 0.0,
+      "lj_ligand_frame": 0.0,
+      "coulomb_ligand_frame": -0.0,
+      "nb_frame": 0.0
+     },
+     "configurations_kept": false,
+     "signed_volume_N2": {
+      "X": {
+       "start": 0.724,
+       "end": 0.7832,
+       "n_iterations": 1449,
+       "smallest": 0.6668,
+       "largest": 0.7832,
+       "changed_sign": false
+      },
+      "Rx": {
+       "start": -0.6783,
+       "end": 0.7832,
+       "n_iterations": 1682,
+       "smallest": -0.6783,
+       "largest": 0.7832,
+       "changed_sign": true
+      }
+     },
+     "careful_descent": {
+      "X": {
+       "crossed": null,
+       "signed_volume_N2": {
+        "start": 0.724,
+        "end": 0.7799,
+        "smallest": 0.6815,
+        "largest": 0.7799,
+        "changed_sign": false
+       },
+       "energy_drop": 10.0825,
+       "ended": "rms force below 0.005 kcal/mol/A"
+      },
+      "Rx": {
+       "crossed": {
+        "iteration": 21098,
+        "energy_below_start": 15.2914
+       },
+       "signed_volume_N2": {
+        "start": -0.6783,
+        "end": 0.7663,
+        "smallest": -0.6783,
+        "largest": 0.7663,
+        "changed_sign": true
+       },
+       "energy_drop": 24.2023,
+       "ended": "iteration limit"
+      }
+     },
+     "at_the_quantum_chemical_minima": null,
+     "at_the_quantum_chemical_geometries": null,
+     "quantum_chemical_geometries": {
+      "qm_X": null,
+      "qm_Rx": null
+     },
+     "file": "/root/workspace/cqc-4-sulfamoylanilinium-dihydrogen-phosphate/md/qm/gr/relax_mm.json"
+    },
+    "quantum_chemistry": {
+     "Rx_minus_X": -0.011,
+     "state": {
+      "X": "done",
+      "Rx": "done"
+     },
+     "converged": {
+      "X": true,
+      "Rx": true
+     },
+     "crossed": {
+      "X": false,
+      "Rx": true
+     },
+     "nitrogen_at_the_end": {
+      "X": "pyramidal, configuration of the start",
+      "Rx": "pyramidal, the configuration opposite to the start"
+     },
+     "configurations_kept": false,
+     "both_converged": true,
+     "signed_volume_N2": {
+      "X": {
+       "start": 0.724,
+       "end": 0.6286,
+       "smallest": 0.4092,
+       "largest": 0.7248,
+       "changed_sign": false
+      },
+      "Rx": {
+       "start": -0.6783,
+       "end": 0.6192,
+       "smallest": -0.6783,
+       "largest": 0.7742,
+       "changed_sign": true
+      }
+     },
+     "n_steps": {
+      "X": 55,
+      "Rx": 66
+     },
+     "end_points": {
+      "geometries": {
+       "X": "qm_X.xyz",
+       "Rx": "qm_Rx.xyz"
+      },
+      "converged": {
+       "X": true,
+       "Rx": true
+      },
+      "rmsd_ligand_heavy_A": 0.1237,
+      "largest_distance_of_a_ligand_heavy_atom_A": 0.2204,
+      "Rx_minus_X_with_d3": -0.011,
+      "Rx_minus_X_without_d3": -0.05,
+      "Rx_minus_X_d3_part": 0.039,
+      "note": "both runs converged: the difference between the two end points",
+      "Rx_minus_X": -0.011
+     },
+     "rule": "md/PLAN.md, 6 Oct 2026, 1:09 PM IST, point 1: a run counts as crossed only when it has converged with a signed volume at N2 of the sign opposite to its start; a run stopped at the change of sign (old rule) is not an end",
+     "file": "/root/workspace/cqc-4-sulfamoylanilinium-dihydrogen-phosphate/md/qm/gr/relax_qm.json"
+    },
+    "mismatch": {
+     "mm_minus_qm": null,
+     "note": "in the force field the relaxation from Rx does not keep the R-like configuration at N2, so there is no force-field difference between two relaxed configurations",
+     "quantum_chemistry_configurations_kept": false,
+     "at_the_quantum_chemical_end_points": null
+    }
+   }
+  },
+  "reported_only": {
+   "R": {
+    "against": "X",
+    "qm": 17.2847,
+    "mm": 36.7671,
+    "mm_minus_qm": 19.4823,
+    "mm_split": {
+     "bond": 13.403,
+     "angle_N2": 0.274,
+     "angle_other": 8.895,
+     "torsion_N2S": -1.644,
+     "torsion_other": 3.772,
+     "nb_ligand": -0.116,
+     "lj_ligand_frame": -2.171,
+     "coulomb_ligand_frame": 14.354
+    }
+   },
+   "N": {
+    "against": "X",
+    "qm": 16.2219,
+    "mm": 29.5539,
+    "mm_minus_qm": 13.332,
+    "mm_split": {
+     "bond": 11.441,
+     "angle_N2": 1.194,
+     "angle_other": 9.025,
+     "torsion_N2S": 1.061,
+     "torsion_other": 8.594,
+     "nb_ligand": -2.117,
+     "lj_ligand_frame": 0.597,
+     "coulomb_ligand_frame": -0.241
+    }
+   }
+  }
+ },
+ "without_d3": {
+  "part_A": {
+   "n_points": 25,
+   "n_expected": 25,
+   "complete": true,
+   "families": {
+    "X": {
+     "points": [
+      "X",
+      "a4",
+      "a3",
+      "a5",
+      "a2",
+      "a6",
+      "d1",
+      "d3",
+      "d4",
+      "d5",
+      "d6",
+      "d2",
+      "e_p015",
+      "e_p030",
+      "e_m120",
+      "e_p120",
+      "f_p08",
+      "f_m08"
+     ],
+     "reference": "e_p120",
+     "n_compared": 17,
+     "rms": 2.937,
+     "rms_after_best_shift": 2.7171
+    },
+    "Rx": {
+     "points": [
+      "Rx",
+      "g1",
+      "g2",
+      "g3",
+      "g4",
+      "g5",
+      "g6"
+     ],
+     "reference": "g3",
+     "n_compared": 6,
+     "rms": 2.598,
+     "rms_after_best_shift": 1.472
+    }
+   },
+   "deviations": {
+    "X": -0.9231,
+    "a4": 6.5524,
+    "a3": 4.6107,
+    "a5": 5.4676,
+    "a2": 1.393,
+    "a6": 1.1225,
+    "d1": 3.7925,
+    "d3": 2.4519,
+    "d4": -1.5096,
+    "d5": -2.025,
+    "d6": 0.9311,
+    "d2": 1.4307,
+    "e_p015": -2.0502,
+    "e_p030": -2.8458,
+    "e_m120": -1.8045,
+    "f_p08": 0.7716,
+    "f_m08": -1.6303,
+    "Rx": -2.8708,
+    "g1": 0.1044,
+    "g2": -2.868,
+    "g4": -2.4518,
+    "g5": -4.0867,
+    "g6": -1.1428
+   },
+   "n_compared": 23,
+   "rms": 2.8524,
+   "largest": 6.5524,
+   "largest_at": "a4",
+   "passed": false,
+   "rms_single_reference": 4.014,
+   "single_reference": "e_p120",
+   "without_protein_contact": {
+    "n_points": 16,
+    "n_expected": 16,
+    "n_compared": 14,
+    "rms": 2.8184,
+    "largest": -4.4769,
+    "largest_at": "d5"
+   }
+  },
+  "part_B": {
+   "X_to_Rx": {
+    "against": "X",
+    "qm": 19.9339,
+    "mm": 14.2204,
+    "mm_minus_qm": -5.7135,
+    "mm_split": {
+     "bond": -0.0,
+     "angle_N2": 1.347,
+     "angle_other": 0.954,
+     "torsion_N2S": -1.41,
+     "torsion_other": 0.0,
+     "nb_ligand": 0.703,
+     "lj_ligand_frame": 0.996,
+     "coulomb_ligand_frame": 11.631
+    }
+   },
+   "Nx": {
+    "against": "X",
+    "qm": 1.9715,
+    "mm": 2.6255,
+    "mm_minus_qm": 0.654,
+    "mm_split": {
+     "bond": -0.0,
+     "angle_N2": -0.043,
+     "angle_other": 0.852,
+     "torsion_N2S": 1.063,
+     "torsion_other": 0.0,
+     "nb_ligand": -0.324,
+     "lj_ligand_frame": -0.151,
+     "coulomb_ligand_frame": 1.229
+    }
+   },
+   "turns": {
+    "c1_m030": {
+     "against": "X",
+     "qm": -1.7316,
+     "mm": 0.5324,
+     "mm_minus_qm": 2.264,
+     "mm_split": {
+      "bond": 0.0,
+      "angle_N2": 0.0,
+      "angle_other": 0.0,
+      "torsion_N2S": -1.628,
+      "torsion_other": 0.0,
+      "nb_ligand": 1.577,
+      "lj_ligand_frame": 3.363,
+      "coulomb_ligand_frame": -2.779
+     },
+     "against_X": {
+      "against": "X",
+      "qm": -1.7316,
+      "mm": 0.5324,
+      "mm_minus_qm": 2.264
+     },
+     "flags": [
+      "protein_contact"
+     ]
+    },
+    "c2_m015": {
+     "against": "Rx",
+     "qm": -8.6048,
+     "mm": -2.7379,
+     "mm_minus_qm": 5.867,
+     "mm_split": {
+      "bond": 0.0,
+      "angle_N2": 0.0,
+      "angle_other": -0.0,
+      "torsion_N2S": -0.22,
+      "torsion_other": 0.0,
+      "nb_ligand": 0.997,
+      "lj_ligand_frame": -2.124,
+      "coulomb_ligand_frame": -1.391
+     },
+     "against_X": {
+      "against": "X",
+      "qm": 11.3291,
+      "mm": 11.4825,
+      "mm_minus_qm": 0.1534
+     },
+     "flags": [
+      "protein_contact"
+     ]
+    },
+    "c1_p030": {
+     "against": "X",
+     "qm": 5.72,
+     "mm": 5.9853,
+     "mm_minus_qm": 0.2653,
+     "mm_split": {
+      "bond": 0.0,
+      "angle_N2": 0.0,
+      "angle_other": 0.0,
+      "torsion_N2S": 2.79,
+      "torsion_other": 0.0,
+      "nb_ligand": -0.683,
+      "lj_ligand_frame": 1.145,
+      "coulomb_ligand_frame": 2.732
+     },
+     "against_X": {
+      "against": "X",
+      "qm": 5.72,
+      "mm": 5.9853,
+      "mm_minus_qm": 0.2653
+     },
+     "flags": [
+      "protein_contact"
+     ]
+    },
+    "c2_m030": {
+     "against": "Rx",
+     "qm": -12.8306,
+     "mm": -3.3465,
+     "mm_minus_qm": 9.4842,
+     "mm_split": {
+      "bond": 0.0,
+      "angle_N2": 0.0,
+      "angle_other": -0.0,
+      "torsion_N2S": 0.277,
+      "torsion_other": 0.0,
+      "nb_ligand": 2.063,
+      "lj_ligand_frame": -1.817,
+      "coulomb_ligand_frame": -3.869
+     },
+     "against_X": {
+      "against": "X",
+      "qm": 7.1033,
+      "mm": 10.8739,
+      "mm_minus_qm": 3.7706
+     },
+     "flags": [
+      "protein_contact"
+     ]
+    },
+    "c1_m060": {
+     "against": "X",
+     "qm": 0.7267,
+     "mm": 2.4793,
+     "mm_minus_qm": 1.7526,
+     "mm_split": {
+      "bond": 0.0,
+      "angle_N2": 0.0,
+      "angle_other": 0.0,
+      "torsion_N2S": -0.56,
+      "torsion_other": 0.0,
+      "nb_ligand": 3.582,
+      "lj_ligand_frame": 2.596,
+      "coulomb_ligand_frame": -3.139
+     },
+     "against_X": {
+      "against": "X",
+      "qm": 0.7267,
+      "mm": 2.4793,
+      "mm_minus_qm": 1.7526
+     },
+     "flags": [
+      "protein_contact"
+     ]
+    },
+    "c2_m120": {
+     "against": "Rx",
+     "qm": -12.0919,
+     "mm": -2.7707,
+     "mm_minus_qm": 9.3212,
+     "mm_split": {
+      "bond": 0.0,
+      "angle_N2": 0.0,
+      "angle_other": -0.0,
+      "torsion_N2S": 4.331,
+      "torsion_other": 0.0,
+      "nb_ligand": 3.024,
+      "lj_ligand_frame": 0.153,
+      "coulomb_ligand_frame": -10.279
+     },
+     "against_X": {
+      "against": "X",
+      "qm": 7.842,
+      "mm": 11.4497,
+      "mm_minus_qm": 3.6076
+     },
+     "flags": [
+      "protein_contact"
+     ]
+    },
+    "c1_m090": {
+     "against": "X",
+     "qm": 4.9493,
+     "mm": 5.7312,
+     "mm_minus_qm": 0.7819,
+     "mm_split": {
+      "bond": 0.0,
+      "angle_N2": 0.0,
+      "angle_other": 0.0,
+      "torsion_N2S": 2.039,
+      "torsion_other": 0.0,
+      "nb_ligand": 4.768,
+      "lj_ligand_frame": 0.505,
+      "coulomb_ligand_frame": -1.58
+     },
+     "against_X": {
+      "against": "X",
+      "qm": 4.9493,
+      "mm": 5.7312,
+      "mm_minus_qm": 0.7819
+     },
+     "flags": [
+      "protein_contact"
+     ]
+    },
+    "c2_m150": {
+     "against": "Rx",
+     "qm": -18.2245,
+     "mm": -8.1671,
+     "mm_minus_qm": 10.0574,
+     "mm_split": {
+      "bond": 0.0,
+      "angle_N2": 0.0,
+      "angle_other": -0.0,
+      "torsion_N2S": 1.888,
+      "torsion_other": 0.0,
+      "nb_ligand": 1.658,
+      "lj_ligand_frame": 0.094,
+      "coulomb_ligand_frame": -11.808
+     },
+     "against_X": {
+      "against": "X",
+      "qm": 1.7094,
+      "mm": 6.0532,
+      "mm_minus_qm": 4.3438
+     },
+     "flags": [
+      "protein_contact"
+     ]
+    },
+    "c1_m120": {
+     "against": "X",
+     "qm": 5.5286,
+     "mm": 8.2817,
+     "mm_minus_qm": 2.7532,
+     "mm_split": {
+      "bond": 0.0,
+      "angle_N2": 0.0,
+      "angle_other": 0.0,
+      "torsion_N2S": 3.497,
+      "torsion_other": 0.0,
+      "nb_ligand": 4.576,
+      "lj_ligand_frame": -0.036,
+      "coulomb_ligand_frame": 0.245
+     },
+     "against_X": {
+      "against": "X",
+      "qm": 5.5286,
+      "mm": 8.2817,
+      "mm_minus_qm": 2.7532
+     },
+     "flags": [
+      "protein_contact"
+     ]
+    },
+    "c2_m180": {
+     "against": "Rx",
+     "qm": -19.6066,
+     "mm": -9.7341,
+     "mm_minus_qm": 9.8725,
+     "mm_split": {
+      "bond": 0.0,
+      "angle_N2": 0.0,
+      "angle_other": -0.0,
+      "torsion_N2S": -0.097,
+      "torsion_other": 0.0,
+      "nb_ligand": -0.021,
+      "lj_ligand_frame": 2.829,
+      "coulomb_ligand_frame": -12.446
+     },
+     "against_X": {
+      "against": "X",
+      "qm": 0.3273,
+      "mm": 4.4863,
+      "mm_minus_qm": 4.159
+     },
+     "flags": [
+      "protein_contact"
+     ]
+    }
+   },
+   "turns_rms_mm_minus_qm_against_base": 6.5294,
+   "turns_n": 10,
+   "relaxed": {
+    "force_field": {
+     "Rx_minus_X": 0.0,
+     "split": {
+      "bond": -0.0,
+      "angle_N2": 0.0,
+      "angle_other": 0.0,
+      "torsion_N2S": 0.0,
+      "torsion_other": 0.0,
+      "nb_ligand": 0.0,
+      "lj_ligand_frame": 0.0,
+      "coulomb_ligand_frame": -0.0,
+      "nb_frame": 0.0
+     },
+     "configurations_kept": false,
+     "signed_volume_N2": {
+      "X": {
+       "start": 0.724,
+       "end": 0.7832,
+       "n_iterations": 1449,
+       "smallest": 0.6668,
+       "largest": 0.7832,
+       "changed_sign": false
+      },
+      "Rx": {
+       "start": -0.6783,
+       "end": 0.7832,
+       "n_iterations": 1682,
+       "smallest": -0.6783,
+       "largest": 0.7832,
+       "changed_sign": true
+      }
+     },
+     "careful_descent": {
+      "X": {
+       "crossed": null,
+       "signed_volume_N2": {
+        "start": 0.724,
+        "end": 0.7799,
+        "smallest": 0.6815,
+        "largest": 0.7799,
+        "changed_sign": false
+       },
+       "energy_drop": 10.0825,
+       "ended": "rms force below 0.005 kcal/mol/A"
+      },
+      "Rx": {
+       "crossed": {
+        "iteration": 21098,
+        "energy_below_start": 15.2914
+       },
+       "signed_volume_N2": {
+        "start": -0.6783,
+        "end": 0.7663,
+        "smallest": -0.6783,
+        "largest": 0.7663,
+        "changed_sign": true
+       },
+       "energy_drop": 24.2023,
+       "ended": "iteration limit"
+      }
+     },
+     "at_the_quantum_chemical_minima": null,
+     "at_the_quantum_chemical_geometries": null,
+     "quantum_chemical_geometries": {
+      "qm_X": null,
+      "qm_Rx": null
+     },
+     "file": "/root/workspace/cqc-4-sulfamoylanilinium-dihydrogen-phosphate/md/qm/gr/relax_mm.json"
+    },
+    "quantum_chemistry": {
+     "Rx_minus_X": -0.05,
+     "state": {
+      "X": "done",
+      "Rx": "done"
+     },
+     "converged": {
+      "X": true,
+      "Rx": true
+     },
+     "crossed": {
+      "X": false,
+      "Rx": true
+     },
+     "nitrogen_at_the_end": {
+      "X": "pyramidal, configuration of the start",
+      "Rx": "pyramidal, the configuration opposite to the start"
+     },
+     "configurations_kept": false,
+     "both_converged": true,
+     "signed_volume_N2": {
+      "X": {
+       "start": 0.724,
+       "end": 0.6286,
+       "smallest": 0.4092,
+       "largest": 0.7248,
+       "changed_sign": false
+      },
+      "Rx": {
+       "start": -0.6783,
+       "end": 0.6192,
+       "smallest": -0.6783,
+       "largest": 0.7742,
+       "changed_sign": true
+      }
+     },
+     "n_steps": {
+      "X": 55,
+      "Rx": 66
+     },
+     "end_points": {
+      "geometries": {
+       "X": "qm_X.xyz",
+       "Rx": "qm_Rx.xyz"
+      },
+      "converged": {
+       "X": true,
+       "Rx": true
+      },
+      "rmsd_ligand_heavy_A": 0.1237,
+      "largest_distance_of_a_ligand_heavy_atom_A": 0.2204,
+      "Rx_minus_X_with_d3": -0.011,
+      "Rx_minus_X_without_d3": -0.05,
+      "Rx_minus_X_d3_part": 0.039,
+      "note": "both runs converged: the difference between the two end points",
+      "Rx_minus_X": -0.05
+     },
+     "rule": "md/PLAN.md, 6 Oct 2026, 1:09 PM IST, point 1: a run counts as crossed only when it has converged with a signed volume at N2 of the sign opposite to its start; a run stopped at the change of sign (old rule) is not an end",
+     "file": "/root/workspace/cqc-4-sulfamoylanilinium-dihydrogen-phosphate/md/qm/gr/relax_qm.json"
+    },
+    "mismatch": {
+     "mm_minus_qm": null,
+     "note": "in the force field the relaxation from Rx does not keep the R-like configuration at N2, so there is no force-field difference between two relaxed configurations",
+     "quantum_chemistry_configurations_kept": false,
+     "at_the_quantum_chemical_end_points": null
+    }
+   }
+  },
+  "reported_only": {
+   "R": {
+    "against": "X",
+    "qm": 23.4648,
+    "mm": 36.7671,
+    "mm_minus_qm": 13.3023,
+    "mm_split": {
+     "bond": 13.403,
+     "angle_N2": 0.274,
+     "angle_other": 8.895,
+     "torsion_N2S": -1.644,
+     "torsion_other": 3.772,
+     "nb_ligand": -0.116,
+     "lj_ligand_frame": -2.171,
+     "coulomb_ligand_frame": 14.354
+    }
+   },
+   "N": {
+    "against": "X",
+    "qm": 15.7804,
+    "mm": 29.5539,
+    "mm_minus_qm": 13.7735,
+    "mm_split": {
+     "bond": 11.441,
+     "angle_N2": 1.194,
+     "angle_other": 9.025,
+     "torsion_N2S": 1.061,
+     "torsion_other": 8.594,
+     "nb_ligand": -2.117,
+     "lj_ligand_frame": 0.597,
+     "coulomb_ligand_frame": -0.241
+    }
+   }
+  }
+ },
+ "verdict_part_A": {
+  "complete": true,
+  "passed": false,
+  "rms": 3.0753,
+  "rms_without_d3": 2.8524,
+  "n_compared": 23,
+  "n_expected": 25,
+  "largest": 6.6226,
+  "largest_at": "a4",
+  "criterion": 1.0,
+  "rms_single_reference": 3.5039,
+  "rms_single_reference_without_d3": 4.014,
+  "subsets": {
+   "how": "two families, each against its lowest quantum-chemical point within the subset; reported only, no verdict",
+   "without_the_inversion_path": {
+    "n_compared": 18,
+    "rms": 2.2036
+   },
+   "without_the_turns_about_Zn_N2": {
+    "n_compared": 19,
+    "rms": 2.7053
+   },
+   "hydrogen_points_and_bends_only": {
+    "n_compared": 14,
+    "rms": 2.7007
+   },
+   "X_and_Rx_themselves_as_references": {
+    "n_compared": 23,
+    "rms": 3.1701
+   }
+  },
+  "text": "part A (terms at N2): r.m.s. of force field minus quantum chemistry with D3(BJ), each family against its lowest point, at most 1.0 kcal/mol; so far only, while `complete` is false.  `rms_single_reference` (one reference for all points) is quoted beside and does not decide; `subsets`: the same number over parts of the set, reported only"
+ },
+ "part_B_is_not_a_gate": "part B (contacts) is reported with the split by energy part; it has no verdict and is never fitted",
+ "part_A_composition": {
+  "what": "force-field energy of every point of part A against the geometry it was made from (X or Rx), by what moves it; in the inner points of the inversion path (group a) and the turns about Zn-N2 (group e) more than the atoms at N2 moves, so part A tests the whole description of the nitrogen (fixed charges and 1-4 terms included), not the three angle terms alone",
+  "points": {
+   "a4": {
+    "base": "X",
+    "group": "a",
+    "mm": 13.76,
+    "qm": 6.623,
+    "fitted_terms": 4.391,
+    "angles_at_N2": 5.096,
+    "ligand_frame_nonbonded": 7.611,
+    "ligand_frame_electrostatic": 7.999,
+    "nonbonded_inside_ligand": 1.494,
+    "rest": 0.264
+   },
+   "a3": {
+    "base": "X",
+    "group": "a",
+    "mm": 10.29,
+    "qm": 5.434,
+    "fitted_terms": 2.893,
+    "angles_at_N2": 2.981,
+    "ligand_frame_nonbonded": 6.098,
+    "ligand_frame_electrostatic": 6.256,
+    "nonbonded_inside_ligand": 1.182,
+    "rest": 0.118
+   },
+   "a5": {
+    "base": "X",
+    "group": "a",
+    "mm": 13.708,
+    "qm": 6.624,
+    "fitted_terms": 3.421,
+    "angles_at_N2": 4.618,
+    "ligand_frame_nonbonded": 8.228,
+    "ligand_frame_electrostatic": 9.181,
+    "nonbonded_inside_ligand": 1.611,
+    "rest": 0.447
+   },
+   "a2": {
+    "base": "X",
+    "group": "a",
+    "mm": 4.692,
+    "qm": 2.925,
+    "fitted_terms": 0.428,
+    "angles_at_N2": 0.238,
+    "ligand_frame_nonbonded": 3.525,
+    "ligand_frame_electrostatic": 3.658,
+    "nonbonded_inside_ligand": 0.711,
+    "rest": 0.029
+   },
+   "a6": {
+    "base": "X",
+    "group": "a",
+    "mm": 11.565,
+    "qm": 6.288,
+    "fitted_terms": 1.137,
+    "angles_at_N2": 2.548,
+    "ligand_frame_nonbonded": 8.354,
+    "ligand_frame_electrostatic": 10.337,
+    "nonbonded_inside_ligand": 1.397,
+    "rest": 0.677
+   },
+   "d1": {
+    "base": "X",
+    "group": "d",
+    "mm": 5.202,
+    "qm": 0.462,
+    "fitted_terms": 0.327,
+    "angles_at_N2": 0.971,
+    "ligand_frame_nonbonded": -0.289,
+    "ligand_frame_electrostatic": -0.294,
+    "nonbonded_inside_ligand": 5.165,
+    "rest": -0.0
+   },
+   "d3": {
+    "base": "X",
+    "group": "d",
+    "mm": 1.29,
+    "qm": -2.05,
+    "fitted_terms": 0.977,
+    "angles_at_N2": 2.193,
+    "ligand_frame_nonbonded": -0.47,
+    "ligand_frame_electrostatic": -0.476,
+    "nonbonded_inside_ligand": 0.783,
+    "rest": -0.0
+   },
+   "d4": {
+    "base": "X",
+    "group": "d",
+    "mm": 3.72,
+    "qm": 4.24,
+    "fitted_terms": 3.636,
+    "angles_at_N2": 2.193,
+    "ligand_frame_nonbonded": 0.527,
+    "ligand_frame_electrostatic": 0.536,
+    "nonbonded_inside_ligand": -0.443,
+    "rest": -0.0
+   },
+   "d5": {
+    "base": "X",
+    "group": "d",
+    "mm": -0.108,
+    "qm": 1.002,
+    "fitted_terms": -3.009,
+    "angles_at_N2": -2.09,
+    "ligand_frame_nonbonded": 0.208,
+    "ligand_frame_electrostatic": 0.21,
+    "nonbonded_inside_ligand": 2.693,
+    "rest": -0.0
+   },
+   "d6": {
+    "base": "X",
+    "group": "d",
+    "mm": 4.951,
+    "qm": 3.077,
+    "fitted_terms": 8.262,
+    "angles_at_N2": 7.49,
+    "ligand_frame_nonbonded": -0.188,
+    "ligand_frame_electrostatic": -0.189,
+    "nonbonded_inside_ligand": -3.124,
+    "rest": -0.0
+   },
+   "d2": {
+    "base": "X",
+    "group": "d",
+    "mm": 7.75,
+    "qm": 5.097,
+    "fitted_terms": 3.477,
+    "angles_at_N2": 0.002,
+    "ligand_frame_nonbonded": -0.355,
+    "ligand_frame_electrostatic": -0.352,
+    "nonbonded_inside_ligand": 4.629,
+    "rest": -0.0
+   },
+   "e_p015": {
+    "base": "X",
+    "group": "e",
+    "mm": 0.644,
+    "qm": 2.063,
+    "fitted_terms": 0.0,
+    "angles_at_N2": 0.0,
+    "ligand_frame_nonbonded": 0.644,
+    "ligand_frame_electrostatic": 0.553,
+    "nonbonded_inside_ligand": 0.0,
+    "rest": -0.0
+   },
+   "e_p030": {
+    "base": "X",
+    "group": "e",
+    "mm": 1.757,
+    "qm": 4.181,
+    "fitted_terms": 0.0,
+    "angles_at_N2": 0.0,
+    "ligand_frame_nonbonded": 1.757,
+    "ligand_frame_electrostatic": 0.718,
+    "nonbonded_inside_ligand": 0.0,
+    "rest": -0.0
+   },
+   "e_m120": {
+    "base": "X",
+    "group": "e",
+    "mm": 0.764,
+    "qm": 1.511,
+    "fitted_terms": 0.0,
+    "angles_at_N2": 0.0,
+    "ligand_frame_nonbonded": 0.764,
+    "ligand_frame_electrostatic": 0.294,
+    "nonbonded_inside_ligand": 0.0,
+    "rest": -0.0
+   },
+   "e_p120": {
+    "base": "X",
+    "group": "e",
+    "mm": -1.655,
+    "qm": -2.169,
+    "fitted_terms": 0.0,
+    "angles_at_N2": 0.0,
+    "ligand_frame_nonbonded": -1.655,
+    "ligand_frame_electrostatic": -2.758,
+    "nonbonded_inside_ligand": 0.0,
+    "rest": -0.0
+   },
+   "f_p08": {
+    "base": "X",
+    "group": "f",
+    "mm": 2.976,
+    "qm": 2.418,
+    "fitted_terms": 0.442,
+    "angles_at_N2": 0.975,
+    "ligand_frame_nonbonded": 2.274,
+    "ligand_frame_electrostatic": 2.02,
+    "nonbonded_inside_ligand": 0.26,
+    "rest": 0.0
+   },
+   "f_m08": {
+    "base": "X",
+    "group": "f",
+    "mm": -0.232,
+    "qm": -0.97,
+    "fitted_terms": 1.412,
+    "angles_at_N2": 0.974,
+    "ligand_frame_nonbonded": -1.479,
+    "ligand_frame_electrostatic": -2.24,
+    "nonbonded_inside_ligand": -0.165,
+    "rest": -0.0
+   },
+   "g1": {
+    "base": "Rx",
+    "group": "g",
+    "mm": 3.202,
+    "qm": 0.473,
+    "fitted_terms": 3.569,
+    "angles_at_N2": -1.134,
+    "ligand_frame_nonbonded": -0.966,
+    "ligand_frame_electrostatic": -0.973,
+    "nonbonded_inside_ligand": 0.599,
+    "rest": -0.0
+   },
+   "g2": {
+    "base": "Rx",
+    "group": "g",
+    "mm": 0.514,
+    "qm": 0.634,
+    "fitted_terms": 3.454,
+    "angles_at_N2": 0.0,
+    "ligand_frame_nonbonded": -0.925,
+    "ligand_frame_electrostatic": -0.924,
+    "nonbonded_inside_ligand": -2.015,
+    "rest": -0.0
+   },
+   "g3": {
+    "base": "Rx",
+    "group": "g",
+    "mm": 1.136,
+    "qm": -1.586,
+    "fitted_terms": 2.779,
+    "angles_at_N2": 1.596,
+    "ligand_frame_nonbonded": -0.692,
+    "ligand_frame_electrostatic": -0.7,
+    "nonbonded_inside_ligand": -0.951,
+    "rest": 0.0
+   },
+   "g4": {
+    "base": "Rx",
+    "group": "g",
+    "mm": 4.339,
+    "qm": 3.762,
+    "fitted_terms": 2.584,
+    "angles_at_N2": 2.79,
+    "ligand_frame_nonbonded": 0.673,
+    "ligand_frame_electrostatic": 0.684,
+    "nonbonded_inside_ligand": 1.082,
+    "rest": 0.0
+   },
+   "g5": {
+    "base": "Rx",
+    "group": "g",
+    "mm": -0.526,
+    "qm": 0.782,
+    "fitted_terms": -1.989,
+    "angles_at_N2": -2.829,
+    "ligand_frame_nonbonded": -0.065,
+    "ligand_frame_electrostatic": -0.065,
+    "nonbonded_inside_ligand": 1.528,
+    "rest": 0.0
+   },
+   "g6": {
+    "base": "Rx",
+    "group": "g",
+    "mm": 6.098,
+    "qm": 4.278,
+    "fitted_terms": 7.999,
+    "angles_at_N2": 8.229,
+    "ligand_frame_nonbonded": 0.005,
+    "ligand_frame_electrostatic": 0.005,
+    "nonbonded_inside_ligand": -1.906,
+    "rest": 0.0
+   }
+  }
+ },
+ "part_A_by_cap_scheme": {
+  "methyl": {
+   "rms": 3.0753,
+   "rms_single_reference": 3.5039,
+   "largest": 6.6226,
+   "X_to_Rx_mm_minus_qm": 3.376
+  },
+  "group": {
+   "rms": 3.0762,
+   "rms_single_reference": 3.5605,
+   "largest": 6.6514,
+   "X_to_Rx_mm_minus_qm": 3.7053
+  },
+  "spread": {
+   "rms": 2.9284,
+   "rms_single_reference": 3.253,
+   "largest": 6.1319,
+   "X_to_Rx_mm_minus_qm": 3.3761
+  }
+ },
+ "cap_test": {
+  "largest_abs_two_reasonable": 0.4371,
+  "largest_abs_all": 0.4371
+ },
+ "binding_check": {
+  "verdict": "failed",
+  "comparison": {
+   "C4_S_N2": {
+    "force_field": 111.3422,
+    "quantum_chemistry": 107.103,
+    "difference": 4.2392,
+    "tolerance": 2.0,
+    "passed": false
+   },
+   "S_N2": {
+    "force_field": 1.572,
+    "quantum_chemistry": 1.63533,
+    "difference": -0.0633,
+    "tolerance": 0.02,
+    "passed": false
+   },
+   "Zn_N2_S": {
+    "force_field": 109.9108,
+    "quantum_chemistry": 107.7373,
+    "difference": 2.1735,
+    "tolerance": 3.0,
+    "passed": true
+   }
+  },
+  "force_field": {
+   "minimum_all_free": {
+    "C4_S_N2": 111.3422,
+    "S_N2": 1.572,
+    "Zn_N2_S": 109.9108
+   },
+   "minimum_with_zinc_and_imidazoles_fixed": {
+    "C4_S_N2": 111.2993,
+    "S_N2": 1.571,
+    "Zn_N2_S": 107.502
+   },
+   "ligand_heavy_rmsd_from_X_all_free": 1.1213
+  },
+  "quantum_chemical_optimum": {
+   "source": {
+    "kind": "fchk",
+    "file": "/root/workspace/cqc-4-sulfamoylanilinium-dihydrogen-phosphate/md/qm/mcpb/CA2_small_opt.fchk",
+    "sha256": "cd7b5ae7ff949e4353dead159f5f6475815b8bcfcb5a03b2697f56cbbf97fc8d",
+    "provisional": false
+   },
+   "C4_S_N2": 107.103,
+   "S_N2": 1.63533,
+   "Zn_N2_S": 107.7373,
+   "Zn_N2": 1.9665,
+   "Zn_N_His": [
+    2.0258,
+    2.084,
+    2.0423
+   ],
+   "Zn_N2_H": 122.756,
+   "S_N2_H": 109.083,
+   "signed_volume": 0.6323
+  },
+  "quantum_chemistry_against_crystal": {
+   "C4_S_N2": -1.697,
+   "S_N2": 0.0393,
+   "Zn_N2_S": -9.8627
+  },
+  "against_crystal_not_the_verdict": {
+   "C4_S_N2": {
+    "force_field": 111.3422,
+    "crystal": 108.8,
+    "difference": 2.5422,
+    "tolerance": 2.0,
+    "within": false
+   },
+   "S_N2": {
+    "force_field": 1.572,
+    "crystal": 1.596,
+    "difference": -0.024,
+    "tolerance": 0.02,
+    "within": false
+   },
+   "Zn_N2_S": {
+    "force_field": 109.9108,
+    "crystal": 117.6,
+    "difference": -7.6892,
+    "tolerance": 3.0,
+    "within": false
+   }
+  },
+  "consequence": "md/PLAN.md, 6 Oct 2026, 1:09 PM IST, point 3 (which replaces the consequence named at 8:56 AM, a re-tuning of the ligand terms at sulfur): the result is reported and the ligand terms are NOT re-tuned to this optimum, because the reference itself, B3LYP/6-31G* in vacuum without a dispersion term, is outside the same tolerances against the 1.0 A structure (`optimum_against_crystal`).  The like-for-like test of the ligand geometry is the validation run in the protein against 6RL9 (gate G-V: C4-S-N2 within 3 deg, tau_fold within 20 deg, ligand RMSD), which stands as defined",
+  "file": "/root/workspace/cqc-4-sulfamoylanilinium-dihydrogen-phosphate/md/qm/gr/binding_check.json"
+ },
+ "first_version_not_a_verdict": {
+  "gate_plan": {
+   "n_points": 17,
+   "n_expected": 17,
+   "complete": true,
+   "reference": "c1_m030",
+   "rms": 3.5798,
+   "largest": 11.0383,
+   "largest_at": "R",
+   "passed": false
+  },
+  "gate_rigid": {
+   "n_points": 17,
+   "n_expected": 17,
+   "complete": true,
+   "reference": "c1_m030",
+   "rms": 3.0294,
+   "largest": -7.9775,
+   "largest_at": "Rx",
+   "passed": false
+  },
+  "dd_X_R_as_built": {
+   "qm": 23.4648,
+   "mm": 36.7671,
+   "dd": 13.3023,
+   "passed": false
+  },
+  "dd_X_Rx": {
+   "qm": 19.9339,
+   "mm": 14.2204,
+   "dd": -5.7135,
+   "passed": false
+  },
+  "verdict_plan": {
+   "complete": true,
+   "passed": false,
+   "text": "first version of the gate, quantum chemistry WITHOUT D3; superseded by the two parts"
+  },
+  "verdict_rigid": {
+   "complete": true,
+   "passed": false,
+   "text": "first version of the gate, quantum chemistry WITHOUT D3; superseded by the two parts"
+  }
+ }
+}

@@ -1,0 +1,4 @@
+- 2026-09-28 05:08  reused existing preopt.xyz (pre-optimisation skipped)
+- 2026-09-28 05:08  optimisation started from preopt.xyz; solvent=water
+- 2026-09-28 08:57  optimisation converged in 47 steps, 228.4 min, E = -1536.28934544 Ha
+- 2026-09-28 08:57  proton check: H-N 1.127 A, H-O 1.419 A -> proton retained on the donor; bonds broken none, formed none

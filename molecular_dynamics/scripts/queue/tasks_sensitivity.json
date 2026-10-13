@@ -1,0 +1,37 @@
+{
+ "comment": "The two sensitivity runs of the rotated start (md/PLAN.md, rule 4 and entry of 6 Oct 2026, 9:15 PM IST, point 3; md/PRODUCTION.md), each once, 100 ns, after the nine production runs: R_zn waits for R3, R_n2 for R_zn. R_zn: the other zinc set (2s), system $SYS/bonded_2s/R, folder $RUNS/bonded_2s/R1. R_n2: the primary zinc set (2e) with the candidate terms at N2 that gate G-R2 did not accept, system $SYS/bonded_2e_n2fit/R, folder $RUNS/bonded_2e_n2fit/R1. Neither enters a count of rule 3. Each task writes the file SENSITIVITY_RUN.txt into its run folder before the run starts. Run id R1 in both, so the seeds are those of run R1 of the primary set. Time limit of one attempt: 6 hours.",
+ "env": {
+  "MD": "/root/workspace/cqc-4-sulfamoylanilinium-dihydrogen-phosphate/md",
+  "PY": "/root/cqc-sfa-tools/md/bin/python",
+  "SYS": "/root/cqc-sfa-md/systems",
+  "RUNS": "/root/cqc-sfa-md/runs"
+ },
+ "tasks": [
+  {
+   "id": "R_zn",
+   "title": "sensitivity run (zinc set 2s): 100 ns from start R, terms at N2 as built; no count of rule 3",
+   "cwd": "$RUNS",
+   "resources": "gpu",
+   "depends_on": [
+    "R3"
+   ],
+   "stop_grace_s": 120,
+   "timeout_s": 21600,
+   "command": "mkdir -p \"$RUNS/bonded_2s/R1\" && echo \"SENSITIVITY RUN of the rotated start, not one of the nine runs and in no count of rule 3 (md/PLAN.md, entry of 6 Oct 2026, 9:15 PM IST, point 3, md/PRODUCTION.md). Zinc set 2s, Seminario (MCPB.py step 2s), in place of the primary set 2e. Terms at N2 as built. Set 2s passed gate G-Z but did NOT pass gate G-V in its validation run X0: part d of GV3, an oxygen within 2.6 A of the zinc in 3 of 50 all-atom frames (6 per cent, at most 5 allowed; a sulfonyl oxygen each time; 13 of 500 solute frames), so it is not the primary set and this run only shows how the result depends on the zinc terms. Start R, 100 ns, run id R1, so the same seeds as run R1 of the primary set.\" > \"$RUNS/bonded_2s/R1/SENSITIVITY_RUN.txt\" && \"$PY\" \"$MD/run_md.py\" --system \"$SYS/bonded_2s/R\" --out \"$RUNS/bonded_2s/R1\" --run-id R1 --platform CUDA --stage all --prod-ns 100 --segment-ns 5 --resume",
+   "success_test": "python3 \"$MD/gpu/queue.py\" json \"$RUNS/bonded_2s/R1/manifest.json\" run_id=R1 status=complete production.complete=true production.completed_ns=100 test_only=false"
+  },
+  {
+   "id": "R_n2",
+   "title": "sensitivity run (terms at N2: candidate not accepted by gate G-R2; zinc set 2e): 100 ns from start R; no count of rule 3",
+   "cwd": "$RUNS",
+   "resources": "gpu",
+   "depends_on": [
+    "R_zn"
+   ],
+   "stop_grace_s": 120,
+   "timeout_s": 21600,
+   "command": "mkdir -p \"$RUNS/bonded_2e_n2fit/R1\" && echo \"SENSITIVITY RUN of the rotated start, not one of the nine runs and in no count of rule 3 (md/PLAN.md, entry of 6 Oct 2026, 9:15 PM IST, point 3, md/PRODUCTION.md). Zinc set 2e as in the nine runs. Terms at N2 from md/qm/n2/n2_terms_new_charges_as_built.frcmod, the candidate that gate G-R2 did NOT ACCEPT (md/N2.md). It is used only to bracket the terms as built. Start R, 100 ns, run id R1, so the same seeds as run R1 of the primary set.\" > \"$RUNS/bonded_2e_n2fit/R1/SENSITIVITY_RUN.txt\" && \"$PY\" \"$MD/run_md.py\" --system \"$SYS/bonded_2e_n2fit/R\" --out \"$RUNS/bonded_2e_n2fit/R1\" --run-id R1 --platform CUDA --stage all --prod-ns 100 --segment-ns 5 --resume",
+   "success_test": "python3 \"$MD/gpu/queue.py\" json \"$RUNS/bonded_2e_n2fit/R1/manifest.json\" run_id=R1 status=complete production.complete=true production.completed_ns=100 test_only=false"
+  }
+ ]
+}

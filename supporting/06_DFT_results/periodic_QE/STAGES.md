@@ -1,0 +1,145 @@
+- 2026-09-28 00:06  build: 54-atom Pc cell, V = 531.621 A^3, min distance 0.785 A, CIF H-bonds reproduced (max |dD...A| 0.0006 A); start ii delta = +0.800 A
+- 2026-09-28 03:10  relax_i_pre: start relax ecut 50/400 Ry k (2, 1, 1) (2 irr) np 6 nk 2 omp 1
+- 2026-09-28 03:35  relax_i_pre: done rc=0 wall 25.4 min, E = -905.1266734 Ry, 29 SCF, nk_irr 2
+- 2026-09-28 03:35  relax_i_pre: proton on N (delta -0.608 A)
+- 2026-09-28 03:36  relax_ii_pre: start relax ecut 50/400 Ry k (2, 1, 1) (2 irr) np 6 nk 2 omp 1
+- 2026-09-28 04:10  relax_ii_pre: done rc=0 wall 34.6 min, E = -905.12651958 Ry, 39 SCF, nk_irr 2
+- 2026-09-28 04:10  relax_ii_pre: proton on N (delta -0.604 A)
+- 2026-09-28 04:11  relax_iifix_pre: start relax ecut 50/400 Ry k (2, 1, 1) (2 irr) np 6 nk 2 omp 1
+- 2026-09-28 04:16  start iir: H1A moved 0.98 A from O5 in the relax_i_pre geometry
+- 2026-09-28 04:16  relax_iir_pre: start relax ecut 50/400 Ry k (2, 1, 1) (2 irr) np 6 nk 2 omp 1
+- 2026-09-28 04:46  relax_iir_pre: done rc=0 wall 29.2 min, E = -905.12658064 Ry, 34 SCF, nk_irr 2
+- 2026-09-28 04:46  relax_iir_pre: proton on N (delta -0.601 A)
+- 2026-09-28 05:32  relax_iifix_pre: done rc=0 wall 81.4 min, E = -905.12088774 Ry, 85 SCF, nk_irr 2
+- 2026-09-28 05:32  relax_iifix_pre: proton on N (delta -0.588 A)
+- 2026-09-28 13:25  scf_i_e50_k211: start scf ecut 50/400 Ry k (2, 1, 1) (2 irr) np 24 nk 2 omp 1
+- 2026-09-28 13:26  scf_i_e50_k211: done rc=0 wall 0.3 min, E = -903.77425015 Ry, 1 SCF, nk_irr 2
+- 2026-09-28 13:26  scf_i_e50_k322: start scf ecut 50/400 Ry k (3, 2, 2) (8 irr) np 24 nk 8 omp 1
+- 2026-09-28 13:26  scf_i_e50_k322: done rc=0 wall 0.7 min, E = -903.77616328 Ry, 1 SCF, nk_irr 8
+- 2026-09-28 13:26  scf_i_e50_k422: start scf ecut 50/400 Ry k (4, 2, 2) (12 irr) np 24 nk 12 omp 1
+- 2026-09-28 13:27  scf_i_e50_k422: done rc=0 wall 1.0 min, E = -903.7761828 Ry, 1 SCF, nk_irr 12
+- 2026-09-28 13:27  scf_i_e50_k523: start scf ecut 50/400 Ry k (5, 2, 3) (16 irr) np 24 nk 8 omp 1
+- 2026-09-28 13:29  scf_i_e50_k523: done rc=0 wall 1.2 min, E = -903.77618863 Ry, 1 SCF, nk_irr 16
+- 2026-09-28 13:29  scf_ii_e50_k322: start scf ecut 50/400 Ry k (3, 2, 2) (8 irr) np 24 nk 8 omp 1
+- 2026-09-28 13:29  scf_ii_e50_k322: done rc=0 wall 0.7 min, E = -903.83704347 Ry, 1 SCF, nk_irr 8
+- 2026-09-28 13:29  scf_i_e60_k322: start scf ecut 60/480 Ry k (3, 2, 2) (8 irr) np 24 nk 8 omp 1
+- 2026-09-28 13:30  scf_i_e60_k322: done rc=0 wall 1.0 min, E = -903.78854861 Ry, 1 SCF, nk_irr 8
+- 2026-09-28 13:30  scf_ii_e60_k322: start scf ecut 60/480 Ry k (3, 2, 2) (8 irr) np 24 nk 8 omp 1
+- 2026-09-28 13:31  scf_ii_e60_k322: done rc=0 wall 1.0 min, E = -903.8496868 Ry, 1 SCF, nk_irr 8
+- 2026-09-28 13:31  scf_i_e70_k322: start scf ecut 70/560 Ry k (3, 2, 2) (8 irr) np 24 nk 8 omp 1
+- 2026-09-28 13:32  scf_i_e70_k322: done rc=0 wall 1.1 min, E = -903.80087915 Ry, 1 SCF, nk_irr 8
+- 2026-09-28 13:32  scf_ii_e70_k322: start scf ecut 70/560 Ry k (3, 2, 2) (8 irr) np 24 nk 8 omp 1
+- 2026-09-28 13:33  scf_ii_e70_k322: done rc=0 wall 1.2 min, E = -903.86218537 Ry, 1 SCF, nk_irr 8
+- 2026-09-28 13:33  convergence: chosen {'ecut_Ry': [70, 560], 'k': '2x1x1', 'complete': True, 'ecut_by_energy_test_Ry': [70, 560], 'sssp_floor_Ry': [60, 480], 'rule': 'cheapest setting within 1 meV/atom and 1e-3 Ry/bohr of the most converged one tested; cutoff not below the SSSP-recommended 60/480 Ry'}
+- 2026-09-28 13:34  relax_i_pre: proton on N (delta -0.608 A)
+- 2026-09-28 13:34  relax_i: start relax ecut 70/560 Ry k (2, 1, 1) (2 irr) np 12 nk 2 omp 1
+- 2026-09-28 13:34  relax_ii_pre: proton on N (delta -0.604 A)
+- 2026-09-28 13:34  relax_ii: start relax ecut 70/560 Ry k (2, 1, 1) (2 irr) np 12 nk 2 omp 1
+- 2026-09-28 13:34  relax_iifix_pre: proton on N (delta -0.588 A)
+- 2026-09-28 13:34  relax_iifix: start relax ecut 70/560 Ry k (2, 1, 1) (2 irr) np 12 nk 2 omp 1
+- 2026-09-28 13:42  relax_iifix: done rc=0 wall 7.8 min, E = -905.14460102 Ry, 9 SCF, nk_irr 2
+- 2026-09-28 13:46  relax_i: done rc=0 wall 11.6 min, E = -905.1504965 Ry, 16 SCF, nk_irr 2
+- 2026-09-28 13:50  relax_ii: done rc=0 wall 16.6 min, E = -905.15055705 Ry, 25 SCF, nk_irr 2
+- 2026-09-28 13:51  analyse: wrote periodic_qe.json; the O5-protonated start (ii) relaxes back to the salt (proton on N1): single minimum
+- 2026-09-28 13:51  estimate: hybrid single point at {'ecut_Ry': [70, 560], 'k': '2x1x1', 'nk_irr': 2}: {'nq 1x1x1': {'core_h': [2.5, 8.1], 'wall_h_24_ranks': [0.14, 0.45]}, 'nq 2x1x1 (QE 7.5 default = k grid)': {'core_h': [4.7, 15.8], 'wall_h_24_ranks': [0.26, 0.88]}} (FFT-count model (no complete probe))
+- 2026-09-28 13:52  analyse: wrote periodic_qe.json; the O5-protonated start (ii) relaxes back to the salt (proton on N1): single minimum
+- 2026-09-28 17:15  start iirfix: H1A moved 0.98 A from O5 in the relax_i geometry
+- 2026-09-28 17:15  pbe_i_sg15_e100: start scf ecut 100/400 Ry k (2, 1, 1) (2 irr) np 14 nk 2 omp 1
+- 2026-09-28 17:15  relax_iirfix: start relax ecut 70/560 Ry k (2, 1, 1) (2 irr) np 14 nk 2 omp 1
+- 2026-09-28 17:15  pbe_i_sg15_e100: done rc=0 wall 0.9 min, E = -693.85323836 Ry, 1 SCF, nk_irr 2
+- 2026-09-28 17:15  hybrid_i_sg15_e100: start scf ecut 100/400 Ry k (2, 1, 1) (2 irr) np 14 nk 2 omp 1
+- 2026-09-28 17:26  hybrid_i_sg15_e100: done rc=0 wall 10.8 min, E = -693.65523546 Ry, 6 SCF, nk_irr 2, EXX converged after 5 printed outer loops (dexx [0.00509751, 0.00017775, 1.09e-05, 1.02e-06, 1e-07]), ACE builds 6 (534.57 s)
+- 2026-09-28 17:27  pbe_i_sg15_e80: start scf ecut 80/320 Ry k (2, 1, 1) (2 irr) np 14 nk 2 omp 1
+- 2026-09-28 17:27  pbe_i_sg15_e80: done rc=0 wall 0.7 min, E = -693.84691156 Ry, 1 SCF, nk_irr 2
+- 2026-09-28 17:27  hybrid_i_sg15_e80: start scf ecut 80/320 Ry k (2, 1, 1) (2 irr) np 14 nk 2 omp 1
+- 2026-09-28 17:35  hybrid_i_sg15_e80: done rc=0 wall 8.0 min, E = -693.64916325 Ry, 6 SCF, nk_irr 2, EXX converged after 5 printed outer loops (dexx [0.00509898, 0.00017708, 1.085e-05, 1.01e-06, 1e-07]), ACE builds 6 (395.04 s)
+- 2026-09-28 17:35  analyse: wrote periodic_qe.json; the O5-protonated start (ii) relaxes back to the salt (proton on N1): single minimum
+- 2026-09-28 17:36  pbe_i_sg15_e100_nq211: start scf ecut 100/400 Ry k (2, 1, 1) (2 irr) np 14 nk 2 omp 1
+- 2026-09-28 17:37  pbe_i_sg15_e100_nq211: done rc=0 wall 0.9 min, E = -693.85323836 Ry, 1 SCF, nk_irr 2
+- 2026-09-28 17:37  hybrid_i_sg15_e100_nq211: start scf ecut 100/400 Ry k (2, 1, 1) (2 irr) np 14 nk 2 omp 1
+- 2026-09-28 17:53  hybrid_i_sg15_e100_nq211: done rc=0 wall 16.0 min, E = -693.63814422 Ry, 5 SCF, nk_irr 2, EXX converged after 4 printed outer loops (dexx [0.00516181, 0.00017529, 1.015e-05, 8.9e-07]), ACE builds 5 (852.28 s)
+- 2026-09-28 17:53  analyse: wrote periodic_qe.json; the O5-protonated start (ii) relaxes back to the salt (proton on N1): single minimum
+- 2026-09-28 17:53  pbe_ii_sg15_e100: start scf ecut 100/400 Ry k (2, 1, 1) (2 irr) np 14 nk 2 omp 1
+- 2026-09-28 17:54  pbe_ii_sg15_e100: done rc=0 wall 0.9 min, E = -693.85336148 Ry, 1 SCF, nk_irr 2
+- 2026-09-28 17:54  hybrid_ii_sg15_e100: start scf ecut 100/400 Ry k (2, 1, 1) (2 irr) np 14 nk 2 omp 1
+- 2026-09-28 18:05  hybrid_ii_sg15_e100: done rc=0 wall 10.9 min, E = -693.65525475 Ry, 6 SCF, nk_irr 2, EXX converged after 5 printed outer loops (dexx [0.00509625, 0.00017777, 1.091e-05, 1.02e-06, 1e-07]), ACE builds 6 (541.88 s)
+- 2026-09-28 18:05  analyse: wrote periodic_qe.json; the O5-protonated start (ii) relaxes back to the salt (proton on N1): single minimum
+- 2026-09-28 18:06  pbe_iifix_sg15_e100: start scf ecut 100/400 Ry k (2, 1, 1) (2 irr) np 14 nk 2 omp 1
+- 2026-09-28 18:06  relax_iirfix: done rc=0 wall 51.6 min, E = -905.06347802 Ry, 64 SCF, nk_irr 2
+- 2026-09-28 18:06  relax_iirfix: proton on O (N1-H1A 1.616, H1A-O5 0.98 A); lattice shift vs start [0.0805, -0.0, -0.0094] A
+- 2026-09-28 18:06  analyse: wrote periodic_qe.json; the O5-protonated start (ii) relaxes back to the salt (proton on N1): single minimum
+- 2026-09-28 18:06  pbe_iifix_sg15_e100: done rc=0 wall 0.8 min, E = -693.84733332 Ry, 1 SCF, nk_irr 2
+- 2026-09-28 18:06  hybrid_iifix_sg15_e100: start scf ecut 100/400 Ry k (2, 1, 1) (2 irr) np 14 nk 2 omp 1
+- 2026-09-28 18:07  pbe_iirfix_sg15_e100: start scf ecut 100/400 Ry k (2, 1, 1) (2 irr) np 14 nk 2 omp 1
+- 2026-09-28 18:07  pbe_iirfix_sg15_e100: done rc=0 wall 0.8 min, E = -693.76744066 Ry, 1 SCF, nk_irr 2
+- 2026-09-28 18:07  hybrid_iirfix_sg15_e100: start scf ecut 100/400 Ry k (2, 1, 1) (2 irr) np 14 nk 2 omp 1
+- 2026-09-28 18:17  hybrid_iifix_sg15_e100: done rc=0 wall 10.8 min, E = -693.64906802 Ry, 6 SCF, nk_irr 2, EXX converged after 5 printed outer loops (dexx [0.00511214, 0.00017831, 1.094e-05, 1.02e-06, 1e-07]), ACE builds 6 (537.31 s)
+- 2026-09-28 18:17  analyse: wrote periodic_qe.json; the O5-protonated start (ii) relaxes back to the salt (proton on N1): single minimum; PROVISIONAL E(iirfix) - E(i): PBE0-D3(BJ) +1094.0 meV/cell (+52.78 kJ/mol per f.u.) vs PBE-D3(BJ) +1184.0 meV/cell (+57.12); hybrid correction -90.0 meV/cell (sg15_e100); salt (i) lower at PBE0-D3(BJ)
+- 2026-09-28 18:18  pbe_iirfix_sg15_e80: start scf ecut 80/320 Ry k (2, 1, 1) (2 irr) np 14 nk 2 omp 1
+- 2026-09-28 18:18  pbe_iirfix_sg15_e80: done rc=0 wall 0.6 min, E = -693.76126324 Ry, 1 SCF, nk_irr 2
+- 2026-09-28 18:18  hybrid_iirfix_sg15_e80: start scf ecut 80/320 Ry k (2, 1, 1) (2 irr) np 14 nk 2 omp 1
+- 2026-09-28 18:19  hybrid_iirfix_sg15_e100: done rc=0 wall 11.2 min, E = -693.57605153 Ry, 6 SCF, nk_irr 2, EXX converged after 5 printed outer loops (dexx [0.00512279, 0.00019187, 1.282e-05, 1.24e-06, 1.2e-07]), ACE builds 6 (544.17 s)
+- 2026-09-28 18:19  pbe_iirfix_sg15_e100_nq211: start scf ecut 100/400 Ry k (2, 1, 1) (2 irr) np 14 nk 2 omp 1
+- 2026-09-28 18:19  analyse: wrote periodic_qe.json; the O5-protonated start (ii) relaxes back to the salt (proton on N1): single minimum; E(iirfix) - E(i): PBE0-D3(BJ) +1094.0 meV/cell (+52.78 kJ/mol per f.u.) vs PBE-D3(BJ) +1184.0 meV/cell (+57.12); hybrid correction -90.0 meV/cell (sg15_e100); salt (i) lower at PBE0-D3(BJ)
+- 2026-09-28 18:20  pbe_iirfix_sg15_e100_nq211: done rc=0 wall 0.8 min, E = -693.76744066 Ry, 1 SCF, nk_irr 2
+- 2026-09-28 18:20  hybrid_iirfix_sg15_e100_nq211: start scf ecut 100/400 Ry k (2, 1, 1) (2 irr) np 14 nk 2 omp 1
+- 2026-09-28 18:26  hybrid_iirfix_sg15_e80: done rc=0 wall 8.0 min, E = -693.57007415 Ry, 6 SCF, nk_irr 2, EXX converged after 5 printed outer loops (dexx [0.00512726, 0.00019202, 1.283e-05, 1.25e-06, 1.2e-07]), ACE builds 6 (396.22 s)
+- 2026-09-28 18:26  analyse: wrote periodic_qe.json; the O5-protonated start (ii) relaxes back to the salt (proton on N1): single minimum; E(iirfix) - E(i): PBE0-D3(BJ) +1094.0 meV/cell (+52.78 kJ/mol per f.u.) vs PBE-D3(BJ) +1184.0 meV/cell (+57.12); hybrid correction -90.0 meV/cell (sg15_e100); salt (i) lower at PBE0-D3(BJ)
+- 2026-09-28 18:34  hybrid_iirfix_sg15_e100_nq211: done rc=0 wall 14.3 min, E = -693.55960924 Ry, 6 SCF, nk_irr 2, EXX converged after 5 printed outer loops (dexx [0.00514756, 0.00018468, 1.152e-05, 1.06e-06, 1e-07]), ACE builds 6 (763.85 s)
+- 2026-09-28 18:34  analyse: wrote periodic_qe.json; the O5-protonated start (ii) relaxes back to the salt (proton on N1): single minimum; E(iirfix) - E(i): PBE0-D3(BJ) +1094.0 meV/cell (+52.78 kJ/mol per f.u.) vs PBE-D3(BJ) +1184.0 meV/cell (+57.12); hybrid correction -90.0 meV/cell (sg15_e100); salt (i) lower at PBE0-D3(BJ)
+- 2026-09-29 03:43  relax_prof170: seed interp w=1.0: start f.u.1 N1-H1A 1.7 H1A-O5 0.896 N1...O5 2.5959 A; f.u.2 N1-H1A 1.7 H1A-O5 0.896 N1...O5 2.5959 A; min distance 0.896 A
+- 2026-09-29 03:43  relax_prof140: seed interp w=0.6097: start f.u.1 N1-H1A 1.4 H1A-O5 1.2501 N1...O5 2.65 A; f.u.2 N1-H1A 1.4 H1A-O5 1.2501 N1...O5 2.65 A; min distance 0.9947 A
+- 2026-09-29 03:43  relax_prof140: start relax ecut 70/560 Ry k (2, 1, 1) (2 irr) np 12 nk 2 omp 1
+- 2026-09-29 03:43  relax_prof170: start relax ecut 70/560 Ry k (2, 1, 1) (2 irr) np 12 nk 2 omp 1
+- 2026-09-29 03:58  relax_prof140: done rc=0 wall 14.3 min, E = -905.09782236 Ry, 13 SCF, nk_irr 2
+- 2026-09-29 03:58  relax_prof140: f.u.1 N1-H1A 1.4 H1A-O5 1.1695 N1...O5 2.5676 A; f.u.2 N1-H1A 1.4 H1A-O5 1.1695 N1...O5 2.5676 A, 12 steps
+- 2026-09-29 03:58  profile_analyse: wrote profile.json (2 points; PBE-D3(BJ): fewer than two profile points; PBE0-D3(BJ) single points at the PBE-D3(BJ) geometries: fewer than two profile points)
+- 2026-09-29 03:58  relax_prof110: seed interp w=0.0676: start f.u.1 N1-H1A 1.1 H1A-O5 1.6259 N1...O5 2.7251 A; f.u.2 N1-H1A 1.1 H1A-O5 1.6259 N1...O5 2.7251 A; min distance 0.992 A
+- 2026-09-29 03:58  relax_prof110: start relax ecut 70/560 Ry k (2, 1, 1) (2 irr) np 12 nk 2 omp 1
+- 2026-09-29 04:06  relax_prof110: done rc=0 wall 7.8 min, E = -905.14838379 Ry, 8 SCF, nk_irr 2
+- 2026-09-29 04:06  relax_prof110: f.u.1 N1-H1A 1.1 H1A-O5 1.6128 N1...O5 2.7119 A; f.u.2 N1-H1A 1.1 H1A-O5 1.6128 N1...O5 2.7119 A, 7 steps
+- 2026-09-29 04:06  profile_analyse: wrote profile.json (3 points; PBE-D3(BJ): no neutral minimum between d(N1-H1A) = 1.0626 and 1.4 A; the energy rises monotonically to +716.7 meV/cell at 1.4 A and the constraint force pushes the proton back to N1 at every point; PBE0-D3(BJ) single points at the PBE-D3(BJ) geometries: fewer than two profile points)
+- 2026-09-29 04:06  relax_prof155: seed interp w=0.8807: start f.u.1 N1-H1A 1.55 H1A-O5 1.0625 N1...O5 2.6124 A; f.u.2 N1-H1A 1.55 H1A-O5 1.0625 N1...O5 2.6124 A; min distance 0.9978 A
+- 2026-09-29 04:06  relax_prof155: start relax ecut 70/560 Ry k (2, 1, 1) (2 irr) np 12 nk 2 omp 1
+- 2026-09-29 04:18  relax_prof170: done rc=0 wall 34.2 min, E = -905.071907 Ry, 33 SCF, nk_irr 2
+- 2026-09-29 04:18  relax_prof170: f.u.1 N1-H1A 1.7 H1A-O5 1.037 N1...O5 2.7343 A; f.u.2 N1-H1A 1.7 H1A-O5 1.037 N1...O5 2.7343 A, 32 steps
+- 2026-09-29 04:18  profile_analyse: wrote profile.json (4 points; PBE-D3(BJ): no neutral minimum between d(N1-H1A) = 1.0626 and 1.7 A; the energy rises monotonically to +1069.3 meV/cell at 1.7 A and the constraint force pushes the proton back to N1 at every point; PBE0-D3(BJ) single points at the PBE-D3(BJ) geometries: fewer than two profile points)
+- 2026-09-29 04:18  relax_prof125: seed interp w=0.3386: start f.u.1 N1-H1A 1.25 H1A-O5 1.4379 N1...O5 2.6875 A; f.u.2 N1-H1A 1.25 H1A-O5 1.4379 N1...O5 2.6875 A; min distance 0.9928 A
+- 2026-09-29 04:18  relax_prof125: start relax ecut 70/560 Ry k (2, 1, 1) (2 irr) np 12 nk 2 omp 1
+- 2026-09-29 04:25  relax_prof155: done rc=0 wall 18.6 min, E = -905.08487456 Ry, 19 SCF, nk_irr 2
+- 2026-09-29 04:25  relax_prof155: f.u.1 N1-H1A 1.55 H1A-O5 1.0811 N1...O5 2.6286 A; f.u.2 N1-H1A 1.55 H1A-O5 1.0811 N1...O5 2.6286 A, 18 steps
+- 2026-09-29 04:25  profile_analyse: wrote profile.json (5 points; PBE-D3(BJ): no neutral minimum between d(N1-H1A) = 1.0626 and 1.7 A; the energy rises monotonically to +1069.3 meV/cell at 1.7 A and the constraint force pushes the proton back to N1 at every point; PBE0-D3(BJ) single points at the PBE-D3(BJ) geometries: fewer than two profile points)
+- 2026-09-29 04:29  pbe_prof140_sg15_e100: start scf ecut 100/400 Ry k (2, 1, 1) (2 irr) np 12 nk 2 omp 1
+- 2026-09-29 04:30  pbe_prof140_sg15_e100: done rc=0 wall 1.0 min, E = -693.80054853 Ry, 1 SCF, nk_irr 2
+- 2026-09-29 04:30  hybrid_prof140_sg15_e100: start scf ecut 100/400 Ry k (2, 1, 1) (2 irr) np 12 nk 2 omp 1
+- 2026-09-29 04:31  relax_prof125: done rc=0 wall 12.8 min, E = -905.1204438 Ry, 13 SCF, nk_irr 2
+- 2026-09-29 04:31  relax_prof125: f.u.1 N1-H1A 1.25 H1A-O5 1.3544 N1...O5 2.6031 A; f.u.2 N1-H1A 1.25 H1A-O5 1.3544 N1...O5 2.6031 A, 12 steps
+- 2026-09-29 04:31  profile_analyse: wrote profile.json (5 points; PBE-D3(BJ): no neutral minimum between d(N1-H1A) = 1.0626 and 1.7 A; the energy rises monotonically to +1069.3 meV/cell at 1.7 A and the constraint force pushes the proton back to N1 at every point; PBE0-D3(BJ) single points at the PBE-D3(BJ) geometries: fewer than two profile points)
+- 2026-09-29 04:31  pbe_prof170_sg15_e100: start scf ecut 100/400 Ry k (2, 1, 1) (2 irr) np 12 nk 2 omp 1
+- 2026-09-29 04:33  pbe_prof170_sg15_e100: done rc=0 wall 1.1 min, E = -693.77516078 Ry, 1 SCF, nk_irr 2
+- 2026-09-29 04:33  hybrid_prof170_sg15_e100: start scf ecut 100/400 Ry k (2, 1, 1) (2 irr) np 12 nk 2 omp 1
+- 2026-09-29 04:46  hybrid_prof140_sg15_e100: done rc=0 wall 15.3 min, E = -693.59850581 Ry, 6 SCF, nk_irr 2, EXX converged after 5 printed outer loops (dexx [0.00512682, 0.00018506, 1.182e-05, 1.11e-06, 1.1e-07]), ACE builds 6 (778.39 s)
+- 2026-09-29 04:46  profile_analyse: wrote profile.json (5 points; PBE-D3(BJ): no neutral minimum between d(N1-H1A) = 1.0626 and 1.7 A; the energy rises monotonically to +1069.3 meV/cell at 1.7 A and the constraint force pushes the proton back to N1 at every point; PBE0-D3(BJ) single points at the PBE-D3(BJ) geometries: fewer than two profile points)
+- 2026-09-29 04:46  pbe_prof155_sg15_e100: start scf ecut 100/400 Ry k (2, 1, 1) (2 irr) np 12 nk 2 omp 1
+- 2026-09-29 04:48  pbe_prof155_sg15_e100: done rc=0 wall 1.2 min, E = -693.7879065 Ry, 1 SCF, nk_irr 2
+- 2026-09-29 04:48  hybrid_prof155_sg15_e100: start scf ecut 100/400 Ry k (2, 1, 1) (2 irr) np 12 nk 2 omp 1
+- 2026-09-29 04:49  hybrid_prof170_sg15_e100: done rc=0 wall 16.0 min, E = -693.5795324 Ry, 6 SCF, nk_irr 2, EXX converged after 5 printed outer loops (dexx [0.00515459, 0.00019348, 1.293e-05, 1.26e-06, 1.3e-07]), ACE builds 6 (773.25 s)
+- 2026-09-29 04:49  profile_analyse: wrote profile.json (5 points; PBE-D3(BJ): no neutral minimum between d(N1-H1A) = 1.0626 and 1.7 A; the energy rises monotonically to +1069.3 meV/cell at 1.7 A and the constraint force pushes the proton back to N1 at every point; PBE0-D3(BJ) single points at the PBE-D3(BJ) geometries: no neutral minimum between d(N1-H1A) = 1.0626 and 1.7 A; the energy rises monotonically to +1037.0 meV/cell at 1.7 A)
+- 2026-09-29 04:49  pbe_prof125_sg15_e100: start scf ecut 100/400 Ry k (2, 1, 1) (2 irr) np 12 nk 2 omp 1
+- 2026-09-29 04:50  pbe_prof125_sg15_e100: done rc=0 wall 1.2 min, E = -693.82302107 Ry, 1 SCF, nk_irr 2
+- 2026-09-29 04:50  hybrid_prof125_sg15_e100: start scf ecut 100/400 Ry k (2, 1, 1) (2 irr) np 12 nk 2 omp 1
+- 2026-09-29 05:03  hybrid_prof155_sg15_e100: done rc=0 wall 15.5 min, E = -693.58960693 Ry, 6 SCF, nk_irr 2, EXX converged after 5 printed outer loops (dexx [0.00514664, 0.00018991, 1.247e-05, 1.18e-06, 1.2e-07]), ACE builds 6 (762.63 s)
+- 2026-09-29 05:03  profile_analyse: wrote profile.json (5 points; PBE-D3(BJ): no neutral minimum between d(N1-H1A) = 1.0626 and 1.7 A; the energy rises monotonically to +1069.3 meV/cell at 1.7 A and the constraint force pushes the proton back to N1 at every point; PBE0-D3(BJ) single points at the PBE-D3(BJ) geometries: no neutral minimum between d(N1-H1A) = 1.0626 and 1.7 A; the energy rises monotonically to +1037.0 meV/cell at 1.7 A)
+- 2026-09-29 05:03  pbe_prof110_sg15_e100: start scf ecut 100/400 Ry k (2, 1, 1) (2 irr) np 12 nk 2 omp 1
+- 2026-09-29 05:05  pbe_prof110_sg15_e100: done rc=0 wall 1.2 min, E = -693.85093649 Ry, 1 SCF, nk_irr 2
+- 2026-09-29 05:05  hybrid_prof110_sg15_e100: start scf ecut 100/400 Ry k (2, 1, 1) (2 irr) np 12 nk 2 omp 1
+- 2026-09-29 05:05  hybrid_prof125_sg15_e100: done rc=0 wall 15.2 min, E = -693.61875429 Ry, 6 SCF, nk_irr 2, EXX converged after 5 printed outer loops (dexx [0.0051287, 0.000181, 1.125e-05, 1.05e-06, 1e-07]), ACE builds 6 (764.55 s)
+- 2026-09-29 05:06  profile_analyse: wrote profile.json (5 points; PBE-D3(BJ): no neutral minimum between d(N1-H1A) = 1.0626 and 1.7 A; the energy rises monotonically to +1069.3 meV/cell at 1.7 A and the constraint force pushes the proton back to N1 at every point; PBE0-D3(BJ) single points at the PBE-D3(BJ) geometries: no neutral minimum between d(N1-H1A) = 1.0626 and 1.7 A; the energy rises monotonically to +1037.0 meV/cell at 1.7 A)
+- 2026-09-29 05:06  start iir1: H1A moved 0.98 A from O5 in the relax_i geometry (formula unit 1 only)
+- 2026-09-29 05:06  relax_iir1: start relax ecut 70/560 Ry k (2, 1, 1) (2 irr) np 12 nk 2 omp 1
+- 2026-09-29 05:19  hybrid_prof110_sg15_e100: done rc=0 wall 13.9 min, E = -693.65100453 Ry, 6 SCF, nk_irr 2, EXX converged after 5 printed outer loops (dexx [0.00511643, 0.00017832, 1.094e-05, 1.02e-06, 1e-07]), ACE builds 6 (679.1 s)
+- 2026-09-29 05:19  profile_analyse: wrote profile.json (5 points; PBE-D3(BJ): no neutral minimum between d(N1-H1A) = 1.0626 and 1.7 A; the energy rises monotonically to +1069.3 meV/cell at 1.7 A and the constraint force pushes the proton back to N1 at every point; PBE0-D3(BJ) single points at the PBE-D3(BJ) geometries: no neutral minimum between d(N1-H1A) = 1.0626 and 1.7 A; the energy rises monotonically to +1037.0 meV/cell at 1.7 A; control iir1: provisional: the relaxation has not converged)
+- 2026-09-29 05:19  profile_analyse: wrote profile.json (5 points; PBE-D3(BJ): no neutral minimum between d(N1-H1A) = 1.0626 and 1.7 A; the energy rises monotonically to +1069.3 meV/cell at 1.7 A and the constraint force pushes the proton back to N1 at every point; PBE0-D3(BJ) single points at the PBE-D3(BJ) geometries: no neutral minimum between d(N1-H1A) = 1.0626 and 1.7 A; the energy rises monotonically to +1037.0 meV/cell at 1.7 A; control iir1: provisional: the relaxation has not converged)
+- 2026-09-29 05:42  relax_iir1: done rc=0 wall 35.4 min, E = -905.15057194 Ry, 51 SCF, nk_irr 2
+- 2026-09-29 05:42  relax_iir1 (H1A moved in formula unit 1 only): f.u. 1: proton on N (N1-H1A 1.063, H1A-O5 1.6686 A); f.u. 2: proton on N (N1-H1A 1.0629, H1A-O5 1.6685 A); 1 symmetry operation(s) in pw.x
+- 2026-09-29 05:42  profile_analyse: wrote profile.json (5 points; PBE-D3(BJ): no neutral minimum between d(N1-H1A) = 1.0626 and 1.7 A; the energy rises monotonically to +1069.3 meV/cell at 1.7 A and the constraint force pushes the proton back to N1 at every point; PBE0-D3(BJ) single points at the PBE-D3(BJ) geometries: no neutral minimum between d(N1-H1A) = 1.0626 and 1.7 A; the energy rises monotonically to +1037.0 meV/cell at 1.7 A; control iir1: the proton returned to N1: the salt is recovered (single minimum))

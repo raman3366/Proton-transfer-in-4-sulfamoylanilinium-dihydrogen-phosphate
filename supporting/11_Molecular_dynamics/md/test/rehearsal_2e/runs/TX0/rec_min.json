@@ -1,0 +1,111 @@
+{
+ "tag": "min",
+ "kind": "minimisation",
+ "started": {
+  "utc": "2026-10-06T05:01:15Z",
+  "ist": "6 Oct 2026, 10:31:15 AM IST"
+ },
+ "host": "cqc-md-gpu-01",
+ "openmm": "8.6.1",
+ "platform": {
+  "requested": "CUDA",
+  "name": "CUDA",
+  "properties_set": {
+   "Precision": "mixed",
+   "DeterministicForces": "true"
+  },
+  "properties_actual": {
+   "DeviceIndex": "0",
+   "DeviceName": "NVIDIA L40S",
+   "UseBlockingSync": "false",
+   "Precision": "mixed",
+   "UseCpuPme": "false",
+   "CudaCompiler": "",
+   "TempDirectory": "/tmp",
+   "CudaHostCompiler": "",
+   "DisablePmeStream": "false",
+   "DeterministicForces": "true"
+  },
+  "gpu_name": "NVIDIA L40S",
+  "deterministic_forces_set": true,
+  "precision_set": "mixed",
+  "repeatability": "DeterministicForces is set; whether a repeated segment is bit for bit the same has to be checked on the machine (pre-flight test of md/RUN.md)",
+  "attempts": [
+   {
+    "platform": "CUDA",
+    "usable": true
+   }
+  ]
+ },
+ "settings": {
+  "algorithm": "L-BFGS (OpenMM LocalEnergyMinimizer)",
+  "tolerance_kj_per_mol_nm": 10.0,
+  "max_iterations": 5000,
+  "max_iterations_meaning": "per pass: OpenMM's minimiser repeats L-BFGS with stiffer terms for the constrained bonds until they are satisfied; the passes and their iteration counts are recorded",
+  "restraint_atoms": "solute_heavy_and_crystal_water_O",
+  "restraint_k_kj_per_mol_nm2": 1000.0,
+  "n_restrained_atoms": 2289
+ },
+ "energies_before": {
+  "potential_energy_kj_per_mol": -445219.505,
+  "force_field_kj_per_mol": -445219.505,
+  "extra_bonds_kj_per_mol": 0.0,
+  "position_restraints_kj_per_mol": 0.0
+ },
+ "energies_after": {
+  "potential_energy_kj_per_mol": -659032.744,
+  "force_field_kj_per_mol": -659927.184,
+  "extra_bonds_kj_per_mol": 0.0,
+  "position_restraints_kj_per_mol": 894.44
+ },
+ "energy_change_kj_per_mol": -213813.239,
+ "minimiser_calls": 4679,
+ "lbfgs_iterations_per_pass": [
+  1054,
+  3613,
+  6,
+  6
+ ],
+ "passes_stopped_by_the_iteration_limit": 0,
+ "last_pass_stopped_by_the_iteration_limit": false,
+ "minimiser_last_report": {
+  "max constraint error": 2.526906307880605e-05,
+  "restraint energy": 20.865726561305728,
+  "restraint strength": 1000000000.0,
+  "system energy": -659074.6726915806
+ },
+ "restrained_atoms_displacement_A": {
+  "rms": 0.2796,
+  "max": 1.8237
+ },
+ "all_atoms_max_displacement_A": 5.388,
+ "monitor": {
+  "zn_to_lig_N2_A": 1.927,
+  "lig_N2_to_thr199_OG1_A": 2.852,
+  "lig_N1_to_phe131_CZ_A": 3.724,
+  "lig_N1_to_asn67_OD1_A": 7.76,
+  "zn_to_his94_NE2_A": 2.007,
+  "zn_to_his96_NE2_A": 2.031,
+  "zn_to_his119_ND1_A": 2.043,
+  "n_water_O_within_3.5_A_of_ligand_heavy_atoms": 2,
+  "solute_heavy_rms_displacement_from_start_A": 0.225,
+  "solute_heavy_rms_displacement_note": "translation removed, no rotational fit",
+  "crystal_ring_site": {
+   "n_water_O_within_2.5_A": 0,
+   "nearest_water_O_A": 2.809,
+   "ligand_mean_distance_from_site_A": 0.216
+  }
+ },
+ "wall_s": 32.99,
+ "ended": {
+  "utc": "2026-10-06T05:01:56Z",
+  "ist": "6 Oct 2026, 10:31:56 AM IST"
+ },
+ "files": {
+  "state_min.xml": {
+   "sha256": "3b0c5cf2faf9883bce9ebee99afdb52f66dcf95b7f1561149abdc5cd00175fc2",
+   "bytes": 4612365
+  }
+ },
+ "complete": true
+}

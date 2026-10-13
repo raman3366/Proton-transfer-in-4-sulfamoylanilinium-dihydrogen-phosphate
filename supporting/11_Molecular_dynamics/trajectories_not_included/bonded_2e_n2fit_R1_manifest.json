@@ -1,0 +1,7153 @@
+{
+ "schema": "cqc-sfa-md run manifest, version 2",
+ "written_by": "cqc-sfa-md run_md.py",
+ "run_id": "R1",
+ "test_only": false,
+ "test_only_reason": [],
+ "equil_scale": 1.0,
+ "seed": {
+  "run_seed": 1402141901,
+  "source": "derived from the run id",
+  "rule_run_seed": "first 4 bytes of sha256('cqc-sfa-md run seed|<run-id>') mod 2147483646, plus 1",
+  "rule_step_seed": "first 4 bytes of sha256('cqc-sfa-md step seed|<run seed>|<step tag>|<purpose>') mod 2147483646, plus 1"
+ },
+ "system_dir": "/root/cqc-sfa-md/systems/bonded_2e_n2fit/R",
+ "out_dir": "/root/cqc-sfa-md/runs/bonded_2e_n2fit/R1",
+ "inputs": {
+  "system.prmtop": {
+   "sha256": "d4999d63b48ef7c43faebb5b108b45bd87d6b9cc7cc6d6f69c22fddc296d8673",
+   "bytes": 7665188
+  },
+  "system.inpcrd": {
+   "sha256": "fe5bc95b9f90444fc2dcd9aa1ba619e991dea0ebe500716b2ced28ee1ec4e360",
+   "bytes": 1491374
+  },
+  "selections.json": {
+   "sha256": "3ebabef9c1864077cf784b7fb64ac4e5f45ab18902a8b2534d9ec62c375895fb",
+   "bytes": 196228
+  },
+  "extra_forces.json": {
+   "sha256": "7c2c3c897ed03fb1a5a494f6a97cb9c7000e279a8c3aa1819b8508844b520483",
+   "bytes": 188
+  },
+  "reference.pdb": {
+   "sha256": "c54ead175e0f3f9aa237414c38ed618380aa3c730e55a211c89cde939233e069",
+   "bytes": 21627
+  },
+  "build.json": {
+   "sha256": "7b70ef3efe959502a8a91b0c8fcaf228f265bc0039b90b47be74071198f8e10d",
+   "bytes": 65697
+  },
+  "protocol": {
+   "sha256": "decda42f5340d06f5f695b4c56b59a7bb796e5872b3a8af1c1a5b426f9c09d9a",
+   "bytes": 8440,
+   "path": "/root/workspace/cqc-4-sulfamoylanilinium-dihydrogen-phosphate/md/protocol.json"
+  }
+ },
+ "script": {
+  "sha256": "6d797f080ff7567923469dabd86af71ca34183f5c482c14d55bf8038eb9d1822",
+  "bytes": 94383,
+  "path": "/root/workspace/cqc-4-sulfamoylanilinium-dihydrogen-phosphate/md/run_md.py"
+ },
+ "build_json": {
+  "schema": "cqc-sfa-md built system, version 1",
+  "what": "hCA II (PDB 6RL9, chain A) with the sulfonamidate anion of sulfanilamide on the zinc, crystal water, TIP3P water and NaCl in a truncated octahedron",
+  "model": "bonded_2e_n2fit",
+  "model_kind": "bonded",
+  "parameter_set": "2e",
+  "start": "R",
+  "status_note": "SENSITIVITY system, start R only (md/PLAN.md, entry of 6 Oct 2026, 9:15 PM IST, point 3; md/PRODUCTION.md). The terms at N2 are those of md/qm/n2/n2_terms_new_charges_as_built.frcmod, a candidate that gate G-R2 did NOT ACCEPT; it is used only for the one bracketing sensitivity run of the plan and enters no count of rule 3. Zinc terms and charges as in the set named in the folder.",
+  "written_by": "md/build_topology.py",
+  "script_sha256": "a9b8ef8d699dfce68abfddcd21186ebdb939900d67b4c549b92692bf39d38d70",
+  "software": {
+   "ambertools": "ambertools-26.0-cuda_None_nompi_py312h1ea3936_100",
+   "tleap": "/root/cqc-sfa-tools/md/bin/tleap",
+   "python": "3.12.14",
+   "parmed": "4.3.1",
+   "numpy": "2.5.3",
+   "scipy": "1.18.1"
+  },
+  "units": "Angstrom, degrees, e, amu, kcal mol-1 (Amber parameters); nm and kJ mol-1 nm-2 only where the key says so",
+  "random_numbers": "none; the ion sites follow a fixed rule (ions.rule) and tleap places nothing by chance",
+  "inputs_sha256": {
+   "md/system/protein_md.pdb": "e5abb73ca92fa9b399ab8c0bbba368024e10d3807147e382d431b0d29e260494",
+   "md/system/zinc.pdb": "c98aa70a52066f412c0618bbc3fc38e811add4d5d68747b9d02a84a70cd3cea9",
+   "md/system/ligand_R.pdb": "8300cc02815be661cecf7281c6e84dcba410b7b8b994af5c0b78d60487d5cb01",
+   "md/system/waters_R.pdb": "18593c5cccbb7cabd39b299013e64d18170c9d321f0cce9a073cbaec578d02c8",
+   "md/system/ligand_X.pdb": "342ccdd6a6c03302c4fed7ff01dacebbecde97141fab02e375bc0d5e2a62a47b",
+   "md/system/residue_map.csv": "e9be32317a42fab779bcc1efb67712f08ad77d0dc6321d176bc9694f7dfab61a",
+   "md/system/starts.csv": "ee90fb3fcdd80da8de6e6bd1f44d269ff50de31189c6107488652f8453d06b62",
+   "md/ligand/sfa_anion.mol2": "f8fba7528dceade5eec4c56ab1d5e450e29c9c54b27e1a34c521edb3865a66fa",
+   "md/ligand/sfa_anion_gaff2.frcmod": "694fd181a8c2b7359a529112a1ba539e681dd2c66a883379607e6e6095ca438c",
+   "md/ligand/sfa_anion_repair.frcmod": "76dda0d181a27e12868eea1a2eff055fbeda708357f200d12a53915fa7d60b86",
+   "md/ligand/sfa_anion_repaired.prmtop": "4dbb2a1ba195407d4b3459c1cee9227308d4496b11855f22a3c364eac35a33f1"
+  },
+  "amber_data_files_sha256": {
+   "dat/leap/cmd/leaprc.protein.ff14SB": "e96bd5b9d5fba9c027050e33efd3414e4d26ff616566b08730abedc554fac98c",
+   "dat/leap/cmd/leaprc.gaff2": "47d749188bf70b2c4b878ce5a66cc3a94a4baaa8c359f725acc795cf35a71900",
+   "dat/leap/cmd/leaprc.water.tip3p": "679041e7b6a6776cd6a7552480ded0986c33ddd209da58f0c30a96bfb8818db7",
+   "dat/leap/parm/gaff2.dat": "2244b58627a85693776d12a0155a292f72b65b4398a03b87958136ad7460c67f",
+   "dat/leap/parm/frcmod.ff14SB": "d7240947ca454e49fa2419343cff0090c1e9c02f39618e826d99fc5f1b29dc73",
+   "dat/leap/parm/frcmod.tip3p": "a66a30117d8c0af008476715e1405587a67f473793c4ab1db822da41465e48f1",
+   "dat/leap/parm/frcmod.ions234lm_126_tip3p": "4252f496d5462dc84ddfae7ef8e941bf8c927584201284be3ccae178ebab08d3",
+   "dat/leap/parm/frcmod.ionsjc_tip3p": "eb7a1a59bf356581f89534287dd59d1bebbb2e5de7176d7c7dd69cb1d4928a55",
+   "dat/leap/parm/frcmod.ions1lm_126_tip3p": "09690dfab18fe46fe9bd9651d254db1ff4d6edfdfa4f74e0ff8c41a069715eeb",
+   "dat/leap/lib/atomic_ions.lib": "0f56b0f1b1cbf0e275c7e5e815f7f85b9b22e26de3b591a0b8a87c28d75d0d53",
+   "dat/leap/lib/solvents.lib": "c8aeb703f5769331541d1233e2f2c8f823dd516e861b04e215ae4da903f1d69b"
+  },
+  "force_field": {
+   "tleap_sources": [
+    "leaprc.protein.ff14SB",
+    "leaprc.gaff2",
+    "leaprc.water.tip3p"
+   ],
+   "gaff2_version_line": "AMBER General Force Field for organic molecules (Version 2.2.30, Oct 2025)",
+   "protein": "ff14SB",
+   "water": "TIP3P (rigid; the topology holds the H-H bond)",
+   "ligand": "as delivered by MCPB.py (charges of the zinc site refitted; see mcpb)",
+   "zinc": "bonded to its four nitrogen atoms with the terms of MCPB.py (see mcpb, zinc_site_bonded)",
+   "zinc_in_prmtop": {
+    "atom_type": "M1",
+    "charge_e": 0.3356,
+    "rmin_half_A": 1.395,
+    "epsilon_kcal_per_mol": 0.014917,
+    "mass_amu": 65.4,
+    "bonded_to": [
+     "HD194:NE2",
+     "HD296:NE2",
+     "HE1119:ND1",
+     "SN1304:N2"
+    ],
+    "lennard_jones_12_6_4_terms_in_prmtop": false
+   },
+   "zinc_line_of_frcmod": {
+    "rmin_half_A": 1.271,
+    "epsilon_kcal_per_mol": 0.00330286,
+    "line": "Zn2+  1.271  0.00330286    CM set for TIP3P water from Li et al., JCTC, 2013, 9, 2733"
+   },
+   "sodium_chloride": "Joung-Cheatham for TIP3P (frcmod.ionsjc_tip3p, loaded by leaprc.water.tip3p)",
+   "ions_in_prmtop": {
+    "Na+": {
+     "n": 34,
+     "atom_type": "Na+",
+     "charge_e": 1.0,
+     "rmin_half_A": 1.369,
+     "epsilon_kcal_per_mol": 0.0874393
+    },
+    "Cl-": {
+     "n": 33,
+     "atom_type": "Cl-",
+     "charge_e": -1.0,
+     "rmin_half_A": 2.513,
+     "epsilon_kcal_per_mol": 0.035591
+    }
+   },
+   "ion_lines_of_frcmod": {
+    "frcmod.ionsjc_tip3p Na+": {
+     "rmin_half_A": 1.369,
+     "epsilon_kcal_per_mol": 0.0874393,
+     "line": "Na+      1.369     0.0874393"
+    },
+    "frcmod.ionsjc_tip3p Cl-": {
+     "rmin_half_A": 2.513,
+     "epsilon_kcal_per_mol": 0.035591,
+     "line": "Cl-      2.513     0.0355910"
+    }
+   },
+   "notes": [
+    "frcmod.ions1lm_126_tip3p of CA2_tleap.in is not loaded: Na+ and Cl- keep the parameters of leaprc.water.tip3p (Joung-Cheatham), as in the restrained model"
+   ]
+  },
+  "mcpb": {
+   "dir": "/root/cqc-sfa-md/qm/gr/mcpb_2e",
+   "group": "CA2",
+   "atom_types_added": [
+    [
+     "M1",
+     "Zn",
+     "sp3"
+    ],
+    [
+     "Y1",
+     "N",
+     "sp3"
+    ],
+    [
+     "Y2",
+     "N",
+     "sp3"
+    ],
+    [
+     "Y3",
+     "N",
+     "sp3"
+    ],
+    [
+     "Y4",
+     "N",
+     "sp3"
+    ]
+   ],
+   "renamed_residues": {
+    "93": "HD1",
+    "95": "HD2",
+    "118": "HE1",
+    "260": "ZN1",
+    "261": "SN1"
+   },
+   "bond_commands": [
+    "bond sys.93.NE2 sys.260.ZN",
+    "bond sys.95.NE2 sys.260.ZN",
+    "bond sys.118.ND1 sys.260.ZN",
+    "bond sys.260.ZN sys.261.N2",
+    "bond sys.92.C sys.93.N",
+    "bond sys.93.C sys.94.N",
+    "bond sys.94.C sys.95.N",
+    "bond sys.95.C sys.96.N",
+    "bond sys.117.C sys.118.N",
+    "bond sys.118.C sys.119.N"
+   ],
+   "bond_commands_used": "the four to the zinc; the peptide bonds of the renamed residues are made by loadpdb through head and tail atoms set on their units (see leap.in)",
+   "frcmod_files_named_by_mcpb": [
+    "sfa_anion_gaff2.frcmod",
+    "sfa_anion_repair.frcmod",
+    "frcmod.ions1lm_126_tip3p",
+    "CA2_mcpbpy.frcmod"
+   ],
+   "residue_names_that_differ_without_a_mol2_unit": [],
+   "files_sha256": {
+    "/root/cqc-sfa-md/qm/gr/mcpb_2e/CA2_mcpbpy.frcmod": "38221d1d52d8b0af047145619d29bdeee11fdaf3010c452503facd01ec8f29c9",
+    "/root/cqc-sfa-md/qm/gr/mcpb_2e/CA2_mcpbpy.pdb": "0506c52c98d1241b13a340995b4e974002bcde02ab73dcf552dcb5734184a522",
+    "/root/cqc-sfa-md/qm/gr/mcpb_2e/CA2_tleap.in": "d16b000ce275b6a62b75e0d6637627c76d071a898df4077f0bb29925713f5f12",
+    "/root/cqc-sfa-md/qm/gr/mcpb_2e/HD1.mol2": "0e98556917e7834b6300eb448eb53e3f89f278f463ef72673850cf99a512ee97",
+    "/root/cqc-sfa-md/qm/gr/mcpb_2e/HD2.mol2": "4c7552bdd103d8510ece94fba79e426a5c3cf010248a37c8551d331fbcf7af54",
+    "/root/cqc-sfa-md/qm/gr/mcpb_2e/HE1.mol2": "be522ba06dfef8ce834493f985d9665c434e387dd3fff785456183baba3b43a0",
+    "/root/cqc-sfa-md/qm/gr/mcpb_2e/SN1.mol2": "0ecbec58ff769c66bb0cd6e1d62467da0863f88d0c7ac07132db2b65b9534810",
+    "/root/cqc-sfa-md/qm/gr/mcpb_2e/ZN1.mol2": "525765a335834f8b34178621a9178765f21bdac8eb0f8fc9e76d988c0e645df0",
+    "/root/cqc-sfa-md/qm/gr/mcpb_2e/sfa_anion_gaff2.frcmod": "694fd181a8c2b7359a529112a1ba539e681dd2c66a883379607e6e6095ca438c",
+    "/root/cqc-sfa-md/qm/gr/mcpb_2e/sfa_anion_repair.frcmod": "76dda0d181a27e12868eea1a2eff055fbeda708357f200d12a53915fa7d60b86"
+   },
+   "sfa_anion_gaff2.frcmod_same_as_md_ligand": true,
+   "sfa_anion_repair.frcmod_same_as_md_ligand": true,
+   "parameter_set": {
+    "named": "2e",
+    "variant": "n2fit",
+    "method_named_in_the_frcmod": [
+     "empirical"
+    ],
+    "expected_method": "empirical"
+   }
+  },
+  "terms_at_N2": {
+   "source": "given with --n2-frcmod",
+   "given_file": "md/qm/n2/n2_terms_new_charges_as_built.frcmod",
+   "first_line_of_the_file": "terms at N2, gate G-R2 (md/N2.md): candidate L5_ridge0.01, charges as built; NOT ACCEPTED and not expected to pass the gate (leave-one-out 1.29 against 1.0): a record, not for a run; written by md/qm/n2_deliver.py 2026-10-06 06:36:23 PM IST",
+   "validated_by_gate_GR": "not known to the builder: the file was given",
+   "file": "n2_terms.frcmod (in build/ of the system and in md/topology)",
+   "sha256": "2244a06c6e760ca079ffdd525eac9314dba9c3989e7b116d23e5545101cb7f29",
+   "atom_types": {
+    "N2": "Y4",
+    "S": "sy",
+    "HN21": "hn",
+    "C4": "ca",
+    "ZN": "M1"
+   },
+   "Zn_N2_H_in_start_X_deg": 107.4065,
+   "loaded": "after every parameter file of MCPB.py, so its terms are the ones in force",
+   "holds": {
+    "angles": [
+     "M1-Y4-sy",
+     "M1-Y4-hn",
+     "hn-Y4-sy"
+    ],
+    "torsions": [
+     "ca-sy-Y4-hn",
+     "M1-Y4-sy-ca",
+     "Y1-M1-Y4-sy",
+     "Y2-M1-Y4-sy",
+     "Y3-M1-Y4-sy",
+     "Y1-M1-Y4-hn",
+     "Y2-M1-Y4-hn",
+     "Y3-M1-Y4-hn"
+    ],
+    "impropers": [
+     "M1-hn-Y4-sy"
+    ],
+    "bonds": [],
+    "zinc_nitrogen_types_of_the_histidines": [
+     "Y1",
+     "Y2",
+     "Y3"
+    ],
+    "class_of_this_set": "a variant: the three angles at N2, torsions about N2-S and about Zn-N2, one improper at N2",
+    "entries_beyond_the_terms_as_built": [
+     "DIHE M1-Y4-sy-ca",
+     "DIHE Y1-M1-Y4-sy",
+     "DIHE Y2-M1-Y4-sy",
+     "DIHE Y3-M1-Y4-sy",
+     "DIHE Y1-M1-Y4-hn",
+     "DIHE Y2-M1-Y4-hn",
+     "DIHE Y3-M1-Y4-hn",
+     "IMPROPER M1-hn-Y4-sy"
+    ],
+    "entries_outside_the_class_of_this_set": [],
+    "entries_of_the_class_that_are_missing": [],
+    "of_the_class_of_this_set": true
+   },
+   "in_the_topology": {
+    "angles": {
+     "Zn-N2-S": {
+      "types": "M1-Y4-sy",
+      "k_kcal_per_mol_rad2": 20.423,
+      "theta0_deg": 113.229,
+      "n2_terms_file": [
+       20.423,
+       113.229
+      ],
+      "as_n2_terms_file": true,
+      "angle_in_this_start_deg": 119.53
+     },
+     "Zn-N2-H": {
+      "types": "M1-Y4-hn",
+      "k_kcal_per_mol_rad2": 23.041,
+      "theta0_deg": 118.486,
+      "n2_terms_file": [
+       23.041,
+       118.486
+      ],
+      "as_n2_terms_file": true,
+      "angle_in_this_start_deg": 106.91
+     },
+     "S-N2-H": {
+      "types": "sy-Y4-hn",
+      "k_kcal_per_mol_rad2": 51.074,
+      "theta0_deg": 117.127,
+      "n2_terms_file": [
+       51.074,
+       117.127
+      ],
+      "as_n2_terms_file": true,
+      "angle_in_this_start_deg": 106.9
+     }
+    },
+    "sum_of_the_three_equilibrium_angles_deg": 348.84,
+    "H-N2-S-C4_k_n_phase": [
+     [
+      1.2233,
+      3,
+      0.0
+     ],
+     [
+      2.124,
+      1,
+      180.0
+     ],
+     [
+      2.8826,
+      2,
+      0.0
+     ]
+    ],
+    "H-N2-S-C4_n2_terms_file": [
+     [
+      1.2233,
+      3,
+      0.0
+     ],
+     [
+      2.124,
+      1,
+      180.0
+     ],
+     [
+      2.8826,
+      2,
+      0.0
+     ]
+    ],
+    "entries_of_the_file": [
+     {
+      "entry": "ANGLE M1-Y4-sy",
+      "in_the_file": [
+       20.423,
+       113.229
+      ],
+      "n_in_the_topology": 1,
+      "as_the_file": true
+     },
+     {
+      "entry": "ANGLE M1-Y4-hn",
+      "in_the_file": [
+       23.041,
+       118.486
+      ],
+      "n_in_the_topology": 1,
+      "as_the_file": true
+     },
+     {
+      "entry": "ANGLE hn-Y4-sy",
+      "in_the_file": [
+       51.074,
+       117.127
+      ],
+      "n_in_the_topology": 1,
+      "as_the_file": true
+     },
+     {
+      "entry": "DIHE ca-sy-Y4-hn",
+      "in_the_file_k_n_phase": [
+       [
+        1.2233,
+        3,
+        0.0
+       ],
+       [
+        2.124,
+        1,
+        180.0
+       ],
+       [
+        2.8826,
+        2,
+        0.0
+       ]
+      ],
+      "n_in_the_topology": 1,
+      "as_the_file": true
+     },
+     {
+      "entry": "DIHE M1-Y4-sy-ca",
+      "in_the_file_k_n_phase": [
+       [
+        0.1183,
+        2,
+        0.0
+       ],
+       [
+        0.5797,
+        3,
+        0.0
+       ],
+       [
+        3.1094,
+        1,
+        180.0
+       ]
+      ],
+      "n_in_the_topology": 1,
+      "as_the_file": true
+     },
+     {
+      "entry": "DIHE Y1-M1-Y4-sy",
+      "in_the_file_k_n_phase": [
+       [
+        0.3739,
+        3,
+        292.439
+       ]
+      ],
+      "n_in_the_topology": 1,
+      "as_the_file": true
+     },
+     {
+      "entry": "DIHE Y2-M1-Y4-sy",
+      "in_the_file_k_n_phase": [
+       [
+        0.3739,
+        3,
+        292.439
+       ]
+      ],
+      "n_in_the_topology": 1,
+      "as_the_file": true
+     },
+     {
+      "entry": "DIHE Y3-M1-Y4-sy",
+      "in_the_file_k_n_phase": [
+       [
+        0.3739,
+        3,
+        292.439
+       ]
+      ],
+      "n_in_the_topology": 1,
+      "as_the_file": true
+     },
+     {
+      "entry": "DIHE Y1-M1-Y4-hn",
+      "in_the_file_k_n_phase": [
+       [
+        0.4154,
+        3,
+        8.243
+       ]
+      ],
+      "n_in_the_topology": 1,
+      "as_the_file": true
+     },
+     {
+      "entry": "DIHE Y2-M1-Y4-hn",
+      "in_the_file_k_n_phase": [
+       [
+        0.4154,
+        3,
+        8.243
+       ]
+      ],
+      "n_in_the_topology": 1,
+      "as_the_file": true
+     },
+     {
+      "entry": "DIHE Y3-M1-Y4-hn",
+      "in_the_file_k_n_phase": [
+       [
+        0.4154,
+        3,
+        8.243
+       ]
+      ],
+      "n_in_the_topology": 1,
+      "as_the_file": true
+     },
+     {
+      "entry": "IMPROPER M1-hn-Y4-sy",
+      "in_the_file_k_phase_n": [
+       0.5301,
+       180.0,
+       2
+      ],
+      "n_in_the_topology": 1,
+      "as_the_file": true
+     }
+    ],
+    "all_as_n2_terms_file": true,
+    "Zn-N2-H_is_not_120_deg": true
+   }
+  },
+  "zinc_site_bonded": {
+   "zinc_bonded_to": [
+    "HD194:NE2",
+    "HD296:NE2",
+    "HE1119:ND1",
+    "SN1304:N2"
+   ],
+   "expected": [
+    "HD194:NE2",
+    "HD296:NE2",
+    "HE1119:ND1",
+    "SN1304:N2"
+   ],
+   "zinc_has_the_four_bonds": true,
+   "bonds_to_zinc": [
+    {
+     "to": "SN1:N2",
+     "k_kcal_per_mol_A2": 122.1,
+     "r0_A": 1.931
+    },
+    {
+     "to": "HE1:ND1",
+     "k_kcal_per_mol_A2": 74.3,
+     "r0_A": 2.018
+    },
+    {
+     "to": "HD2:NE2",
+     "k_kcal_per_mol_A2": 73.3,
+     "r0_A": 2.021
+    },
+    {
+     "to": "HD1:NE2",
+     "k_kcal_per_mol_A2": 78.0,
+     "r0_A": 2.01
+    }
+   ],
+   "angles_with_zinc": [
+    {
+     "atoms": "ZN1:ZN-N2-SN1:S",
+     "k_kcal_per_mol_rad2": 20.423,
+     "theta0_deg": 113.229
+    },
+    {
+     "atoms": "HE1:CG-ND1-ZN1:ZN",
+     "k_kcal_per_mol_rad2": 50.0,
+     "theta0_deg": 131.22
+    },
+    {
+     "atoms": "HE1:ND1-ZN-SN1:N2",
+     "k_kcal_per_mol_rad2": 35.0,
+     "theta0_deg": 116.83
+    },
+    {
+     "atoms": "HE1:CE1-ND1-ZN1:ZN",
+     "k_kcal_per_mol_rad2": 50.0,
+     "theta0_deg": 121.05
+    },
+    {
+     "atoms": "HD2:CE1-NE2-ZN1:ZN",
+     "k_kcal_per_mol_rad2": 50.0,
+     "theta0_deg": 129.31
+    },
+    {
+     "atoms": "HD2:NE2-ZN-HE1:ND1",
+     "k_kcal_per_mol_rad2": 35.0,
+     "theta0_deg": 98.41
+    },
+    {
+     "atoms": "HD2:NE2-ZN-SN1:N2",
+     "k_kcal_per_mol_rad2": 35.0,
+     "theta0_deg": 114.28
+    },
+    {
+     "atoms": "HD2:CD2-NE2-ZN1:ZN",
+     "k_kcal_per_mol_rad2": 50.0,
+     "theta0_deg": 122.91
+    },
+    {
+     "atoms": "HD1:CE1-NE2-ZN1:ZN",
+     "k_kcal_per_mol_rad2": 50.0,
+     "theta0_deg": 127.89
+    },
+    {
+     "atoms": "HD1:NE2-ZN-HD2:NE2",
+     "k_kcal_per_mol_rad2": 35.0,
+     "theta0_deg": 103.82
+    },
+    {
+     "atoms": "HD1:NE2-ZN-HE1:ND1",
+     "k_kcal_per_mol_rad2": 35.0,
+     "theta0_deg": 113.59
+    },
+    {
+     "atoms": "HD1:NE2-ZN-SN1:N2",
+     "k_kcal_per_mol_rad2": 35.0,
+     "theta0_deg": 108.92
+    },
+    {
+     "atoms": "HD1:CD2-NE2-ZN1:ZN",
+     "k_kcal_per_mol_rad2": 50.0,
+     "theta0_deg": 124.21
+    },
+    {
+     "atoms": "ZN1:ZN-N2-SN1:HN21",
+     "k_kcal_per_mol_rad2": 23.041,
+     "theta0_deg": 118.486
+    }
+   ],
+   "n_angles_centred_on_zinc": 6,
+   "torsions_through_zinc": {
+    "n": 39,
+    "n_terms": 41,
+    "n_proper": 39,
+    "n_improper": 1,
+    "largest_abs_k_kcal_per_mol": 3.1094,
+    "all_zero": false,
+    "n_carried_by_the_n2_file": 7,
+    "zero_or_as_the_n2_file": true,
+    "non_zero_or_carried_by_the_n2_file": [
+     {
+      "atoms": "HD194:NE2-Zn-SN1304:N2-SN1304:S",
+      "types": "Y1-M1-Y4-sy",
+      "terms_k_n_phase": [
+       [
+        0.3739,
+        3,
+        292.439
+       ]
+      ],
+      "carried_by_the_n2_file": true,
+      "zero_or_as_the_n2_file": true
+     },
+     {
+      "atoms": "HD194:NE2-Zn-SN1304:N2-SN1304:HN21",
+      "types": "Y1-M1-Y4-hn",
+      "terms_k_n_phase": [
+       [
+        0.4154,
+        3,
+        8.243
+       ]
+      ],
+      "carried_by_the_n2_file": true,
+      "zero_or_as_the_n2_file": true
+     },
+     {
+      "atoms": "HD296:NE2-Zn-SN1304:N2-SN1304:S",
+      "types": "Y2-M1-Y4-sy",
+      "terms_k_n_phase": [
+       [
+        0.3739,
+        3,
+        292.439
+       ]
+      ],
+      "carried_by_the_n2_file": true,
+      "zero_or_as_the_n2_file": true
+     },
+     {
+      "atoms": "HD296:NE2-Zn-SN1304:N2-SN1304:HN21",
+      "types": "Y2-M1-Y4-hn",
+      "terms_k_n_phase": [
+       [
+        0.4154,
+        3,
+        8.243
+       ]
+      ],
+      "carried_by_the_n2_file": true,
+      "zero_or_as_the_n2_file": true
+     },
+     {
+      "atoms": "HE1119:ND1-Zn-SN1304:N2-SN1304:S",
+      "types": "Y3-M1-Y4-sy",
+      "terms_k_n_phase": [
+       [
+        0.3739,
+        3,
+        292.439
+       ]
+      ],
+      "carried_by_the_n2_file": true,
+      "zero_or_as_the_n2_file": true
+     },
+     {
+      "atoms": "HE1119:ND1-Zn-SN1304:N2-SN1304:HN21",
+      "types": "Y3-M1-Y4-hn",
+      "terms_k_n_phase": [
+       [
+        0.4154,
+        3,
+        8.243
+       ]
+      ],
+      "carried_by_the_n2_file": true,
+      "zero_or_as_the_n2_file": true
+     },
+     {
+      "atoms": "Zn-SN1304:N2-SN1304:S-SN1304:C4",
+      "types": "M1-Y4-sy-ca",
+      "terms_k_n_phase": [
+       [
+        0.1183,
+        2,
+        0.0
+       ],
+       [
+        0.5797,
+        3,
+        0.0
+       ],
+       [
+        3.1094,
+        1,
+        180.0
+       ]
+      ],
+      "carried_by_the_n2_file": true,
+      "zero_or_as_the_n2_file": true
+     }
+    ],
+    "impropers_with_zinc": [
+     {
+      "atoms": "Zn-SN1304:HN21-SN1304:N2-SN1304:S",
+      "central_atom": "SN1304:N2",
+      "types": "M1-hn-Y4-sy",
+      "k_phase_n": [
+       0.5301,
+       180.0,
+       2
+      ]
+     }
+    ],
+    "impropers_with_zinc_none_or_those_of_the_n2_file": true
+   },
+   "charge_of_zinc_site_residues_e": {
+    "HD1": 0.33445,
+    "HD2": 0.41317,
+    "HE1": 0.44721,
+    "ZN1": 0.3356,
+    "SN1": -0.53043
+   },
+   "charge_of_zinc_site_e": 1.0,
+   "ligand_atom_types": {
+    "C1": "ca",
+    "C2": "ca",
+    "C3": "ca",
+    "C4": "ca",
+    "C5": "ca",
+    "C6": "ca",
+    "N1": "nv",
+    "N2": "Y4",
+    "O1": "o",
+    "O2": "o",
+    "S": "sy",
+    "H2": "ha",
+    "H3": "ha",
+    "H5": "ha",
+    "H6": "ha",
+    "HN11": "hn",
+    "HN12": "hn",
+    "HN21": "hn"
+   },
+   "bonds_to_zinc_against_the_parameter_files": [
+    {
+     "bond": "Zn-SN1304:N2",
+     "types": "M1-Y4",
+     "k_kcal_per_mol_A2": 122.1,
+     "r0_A": 1.931,
+     "parameter_file": [
+      122.1,
+      1.931
+     ],
+     "from": "CA2_mcpbpy.frcmod",
+     "as_file": true,
+     "distance_in_6RL9_A": 1.9314,
+     "distance_in_this_start_A": 2.2351
+    },
+    {
+     "bond": "Zn-HE1119:ND1",
+     "types": "Y3-M1",
+     "k_kcal_per_mol_A2": 74.3,
+     "r0_A": 2.018,
+     "parameter_file": [
+      74.3,
+      2.018
+     ],
+     "from": "CA2_mcpbpy.frcmod",
+     "as_file": true,
+     "distance_in_6RL9_A": 2.0183,
+     "distance_in_this_start_A": 2.0183
+    },
+    {
+     "bond": "Zn-HD296:NE2",
+     "types": "Y2-M1",
+     "k_kcal_per_mol_A2": 73.3,
+     "r0_A": 2.021,
+     "parameter_file": [
+      73.3,
+      2.021
+     ],
+     "from": "CA2_mcpbpy.frcmod",
+     "as_file": true,
+     "distance_in_6RL9_A": 2.0206,
+     "distance_in_this_start_A": 2.0206
+    },
+    {
+     "bond": "Zn-HD194:NE2",
+     "types": "Y1-M1",
+     "k_kcal_per_mol_A2": 78.0,
+     "r0_A": 2.01,
+     "parameter_file": [
+      78.0,
+      2.01
+     ],
+     "from": "CA2_mcpbpy.frcmod",
+     "as_file": true,
+     "distance_in_6RL9_A": 2.0099,
+     "distance_in_this_start_A": 2.0099
+    }
+   ],
+   "angles_with_zinc_against_the_parameter_files": [
+    {
+     "angle": "HD194:NE2-Zn-HD296:NE2",
+     "kind": "N-Zn-N",
+     "types": "Y1-M1-Y2",
+     "k_kcal_per_mol_rad2": 35.0,
+     "theta0_deg": 103.82,
+     "parameter_file": [
+      35.0,
+      103.82
+     ],
+     "from": "CA2_mcpbpy.frcmod",
+     "as_file": true,
+     "angle_in_this_start_deg": 103.82
+    },
+    {
+     "angle": "HD194:NE2-Zn-HE1119:ND1",
+     "kind": "N-Zn-N",
+     "types": "Y1-M1-Y3",
+     "k_kcal_per_mol_rad2": 35.0,
+     "theta0_deg": 113.59,
+     "parameter_file": [
+      35.0,
+      113.59
+     ],
+     "from": "CA2_mcpbpy.frcmod",
+     "as_file": true,
+     "angle_in_this_start_deg": 113.59
+    },
+    {
+     "angle": "HD194:NE2-Zn-SN1304:N2",
+     "kind": "N-Zn-N",
+     "types": "Y1-M1-Y4",
+     "k_kcal_per_mol_rad2": 35.0,
+     "theta0_deg": 108.92,
+     "parameter_file": [
+      35.0,
+      108.92
+     ],
+     "from": "CA2_mcpbpy.frcmod",
+     "as_file": true,
+     "angle_in_this_start_deg": 116.34
+    },
+    {
+     "angle": "HD296:NE2-Zn-HE1119:ND1",
+     "kind": "N-Zn-N",
+     "types": "Y2-M1-Y3",
+     "k_kcal_per_mol_rad2": 35.0,
+     "theta0_deg": 98.41,
+     "parameter_file": [
+      35.0,
+      98.41
+     ],
+     "from": "CA2_mcpbpy.frcmod",
+     "as_file": true,
+     "angle_in_this_start_deg": 98.41
+    },
+    {
+     "angle": "HD296:NE2-Zn-SN1304:N2",
+     "kind": "N-Zn-N",
+     "types": "Y2-M1-Y4",
+     "k_kcal_per_mol_rad2": 35.0,
+     "theta0_deg": 114.28,
+     "parameter_file": [
+      35.0,
+      114.28
+     ],
+     "from": "CA2_mcpbpy.frcmod",
+     "as_file": true,
+     "angle_in_this_start_deg": 112.57
+    },
+    {
+     "angle": "HE1119:ND1-Zn-SN1304:N2",
+     "kind": "N-Zn-N",
+     "types": "Y3-M1-Y4",
+     "k_kcal_per_mol_rad2": 35.0,
+     "theta0_deg": 116.83,
+     "parameter_file": [
+      35.0,
+      116.83
+     ],
+     "from": "CA2_mcpbpy.frcmod",
+     "as_file": true,
+     "angle_in_this_start_deg": 110.5
+    },
+    {
+     "angle": "HD194:CD2-HD194:NE2-Zn",
+     "kind": "Zn-N-C",
+     "types": "CV-Y1-M1",
+     "k_kcal_per_mol_rad2": 50.0,
+     "theta0_deg": 124.21,
+     "parameter_file": [
+      50.0,
+      124.21
+     ],
+     "from": "CA2_mcpbpy.frcmod",
+     "as_file": true,
+     "angle_in_this_start_deg": 124.21
+    },
+    {
+     "angle": "HD194:CE1-HD194:NE2-Zn",
+     "kind": "Zn-N-C",
+     "types": "CR-Y1-M1",
+     "k_kcal_per_mol_rad2": 50.0,
+     "theta0_deg": 127.89,
+     "parameter_file": [
+      50.0,
+      127.89
+     ],
+     "from": "CA2_mcpbpy.frcmod",
+     "as_file": true,
+     "angle_in_this_start_deg": 127.89
+    },
+    {
+     "angle": "HD296:CD2-HD296:NE2-Zn",
+     "kind": "Zn-N-C",
+     "types": "CV-Y2-M1",
+     "k_kcal_per_mol_rad2": 50.0,
+     "theta0_deg": 122.91,
+     "parameter_file": [
+      50.0,
+      122.91
+     ],
+     "from": "CA2_mcpbpy.frcmod",
+     "as_file": true,
+     "angle_in_this_start_deg": 122.91
+    },
+    {
+     "angle": "HD296:CE1-HD296:NE2-Zn",
+     "kind": "Zn-N-C",
+     "types": "CR-Y2-M1",
+     "k_kcal_per_mol_rad2": 50.0,
+     "theta0_deg": 129.31,
+     "parameter_file": [
+      50.0,
+      129.31
+     ],
+     "from": "CA2_mcpbpy.frcmod",
+     "as_file": true,
+     "angle_in_this_start_deg": 129.31
+    },
+    {
+     "angle": "HE1119:CE1-HE1119:ND1-Zn",
+     "kind": "Zn-N-C",
+     "types": "CR-Y3-M1",
+     "k_kcal_per_mol_rad2": 50.0,
+     "theta0_deg": 121.05,
+     "parameter_file": [
+      50.0,
+      121.05
+     ],
+     "from": "CA2_mcpbpy.frcmod",
+     "as_file": true,
+     "angle_in_this_start_deg": 121.05
+    },
+    {
+     "angle": "HE1119:CG-HE1119:ND1-Zn",
+     "kind": "Zn-N-C",
+     "types": "CC-Y3-M1",
+     "k_kcal_per_mol_rad2": 50.0,
+     "theta0_deg": 131.22,
+     "parameter_file": [
+      50.0,
+      131.22
+     ],
+     "from": "CA2_mcpbpy.frcmod",
+     "as_file": true,
+     "angle_in_this_start_deg": 131.22
+    },
+    {
+     "angle": "Zn-SN1304:N2-SN1304:S",
+     "kind": "Zn-N2-S",
+     "types": "M1-Y4-sy",
+     "k_kcal_per_mol_rad2": 20.423,
+     "theta0_deg": 113.229,
+     "parameter_file": [
+      20.423,
+      113.229
+     ],
+     "from": "n2_terms.frcmod",
+     "as_file": true,
+     "angle_in_this_start_deg": 119.53
+    },
+    {
+     "angle": "Zn-SN1304:N2-SN1304:HN21",
+     "kind": "Zn-N2-H",
+     "types": "M1-Y4-hn",
+     "k_kcal_per_mol_rad2": 23.041,
+     "theta0_deg": 118.486,
+     "parameter_file": [
+      23.041,
+      118.486
+     ],
+     "from": "n2_terms.frcmod",
+     "as_file": true,
+     "angle_in_this_start_deg": 106.91
+    }
+   ],
+   "n_angles_by_kind": {
+    "N-Zn-N": 6,
+    "Zn-N-C": 6,
+    "Zn-N2-S": 1,
+    "Zn-N2-H": 1
+   },
+   "all_zinc_bonds_and_angles_as_the_parameter_files": true,
+   "charges": {
+    "residues": {
+     "HD1": {
+      "residue": "HD1 (number 94 of 6RL9)",
+      "template": "HD1.mol2",
+      "template_charge_line": "RESP Charge, ligand pairs equal (md/qm/resp_equiv.py)",
+      "sum_e": 0.334448,
+      "largest_difference_from_template_e": 1.6463344021389048e-09,
+      "atoms_e": {
+       "N": -0.4157,
+       "H": 0.309717,
+       "CA": 0.0188,
+       "HA": 0.101134,
+       "CB": -0.262924,
+       "HB2": 0.11754,
+       "HB3": 0.11754,
+       "CG": 0.219555,
+       "ND1": -0.292053,
+       "HD1": 0.364875,
+       "CE1": 0.022891,
+       "HE1": 0.13774,
+       "NE2": -0.00177,
+       "CD2": -0.313382,
+       "HD2": 0.181085,
+       "C": 0.5973,
+       "O": -0.5679
+      },
+      "largest_difference_from_the_unconstrained_fit_e": 0.023369,
+      "template_same_as_md_qm_gr_charges": true
+     },
+     "HD2": {
+      "residue": "HD2 (number 96 of 6RL9)",
+      "template": "HD2.mol2",
+      "template_charge_line": "RESP Charge, ligand pairs equal (md/qm/resp_equiv.py)",
+      "sum_e": 0.413171,
+      "largest_difference_from_template_e": 1.6463344021389048e-09,
+      "atoms_e": {
+       "N": -0.4157,
+       "H": 0.314234,
+       "CA": 0.0188,
+       "HA": 0.086497,
+       "CB": 0.142532,
+       "HB2": 0.030732,
+       "HB3": 0.030732,
+       "CG": -0.081559,
+       "ND1": -0.214565,
+       "HD1": 0.349971,
+       "CE1": -0.060157,
+       "HE1": 0.193857,
+       "NE2": 0.047689,
+       "CD2": -0.179431,
+       "HD2": 0.120139,
+       "C": 0.5973,
+       "O": -0.5679
+      },
+      "largest_difference_from_the_unconstrained_fit_e": 0.023943,
+      "template_same_as_md_qm_gr_charges": true
+     },
+     "HE1": {
+      "residue": "HE1 (number 119 of 6RL9)",
+      "template": "HE1.mol2",
+      "template_charge_line": "RESP Charge, ligand pairs equal (md/qm/resp_equiv.py)",
+      "sum_e": 0.447207,
+      "largest_difference_from_template_e": 1.6463344021389048e-09,
+      "atoms_e": {
+       "N": -0.4157,
+       "H": 0.306707,
+       "CA": -0.0581,
+       "HA": 0.112223,
+       "CB": 0.133351,
+       "HB2": 0.039088,
+       "HB3": 0.039088,
+       "CG": -0.165201,
+       "ND1": 0.122659,
+       "CE1": -0.061884,
+       "HE1": 0.149935,
+       "NE2": -0.209608,
+       "HE2": 0.354009,
+       "CD2": -0.097899,
+       "HD2": 0.169139,
+       "C": 0.5973,
+       "O": -0.5679
+      },
+      "largest_difference_from_the_unconstrained_fit_e": 0.074304,
+      "template_same_as_md_qm_gr_charges": true
+     },
+     "ZN1": {
+      "residue": "ZN1 (number 301 of 6RL9)",
+      "template": "ZN1.mol2",
+      "template_charge_line": "RESP Charge, ligand pairs equal (md/qm/resp_equiv.py)",
+      "sum_e": 0.3356,
+      "largest_difference_from_template_e": 5.551115123125783e-17,
+      "atoms_e": {
+       "ZN": 0.3356
+      },
+      "largest_difference_from_the_unconstrained_fit_e": 0.043853,
+      "template_same_as_md_qm_gr_charges": true
+     },
+     "SN1": {
+      "residue": "SN1 (number 304 of 6RL9)",
+      "template": "SN1.mol2",
+      "template_charge_line": "RESP Charge, ligand pairs equal (md/qm/resp_equiv.py)",
+      "sum_e": -0.530426,
+      "largest_difference_from_template_e": 1.783528880139329e-09,
+      "atoms_e": {
+       "C1": 0.464944,
+       "C2": -0.274695,
+       "C3": -0.153047,
+       "C4": 0.080205,
+       "C5": -0.153047,
+       "C6": -0.274695,
+       "N1": -0.954927,
+       "N2": -0.914224,
+       "O1": -0.48855,
+       "O2": -0.48855,
+       "S": 0.790275,
+       "H2": 0.146108,
+       "H3": 0.155431,
+       "H5": 0.155431,
+       "H6": 0.146108,
+       "HN11": 0.417016,
+       "HN12": 0.417016,
+       "HN21": 0.398775
+      },
+      "largest_difference_from_the_unconstrained_fit_e": 0.049095,
+      "template_same_as_md_qm_gr_charges": true
+     }
+    },
+    "site_sum_e": 1.0,
+    "zinc_e": 0.3356,
+    "all_as_the_templates": true,
+    "equal_pairs_of_the_ligand": [
+     {
+      "pair": "O1, O2",
+      "charges_e": [
+       -0.48855,
+       -0.48855
+      ],
+      "equal": true
+     },
+     {
+      "pair": "C2, C6",
+      "charges_e": [
+       -0.274695,
+       -0.274695
+      ],
+      "equal": true
+     },
+     {
+      "pair": "C3, C5",
+      "charges_e": [
+       -0.153047,
+       -0.153047
+      ],
+      "equal": true
+     },
+     {
+      "pair": "H2, H6",
+      "charges_e": [
+       0.146108,
+       0.146108
+      ],
+      "equal": true
+     },
+     {
+      "pair": "H3, H5",
+      "charges_e": [
+       0.155431,
+       0.155431
+      ],
+      "equal": true
+     },
+     {
+      "pair": "HN11, HN12",
+      "charges_e": [
+       0.417016,
+       0.417016
+      ],
+      "equal": true
+     }
+    ],
+    "pairs_equal": true,
+    "resp_equiv_json_sha256": "e73378d747048905edd80ea914459d19784bc6ef34a8f6eec192df39331f0c97"
+   },
+   "pairs_across_the_zinc": {
+    "rule": "Amber: atoms one or two bonds apart do not interact (excluded); atoms three bonds apart interact with the electrostatics divided by 1.2 and the Lennard-Jones term by 2.0 (1-4); atoms four or more bonds apart interact in full. Checked here for every pair whose bonds run through the zinc",
+    "n_pairs_1_or_2_bonds_apart": 18,
+    "n_pairs_3_bonds_apart": 39,
+    "n_pairs_4_bonds_apart": 80,
+    "1_or_2_bonds_excluded_and_no_1_4_term": true,
+    "3_bonds_one_1_4_term_each_with_the_amber_scaling": true,
+    "4_bonds_neither_excluded_nor_1_4": true,
+    "pairs_1_or_2_bonds_apart": [
+     "HD194:NE2 ... Zn",
+     "HD296:NE2 ... Zn",
+     "HE1119:ND1 ... Zn",
+     "Zn ... SN1304:N2",
+     "HD194:CE1 ... Zn",
+     "HD194:NE2 ... HD296:NE2",
+     "HD194:NE2 ... HE1119:ND1",
+     "HD194:NE2 ... SN1304:N2",
+     "HD194:CD2 ... Zn",
+     "HD296:CE1 ... Zn",
+     "HD296:NE2 ... HE1119:ND1",
+     "HD296:NE2 ... SN1304:N2",
+     "HD296:CD2 ... Zn",
+     "HE1119:CG ... Zn",
+     "HE1119:ND1 ... SN1304:N2",
+     "HE1119:CE1 ... Zn",
+     "Zn ... SN1304:S",
+     "Zn ... SN1304:HN21"
+    ],
+    "pairs_3_bonds_apart_1_4": [
+     "HD194:CG ... Zn",
+     "HD194:ND1 ... Zn",
+     "HD194:CE1 ... HD296:NE2",
+     "HD194:CE1 ... HE1119:ND1",
+     "HD194:CE1 ... SN1304:N2",
+     "HD194:HE1 ... Zn",
+     "HD194:NE2 ... HD296:CE1",
+     "HD194:NE2 ... HD296:CD2",
+     "HD194:NE2 ... HE1119:CG",
+     "HD194:NE2 ... HE1119:CE1",
+     "HD194:NE2 ... SN1304:S",
+     "HD194:NE2 ... SN1304:HN21",
+     "HD194:CD2 ... HD296:NE2",
+     "HD194:CD2 ... HE1119:ND1",
+     "HD194:CD2 ... SN1304:N2",
+     "HD194:HD2 ... Zn",
+     "HD296:CG ... Zn",
+     "HD296:ND1 ... Zn",
+     "HD296:CE1 ... HE1119:ND1",
+     "HD296:CE1 ... SN1304:N2",
+     "HD296:HE1 ... Zn",
+     "HD296:NE2 ... HE1119:CG",
+     "HD296:NE2 ... HE1119:CE1",
+     "HD296:NE2 ... SN1304:S",
+     "HD296:NE2 ... SN1304:HN21",
+     "HD296:CD2 ... HE1119:ND1",
+     "HD296:CD2 ... SN1304:N2",
+     "HD296:HD2 ... Zn",
+     "HE1119:CB ... Zn",
+     "HE1119:CG ... SN1304:N2",
+     "HE1119:ND1 ... SN1304:S",
+     "HE1119:ND1 ... SN1304:HN21",
+     "HE1119:CE1 ... SN1304:N2",
+     "HE1119:HE1 ... Zn",
+     "HE1119:NE2 ... Zn",
+     "HE1119:CD2 ... Zn",
+     "Zn ... SN1304:C4",
+     "Zn ... SN1304:O1",
+     "Zn ... SN1304:O2"
+    ],
+    "zinc_to_sulfonyl_oxygens": "three bonds apart (Zn-N2-S-O): a 1-4 pair, scaled as above"
+   }
+  },
+  "against_the_restrained_system_of_this_start": {
+   "folder": "/root/cqc-sfa-md/systems/restrained/R",
+   "note": "each pair is [this system, the restrained system]",
+   "atoms": [
+    40857,
+    40857
+   ],
+   "water_molecules": [
+    12232,
+    12232
+   ],
+   "crystal_water_molecules": [
+    211,
+    211
+   ],
+   "Na+": [
+    34,
+    34
+   ],
+   "Cl-": [
+    33,
+    33
+   ],
+   "cell_edge_A": [
+    84.1208941,
+    84.1208946
+   ],
+   "ions_replace_the_same_water_molecules": true,
+   "largest_coordinate_difference_A": 0.000608,
+   "same_atoms_at_the_same_places_within_0.005_A": true,
+   "solute_atoms_largest_deviation_after_the_fit_on_CA_A": 0.0007,
+   "solute_atom_with_the_largest_deviation": "HE1118:HB2",
+   "solute_atoms_farther_than_0.01_A": 0
+  },
+  "compared_with": {
+   "other_system": "/root/cqc-sfa-md/systems/bonded_2e/R",
+   "this_set": [
+    "2e",
+    "n2fit"
+   ],
+   "other_set": [
+    "2e",
+    null
+   ],
+   "classes_that_may_differ": [
+    "angle at N2",
+    "torsion about N2-S",
+    "torsion about Zn-N2",
+    "improper at N2"
+   ],
+   "same_number_of_atoms": true,
+   "atoms": 40857,
+   "atoms_that_differ_in": {
+    "name": 0,
+    "residue name": 0,
+    "type": 0,
+    "charge": 0,
+    "mass": 0,
+    "Rmin/2": 0,
+    "epsilon": 0
+   },
+   "atom_types_that_differ": [],
+   "terms": {
+    "bond": {
+     "this": 40855,
+     "other": 40855,
+     "in_one_only": 0,
+     "different": 0
+    },
+    "angle": {
+     "this": 7539,
+     "other": 7539,
+     "in_one_only": 0,
+     "different": 3
+    },
+    "torsion": {
+     "this": 11142,
+     "other": 11142,
+     "in_one_only": 0,
+     "different": 8
+    },
+    "improper": {
+     "this": 858,
+     "other": 857,
+     "in_one_only": 1,
+     "different": 1
+    }
+   },
+   "differences_by_class": {
+    "angle at N2": 3,
+    "improper at N2": 1,
+    "torsion about N2-S": 2,
+    "torsion about Zn-N2": 6
+   },
+   "classes_that_differ_but_may_not": [],
+   "pairs_1_4": {
+    "this": 10878,
+    "other": 10878,
+    "identical_with_their_scaling": true
+   },
+   "excluded_atom_lists_identical": true,
+   "largest_coordinate_difference_A": 0.0,
+   "box_identical": true,
+   "system_inpcrd_same_sha256": true,
+   "selections_json_same_sha256": true,
+   "reference_pdb_same_sha256": true,
+   "system_prmtop_same_sha256": false,
+   "prmtop_sections": {
+    "n": 44,
+    "identical_as_text": 34,
+    "that_differ": [
+     "ANGLE_EQUIL_VALUE",
+     "ANGLE_FORCE_CONSTANT",
+     "DIHEDRALS_INC_HYDROGEN",
+     "DIHEDRALS_WITHOUT_HYDROGEN",
+     "DIHEDRAL_FORCE_CONSTANT",
+     "DIHEDRAL_PERIODICITY",
+     "DIHEDRAL_PHASE",
+     "POINTERS",
+     "SCEE_SCALE_FACTOR",
+     "SCNB_SCALE_FACTOR"
+    ]
+   },
+   "only_the_allowed_terms_differ": true,
+   "other_model": "bonded_2e",
+   "other_system_prmtop_sha256": "7ff894cfda73a2bb8bb68cc3b1198328b7f78a413fb15768de0b82f02395d732",
+   "n2_terms_file_same_sha256": false,
+   "terms_that_differ": "listed in md/topology/bonded_2e_n2fit/R/compare_with_bonded_2e.json (12 terms)"
+  },
+  "ligand_parameters": {
+   "repaired_terms": [
+    {
+     "term": "bond N2-S",
+     "types_free_anion": "n2-sy",
+     "repair_frcmod": [
+      461.21,
+      1.5906
+     ],
+     "in_prmtop": [
+      461.21,
+      1.5906
+     ],
+     "in_force": true
+    },
+    {
+     "term": "angle C4-S-N2",
+     "types_free_anion": "ca-sy-n2",
+     "repair_frcmod": [
+      101.19,
+      117.133
+     ],
+     "in_prmtop": [
+      101.19,
+      117.1331
+     ],
+     "in_force": true
+    },
+    {
+     "term": "angle HN21-N2-S",
+     "types_free_anion": "hn-n2-sy",
+     "repair_frcmod": [
+      61.55,
+      118.059
+     ],
+     "in_prmtop": [
+      51.074,
+      117.1271
+     ],
+     "in_force": true,
+     "types_in_this_system": "hn-Y4-sy",
+     "expected_from": "n2_terms.frcmod, which is loaded after the repair frcmod and MCPB.py's frcmod",
+     "n2_terms_file": [
+      51.074,
+      117.127
+     ]
+    },
+    {
+     "term": "torsion HN21-N2-S-C4",
+     "types_free_anion": "hn-n2-sy-ca",
+     "repair_frcmod_k_per_phase": [
+      [
+       0.2624,
+       1,
+       180.0
+      ],
+      [
+       2.703,
+       2,
+       0.0
+      ]
+     ],
+     "gaff2_as_assigned_k_per_phase": [
+      [
+       0.5,
+       3,
+       180.0
+      ],
+      [
+       6.8,
+       1,
+       180.0
+      ]
+     ],
+     "in_prmtop_k_per_phase": [
+      [
+       1.2233,
+       3,
+       0.0
+      ],
+      [
+       2.124,
+       1,
+       180.0
+      ],
+      [
+       2.8826,
+       2,
+       0.0
+      ]
+     ],
+     "in_force": true,
+     "types_in_this_system": "hn-Y4-sy-ca",
+     "expected_from": "n2_terms.frcmod, which is loaded after the repair frcmod and MCPB.py's frcmod",
+     "n2_terms_file_k_per_phase": [
+      [
+       1.2233,
+       3,
+       0.0
+      ],
+      [
+       2.124,
+       1,
+       180.0
+      ],
+      [
+       2.8826,
+       2,
+       0.0
+      ]
+     ]
+    },
+    {
+     "term": "torsion HN21-N2-S-O1",
+     "types_free_anion": "hn-n2-sy-o",
+     "repair_frcmod_k_per_phase": [
+      [
+       0.0,
+       2,
+       0.0
+      ]
+     ],
+     "gaff2_as_assigned_k_per_phase": [
+      [
+       0.5,
+       3,
+       180.0
+      ],
+      [
+       6.8,
+       1,
+       180.0
+      ]
+     ],
+     "in_prmtop_k_per_phase": [
+      [
+       0.0,
+       2,
+       0.0
+      ]
+     ],
+     "in_force": true
+    },
+    {
+     "term": "torsion HN21-N2-S-O2",
+     "types_free_anion": "hn-n2-sy-o",
+     "repair_frcmod_k_per_phase": [
+      [
+       0.0,
+       2,
+       0.0
+      ]
+     ],
+     "gaff2_as_assigned_k_per_phase": [
+      [
+       0.5,
+       3,
+       180.0
+      ],
+      [
+       6.8,
+       1,
+       180.0
+      ]
+     ],
+     "in_prmtop_k_per_phase": [
+      [
+       0.0,
+       2,
+       0.0
+      ]
+     ],
+     "in_force": true
+    }
+   ],
+   "all_ligand_terms_equal_to_md_ligand_sfa_anion_repaired_prmtop": {
+    "bonds": true,
+    "angles": false,
+    "dihedrals": false,
+    "impropers": true
+   },
+   "terms_that_differ_from_that_topology": {
+    "bonds": [],
+    "angles": [
+     "HN21-N2-S"
+    ],
+    "dihedrals": [
+     "C4-S-N2-HN21"
+    ],
+    "impropers": []
+   },
+   "terms": {
+    "bonds": {
+     "C1-C2": [
+      354.25,
+      1.3986
+     ],
+     "C2-C3": [
+      354.25,
+      1.3986
+     ],
+     "C3-C4": [
+      354.25,
+      1.3986
+     ],
+     "C4-C5": [
+      354.25,
+      1.3986
+     ],
+     "C1-C6": [
+      354.25,
+      1.3986
+     ],
+     "C5-C6": [
+      354.25,
+      1.3986
+     ],
+     "C1-N1": [
+      342.3,
+      1.3744
+     ],
+     "C4-S": [
+      209.82,
+      1.7913
+     ],
+     "N2-S": [
+      461.21,
+      1.5906
+     ],
+     "O1-S": [
+      614.68,
+      1.4656
+     ],
+     "O2-S": [
+      614.68,
+      1.4656
+     ],
+     "C2-H2": [
+      360.69,
+      1.086
+     ],
+     "C3-H3": [
+      360.69,
+      1.086
+     ],
+     "C5-H5": [
+      360.69,
+      1.086
+     ],
+     "C6-H6": [
+      360.69,
+      1.086
+     ],
+     "HN11-N1": [
+      477.54,
+      1.0114
+     ],
+     "HN12-N1": [
+      477.54,
+      1.0114
+     ],
+     "HN21-N2": [
+      454.59,
+      1.0221
+     ]
+    },
+    "angles": {
+     "C1-C2-C3": [
+      63.67,
+      120.0201
+     ],
+     "C2-C3-C4": [
+      63.67,
+      120.0201
+     ],
+     "C3-C4-C5": [
+      63.67,
+      120.0201
+     ],
+     "C1-C6-C5": [
+      63.67,
+      120.0201
+     ],
+     "C2-C1-C6": [
+      63.67,
+      120.0201
+     ],
+     "C4-C5-C6": [
+      63.67,
+      120.0201
+     ],
+     "C2-C1-N1": [
+      67.91,
+      120.9401
+     ],
+     "C6-C1-N1": [
+      67.91,
+      120.9401
+     ],
+     "C4-S-N2": [
+      101.19,
+      117.1331
+     ],
+     "C4-S-O1": [
+      120.43,
+      108.34
+     ],
+     "N2-S-O1": [
+      132.73,
+      122.1801
+     ],
+     "C4-S-O2": [
+      120.43,
+      108.34
+     ],
+     "N2-S-O2": [
+      132.73,
+      122.1801
+     ],
+     "O1-S-O2": [
+      157.75,
+      121.3801
+     ],
+     "C3-C4-S": [
+      63.08,
+      119.4101
+     ],
+     "C5-C4-S": [
+      63.08,
+      119.4101
+     ],
+     "C1-C2-H2": [
+      44.9,
+      119.8801
+     ],
+     "C3-C2-H2": [
+      44.9,
+      119.8801
+     ],
+     "C2-C3-H3": [
+      44.9,
+      119.8801
+     ],
+     "C4-C3-H3": [
+      44.9,
+      119.8801
+     ],
+     "C4-C5-H5": [
+      44.9,
+      119.8801
+     ],
+     "C6-C5-H5": [
+      44.9,
+      119.8801
+     ],
+     "C1-C6-H6": [
+      44.9,
+      119.8801
+     ],
+     "C5-C6-H6": [
+      44.9,
+      119.8801
+     ],
+     "C1-N1-HN11": [
+      57.71,
+      116.7301
+     ],
+     "C1-N1-HN12": [
+      57.71,
+      116.7301
+     ],
+     "HN11-N1-HN12": [
+      46.36,
+      115.28
+     ],
+     "HN21-N2-S": [
+      51.074,
+      117.1271
+     ]
+    },
+    "dihedrals": {
+     "C1-C2-C3-C4": [
+      [
+       3.625,
+       2,
+       180.0,
+       1.2,
+       2.0
+      ]
+     ],
+     "C1-C6-C5-C4": [
+      [
+       3.625,
+       2,
+       180.0,
+       1.2,
+       2.0
+      ]
+     ],
+     "C2-C3-C4-C5": [
+      [
+       3.625,
+       2,
+       180.0,
+       1.2,
+       2.0
+      ]
+     ],
+     "C2-C1-C6-C5": [
+      [
+       3.625,
+       2,
+       180.0,
+       1.2,
+       2.0
+      ]
+     ],
+     "C3-C2-C1-C6": [
+      [
+       3.625,
+       2,
+       180.0,
+       1.2,
+       2.0
+      ]
+     ],
+     "C3-C4-C5-C6": [
+      [
+       3.625,
+       2,
+       180.0,
+       1.2,
+       2.0
+      ]
+     ],
+     "C3-C2-C1-N1": [
+      [
+       3.625,
+       2,
+       180.0,
+       1.2,
+       2.0
+      ]
+     ],
+     "C5-C6-C1-N1": [
+      [
+       3.625,
+       2,
+       180.0,
+       1.2,
+       2.0
+      ]
+     ],
+     "C3-C4-S-N2": [
+      [
+       1.3,
+       2,
+       180.0,
+       1.2,
+       2.0
+      ]
+     ],
+     "C5-C4-S-N2": [
+      [
+       1.3,
+       2,
+       180.0,
+       1.2,
+       2.0
+      ]
+     ],
+     "C3-C4-S-O1": [
+      [
+       1.3,
+       2,
+       180.0,
+       1.2,
+       2.0
+      ]
+     ],
+     "C5-C4-S-O1": [
+      [
+       1.3,
+       2,
+       180.0,
+       1.2,
+       2.0
+      ]
+     ],
+     "C3-C4-S-O2": [
+      [
+       1.3,
+       2,
+       180.0,
+       1.2,
+       2.0
+      ]
+     ],
+     "C5-C4-S-O2": [
+      [
+       1.3,
+       2,
+       180.0,
+       1.2,
+       2.0
+      ]
+     ],
+     "C2-C3-C4-S": [
+      [
+       3.625,
+       2,
+       180.0,
+       1.2,
+       2.0
+      ]
+     ],
+     "C6-C5-C4-S": [
+      [
+       3.625,
+       2,
+       180.0,
+       1.2,
+       2.0
+      ]
+     ],
+     "C6-C1-C2-H2": [
+      [
+       3.625,
+       2,
+       180.0,
+       1.2,
+       2.0
+      ]
+     ],
+     "H2-C2-C1-N1": [
+      [
+       3.625,
+       2,
+       180.0,
+       1.2,
+       2.0
+      ]
+     ],
+     "C4-C3-C2-H2": [
+      [
+       3.625,
+       2,
+       180.0,
+       1.2,
+       2.0
+      ]
+     ],
+     "C1-C2-C3-H3": [
+      [
+       3.625,
+       2,
+       180.0,
+       1.2,
+       2.0
+      ]
+     ],
+     "H2-C2-C3-H3": [
+      [
+       3.625,
+       2,
+       180.0,
+       1.2,
+       2.0
+      ]
+     ],
+     "C5-C4-C3-H3": [
+      [
+       3.625,
+       2,
+       180.0,
+       1.2,
+       2.0
+      ]
+     ],
+     "H3-C3-C4-S": [
+      [
+       3.625,
+       2,
+       180.0,
+       1.2,
+       2.0
+      ]
+     ],
+     "C3-C4-C5-H5": [
+      [
+       3.625,
+       2,
+       180.0,
+       1.2,
+       2.0
+      ]
+     ],
+     "H5-C5-C4-S": [
+      [
+       3.625,
+       2,
+       180.0,
+       1.2,
+       2.0
+      ]
+     ],
+     "C1-C6-C5-H5": [
+      [
+       3.625,
+       2,
+       180.0,
+       1.2,
+       2.0
+      ]
+     ],
+     "C2-C1-C6-H6": [
+      [
+       3.625,
+       2,
+       180.0,
+       1.2,
+       2.0
+      ]
+     ],
+     "H6-C6-C1-N1": [
+      [
+       3.625,
+       2,
+       180.0,
+       1.2,
+       2.0
+      ]
+     ],
+     "C4-C5-C6-H6": [
+      [
+       3.625,
+       2,
+       180.0,
+       1.2,
+       2.0
+      ]
+     ],
+     "H5-C5-C6-H6": [
+      [
+       3.625,
+       2,
+       180.0,
+       1.2,
+       2.0
+      ]
+     ],
+     "C2-C1-N1-HN11": [
+      [
+       1.05,
+       2,
+       180.0,
+       1.2,
+       2.0
+      ]
+     ],
+     "C6-C1-N1-HN11": [
+      [
+       1.05,
+       2,
+       180.0,
+       1.2,
+       2.0
+      ]
+     ],
+     "C2-C1-N1-HN12": [
+      [
+       1.05,
+       2,
+       180.0,
+       1.2,
+       2.0
+      ]
+     ],
+     "C6-C1-N1-HN12": [
+      [
+       1.05,
+       2,
+       180.0,
+       1.2,
+       2.0
+      ]
+     ],
+     "C4-S-N2-HN21": [
+      [
+       1.2233,
+       3,
+       0.0,
+       1.2,
+       2.0
+      ],
+      [
+       2.124,
+       1,
+       180.0,
+       1.2,
+       2.0
+      ],
+      [
+       2.8826,
+       2,
+       0.0,
+       1.2,
+       2.0
+      ]
+     ],
+     "HN21-N2-S-O1": [
+      [
+       0.0,
+       2,
+       0.0,
+       1.2,
+       2.0
+      ]
+     ],
+     "HN21-N2-S-O2": [
+      [
+       0.0,
+       2,
+       0.0,
+       1.2,
+       2.0
+      ]
+     ]
+    },
+    "impropers": {
+     "C2-C6-C1-N1": [
+      [
+       10.5,
+       2,
+       180.0
+      ]
+     ],
+     "C3-C5-C4-S": [
+      [
+       10.5,
+       2,
+       180.0
+      ]
+     ],
+     "C1-C3-C2-H2": [
+      [
+       1.1,
+       2,
+       180.0
+      ]
+     ],
+     "C2-C4-C3-H3": [
+      [
+       1.1,
+       2,
+       180.0
+      ]
+     ],
+     "C4-C6-C5-H5": [
+      [
+       1.1,
+       2,
+       180.0
+      ]
+     ],
+     "C1-C5-C6-H6": [
+      [
+       1.1,
+       2,
+       180.0
+      ]
+     ],
+     "C1-HN11-N1-HN12": [
+      [
+       1.1,
+       2,
+       180.0
+      ]
+     ]
+    }
+   },
+   "charges_e": {
+    "C1": 0.464944,
+    "C2": -0.274695,
+    "C3": -0.153047,
+    "C4": 0.080205,
+    "C5": -0.153047,
+    "C6": -0.274695,
+    "N1": -0.954927,
+    "N2": -0.914224,
+    "O1": -0.48855,
+    "O2": -0.48855,
+    "S": 0.790275,
+    "H2": 0.146108,
+    "H3": 0.155431,
+    "H5": 0.155431,
+    "H6": 0.146108,
+    "HN11": 0.417016,
+    "HN12": 0.417016,
+    "HN21": 0.398775
+   },
+   "charge_sum_e": -0.530426,
+   "charges_are_those_of_sfa_anion_mol2": false,
+   "n_terms": {
+    "bonds": 18,
+    "angles": 28,
+    "dihedrals": 37,
+    "impropers": 7
+   }
+  },
+  "composition": {
+   "atoms": 40857,
+   "residues": 12560,
+   "protein_atoms": 4075,
+   "protein_residues_with_ACE": 259,
+   "zinc_atoms": 1,
+   "ligand_atoms": 18,
+   "solute_atoms": 4094,
+   "water_molecules": 12232,
+   "crystal_water_molecules": 211,
+   "added_water_molecules": 12021,
+   "Na+": 34,
+   "Cl-": 33,
+   "plan_atoms": 25600,
+   "atoms_over_plan_percent": 59.6
+  },
+  "charge": {
+   "solute_with_crystal_water_e": -1.0,
+   "net_e": -0.0
+  },
+  "box": {
+   "shape": "truncated octahedron (tleap solvateOct; triclinic cell with three equal edges)",
+   "solvateOct_buffer_A": 10.0,
+   "tleap_solvation_lines": [
+    "Scaling up box by a factor of 1.188434 to meet diagonal cut criterion",
+    "Solute vdw bounding box:              52.407 47.265 60.892",
+    "Total bounding box for atom centers:  96.134 96.134 96.134",
+    "(box expansion for 'iso' is  27.8%)",
+    "Volume: 458236.598 A^3 (oct)",
+    "Total mass 250883.384 amu,  Density 0.909 g/cc",
+    "Added 12088 residues."
+   ],
+   "edge_A": 84.1208941,
+   "angles_deg": [
+    109.471219,
+    109.471219,
+    109.471219
+   ],
+   "volume_A3": 458236.6,
+   "volume_nm3": 458.237,
+   "mass_amu": 251627.82,
+   "density_as_built_g_per_cm3": 0.9118,
+   "nearest_image_distance_A": 84.121,
+   "solute_largest_atom_atom_distance_A": 60.76,
+   "solute_to_own_image_smallest_distance_as_built_A": 32.39,
+   "solute_to_own_image_smallest_distance_any_orientation_A": 23.36,
+   "note": "as built the box is larger than it will be at 1 bar (see density_as_built); 'any orientation' is the cell edge minus the largest extent of the solute, a lower bound for a rigid solute"
+  },
+  "ions": {
+   "target_mol_per_l": 0.15,
+   "rule": "pairs = round(c * N_water / c_water) with c = 0.15 mol/L, c_water = 55.3 mol/L (water at 300 K) and N_water the water molecules after solvateOct (crystal water included): the concentration in the volume of the solvent. Then one Na+ per negative charge of the solute.",
+   "n_water_before_ions": 12299,
+   "pairs": 33,
+   "neutralising": {
+    "Na+": 1,
+    "Cl-": 0
+   },
+   "for_comparison_pairs_from_box_volume_as_built": 41.4,
+   "concentration_in_box_volume_as_built_mol_per_l": 0.1196,
+   "placement": {
+    "rule": "each ion replaces one water molecule added by solvateOct, never a crystal water: candidates are the added molecules whose O is at least 6.0 A from every atom of protein, zinc, ligand and crystal water; they are ordered by sha256('cqc-sfa-md ion sites|<seed>|<k>') (k = place among the added molecules, from 0) and taken in that order if at least 6.0 A (minimum image) from every site already taken; the kinds alternate Na+, Cl- in the order taken",
+    "seed": 20261005,
+    "candidates": 11002,
+    "smallest_ion_to_solute_distance_A": 6.35,
+    "smallest_ion_to_ion_distance_A": 6.16,
+    "why_not_tleap": "addIonsRand has no seed (its help text: the result differs between invocations) and may replace a crystal water; addIons puts every ion on the protein surface"
+   },
+   "sites": [
+    {
+     "ion": "Na+",
+     "replaces_added_water_number": 1354,
+     "pass1_residue_number": 1826,
+     "xyz_inpcrd_frame_A": [
+      62.5235,
+      37.5824,
+      66.6388
+     ]
+    },
+    {
+     "ion": "Na+",
+     "replaces_added_water_number": 426,
+     "pass1_residue_number": 898,
+     "xyz_inpcrd_frame_A": [
+      75.541,
+      34.4004,
+      72.2574
+     ]
+    },
+    {
+     "ion": "Na+",
+     "replaces_added_water_number": 9642,
+     "pass1_residue_number": 10114,
+     "xyz_inpcrd_frame_A": [
+      13.0678,
+      63.3536,
+      34.3737
+     ]
+    },
+    {
+     "ion": "Na+",
+     "replaces_added_water_number": 2730,
+     "pass1_residue_number": 3202,
+     "xyz_inpcrd_frame_A": [
+      80.7817,
+      39.275,
+      44.7074
+     ]
+    },
+    {
+     "ion": "Na+",
+     "replaces_added_water_number": 1373,
+     "pass1_residue_number": 1845,
+     "xyz_inpcrd_frame_A": [
+      53.2056,
+      41.5031,
+      73.8232
+     ]
+    },
+    {
+     "ion": "Na+",
+     "replaces_added_water_number": 3159,
+     "pass1_residue_number": 3631,
+     "xyz_inpcrd_frame_A": [
+      6.7469,
+      33.6088,
+      67.2016
+     ]
+    },
+    {
+     "ion": "Na+",
+     "replaces_added_water_number": 4644,
+     "pass1_residue_number": 5116,
+     "xyz_inpcrd_frame_A": [
+      40.946,
+      -0.2983,
+      40.6821
+     ]
+    },
+    {
+     "ion": "Na+",
+     "replaces_added_water_number": 5560,
+     "pass1_residue_number": 6032,
+     "xyz_inpcrd_frame_A": [
+      73.8302,
+      39.1012,
+      22.8645
+     ]
+    },
+    {
+     "ion": "Na+",
+     "replaces_added_water_number": 10474,
+     "pass1_residue_number": 10946,
+     "xyz_inpcrd_frame_A": [
+      22.8057,
+      27.53,
+      11.9342
+     ]
+    },
+    {
+     "ion": "Na+",
+     "replaces_added_water_number": 9140,
+     "pass1_residue_number": 9612,
+     "xyz_inpcrd_frame_A": [
+      48.3053,
+      23.8628,
+      1.7832
+     ]
+    },
+    {
+     "ion": "Na+",
+     "replaces_added_water_number": 5265,
+     "pass1_residue_number": 5737,
+     "xyz_inpcrd_frame_A": [
+      57.8227,
+      18.9705,
+      25.4246
+     ]
+    },
+    {
+     "ion": "Na+",
+     "replaces_added_water_number": 9333,
+     "pass1_residue_number": 9805,
+     "xyz_inpcrd_frame_A": [
+      7.0532,
+      57.2081,
+      43.5251
+     ]
+    },
+    {
+     "ion": "Na+",
+     "replaces_added_water_number": 7332,
+     "pass1_residue_number": 7804,
+     "xyz_inpcrd_frame_A": [
+      12.1148,
+      20.1264,
+      31.0858
+     ]
+    },
+    {
+     "ion": "Na+",
+     "replaces_added_water_number": 6278,
+     "pass1_residue_number": 6750,
+     "xyz_inpcrd_frame_A": [
+      23.6318,
+      79.5426,
+      69.1028
+     ]
+    },
+    {
+     "ion": "Na+",
+     "replaces_added_water_number": 4564,
+     "pass1_residue_number": 5036,
+     "xyz_inpcrd_frame_A": [
+      29.7895,
+      1.8657,
+      52.2577
+     ]
+    },
+    {
+     "ion": "Na+",
+     "replaces_added_water_number": 9696,
+     "pass1_residue_number": 10168,
+     "xyz_inpcrd_frame_A": [
+      3.2664,
+      29.3287,
+      20.4207
+     ]
+    },
+    {
+     "ion": "Na+",
+     "replaces_added_water_number": 377,
+     "pass1_residue_number": 849,
+     "xyz_inpcrd_frame_A": [
+      60.9438,
+      18.2796,
+      67.2016
+     ]
+    },
+    {
+     "ion": "Na+",
+     "replaces_added_water_number": 7208,
+     "pass1_residue_number": 7680,
+     "xyz_inpcrd_frame_A": [
+      8.6669,
+      24.9291,
+      49.5817
+     ]
+    },
+    {
+     "ion": "Na+",
+     "replaces_added_water_number": 3928,
+     "pass1_residue_number": 4400,
+     "xyz_inpcrd_frame_A": [
+      23.4311,
+      19.207,
+      63.8233
+     ]
+    },
+    {
+     "ion": "Na+",
+     "replaces_added_water_number": 6694,
+     "pass1_residue_number": 7166,
+     "xyz_inpcrd_frame_A": [
+      22.6847,
+      75.2132,
+      51.6053
+     ]
+    },
+    {
+     "ion": "Na+",
+     "replaces_added_water_number": 10445,
+     "pass1_residue_number": 10917,
+     "xyz_inpcrd_frame_A": [
+      11.3278,
+      24.0255,
+      24.7984
+     ]
+    },
+    {
+     "ion": "Na+",
+     "replaces_added_water_number": 5484,
+     "pass1_residue_number": 5956,
+     "xyz_inpcrd_frame_A": [
+      65.5247,
+      31.6901,
+      38.0738
+     ]
+    },
+    {
+     "ion": "Na+",
+     "replaces_added_water_number": 10378,
+     "pass1_residue_number": 10850,
+     "xyz_inpcrd_frame_A": [
+      52.8882,
+      86.9059,
+      32.6877
+     ]
+    },
+    {
+     "ion": "Na+",
+     "replaces_added_water_number": 3078,
+     "pass1_residue_number": 3550,
+     "xyz_inpcrd_frame_A": [
+      28.7293,
+      27.3771,
+      67.9259
+     ]
+    },
+    {
+     "ion": "Na+",
+     "replaces_added_water_number": 9785,
+     "pass1_residue_number": 10257,
+     "xyz_inpcrd_frame_A": [
+      2.0604,
+      28.7095,
+      29.5605
+     ]
+    },
+    {
+     "ion": "Na+",
+     "replaces_added_water_number": 5866,
+     "pass1_residue_number": 6338,
+     "xyz_inpcrd_frame_A": [
+      64.7016,
+      19.0712,
+      19.1556
+     ]
+    },
+    {
+     "ion": "Na+",
+     "replaces_added_water_number": 4163,
+     "pass1_residue_number": 4635,
+     "xyz_inpcrd_frame_A": [
+      43.0229,
+      57.3942,
+      58.982
+     ]
+    },
+    {
+     "ion": "Na+",
+     "replaces_added_water_number": 3985,
+     "pass1_residue_number": 4457,
+     "xyz_inpcrd_frame_A": [
+      27.4048,
+      25.5333,
+      58.3051
+     ]
+    },
+    {
+     "ion": "Na+",
+     "replaces_added_water_number": 3023,
+     "pass1_residue_number": 3495,
+     "xyz_inpcrd_frame_A": [
+      35.0237,
+      76.9199,
+      70.771
+     ]
+    },
+    {
+     "ion": "Na+",
+     "replaces_added_water_number": 8916,
+     "pass1_residue_number": 9388,
+     "xyz_inpcrd_frame_A": [
+      66.9893,
+      48.8842,
+      16.0009
+     ]
+    },
+    {
+     "ion": "Na+",
+     "replaces_added_water_number": 752,
+     "pass1_residue_number": 1224,
+     "xyz_inpcrd_frame_A": [
+      35.0237,
+      30.9323,
+      70.771
+     ]
+    },
+    {
+     "ion": "Na+",
+     "replaces_added_water_number": 5989,
+     "pass1_residue_number": 6461,
+     "xyz_inpcrd_frame_A": [
+      71.9593,
+      22.008,
+      19.1146
+     ]
+    },
+    {
+     "ion": "Na+",
+     "replaces_added_water_number": 9803,
+     "pass1_residue_number": 10275,
+     "xyz_inpcrd_frame_A": [
+      11.304,
+      34.0405,
+      34.3438
+     ]
+    },
+    {
+     "ion": "Na+",
+     "replaces_added_water_number": 6341,
+     "pass1_residue_number": 6813,
+     "xyz_inpcrd_frame_A": [
+      3.1035,
+      36.9767,
+      53.4407
+     ]
+    },
+    {
+     "ion": "Cl-",
+     "replaces_added_water_number": 8479,
+     "pass1_residue_number": 8951,
+     "xyz_inpcrd_frame_A": [
+      34.5923,
+      7.5487,
+      27.9508
+     ]
+    },
+    {
+     "ion": "Cl-",
+     "replaces_added_water_number": 1864,
+     "pass1_residue_number": 2336,
+     "xyz_inpcrd_frame_A": [
+      57.4767,
+      24.5839,
+      50.3259
+     ]
+    },
+    {
+     "ion": "Cl-",
+     "replaces_added_water_number": 3379,
+     "pass1_residue_number": 3851,
+     "xyz_inpcrd_frame_A": [
+      38.0609,
+      41.0047,
+      71.2553
+     ]
+    },
+    {
+     "ion": "Cl-",
+     "replaces_added_water_number": 9207,
+     "pass1_residue_number": 9679,
+     "xyz_inpcrd_frame_A": [
+      70.0705,
+      38.4317,
+      1.9206
+     ]
+    },
+    {
+     "ion": "Cl-",
+     "replaces_added_water_number": 9562,
+     "pass1_residue_number": 10034,
+     "xyz_inpcrd_frame_A": [
+      15.3479,
+      65.5134,
+      48.5286
+     ]
+    },
+    {
+     "ion": "Cl-",
+     "replaces_added_water_number": 11916,
+     "pass1_residue_number": 12388,
+     "xyz_inpcrd_frame_A": [
+      27.2215,
+      48.6693,
+      4.878
+     ]
+    },
+    {
+     "ion": "Cl-",
+     "replaces_added_water_number": 3903,
+     "pass1_residue_number": 4375,
+     "xyz_inpcrd_frame_A": [
+      25.541,
+      18.8379,
+      56.7367
+     ]
+    },
+    {
+     "ion": "Cl-",
+     "replaces_added_water_number": 10357,
+     "pass1_residue_number": 10829,
+     "xyz_inpcrd_frame_A": [
+      25.9415,
+      78.2405,
+      28.119
+     ]
+    },
+    {
+     "ion": "Cl-",
+     "replaces_added_water_number": 1865,
+     "pass1_residue_number": 2337,
+     "xyz_inpcrd_frame_A": [
+      53.9634,
+      10.663,
+      66.9873
+     ]
+    },
+    {
+     "ion": "Cl-",
+     "replaces_added_water_number": 9134,
+     "pass1_residue_number": 9606,
+     "xyz_inpcrd_frame_A": [
+      48.8722,
+      18.9306,
+      5.9002
+     ]
+    },
+    {
+     "ion": "Cl-",
+     "replaces_added_water_number": 847,
+     "pass1_residue_number": 1319,
+     "xyz_inpcrd_frame_A": [
+      51.3277,
+      51.1065,
+      71.8471
+     ]
+    },
+    {
+     "ion": "Cl-",
+     "replaces_added_water_number": 3923,
+     "pass1_residue_number": 4395,
+     "xyz_inpcrd_frame_A": [
+      18.5148,
+      18.5559,
+      55.5063
+     ]
+    },
+    {
+     "ion": "Cl-",
+     "replaces_added_water_number": 11036,
+     "pass1_residue_number": 11508,
+     "xyz_inpcrd_frame_A": [
+      49.0836,
+      79.1854,
+      18.4786
+     ]
+    },
+    {
+     "ion": "Cl-",
+     "replaces_added_water_number": 1877,
+     "pass1_residue_number": 2349,
+     "xyz_inpcrd_frame_A": [
+      58.3757,
+      12.9428,
+      52.4215
+     ]
+    },
+    {
+     "ion": "Cl-",
+     "replaces_added_water_number": 11330,
+     "pass1_residue_number": 11802,
+     "xyz_inpcrd_frame_A": [
+      40.6248,
+      52.8449,
+      2.4629
+     ]
+    },
+    {
+     "ion": "Cl-",
+     "replaces_added_water_number": 9993,
+     "pass1_residue_number": 10465,
+     "xyz_inpcrd_frame_A": [
+      20.6245,
+      56.6007,
+      18.4832
+     ]
+    },
+    {
+     "ion": "Cl-",
+     "replaces_added_water_number": 6708,
+     "pass1_residue_number": 7180,
+     "xyz_inpcrd_frame_A": [
+      23.7192,
+      63.7574,
+      50.2497
+     ]
+    },
+    {
+     "ion": "Cl-",
+     "replaces_added_water_number": 8215,
+     "pass1_residue_number": 8687,
+     "xyz_inpcrd_frame_A": [
+      62.3822,
+      64.9977,
+      24.2245
+     ]
+    },
+    {
+     "ion": "Cl-",
+     "replaces_added_water_number": 11215,
+     "pass1_residue_number": 11687,
+     "xyz_inpcrd_frame_A": [
+      44.0856,
+      36.1802,
+      -3.8036
+     ]
+    },
+    {
+     "ion": "Cl-",
+     "replaces_added_water_number": 8194,
+     "pass1_residue_number": 8666,
+     "xyz_inpcrd_frame_A": [
+      72.4975,
+      65.8577,
+      30.8315
+     ]
+    },
+    {
+     "ion": "Cl-",
+     "replaces_added_water_number": 6858,
+     "pass1_residue_number": 7330,
+     "xyz_inpcrd_frame_A": [
+      25.8005,
+      56.1344,
+      50.3745
+     ]
+    },
+    {
+     "ion": "Cl-",
+     "replaces_added_water_number": 781,
+     "pass1_residue_number": 1253,
+     "xyz_inpcrd_frame_A": [
+      44.9205,
+      48.2651,
+      72.6193
+     ]
+    },
+    {
+     "ion": "Cl-",
+     "replaces_added_water_number": 2866,
+     "pass1_residue_number": 3338,
+     "xyz_inpcrd_frame_A": [
+      7.0561,
+      44.6006,
+      76.5345
+     ]
+    },
+    {
+     "ion": "Cl-",
+     "replaces_added_water_number": 11072,
+     "pass1_residue_number": 11544,
+     "xyz_inpcrd_frame_A": [
+      39.5742,
+      67.5944,
+      10.1571
+     ]
+    },
+    {
+     "ion": "Cl-",
+     "replaces_added_water_number": 10615,
+     "pass1_residue_number": 11087,
+     "xyz_inpcrd_frame_A": [
+      24.9586,
+      47.5777,
+      10.4995
+     ]
+    },
+    {
+     "ion": "Cl-",
+     "replaces_added_water_number": 3238,
+     "pass1_residue_number": 3710,
+     "xyz_inpcrd_frame_A": [
+      23.7192,
+      40.7636,
+      63.5251
+     ]
+    },
+    {
+     "ion": "Cl-",
+     "replaces_added_water_number": 7599,
+     "pass1_residue_number": 8071,
+     "xyz_inpcrd_frame_A": [
+      44.2332,
+      78.949,
+      42.7204
+     ]
+    },
+    {
+     "ion": "Cl-",
+     "replaces_added_water_number": 5585,
+     "pass1_residue_number": 6057,
+     "xyz_inpcrd_frame_A": [
+      67.0966,
+      28.7095,
+      29.5605
+     ]
+    },
+    {
+     "ion": "Cl-",
+     "replaces_added_water_number": 7094,
+     "pass1_residue_number": 7566,
+     "xyz_inpcrd_frame_A": [
+      2.9726,
+      12.2829,
+      30.5663
+     ]
+    },
+    {
+     "ion": "Cl-",
+     "replaces_added_water_number": 4325,
+     "pass1_residue_number": 4797,
+     "xyz_inpcrd_frame_A": [
+      57.4565,
+      76.0209,
+      59.6783
+     ]
+    },
+    {
+     "ion": "Cl-",
+     "replaces_added_water_number": 6112,
+     "pass1_residue_number": 6584,
+     "xyz_inpcrd_frame_A": [
+      8.4278,
+      45.6893,
+      67.233
+     ]
+    },
+    {
+     "ion": "Cl-",
+     "replaces_added_water_number": 3068,
+     "pass1_residue_number": 3540,
+     "xyz_inpcrd_frame_A": [
+      19.7832,
+      24.592,
+      62.0598
+     ]
+    },
+    {
+     "ion": "Cl-",
+     "replaces_added_water_number": 7898,
+     "pass1_residue_number": 8370,
+     "xyz_inpcrd_frame_A": [
+      21.5649,
+      14.8219,
+      20.6676
+     ]
+    }
+   ]
+  },
+  "zinc_restraints": null,
+  "tleap": {
+   "pass1": {
+    "errors": 0,
+    "warnings": 48,
+    "notes": 2
+   },
+   "pass2": {
+    "errors": 0,
+    "warnings": 46,
+    "notes": 1
+   },
+   "warnings_pass2": {
+    "close_contacts_with_a_hydrogen": 44,
+    "shortest_close_contact_A": 0.897,
+    "close_contacts_with_zinc_or_ligand": [
+     {
+      "distance_A": 1.458,
+      "atoms": "ASN176:HD22 - WAT359:H2"
+     }
+    ],
+    "close_contacts_between_heavy_atoms": [],
+    "charge_not_zero": [
+     "The unperturbed charge of the unit (-1.000000) is not zero.",
+     "The unperturbed charge of the unit (-1.000000) is not zero."
+    ],
+    "one_sided_connection": [],
+    "one_sided_connection_expected": 0,
+    "other": []
+   },
+   "warnings_pass1_other": []
+  },
+  "water_at_the_site": {
+   "crystal_water_O_within_3.5_A_of_a_ligand_heavy_atom": 1,
+   "added_water_O_within_3.5_A_of_a_ligand_heavy_atom": 0,
+   "crystal_water_O_within_2.5_A_of_a_position_of_the_crystal_ligand": 0,
+   "added_water_O_within_2.5_A_of_a_position_of_the_crystal_ligand": 0,
+   "nearest_added_water_O_to_a_ligand_heavy_atom_A": 5.89,
+   "nearest_added_water_O_to_the_zinc_A": 10.45,
+   "nearest_atom_to_each_position_of_the_crystal_ligand_A": {
+    "C1": 1.95,
+    "C2": 1.73,
+    "C3": 1.55,
+    "C4": 0.63,
+    "C5": 1.47,
+    "C6": 2.25,
+    "N1": 2.04,
+    "N2": 0.41,
+    "O1": 1.98,
+    "O2": 1.97,
+    "S": 1.26
+   },
+   "positions_of_the_crystal_ligand_with_no_atom_within_2.0_A": [
+    "C6",
+    "N1"
+   ],
+   "note": "positions of the crystal ligand: the 11 heavy atoms of SAN 304; a water molecule there in start R means that solvateOct filled the place the rotated ligand leaves empty"
+  },
+  "geometry_as_built": {
+   "frame": "fitted on the CA atoms of reference.pdb, as md/analysis/SPEC.md does",
+   "ca_fit_rms_A": 0.0,
+   "largest_deviation_of_an_input_heavy_atom_A": 0.0,
+   "values": {
+    "lig_rmsd_A": {
+     "identity": 3.5732,
+     "ring_flip": 3.7623,
+     "oxygen_swap": 3.6906,
+     "ring_flip+oxygen_swap": 3.8739
+    },
+    "lig_rmsd_symmetry_corrected_A": 3.5732,
+    "d1_N1_Phe131CZ_A": 9.5849,
+    "d2_N1_Asn67OD1_A": 2.5968,
+    "N1_Asn67ND2_A": 3.3102,
+    "Zn_N2_A": 2.2351,
+    "Zn_His94NE2_A": 2.0099,
+    "Zn_His96NE2_A": 2.0206,
+    "Zn_His119ND1_A": 2.0183,
+    "Zn_O1_A": 4.5299,
+    "Zn_O2_A": 3.9068,
+    "N2_Thr199OG1_A": 2.5852,
+    "HN21_Thr199OG1_A": 1.7171,
+    "N2_HN21_Thr199OG1_deg": 140.2053,
+    "tau_fold_deg": 142.7445,
+    "C4_S_N2_deg": 109.4319,
+    "S_N2_A": 1.6773,
+    "S_N2_Zn_deg": 119.5286,
+    "Zn_N2_S_C4_deg": -32.1244,
+    "N_Zn_N_deg": {
+     "N2-Zn-H94NE2": 116.3377,
+     "N2-Zn-H96NE2": 112.5686,
+     "N2-Zn-H119ND1": 110.4993,
+     "H94NE2-Zn-H96NE2": 103.8187,
+     "H94NE2-Zn-H119ND1": 113.5907,
+     "H96NE2-Zn-H119ND1": 98.4086
+    }
+   },
+   "against_starts_csv": {
+    "lig_rmsd_symmetry_corrected_A": {
+     "built": 3.5732,
+     "starts_csv": 3.573,
+     "difference": 0.0002,
+     "tolerance": 0.006,
+     "agrees": true
+    },
+    "d1_N1_Phe131CZ_A": {
+     "built": 9.5849,
+     "starts_csv": 9.585,
+     "difference": -0.0001,
+     "tolerance": 0.002,
+     "agrees": true
+    },
+    "d2_N1_Asn67OD1_A": {
+     "built": 2.5968,
+     "starts_csv": 2.597,
+     "difference": -0.0002,
+     "tolerance": 0.002,
+     "agrees": true
+    },
+    "N1_Asn67ND2_A": {
+     "built": 3.3102,
+     "starts_csv": 3.31,
+     "difference": 0.0002,
+     "tolerance": 0.002,
+     "agrees": true
+    },
+    "Zn_N2_A": {
+     "built": 2.2351,
+     "starts_csv": 2.235,
+     "difference": 0.0001,
+     "tolerance": 0.002,
+     "agrees": true
+    },
+    "Zn_O1_A": {
+     "built": 4.5299,
+     "starts_csv": 4.53,
+     "difference": -0.0001,
+     "tolerance": 0.002,
+     "agrees": true
+    },
+    "Zn_O2_A": {
+     "built": 3.9068,
+     "starts_csv": 3.907,
+     "difference": -0.0002,
+     "tolerance": 0.002,
+     "agrees": true
+    },
+    "N2_Thr199OG1_A": {
+     "built": 2.5852,
+     "starts_csv": 2.585,
+     "difference": 0.0002,
+     "tolerance": 0.002,
+     "agrees": true
+    },
+    "HN21_Thr199OG1_A": {
+     "built": 1.7171,
+     "starts_csv": 1.717,
+     "difference": 0.0001,
+     "tolerance": 0.002,
+     "agrees": true
+    },
+    "N2_HN21_Thr199OG1_deg": {
+     "built": 140.2053,
+     "starts_csv": 140.178,
+     "difference": 0.0273,
+     "tolerance": 0.1,
+     "agrees": true
+    },
+    "tau_fold_deg": {
+     "built": 142.7445,
+     "starts_csv": 142.744,
+     "difference": 0.0005,
+     "tolerance": 0.1,
+     "agrees": true
+    },
+    "C4_S_N2_deg": {
+     "built": 109.4319,
+     "starts_csv": 109.432,
+     "difference": -0.0001,
+     "tolerance": 0.1,
+     "agrees": true
+    },
+    "S_N2_A": {
+     "built": 1.6773,
+     "starts_csv": 1.677,
+     "difference": 0.0003,
+     "tolerance": 0.002,
+     "agrees": true
+    },
+    "S_N2_Zn_deg": {
+     "built": 119.5286,
+     "starts_csv": 119.529,
+     "difference": -0.0004,
+     "tolerance": 0.1,
+     "agrees": true
+    }
+   }
+  },
+  "checks": {
+   "tleap_errors_0": true,
+   "tleap_no_unexpected_warning": true,
+   "protein_chain_unbroken": true,
+   "net_charge_zero": true,
+   "ion_numbers_as_computed": true,
+   "pass2_equals_pass1_except_ions": true,
+   "input_heavy_atoms_at_their_coordinates": true,
+   "selections_resolve_to_the_right_atoms": true,
+   "geometry_agrees_with_starts_csv": true,
+   "zinc_charge_and_type": null,
+   "zinc_lj_is_the_frcmod_value": null,
+   "zinc_not_bonded": null,
+   "zinc_has_the_four_bonds": true,
+   "zinc_bonds_and_angles_as_the_parameter_files": true,
+   "zinc_angles_6_N_Zn_N_6_Zn_N_C_1_Zn_N2_S_1_Zn_N2_H": true,
+   "torsions_through_zinc_all_zero": null,
+   "torsions_through_zinc_zero_or_as_the_n2_file": true,
+   "impropers_with_zinc_none_or_those_of_the_n2_file": true,
+   "n2_file_is_of_the_class_of_the_set": true,
+   "terms_at_N2_are_those_of_the_n2_file": true,
+   "zn_n2_h_is_not_the_120_deg_of_step_2e": null,
+   "site_charges_are_those_of_the_templates": true,
+   "site_charge_plus_one": true,
+   "ligand_equal_atoms_have_equal_charges": true,
+   "solute_hydrogens_where_the_restrained_build_has_them": true,
+   "differs_from_the_compared_set_only_where_the_sets_differ": true,
+   "exclusions_and_1_4_pairs_across_the_zinc_follow_amber": true,
+   "na_cl_are_joung_cheatham_tip3p": true,
+   "ligand_repaired_terms_in_force": true,
+   "ligand_terms_equal_free_anion_topology": null,
+   "ligand_charges_are_those_of_the_mol2": null,
+   "ions_keep_their_distances": true,
+   "no_crystal_water_replaced": true
+  },
+  "checks_failed": [],
+  "outputs_sha256": {
+   "system.prmtop": "d4999d63b48ef7c43faebb5b108b45bd87d6b9cc7cc6d6f69c22fddc296d8673",
+   "system.inpcrd": "fe5bc95b9f90444fc2dcd9aa1ba619e991dea0ebe500716b2ced28ee1ec4e360",
+   "selections.json": "3ebabef9c1864077cf784b7fb64ac4e5f45ab18902a8b2534d9ec62c375895fb",
+   "extra_forces.json": "7c2c3c897ed03fb1a5a494f6a97cb9c7000e279a8c3aa1819b8508844b520483",
+   "reference.pdb": "c54ead175e0f3f9aa237414c38ed618380aa3c730e55a211c89cde939233e069"
+  }
+ },
+ "protocol": {
+  "schema": "cqc-sfa-md protocol, version 1",
+  "purpose": "production",
+  "written": "5 Oct 2026",
+  "read_by": "md/run_md.py; the reasons for each value are in md/RUN.md",
+  "units": "stated in every key name (nm, ps, fs, ns, K, bar, amu, kJ mol-1). Every harmonic term is U = 0.5 k d^2.",
+  "force_field": {
+   "source": "all parameters are read from system.prmtop of the built system; the driver changes none of them",
+   "planned_in_md_PLAN_section_3": "protein ff14SB, water TIP3P, 0.15 M NaCl, ligand GAFF2 with repaired terms at sulfur, zinc site bonded (MCPB.py) or, as fallback, restrained",
+   "added_by_the_driver": "the harmonic bonds of extra_forces.json (none for the bonded model), position restraints during minimisation and equilibration, the barostat"
+  },
+  "system": {
+   "nonbonded_method": "PME",
+   "nonbonded_cutoff_nm": 1.0,
+   "ewald_error_tolerance": 0.0005,
+   "lennard_jones_switching_function": false,
+   "long_range_dispersion_correction": true,
+   "constraints": "HBonds",
+   "rigid_water": true,
+   "constraint_tolerance": 1e-06,
+   "hydrogen_mass_amu": 3.024,
+   "hydrogen_mass_repartitioning": "applied when the OpenMM System is created (createSystem, hydrogenMass): every hydrogen bonded to a heavy atom gets this mass and the heavy atom loses the difference, so the total mass is unchanged; the hydrogens of rigid water keep 1.008 amu",
+   "remove_cm_motion": true
+  },
+  "integrator": {
+   "type": "LangevinMiddleIntegrator",
+   "temperature_K": 300.0,
+   "friction_per_ps": 1.0
+  },
+  "barostat": {
+   "type": "MonteCarloBarostat",
+   "pressure_bar": 1.0,
+   "temperature_K": 300.0,
+   "frequency_steps": 25,
+   "scaling": "isotropic"
+  },
+  "position_restraints": {
+   "energy": "U = 0.5 * k * d^2 per restrained atom; d is the distance from the reference position (minimum image)",
+   "reference_positions": "the coordinates of system.inpcrd (crystal or docked heavy-atom positions)",
+   "atom_sets": {
+    "solute_heavy": "heavy atoms of the protein (selections.json protein_heavy), the zinc (zn) and the ligand (lig_heavy)",
+    "solute_heavy_and_crystal_water_O": "solute_heavy plus the oxygens of the crystal water, if selections.json lists them under the optional key crystal_water_O",
+    "protein_backbone": "the atoms named N, CA, C and O among protein_heavy",
+    "none": "no atom"
+   }
+  },
+  "minimisation": {
+   "algorithm": "L-BFGS (OpenMM LocalEnergyMinimizer)",
+   "tolerance_kj_per_mol_nm": 10.0,
+   "max_iterations": 5000,
+   "max_iterations_meaning": "per pass: OpenMM's minimiser repeats L-BFGS with stiffer terms for the constrained bonds until they are satisfied; the passes and their iteration counts are recorded",
+   "restraint_atoms": "solute_heavy_and_crystal_water_O",
+   "restraint_k_kj_per_mol_nm2": 1000.0
+  },
+  "equilibration": {
+   "initial_velocities": "Maxwell-Boltzmann at the first temperature of stage 1, from the run seed",
+   "total_ps": 2000.0,
+   "hydration_check": {
+    "added": "6 Oct 2026; md/PLAN.md, entries of 6 Oct 2026, 1:03 AM IST (point 3), 3:02 AM IST (point 8) and 8:01 AM IST (point 7: the six ring carbons only, without N1)",
+    "purpose": "the rotated start has no water where the ring of the crystal pose lies; an empty place beside the ligand could draw the ring back and make a conversion look easier than it is",
+    "when": "at the end of the stage after_stage, the last one in which the heavy atoms of the solute are held, and again at the end of every extension step; on the coordinates that the step saves",
+    "after_stage": 3,
+    "site_atoms": [
+     "C1",
+     "C2",
+     "C3",
+     "C4",
+     "C5",
+     "C6"
+    ],
+    "site_positions": "the coordinates of these ligand atoms in reference.pdb of the built system (the crystal pose, for every start), carried into the frame of the current coordinates by the least-squares fit of the protein CA atoms (selections.json protein_CA against the CA atoms of reference.pdb in file order; no weights)",
+    "count": "the water oxygens (selections.json water_O) at most water_cutoff_nm from any of the site positions, each counted once; minimum-image distances",
+    "water_cutoff_nm": 0.25,
+    "applies_if_ligand_mean_distance_above_nm": 0.2,
+    "applies": "only if the ligand's own site atoms (selections.json lig_heavy, same names) are on average farther than this from the site positions; otherwise the ligand itself is at the site, the check is skipped and the count is only recorded",
+    "rule": "if the check applies and the count is zero, the held part is extended by one extension step and the count is made again, at most max_extensions times; after that the run goes on in any case and no water is placed by hand",
+    "extension_length_ps": 500.0,
+    "max_extensions": 4,
+    "extension_steps": "named eq<after_stage>x<n> (eq03x1 to eq03x4); the settings of the stage after_stage (ensemble, time step, temperature, restraints) with the length above; ordinary steps with their own record, files and seeds (the step tag in the seed rule is the name of the step); --equil-scale shortens them like the stages; they add up to 2000 ps to total_ps",
+    "recorded_in": "rec_<step>.json of the stage and of every extension step (key hydration_check: the count, the waters, the distances of the ligand from the site, the decision and the next step) and manifest.json (key hydration_check: all counts, the number of extension steps, the final decision)"
+   },
+   "stages": [
+    {
+     "name": "heat",
+     "ensemble": "NVT",
+     "length_ps": 100.0,
+     "timestep_fs": 2.0,
+     "temperature_K": [
+      50.0,
+      300.0
+     ],
+     "temperature_ramp": "linear, raised once per ps, 300 K in the last ps",
+     "restraint_atoms": "solute_heavy",
+     "restraint_k_kj_per_mol_nm2": 1000.0
+    },
+    {
+     "name": "density",
+     "ensemble": "NPT",
+     "length_ps": 300.0,
+     "timestep_fs": 2.0,
+     "temperature_K": 300.0,
+     "restraint_atoms": "solute_heavy",
+     "restraint_k_kj_per_mol_nm2": 1000.0
+    },
+    {
+     "name": "loosen",
+     "ensemble": "NPT",
+     "length_ps": 300.0,
+     "timestep_fs": 2.0,
+     "temperature_K": 300.0,
+     "restraint_atoms": "solute_heavy",
+     "restraint_k_kj_per_mol_nm2": 250.0
+    },
+    {
+     "name": "release_side_chains_zinc_ligand",
+     "ensemble": "NPT",
+     "length_ps": 400.0,
+     "timestep_fs": 4.0,
+     "temperature_K": 300.0,
+     "restraint_atoms": "protein_backbone",
+     "restraint_k_kj_per_mol_nm2": 250.0
+    },
+    {
+     "name": "loosen_backbone",
+     "ensemble": "NPT",
+     "length_ps": 400.0,
+     "timestep_fs": 4.0,
+     "temperature_K": 300.0,
+     "restraint_atoms": "protein_backbone",
+     "restraint_k_kj_per_mol_nm2": 50.0
+    },
+    {
+     "name": "free",
+     "ensemble": "NPT",
+     "length_ps": 500.0,
+     "timestep_fs": 4.0,
+     "temperature_K": 300.0,
+     "restraint_atoms": "none",
+     "restraint_k_kj_per_mol_nm2": 0.0
+    }
+   ]
+  },
+  "production": {
+   "ensemble": "NPT",
+   "timestep_fs": 4.0,
+   "temperature_K": 300.0,
+   "length_ns": 100.0,
+   "segment_ns": 5.0,
+   "restraints": "none",
+   "time_zero": "the end of the equilibration; frame k of a run is at k times the frame interval"
+  },
+  "output": {
+   "state_log_interval_ps": 10.0,
+   "solute_frame_interval_ps": 10.0,
+   "full_frame_interval_ps": 100.0,
+   "trajectory_format": "DCD (CHARMM layout, little-endian, single precision, Angstrom, unit cell in every frame)",
+   "solute_frames": "the atoms of selections.json solute (protein, zinc, ligand), as integrated, never wrapped into the cell",
+   "full_frames": "all atoms; the solute as in the solute frames, every water molecule and ion moved by cell vectors to the image nearest to the centre of the solute",
+   "keep_checkpoints": "last",
+   "monitor_water_cutoff_nm": 0.35
+  },
+  "platform": {
+   "gpu_precision": "mixed",
+   "deterministic_forces": true,
+   "openmm_version_tested": "8.6.1"
+  },
+  "seeds": {
+   "run_seed": "--seed, or the first 4 bytes of sha256('cqc-sfa-md run seed|<run-id>') reduced to 1..2147483646",
+   "step_seed": "the first 4 bytes of sha256('cqc-sfa-md step seed|<run seed>|<step tag>|<purpose>') reduced to 1..2147483646; purpose is velocities, integrator or barostat; the step tag is eq01..eq06 or seg0001.."
+  }
+ },
+ "system": {
+  "n_atoms": 40857,
+  "n_residues": 12560,
+  "n_solute_atoms": 4094,
+  "n_water_molecules": 12232,
+  "total_mass_amu": 251627.822,
+  "hydrogen_masses": {
+   "n_hydrogens_not_in_water": 2020,
+   "n_with_repartitioned_mass": 2020,
+   "repartitioned_mass_amu": 3.024,
+   "water_hydrogen_masses_amu": [
+    1.008
+   ],
+   "lightest_heavy_atom_amu": 5.962
+  },
+  "n_constraints": 38716,
+  "degrees_of_freedom": 83852,
+  "forces_in_production_system": [
+   "HarmonicBondForce (group 0)",
+   "HarmonicAngleForce (group 0)",
+   "PeriodicTorsionForce (group 0)",
+   "NonbondedForce (group 0)",
+   "CMMotionRemover (group 0)",
+   "MonteCarloBarostat (group 0)"
+  ],
+  "start_box_vectors_nm": [
+   [
+    8.4120894,
+    0.0,
+    0.0
+   ],
+   [
+    -2.8040296,
+    7.930994,
+    0.0
+   ],
+   [
+    -2.8040296,
+    -3.9654965,
+    6.8684426
+   ]
+  ],
+  "start_box_lengths_nm_angles_deg": [
+   8.41209,
+   8.41209,
+   8.41209,
+   109.47122,
+   109.47122,
+   109.47122
+  ],
+  "start_volume_nm3": 458.2366,
+  "start_density_g_per_cm3": 0.91184,
+  "restraint_atom_sets_n_atoms": {
+   "solute_heavy": 2074,
+   "solute_heavy_and_crystal_water_O": 2285,
+   "protein_backbone": 1034,
+   "none": 0
+  },
+  "crystal_water_O_listed_in_selections": 211
+ },
+ "extra_forces": {
+  "energy": "U = 0.5 k (r - r0)^2, minimum image",
+  "harmonic_bonds": []
+ },
+ "segment_ns": 5.0,
+ "created": {
+  "utc": "2026-10-07T19:36:07Z",
+  "ist": "8 Oct 2026, 1:06:07 AM IST"
+ },
+ "invocations": [
+  {
+   "started": {
+    "utc": "2026-10-07T19:36:07Z",
+    "ist": "8 Oct 2026, 1:06:07 AM IST"
+   },
+   "argv": [
+    "/root/workspace/cqc-4-sulfamoylanilinium-dihydrogen-phosphate/md/run_md.py",
+    "--system",
+    "/root/cqc-sfa-md/systems/bonded_2e_n2fit/R",
+    "--out",
+    "/root/cqc-sfa-md/runs/bonded_2e_n2fit/R1",
+    "--run-id",
+    "R1",
+    "--platform",
+    "CUDA",
+    "--stage",
+    "all",
+    "--prod-ns",
+    "100",
+    "--segment-ns",
+    "5",
+    "--resume"
+   ],
+   "pid": 96232,
+   "stage": "all",
+   "resume": true,
+   "prod_ns": 100.0,
+   "benchmark_seconds": null,
+   "host": {
+    "hostname": "cqc-md-gpu-01",
+    "os": "Linux-6.8.0-1066-ibm-x86_64-with-glibc2.39",
+    "machine": "x86_64",
+    "cpu_count": 24,
+    "python": "3.12.14",
+    "numpy": "2.5.3",
+    "openmm": "8.6.1",
+    "openmm_git_revision": "b399af4725573963b46d6c1083fdcf7a37615857",
+    "openmm_platforms": [
+     "Reference",
+     "CPU",
+     "CUDA",
+     "OpenCL"
+    ],
+    "openmm_plugin_load_failures": [
+     "Error loading library /root/cqc-sfa-tools/md/lib/plugins/libOpenMMHIP.so: libhiprtc.so.6: cannot open shared object file: No such file or directory",
+     "Error loading library /root/cqc-sfa-tools/md/lib/plugins/libOpenMMRPMDHIP.so: libhiprtc.so.6: cannot open shared object file: No such file or directory",
+     "Error loading library /root/cqc-sfa-tools/md/lib/plugins/libOpenMMDrudeHIP.so: libhiprtc.so.6: cannot open shared object file: No such file or directory",
+     "Error loading library /root/cqc-sfa-tools/md/lib/plugins/libOpenMMAmoebaHIP.so: libhiprtc.so.6: cannot open shared object file: No such file or directory"
+    ],
+    "nvidia_smi": [
+     "0, NVIDIA L40S, 580.178.04, 46068 MiB"
+    ]
+   },
+   "platform": {
+    "requested": "CUDA",
+    "name": "CUDA",
+    "properties_set": {
+     "Precision": "mixed",
+     "DeterministicForces": "true"
+    },
+    "properties_actual": {
+     "DeviceIndex": "0",
+     "DeviceName": "NVIDIA L40S",
+     "UseBlockingSync": "false",
+     "Precision": "mixed",
+     "UseCpuPme": "false",
+     "CudaCompiler": "",
+     "TempDirectory": "/tmp",
+     "CudaHostCompiler": "",
+     "DisablePmeStream": "false",
+     "DeterministicForces": "true"
+    },
+    "gpu_name": "NVIDIA L40S",
+    "deterministic_forces_set": true,
+    "precision_set": "mixed",
+    "repeatability": "DeterministicForces is set; whether a repeated segment is bit for bit the same has to be checked on the machine (pre-flight test of md/RUN.md)",
+    "attempts": [
+     {
+      "platform": "CUDA",
+      "usable": true
+     }
+    ]
+   },
+   "script_sha256": "6d797f080ff7567923469dabd86af71ca34183f5c482c14d55bf8038eb9d1822",
+   "ended": {
+    "utc": "2026-10-07T22:15:58Z",
+    "ist": "8 Oct 2026, 3:45:58 AM IST"
+   },
+   "exit_code": 0,
+   "outcome": "stage complete"
+  }
+ ],
+ "status": "complete",
+ "minimisation": {
+  "tag": "min",
+  "kind": "minimisation",
+  "started": {
+   "utc": "2026-10-07T19:36:07Z",
+   "ist": "8 Oct 2026, 1:06:07 AM IST"
+  },
+  "host": "cqc-md-gpu-01",
+  "openmm": "8.6.1",
+  "platform": {
+   "requested": "CUDA",
+   "name": "CUDA",
+   "properties_set": {
+    "Precision": "mixed",
+    "DeterministicForces": "true"
+   },
+   "properties_actual": {
+    "DeviceIndex": "0",
+    "DeviceName": "NVIDIA L40S",
+    "UseBlockingSync": "false",
+    "Precision": "mixed",
+    "UseCpuPme": "false",
+    "CudaCompiler": "",
+    "TempDirectory": "/tmp",
+    "CudaHostCompiler": "",
+    "DisablePmeStream": "false",
+    "DeterministicForces": "true"
+   },
+   "gpu_name": "NVIDIA L40S",
+   "deterministic_forces_set": true,
+   "precision_set": "mixed",
+   "repeatability": "DeterministicForces is set; whether a repeated segment is bit for bit the same has to be checked on the machine (pre-flight test of md/RUN.md)",
+   "attempts": [
+    {
+     "platform": "CUDA",
+     "usable": true
+    }
+   ]
+  },
+  "settings": {
+   "algorithm": "L-BFGS (OpenMM LocalEnergyMinimizer)",
+   "tolerance_kj_per_mol_nm": 10.0,
+   "max_iterations": 5000,
+   "max_iterations_meaning": "per pass: OpenMM's minimiser repeats L-BFGS with stiffer terms for the constrained bonds until they are satisfied; the passes and their iteration counts are recorded",
+   "restraint_atoms": "solute_heavy_and_crystal_water_O",
+   "restraint_k_kj_per_mol_nm2": 1000.0,
+   "n_restrained_atoms": 2285
+  },
+  "energies_before": {
+   "potential_energy_kj_per_mol": -443091.179,
+   "force_field_kj_per_mol": -443091.179,
+   "extra_bonds_kj_per_mol": 0.0,
+   "position_restraints_kj_per_mol": 0.0
+  },
+  "energies_after": {
+   "potential_energy_kj_per_mol": -657465.436,
+   "force_field_kj_per_mol": -658420.501,
+   "extra_bonds_kj_per_mol": 0.0,
+   "position_restraints_kj_per_mol": 955.065
+  },
+  "energy_change_kj_per_mol": -214374.257,
+  "minimiser_calls": 4160,
+  "lbfgs_iterations_per_pass": [
+   848,
+   3299,
+   6,
+   7
+  ],
+  "passes_stopped_by_the_iteration_limit": 0,
+  "last_pass_stopped_by_the_iteration_limit": false,
+  "minimiser_last_report": {
+   "max constraint error": 2.3461040721035916e-05,
+   "restraint energy": 20.677278722416535,
+   "restraint strength": 1000000000.0,
+   "system energy": -657507.0343985928
+  },
+  "restrained_atoms_displacement_A": {
+   "rms": 0.2891,
+   "max": 2.0755
+  },
+  "all_atoms_max_displacement_A": 5.508,
+  "monitor": {
+   "zn_to_lig_N2_A": 1.93,
+   "lig_N2_to_thr199_OG1_A": 2.812,
+   "lig_N1_to_phe131_CZ_A": 9.81,
+   "lig_N1_to_asn67_OD1_A": 2.844,
+   "zn_to_his94_NE2_A": 2.027,
+   "zn_to_his96_NE2_A": 2.062,
+   "zn_to_his119_ND1_A": 2.017,
+   "n_water_O_within_3.5_A_of_ligand_heavy_atoms": 0,
+   "solute_heavy_rms_displacement_from_start_A": 0.232,
+   "solute_heavy_rms_displacement_note": "translation removed, no rotational fit",
+   "crystal_ring_site": {
+    "n_water_O_within_2.5_A": 0,
+    "nearest_water_O_A": 4.501,
+    "ligand_mean_distance_from_site_A": 3.684
+   }
+  },
+  "wall_s": 19.72,
+  "ended": {
+   "utc": "2026-10-07T19:36:28Z",
+   "ist": "8 Oct 2026, 1:06:28 AM IST"
+  },
+  "files": {
+   "state_min.xml": {
+    "sha256": "ddf967d9447db3968d309bb6c5561dc274f5e43e460dc43eb952cf3a26bc680d",
+    "bytes": 4606989
+   }
+  },
+  "complete": true
+ },
+ "equilibration": {
+  "complete": true,
+  "n_stages": 6,
+  "n_stages_complete": 6,
+  "n_extension_steps": 0,
+  "n_extension_steps_complete": 0,
+  "completed_ps": 2000.0,
+  "wall_s": 235.8,
+  "ns_per_day": 732.89,
+  "stages_note": "the records of all complete equilibration steps in the order of the chain; the extension steps of the hydration check (eqNNx<n>) are among them",
+  "stages": [
+   {
+    "tag": "eq01",
+    "kind": "equilibration",
+    "started": {
+     "utc": "2026-10-07T19:36:28Z",
+     "ist": "8 Oct 2026, 1:06:28 AM IST"
+    },
+    "host": "cqc-md-gpu-01",
+    "openmm": "8.6.1",
+    "state_in": {
+     "sha256": "ddf967d9447db3968d309bb6c5561dc274f5e43e460dc43eb952cf3a26bc680d",
+     "bytes": 4606989,
+     "file": "state_min.xml"
+    },
+    "seeds": {
+     "integrator": 1033276434,
+     "velocities": 2037523885
+    },
+    "platform": {
+     "requested": "CUDA",
+     "name": "CUDA",
+     "properties_set": {
+      "Precision": "mixed",
+      "DeterministicForces": "true"
+     },
+     "properties_actual": {
+      "DeviceIndex": "0",
+      "DeviceName": "NVIDIA L40S",
+      "UseBlockingSync": "false",
+      "Precision": "mixed",
+      "UseCpuPme": "false",
+      "CudaCompiler": "",
+      "TempDirectory": "/tmp",
+      "CudaHostCompiler": "",
+      "DisablePmeStream": "false",
+      "DeterministicForces": "true"
+     },
+     "gpu_name": "NVIDIA L40S",
+     "deterministic_forces_set": true,
+     "precision_set": "mixed",
+     "repeatability": "DeterministicForces is set; whether a repeated segment is bit for bit the same has to be checked on the machine (pre-flight test of md/RUN.md)",
+     "attempts": [
+      {
+       "platform": "CUDA",
+       "usable": true
+      }
+     ]
+    },
+    "settings": {
+     "name": "heat",
+     "ensemble": "NVT",
+     "timestep_fs": 2.0,
+     "n_steps": 50000,
+     "length_ps": 100.0,
+     "temperature_K": [
+      50.0,
+      300.0
+     ],
+     "restraint_atoms": "solute_heavy",
+     "restraint_k_kj_per_mol_nm2": 1000.0,
+     "n_restrained_atoms": 2074,
+     "barostat": false
+    },
+    "first_step": 0,
+    "last_step": 50000,
+    "time_start_ps": 0.0,
+    "time_end_ps": 100.0,
+    "frames": {
+     "solute": 10,
+     "full": 1,
+     "state_log_rows": 10
+    },
+    "final": {
+     "potential_energy_kj_per_mol": -531799.097,
+     "kinetic_energy_kj_per_mol": 103373.623,
+     "temperature_K": 296.55,
+     "volume_nm3": 458.2366,
+     "density_g_per_cm3": 0.91184
+    },
+    "mean_over_state_log": {
+     "temperature_K": 185.96,
+     "density_g_per_cm3": 0.91184,
+     "potential_energy_kj_per_mol": -601480.33
+    },
+    "monitor": {
+     "zn_to_lig_N2_A": 1.936,
+     "lig_N2_to_thr199_OG1_A": 2.787,
+     "lig_N1_to_phe131_CZ_A": 9.98,
+     "lig_N1_to_asn67_OD1_A": 2.813,
+     "zn_to_his94_NE2_A": 1.975,
+     "zn_to_his96_NE2_A": 2.042,
+     "zn_to_his119_ND1_A": 2.128,
+     "n_water_O_within_3.5_A_of_ligand_heavy_atoms": 2,
+     "solute_heavy_rms_displacement_from_start_A": 0.292,
+     "solute_heavy_rms_displacement_note": "translation removed, no rotational fit",
+     "crystal_ring_site": {
+      "n_water_O_within_2.5_A": 0,
+      "nearest_water_O_A": 2.577,
+      "ligand_mean_distance_from_site_A": 3.838
+     }
+    },
+    "wall_s": 13.07,
+    "ns_per_day": 660.99,
+    "ended": {
+     "utc": "2026-10-07T19:36:42Z",
+     "ist": "8 Oct 2026, 1:06:42 AM IST"
+    },
+    "files": {
+     "log_eq01.csv": {
+      "sha256": "eba22cde84b43121f7e136529339bc168e82e8fe93ec8aaf4cb43fbad6bf45b2",
+      "bytes": 1156
+     },
+     "solute_eq01.dcd": {
+      "sha256": "4370dc794ebc94aa6a20599aeb727448ce961a9c9c7bc3420ab8b481fb5aa09d",
+      "bytes": 492356
+     },
+     "full_eq01.dcd": {
+      "sha256": "7164d88d23afa66f1b22591857a6a76b07a8f637de6b98bff3cd9e3d31e9a20b",
+      "bytes": 490640
+     },
+     "state_eq01.xml": {
+      "sha256": "31dfa92983d73d7b20ce4ca6887114ed6bbba2b44635b6c012685b55146707aa",
+      "bytes": 6690974
+     }
+    },
+    "complete": true
+   },
+   {
+    "tag": "eq02",
+    "kind": "equilibration",
+    "started": {
+     "utc": "2026-10-07T19:36:42Z",
+     "ist": "8 Oct 2026, 1:06:42 AM IST"
+    },
+    "host": "cqc-md-gpu-01",
+    "openmm": "8.6.1",
+    "state_in": {
+     "sha256": "31dfa92983d73d7b20ce4ca6887114ed6bbba2b44635b6c012685b55146707aa",
+     "bytes": 6690974,
+     "file": "state_eq01.xml"
+    },
+    "seeds": {
+     "integrator": 1119296901,
+     "barostat": 1285489389
+    },
+    "platform": {
+     "requested": "CUDA",
+     "name": "CUDA",
+     "properties_set": {
+      "Precision": "mixed",
+      "DeterministicForces": "true"
+     },
+     "properties_actual": {
+      "DeviceIndex": "0",
+      "DeviceName": "NVIDIA L40S",
+      "UseBlockingSync": "false",
+      "Precision": "mixed",
+      "UseCpuPme": "false",
+      "CudaCompiler": "",
+      "TempDirectory": "/tmp",
+      "CudaHostCompiler": "",
+      "DisablePmeStream": "false",
+      "DeterministicForces": "true"
+     },
+     "gpu_name": "NVIDIA L40S",
+     "deterministic_forces_set": true,
+     "precision_set": "mixed",
+     "repeatability": "DeterministicForces is set; whether a repeated segment is bit for bit the same has to be checked on the machine (pre-flight test of md/RUN.md)",
+     "attempts": [
+      {
+       "platform": "CUDA",
+       "usable": true
+      }
+     ]
+    },
+    "settings": {
+     "name": "density",
+     "ensemble": "NPT",
+     "timestep_fs": 2.0,
+     "n_steps": 150000,
+     "length_ps": 300.0,
+     "temperature_K": 300.0,
+     "restraint_atoms": "solute_heavy",
+     "restraint_k_kj_per_mol_nm2": 1000.0,
+     "n_restrained_atoms": 2074,
+     "barostat": true
+    },
+    "first_step": 50000,
+    "last_step": 200000,
+    "time_start_ps": 100.0,
+    "time_end_ps": 400.0,
+    "frames": {
+     "solute": 30,
+     "full": 3,
+     "state_log_rows": 30
+    },
+    "final": {
+     "potential_energy_kj_per_mol": -541781.315,
+     "kinetic_energy_kj_per_mol": 105592.738,
+     "temperature_K": 302.91,
+     "volume_nm3": 408.6252,
+     "density_g_per_cm3": 1.02255
+    },
+    "mean_over_state_log": {
+     "temperature_K": 300.54,
+     "density_g_per_cm3": 1.0238,
+     "potential_energy_kj_per_mol": -541463.19
+    },
+    "monitor": {
+     "zn_to_lig_N2_A": 1.933,
+     "lig_N2_to_thr199_OG1_A": 3.076,
+     "lig_N1_to_phe131_CZ_A": 9.687,
+     "lig_N1_to_asn67_OD1_A": 2.858,
+     "zn_to_his94_NE2_A": 2.013,
+     "zn_to_his96_NE2_A": 2.061,
+     "zn_to_his119_ND1_A": 2.032,
+     "n_water_O_within_3.5_A_of_ligand_heavy_atoms": 1,
+     "solute_heavy_rms_displacement_from_start_A": 0.293,
+     "solute_heavy_rms_displacement_note": "translation removed, no rotational fit",
+     "crystal_ring_site": {
+      "n_water_O_within_2.5_A": 1,
+      "nearest_water_O_A": 1.281,
+      "ligand_mean_distance_from_site_A": 3.832
+     }
+    },
+    "wall_s": 51.22,
+    "ns_per_day": 506.01,
+    "ended": {
+     "utc": "2026-10-07T19:37:34Z",
+     "ist": "8 Oct 2026, 1:07:34 AM IST"
+    },
+    "files": {
+     "log_eq02.csv": {
+      "sha256": "8c6e92e1019d72d0422bfa11321e2173fc2d663911f664ac378964f17a85d7b7",
+      "bytes": 3119
+     },
+     "solute_eq02.dcd": {
+      "sha256": "889d98c138d03f62057a0954e40111775f2d30af91cb6bed5fa9b72f8a89d43f",
+      "bytes": 1476516
+     },
+     "full_eq02.dcd": {
+      "sha256": "3b61395672322ddef3f9e44cc4d4cadeb37ca5feb3260fffff0ffb617c5083d5",
+      "bytes": 1471368
+     },
+     "state_eq02.xml": {
+      "sha256": "40ab34a6536701e8beb3fa18e7f9b2e83baf583d90323ffa9b71190c7be453e2",
+      "bytes": 6698584
+     }
+    },
+    "complete": true
+   },
+   {
+    "tag": "eq03",
+    "kind": "equilibration",
+    "started": {
+     "utc": "2026-10-07T19:37:34Z",
+     "ist": "8 Oct 2026, 1:07:34 AM IST"
+    },
+    "host": "cqc-md-gpu-01",
+    "openmm": "8.6.1",
+    "state_in": {
+     "sha256": "40ab34a6536701e8beb3fa18e7f9b2e83baf583d90323ffa9b71190c7be453e2",
+     "bytes": 6698584,
+     "file": "state_eq02.xml"
+    },
+    "seeds": {
+     "integrator": 771414692,
+     "barostat": 49350860
+    },
+    "platform": {
+     "requested": "CUDA",
+     "name": "CUDA",
+     "properties_set": {
+      "Precision": "mixed",
+      "DeterministicForces": "true"
+     },
+     "properties_actual": {
+      "DeviceIndex": "0",
+      "DeviceName": "NVIDIA L40S",
+      "UseBlockingSync": "false",
+      "Precision": "mixed",
+      "UseCpuPme": "false",
+      "CudaCompiler": "",
+      "TempDirectory": "/tmp",
+      "CudaHostCompiler": "",
+      "DisablePmeStream": "false",
+      "DeterministicForces": "true"
+     },
+     "gpu_name": "NVIDIA L40S",
+     "deterministic_forces_set": true,
+     "precision_set": "mixed",
+     "repeatability": "DeterministicForces is set; whether a repeated segment is bit for bit the same has to be checked on the machine (pre-flight test of md/RUN.md)",
+     "attempts": [
+      {
+       "platform": "CUDA",
+       "usable": true
+      }
+     ]
+    },
+    "settings": {
+     "name": "loosen",
+     "ensemble": "NPT",
+     "timestep_fs": 2.0,
+     "n_steps": 150000,
+     "length_ps": 300.0,
+     "temperature_K": 300.0,
+     "restraint_atoms": "solute_heavy",
+     "restraint_k_kj_per_mol_nm2": 250.0,
+     "n_restrained_atoms": 2074,
+     "barostat": true
+    },
+    "first_step": 200000,
+    "last_step": 350000,
+    "time_start_ps": 400.0,
+    "time_end_ps": 700.0,
+    "frames": {
+     "solute": 30,
+     "full": 3,
+     "state_log_rows": 30
+    },
+    "final": {
+     "potential_energy_kj_per_mol": -541675.884,
+     "kinetic_energy_kj_per_mol": 104562.162,
+     "temperature_K": 299.96,
+     "volume_nm3": 406.8685,
+     "density_g_per_cm3": 1.02696
+    },
+    "mean_over_state_log": {
+     "temperature_K": 300.33,
+     "density_g_per_cm3": 1.02616,
+     "potential_energy_kj_per_mol": -541832.22
+    },
+    "monitor": {
+     "zn_to_lig_N2_A": 1.899,
+     "lig_N2_to_thr199_OG1_A": 2.881,
+     "lig_N1_to_phe131_CZ_A": 8.506,
+     "lig_N1_to_asn67_OD1_A": 3.654,
+     "zn_to_his94_NE2_A": 2.11,
+     "zn_to_his96_NE2_A": 2.102,
+     "zn_to_his119_ND1_A": 1.936,
+     "n_water_O_within_3.5_A_of_ligand_heavy_atoms": 1,
+     "solute_heavy_rms_displacement_from_start_A": 0.451,
+     "solute_heavy_rms_displacement_note": "translation removed, no rotational fit",
+     "crystal_ring_site": {
+      "n_water_O_within_2.5_A": 1,
+      "nearest_water_O_A": 2.493,
+      "ligand_mean_distance_from_site_A": 3.14
+     }
+    },
+    "wall_s": 51.08,
+    "ns_per_day": 507.4,
+    "ended": {
+     "utc": "2026-10-07T19:38:26Z",
+     "ist": "8 Oct 2026, 1:08:26 AM IST"
+    },
+    "hydration_check": {
+     "made_on": "the coordinates at the end of this step (state_eq03.xml)",
+     "site_atoms": [
+      "C1",
+      "C2",
+      "C3",
+      "C4",
+      "C5",
+      "C6"
+     ],
+     "site_positions": "reference.pdb, carried into the frame of the coordinates by the fit of the protein CA atoms",
+     "ca_fit": {
+      "n_ca": 258,
+      "rmsd_A": 0.3339
+     },
+     "ligand_distance_from_site_A": {
+      "C1": 4.01,
+      "C2": 3.101,
+      "C3": 2.376,
+      "C4": 2.053,
+      "C5": 3.147,
+      "C6": 4.151
+     },
+     "ligand_mean_distance_from_site_A": 3.14,
+     "applies_if_ligand_mean_distance_above_A": 2.0,
+     "applies": true,
+     "skipped": false,
+     "water_cutoff_A": 2.5,
+     "n_water_O": 1,
+     "water_O": [
+      {
+       "atom_index": 24366,
+       "atom": "WAT7064:O",
+       "distance_A": 2.493
+      }
+     ],
+     "nearest_water_O": {
+      "atom_index": 24366,
+      "atom": "WAT7064:O",
+      "distance_A": 2.493
+     },
+     "nearest_water_O_per_site_atom_A": {
+      "C1": 2.493,
+      "C2": 3.435,
+      "C3": 4.748,
+      "C4": 5.276,
+      "C5": 4.116,
+      "C6": 3.245
+     },
+     "n_extensions_done": 0,
+     "max_extensions": 4,
+     "decision": "go on",
+     "reason": "1 water oxygen at the site",
+     "next_step": "eq04"
+    },
+    "files": {
+     "log_eq03.csv": {
+      "sha256": "0f409717ebd0036b0a4247cf608fe3609d40b2e9d74bd2f807ca6af3af587dc0",
+      "bytes": 3128
+     },
+     "solute_eq03.dcd": {
+      "sha256": "0ee68d7cc3b3e1925f6eefb5d507aa1b3ab075bb3a2d96037c47decafedec165",
+      "bytes": 1476516
+     },
+     "full_eq03.dcd": {
+      "sha256": "b3546f67d0b9c6c87ac6b66c50f4c5da75f74a3478754f35c106ee626a6194fb",
+      "bytes": 1471368
+     },
+     "state_eq03.xml": {
+      "sha256": "9b77be02656fed4397c5e245240cabd3d3989dbba0e8eba492739c94f81e6f07",
+      "bytes": 6703756
+     }
+    },
+    "complete": true
+   },
+   {
+    "tag": "eq04",
+    "kind": "equilibration",
+    "started": {
+     "utc": "2026-10-07T19:38:26Z",
+     "ist": "8 Oct 2026, 1:08:26 AM IST"
+    },
+    "host": "cqc-md-gpu-01",
+    "openmm": "8.6.1",
+    "state_in": {
+     "sha256": "9b77be02656fed4397c5e245240cabd3d3989dbba0e8eba492739c94f81e6f07",
+     "bytes": 6703756,
+     "file": "state_eq03.xml"
+    },
+    "seeds": {
+     "integrator": 820411021,
+     "barostat": 389342415
+    },
+    "platform": {
+     "requested": "CUDA",
+     "name": "CUDA",
+     "properties_set": {
+      "Precision": "mixed",
+      "DeterministicForces": "true"
+     },
+     "properties_actual": {
+      "DeviceIndex": "0",
+      "DeviceName": "NVIDIA L40S",
+      "UseBlockingSync": "false",
+      "Precision": "mixed",
+      "UseCpuPme": "false",
+      "CudaCompiler": "",
+      "TempDirectory": "/tmp",
+      "CudaHostCompiler": "",
+      "DisablePmeStream": "false",
+      "DeterministicForces": "true"
+     },
+     "gpu_name": "NVIDIA L40S",
+     "deterministic_forces_set": true,
+     "precision_set": "mixed",
+     "repeatability": "DeterministicForces is set; whether a repeated segment is bit for bit the same has to be checked on the machine (pre-flight test of md/RUN.md)",
+     "attempts": [
+      {
+       "platform": "CUDA",
+       "usable": true
+      }
+     ]
+    },
+    "settings": {
+     "name": "release_side_chains_zinc_ligand",
+     "ensemble": "NPT",
+     "timestep_fs": 4.0,
+     "n_steps": 100000,
+     "length_ps": 400.0,
+     "temperature_K": 300.0,
+     "restraint_atoms": "protein_backbone",
+     "restraint_k_kj_per_mol_nm2": 250.0,
+     "n_restrained_atoms": 1034,
+     "barostat": true
+    },
+    "first_step": 350000,
+    "last_step": 450000,
+    "time_start_ps": 700.0,
+    "time_end_ps": 1100.0,
+    "frames": {
+     "solute": 40,
+     "full": 4,
+     "state_log_rows": 40
+    },
+    "final": {
+     "potential_energy_kj_per_mol": -541774.688,
+     "kinetic_energy_kj_per_mol": 104454.516,
+     "temperature_K": 299.65,
+     "volume_nm3": 408.1249,
+     "density_g_per_cm3": 1.0238
+    },
+    "mean_over_state_log": {
+     "temperature_K": 300.48,
+     "density_g_per_cm3": 1.02601,
+     "potential_energy_kj_per_mol": -542201.04
+    },
+    "monitor": {
+     "zn_to_lig_N2_A": 1.923,
+     "lig_N2_to_thr199_OG1_A": 2.907,
+     "lig_N1_to_phe131_CZ_A": 4.961,
+     "lig_N1_to_asn67_OD1_A": 6.862,
+     "zn_to_his94_NE2_A": 2.074,
+     "zn_to_his96_NE2_A": 2.054,
+     "zn_to_his119_ND1_A": 2.066,
+     "n_water_O_within_3.5_A_of_ligand_heavy_atoms": 5,
+     "solute_heavy_rms_displacement_from_start_A": 0.852,
+     "solute_heavy_rms_displacement_note": "translation removed, no rotational fit",
+     "crystal_ring_site": {
+      "n_water_O_within_2.5_A": 0,
+      "nearest_water_O_A": 3.943,
+      "ligand_mean_distance_from_site_A": 0.866
+     }
+    },
+    "wall_s": 36.95,
+    "ns_per_day": 935.37,
+    "ended": {
+     "utc": "2026-10-07T19:39:04Z",
+     "ist": "8 Oct 2026, 1:09:04 AM IST"
+    },
+    "files": {
+     "log_eq04.csv": {
+      "sha256": "3aed33840db0bac4684f8562c7906ac2fb284af8be00a174c79314e86014f8ac",
+      "bytes": 4109
+     },
+     "solute_eq04.dcd": {
+      "sha256": "778161cff8571c97c7c330ba8344e289b3326e0d2471abc66323c5e4fe5d5165",
+      "bytes": 1968596
+     },
+     "full_eq04.dcd": {
+      "sha256": "0155988fab01ad5078e59e779f61e8e5fa6a7bf0c39b27a7857562817d55ab13",
+      "bytes": 1961732
+     },
+     "state_eq04.xml": {
+      "sha256": "f7d92c2edda6c302c00026a8d99af943ec9295d1be0b3c6ff986582306c3c1a6",
+      "bytes": 6708853
+     }
+    },
+    "complete": true
+   },
+   {
+    "tag": "eq05",
+    "kind": "equilibration",
+    "started": {
+     "utc": "2026-10-07T19:39:04Z",
+     "ist": "8 Oct 2026, 1:09:04 AM IST"
+    },
+    "host": "cqc-md-gpu-01",
+    "openmm": "8.6.1",
+    "state_in": {
+     "sha256": "f7d92c2edda6c302c00026a8d99af943ec9295d1be0b3c6ff986582306c3c1a6",
+     "bytes": 6708853,
+     "file": "state_eq04.xml"
+    },
+    "seeds": {
+     "integrator": 378512948,
+     "barostat": 277092444
+    },
+    "platform": {
+     "requested": "CUDA",
+     "name": "CUDA",
+     "properties_set": {
+      "Precision": "mixed",
+      "DeterministicForces": "true"
+     },
+     "properties_actual": {
+      "DeviceIndex": "0",
+      "DeviceName": "NVIDIA L40S",
+      "UseBlockingSync": "false",
+      "Precision": "mixed",
+      "UseCpuPme": "false",
+      "CudaCompiler": "",
+      "TempDirectory": "/tmp",
+      "CudaHostCompiler": "",
+      "DisablePmeStream": "false",
+      "DeterministicForces": "true"
+     },
+     "gpu_name": "NVIDIA L40S",
+     "deterministic_forces_set": true,
+     "precision_set": "mixed",
+     "repeatability": "DeterministicForces is set; whether a repeated segment is bit for bit the same has to be checked on the machine (pre-flight test of md/RUN.md)",
+     "attempts": [
+      {
+       "platform": "CUDA",
+       "usable": true
+      }
+     ]
+    },
+    "settings": {
+     "name": "loosen_backbone",
+     "ensemble": "NPT",
+     "timestep_fs": 4.0,
+     "n_steps": 100000,
+     "length_ps": 400.0,
+     "temperature_K": 300.0,
+     "restraint_atoms": "protein_backbone",
+     "restraint_k_kj_per_mol_nm2": 50.0,
+     "n_restrained_atoms": 1034,
+     "barostat": true
+    },
+    "first_step": 450000,
+    "last_step": 550000,
+    "time_start_ps": 1100.0,
+    "time_end_ps": 1500.0,
+    "frames": {
+     "solute": 40,
+     "full": 4,
+     "state_log_rows": 40
+    },
+    "final": {
+     "potential_energy_kj_per_mol": -542642.846,
+     "kinetic_energy_kj_per_mol": 105186.971,
+     "temperature_K": 301.75,
+     "volume_nm3": 406.8205,
+     "density_g_per_cm3": 1.02708
+    },
+    "mean_over_state_log": {
+     "temperature_K": 301.11,
+     "density_g_per_cm3": 1.02603,
+     "potential_energy_kj_per_mol": -542302.22
+    },
+    "monitor": {
+     "zn_to_lig_N2_A": 1.855,
+     "lig_N2_to_thr199_OG1_A": 2.843,
+     "lig_N1_to_phe131_CZ_A": 3.911,
+     "lig_N1_to_asn67_OD1_A": 8.175,
+     "zn_to_his94_NE2_A": 2.092,
+     "zn_to_his96_NE2_A": 2.032,
+     "zn_to_his119_ND1_A": 2.011,
+     "n_water_O_within_3.5_A_of_ligand_heavy_atoms": 3,
+     "solute_heavy_rms_displacement_from_start_A": 1.08,
+     "solute_heavy_rms_displacement_note": "translation removed, no rotational fit",
+     "crystal_ring_site": {
+      "n_water_O_within_2.5_A": 0,
+      "nearest_water_O_A": 2.929,
+      "ligand_mean_distance_from_site_A": 0.312
+     }
+    },
+    "wall_s": 36.96,
+    "ns_per_day": 935.15,
+    "ended": {
+     "utc": "2026-10-07T19:39:42Z",
+     "ist": "8 Oct 2026, 1:09:42 AM IST"
+    },
+    "files": {
+     "log_eq05.csv": {
+      "sha256": "894f4514f3cd3820c67d0f4f09b642fead8a748b8113002fd849c80e9ee6ec60",
+      "bytes": 4109
+     },
+     "solute_eq05.dcd": {
+      "sha256": "f6d239954f09e4c0831e19800c75321ea4839a1a277bc0fddecb5fef2c586dac",
+      "bytes": 1968596
+     },
+     "full_eq05.dcd": {
+      "sha256": "2a456016477bb1b4610d631ee21c0be7912b40e58fa6cb1c636ccdb15be6ad49",
+      "bytes": 1961732
+     },
+     "state_eq05.xml": {
+      "sha256": "6fa7296d752b810a8cd897dfd20ba522a098a713f2e287716246f9ab0247a06c",
+      "bytes": 6712437
+     }
+    },
+    "complete": true
+   },
+   {
+    "tag": "eq06",
+    "kind": "equilibration",
+    "started": {
+     "utc": "2026-10-07T19:39:42Z",
+     "ist": "8 Oct 2026, 1:09:42 AM IST"
+    },
+    "host": "cqc-md-gpu-01",
+    "openmm": "8.6.1",
+    "state_in": {
+     "sha256": "6fa7296d752b810a8cd897dfd20ba522a098a713f2e287716246f9ab0247a06c",
+     "bytes": 6712437,
+     "file": "state_eq05.xml"
+    },
+    "seeds": {
+     "integrator": 283925128,
+     "barostat": 25615324
+    },
+    "platform": {
+     "requested": "CUDA",
+     "name": "CUDA",
+     "properties_set": {
+      "Precision": "mixed",
+      "DeterministicForces": "true"
+     },
+     "properties_actual": {
+      "DeviceIndex": "0",
+      "DeviceName": "NVIDIA L40S",
+      "UseBlockingSync": "false",
+      "Precision": "mixed",
+      "UseCpuPme": "false",
+      "CudaCompiler": "",
+      "TempDirectory": "/tmp",
+      "CudaHostCompiler": "",
+      "DisablePmeStream": "false",
+      "DeterministicForces": "true"
+     },
+     "gpu_name": "NVIDIA L40S",
+     "deterministic_forces_set": true,
+     "precision_set": "mixed",
+     "repeatability": "DeterministicForces is set; whether a repeated segment is bit for bit the same has to be checked on the machine (pre-flight test of md/RUN.md)",
+     "attempts": [
+      {
+       "platform": "CUDA",
+       "usable": true
+      }
+     ]
+    },
+    "settings": {
+     "name": "free",
+     "ensemble": "NPT",
+     "timestep_fs": 4.0,
+     "n_steps": 125000,
+     "length_ps": 500.0,
+     "temperature_K": 300.0,
+     "restraint_atoms": "none",
+     "restraint_k_kj_per_mol_nm2": 0.0,
+     "n_restrained_atoms": 0,
+     "barostat": true
+    },
+    "first_step": 550000,
+    "last_step": 675000,
+    "time_start_ps": 1500.0,
+    "time_end_ps": 2000.0,
+    "frames": {
+     "solute": 50,
+     "full": 5,
+     "state_log_rows": 50
+    },
+    "final": {
+     "potential_energy_kj_per_mol": -543005.49,
+     "kinetic_energy_kj_per_mol": 105370.693,
+     "temperature_K": 302.27,
+     "volume_nm3": 407.2488,
+     "density_g_per_cm3": 1.026
+    },
+    "mean_over_state_log": {
+     "temperature_K": 300.91,
+     "density_g_per_cm3": 1.02511,
+     "potential_energy_kj_per_mol": -542259.63
+    },
+    "monitor": {
+     "zn_to_lig_N2_A": 1.913,
+     "lig_N2_to_thr199_OG1_A": 3.05,
+     "lig_N1_to_phe131_CZ_A": 4.373,
+     "lig_N1_to_asn67_OD1_A": 7.079,
+     "zn_to_his94_NE2_A": 1.991,
+     "zn_to_his96_NE2_A": 1.957,
+     "zn_to_his119_ND1_A": 2.087,
+     "n_water_O_within_3.5_A_of_ligand_heavy_atoms": 6,
+     "solute_heavy_rms_displacement_from_start_A": 2.311,
+     "solute_heavy_rms_displacement_note": "translation removed, no rotational fit",
+     "crystal_ring_site": {
+      "n_water_O_within_2.5_A": 0,
+      "nearest_water_O_A": 3.274,
+      "ligand_mean_distance_from_site_A": 0.867
+     }
+    },
+    "wall_s": 46.5,
+    "ns_per_day": 929.06,
+    "ended": {
+     "utc": "2026-10-07T19:40:29Z",
+     "ist": "8 Oct 2026, 1:10:29 AM IST"
+    },
+    "files": {
+     "log_eq06.csv": {
+      "sha256": "98b80d5c481ae5341c7f2597d7b8da3f4b108f1f24d4edc5dcd08d96d5cc1453",
+      "bytes": 5018
+     },
+     "solute_eq06.dcd": {
+      "sha256": "c31395829efb644d32df44bfc17160c6e4b129c6db349fdbde1bdb20314d2c20",
+      "bytes": 2460676
+     },
+     "full_eq06.dcd": {
+      "sha256": "d9857d6b3637e185fc9041e46071b471325fa2a7db23341183596435f6170223",
+      "bytes": 2452096
+     },
+     "state_eq06.xml": {
+      "sha256": "fae5887aadcb5a2711179f2dd9acb7dd62a51259b29c76343c6c68bc46d948e8",
+      "bytes": 6716142
+     }
+    },
+    "complete": true
+   }
+  ]
+ },
+ "hydration_check": {
+  "requested": true,
+  "rule": "md/PLAN.md, entries of 6 Oct 2026, 1:03 AM (point 3) and 3:02 AM (point 8); settings in the protocol, key equilibration.hydration_check",
+  "settings": {
+   "after_step": "eq03",
+   "site_atoms": [
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "C5",
+    "C6"
+   ],
+   "water_cutoff_A": 2.5,
+   "applies_if_ligand_mean_distance_above_A": 2.0,
+   "max_extensions": 4,
+   "extension_length_ps_of_the_protocol": 500.0,
+   "extension_length_ps_in_this_run": 500.0,
+   "extension_steps_in_this_run": 250000
+  },
+  "reference_guard": {
+   "n_ca": 258,
+   "ca_fit_rmsd_of_system_inpcrd_on_reference_pdb_A": 0.0,
+   "n_ca_residue_names_that_differ": 0,
+   "ca_residue_names_that_differ_first_5": []
+  },
+  "status": "decided",
+  "applies": true,
+  "skipped": false,
+  "counts": [
+   {
+    "step": "eq03",
+    "time_end_ps": 700.0,
+    "n_water_O": 1,
+    "nearest_water_O_A": 2.493,
+    "ligand_mean_distance_from_site_A": 3.14,
+    "applies": true,
+    "decision": "go on"
+   }
+  ],
+  "n_extensions": 0,
+  "extension_ps": 0,
+  "final_decision": "go on: 1 water oxygen at the site",
+  "site_without_water_when_the_solute_was_released": false
+ },
+ "production": {
+  "target_ns": 100.0,
+  "segment_ns": 5.0,
+  "n_segments_target": 20,
+  "n_segments_complete": 20,
+  "completed_ns": 100.0,
+  "complete": true,
+  "frames_solute": 10000,
+  "frames_full": 1000,
+  "wall_s": 9309.7,
+  "ns_per_day": 928.07,
+  "segments": [
+   {
+    "tag": "seg0001",
+    "kind": "production",
+    "started": {
+     "utc": "2026-10-07T19:40:29Z",
+     "ist": "8 Oct 2026, 1:10:29 AM IST"
+    },
+    "host": "cqc-md-gpu-01",
+    "openmm": "8.6.1",
+    "state_in": {
+     "sha256": "fae5887aadcb5a2711179f2dd9acb7dd62a51259b29c76343c6c68bc46d948e8",
+     "bytes": 6716142,
+     "file": "state_eq06.xml"
+    },
+    "seeds": {
+     "integrator": 817159116,
+     "barostat": 883507394
+    },
+    "platform": {
+     "requested": "CUDA",
+     "name": "CUDA",
+     "properties_set": {
+      "Precision": "mixed",
+      "DeterministicForces": "true"
+     },
+     "properties_actual": {
+      "DeviceIndex": "0",
+      "DeviceName": "NVIDIA L40S",
+      "UseBlockingSync": "false",
+      "Precision": "mixed",
+      "UseCpuPme": "false",
+      "CudaCompiler": "",
+      "TempDirectory": "/tmp",
+      "CudaHostCompiler": "",
+      "DisablePmeStream": "false",
+      "DeterministicForces": "true"
+     },
+     "gpu_name": "NVIDIA L40S",
+     "deterministic_forces_set": true,
+     "precision_set": "mixed",
+     "repeatability": "DeterministicForces is set; whether a repeated segment is bit for bit the same has to be checked on the machine (pre-flight test of md/RUN.md)",
+     "attempts": [
+      {
+       "platform": "CUDA",
+       "usable": true
+      }
+     ]
+    },
+    "settings": {
+     "name": "production",
+     "ensemble": "NPT",
+     "timestep_fs": 4.0,
+     "n_steps": 1250000,
+     "length_ps": 5000.0,
+     "temperature_K": 300.0,
+     "restraint_atoms": "none",
+     "restraint_k_kj_per_mol_nm2": 0.0,
+     "n_restrained_atoms": 0,
+     "barostat": true
+    },
+    "first_step": 0,
+    "last_step": 1250000,
+    "time_start_ps": 0.0,
+    "time_end_ps": 5000.0,
+    "frames": {
+     "solute": 500,
+     "full": 50,
+     "state_log_rows": 500
+    },
+    "final": {
+     "potential_energy_kj_per_mol": -542291.385,
+     "kinetic_energy_kj_per_mol": 104852.665,
+     "temperature_K": 300.79,
+     "volume_nm3": 406.7852,
+     "density_g_per_cm3": 1.02717
+    },
+    "mean_over_state_log": {
+     "temperature_K": 300.99,
+     "density_g_per_cm3": 1.02529,
+     "potential_energy_kj_per_mol": -542242.53
+    },
+    "monitor": {
+     "zn_to_lig_N2_A": 1.911,
+     "lig_N2_to_thr199_OG1_A": 2.861,
+     "lig_N1_to_phe131_CZ_A": 4.585,
+     "lig_N1_to_asn67_OD1_A": 6.515,
+     "zn_to_his94_NE2_A": 2.004,
+     "zn_to_his96_NE2_A": 1.984,
+     "zn_to_his119_ND1_A": 2.131,
+     "n_water_O_within_3.5_A_of_ligand_heavy_atoms": 5,
+     "solute_heavy_rms_displacement_from_start_A": 4.363,
+     "solute_heavy_rms_displacement_note": "translation removed, no rotational fit",
+     "crystal_ring_site": {
+      "n_water_O_within_2.5_A": 0,
+      "nearest_water_O_A": 3.416,
+      "ligand_mean_distance_from_site_A": 0.744
+     }
+    },
+    "wall_s": 462.71,
+    "ns_per_day": 933.62,
+    "ended": {
+     "utc": "2026-10-07T19:48:13Z",
+     "ist": "8 Oct 2026, 1:18:13 AM IST"
+    },
+    "checkpoint": {
+     "sha256": "37d6d760ee0c57cc514daa0907a9cef750413e9099b6ed5f9ac93d264cee14e9",
+     "bytes": 6923047,
+     "file": "checkpoint_seg0001.chk",
+     "note": "binary, tied to this machine and platform; --resume uses the XML state"
+    },
+    "files": {
+     "log_seg0001.csv": {
+      "sha256": "87227623ce5075b5ed14b92c67aba641b1c111511b40771a300193d0c1f78f63",
+      "bytes": 48169
+     },
+     "solute_seg0001.dcd": {
+      "sha256": "ca1e1643aedd9e5d914435b4419453997634327f34cae0d90547c7d941740ca5",
+      "bytes": 24604276
+     },
+     "full_seg0001.dcd": {
+      "sha256": "1acb1c1ffedab369ed3ed1993d0b40f9a22af8b3899d69ece2eeec64d681f790",
+      "bytes": 24518476
+     },
+     "state_seg0001.xml": {
+      "sha256": "e794c083f9d626632a7d08ae4365614b5616af38f18c7afb86051fa1fa34a38f",
+      "bytes": 6735208
+     }
+    },
+    "complete": true
+   },
+   {
+    "tag": "seg0002",
+    "kind": "production",
+    "started": {
+     "utc": "2026-10-07T19:48:13Z",
+     "ist": "8 Oct 2026, 1:18:13 AM IST"
+    },
+    "host": "cqc-md-gpu-01",
+    "openmm": "8.6.1",
+    "state_in": {
+     "sha256": "e794c083f9d626632a7d08ae4365614b5616af38f18c7afb86051fa1fa34a38f",
+     "bytes": 6735208,
+     "file": "state_seg0001.xml"
+    },
+    "seeds": {
+     "integrator": 1012658633,
+     "barostat": 756995762
+    },
+    "platform": {
+     "requested": "CUDA",
+     "name": "CUDA",
+     "properties_set": {
+      "Precision": "mixed",
+      "DeterministicForces": "true"
+     },
+     "properties_actual": {
+      "DeviceIndex": "0",
+      "DeviceName": "NVIDIA L40S",
+      "UseBlockingSync": "false",
+      "Precision": "mixed",
+      "UseCpuPme": "false",
+      "CudaCompiler": "",
+      "TempDirectory": "/tmp",
+      "CudaHostCompiler": "",
+      "DisablePmeStream": "false",
+      "DeterministicForces": "true"
+     },
+     "gpu_name": "NVIDIA L40S",
+     "deterministic_forces_set": true,
+     "precision_set": "mixed",
+     "repeatability": "DeterministicForces is set; whether a repeated segment is bit for bit the same has to be checked on the machine (pre-flight test of md/RUN.md)",
+     "attempts": [
+      {
+       "platform": "CUDA",
+       "usable": true
+      }
+     ]
+    },
+    "settings": {
+     "name": "production",
+     "ensemble": "NPT",
+     "timestep_fs": 4.0,
+     "n_steps": 1250000,
+     "length_ps": 5000.0,
+     "temperature_K": 300.0,
+     "restraint_atoms": "none",
+     "restraint_k_kj_per_mol_nm2": 0.0,
+     "n_restrained_atoms": 0,
+     "barostat": true
+    },
+    "first_step": 1250000,
+    "last_step": 2500000,
+    "time_start_ps": 5000.0,
+    "time_end_ps": 10000.0,
+    "frames": {
+     "solute": 500,
+     "full": 50,
+     "state_log_rows": 500
+    },
+    "final": {
+     "potential_energy_kj_per_mol": -540892.244,
+     "kinetic_energy_kj_per_mol": 104657.694,
+     "temperature_K": 300.23,
+     "volume_nm3": 409.0398,
+     "density_g_per_cm3": 1.02151
+    },
+    "mean_over_state_log": {
+     "temperature_K": 301.14,
+     "density_g_per_cm3": 1.02539,
+     "potential_energy_kj_per_mol": -542219.53
+    },
+    "monitor": {
+     "zn_to_lig_N2_A": 2.038,
+     "lig_N2_to_thr199_OG1_A": 2.883,
+     "lig_N1_to_phe131_CZ_A": 4.099,
+     "lig_N1_to_asn67_OD1_A": 7.142,
+     "zn_to_his94_NE2_A": 1.99,
+     "zn_to_his96_NE2_A": 2.152,
+     "zn_to_his119_ND1_A": 2.0,
+     "n_water_O_within_3.5_A_of_ligand_heavy_atoms": 5,
+     "solute_heavy_rms_displacement_from_start_A": 13.235,
+     "solute_heavy_rms_displacement_note": "translation removed, no rotational fit",
+     "crystal_ring_site": {
+      "n_water_O_within_2.5_A": 2,
+      "nearest_water_O_A": 1.987,
+      "ligand_mean_distance_from_site_A": 1.341
+     }
+    },
+    "wall_s": 461.29,
+    "ns_per_day": 936.51,
+    "ended": {
+     "utc": "2026-10-07T19:55:55Z",
+     "ist": "8 Oct 2026, 1:25:55 AM IST"
+    },
+    "checkpoint": {
+     "sha256": "946e4500ad738552b9bf5c6221f4fb5aabe76c5e346ba79b6760606d17ea157b",
+     "bytes": 6923047,
+     "file": "checkpoint_seg0002.chk",
+     "note": "binary, tied to this machine and platform; --resume uses the XML state"
+    },
+    "files": {
+     "log_seg0002.csv": {
+      "sha256": "3624e837605017a6422f84f216fbe5e59ea3c09458a4d93de6b64c445d26e94f",
+      "bytes": 48719
+     },
+     "solute_seg0002.dcd": {
+      "sha256": "971daee27c69ee76a4ab38ca7647d4ce4805ead73d66b7561da31dffc577e67a",
+      "bytes": 24604276
+     },
+     "full_seg0002.dcd": {
+      "sha256": "136da9717d1cada36ec68ae508635cf8f44722eb6211d0ed227ab91910aae33e",
+      "bytes": 24518476
+     },
+     "state_seg0002.xml": {
+      "sha256": "5e87f0405816900cf7d6051c3a1f0859fb378d7ac83c98c4b893e5269abeb8a4",
+      "bytes": 6742329
+     }
+    },
+    "complete": true
+   },
+   {
+    "tag": "seg0003",
+    "kind": "production",
+    "started": {
+     "utc": "2026-10-07T19:55:55Z",
+     "ist": "8 Oct 2026, 1:25:55 AM IST"
+    },
+    "host": "cqc-md-gpu-01",
+    "openmm": "8.6.1",
+    "state_in": {
+     "sha256": "5e87f0405816900cf7d6051c3a1f0859fb378d7ac83c98c4b893e5269abeb8a4",
+     "bytes": 6742329,
+     "file": "state_seg0002.xml"
+    },
+    "seeds": {
+     "integrator": 1147988865,
+     "barostat": 28849827
+    },
+    "platform": {
+     "requested": "CUDA",
+     "name": "CUDA",
+     "properties_set": {
+      "Precision": "mixed",
+      "DeterministicForces": "true"
+     },
+     "properties_actual": {
+      "DeviceIndex": "0",
+      "DeviceName": "NVIDIA L40S",
+      "UseBlockingSync": "false",
+      "Precision": "mixed",
+      "UseCpuPme": "false",
+      "CudaCompiler": "",
+      "TempDirectory": "/tmp",
+      "CudaHostCompiler": "",
+      "DisablePmeStream": "false",
+      "DeterministicForces": "true"
+     },
+     "gpu_name": "NVIDIA L40S",
+     "deterministic_forces_set": true,
+     "precision_set": "mixed",
+     "repeatability": "DeterministicForces is set; whether a repeated segment is bit for bit the same has to be checked on the machine (pre-flight test of md/RUN.md)",
+     "attempts": [
+      {
+       "platform": "CUDA",
+       "usable": true
+      }
+     ]
+    },
+    "settings": {
+     "name": "production",
+     "ensemble": "NPT",
+     "timestep_fs": 4.0,
+     "n_steps": 1250000,
+     "length_ps": 5000.0,
+     "temperature_K": 300.0,
+     "restraint_atoms": "none",
+     "restraint_k_kj_per_mol_nm2": 0.0,
+     "n_restrained_atoms": 0,
+     "barostat": true
+    },
+    "first_step": 2500000,
+    "last_step": 3750000,
+    "time_start_ps": 10000.0,
+    "time_end_ps": 15000.0,
+    "frames": {
+     "solute": 500,
+     "full": 50,
+     "state_log_rows": 500
+    },
+    "final": {
+     "potential_energy_kj_per_mol": -542262.41,
+     "kinetic_energy_kj_per_mol": 105189.913,
+     "temperature_K": 301.76,
+     "volume_nm3": 407.1221,
+     "density_g_per_cm3": 1.02632
+    },
+    "mean_over_state_log": {
+     "temperature_K": 301.05,
+     "density_g_per_cm3": 1.02536,
+     "potential_energy_kj_per_mol": -542284.5
+    },
+    "monitor": {
+     "zn_to_lig_N2_A": 1.934,
+     "lig_N2_to_thr199_OG1_A": 3.031,
+     "lig_N1_to_phe131_CZ_A": 5.707,
+     "lig_N1_to_asn67_OD1_A": 6.405,
+     "zn_to_his94_NE2_A": 1.964,
+     "zn_to_his96_NE2_A": 2.038,
+     "zn_to_his119_ND1_A": 1.993,
+     "n_water_O_within_3.5_A_of_ligand_heavy_atoms": 5,
+     "solute_heavy_rms_displacement_from_start_A": 11.17,
+     "solute_heavy_rms_displacement_note": "translation removed, no rotational fit",
+     "crystal_ring_site": {
+      "n_water_O_within_2.5_A": 0,
+      "nearest_water_O_A": 3.614,
+      "ligand_mean_distance_from_site_A": 1.049
+     }
+    },
+    "wall_s": 462.67,
+    "ns_per_day": 933.71,
+    "ended": {
+     "utc": "2026-10-07T20:03:39Z",
+     "ist": "8 Oct 2026, 1:33:39 AM IST"
+    },
+    "checkpoint": {
+     "sha256": "5267f7a8dd0aa54717f4c86121edad8d70b6a24919e7f7a165dac44cea48c058",
+     "bytes": 6923047,
+     "file": "checkpoint_seg0003.chk",
+     "note": "binary, tied to this machine and platform; --resume uses the XML state"
+    },
+    "files": {
+     "log_seg0003.csv": {
+      "sha256": "fb3e45fcd1d35c0a82a705f6f1c9dbd792562386fcd1b751730b222cc338484a",
+      "bytes": 49218
+     },
+     "solute_seg0003.dcd": {
+      "sha256": "17d96f3169375d5e38374c66bd063c5dda4a54929e4508f670d0f32631eb1e70",
+      "bytes": 24604276
+     },
+     "full_seg0003.dcd": {
+      "sha256": "ea9136c11bf39f9de5481e2a3acd51a188e2bd9c7b783a3c09f5bd3156ccdb64",
+      "bytes": 24518476
+     },
+     "state_seg0003.xml": {
+      "sha256": "b775a7b120aeeaf4ced41e00443a0feb3d37acc1c6dc36bfb3b973d38d50b4ab",
+      "bytes": 6747109
+     }
+    },
+    "complete": true
+   },
+   {
+    "tag": "seg0004",
+    "kind": "production",
+    "started": {
+     "utc": "2026-10-07T20:03:39Z",
+     "ist": "8 Oct 2026, 1:33:39 AM IST"
+    },
+    "host": "cqc-md-gpu-01",
+    "openmm": "8.6.1",
+    "state_in": {
+     "sha256": "b775a7b120aeeaf4ced41e00443a0feb3d37acc1c6dc36bfb3b973d38d50b4ab",
+     "bytes": 6747109,
+     "file": "state_seg0003.xml"
+    },
+    "seeds": {
+     "integrator": 1216172388,
+     "barostat": 2104521106
+    },
+    "platform": {
+     "requested": "CUDA",
+     "name": "CUDA",
+     "properties_set": {
+      "Precision": "mixed",
+      "DeterministicForces": "true"
+     },
+     "properties_actual": {
+      "DeviceIndex": "0",
+      "DeviceName": "NVIDIA L40S",
+      "UseBlockingSync": "false",
+      "Precision": "mixed",
+      "UseCpuPme": "false",
+      "CudaCompiler": "",
+      "TempDirectory": "/tmp",
+      "CudaHostCompiler": "",
+      "DisablePmeStream": "false",
+      "DeterministicForces": "true"
+     },
+     "gpu_name": "NVIDIA L40S",
+     "deterministic_forces_set": true,
+     "precision_set": "mixed",
+     "repeatability": "DeterministicForces is set; whether a repeated segment is bit for bit the same has to be checked on the machine (pre-flight test of md/RUN.md)",
+     "attempts": [
+      {
+       "platform": "CUDA",
+       "usable": true
+      }
+     ]
+    },
+    "settings": {
+     "name": "production",
+     "ensemble": "NPT",
+     "timestep_fs": 4.0,
+     "n_steps": 1250000,
+     "length_ps": 5000.0,
+     "temperature_K": 300.0,
+     "restraint_atoms": "none",
+     "restraint_k_kj_per_mol_nm2": 0.0,
+     "n_restrained_atoms": 0,
+     "barostat": true
+    },
+    "first_step": 3750000,
+    "last_step": 5000000,
+    "time_start_ps": 15000.0,
+    "time_end_ps": 20000.0,
+    "frames": {
+     "solute": 500,
+     "full": 50,
+     "state_log_rows": 500
+    },
+    "final": {
+     "potential_energy_kj_per_mol": -542738.555,
+     "kinetic_energy_kj_per_mol": 104488.511,
+     "temperature_K": 299.74,
+     "volume_nm3": 407.7452,
+     "density_g_per_cm3": 1.02475
+    },
+    "mean_over_state_log": {
+     "temperature_K": 301.04,
+     "density_g_per_cm3": 1.02545,
+     "potential_energy_kj_per_mol": -542258.68
+    },
+    "monitor": {
+     "zn_to_lig_N2_A": 1.962,
+     "lig_N2_to_thr199_OG1_A": 2.968,
+     "lig_N1_to_phe131_CZ_A": 3.68,
+     "lig_N1_to_asn67_OD1_A": 7.834,
+     "zn_to_his94_NE2_A": 2.024,
+     "zn_to_his96_NE2_A": 2.078,
+     "zn_to_his119_ND1_A": 2.08,
+     "n_water_O_within_3.5_A_of_ligand_heavy_atoms": 3,
+     "solute_heavy_rms_displacement_from_start_A": 5.679,
+     "solute_heavy_rms_displacement_note": "translation removed, no rotational fit",
+     "crystal_ring_site": {
+      "n_water_O_within_2.5_A": 0,
+      "nearest_water_O_A": 3.552,
+      "ligand_mean_distance_from_site_A": 0.423
+     }
+    },
+    "wall_s": 466.75,
+    "ns_per_day": 925.55,
+    "ended": {
+     "utc": "2026-10-07T20:11:26Z",
+     "ist": "8 Oct 2026, 1:41:26 AM IST"
+    },
+    "checkpoint": {
+     "sha256": "93ea292c216025384c5464213d155b61d2b1eef2a0889be3c32c3e62fd63d269",
+     "bytes": 6923047,
+     "file": "checkpoint_seg0004.chk",
+     "note": "binary, tied to this machine and platform; --resume uses the XML state"
+    },
+    "files": {
+     "log_seg0004.csv": {
+      "sha256": "0fbfc760e85205aaefb1c58cb25b3053d8514c063136f075d7d3812d2d58a625",
+      "bytes": 49218
+     },
+     "solute_seg0004.dcd": {
+      "sha256": "d4e16e4601b8ab09ce567c47d981d5f4fe0cc76a8c861f364ba5a2fba96eb360",
+      "bytes": 24604276
+     },
+     "full_seg0004.dcd": {
+      "sha256": "72fef63732a45bd5a7e86041921588d56872c30e4dfa168790ca1bd7ce453bfd",
+      "bytes": 24518476
+     },
+     "state_seg0004.xml": {
+      "sha256": "db23a2f1626cec0c29ba31e7318f757a56fabbb1e74da8f0678fb96f50ffc3b2",
+      "bytes": 6750074
+     }
+    },
+    "complete": true
+   },
+   {
+    "tag": "seg0005",
+    "kind": "production",
+    "started": {
+     "utc": "2026-10-07T20:11:26Z",
+     "ist": "8 Oct 2026, 1:41:26 AM IST"
+    },
+    "host": "cqc-md-gpu-01",
+    "openmm": "8.6.1",
+    "state_in": {
+     "sha256": "db23a2f1626cec0c29ba31e7318f757a56fabbb1e74da8f0678fb96f50ffc3b2",
+     "bytes": 6750074,
+     "file": "state_seg0004.xml"
+    },
+    "seeds": {
+     "integrator": 1598254434,
+     "barostat": 137243084
+    },
+    "platform": {
+     "requested": "CUDA",
+     "name": "CUDA",
+     "properties_set": {
+      "Precision": "mixed",
+      "DeterministicForces": "true"
+     },
+     "properties_actual": {
+      "DeviceIndex": "0",
+      "DeviceName": "NVIDIA L40S",
+      "UseBlockingSync": "false",
+      "Precision": "mixed",
+      "UseCpuPme": "false",
+      "CudaCompiler": "",
+      "TempDirectory": "/tmp",
+      "CudaHostCompiler": "",
+      "DisablePmeStream": "false",
+      "DeterministicForces": "true"
+     },
+     "gpu_name": "NVIDIA L40S",
+     "deterministic_forces_set": true,
+     "precision_set": "mixed",
+     "repeatability": "DeterministicForces is set; whether a repeated segment is bit for bit the same has to be checked on the machine (pre-flight test of md/RUN.md)",
+     "attempts": [
+      {
+       "platform": "CUDA",
+       "usable": true
+      }
+     ]
+    },
+    "settings": {
+     "name": "production",
+     "ensemble": "NPT",
+     "timestep_fs": 4.0,
+     "n_steps": 1250000,
+     "length_ps": 5000.0,
+     "temperature_K": 300.0,
+     "restraint_atoms": "none",
+     "restraint_k_kj_per_mol_nm2": 0.0,
+     "n_restrained_atoms": 0,
+     "barostat": true
+    },
+    "first_step": 5000000,
+    "last_step": 6250000,
+    "time_start_ps": 20000.0,
+    "time_end_ps": 25000.0,
+    "frames": {
+     "solute": 500,
+     "full": 50,
+     "state_log_rows": 500
+    },
+    "final": {
+     "potential_energy_kj_per_mol": -542187.691,
+     "kinetic_energy_kj_per_mol": 104549.379,
+     "temperature_K": 299.92,
+     "volume_nm3": 405.4684,
+     "density_g_per_cm3": 1.03051
+    },
+    "mean_over_state_log": {
+     "temperature_K": 300.99,
+     "density_g_per_cm3": 1.02544,
+     "potential_energy_kj_per_mol": -542244.02
+    },
+    "monitor": {
+     "zn_to_lig_N2_A": 1.977,
+     "lig_N2_to_thr199_OG1_A": 2.978,
+     "lig_N1_to_phe131_CZ_A": 4.289,
+     "lig_N1_to_asn67_OD1_A": 6.519,
+     "zn_to_his94_NE2_A": 1.992,
+     "zn_to_his96_NE2_A": 2.06,
+     "zn_to_his119_ND1_A": 1.897,
+     "n_water_O_within_3.5_A_of_ligand_heavy_atoms": 4,
+     "solute_heavy_rms_displacement_from_start_A": 6.404,
+     "solute_heavy_rms_displacement_note": "translation removed, no rotational fit",
+     "crystal_ring_site": {
+      "n_water_O_within_2.5_A": 0,
+      "nearest_water_O_A": 3.815,
+      "ligand_mean_distance_from_site_A": 0.84
+     }
+    },
+    "wall_s": 464.73,
+    "ns_per_day": 929.57,
+    "ended": {
+     "utc": "2026-10-07T20:19:12Z",
+     "ist": "8 Oct 2026, 1:49:12 AM IST"
+    },
+    "checkpoint": {
+     "sha256": "84da25cf49b055784341ae19e25472e067d3c737051c49c4ab26ba990389bb1e",
+     "bytes": 6923047,
+     "file": "checkpoint_seg0005.chk",
+     "note": "binary, tied to this machine and platform; --resume uses the XML state"
+    },
+    "files": {
+     "log_seg0005.csv": {
+      "sha256": "6e10bb1eeb7332722fb3daf75c6d6c98f220c5707e464207abd3dadd5e031d0c",
+      "bytes": 49218
+     },
+     "solute_seg0005.dcd": {
+      "sha256": "55c3e0395fe16c0221f3ad9f456025da1be6fc49325ee06ede09256365e3dcf0",
+      "bytes": 24604276
+     },
+     "full_seg0005.dcd": {
+      "sha256": "09aca2add074489519bcce77d820347526e81da8b02d8978bb83003207a8e826",
+      "bytes": 24518476
+     },
+     "state_seg0005.xml": {
+      "sha256": "a83e1910b9ceccd06f139a7fba43e9b46da755cc895d9b6cbf87fb30f50a3065",
+      "bytes": 6753224
+     }
+    },
+    "complete": true
+   },
+   {
+    "tag": "seg0006",
+    "kind": "production",
+    "started": {
+     "utc": "2026-10-07T20:19:12Z",
+     "ist": "8 Oct 2026, 1:49:12 AM IST"
+    },
+    "host": "cqc-md-gpu-01",
+    "openmm": "8.6.1",
+    "state_in": {
+     "sha256": "a83e1910b9ceccd06f139a7fba43e9b46da755cc895d9b6cbf87fb30f50a3065",
+     "bytes": 6753224,
+     "file": "state_seg0005.xml"
+    },
+    "seeds": {
+     "integrator": 269864415,
+     "barostat": 1950509477
+    },
+    "platform": {
+     "requested": "CUDA",
+     "name": "CUDA",
+     "properties_set": {
+      "Precision": "mixed",
+      "DeterministicForces": "true"
+     },
+     "properties_actual": {
+      "DeviceIndex": "0",
+      "DeviceName": "NVIDIA L40S",
+      "UseBlockingSync": "false",
+      "Precision": "mixed",
+      "UseCpuPme": "false",
+      "CudaCompiler": "",
+      "TempDirectory": "/tmp",
+      "CudaHostCompiler": "",
+      "DisablePmeStream": "false",
+      "DeterministicForces": "true"
+     },
+     "gpu_name": "NVIDIA L40S",
+     "deterministic_forces_set": true,
+     "precision_set": "mixed",
+     "repeatability": "DeterministicForces is set; whether a repeated segment is bit for bit the same has to be checked on the machine (pre-flight test of md/RUN.md)",
+     "attempts": [
+      {
+       "platform": "CUDA",
+       "usable": true
+      }
+     ]
+    },
+    "settings": {
+     "name": "production",
+     "ensemble": "NPT",
+     "timestep_fs": 4.0,
+     "n_steps": 1250000,
+     "length_ps": 5000.0,
+     "temperature_K": 300.0,
+     "restraint_atoms": "none",
+     "restraint_k_kj_per_mol_nm2": 0.0,
+     "n_restrained_atoms": 0,
+     "barostat": true
+    },
+    "first_step": 6250000,
+    "last_step": 7500000,
+    "time_start_ps": 25000.0,
+    "time_end_ps": 30000.0,
+    "frames": {
+     "solute": 500,
+     "full": 50,
+     "state_log_rows": 500
+    },
+    "final": {
+     "potential_energy_kj_per_mol": -541261.292,
+     "kinetic_energy_kj_per_mol": 104531.378,
+     "temperature_K": 299.87,
+     "volume_nm3": 407.9359,
+     "density_g_per_cm3": 1.02427
+    },
+    "mean_over_state_log": {
+     "temperature_K": 300.91,
+     "density_g_per_cm3": 1.02545,
+     "potential_energy_kj_per_mol": -542279.53
+    },
+    "monitor": {
+     "zn_to_lig_N2_A": 1.937,
+     "lig_N2_to_thr199_OG1_A": 2.894,
+     "lig_N1_to_phe131_CZ_A": 5.11,
+     "lig_N1_to_asn67_OD1_A": 5.967,
+     "zn_to_his94_NE2_A": 2.054,
+     "zn_to_his96_NE2_A": 2.024,
+     "zn_to_his119_ND1_A": 2.052,
+     "n_water_O_within_3.5_A_of_ligand_heavy_atoms": 6,
+     "solute_heavy_rms_displacement_from_start_A": 4.88,
+     "solute_heavy_rms_displacement_note": "translation removed, no rotational fit",
+     "crystal_ring_site": {
+      "n_water_O_within_2.5_A": 1,
+      "nearest_water_O_A": 2.03,
+      "ligand_mean_distance_from_site_A": 1.252
+     }
+    },
+    "wall_s": 464.94,
+    "ns_per_day": 929.15,
+    "ended": {
+     "utc": "2026-10-07T20:26:58Z",
+     "ist": "8 Oct 2026, 1:56:58 AM IST"
+    },
+    "checkpoint": {
+     "sha256": "ea85dddcd0809ca18042c83d93056f091cb659d75780ef7475f92031e20bc37c",
+     "bytes": 6923047,
+     "file": "checkpoint_seg0006.chk",
+     "note": "binary, tied to this machine and platform; --resume uses the XML state"
+    },
+    "files": {
+     "log_seg0006.csv": {
+      "sha256": "419e4b79a3782f100c745aa6747e37f68e7b0c299c00f2ad183feedd79bebc7b",
+      "bytes": 49218
+     },
+     "solute_seg0006.dcd": {
+      "sha256": "adaad33f580b87501ad4264e7ede26387b05d2e2e236bbb5325a21d197c31cf5",
+      "bytes": 24604276
+     },
+     "full_seg0006.dcd": {
+      "sha256": "c59d3ee7a17a1a1e38a9c198a2398c12990798a176901c9f519d9a474933f4a0",
+      "bytes": 24518476
+     },
+     "state_seg0006.xml": {
+      "sha256": "86f38c49719d3f3cd3f375841c008175b1039f08b3c4a6bbaa1104bdde4982ed",
+      "bytes": 6754564
+     }
+    },
+    "complete": true
+   },
+   {
+    "tag": "seg0007",
+    "kind": "production",
+    "started": {
+     "utc": "2026-10-07T20:26:58Z",
+     "ist": "8 Oct 2026, 1:56:58 AM IST"
+    },
+    "host": "cqc-md-gpu-01",
+    "openmm": "8.6.1",
+    "state_in": {
+     "sha256": "86f38c49719d3f3cd3f375841c008175b1039f08b3c4a6bbaa1104bdde4982ed",
+     "bytes": 6754564,
+     "file": "state_seg0006.xml"
+    },
+    "seeds": {
+     "integrator": 1324425272,
+     "barostat": 887705922
+    },
+    "platform": {
+     "requested": "CUDA",
+     "name": "CUDA",
+     "properties_set": {
+      "Precision": "mixed",
+      "DeterministicForces": "true"
+     },
+     "properties_actual": {
+      "DeviceIndex": "0",
+      "DeviceName": "NVIDIA L40S",
+      "UseBlockingSync": "false",
+      "Precision": "mixed",
+      "UseCpuPme": "false",
+      "CudaCompiler": "",
+      "TempDirectory": "/tmp",
+      "CudaHostCompiler": "",
+      "DisablePmeStream": "false",
+      "DeterministicForces": "true"
+     },
+     "gpu_name": "NVIDIA L40S",
+     "deterministic_forces_set": true,
+     "precision_set": "mixed",
+     "repeatability": "DeterministicForces is set; whether a repeated segment is bit for bit the same has to be checked on the machine (pre-flight test of md/RUN.md)",
+     "attempts": [
+      {
+       "platform": "CUDA",
+       "usable": true
+      }
+     ]
+    },
+    "settings": {
+     "name": "production",
+     "ensemble": "NPT",
+     "timestep_fs": 4.0,
+     "n_steps": 1250000,
+     "length_ps": 5000.0,
+     "temperature_K": 300.0,
+     "restraint_atoms": "none",
+     "restraint_k_kj_per_mol_nm2": 0.0,
+     "n_restrained_atoms": 0,
+     "barostat": true
+    },
+    "first_step": 7500000,
+    "last_step": 8750000,
+    "time_start_ps": 30000.0,
+    "time_end_ps": 35000.0,
+    "frames": {
+     "solute": 500,
+     "full": 50,
+     "state_log_rows": 500
+    },
+    "final": {
+     "potential_energy_kj_per_mol": -542835.424,
+     "kinetic_energy_kj_per_mol": 104700.588,
+     "temperature_K": 300.35,
+     "volume_nm3": 406.7566,
+     "density_g_per_cm3": 1.02724
+    },
+    "mean_over_state_log": {
+     "temperature_K": 300.99,
+     "density_g_per_cm3": 1.02556,
+     "potential_energy_kj_per_mol": -542310.15
+    },
+    "monitor": {
+     "zn_to_lig_N2_A": 1.943,
+     "lig_N2_to_thr199_OG1_A": 2.864,
+     "lig_N1_to_phe131_CZ_A": 4.455,
+     "lig_N1_to_asn67_OD1_A": 6.174,
+     "zn_to_his94_NE2_A": 1.992,
+     "zn_to_his96_NE2_A": 2.062,
+     "zn_to_his119_ND1_A": 1.983,
+     "n_water_O_within_3.5_A_of_ligand_heavy_atoms": 4,
+     "solute_heavy_rms_displacement_from_start_A": 7.775,
+     "solute_heavy_rms_displacement_note": "translation removed, no rotational fit",
+     "crystal_ring_site": {
+      "n_water_O_within_2.5_A": 1,
+      "nearest_water_O_A": 2.492,
+      "ligand_mean_distance_from_site_A": 2.081
+     }
+    },
+    "wall_s": 466.37,
+    "ns_per_day": 926.3,
+    "ended": {
+     "utc": "2026-10-07T20:34:45Z",
+     "ist": "8 Oct 2026, 2:04:45 AM IST"
+    },
+    "checkpoint": {
+     "sha256": "7a7d20f1eeb87bdac657e686495110600624cf052bc9078dd878858e7b398f10",
+     "bytes": 6923047,
+     "file": "checkpoint_seg0007.chk",
+     "note": "binary, tied to this machine and platform; --resume uses the XML state"
+    },
+    "files": {
+     "log_seg0007.csv": {
+      "sha256": "237f8f8e0d69225be6a41604a99591c2fcb053af5a53b4c4fb47ad7b5831752b",
+      "bytes": 49218
+     },
+     "solute_seg0007.dcd": {
+      "sha256": "b9c4829a06976f2885a3eda819def37cb8efe50732e353924786ad098b14db06",
+      "bytes": 24604276
+     },
+     "full_seg0007.dcd": {
+      "sha256": "42ef4a6296e13eeec4c3a497508496062fb54e3fc3b8447021bb3f6c9d33f52a",
+      "bytes": 24518476
+     },
+     "state_seg0007.xml": {
+      "sha256": "8a2f01a7019c91211f7de8e766c7f12a599dc7c55330117f923f6d10c7b855d9",
+      "bytes": 6756324
+     }
+    },
+    "complete": true
+   },
+   {
+    "tag": "seg0008",
+    "kind": "production",
+    "started": {
+     "utc": "2026-10-07T20:34:45Z",
+     "ist": "8 Oct 2026, 2:04:45 AM IST"
+    },
+    "host": "cqc-md-gpu-01",
+    "openmm": "8.6.1",
+    "state_in": {
+     "sha256": "8a2f01a7019c91211f7de8e766c7f12a599dc7c55330117f923f6d10c7b855d9",
+     "bytes": 6756324,
+     "file": "state_seg0007.xml"
+    },
+    "seeds": {
+     "integrator": 1315274352,
+     "barostat": 1159992692
+    },
+    "platform": {
+     "requested": "CUDA",
+     "name": "CUDA",
+     "properties_set": {
+      "Precision": "mixed",
+      "DeterministicForces": "true"
+     },
+     "properties_actual": {
+      "DeviceIndex": "0",
+      "DeviceName": "NVIDIA L40S",
+      "UseBlockingSync": "false",
+      "Precision": "mixed",
+      "UseCpuPme": "false",
+      "CudaCompiler": "",
+      "TempDirectory": "/tmp",
+      "CudaHostCompiler": "",
+      "DisablePmeStream": "false",
+      "DeterministicForces": "true"
+     },
+     "gpu_name": "NVIDIA L40S",
+     "deterministic_forces_set": true,
+     "precision_set": "mixed",
+     "repeatability": "DeterministicForces is set; whether a repeated segment is bit for bit the same has to be checked on the machine (pre-flight test of md/RUN.md)",
+     "attempts": [
+      {
+       "platform": "CUDA",
+       "usable": true
+      }
+     ]
+    },
+    "settings": {
+     "name": "production",
+     "ensemble": "NPT",
+     "timestep_fs": 4.0,
+     "n_steps": 1250000,
+     "length_ps": 5000.0,
+     "temperature_K": 300.0,
+     "restraint_atoms": "none",
+     "restraint_k_kj_per_mol_nm2": 0.0,
+     "n_restrained_atoms": 0,
+     "barostat": true
+    },
+    "first_step": 8750000,
+    "last_step": 10000000,
+    "time_start_ps": 35000.0,
+    "time_end_ps": 40000.0,
+    "frames": {
+     "solute": 500,
+     "full": 50,
+     "state_log_rows": 500
+    },
+    "final": {
+     "potential_energy_kj_per_mol": -542548.056,
+     "kinetic_energy_kj_per_mol": 105138.018,
+     "temperature_K": 301.61,
+     "volume_nm3": 406.1517,
+     "density_g_per_cm3": 1.02877
+    },
+    "mean_over_state_log": {
+     "temperature_K": 300.95,
+     "density_g_per_cm3": 1.02574,
+     "potential_energy_kj_per_mol": -542300.3
+    },
+    "monitor": {
+     "zn_to_lig_N2_A": 1.941,
+     "lig_N2_to_thr199_OG1_A": 3.056,
+     "lig_N1_to_phe131_CZ_A": 3.843,
+     "lig_N1_to_asn67_OD1_A": 7.645,
+     "zn_to_his94_NE2_A": 2.091,
+     "zn_to_his96_NE2_A": 2.03,
+     "zn_to_his119_ND1_A": 2.021,
+     "n_water_O_within_3.5_A_of_ligand_heavy_atoms": 3,
+     "solute_heavy_rms_displacement_from_start_A": 6.242,
+     "solute_heavy_rms_displacement_note": "translation removed, no rotational fit",
+     "crystal_ring_site": {
+      "n_water_O_within_2.5_A": 0,
+      "nearest_water_O_A": 3.47,
+      "ligand_mean_distance_from_site_A": 1.805
+     }
+    },
+    "wall_s": 467.25,
+    "ns_per_day": 924.55,
+    "ended": {
+     "utc": "2026-10-07T20:42:33Z",
+     "ist": "8 Oct 2026, 2:12:33 AM IST"
+    },
+    "checkpoint": {
+     "sha256": "c36cc7ad1074fd390fb5340719fea47299f182079879c83e92efcc93da9ef187",
+     "bytes": 6923047,
+     "file": "checkpoint_seg0008.chk",
+     "note": "binary, tied to this machine and platform; --resume uses the XML state"
+    },
+    "files": {
+     "log_seg0008.csv": {
+      "sha256": "a02c22b8647cb0bc0a563db4ae5afc0953e7d9696509255e2917caaca921b465",
+      "bytes": 49219
+     },
+     "solute_seg0008.dcd": {
+      "sha256": "e612479e7ca03f660c12dc783115627ffedf863ce2a53436ceb546ac4d14e128",
+      "bytes": 24604276
+     },
+     "full_seg0008.dcd": {
+      "sha256": "eb81ebea8a61e1df0eabdd81dfd8e6b97583fe905bcdebed90f87226c8453b91",
+      "bytes": 24518476
+     },
+     "state_seg0008.xml": {
+      "sha256": "8e3ef8347c20b1908529ed33cc0470c7d09afa199ae41d889710bd76ab276d17",
+      "bytes": 6756025
+     }
+    },
+    "complete": true
+   },
+   {
+    "tag": "seg0009",
+    "kind": "production",
+    "started": {
+     "utc": "2026-10-07T20:42:33Z",
+     "ist": "8 Oct 2026, 2:12:33 AM IST"
+    },
+    "host": "cqc-md-gpu-01",
+    "openmm": "8.6.1",
+    "state_in": {
+     "sha256": "8e3ef8347c20b1908529ed33cc0470c7d09afa199ae41d889710bd76ab276d17",
+     "bytes": 6756025,
+     "file": "state_seg0008.xml"
+    },
+    "seeds": {
+     "integrator": 1646371833,
+     "barostat": 1118347996
+    },
+    "platform": {
+     "requested": "CUDA",
+     "name": "CUDA",
+     "properties_set": {
+      "Precision": "mixed",
+      "DeterministicForces": "true"
+     },
+     "properties_actual": {
+      "DeviceIndex": "0",
+      "DeviceName": "NVIDIA L40S",
+      "UseBlockingSync": "false",
+      "Precision": "mixed",
+      "UseCpuPme": "false",
+      "CudaCompiler": "",
+      "TempDirectory": "/tmp",
+      "CudaHostCompiler": "",
+      "DisablePmeStream": "false",
+      "DeterministicForces": "true"
+     },
+     "gpu_name": "NVIDIA L40S",
+     "deterministic_forces_set": true,
+     "precision_set": "mixed",
+     "repeatability": "DeterministicForces is set; whether a repeated segment is bit for bit the same has to be checked on the machine (pre-flight test of md/RUN.md)",
+     "attempts": [
+      {
+       "platform": "CUDA",
+       "usable": true
+      }
+     ]
+    },
+    "settings": {
+     "name": "production",
+     "ensemble": "NPT",
+     "timestep_fs": 4.0,
+     "n_steps": 1250000,
+     "length_ps": 5000.0,
+     "temperature_K": 300.0,
+     "restraint_atoms": "none",
+     "restraint_k_kj_per_mol_nm2": 0.0,
+     "n_restrained_atoms": 0,
+     "barostat": true
+    },
+    "first_step": 10000000,
+    "last_step": 11250000,
+    "time_start_ps": 40000.0,
+    "time_end_ps": 45000.0,
+    "frames": {
+     "solute": 500,
+     "full": 50,
+     "state_log_rows": 500
+    },
+    "final": {
+     "potential_energy_kj_per_mol": -543364.379,
+     "kinetic_energy_kj_per_mol": 105075.795,
+     "temperature_K": 301.43,
+     "volume_nm3": 407.7572,
+     "density_g_per_cm3": 1.02472
+    },
+    "mean_over_state_log": {
+     "temperature_K": 300.93,
+     "density_g_per_cm3": 1.02562,
+     "potential_energy_kj_per_mol": -542300.57
+    },
+    "monitor": {
+     "zn_to_lig_N2_A": 1.837,
+     "lig_N2_to_thr199_OG1_A": 2.977,
+     "lig_N1_to_phe131_CZ_A": 3.716,
+     "lig_N1_to_asn67_OD1_A": 7.964,
+     "zn_to_his94_NE2_A": 1.934,
+     "zn_to_his96_NE2_A": 2.081,
+     "zn_to_his119_ND1_A": 2.028,
+     "n_water_O_within_3.5_A_of_ligand_heavy_atoms": 3,
+     "solute_heavy_rms_displacement_from_start_A": 9.136,
+     "solute_heavy_rms_displacement_note": "translation removed, no rotational fit",
+     "crystal_ring_site": {
+      "n_water_O_within_2.5_A": 0,
+      "nearest_water_O_A": 3.825,
+      "ligand_mean_distance_from_site_A": 1.842
+     }
+    },
+    "wall_s": 467.51,
+    "ns_per_day": 924.05,
+    "ended": {
+     "utc": "2026-10-07T20:50:22Z",
+     "ist": "8 Oct 2026, 2:20:22 AM IST"
+    },
+    "checkpoint": {
+     "sha256": "f6659aa06e90c4375a5df0a023885867ef5a46d35c0925b8c099783a4808c010",
+     "bytes": 6923047,
+     "file": "checkpoint_seg0009.chk",
+     "note": "binary, tied to this machine and platform; --resume uses the XML state"
+    },
+    "files": {
+     "log_seg0009.csv": {
+      "sha256": "4a07f1407bbb47159b08b372eb6c0723b46071df5611eb49de94eaebd84ffb2e",
+      "bytes": 49718
+     },
+     "solute_seg0009.dcd": {
+      "sha256": "0b6fc9a01abac0adb38f6113939386a58f4c69481fe95583948517daf55571fd",
+      "bytes": 24604276
+     },
+     "full_seg0009.dcd": {
+      "sha256": "cd1fdb6c7e4ffa36dab2b8d0b272ea111b84bc1704dc8d6798cb46071ae3fc85",
+      "bytes": 24518476
+     },
+     "state_seg0009.xml": {
+      "sha256": "8c6738cfa531822486a614b2837635c7422bc491be253b3d893c846b025de690",
+      "bytes": 6755554
+     }
+    },
+    "complete": true
+   },
+   {
+    "tag": "seg0010",
+    "kind": "production",
+    "started": {
+     "utc": "2026-10-07T20:50:22Z",
+     "ist": "8 Oct 2026, 2:20:22 AM IST"
+    },
+    "host": "cqc-md-gpu-01",
+    "openmm": "8.6.1",
+    "state_in": {
+     "sha256": "8c6738cfa531822486a614b2837635c7422bc491be253b3d893c846b025de690",
+     "bytes": 6755554,
+     "file": "state_seg0009.xml"
+    },
+    "seeds": {
+     "integrator": 446723210,
+     "barostat": 1960416343
+    },
+    "platform": {
+     "requested": "CUDA",
+     "name": "CUDA",
+     "properties_set": {
+      "Precision": "mixed",
+      "DeterministicForces": "true"
+     },
+     "properties_actual": {
+      "DeviceIndex": "0",
+      "DeviceName": "NVIDIA L40S",
+      "UseBlockingSync": "false",
+      "Precision": "mixed",
+      "UseCpuPme": "false",
+      "CudaCompiler": "",
+      "TempDirectory": "/tmp",
+      "CudaHostCompiler": "",
+      "DisablePmeStream": "false",
+      "DeterministicForces": "true"
+     },
+     "gpu_name": "NVIDIA L40S",
+     "deterministic_forces_set": true,
+     "precision_set": "mixed",
+     "repeatability": "DeterministicForces is set; whether a repeated segment is bit for bit the same has to be checked on the machine (pre-flight test of md/RUN.md)",
+     "attempts": [
+      {
+       "platform": "CUDA",
+       "usable": true
+      }
+     ]
+    },
+    "settings": {
+     "name": "production",
+     "ensemble": "NPT",
+     "timestep_fs": 4.0,
+     "n_steps": 1250000,
+     "length_ps": 5000.0,
+     "temperature_K": 300.0,
+     "restraint_atoms": "none",
+     "restraint_k_kj_per_mol_nm2": 0.0,
+     "n_restrained_atoms": 0,
+     "barostat": true
+    },
+    "first_step": 11250000,
+    "last_step": 12500000,
+    "time_start_ps": 45000.0,
+    "time_end_ps": 50000.0,
+    "frames": {
+     "solute": 500,
+     "full": 50,
+     "state_log_rows": 500
+    },
+    "final": {
+     "potential_energy_kj_per_mol": -542314.522,
+     "kinetic_energy_kj_per_mol": 105283.816,
+     "temperature_K": 302.03,
+     "volume_nm3": 406.5765,
+     "density_g_per_cm3": 1.0277
+    },
+    "mean_over_state_log": {
+     "temperature_K": 300.86,
+     "density_g_per_cm3": 1.02559,
+     "potential_energy_kj_per_mol": -542227.85
+    },
+    "monitor": {
+     "zn_to_lig_N2_A": 2.018,
+     "lig_N2_to_thr199_OG1_A": 2.896,
+     "lig_N1_to_phe131_CZ_A": 4.341,
+     "lig_N1_to_asn67_OD1_A": 7.968,
+     "zn_to_his94_NE2_A": 2.004,
+     "zn_to_his96_NE2_A": 2.01,
+     "zn_to_his119_ND1_A": 2.072,
+     "n_water_O_within_3.5_A_of_ligand_heavy_atoms": 5,
+     "solute_heavy_rms_displacement_from_start_A": 14.329,
+     "solute_heavy_rms_displacement_note": "translation removed, no rotational fit",
+     "crystal_ring_site": {
+      "n_water_O_within_2.5_A": 0,
+      "nearest_water_O_A": 3.2,
+      "ligand_mean_distance_from_site_A": 1.768
+     }
+    },
+    "wall_s": 464.97,
+    "ns_per_day": 929.09,
+    "ended": {
+     "utc": "2026-10-07T20:58:08Z",
+     "ist": "8 Oct 2026, 2:28:08 AM IST"
+    },
+    "checkpoint": {
+     "sha256": "be6b8d5a04f79a1a943bdc202dddc3582ea367f70f34707fa5909fe4c335f4b8",
+     "bytes": 6923047,
+     "file": "checkpoint_seg0010.chk",
+     "note": "binary, tied to this machine and platform; --resume uses the XML state"
+    },
+    "files": {
+     "log_seg0010.csv": {
+      "sha256": "17bf86e189922f98b302d0aecf6e63fc8db7f8ed68c911333f1d235d58aff695",
+      "bytes": 49718
+     },
+     "solute_seg0010.dcd": {
+      "sha256": "29927f68abb05f284ceca121d57ebd60790a3b2df6c8526a7f0c9cc12ff41839",
+      "bytes": 24604276
+     },
+     "full_seg0010.dcd": {
+      "sha256": "bf1d07a6670598567d1c6bdb6338038fb3fcba474562e51d36b4a200e67daa78",
+      "bytes": 24518476
+     },
+     "state_seg0010.xml": {
+      "sha256": "6eeb5cd3f5c130c539f857d8021e2740d0dbae1be38621a926cb24f57485d1b4",
+      "bytes": 6755933
+     }
+    },
+    "complete": true
+   },
+   {
+    "tag": "seg0011",
+    "kind": "production",
+    "started": {
+     "utc": "2026-10-07T20:58:08Z",
+     "ist": "8 Oct 2026, 2:28:08 AM IST"
+    },
+    "host": "cqc-md-gpu-01",
+    "openmm": "8.6.1",
+    "state_in": {
+     "sha256": "6eeb5cd3f5c130c539f857d8021e2740d0dbae1be38621a926cb24f57485d1b4",
+     "bytes": 6755933,
+     "file": "state_seg0010.xml"
+    },
+    "seeds": {
+     "integrator": 1120391277,
+     "barostat": 134550315
+    },
+    "platform": {
+     "requested": "CUDA",
+     "name": "CUDA",
+     "properties_set": {
+      "Precision": "mixed",
+      "DeterministicForces": "true"
+     },
+     "properties_actual": {
+      "DeviceIndex": "0",
+      "DeviceName": "NVIDIA L40S",
+      "UseBlockingSync": "false",
+      "Precision": "mixed",
+      "UseCpuPme": "false",
+      "CudaCompiler": "",
+      "TempDirectory": "/tmp",
+      "CudaHostCompiler": "",
+      "DisablePmeStream": "false",
+      "DeterministicForces": "true"
+     },
+     "gpu_name": "NVIDIA L40S",
+     "deterministic_forces_set": true,
+     "precision_set": "mixed",
+     "repeatability": "DeterministicForces is set; whether a repeated segment is bit for bit the same has to be checked on the machine (pre-flight test of md/RUN.md)",
+     "attempts": [
+      {
+       "platform": "CUDA",
+       "usable": true
+      }
+     ]
+    },
+    "settings": {
+     "name": "production",
+     "ensemble": "NPT",
+     "timestep_fs": 4.0,
+     "n_steps": 1250000,
+     "length_ps": 5000.0,
+     "temperature_K": 300.0,
+     "restraint_atoms": "none",
+     "restraint_k_kj_per_mol_nm2": 0.0,
+     "n_restrained_atoms": 0,
+     "barostat": true
+    },
+    "first_step": 12500000,
+    "last_step": 13750000,
+    "time_start_ps": 50000.0,
+    "time_end_ps": 55000.0,
+    "frames": {
+     "solute": 500,
+     "full": 50,
+     "state_log_rows": 500
+    },
+    "final": {
+     "potential_energy_kj_per_mol": -543198.566,
+     "kinetic_energy_kj_per_mol": 104695.639,
+     "temperature_K": 300.34,
+     "volume_nm3": 406.9057,
+     "density_g_per_cm3": 1.02687
+    },
+    "mean_over_state_log": {
+     "temperature_K": 300.91,
+     "density_g_per_cm3": 1.02583,
+     "potential_energy_kj_per_mol": -542286.85
+    },
+    "monitor": {
+     "zn_to_lig_N2_A": 1.827,
+     "lig_N2_to_thr199_OG1_A": 2.984,
+     "lig_N1_to_phe131_CZ_A": 5.35,
+     "lig_N1_to_asn67_OD1_A": 5.942,
+     "zn_to_his94_NE2_A": 2.094,
+     "zn_to_his96_NE2_A": 2.029,
+     "zn_to_his119_ND1_A": 2.086,
+     "n_water_O_within_3.5_A_of_ligand_heavy_atoms": 2,
+     "solute_heavy_rms_displacement_from_start_A": 17.067,
+     "solute_heavy_rms_displacement_note": "translation removed, no rotational fit",
+     "crystal_ring_site": {
+      "n_water_O_within_2.5_A": 0,
+      "nearest_water_O_A": 3.771,
+      "ligand_mean_distance_from_site_A": 2.091
+     }
+    },
+    "wall_s": 466.13,
+    "ns_per_day": 926.77,
+    "ended": {
+     "utc": "2026-10-07T21:05:55Z",
+     "ist": "8 Oct 2026, 2:35:55 AM IST"
+    },
+    "checkpoint": {
+     "sha256": "b127c7883f76d10ab984c7356f5dc930d16b5c5aaeb10c14fdc03c92f5260f66",
+     "bytes": 6923047,
+     "file": "checkpoint_seg0011.chk",
+     "note": "binary, tied to this machine and platform; --resume uses the XML state"
+    },
+    "files": {
+     "log_seg0011.csv": {
+      "sha256": "539e528294cca99646c145990aa19d76461434c59dcf9abc90409576cc36c36d",
+      "bytes": 49718
+     },
+     "solute_seg0011.dcd": {
+      "sha256": "df43aacd05bc1af55a602afaefeff9c9f0ff859e3c3220f6f602f514fc402173",
+      "bytes": 24604276
+     },
+     "full_seg0011.dcd": {
+      "sha256": "038fe52ce9ab207f525afd46d8ab43a5dc2085df13d0d9d41005c7f741d3c9c5",
+      "bytes": 24518476
+     },
+     "state_seg0011.xml": {
+      "sha256": "7034facf183eb362f5272d8a1d44cb820c6be213d3f4e5c0a7b8c96cf9e3b1f2",
+      "bytes": 6755587
+     }
+    },
+    "complete": true
+   },
+   {
+    "tag": "seg0012",
+    "kind": "production",
+    "started": {
+     "utc": "2026-10-07T21:05:55Z",
+     "ist": "8 Oct 2026, 2:35:55 AM IST"
+    },
+    "host": "cqc-md-gpu-01",
+    "openmm": "8.6.1",
+    "state_in": {
+     "sha256": "7034facf183eb362f5272d8a1d44cb820c6be213d3f4e5c0a7b8c96cf9e3b1f2",
+     "bytes": 6755587,
+     "file": "state_seg0011.xml"
+    },
+    "seeds": {
+     "integrator": 1214852141,
+     "barostat": 1493526362
+    },
+    "platform": {
+     "requested": "CUDA",
+     "name": "CUDA",
+     "properties_set": {
+      "Precision": "mixed",
+      "DeterministicForces": "true"
+     },
+     "properties_actual": {
+      "DeviceIndex": "0",
+      "DeviceName": "NVIDIA L40S",
+      "UseBlockingSync": "false",
+      "Precision": "mixed",
+      "UseCpuPme": "false",
+      "CudaCompiler": "",
+      "TempDirectory": "/tmp",
+      "CudaHostCompiler": "",
+      "DisablePmeStream": "false",
+      "DeterministicForces": "true"
+     },
+     "gpu_name": "NVIDIA L40S",
+     "deterministic_forces_set": true,
+     "precision_set": "mixed",
+     "repeatability": "DeterministicForces is set; whether a repeated segment is bit for bit the same has to be checked on the machine (pre-flight test of md/RUN.md)",
+     "attempts": [
+      {
+       "platform": "CUDA",
+       "usable": true
+      }
+     ]
+    },
+    "settings": {
+     "name": "production",
+     "ensemble": "NPT",
+     "timestep_fs": 4.0,
+     "n_steps": 1250000,
+     "length_ps": 5000.0,
+     "temperature_K": 300.0,
+     "restraint_atoms": "none",
+     "restraint_k_kj_per_mol_nm2": 0.0,
+     "n_restrained_atoms": 0,
+     "barostat": true
+    },
+    "first_step": 13750000,
+    "last_step": 15000000,
+    "time_start_ps": 55000.0,
+    "time_end_ps": 60000.0,
+    "frames": {
+     "solute": 500,
+     "full": 50,
+     "state_log_rows": 500
+    },
+    "final": {
+     "potential_energy_kj_per_mol": -541439.693,
+     "kinetic_energy_kj_per_mol": 105119.361,
+     "temperature_K": 301.55,
+     "volume_nm3": 409.1976,
+     "density_g_per_cm3": 1.02111
+    },
+    "mean_over_state_log": {
+     "temperature_K": 300.91,
+     "density_g_per_cm3": 1.0256,
+     "potential_energy_kj_per_mol": -542212.58
+    },
+    "monitor": {
+     "zn_to_lig_N2_A": 1.9,
+     "lig_N2_to_thr199_OG1_A": 2.86,
+     "lig_N1_to_phe131_CZ_A": 5.028,
+     "lig_N1_to_asn67_OD1_A": 5.533,
+     "zn_to_his94_NE2_A": 2.177,
+     "zn_to_his96_NE2_A": 2.012,
+     "zn_to_his119_ND1_A": 2.039,
+     "n_water_O_within_3.5_A_of_ligand_heavy_atoms": 6,
+     "solute_heavy_rms_displacement_from_start_A": 17.743,
+     "solute_heavy_rms_displacement_note": "translation removed, no rotational fit",
+     "crystal_ring_site": {
+      "n_water_O_within_2.5_A": 0,
+      "nearest_water_O_A": 3.609,
+      "ligand_mean_distance_from_site_A": 2.216
+     }
+    },
+    "wall_s": 464.66,
+    "ns_per_day": 929.71,
+    "ended": {
+     "utc": "2026-10-07T21:13:40Z",
+     "ist": "8 Oct 2026, 2:43:40 AM IST"
+    },
+    "checkpoint": {
+     "sha256": "f49e0f131289c3beef002a31293beadd52c3d3f9f7e944cb5ca16a134856d39f",
+     "bytes": 6923047,
+     "file": "checkpoint_seg0012.chk",
+     "note": "binary, tied to this machine and platform; --resume uses the XML state"
+    },
+    "files": {
+     "log_seg0012.csv": {
+      "sha256": "dc7aa35616df48f6441dd0da63de71f4c0b9658b48b39dffee3e5a9d13312c5d",
+      "bytes": 49718
+     },
+     "solute_seg0012.dcd": {
+      "sha256": "027384285a63ca7e381e413d9b2aad850bb75d2cb27d9c848373f5ccbe481cc4",
+      "bytes": 24604276
+     },
+     "full_seg0012.dcd": {
+      "sha256": "f3e9d69b5ad1f034309d859af8a9c931c89ba24ae60b1ec5f2309b7c5bd6fd8b",
+      "bytes": 24518476
+     },
+     "state_seg0012.xml": {
+      "sha256": "d90266434a73056bc3953be40d6156a19d2d27ffd465b4fc934687dcd8a4797d",
+      "bytes": 6755801
+     }
+    },
+    "complete": true
+   },
+   {
+    "tag": "seg0013",
+    "kind": "production",
+    "started": {
+     "utc": "2026-10-07T21:13:40Z",
+     "ist": "8 Oct 2026, 2:43:40 AM IST"
+    },
+    "host": "cqc-md-gpu-01",
+    "openmm": "8.6.1",
+    "state_in": {
+     "sha256": "d90266434a73056bc3953be40d6156a19d2d27ffd465b4fc934687dcd8a4797d",
+     "bytes": 6755801,
+     "file": "state_seg0012.xml"
+    },
+    "seeds": {
+     "integrator": 1569307736,
+     "barostat": 1522278503
+    },
+    "platform": {
+     "requested": "CUDA",
+     "name": "CUDA",
+     "properties_set": {
+      "Precision": "mixed",
+      "DeterministicForces": "true"
+     },
+     "properties_actual": {
+      "DeviceIndex": "0",
+      "DeviceName": "NVIDIA L40S",
+      "UseBlockingSync": "false",
+      "Precision": "mixed",
+      "UseCpuPme": "false",
+      "CudaCompiler": "",
+      "TempDirectory": "/tmp",
+      "CudaHostCompiler": "",
+      "DisablePmeStream": "false",
+      "DeterministicForces": "true"
+     },
+     "gpu_name": "NVIDIA L40S",
+     "deterministic_forces_set": true,
+     "precision_set": "mixed",
+     "repeatability": "DeterministicForces is set; whether a repeated segment is bit for bit the same has to be checked on the machine (pre-flight test of md/RUN.md)",
+     "attempts": [
+      {
+       "platform": "CUDA",
+       "usable": true
+      }
+     ]
+    },
+    "settings": {
+     "name": "production",
+     "ensemble": "NPT",
+     "timestep_fs": 4.0,
+     "n_steps": 1250000,
+     "length_ps": 5000.0,
+     "temperature_K": 300.0,
+     "restraint_atoms": "none",
+     "restraint_k_kj_per_mol_nm2": 0.0,
+     "n_restrained_atoms": 0,
+     "barostat": true
+    },
+    "first_step": 15000000,
+    "last_step": 16250000,
+    "time_start_ps": 60000.0,
+    "time_end_ps": 65000.0,
+    "frames": {
+     "solute": 500,
+     "full": 50,
+     "state_log_rows": 500
+    },
+    "final": {
+     "potential_energy_kj_per_mol": -541308.76,
+     "kinetic_energy_kj_per_mol": 105285.443,
+     "temperature_K": 302.03,
+     "volume_nm3": 407.07,
+     "density_g_per_cm3": 1.02645
+    },
+    "mean_over_state_log": {
+     "temperature_K": 300.89,
+     "density_g_per_cm3": 1.02563,
+     "potential_energy_kj_per_mol": -542228.68
+    },
+    "monitor": {
+     "zn_to_lig_N2_A": 1.991,
+     "lig_N2_to_thr199_OG1_A": 2.857,
+     "lig_N1_to_phe131_CZ_A": 5.012,
+     "lig_N1_to_asn67_OD1_A": 8.401,
+     "zn_to_his94_NE2_A": 2.05,
+     "zn_to_his96_NE2_A": 2.034,
+     "zn_to_his119_ND1_A": 2.019,
+     "n_water_O_within_3.5_A_of_ligand_heavy_atoms": 5,
+     "solute_heavy_rms_displacement_from_start_A": 19.634,
+     "solute_heavy_rms_displacement_note": "translation removed, no rotational fit",
+     "crystal_ring_site": {
+      "n_water_O_within_2.5_A": 1,
+      "nearest_water_O_A": 2.399,
+      "ligand_mean_distance_from_site_A": 1.878
+     }
+    },
+    "wall_s": 463.77,
+    "ns_per_day": 931.5,
+    "ended": {
+     "utc": "2026-10-07T21:21:25Z",
+     "ist": "8 Oct 2026, 2:51:25 AM IST"
+    },
+    "checkpoint": {
+     "sha256": "98c7028faf8ed33495c8b3e47af3107d803a1f7b33a6c41911f0a880cca70327",
+     "bytes": 6923047,
+     "file": "checkpoint_seg0013.chk",
+     "note": "binary, tied to this machine and platform; --resume uses the XML state"
+    },
+    "files": {
+     "log_seg0013.csv": {
+      "sha256": "210b34dafca8aaf04a3c5f9da7e9d07701dcf7937fa4ad12d7f93c2cb10498c0",
+      "bytes": 49718
+     },
+     "solute_seg0013.dcd": {
+      "sha256": "a96f034c11236bfc6d0b1f4e521b4808c912a58dfbcbdad859fcb8060f704bcd",
+      "bytes": 24604276
+     },
+     "full_seg0013.dcd": {
+      "sha256": "523a730bd61250f535f7f3722934603d044e7dd7529a3d568bdd059d09f0d96b",
+      "bytes": 24518476
+     },
+     "state_seg0013.xml": {
+      "sha256": "ebf909da07002b4e64d95b258e44f10374f703338bbcb5da8cd54302047d29aa",
+      "bytes": 6756238
+     }
+    },
+    "complete": true
+   },
+   {
+    "tag": "seg0014",
+    "kind": "production",
+    "started": {
+     "utc": "2026-10-07T21:21:25Z",
+     "ist": "8 Oct 2026, 2:51:25 AM IST"
+    },
+    "host": "cqc-md-gpu-01",
+    "openmm": "8.6.1",
+    "state_in": {
+     "sha256": "ebf909da07002b4e64d95b258e44f10374f703338bbcb5da8cd54302047d29aa",
+     "bytes": 6756238,
+     "file": "state_seg0013.xml"
+    },
+    "seeds": {
+     "integrator": 184982973,
+     "barostat": 682716312
+    },
+    "platform": {
+     "requested": "CUDA",
+     "name": "CUDA",
+     "properties_set": {
+      "Precision": "mixed",
+      "DeterministicForces": "true"
+     },
+     "properties_actual": {
+      "DeviceIndex": "0",
+      "DeviceName": "NVIDIA L40S",
+      "UseBlockingSync": "false",
+      "Precision": "mixed",
+      "UseCpuPme": "false",
+      "CudaCompiler": "",
+      "TempDirectory": "/tmp",
+      "CudaHostCompiler": "",
+      "DisablePmeStream": "false",
+      "DeterministicForces": "true"
+     },
+     "gpu_name": "NVIDIA L40S",
+     "deterministic_forces_set": true,
+     "precision_set": "mixed",
+     "repeatability": "DeterministicForces is set; whether a repeated segment is bit for bit the same has to be checked on the machine (pre-flight test of md/RUN.md)",
+     "attempts": [
+      {
+       "platform": "CUDA",
+       "usable": true
+      }
+     ]
+    },
+    "settings": {
+     "name": "production",
+     "ensemble": "NPT",
+     "timestep_fs": 4.0,
+     "n_steps": 1250000,
+     "length_ps": 5000.0,
+     "temperature_K": 300.0,
+     "restraint_atoms": "none",
+     "restraint_k_kj_per_mol_nm2": 0.0,
+     "n_restrained_atoms": 0,
+     "barostat": true
+    },
+    "first_step": 16250000,
+    "last_step": 17500000,
+    "time_start_ps": 65000.0,
+    "time_end_ps": 70000.0,
+    "frames": {
+     "solute": 500,
+     "full": 50,
+     "state_log_rows": 500
+    },
+    "final": {
+     "potential_energy_kj_per_mol": -541278.593,
+     "kinetic_energy_kj_per_mol": 105184.45,
+     "temperature_K": 301.74,
+     "volume_nm3": 408.1187,
+     "density_g_per_cm3": 1.02381
+    },
+    "mean_over_state_log": {
+     "temperature_K": 301.02,
+     "density_g_per_cm3": 1.02563,
+     "potential_energy_kj_per_mol": -542241.33
+    },
+    "monitor": {
+     "zn_to_lig_N2_A": 1.933,
+     "lig_N2_to_thr199_OG1_A": 2.957,
+     "lig_N1_to_phe131_CZ_A": 4.488,
+     "lig_N1_to_asn67_OD1_A": 5.482,
+     "zn_to_his94_NE2_A": 1.966,
+     "zn_to_his96_NE2_A": 1.968,
+     "zn_to_his119_ND1_A": 2.153,
+     "n_water_O_within_3.5_A_of_ligand_heavy_atoms": 5,
+     "solute_heavy_rms_displacement_from_start_A": 19.496,
+     "solute_heavy_rms_displacement_note": "translation removed, no rotational fit",
+     "crystal_ring_site": {
+      "n_water_O_within_2.5_A": 1,
+      "nearest_water_O_A": 1.896,
+      "ligand_mean_distance_from_site_A": 2.055
+     }
+    },
+    "wall_s": 465.58,
+    "ns_per_day": 927.87,
+    "ended": {
+     "utc": "2026-10-07T21:29:12Z",
+     "ist": "8 Oct 2026, 2:59:12 AM IST"
+    },
+    "checkpoint": {
+     "sha256": "d58332a6fee056fa41c068589de2b465b5f226456363e2f929b4b03db69a8d42",
+     "bytes": 6923047,
+     "file": "checkpoint_seg0014.chk",
+     "note": "binary, tied to this machine and platform; --resume uses the XML state"
+    },
+    "files": {
+     "log_seg0014.csv": {
+      "sha256": "12a5159583e49b8cf973b6e1556b103aac913143a597149869938eefdaf4da5d",
+      "bytes": 49718
+     },
+     "solute_seg0014.dcd": {
+      "sha256": "c726c3d5fc06676c599c91016a79d93815f30fc3b43497df79314a7316bfbd76",
+      "bytes": 24604276
+     },
+     "full_seg0014.dcd": {
+      "sha256": "a8a3dbbb0a74e7ca83dcfe96614e4a0df6da51fca205a5f058103b0634724360",
+      "bytes": 24518476
+     },
+     "state_seg0014.xml": {
+      "sha256": "129bf6e4f26bd1b0dfb0df29aceb7daafba21036770a4cfc5e8f8529f08dbf38",
+      "bytes": 6755469
+     }
+    },
+    "complete": true
+   },
+   {
+    "tag": "seg0015",
+    "kind": "production",
+    "started": {
+     "utc": "2026-10-07T21:29:12Z",
+     "ist": "8 Oct 2026, 2:59:12 AM IST"
+    },
+    "host": "cqc-md-gpu-01",
+    "openmm": "8.6.1",
+    "state_in": {
+     "sha256": "129bf6e4f26bd1b0dfb0df29aceb7daafba21036770a4cfc5e8f8529f08dbf38",
+     "bytes": 6755469,
+     "file": "state_seg0014.xml"
+    },
+    "seeds": {
+     "integrator": 303679970,
+     "barostat": 1381094346
+    },
+    "platform": {
+     "requested": "CUDA",
+     "name": "CUDA",
+     "properties_set": {
+      "Precision": "mixed",
+      "DeterministicForces": "true"
+     },
+     "properties_actual": {
+      "DeviceIndex": "0",
+      "DeviceName": "NVIDIA L40S",
+      "UseBlockingSync": "false",
+      "Precision": "mixed",
+      "UseCpuPme": "false",
+      "CudaCompiler": "",
+      "TempDirectory": "/tmp",
+      "CudaHostCompiler": "",
+      "DisablePmeStream": "false",
+      "DeterministicForces": "true"
+     },
+     "gpu_name": "NVIDIA L40S",
+     "deterministic_forces_set": true,
+     "precision_set": "mixed",
+     "repeatability": "DeterministicForces is set; whether a repeated segment is bit for bit the same has to be checked on the machine (pre-flight test of md/RUN.md)",
+     "attempts": [
+      {
+       "platform": "CUDA",
+       "usable": true
+      }
+     ]
+    },
+    "settings": {
+     "name": "production",
+     "ensemble": "NPT",
+     "timestep_fs": 4.0,
+     "n_steps": 1250000,
+     "length_ps": 5000.0,
+     "temperature_K": 300.0,
+     "restraint_atoms": "none",
+     "restraint_k_kj_per_mol_nm2": 0.0,
+     "n_restrained_atoms": 0,
+     "barostat": true
+    },
+    "first_step": 17500000,
+    "last_step": 18750000,
+    "time_start_ps": 70000.0,
+    "time_end_ps": 75000.0,
+    "frames": {
+     "solute": 500,
+     "full": 50,
+     "state_log_rows": 500
+    },
+    "final": {
+     "potential_energy_kj_per_mol": -542334.912,
+     "kinetic_energy_kj_per_mol": 104351.347,
+     "temperature_K": 299.35,
+     "volume_nm3": 406.8697,
+     "density_g_per_cm3": 1.02696
+    },
+    "mean_over_state_log": {
+     "temperature_K": 301.06,
+     "density_g_per_cm3": 1.02546,
+     "potential_energy_kj_per_mol": -542193.5
+    },
+    "monitor": {
+     "zn_to_lig_N2_A": 1.905,
+     "lig_N2_to_thr199_OG1_A": 2.77,
+     "lig_N1_to_phe131_CZ_A": 4.61,
+     "lig_N1_to_asn67_OD1_A": 6.29,
+     "zn_to_his94_NE2_A": 1.912,
+     "zn_to_his96_NE2_A": 2.041,
+     "zn_to_his119_ND1_A": 2.053,
+     "n_water_O_within_3.5_A_of_ligand_heavy_atoms": 4,
+     "solute_heavy_rms_displacement_from_start_A": 16.042,
+     "solute_heavy_rms_displacement_note": "translation removed, no rotational fit",
+     "crystal_ring_site": {
+      "n_water_O_within_2.5_A": 0,
+      "nearest_water_O_A": 3.836,
+      "ligand_mean_distance_from_site_A": 2.015
+     }
+    },
+    "wall_s": 465.38,
+    "ns_per_day": 928.27,
+    "ended": {
+     "utc": "2026-10-07T21:36:58Z",
+     "ist": "8 Oct 2026, 3:06:58 AM IST"
+    },
+    "checkpoint": {
+     "sha256": "203812f2214a4009ab29df8d3dcaff7cceabee967bb1f13e9a04563aa432ae9e",
+     "bytes": 6923047,
+     "file": "checkpoint_seg0015.chk",
+     "note": "binary, tied to this machine and platform; --resume uses the XML state"
+    },
+    "files": {
+     "log_seg0015.csv": {
+      "sha256": "f3a6c2e34f7630181a5d653353137c2cfe5be8c57903c225089146d1e7e13deb",
+      "bytes": 49718
+     },
+     "solute_seg0015.dcd": {
+      "sha256": "5cda5146ea233ca66cd25e9a5da7fca72ab6be466b7713fbb3cefdfc5612fef7",
+      "bytes": 24604276
+     },
+     "full_seg0015.dcd": {
+      "sha256": "4c2058a37f9639756b7c15432200a458d30b744bfec119d5f97b500a275d62c6",
+      "bytes": 24518476
+     },
+     "state_seg0015.xml": {
+      "sha256": "b75efa02f5d71adb1872746525a3b43a4a603e901c5d6049fabf5c8eccb435f9",
+      "bytes": 6755607
+     }
+    },
+    "complete": true
+   },
+   {
+    "tag": "seg0016",
+    "kind": "production",
+    "started": {
+     "utc": "2026-10-07T21:36:58Z",
+     "ist": "8 Oct 2026, 3:06:58 AM IST"
+    },
+    "host": "cqc-md-gpu-01",
+    "openmm": "8.6.1",
+    "state_in": {
+     "sha256": "b75efa02f5d71adb1872746525a3b43a4a603e901c5d6049fabf5c8eccb435f9",
+     "bytes": 6755607,
+     "file": "state_seg0015.xml"
+    },
+    "seeds": {
+     "integrator": 1442825593,
+     "barostat": 777770729
+    },
+    "platform": {
+     "requested": "CUDA",
+     "name": "CUDA",
+     "properties_set": {
+      "Precision": "mixed",
+      "DeterministicForces": "true"
+     },
+     "properties_actual": {
+      "DeviceIndex": "0",
+      "DeviceName": "NVIDIA L40S",
+      "UseBlockingSync": "false",
+      "Precision": "mixed",
+      "UseCpuPme": "false",
+      "CudaCompiler": "",
+      "TempDirectory": "/tmp",
+      "CudaHostCompiler": "",
+      "DisablePmeStream": "false",
+      "DeterministicForces": "true"
+     },
+     "gpu_name": "NVIDIA L40S",
+     "deterministic_forces_set": true,
+     "precision_set": "mixed",
+     "repeatability": "DeterministicForces is set; whether a repeated segment is bit for bit the same has to be checked on the machine (pre-flight test of md/RUN.md)",
+     "attempts": [
+      {
+       "platform": "CUDA",
+       "usable": true
+      }
+     ]
+    },
+    "settings": {
+     "name": "production",
+     "ensemble": "NPT",
+     "timestep_fs": 4.0,
+     "n_steps": 1250000,
+     "length_ps": 5000.0,
+     "temperature_K": 300.0,
+     "restraint_atoms": "none",
+     "restraint_k_kj_per_mol_nm2": 0.0,
+     "n_restrained_atoms": 0,
+     "barostat": true
+    },
+    "first_step": 18750000,
+    "last_step": 20000000,
+    "time_start_ps": 75000.0,
+    "time_end_ps": 80000.0,
+    "frames": {
+     "solute": 500,
+     "full": 50,
+     "state_log_rows": 500
+    },
+    "final": {
+     "potential_energy_kj_per_mol": -543726.65,
+     "kinetic_energy_kj_per_mol": 105076.429,
+     "temperature_K": 301.43,
+     "volume_nm3": 406.8608,
+     "density_g_per_cm3": 1.02698
+    },
+    "mean_over_state_log": {
+     "temperature_K": 300.88,
+     "density_g_per_cm3": 1.02581,
+     "potential_energy_kj_per_mol": -542324.31
+    },
+    "monitor": {
+     "zn_to_lig_N2_A": 1.853,
+     "lig_N2_to_thr199_OG1_A": 2.767,
+     "lig_N1_to_phe131_CZ_A": 4.726,
+     "lig_N1_to_asn67_OD1_A": 7.486,
+     "zn_to_his94_NE2_A": 2.065,
+     "zn_to_his96_NE2_A": 2.004,
+     "zn_to_his119_ND1_A": 2.062,
+     "n_water_O_within_3.5_A_of_ligand_heavy_atoms": 3,
+     "solute_heavy_rms_displacement_from_start_A": 15.0,
+     "solute_heavy_rms_displacement_note": "translation removed, no rotational fit",
+     "crystal_ring_site": {
+      "n_water_O_within_2.5_A": 0,
+      "nearest_water_O_A": 3.398,
+      "ligand_mean_distance_from_site_A": 1.805
+     }
+    },
+    "wall_s": 465.74,
+    "ns_per_day": 927.55,
+    "ended": {
+     "utc": "2026-10-07T21:44:45Z",
+     "ist": "8 Oct 2026, 3:14:45 AM IST"
+    },
+    "checkpoint": {
+     "sha256": "72753ddf341f8988f16f484a1112fd9e2a9078e958f861e5bfff13ef94401b29",
+     "bytes": 6923047,
+     "file": "checkpoint_seg0016.chk",
+     "note": "binary, tied to this machine and platform; --resume uses the XML state"
+    },
+    "files": {
+     "log_seg0016.csv": {
+      "sha256": "2e3e9ddfc182803d2a5cf8b8fd90670f390ebfb4472da49723a5099348984d22",
+      "bytes": 49718
+     },
+     "solute_seg0016.dcd": {
+      "sha256": "2256a5cf0ba9fa9d11c5b7495d050170709e071a1fe5f629965798f45734708c",
+      "bytes": 24604276
+     },
+     "full_seg0016.dcd": {
+      "sha256": "88efb6e21420767c9e06981f363c2e98dd6b048bff969672ae8515187fff0aab",
+      "bytes": 24518476
+     },
+     "state_seg0016.xml": {
+      "sha256": "9d23e0ccfdc6ed16b4e25b5bea76f9dc94f42cb32622ac50eaf5d4524e4c0051",
+      "bytes": 6755053
+     }
+    },
+    "complete": true
+   },
+   {
+    "tag": "seg0017",
+    "kind": "production",
+    "started": {
+     "utc": "2026-10-07T21:44:45Z",
+     "ist": "8 Oct 2026, 3:14:45 AM IST"
+    },
+    "host": "cqc-md-gpu-01",
+    "openmm": "8.6.1",
+    "state_in": {
+     "sha256": "9d23e0ccfdc6ed16b4e25b5bea76f9dc94f42cb32622ac50eaf5d4524e4c0051",
+     "bytes": 6755053,
+     "file": "state_seg0016.xml"
+    },
+    "seeds": {
+     "integrator": 464102674,
+     "barostat": 1861150501
+    },
+    "platform": {
+     "requested": "CUDA",
+     "name": "CUDA",
+     "properties_set": {
+      "Precision": "mixed",
+      "DeterministicForces": "true"
+     },
+     "properties_actual": {
+      "DeviceIndex": "0",
+      "DeviceName": "NVIDIA L40S",
+      "UseBlockingSync": "false",
+      "Precision": "mixed",
+      "UseCpuPme": "false",
+      "CudaCompiler": "",
+      "TempDirectory": "/tmp",
+      "CudaHostCompiler": "",
+      "DisablePmeStream": "false",
+      "DeterministicForces": "true"
+     },
+     "gpu_name": "NVIDIA L40S",
+     "deterministic_forces_set": true,
+     "precision_set": "mixed",
+     "repeatability": "DeterministicForces is set; whether a repeated segment is bit for bit the same has to be checked on the machine (pre-flight test of md/RUN.md)",
+     "attempts": [
+      {
+       "platform": "CUDA",
+       "usable": true
+      }
+     ]
+    },
+    "settings": {
+     "name": "production",
+     "ensemble": "NPT",
+     "timestep_fs": 4.0,
+     "n_steps": 1250000,
+     "length_ps": 5000.0,
+     "temperature_K": 300.0,
+     "restraint_atoms": "none",
+     "restraint_k_kj_per_mol_nm2": 0.0,
+     "n_restrained_atoms": 0,
+     "barostat": true
+    },
+    "first_step": 20000000,
+    "last_step": 21250000,
+    "time_start_ps": 80000.0,
+    "time_end_ps": 85000.0,
+    "frames": {
+     "solute": 500,
+     "full": 50,
+     "state_log_rows": 500
+    },
+    "final": {
+     "potential_energy_kj_per_mol": -542284.011,
+     "kinetic_energy_kj_per_mol": 104034.523,
+     "temperature_K": 298.44,
+     "volume_nm3": 406.4232,
+     "density_g_per_cm3": 1.02809
+    },
+    "mean_over_state_log": {
+     "temperature_K": 300.94,
+     "density_g_per_cm3": 1.02553,
+     "potential_energy_kj_per_mol": -542277.91
+    },
+    "monitor": {
+     "zn_to_lig_N2_A": 1.95,
+     "lig_N2_to_thr199_OG1_A": 2.744,
+     "lig_N1_to_phe131_CZ_A": 6.017,
+     "lig_N1_to_asn67_OD1_A": 4.83,
+     "zn_to_his94_NE2_A": 2.021,
+     "zn_to_his96_NE2_A": 2.165,
+     "zn_to_his119_ND1_A": 2.182,
+     "n_water_O_within_3.5_A_of_ligand_heavy_atoms": 3,
+     "solute_heavy_rms_displacement_from_start_A": 15.375,
+     "solute_heavy_rms_displacement_note": "translation removed, no rotational fit",
+     "crystal_ring_site": {
+      "n_water_O_within_2.5_A": 1,
+      "nearest_water_O_A": 2.217,
+      "ligand_mean_distance_from_site_A": 2.354
+     }
+    },
+    "wall_s": 467.99,
+    "ns_per_day": 923.09,
+    "ended": {
+     "utc": "2026-10-07T21:52:33Z",
+     "ist": "8 Oct 2026, 3:22:33 AM IST"
+    },
+    "checkpoint": {
+     "sha256": "4d0f80899a9b28589d683cd183e7ab85997c1c485e1d2c7d4d5b542f378ba570",
+     "bytes": 6923047,
+     "file": "checkpoint_seg0017.chk",
+     "note": "binary, tied to this machine and platform; --resume uses the XML state"
+    },
+    "files": {
+     "log_seg0017.csv": {
+      "sha256": "4b6ed8e4effcc3a6f86f44e89906d64f7d99b74f21b6da6fecbb470afb4c686e",
+      "bytes": 49718
+     },
+     "solute_seg0017.dcd": {
+      "sha256": "0d4221da097a675c9ef9076643ed6e791ed086df743b33179902f3ef71adba58",
+      "bytes": 24604276
+     },
+     "full_seg0017.dcd": {
+      "sha256": "0ed01d7f9341bb98ee5a206f2b414ef83dddcd1255b076f75021ccbb2e4b5fba",
+      "bytes": 24518476
+     },
+     "state_seg0017.xml": {
+      "sha256": "da83f0bcf6ffb995f6741c5844594ccb96c0d20d308aee035caa88c1008f5a2d",
+      "bytes": 6755082
+     }
+    },
+    "complete": true
+   },
+   {
+    "tag": "seg0018",
+    "kind": "production",
+    "started": {
+     "utc": "2026-10-07T21:52:34Z",
+     "ist": "8 Oct 2026, 3:22:34 AM IST"
+    },
+    "host": "cqc-md-gpu-01",
+    "openmm": "8.6.1",
+    "state_in": {
+     "sha256": "da83f0bcf6ffb995f6741c5844594ccb96c0d20d308aee035caa88c1008f5a2d",
+     "bytes": 6755082,
+     "file": "state_seg0017.xml"
+    },
+    "seeds": {
+     "integrator": 89832183,
+     "barostat": 241851677
+    },
+    "platform": {
+     "requested": "CUDA",
+     "name": "CUDA",
+     "properties_set": {
+      "Precision": "mixed",
+      "DeterministicForces": "true"
+     },
+     "properties_actual": {
+      "DeviceIndex": "0",
+      "DeviceName": "NVIDIA L40S",
+      "UseBlockingSync": "false",
+      "Precision": "mixed",
+      "UseCpuPme": "false",
+      "CudaCompiler": "",
+      "TempDirectory": "/tmp",
+      "CudaHostCompiler": "",
+      "DisablePmeStream": "false",
+      "DeterministicForces": "true"
+     },
+     "gpu_name": "NVIDIA L40S",
+     "deterministic_forces_set": true,
+     "precision_set": "mixed",
+     "repeatability": "DeterministicForces is set; whether a repeated segment is bit for bit the same has to be checked on the machine (pre-flight test of md/RUN.md)",
+     "attempts": [
+      {
+       "platform": "CUDA",
+       "usable": true
+      }
+     ]
+    },
+    "settings": {
+     "name": "production",
+     "ensemble": "NPT",
+     "timestep_fs": 4.0,
+     "n_steps": 1250000,
+     "length_ps": 5000.0,
+     "temperature_K": 300.0,
+     "restraint_atoms": "none",
+     "restraint_k_kj_per_mol_nm2": 0.0,
+     "n_restrained_atoms": 0,
+     "barostat": true
+    },
+    "first_step": 21250000,
+    "last_step": 22500000,
+    "time_start_ps": 85000.0,
+    "time_end_ps": 90000.0,
+    "frames": {
+     "solute": 500,
+     "full": 50,
+     "state_log_rows": 500
+    },
+    "final": {
+     "potential_energy_kj_per_mol": -542883.466,
+     "kinetic_energy_kj_per_mol": 104988.752,
+     "temperature_K": 301.18,
+     "volume_nm3": 407.3814,
+     "density_g_per_cm3": 1.02567
+    },
+    "mean_over_state_log": {
+     "temperature_K": 301.11,
+     "density_g_per_cm3": 1.02534,
+     "potential_energy_kj_per_mol": -542243.8
+    },
+    "monitor": {
+     "zn_to_lig_N2_A": 1.905,
+     "lig_N2_to_thr199_OG1_A": 2.931,
+     "lig_N1_to_phe131_CZ_A": 4.531,
+     "lig_N1_to_asn67_OD1_A": 8.231,
+     "zn_to_his94_NE2_A": 2.086,
+     "zn_to_his96_NE2_A": 2.083,
+     "zn_to_his119_ND1_A": 2.049,
+     "n_water_O_within_3.5_A_of_ligand_heavy_atoms": 6,
+     "solute_heavy_rms_displacement_from_start_A": 20.699,
+     "solute_heavy_rms_displacement_note": "translation removed, no rotational fit",
+     "crystal_ring_site": {
+      "n_water_O_within_2.5_A": 0,
+      "nearest_water_O_A": 3.58,
+      "ligand_mean_distance_from_site_A": 1.817
+     }
+    },
+    "wall_s": 467.95,
+    "ns_per_day": 923.18,
+    "ended": {
+     "utc": "2026-10-07T22:00:22Z",
+     "ist": "8 Oct 2026, 3:30:22 AM IST"
+    },
+    "checkpoint": {
+     "sha256": "cdd3c30913cf643cc4921ece93e86dbf5ca749371a82e16a32edbb1f2e54ef7f",
+     "bytes": 6923047,
+     "file": "checkpoint_seg0018.chk",
+     "note": "binary, tied to this machine and platform; --resume uses the XML state"
+    },
+    "files": {
+     "log_seg0018.csv": {
+      "sha256": "3bb49507e9294a3e28aa31d74156b0b1134425c2daadd5415c09588615a59359",
+      "bytes": 49718
+     },
+     "solute_seg0018.dcd": {
+      "sha256": "d26d33d9cb4ab2dcefe60d2b17714767da9d6c709f07470e6fcaf850c736ecc8",
+      "bytes": 24604276
+     },
+     "full_seg0018.dcd": {
+      "sha256": "046b87c195046bb95c2695048af4f8f02af7aeef231f0669ddf6739445c27292",
+      "bytes": 24518476
+     },
+     "state_seg0018.xml": {
+      "sha256": "248b2c2b5b3cfd246c9c4d3860f3a40d2a20f97563cdf4c12b6e8f7c2d4ac21c",
+      "bytes": 6754831
+     }
+    },
+    "complete": true
+   },
+   {
+    "tag": "seg0019",
+    "kind": "production",
+    "started": {
+     "utc": "2026-10-07T22:00:22Z",
+     "ist": "8 Oct 2026, 3:30:22 AM IST"
+    },
+    "host": "cqc-md-gpu-01",
+    "openmm": "8.6.1",
+    "state_in": {
+     "sha256": "248b2c2b5b3cfd246c9c4d3860f3a40d2a20f97563cdf4c12b6e8f7c2d4ac21c",
+     "bytes": 6754831,
+     "file": "state_seg0018.xml"
+    },
+    "seeds": {
+     "integrator": 215850526,
+     "barostat": 640941669
+    },
+    "platform": {
+     "requested": "CUDA",
+     "name": "CUDA",
+     "properties_set": {
+      "Precision": "mixed",
+      "DeterministicForces": "true"
+     },
+     "properties_actual": {
+      "DeviceIndex": "0",
+      "DeviceName": "NVIDIA L40S",
+      "UseBlockingSync": "false",
+      "Precision": "mixed",
+      "UseCpuPme": "false",
+      "CudaCompiler": "",
+      "TempDirectory": "/tmp",
+      "CudaHostCompiler": "",
+      "DisablePmeStream": "false",
+      "DeterministicForces": "true"
+     },
+     "gpu_name": "NVIDIA L40S",
+     "deterministic_forces_set": true,
+     "precision_set": "mixed",
+     "repeatability": "DeterministicForces is set; whether a repeated segment is bit for bit the same has to be checked on the machine (pre-flight test of md/RUN.md)",
+     "attempts": [
+      {
+       "platform": "CUDA",
+       "usable": true
+      }
+     ]
+    },
+    "settings": {
+     "name": "production",
+     "ensemble": "NPT",
+     "timestep_fs": 4.0,
+     "n_steps": 1250000,
+     "length_ps": 5000.0,
+     "temperature_K": 300.0,
+     "restraint_atoms": "none",
+     "restraint_k_kj_per_mol_nm2": 0.0,
+     "n_restrained_atoms": 0,
+     "barostat": true
+    },
+    "first_step": 22500000,
+    "last_step": 23750000,
+    "time_start_ps": 90000.0,
+    "time_end_ps": 95000.0,
+    "frames": {
+     "solute": 500,
+     "full": 50,
+     "state_log_rows": 500
+    },
+    "final": {
+     "potential_energy_kj_per_mol": -541094.982,
+     "kinetic_energy_kj_per_mol": 104886.657,
+     "temperature_K": 300.89,
+     "volume_nm3": 407.8863,
+     "density_g_per_cm3": 1.0244
+    },
+    "mean_over_state_log": {
+     "temperature_K": 300.77,
+     "density_g_per_cm3": 1.02563,
+     "potential_energy_kj_per_mol": -542250.93
+    },
+    "monitor": {
+     "zn_to_lig_N2_A": 1.883,
+     "lig_N2_to_thr199_OG1_A": 2.948,
+     "lig_N1_to_phe131_CZ_A": 4.953,
+     "lig_N1_to_asn67_OD1_A": 6.15,
+     "zn_to_his94_NE2_A": 1.979,
+     "zn_to_his96_NE2_A": 2.048,
+     "zn_to_his119_ND1_A": 1.986,
+     "n_water_O_within_3.5_A_of_ligand_heavy_atoms": 6,
+     "solute_heavy_rms_displacement_from_start_A": 19.557,
+     "solute_heavy_rms_displacement_note": "translation removed, no rotational fit",
+     "crystal_ring_site": {
+      "n_water_O_within_2.5_A": 0,
+      "nearest_water_O_A": 3.427,
+      "ligand_mean_distance_from_site_A": 1.792
+     }
+    },
+    "wall_s": 466.26,
+    "ns_per_day": 926.53,
+    "ended": {
+     "utc": "2026-10-07T22:08:10Z",
+     "ist": "8 Oct 2026, 3:38:10 AM IST"
+    },
+    "checkpoint": {
+     "sha256": "911f40ca4c405274ab78acb1c88215b34e58134cd7eb0b9abf07f8b03f291456",
+     "bytes": 6923047,
+     "file": "checkpoint_seg0019.chk",
+     "note": "binary, tied to this machine and platform; --resume uses the XML state"
+    },
+    "files": {
+     "log_seg0019.csv": {
+      "sha256": "b27ac23bef0e9c93f33c276409bcc7ce4d6886b4c7ba3ab91bfd35b8a3475ffc",
+      "bytes": 49718
+     },
+     "solute_seg0019.dcd": {
+      "sha256": "d1f44a635f3ca44e99caed22fcec1954a0e8bb59871f7214094930564a1eb311",
+      "bytes": 24604276
+     },
+     "full_seg0019.dcd": {
+      "sha256": "f9e4a886968d2f35788be823f0ccdb98441fe2fe32322d854508d9470b0b3990",
+      "bytes": 24518476
+     },
+     "state_seg0019.xml": {
+      "sha256": "9169518099e5395c3c1bc120ff531d29abfdc7c57208f59220d1ccd37fa107a6",
+      "bytes": 6754750
+     }
+    },
+    "complete": true
+   },
+   {
+    "tag": "seg0020",
+    "kind": "production",
+    "started": {
+     "utc": "2026-10-07T22:08:10Z",
+     "ist": "8 Oct 2026, 3:38:10 AM IST"
+    },
+    "host": "cqc-md-gpu-01",
+    "openmm": "8.6.1",
+    "state_in": {
+     "sha256": "9169518099e5395c3c1bc120ff531d29abfdc7c57208f59220d1ccd37fa107a6",
+     "bytes": 6754750,
+     "file": "state_seg0019.xml"
+    },
+    "seeds": {
+     "integrator": 530817551,
+     "barostat": 449608394
+    },
+    "platform": {
+     "requested": "CUDA",
+     "name": "CUDA",
+     "properties_set": {
+      "Precision": "mixed",
+      "DeterministicForces": "true"
+     },
+     "properties_actual": {
+      "DeviceIndex": "0",
+      "DeviceName": "NVIDIA L40S",
+      "UseBlockingSync": "false",
+      "Precision": "mixed",
+      "UseCpuPme": "false",
+      "CudaCompiler": "",
+      "TempDirectory": "/tmp",
+      "CudaHostCompiler": "",
+      "DisablePmeStream": "false",
+      "DeterministicForces": "true"
+     },
+     "gpu_name": "NVIDIA L40S",
+     "deterministic_forces_set": true,
+     "precision_set": "mixed",
+     "repeatability": "DeterministicForces is set; whether a repeated segment is bit for bit the same has to be checked on the machine (pre-flight test of md/RUN.md)",
+     "attempts": [
+      {
+       "platform": "CUDA",
+       "usable": true
+      }
+     ]
+    },
+    "settings": {
+     "name": "production",
+     "ensemble": "NPT",
+     "timestep_fs": 4.0,
+     "n_steps": 1250000,
+     "length_ps": 5000.0,
+     "temperature_K": 300.0,
+     "restraint_atoms": "none",
+     "restraint_k_kj_per_mol_nm2": 0.0,
+     "n_restrained_atoms": 0,
+     "barostat": true
+    },
+    "first_step": 23750000,
+    "last_step": 25000000,
+    "time_start_ps": 95000.0,
+    "time_end_ps": 100000.0,
+    "frames": {
+     "solute": 500,
+     "full": 50,
+     "state_log_rows": 500
+    },
+    "final": {
+     "potential_energy_kj_per_mol": -542537.394,
+     "kinetic_energy_kj_per_mol": 104614.79,
+     "temperature_K": 300.11,
+     "volume_nm3": 406.4679,
+     "density_g_per_cm3": 1.02797
+    },
+    "mean_over_state_log": {
+     "temperature_K": 301.01,
+     "density_g_per_cm3": 1.02557,
+     "potential_energy_kj_per_mol": -542257.87
+    },
+    "monitor": {
+     "zn_to_lig_N2_A": 1.958,
+     "lig_N2_to_thr199_OG1_A": 2.733,
+     "lig_N1_to_phe131_CZ_A": 3.65,
+     "lig_N1_to_asn67_OD1_A": 7.455,
+     "zn_to_his94_NE2_A": 2.024,
+     "zn_to_his96_NE2_A": 2.061,
+     "zn_to_his119_ND1_A": 2.05,
+     "n_water_O_within_3.5_A_of_ligand_heavy_atoms": 5,
+     "solute_heavy_rms_displacement_from_start_A": 16.983,
+     "solute_heavy_rms_displacement_note": "translation removed, no rotational fit",
+     "crystal_ring_site": {
+      "n_water_O_within_2.5_A": 0,
+      "nearest_water_O_A": 3.391,
+      "ligand_mean_distance_from_site_A": 1.736
+     }
+    },
+    "wall_s": 467.01,
+    "ns_per_day": 925.03,
+    "ended": {
+     "utc": "2026-10-07T22:15:57Z",
+     "ist": "8 Oct 2026, 3:45:57 AM IST"
+    },
+    "checkpoint": {
+     "sha256": "fca36d286273ff4e8f26eca742d9b76ffdac34c7c6d1682841e08d46c28fcaa8",
+     "bytes": 6923047,
+     "file": "checkpoint_seg0020.chk",
+     "note": "binary, tied to this machine and platform; --resume uses the XML state"
+    },
+    "files": {
+     "log_seg0020.csv": {
+      "sha256": "13abd89fa52afabee69ae62331b13023a6a42320a014c5dfb35297bd70b2d395",
+      "bytes": 49719
+     },
+     "solute_seg0020.dcd": {
+      "sha256": "fff4eaa06e214efbcada0b6c6a1b957fcdef9c550f5c5db0bf2d60a04580597f",
+      "bytes": 24604276
+     },
+     "full_seg0020.dcd": {
+      "sha256": "f70c964453eaad81aecafbdbd50cc84610e24d9c87dd6f9283e86477b964e7af",
+      "bytes": 24518476
+     },
+     "state_seg0020.xml": {
+      "sha256": "785d553519a6a37e0dea451cbd159e4a8bf1111a2d59d58faa637154788fb55e",
+      "bytes": 6754787
+     }
+    },
+    "complete": true
+   }
+  ]
+ },
+ "all_steps_complete": true,
+ "last_written": {
+  "utc": "2026-10-07T22:15:58Z",
+  "ist": "8 Oct 2026, 3:45:58 AM IST"
+ }
+}

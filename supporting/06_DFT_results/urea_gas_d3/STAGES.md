@@ -1,0 +1,14 @@
+- 2026-09-27 14:22  pre-optimisation at B3LYP/6-31g(d) (64 basis functions)
+- 2026-09-27 14:23  pre-optimisation converged in 7 steps, 0.2 min
+- 2026-09-27 14:23  optimisation started from preopt.xyz; solvent=none (gas phase)
+- 2026-09-27 14:23  optimisation converged in 7 steps, 0.5 min, E = -225.35732503 Ha
+- 2026-09-27 14:23  Hessian by parallel finite differences: 48 gradients, 4 workers x 2 threads
+- 2026-09-27 14:24  frequencies (finite-difference (gradients, step 0.005 Bohr, 4 workers x 2 threads)): 0 imaginary, lowest 360.3 cm-1, 1 min
+- 2026-09-27 14:24  FMO: HOMO -7.379 eV, LUMO -0.675 eV, gap 6.704 eV; fragment composition None / None
+- 2026-09-27 14:25  cubes written (ESP 64^3 in 0.7 min)
+- 2026-09-28 03:08  NLO (nlo.json): mu 3.871 D, alpha_iso 34.05 a.u., beta_tot 90.0 a.u. (7.772e-31 esu)
+- 2026-09-28 04:46  QTAIM: 15 CPs {'(3,-3)': 8, '(3,-1)': 7, '(3,+1)': 0, '(3,+3)': 0}, Poincare-Hopf OK; no H-bond BCPs
+- 2026-09-28 04:46  charges (Hirshfeld/ADCH/CM5): fragment sums urea_gas_d3: Hirshfeld +0.000, ADCH +0.000, CM5 +0.000
+- 2026-09-28 04:46  charges (NPA/Hirshfeld/ADCH/CM5): fragment sums urea_gas_d3: NPA -0.000, Hirshfeld +0.000, ADCH +0.000, CM5 +0.000
+- 2026-09-28 04:46  MEP surface: min -0.07045 a.u., max 0.070466 a.u.; 3 minima, 4 maxima
+- 2026-09-28 04:46  DOS/PDOS (Hirshfeld): HOMO urea_gas_d3 100%; LUMO urea_gas_d3 100%

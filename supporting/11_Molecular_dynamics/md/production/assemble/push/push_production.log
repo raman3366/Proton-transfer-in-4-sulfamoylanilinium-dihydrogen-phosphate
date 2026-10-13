@@ -1,0 +1,106 @@
+[2026-10-06T16:02:37Z | 6 Oct 2026, 9:32:37 PM IST] targeted push for production: systems bonded_2s, bonded_2e, bonded_2s_n2fit, bonded_2e_n2fit (without build/), md/gpu/tasks_x0.json
+[2026-10-06T16:03:18Z | 6 Oct 2026, 9:33:18 PM IST] by content (rsync -n -c): 36 files new on the machine, 6 would replace a file of other content, 0 newer on the machine and left
+REPLACE  bonded_2e/N/STATUS_NOTE.txt
+REPLACE  bonded_2e/N/build.json
+REPLACE  bonded_2e/R/STATUS_NOTE.txt
+REPLACE  bonded_2e/R/build.json
+REPLACE  bonded_2e/X/STATUS_NOTE.txt
+REPLACE  bonded_2e/X/build.json
+new      bonded_2s/N/STATUS_NOTE.txt
+new      bonded_2s/N/build.json
+new      bonded_2s/N/extra_forces.json
+new      bonded_2s/N/reference.pdb
+new      bonded_2s/N/selections.json
+new      bonded_2s/N/system.inpcrd
+new      bonded_2s/N/system.prmtop
+new      bonded_2s/R/STATUS_NOTE.txt
+new      bonded_2s/R/build.json
+new      bonded_2s/R/extra_forces.json
+new      bonded_2s/R/reference.pdb
+new      bonded_2s/R/selections.json
+new      bonded_2s/R/system.inpcrd
+new      bonded_2s/R/system.prmtop
+new      bonded_2s/X/STATUS_NOTE.txt
+new      bonded_2s/X/build.json
+new      bonded_2s/X/extra_forces.json
+new      bonded_2s/X/reference.pdb
+new      bonded_2s/X/selections.json
+new      bonded_2s/X/system.inpcrd
+new      bonded_2s/X/system.prmtop
+new      bonded_2s_n2fit/R/STATUS_NOTE.txt
+new      bonded_2s_n2fit/R/build.json
+new      bonded_2s_n2fit/R/extra_forces.json
+new      bonded_2s_n2fit/R/reference.pdb
+new      bonded_2s_n2fit/R/selections.json
+new      bonded_2s_n2fit/R/system.inpcrd
+new      bonded_2s_n2fit/R/system.prmtop
+new      bonded_2e_n2fit/R/STATUS_NOTE.txt
+new      bonded_2e_n2fit/R/build.json
+new      bonded_2e_n2fit/R/extra_forces.json
+new      bonded_2e_n2fit/R/reference.pdb
+new      bonded_2e_n2fit/R/selections.json
+new      bonded_2e_n2fit/R/system.inpcrd
+new      bonded_2e_n2fit/R/system.prmtop
+new      md/gpu/tasks_x0.json
+[2026-10-06T16:03:32Z | 6 Oct 2026, 9:33:32 PM IST] copying systems/bonded_2e
+    Number of regular files transferred: 6
+    Total transferred file size: 179,625 bytes
+[2026-10-06T16:03:37Z | 6 Oct 2026, 9:33:37 PM IST] copying systems/bonded_2s
+    Number of regular files transferred: 21
+    Total transferred file size: 28,326,019 bytes
+[2026-10-06T16:03:45Z | 6 Oct 2026, 9:33:45 PM IST] copying systems/bonded_2s_n2fit
+    Number of regular files transferred: 7
+    Total transferred file size: 9,440,804 bytes
+[2026-10-06T16:03:51Z | 6 Oct 2026, 9:33:51 PM IST] copying systems/bonded_2e_n2fit
+    Number of regular files transferred: 7
+    Total transferred file size: 9,440,759 bytes
+[2026-10-06T16:03:58Z | 6 Oct 2026, 9:33:58 PM IST] copying md/gpu/tasks_x0.json
+[2026-10-06T16:04:07Z | 6 Oct 2026, 9:34:07 PM IST] verifying on the machine
+[2026-10-06T16:04:11Z | 6 Oct 2026, 9:34:11 PM IST] VERIFIED: every file of the list has its checksum on the machine
+[2026-10-06T16:06:57Z | 6 Oct 2026, 9:36:57 PM IST] adding md/gpu/tasks_x0.json to the queue
+accepted: 2 task(s) in 1 file(s), checked for 24 CPUs and 1 GPU(s), together with the tasks in /root/cqc-sfa-md/queue/tasks.d
+added: /root/cqc-sfa-md/queue/tasks.d/tasks_x0.json
+total 48
+-rw-r--r-- 1 root root  8386 Oct  6 05:02 tasks_gr.json
+-rw-r--r-- 1 root root  2584 Oct  6 08:22 tasks_gr3.json
+-rw-r--r-- 1 root root 11885 Oct  6 04:53 tasks_initial.json
+-rw-r--r-- 1 root root  4715 Oct  6 09:18 tasks_n2.json
+-rw-r--r-- 1 root root  4149 Oct  6 05:01 tasks_rehearsal_2e.json
+-rw-r--r-- 1 root root  2312 Oct  6 16:07 tasks_x0.json
+0740b84bf9c2c8b7a1b0f4c59f7edfaa0686487c463fe8a5276bb0df77e25d42  /root/cqc-sfa-md/queue/tasks.d/tasks_x0.json
+[2026-10-06T16:43:45Z | 6 Oct 2026, 10:13:45 PM IST] gate G-V: 2s FAILED (GV3 d, 3 of 50 all-atom frames), 2e PASSED; both programs agree on both runs (exit 0). Copying md/gpu/tasks_production.json and tasks_sensitivity.json (primary 2e)
+/root/workspace/cqc-4-sulfamoylanilinium-dihydrogen-phosphate/md/gpu/tasks_production.json: OK
+/root/workspace/cqc-4-sulfamoylanilinium-dihydrogen-phosphate/md/gpu/tasks_sensitivity.json: OK
+systems-and-x0-file-still-verified
+  X1                           gpu        after X0_2e, preflight_speed, preflight_interrupt done when: success_test
+  N1                           gpu        after X1                             done when: success_test
+  R1                           gpu        after N1                             done when: success_test
+  X2                           gpu        after R1                             done when: success_test
+  N2                           gpu        after X2                             done when: success_test
+  R2                           gpu        after N2                             done when: success_test
+  X3                           gpu        after R2                             done when: success_test
+  N3                           gpu        after X3                             done when: success_test
+  R3                           gpu        after N3                             done when: success_test
+  R_zn                         gpu        after R3                             done when: success_test
+  R_n2                         gpu        after R_zn                           done when: success_test
+accepted: 11 task(s) in 2 file(s), checked for 24 CPUs and 1 GPU(s), together with the tasks in /root/cqc-sfa-md/queue/tasks.d
+[2026-10-06T16:44:10Z | 6 Oct 2026, 10:14:10 PM IST] adding tasks_production.json and tasks_sensitivity.json to the queue
+accepted: 11 task(s) in 2 file(s), checked for 24 CPUs and 1 GPU(s), together with the tasks in /root/cqc-sfa-md/queue/tasks.d
+added: /root/cqc-sfa-md/queue/tasks.d/tasks_production.json
+added: /root/cqc-sfa-md/queue/tasks.d/tasks_sensitivity.json
+14d243f3727544ae79e1a91355573d3e4970541414d007fca14e93495ddb377a  /root/cqc-sfa-md/queue/tasks.d/tasks_production.json
+98ccd1715cb46d514643222e425fffd327b24d6e5161ed501a9054a8209c362e  /root/cqc-sfa-md/queue/tasks.d/tasks_sensitivity.json
+R1                           pending      gpu        0     0    6 Oct 2026, 10:14:21 PM IST  read from tasks_production.json [waits for N1]
+X2                           pending      gpu        0     0    6 Oct 2026, 10:14:21 PM IST  read from tasks_production.json [waits for R1]
+N2                           pending      gpu        0     0    6 Oct 2026, 10:14:21 PM IST  read from tasks_production.json [waits for X2]
+R2                           pending      gpu        0     0    6 Oct 2026, 10:14:21 PM IST  read from tasks_production.json [waits for N2]
+X3                           pending      gpu        0     0    6 Oct 2026, 10:14:21 PM IST  read from tasks_production.json [waits for R2]
+N3                           pending      gpu        0     0    6 Oct 2026, 10:14:21 PM IST  read from tasks_production.json [waits for X3]
+R3                           pending      gpu        0     0    6 Oct 2026, 10:14:21 PM IST  read from tasks_production.json [waits for N3]
+reh2e_TX0                    done         gpu        1     0    6 Oct 2026, 10:45:23 AM IST  exit code 0 and the success test holds; 852 s
+reh2e_TR0                    done         gpu        1     0    6 Oct 2026, 10:59:52 AM IST  exit code 0 and the success test holds; 869 s
+reh2e_TN0                    done         gpu        1     0    6 Oct 2026, 11:14:21 AM IST  exit code 0 and the success test holds; 869 s
+R_zn                         pending      gpu        0     0    6 Oct 2026, 10:14:21 PM IST  read from tasks_sensitivity.json [waits for R3]
+R_n2                         pending      gpu        0     0    6 Oct 2026, 10:14:21 PM IST  read from tasks_sensitivity.json [waits for R_zn]
+X0_2s                        done         gpu        1     0    6 Oct 2026, 9:49:28 PM IST   exit code 0 and the success test holds; 738 s
+X0_2e                        done         gpu        1     0    6 Oct 2026, 10:01:52 PM IST  exit code 0 and the success test holds; 744 s

@@ -1,0 +1,2814 @@
+{
+ "schema": "cqc-sfa-md built system, version 1",
+ "what": "hCA II (PDB 6RL9, chain A) with the sulfonamidate anion of sulfanilamide on the zinc, crystal water, TIP3P water and NaCl in a truncated octahedron",
+ "model": "bonded_2e",
+ "model_kind": "bonded",
+ "parameter_set": "2e",
+ "start": "N",
+ "status_note": "PRODUCTION system (md/PLAN.md, entry of 6 Oct 2026, 9:15 PM IST; md/PRODUCTION.md). Zinc set 2e: MCPB.py step 2e, empirical zinc constants. RESP charges with the equal ligand atoms made equal. Terms at N2 AS BUILT: gates G-R and G-R2 on these terms failed and are reported; they are used by the user's decision of 6 Oct 2026. Whether 2s or 2e is the primary set is decided by gate G-Z and the validation run X0 of each (md/PRODUCTION.md).",
+ "written_by": "md/build_topology.py",
+ "script_sha256": "a9b8ef8d699dfce68abfddcd21186ebdb939900d67b4c549b92692bf39d38d70",
+ "software": {
+  "ambertools": "ambertools-26.0-cuda_None_nompi_py312h1ea3936_100",
+  "tleap": "/root/cqc-sfa-tools/md/bin/tleap",
+  "python": "3.12.14",
+  "parmed": "4.3.1",
+  "numpy": "2.5.3",
+  "scipy": "1.18.1"
+ },
+ "units": "Angstrom, degrees, e, amu, kcal mol-1 (Amber parameters); nm and kJ mol-1 nm-2 only where the key says so",
+ "random_numbers": "none; the ion sites follow a fixed rule (ions.rule) and tleap places nothing by chance",
+ "inputs_sha256": {
+  "md/system/protein_md.pdb": "e5abb73ca92fa9b399ab8c0bbba368024e10d3807147e382d431b0d29e260494",
+  "md/system/zinc.pdb": "c98aa70a52066f412c0618bbc3fc38e811add4d5d68747b9d02a84a70cd3cea9",
+  "md/system/ligand_N.pdb": "27bfd0783f8d43c768ea3ea5efc32fdfa9b3ba7c16b7419ed52093ca9067d05e",
+  "md/system/waters_N.pdb": "c101591849ecdc1e888cb6712629695aa042911acb590aad67b40f3c914fe43d",
+  "md/system/ligand_X.pdb": "342ccdd6a6c03302c4fed7ff01dacebbecde97141fab02e375bc0d5e2a62a47b",
+  "md/system/residue_map.csv": "e9be32317a42fab779bcc1efb67712f08ad77d0dc6321d176bc9694f7dfab61a",
+  "md/system/starts.csv": "ee90fb3fcdd80da8de6e6bd1f44d269ff50de31189c6107488652f8453d06b62",
+  "md/ligand/sfa_anion.mol2": "f8fba7528dceade5eec4c56ab1d5e450e29c9c54b27e1a34c521edb3865a66fa",
+  "md/ligand/sfa_anion_gaff2.frcmod": "694fd181a8c2b7359a529112a1ba539e681dd2c66a883379607e6e6095ca438c",
+  "md/ligand/sfa_anion_repair.frcmod": "76dda0d181a27e12868eea1a2eff055fbeda708357f200d12a53915fa7d60b86",
+  "md/ligand/sfa_anion_repaired.prmtop": "4dbb2a1ba195407d4b3459c1cee9227308d4496b11855f22a3c364eac35a33f1"
+ },
+ "amber_data_files_sha256": {
+  "dat/leap/cmd/leaprc.protein.ff14SB": "e96bd5b9d5fba9c027050e33efd3414e4d26ff616566b08730abedc554fac98c",
+  "dat/leap/cmd/leaprc.gaff2": "47d749188bf70b2c4b878ce5a66cc3a94a4baaa8c359f725acc795cf35a71900",
+  "dat/leap/cmd/leaprc.water.tip3p": "679041e7b6a6776cd6a7552480ded0986c33ddd209da58f0c30a96bfb8818db7",
+  "dat/leap/parm/gaff2.dat": "2244b58627a85693776d12a0155a292f72b65b4398a03b87958136ad7460c67f",
+  "dat/leap/parm/frcmod.ff14SB": "d7240947ca454e49fa2419343cff0090c1e9c02f39618e826d99fc5f1b29dc73",
+  "dat/leap/parm/frcmod.tip3p": "a66a30117d8c0af008476715e1405587a67f473793c4ab1db822da41465e48f1",
+  "dat/leap/parm/frcmod.ions234lm_126_tip3p": "4252f496d5462dc84ddfae7ef8e941bf8c927584201284be3ccae178ebab08d3",
+  "dat/leap/parm/frcmod.ionsjc_tip3p": "eb7a1a59bf356581f89534287dd59d1bebbb2e5de7176d7c7dd69cb1d4928a55",
+  "dat/leap/parm/frcmod.ions1lm_126_tip3p": "09690dfab18fe46fe9bd9651d254db1ff4d6edfdfa4f74e0ff8c41a069715eeb",
+  "dat/leap/lib/atomic_ions.lib": "0f56b0f1b1cbf0e275c7e5e815f7f85b9b22e26de3b591a0b8a87c28d75d0d53",
+  "dat/leap/lib/solvents.lib": "c8aeb703f5769331541d1233e2f2c8f823dd516e861b04e215ae4da903f1d69b"
+ },
+ "force_field": {
+  "tleap_sources": [
+   "leaprc.protein.ff14SB",
+   "leaprc.gaff2",
+   "leaprc.water.tip3p"
+  ],
+  "gaff2_version_line": "AMBER General Force Field for organic molecules (Version 2.2.30, Oct 2025)",
+  "protein": "ff14SB",
+  "water": "TIP3P (rigid; the topology holds the H-H bond)",
+  "ligand": "as delivered by MCPB.py (charges of the zinc site refitted; see mcpb)",
+  "zinc": "bonded to its four nitrogen atoms with the terms of MCPB.py (see mcpb, zinc_site_bonded)",
+  "zinc_in_prmtop": {
+   "atom_type": "M1",
+   "charge_e": 0.3356,
+   "rmin_half_A": 1.395,
+   "epsilon_kcal_per_mol": 0.014917,
+   "mass_amu": 65.4,
+   "bonded_to": [
+    "HD194:NE2",
+    "HD296:NE2",
+    "HE1119:ND1",
+    "SN1304:N2"
+   ],
+   "lennard_jones_12_6_4_terms_in_prmtop": false
+  },
+  "zinc_line_of_frcmod": {
+   "rmin_half_A": 1.271,
+   "epsilon_kcal_per_mol": 0.00330286,
+   "line": "Zn2+  1.271  0.00330286    CM set for TIP3P water from Li et al., JCTC, 2013, 9, 2733"
+  },
+  "sodium_chloride": "Joung-Cheatham for TIP3P (frcmod.ionsjc_tip3p, loaded by leaprc.water.tip3p)",
+  "ions_in_prmtop": {
+   "Na+": {
+    "n": 34,
+    "atom_type": "Na+",
+    "charge_e": 1.0,
+    "rmin_half_A": 1.369,
+    "epsilon_kcal_per_mol": 0.0874393
+   },
+   "Cl-": {
+    "n": 33,
+    "atom_type": "Cl-",
+    "charge_e": -1.0,
+    "rmin_half_A": 2.513,
+    "epsilon_kcal_per_mol": 0.035591
+   }
+  },
+  "ion_lines_of_frcmod": {
+   "frcmod.ionsjc_tip3p Na+": {
+    "rmin_half_A": 1.369,
+    "epsilon_kcal_per_mol": 0.0874393,
+    "line": "Na+      1.369     0.0874393"
+   },
+   "frcmod.ionsjc_tip3p Cl-": {
+    "rmin_half_A": 2.513,
+    "epsilon_kcal_per_mol": 0.035591,
+    "line": "Cl-      2.513     0.0355910"
+   }
+  },
+  "notes": [
+   "frcmod.ions1lm_126_tip3p of CA2_tleap.in is not loaded: Na+ and Cl- keep the parameters of leaprc.water.tip3p (Joung-Cheatham), as in the restrained model"
+  ]
+ },
+ "mcpb": {
+  "dir": "/root/cqc-sfa-md/qm/gr/mcpb_2e",
+  "group": "CA2",
+  "atom_types_added": [
+   [
+    "M1",
+    "Zn",
+    "sp3"
+   ],
+   [
+    "Y1",
+    "N",
+    "sp3"
+   ],
+   [
+    "Y2",
+    "N",
+    "sp3"
+   ],
+   [
+    "Y3",
+    "N",
+    "sp3"
+   ],
+   [
+    "Y4",
+    "N",
+    "sp3"
+   ]
+  ],
+  "renamed_residues": {
+   "93": "HD1",
+   "95": "HD2",
+   "118": "HE1",
+   "260": "ZN1",
+   "261": "SN1"
+  },
+  "bond_commands": [
+   "bond sys.93.NE2 sys.260.ZN",
+   "bond sys.95.NE2 sys.260.ZN",
+   "bond sys.118.ND1 sys.260.ZN",
+   "bond sys.260.ZN sys.261.N2",
+   "bond sys.92.C sys.93.N",
+   "bond sys.93.C sys.94.N",
+   "bond sys.94.C sys.95.N",
+   "bond sys.95.C sys.96.N",
+   "bond sys.117.C sys.118.N",
+   "bond sys.118.C sys.119.N"
+  ],
+  "bond_commands_used": "the four to the zinc; the peptide bonds of the renamed residues are made by loadpdb through head and tail atoms set on their units (see leap.in)",
+  "frcmod_files_named_by_mcpb": [
+   "sfa_anion_gaff2.frcmod",
+   "sfa_anion_repair.frcmod",
+   "frcmod.ions1lm_126_tip3p",
+   "CA2_mcpbpy.frcmod"
+  ],
+  "residue_names_that_differ_without_a_mol2_unit": [],
+  "files_sha256": {
+   "/root/cqc-sfa-md/qm/gr/mcpb_2e/CA2_mcpbpy.frcmod": "38221d1d52d8b0af047145619d29bdeee11fdaf3010c452503facd01ec8f29c9",
+   "/root/cqc-sfa-md/qm/gr/mcpb_2e/CA2_mcpbpy.pdb": "0506c52c98d1241b13a340995b4e974002bcde02ab73dcf552dcb5734184a522",
+   "/root/cqc-sfa-md/qm/gr/mcpb_2e/CA2_tleap.in": "d16b000ce275b6a62b75e0d6637627c76d071a898df4077f0bb29925713f5f12",
+   "/root/cqc-sfa-md/qm/gr/mcpb_2e/HD1.mol2": "0e98556917e7834b6300eb448eb53e3f89f278f463ef72673850cf99a512ee97",
+   "/root/cqc-sfa-md/qm/gr/mcpb_2e/HD2.mol2": "4c7552bdd103d8510ece94fba79e426a5c3cf010248a37c8551d331fbcf7af54",
+   "/root/cqc-sfa-md/qm/gr/mcpb_2e/HE1.mol2": "be522ba06dfef8ce834493f985d9665c434e387dd3fff785456183baba3b43a0",
+   "/root/cqc-sfa-md/qm/gr/mcpb_2e/SN1.mol2": "0ecbec58ff769c66bb0cd6e1d62467da0863f88d0c7ac07132db2b65b9534810",
+   "/root/cqc-sfa-md/qm/gr/mcpb_2e/ZN1.mol2": "525765a335834f8b34178621a9178765f21bdac8eb0f8fc9e76d988c0e645df0",
+   "/root/cqc-sfa-md/qm/gr/mcpb_2e/sfa_anion_gaff2.frcmod": "694fd181a8c2b7359a529112a1ba539e681dd2c66a883379607e6e6095ca438c",
+   "/root/cqc-sfa-md/qm/gr/mcpb_2e/sfa_anion_repair.frcmod": "76dda0d181a27e12868eea1a2eff055fbeda708357f200d12a53915fa7d60b86"
+  },
+  "sfa_anion_gaff2.frcmod_same_as_md_ligand": true,
+  "sfa_anion_repair.frcmod_same_as_md_ligand": true,
+  "parameter_set": {
+   "named": "2e",
+   "variant": null,
+   "method_named_in_the_frcmod": [
+    "empirical"
+   ],
+   "expected_method": "empirical"
+  }
+ },
+ "terms_at_N2": {
+  "source": "written by the builder: the terms AS BUILT BEFORE GATE G-R (Zn-N2-S, S-N2-H and H-N2-S-C4 as in the frcmod of MCPB.py; Zn-N2-H at its angle in start X with the force constant of that frcmod)",
+  "validated_by_gate_GR": false,
+  "replaced_line_of_mcpb_frcmod": "M1-Y4-hn    50.00     120.00    Created by empirical method using MCPB.py",
+  "lines_copied_from_mcpb_frcmod": [
+   "M1-Y4-sy    50.00     117.55    Created by empirical method using MCPB.py",
+   "hn-Y4-sy    61.550     118.059       theta0 was 111.270; force constant GAFF2",
+   "ca-sy-Y4-hn    1     0.2624      180.0  -1.0      rotation about S-N, fitted to DFT single points; replaces the term by analogy",
+   "ca-sy-Y4-hn    1      2.703        0.0   2.0"
+  ],
+  "file": "n2_terms.frcmod (in build/ of the system and in md/topology)",
+  "sha256": "113e3a2ebdbe99a4389e2ed497b20caaf0e64aebcbc8d547cf39823e9ee2cd00",
+  "atom_types": {
+   "N2": "Y4",
+   "S": "sy",
+   "HN21": "hn",
+   "C4": "ca",
+   "ZN": "M1"
+  },
+  "Zn_N2_H_in_start_X_deg": 107.4065,
+  "loaded": "after every parameter file of MCPB.py, so its terms are the ones in force",
+  "holds": {
+   "angles": [
+    "M1-Y4-sy",
+    "M1-Y4-hn",
+    "hn-Y4-sy"
+   ],
+   "torsions": [
+    "ca-sy-Y4-hn"
+   ],
+   "impropers": [],
+   "bonds": [],
+   "zinc_nitrogen_types_of_the_histidines": [
+    "Y1",
+    "Y2",
+    "Y3"
+   ],
+   "class_of_this_set": "the terms as built: the three angles at N2 and the series on H-N2-S-C4",
+   "entries_beyond_the_terms_as_built": [],
+   "entries_outside_the_class_of_this_set": [],
+   "entries_of_the_class_that_are_missing": [],
+   "of_the_class_of_this_set": true
+  },
+  "in_the_topology": {
+   "angles": {
+    "Zn-N2-S": {
+     "types": "M1-Y4-sy",
+     "k_kcal_per_mol_rad2": 50.0,
+     "theta0_deg": 117.55,
+     "n2_terms_file": [
+      50.0,
+      117.55
+     ],
+     "as_n2_terms_file": true,
+     "angle_in_this_start_deg": 105.91
+    },
+    "Zn-N2-H": {
+     "types": "M1-Y4-hn",
+     "k_kcal_per_mol_rad2": 50.0,
+     "theta0_deg": 107.407,
+     "n2_terms_file": [
+      50.0,
+      107.407
+     ],
+     "as_n2_terms_file": true,
+     "angle_in_this_start_deg": 110.35
+    },
+    "S-N2-H": {
+     "types": "sy-Y4-hn",
+     "k_kcal_per_mol_rad2": 61.55,
+     "theta0_deg": 118.059,
+     "n2_terms_file": [
+      61.55,
+      118.059
+     ],
+     "as_n2_terms_file": true,
+     "angle_in_this_start_deg": 110.33
+    }
+   },
+   "sum_of_the_three_equilibrium_angles_deg": 343.02,
+   "H-N2-S-C4_k_n_phase": [
+    [
+     0.2624,
+     1,
+     180.0
+    ],
+    [
+     2.703,
+     2,
+     0.0
+    ]
+   ],
+   "H-N2-S-C4_n2_terms_file": [
+    [
+     0.2624,
+     1,
+     180.0
+    ],
+    [
+     2.703,
+     2,
+     0.0
+    ]
+   ],
+   "entries_of_the_file": [
+    {
+     "entry": "ANGLE M1-Y4-sy",
+     "in_the_file": [
+      50.0,
+      117.55
+     ],
+     "n_in_the_topology": 1,
+     "as_the_file": true
+    },
+    {
+     "entry": "ANGLE M1-Y4-hn",
+     "in_the_file": [
+      50.0,
+      107.407
+     ],
+     "n_in_the_topology": 1,
+     "as_the_file": true
+    },
+    {
+     "entry": "ANGLE hn-Y4-sy",
+     "in_the_file": [
+      61.55,
+      118.059
+     ],
+     "n_in_the_topology": 1,
+     "as_the_file": true
+    },
+    {
+     "entry": "DIHE ca-sy-Y4-hn",
+     "in_the_file_k_n_phase": [
+      [
+       0.2624,
+       1,
+       180.0
+      ],
+      [
+       2.703,
+       2,
+       0.0
+      ]
+     ],
+     "n_in_the_topology": 1,
+     "as_the_file": true
+    }
+   ],
+   "all_as_n2_terms_file": true,
+   "Zn-N2-H_is_not_120_deg": true
+  }
+ },
+ "zinc_site_bonded": {
+  "zinc_bonded_to": [
+   "HD194:NE2",
+   "HD296:NE2",
+   "HE1119:ND1",
+   "SN1304:N2"
+  ],
+  "expected": [
+   "HD194:NE2",
+   "HD296:NE2",
+   "HE1119:ND1",
+   "SN1304:N2"
+  ],
+  "zinc_has_the_four_bonds": true,
+  "bonds_to_zinc": [
+   {
+    "to": "SN1:N2",
+    "k_kcal_per_mol_A2": 122.1,
+    "r0_A": 1.931
+   },
+   {
+    "to": "HE1:ND1",
+    "k_kcal_per_mol_A2": 74.3,
+    "r0_A": 2.018
+   },
+   {
+    "to": "HD2:NE2",
+    "k_kcal_per_mol_A2": 73.3,
+    "r0_A": 2.021
+   },
+   {
+    "to": "HD1:NE2",
+    "k_kcal_per_mol_A2": 78.0,
+    "r0_A": 2.01
+   }
+  ],
+  "angles_with_zinc": [
+   {
+    "atoms": "ZN1:ZN-N2-SN1:S",
+    "k_kcal_per_mol_rad2": 50.0,
+    "theta0_deg": 117.55
+   },
+   {
+    "atoms": "HE1:CG-ND1-ZN1:ZN",
+    "k_kcal_per_mol_rad2": 50.0,
+    "theta0_deg": 131.22
+   },
+   {
+    "atoms": "HE1:ND1-ZN-SN1:N2",
+    "k_kcal_per_mol_rad2": 35.0,
+    "theta0_deg": 116.83
+   },
+   {
+    "atoms": "HE1:CE1-ND1-ZN1:ZN",
+    "k_kcal_per_mol_rad2": 50.0,
+    "theta0_deg": 121.05
+   },
+   {
+    "atoms": "HD2:CE1-NE2-ZN1:ZN",
+    "k_kcal_per_mol_rad2": 50.0,
+    "theta0_deg": 129.31
+   },
+   {
+    "atoms": "HD2:NE2-ZN-HE1:ND1",
+    "k_kcal_per_mol_rad2": 35.0,
+    "theta0_deg": 98.41
+   },
+   {
+    "atoms": "HD2:NE2-ZN-SN1:N2",
+    "k_kcal_per_mol_rad2": 35.0,
+    "theta0_deg": 114.28
+   },
+   {
+    "atoms": "HD2:CD2-NE2-ZN1:ZN",
+    "k_kcal_per_mol_rad2": 50.0,
+    "theta0_deg": 122.91
+   },
+   {
+    "atoms": "HD1:CE1-NE2-ZN1:ZN",
+    "k_kcal_per_mol_rad2": 50.0,
+    "theta0_deg": 127.89
+   },
+   {
+    "atoms": "HD1:NE2-ZN-HD2:NE2",
+    "k_kcal_per_mol_rad2": 35.0,
+    "theta0_deg": 103.82
+   },
+   {
+    "atoms": "HD1:NE2-ZN-HE1:ND1",
+    "k_kcal_per_mol_rad2": 35.0,
+    "theta0_deg": 113.59
+   },
+   {
+    "atoms": "HD1:NE2-ZN-SN1:N2",
+    "k_kcal_per_mol_rad2": 35.0,
+    "theta0_deg": 108.92
+   },
+   {
+    "atoms": "HD1:CD2-NE2-ZN1:ZN",
+    "k_kcal_per_mol_rad2": 50.0,
+    "theta0_deg": 124.21
+   },
+   {
+    "atoms": "ZN1:ZN-N2-SN1:HN21",
+    "k_kcal_per_mol_rad2": 50.0,
+    "theta0_deg": 107.407
+   }
+  ],
+  "n_angles_centred_on_zinc": 6,
+  "torsions_through_zinc": {
+   "n": 39,
+   "n_terms": 39,
+   "n_proper": 39,
+   "n_improper": 0,
+   "largest_abs_k_kcal_per_mol": 0.0,
+   "all_zero": true,
+   "n_carried_by_the_n2_file": 0,
+   "zero_or_as_the_n2_file": true,
+   "non_zero_or_carried_by_the_n2_file": [],
+   "impropers_with_zinc": [],
+   "impropers_with_zinc_none_or_those_of_the_n2_file": true
+  },
+  "charge_of_zinc_site_residues_e": {
+   "HD1": 0.33445,
+   "HD2": 0.41317,
+   "HE1": 0.44721,
+   "ZN1": 0.3356,
+   "SN1": -0.53043
+  },
+  "charge_of_zinc_site_e": 1.0,
+  "ligand_atom_types": {
+   "C1": "ca",
+   "C2": "ca",
+   "C3": "ca",
+   "C4": "ca",
+   "C5": "ca",
+   "C6": "ca",
+   "N1": "nv",
+   "N2": "Y4",
+   "O1": "o",
+   "O2": "o",
+   "S": "sy",
+   "H2": "ha",
+   "H3": "ha",
+   "H5": "ha",
+   "H6": "ha",
+   "HN11": "hn",
+   "HN12": "hn",
+   "HN21": "hn"
+  },
+  "bonds_to_zinc_against_the_parameter_files": [
+   {
+    "bond": "Zn-SN1304:N2",
+    "types": "M1-Y4",
+    "k_kcal_per_mol_A2": 122.1,
+    "r0_A": 1.931,
+    "parameter_file": [
+     122.1,
+     1.931
+    ],
+    "from": "CA2_mcpbpy.frcmod",
+    "as_file": true,
+    "distance_in_6RL9_A": 1.9314,
+    "distance_in_this_start_A": 2.2071
+   },
+   {
+    "bond": "Zn-HE1119:ND1",
+    "types": "Y3-M1",
+    "k_kcal_per_mol_A2": 74.3,
+    "r0_A": 2.018,
+    "parameter_file": [
+     74.3,
+     2.018
+    ],
+    "from": "CA2_mcpbpy.frcmod",
+    "as_file": true,
+    "distance_in_6RL9_A": 2.0183,
+    "distance_in_this_start_A": 2.0183
+   },
+   {
+    "bond": "Zn-HD296:NE2",
+    "types": "Y2-M1",
+    "k_kcal_per_mol_A2": 73.3,
+    "r0_A": 2.021,
+    "parameter_file": [
+     73.3,
+     2.021
+    ],
+    "from": "CA2_mcpbpy.frcmod",
+    "as_file": true,
+    "distance_in_6RL9_A": 2.0206,
+    "distance_in_this_start_A": 2.0206
+   },
+   {
+    "bond": "Zn-HD194:NE2",
+    "types": "Y1-M1",
+    "k_kcal_per_mol_A2": 78.0,
+    "r0_A": 2.01,
+    "parameter_file": [
+     78.0,
+     2.01
+    ],
+    "from": "CA2_mcpbpy.frcmod",
+    "as_file": true,
+    "distance_in_6RL9_A": 2.0099,
+    "distance_in_this_start_A": 2.0099
+   }
+  ],
+  "angles_with_zinc_against_the_parameter_files": [
+   {
+    "angle": "HD194:NE2-Zn-HD296:NE2",
+    "kind": "N-Zn-N",
+    "types": "Y1-M1-Y2",
+    "k_kcal_per_mol_rad2": 35.0,
+    "theta0_deg": 103.82,
+    "parameter_file": [
+     35.0,
+     103.82
+    ],
+    "from": "CA2_mcpbpy.frcmod",
+    "as_file": true,
+    "angle_in_this_start_deg": 103.82
+   },
+   {
+    "angle": "HD194:NE2-Zn-HE1119:ND1",
+    "kind": "N-Zn-N",
+    "types": "Y1-M1-Y3",
+    "k_kcal_per_mol_rad2": 35.0,
+    "theta0_deg": 113.59,
+    "parameter_file": [
+     35.0,
+     113.59
+    ],
+    "from": "CA2_mcpbpy.frcmod",
+    "as_file": true,
+    "angle_in_this_start_deg": 113.59
+   },
+   {
+    "angle": "HD194:NE2-Zn-SN1304:N2",
+    "kind": "N-Zn-N",
+    "types": "Y1-M1-Y4",
+    "k_kcal_per_mol_rad2": 35.0,
+    "theta0_deg": 108.92,
+    "parameter_file": [
+     35.0,
+     108.92
+    ],
+    "from": "CA2_mcpbpy.frcmod",
+    "as_file": true,
+    "angle_in_this_start_deg": 117.28
+   },
+   {
+    "angle": "HD296:NE2-Zn-HE1119:ND1",
+    "kind": "N-Zn-N",
+    "types": "Y2-M1-Y3",
+    "k_kcal_per_mol_rad2": 35.0,
+    "theta0_deg": 98.41,
+    "parameter_file": [
+     35.0,
+     98.41
+    ],
+    "from": "CA2_mcpbpy.frcmod",
+    "as_file": true,
+    "angle_in_this_start_deg": 98.41
+   },
+   {
+    "angle": "HD296:NE2-Zn-SN1304:N2",
+    "kind": "N-Zn-N",
+    "types": "Y2-M1-Y4",
+    "k_kcal_per_mol_rad2": 35.0,
+    "theta0_deg": 114.28,
+    "parameter_file": [
+     35.0,
+     114.28
+    ],
+    "from": "CA2_mcpbpy.frcmod",
+    "as_file": true,
+    "angle_in_this_start_deg": 111.61
+   },
+   {
+    "angle": "HE1119:ND1-Zn-SN1304:N2",
+    "kind": "N-Zn-N",
+    "types": "Y3-M1-Y4",
+    "k_kcal_per_mol_rad2": 35.0,
+    "theta0_deg": 116.83,
+    "parameter_file": [
+     35.0,
+     116.83
+    ],
+    "from": "CA2_mcpbpy.frcmod",
+    "as_file": true,
+    "angle_in_this_start_deg": 110.29
+   },
+   {
+    "angle": "HD194:CD2-HD194:NE2-Zn",
+    "kind": "Zn-N-C",
+    "types": "CV-Y1-M1",
+    "k_kcal_per_mol_rad2": 50.0,
+    "theta0_deg": 124.21,
+    "parameter_file": [
+     50.0,
+     124.21
+    ],
+    "from": "CA2_mcpbpy.frcmod",
+    "as_file": true,
+    "angle_in_this_start_deg": 124.21
+   },
+   {
+    "angle": "HD194:CE1-HD194:NE2-Zn",
+    "kind": "Zn-N-C",
+    "types": "CR-Y1-M1",
+    "k_kcal_per_mol_rad2": 50.0,
+    "theta0_deg": 127.89,
+    "parameter_file": [
+     50.0,
+     127.89
+    ],
+    "from": "CA2_mcpbpy.frcmod",
+    "as_file": true,
+    "angle_in_this_start_deg": 127.89
+   },
+   {
+    "angle": "HD296:CD2-HD296:NE2-Zn",
+    "kind": "Zn-N-C",
+    "types": "CV-Y2-M1",
+    "k_kcal_per_mol_rad2": 50.0,
+    "theta0_deg": 122.91,
+    "parameter_file": [
+     50.0,
+     122.91
+    ],
+    "from": "CA2_mcpbpy.frcmod",
+    "as_file": true,
+    "angle_in_this_start_deg": 122.91
+   },
+   {
+    "angle": "HD296:CE1-HD296:NE2-Zn",
+    "kind": "Zn-N-C",
+    "types": "CR-Y2-M1",
+    "k_kcal_per_mol_rad2": 50.0,
+    "theta0_deg": 129.31,
+    "parameter_file": [
+     50.0,
+     129.31
+    ],
+    "from": "CA2_mcpbpy.frcmod",
+    "as_file": true,
+    "angle_in_this_start_deg": 129.31
+   },
+   {
+    "angle": "HE1119:CE1-HE1119:ND1-Zn",
+    "kind": "Zn-N-C",
+    "types": "CR-Y3-M1",
+    "k_kcal_per_mol_rad2": 50.0,
+    "theta0_deg": 121.05,
+    "parameter_file": [
+     50.0,
+     121.05
+    ],
+    "from": "CA2_mcpbpy.frcmod",
+    "as_file": true,
+    "angle_in_this_start_deg": 121.05
+   },
+   {
+    "angle": "HE1119:CG-HE1119:ND1-Zn",
+    "kind": "Zn-N-C",
+    "types": "CC-Y3-M1",
+    "k_kcal_per_mol_rad2": 50.0,
+    "theta0_deg": 131.22,
+    "parameter_file": [
+     50.0,
+     131.22
+    ],
+    "from": "CA2_mcpbpy.frcmod",
+    "as_file": true,
+    "angle_in_this_start_deg": 131.22
+   },
+   {
+    "angle": "Zn-SN1304:N2-SN1304:S",
+    "kind": "Zn-N2-S",
+    "types": "M1-Y4-sy",
+    "k_kcal_per_mol_rad2": 50.0,
+    "theta0_deg": 117.55,
+    "parameter_file": [
+     50.0,
+     117.55
+    ],
+    "from": "n2_terms.frcmod",
+    "as_file": true,
+    "angle_in_this_start_deg": 105.91
+   },
+   {
+    "angle": "Zn-SN1304:N2-SN1304:HN21",
+    "kind": "Zn-N2-H",
+    "types": "M1-Y4-hn",
+    "k_kcal_per_mol_rad2": 50.0,
+    "theta0_deg": 107.407,
+    "parameter_file": [
+     50.0,
+     107.407
+    ],
+    "from": "n2_terms.frcmod",
+    "as_file": true,
+    "angle_in_this_start_deg": 110.35
+   }
+  ],
+  "n_angles_by_kind": {
+   "N-Zn-N": 6,
+   "Zn-N-C": 6,
+   "Zn-N2-S": 1,
+   "Zn-N2-H": 1
+  },
+  "all_zinc_bonds_and_angles_as_the_parameter_files": true,
+  "charges": {
+   "residues": {
+    "HD1": {
+     "residue": "HD1 (number 94 of 6RL9)",
+     "template": "HD1.mol2",
+     "template_charge_line": "RESP Charge, ligand pairs equal (md/qm/resp_equiv.py)",
+     "sum_e": 0.334448,
+     "largest_difference_from_template_e": 1.6463344021389048e-09,
+     "atoms_e": {
+      "N": -0.4157,
+      "H": 0.309717,
+      "CA": 0.0188,
+      "HA": 0.101134,
+      "CB": -0.262924,
+      "HB2": 0.11754,
+      "HB3": 0.11754,
+      "CG": 0.219555,
+      "ND1": -0.292053,
+      "HD1": 0.364875,
+      "CE1": 0.022891,
+      "HE1": 0.13774,
+      "NE2": -0.00177,
+      "CD2": -0.313382,
+      "HD2": 0.181085,
+      "C": 0.5973,
+      "O": -0.5679
+     },
+     "largest_difference_from_the_unconstrained_fit_e": 0.023369,
+     "template_same_as_md_qm_gr_charges": true
+    },
+    "HD2": {
+     "residue": "HD2 (number 96 of 6RL9)",
+     "template": "HD2.mol2",
+     "template_charge_line": "RESP Charge, ligand pairs equal (md/qm/resp_equiv.py)",
+     "sum_e": 0.413171,
+     "largest_difference_from_template_e": 1.6463344021389048e-09,
+     "atoms_e": {
+      "N": -0.4157,
+      "H": 0.314234,
+      "CA": 0.0188,
+      "HA": 0.086497,
+      "CB": 0.142532,
+      "HB2": 0.030732,
+      "HB3": 0.030732,
+      "CG": -0.081559,
+      "ND1": -0.214565,
+      "HD1": 0.349971,
+      "CE1": -0.060157,
+      "HE1": 0.193857,
+      "NE2": 0.047689,
+      "CD2": -0.179431,
+      "HD2": 0.120139,
+      "C": 0.5973,
+      "O": -0.5679
+     },
+     "largest_difference_from_the_unconstrained_fit_e": 0.023943,
+     "template_same_as_md_qm_gr_charges": true
+    },
+    "HE1": {
+     "residue": "HE1 (number 119 of 6RL9)",
+     "template": "HE1.mol2",
+     "template_charge_line": "RESP Charge, ligand pairs equal (md/qm/resp_equiv.py)",
+     "sum_e": 0.447207,
+     "largest_difference_from_template_e": 1.6463344021389048e-09,
+     "atoms_e": {
+      "N": -0.4157,
+      "H": 0.306707,
+      "CA": -0.0581,
+      "HA": 0.112223,
+      "CB": 0.133351,
+      "HB2": 0.039088,
+      "HB3": 0.039088,
+      "CG": -0.165201,
+      "ND1": 0.122659,
+      "CE1": -0.061884,
+      "HE1": 0.149935,
+      "NE2": -0.209608,
+      "HE2": 0.354009,
+      "CD2": -0.097899,
+      "HD2": 0.169139,
+      "C": 0.5973,
+      "O": -0.5679
+     },
+     "largest_difference_from_the_unconstrained_fit_e": 0.074304,
+     "template_same_as_md_qm_gr_charges": true
+    },
+    "ZN1": {
+     "residue": "ZN1 (number 301 of 6RL9)",
+     "template": "ZN1.mol2",
+     "template_charge_line": "RESP Charge, ligand pairs equal (md/qm/resp_equiv.py)",
+     "sum_e": 0.3356,
+     "largest_difference_from_template_e": 5.551115123125783e-17,
+     "atoms_e": {
+      "ZN": 0.3356
+     },
+     "largest_difference_from_the_unconstrained_fit_e": 0.043853,
+     "template_same_as_md_qm_gr_charges": true
+    },
+    "SN1": {
+     "residue": "SN1 (number 304 of 6RL9)",
+     "template": "SN1.mol2",
+     "template_charge_line": "RESP Charge, ligand pairs equal (md/qm/resp_equiv.py)",
+     "sum_e": -0.530426,
+     "largest_difference_from_template_e": 1.783528880139329e-09,
+     "atoms_e": {
+      "C1": 0.464944,
+      "C2": -0.274695,
+      "C3": -0.153047,
+      "C4": 0.080205,
+      "C5": -0.153047,
+      "C6": -0.274695,
+      "N1": -0.954927,
+      "N2": -0.914224,
+      "O1": -0.48855,
+      "O2": -0.48855,
+      "S": 0.790275,
+      "H2": 0.146108,
+      "H3": 0.155431,
+      "H5": 0.155431,
+      "H6": 0.146108,
+      "HN11": 0.417016,
+      "HN12": 0.417016,
+      "HN21": 0.398775
+     },
+     "largest_difference_from_the_unconstrained_fit_e": 0.049095,
+     "template_same_as_md_qm_gr_charges": true
+    }
+   },
+   "site_sum_e": 1.0,
+   "zinc_e": 0.3356,
+   "all_as_the_templates": true,
+   "equal_pairs_of_the_ligand": [
+    {
+     "pair": "O1, O2",
+     "charges_e": [
+      -0.48855,
+      -0.48855
+     ],
+     "equal": true
+    },
+    {
+     "pair": "C2, C6",
+     "charges_e": [
+      -0.274695,
+      -0.274695
+     ],
+     "equal": true
+    },
+    {
+     "pair": "C3, C5",
+     "charges_e": [
+      -0.153047,
+      -0.153047
+     ],
+     "equal": true
+    },
+    {
+     "pair": "H2, H6",
+     "charges_e": [
+      0.146108,
+      0.146108
+     ],
+     "equal": true
+    },
+    {
+     "pair": "H3, H5",
+     "charges_e": [
+      0.155431,
+      0.155431
+     ],
+     "equal": true
+    },
+    {
+     "pair": "HN11, HN12",
+     "charges_e": [
+      0.417016,
+      0.417016
+     ],
+     "equal": true
+    }
+   ],
+   "pairs_equal": true,
+   "resp_equiv_json_sha256": "e73378d747048905edd80ea914459d19784bc6ef34a8f6eec192df39331f0c97"
+  },
+  "pairs_across_the_zinc": {
+   "rule": "Amber: atoms one or two bonds apart do not interact (excluded); atoms three bonds apart interact with the electrostatics divided by 1.2 and the Lennard-Jones term by 2.0 (1-4); atoms four or more bonds apart interact in full. Checked here for every pair whose bonds run through the zinc",
+   "n_pairs_1_or_2_bonds_apart": 18,
+   "n_pairs_3_bonds_apart": 39,
+   "n_pairs_4_bonds_apart": 80,
+   "1_or_2_bonds_excluded_and_no_1_4_term": true,
+   "3_bonds_one_1_4_term_each_with_the_amber_scaling": true,
+   "4_bonds_neither_excluded_nor_1_4": true,
+   "pairs_1_or_2_bonds_apart": [
+    "HD194:NE2 ... Zn",
+    "HD296:NE2 ... Zn",
+    "HE1119:ND1 ... Zn",
+    "Zn ... SN1304:N2",
+    "HD194:CE1 ... Zn",
+    "HD194:NE2 ... HD296:NE2",
+    "HD194:NE2 ... HE1119:ND1",
+    "HD194:NE2 ... SN1304:N2",
+    "HD194:CD2 ... Zn",
+    "HD296:CE1 ... Zn",
+    "HD296:NE2 ... HE1119:ND1",
+    "HD296:NE2 ... SN1304:N2",
+    "HD296:CD2 ... Zn",
+    "HE1119:CG ... Zn",
+    "HE1119:ND1 ... SN1304:N2",
+    "HE1119:CE1 ... Zn",
+    "Zn ... SN1304:S",
+    "Zn ... SN1304:HN21"
+   ],
+   "pairs_3_bonds_apart_1_4": [
+    "HD194:CG ... Zn",
+    "HD194:ND1 ... Zn",
+    "HD194:CE1 ... HD296:NE2",
+    "HD194:CE1 ... HE1119:ND1",
+    "HD194:CE1 ... SN1304:N2",
+    "HD194:HE1 ... Zn",
+    "HD194:NE2 ... HD296:CE1",
+    "HD194:NE2 ... HD296:CD2",
+    "HD194:NE2 ... HE1119:CG",
+    "HD194:NE2 ... HE1119:CE1",
+    "HD194:NE2 ... SN1304:S",
+    "HD194:NE2 ... SN1304:HN21",
+    "HD194:CD2 ... HD296:NE2",
+    "HD194:CD2 ... HE1119:ND1",
+    "HD194:CD2 ... SN1304:N2",
+    "HD194:HD2 ... Zn",
+    "HD296:CG ... Zn",
+    "HD296:ND1 ... Zn",
+    "HD296:CE1 ... HE1119:ND1",
+    "HD296:CE1 ... SN1304:N2",
+    "HD296:HE1 ... Zn",
+    "HD296:NE2 ... HE1119:CG",
+    "HD296:NE2 ... HE1119:CE1",
+    "HD296:NE2 ... SN1304:S",
+    "HD296:NE2 ... SN1304:HN21",
+    "HD296:CD2 ... HE1119:ND1",
+    "HD296:CD2 ... SN1304:N2",
+    "HD296:HD2 ... Zn",
+    "HE1119:CB ... Zn",
+    "HE1119:CG ... SN1304:N2",
+    "HE1119:ND1 ... SN1304:S",
+    "HE1119:ND1 ... SN1304:HN21",
+    "HE1119:CE1 ... SN1304:N2",
+    "HE1119:HE1 ... Zn",
+    "HE1119:NE2 ... Zn",
+    "HE1119:CD2 ... Zn",
+    "Zn ... SN1304:C4",
+    "Zn ... SN1304:O1",
+    "Zn ... SN1304:O2"
+   ],
+   "zinc_to_sulfonyl_oxygens": "three bonds apart (Zn-N2-S-O): a 1-4 pair, scaled as above"
+  }
+ },
+ "against_the_restrained_system_of_this_start": {
+  "folder": "/root/cqc-sfa-md/systems/restrained/N",
+  "note": "each pair is [this system, the restrained system]",
+  "atoms": [
+   40911,
+   40911
+  ],
+  "water_molecules": [
+   12250,
+   12250
+  ],
+  "crystal_water_molecules": [
+   215,
+   215
+  ],
+  "Na+": [
+   34,
+   34
+  ],
+  "Cl-": [
+   33,
+   33
+  ],
+  "cell_edge_A": [
+   84.1337263,
+   84.1337268
+  ],
+  "ions_replace_the_same_water_molecules": true,
+  "largest_coordinate_difference_A": 0.000608,
+  "same_atoms_at_the_same_places_within_0.005_A": true,
+  "solute_atoms_largest_deviation_after_the_fit_on_CA_A": 0.0007,
+  "solute_atom_with_the_largest_deviation": "HE1118:HB2",
+  "solute_atoms_farther_than_0.01_A": 0
+ },
+ "compared_with": null,
+ "ligand_parameters": {
+  "repaired_terms": [
+   {
+    "term": "bond N2-S",
+    "types_free_anion": "n2-sy",
+    "repair_frcmod": [
+     461.21,
+     1.5906
+    ],
+    "in_prmtop": [
+     461.21,
+     1.5906
+    ],
+    "in_force": true
+   },
+   {
+    "term": "angle C4-S-N2",
+    "types_free_anion": "ca-sy-n2",
+    "repair_frcmod": [
+     101.19,
+     117.133
+    ],
+    "in_prmtop": [
+     101.19,
+     117.1331
+    ],
+    "in_force": true
+   },
+   {
+    "term": "angle HN21-N2-S",
+    "types_free_anion": "hn-n2-sy",
+    "repair_frcmod": [
+     61.55,
+     118.059
+    ],
+    "in_prmtop": [
+     61.55,
+     118.0591
+    ],
+    "in_force": true,
+    "types_in_this_system": "hn-Y4-sy",
+    "expected_from": "n2_terms.frcmod, which is loaded after the repair frcmod and MCPB.py's frcmod",
+    "n2_terms_file": [
+     61.55,
+     118.059
+    ]
+   },
+   {
+    "term": "torsion HN21-N2-S-C4",
+    "types_free_anion": "hn-n2-sy-ca",
+    "repair_frcmod_k_per_phase": [
+     [
+      0.2624,
+      1,
+      180.0
+     ],
+     [
+      2.703,
+      2,
+      0.0
+     ]
+    ],
+    "gaff2_as_assigned_k_per_phase": [
+     [
+      0.5,
+      3,
+      180.0
+     ],
+     [
+      6.8,
+      1,
+      180.0
+     ]
+    ],
+    "in_prmtop_k_per_phase": [
+     [
+      0.2624,
+      1,
+      180.0
+     ],
+     [
+      2.703,
+      2,
+      0.0
+     ]
+    ],
+    "in_force": true,
+    "types_in_this_system": "hn-Y4-sy-ca",
+    "expected_from": "n2_terms.frcmod, which is loaded after the repair frcmod and MCPB.py's frcmod",
+    "n2_terms_file_k_per_phase": [
+     [
+      0.2624,
+      1,
+      180.0
+     ],
+     [
+      2.703,
+      2,
+      0.0
+     ]
+    ]
+   },
+   {
+    "term": "torsion HN21-N2-S-O1",
+    "types_free_anion": "hn-n2-sy-o",
+    "repair_frcmod_k_per_phase": [
+     [
+      0.0,
+      2,
+      0.0
+     ]
+    ],
+    "gaff2_as_assigned_k_per_phase": [
+     [
+      0.5,
+      3,
+      180.0
+     ],
+     [
+      6.8,
+      1,
+      180.0
+     ]
+    ],
+    "in_prmtop_k_per_phase": [
+     [
+      0.0,
+      2,
+      0.0
+     ]
+    ],
+    "in_force": true
+   },
+   {
+    "term": "torsion HN21-N2-S-O2",
+    "types_free_anion": "hn-n2-sy-o",
+    "repair_frcmod_k_per_phase": [
+     [
+      0.0,
+      2,
+      0.0
+     ]
+    ],
+    "gaff2_as_assigned_k_per_phase": [
+     [
+      0.5,
+      3,
+      180.0
+     ],
+     [
+      6.8,
+      1,
+      180.0
+     ]
+    ],
+    "in_prmtop_k_per_phase": [
+     [
+      0.0,
+      2,
+      0.0
+     ]
+    ],
+    "in_force": true
+   }
+  ],
+  "all_ligand_terms_equal_to_md_ligand_sfa_anion_repaired_prmtop": {
+   "bonds": true,
+   "angles": true,
+   "dihedrals": true,
+   "impropers": true
+  },
+  "terms_that_differ_from_that_topology": {
+   "bonds": [],
+   "angles": [],
+   "dihedrals": [],
+   "impropers": []
+  },
+  "terms": {
+   "bonds": {
+    "C1-C2": [
+     354.25,
+     1.3986
+    ],
+    "C2-C3": [
+     354.25,
+     1.3986
+    ],
+    "C3-C4": [
+     354.25,
+     1.3986
+    ],
+    "C4-C5": [
+     354.25,
+     1.3986
+    ],
+    "C1-C6": [
+     354.25,
+     1.3986
+    ],
+    "C5-C6": [
+     354.25,
+     1.3986
+    ],
+    "C1-N1": [
+     342.3,
+     1.3744
+    ],
+    "C4-S": [
+     209.82,
+     1.7913
+    ],
+    "N2-S": [
+     461.21,
+     1.5906
+    ],
+    "O1-S": [
+     614.68,
+     1.4656
+    ],
+    "O2-S": [
+     614.68,
+     1.4656
+    ],
+    "C2-H2": [
+     360.69,
+     1.086
+    ],
+    "C3-H3": [
+     360.69,
+     1.086
+    ],
+    "C5-H5": [
+     360.69,
+     1.086
+    ],
+    "C6-H6": [
+     360.69,
+     1.086
+    ],
+    "HN11-N1": [
+     477.54,
+     1.0114
+    ],
+    "HN12-N1": [
+     477.54,
+     1.0114
+    ],
+    "HN21-N2": [
+     454.59,
+     1.0221
+    ]
+   },
+   "angles": {
+    "C1-C2-C3": [
+     63.67,
+     120.0201
+    ],
+    "C2-C3-C4": [
+     63.67,
+     120.0201
+    ],
+    "C3-C4-C5": [
+     63.67,
+     120.0201
+    ],
+    "C1-C6-C5": [
+     63.67,
+     120.0201
+    ],
+    "C2-C1-C6": [
+     63.67,
+     120.0201
+    ],
+    "C4-C5-C6": [
+     63.67,
+     120.0201
+    ],
+    "C2-C1-N1": [
+     67.91,
+     120.9401
+    ],
+    "C6-C1-N1": [
+     67.91,
+     120.9401
+    ],
+    "C4-S-N2": [
+     101.19,
+     117.1331
+    ],
+    "C4-S-O1": [
+     120.43,
+     108.34
+    ],
+    "N2-S-O1": [
+     132.73,
+     122.1801
+    ],
+    "C4-S-O2": [
+     120.43,
+     108.34
+    ],
+    "N2-S-O2": [
+     132.73,
+     122.1801
+    ],
+    "O1-S-O2": [
+     157.75,
+     121.3801
+    ],
+    "C3-C4-S": [
+     63.08,
+     119.4101
+    ],
+    "C5-C4-S": [
+     63.08,
+     119.4101
+    ],
+    "C1-C2-H2": [
+     44.9,
+     119.8801
+    ],
+    "C3-C2-H2": [
+     44.9,
+     119.8801
+    ],
+    "C2-C3-H3": [
+     44.9,
+     119.8801
+    ],
+    "C4-C3-H3": [
+     44.9,
+     119.8801
+    ],
+    "C4-C5-H5": [
+     44.9,
+     119.8801
+    ],
+    "C6-C5-H5": [
+     44.9,
+     119.8801
+    ],
+    "C1-C6-H6": [
+     44.9,
+     119.8801
+    ],
+    "C5-C6-H6": [
+     44.9,
+     119.8801
+    ],
+    "C1-N1-HN11": [
+     57.71,
+     116.7301
+    ],
+    "C1-N1-HN12": [
+     57.71,
+     116.7301
+    ],
+    "HN11-N1-HN12": [
+     46.36,
+     115.28
+    ],
+    "HN21-N2-S": [
+     61.55,
+     118.0591
+    ]
+   },
+   "dihedrals": {
+    "C1-C2-C3-C4": [
+     [
+      3.625,
+      2,
+      180.0,
+      1.2,
+      2.0
+     ]
+    ],
+    "C1-C6-C5-C4": [
+     [
+      3.625,
+      2,
+      180.0,
+      1.2,
+      2.0
+     ]
+    ],
+    "C2-C3-C4-C5": [
+     [
+      3.625,
+      2,
+      180.0,
+      1.2,
+      2.0
+     ]
+    ],
+    "C2-C1-C6-C5": [
+     [
+      3.625,
+      2,
+      180.0,
+      1.2,
+      2.0
+     ]
+    ],
+    "C3-C2-C1-C6": [
+     [
+      3.625,
+      2,
+      180.0,
+      1.2,
+      2.0
+     ]
+    ],
+    "C3-C4-C5-C6": [
+     [
+      3.625,
+      2,
+      180.0,
+      1.2,
+      2.0
+     ]
+    ],
+    "C3-C2-C1-N1": [
+     [
+      3.625,
+      2,
+      180.0,
+      1.2,
+      2.0
+     ]
+    ],
+    "C5-C6-C1-N1": [
+     [
+      3.625,
+      2,
+      180.0,
+      1.2,
+      2.0
+     ]
+    ],
+    "C3-C4-S-N2": [
+     [
+      1.3,
+      2,
+      180.0,
+      1.2,
+      2.0
+     ]
+    ],
+    "C5-C4-S-N2": [
+     [
+      1.3,
+      2,
+      180.0,
+      1.2,
+      2.0
+     ]
+    ],
+    "C3-C4-S-O1": [
+     [
+      1.3,
+      2,
+      180.0,
+      1.2,
+      2.0
+     ]
+    ],
+    "C5-C4-S-O1": [
+     [
+      1.3,
+      2,
+      180.0,
+      1.2,
+      2.0
+     ]
+    ],
+    "C3-C4-S-O2": [
+     [
+      1.3,
+      2,
+      180.0,
+      1.2,
+      2.0
+     ]
+    ],
+    "C5-C4-S-O2": [
+     [
+      1.3,
+      2,
+      180.0,
+      1.2,
+      2.0
+     ]
+    ],
+    "C2-C3-C4-S": [
+     [
+      3.625,
+      2,
+      180.0,
+      1.2,
+      2.0
+     ]
+    ],
+    "C6-C5-C4-S": [
+     [
+      3.625,
+      2,
+      180.0,
+      1.2,
+      2.0
+     ]
+    ],
+    "C6-C1-C2-H2": [
+     [
+      3.625,
+      2,
+      180.0,
+      1.2,
+      2.0
+     ]
+    ],
+    "H2-C2-C1-N1": [
+     [
+      3.625,
+      2,
+      180.0,
+      1.2,
+      2.0
+     ]
+    ],
+    "C4-C3-C2-H2": [
+     [
+      3.625,
+      2,
+      180.0,
+      1.2,
+      2.0
+     ]
+    ],
+    "C1-C2-C3-H3": [
+     [
+      3.625,
+      2,
+      180.0,
+      1.2,
+      2.0
+     ]
+    ],
+    "H2-C2-C3-H3": [
+     [
+      3.625,
+      2,
+      180.0,
+      1.2,
+      2.0
+     ]
+    ],
+    "C5-C4-C3-H3": [
+     [
+      3.625,
+      2,
+      180.0,
+      1.2,
+      2.0
+     ]
+    ],
+    "H3-C3-C4-S": [
+     [
+      3.625,
+      2,
+      180.0,
+      1.2,
+      2.0
+     ]
+    ],
+    "C3-C4-C5-H5": [
+     [
+      3.625,
+      2,
+      180.0,
+      1.2,
+      2.0
+     ]
+    ],
+    "H5-C5-C4-S": [
+     [
+      3.625,
+      2,
+      180.0,
+      1.2,
+      2.0
+     ]
+    ],
+    "C1-C6-C5-H5": [
+     [
+      3.625,
+      2,
+      180.0,
+      1.2,
+      2.0
+     ]
+    ],
+    "C2-C1-C6-H6": [
+     [
+      3.625,
+      2,
+      180.0,
+      1.2,
+      2.0
+     ]
+    ],
+    "H6-C6-C1-N1": [
+     [
+      3.625,
+      2,
+      180.0,
+      1.2,
+      2.0
+     ]
+    ],
+    "C4-C5-C6-H6": [
+     [
+      3.625,
+      2,
+      180.0,
+      1.2,
+      2.0
+     ]
+    ],
+    "H5-C5-C6-H6": [
+     [
+      3.625,
+      2,
+      180.0,
+      1.2,
+      2.0
+     ]
+    ],
+    "C2-C1-N1-HN11": [
+     [
+      1.05,
+      2,
+      180.0,
+      1.2,
+      2.0
+     ]
+    ],
+    "C6-C1-N1-HN11": [
+     [
+      1.05,
+      2,
+      180.0,
+      1.2,
+      2.0
+     ]
+    ],
+    "C2-C1-N1-HN12": [
+     [
+      1.05,
+      2,
+      180.0,
+      1.2,
+      2.0
+     ]
+    ],
+    "C6-C1-N1-HN12": [
+     [
+      1.05,
+      2,
+      180.0,
+      1.2,
+      2.0
+     ]
+    ],
+    "C4-S-N2-HN21": [
+     [
+      0.2624,
+      1,
+      180.0,
+      1.2,
+      2.0
+     ],
+     [
+      2.703,
+      2,
+      0.0,
+      1.2,
+      2.0
+     ]
+    ],
+    "HN21-N2-S-O1": [
+     [
+      0.0,
+      2,
+      0.0,
+      1.2,
+      2.0
+     ]
+    ],
+    "HN21-N2-S-O2": [
+     [
+      0.0,
+      2,
+      0.0,
+      1.2,
+      2.0
+     ]
+    ]
+   },
+   "impropers": {
+    "C2-C6-C1-N1": [
+     [
+      10.5,
+      2,
+      180.0
+     ]
+    ],
+    "C3-C5-C4-S": [
+     [
+      10.5,
+      2,
+      180.0
+     ]
+    ],
+    "C1-C3-C2-H2": [
+     [
+      1.1,
+      2,
+      180.0
+     ]
+    ],
+    "C2-C4-C3-H3": [
+     [
+      1.1,
+      2,
+      180.0
+     ]
+    ],
+    "C4-C6-C5-H5": [
+     [
+      1.1,
+      2,
+      180.0
+     ]
+    ],
+    "C1-C5-C6-H6": [
+     [
+      1.1,
+      2,
+      180.0
+     ]
+    ],
+    "C1-HN11-N1-HN12": [
+     [
+      1.1,
+      2,
+      180.0
+     ]
+    ]
+   }
+  },
+  "charges_e": {
+   "C1": 0.464944,
+   "C2": -0.274695,
+   "C3": -0.153047,
+   "C4": 0.080205,
+   "C5": -0.153047,
+   "C6": -0.274695,
+   "N1": -0.954927,
+   "N2": -0.914224,
+   "O1": -0.48855,
+   "O2": -0.48855,
+   "S": 0.790275,
+   "H2": 0.146108,
+   "H3": 0.155431,
+   "H5": 0.155431,
+   "H6": 0.146108,
+   "HN11": 0.417016,
+   "HN12": 0.417016,
+   "HN21": 0.398775
+  },
+  "charge_sum_e": -0.530426,
+  "charges_are_those_of_sfa_anion_mol2": false,
+  "n_terms": {
+   "bonds": 18,
+   "angles": 28,
+   "dihedrals": 37,
+   "impropers": 7
+  }
+ },
+ "composition": {
+  "atoms": 40911,
+  "residues": 12578,
+  "protein_atoms": 4075,
+  "protein_residues_with_ACE": 259,
+  "zinc_atoms": 1,
+  "ligand_atoms": 18,
+  "solute_atoms": 4094,
+  "water_molecules": 12250,
+  "crystal_water_molecules": 215,
+  "added_water_molecules": 12035,
+  "Na+": 34,
+  "Cl-": 33,
+  "plan_atoms": 25600,
+  "atoms_over_plan_percent": 59.8
+ },
+ "charge": {
+  "solute_with_crystal_water_e": -1.0,
+  "net_e": -0.0
+ },
+ "box": {
+  "shape": "truncated octahedron (tleap solvateOct; triclinic cell with three equal edges)",
+  "solvateOct_buffer_A": 10.0,
+  "tleap_solvation_lines": [
+   "Scaling up box by a factor of 1.188589 to meet diagonal cut criterion",
+   "Solute vdw bounding box:              52.394 47.264 60.894",
+   "Total bounding box for atom centers:  96.149 96.149 96.149",
+   "(box expansion for 'iso' is  27.8%)",
+   "Volume: 458446.335 A^3 (oct)",
+   "Total mass 251207.672 amu,  Density 0.910 g/cc",
+   "Added 12102 residues."
+  ],
+  "edge_A": 84.1337263,
+  "angles_deg": [
+   109.471219,
+   109.471219,
+   109.471219
+  ],
+  "volume_A3": 458446.3,
+  "volume_nm3": 458.446,
+  "mass_amu": 251952.11,
+  "density_as_built_g_per_cm3": 0.9126,
+  "nearest_image_distance_A": 84.134,
+  "solute_largest_atom_atom_distance_A": 60.76,
+  "solute_to_own_image_smallest_distance_as_built_A": 32.42,
+  "solute_to_own_image_smallest_distance_any_orientation_A": 23.37,
+  "note": "as built the box is larger than it will be at 1 bar (see density_as_built); 'any orientation' is the cell edge minus the largest extent of the solute, a lower bound for a rigid solute"
+ },
+ "ions": {
+  "target_mol_per_l": 0.15,
+  "rule": "pairs = round(c * N_water / c_water) with c = 0.15 mol/L, c_water = 55.3 mol/L (water at 300 K) and N_water the water molecules after solvateOct (crystal water included): the concentration in the volume of the solvent. Then one Na+ per negative charge of the solute.",
+  "n_water_before_ions": 12317,
+  "pairs": 33,
+  "neutralising": {
+   "Na+": 1,
+   "Cl-": 0
+  },
+  "for_comparison_pairs_from_box_volume_as_built": 41.4,
+  "concentration_in_box_volume_as_built_mol_per_l": 0.1195,
+  "placement": {
+   "rule": "each ion replaces one water molecule added by solvateOct, never a crystal water: candidates are the added molecules whose O is at least 6.0 A from every atom of protein, zinc, ligand and crystal water; they are ordered by sha256('cqc-sfa-md ion sites|<seed>|<k>') (k = place among the added molecules, from 0) and taken in that order if at least 6.0 A (minimum image) from every site already taken; the kinds alternate Na+, Cl- in the order taken",
+   "seed": 20261005,
+   "candidates": 11010,
+   "smallest_ion_to_solute_distance_A": 6.41,
+   "smallest_ion_to_ion_distance_A": 6.25,
+   "why_not_tleap": "addIonsRand has no seed (its help text: the result differs between invocations) and may replace a crystal water; addIons puts every ion on the protein surface"
+  },
+  "sites": [
+   {
+    "ion": "Na+",
+    "replaces_added_water_number": 1354,
+    "pass1_residue_number": 1830,
+    "xyz_inpcrd_frame_A": [
+     63.5867,
+     46.6597,
+     65.4152
+    ]
+   },
+   {
+    "ion": "Na+",
+    "replaces_added_water_number": 426,
+    "pass1_residue_number": 902,
+    "xyz_inpcrd_frame_A": [
+     75.5474,
+     34.4068,
+     72.2639
+    ]
+   },
+   {
+    "ion": "Na+",
+    "replaces_added_water_number": 9642,
+    "pass1_residue_number": 10118,
+    "xyz_inpcrd_frame_A": [
+     22.4084,
+     67.1779,
+     41.0068
+    ]
+   },
+   {
+    "ion": "Na+",
+    "replaces_added_water_number": 1864,
+    "pass1_residue_number": 2340,
+    "xyz_inpcrd_frame_A": [
+     72.0932,
+     19.7189,
+     54.6568
+    ]
+   },
+   {
+    "ion": "Na+",
+    "replaces_added_water_number": 3379,
+    "pass1_residue_number": 3855,
+    "xyz_inpcrd_frame_A": [
+     39.9858,
+     42.8703,
+     70.6643
+    ]
+   },
+   {
+    "ion": "Na+",
+    "replaces_added_water_number": 3159,
+    "pass1_residue_number": 3635,
+    "xyz_inpcrd_frame_A": [
+     14.2741,
+     37.424,
+     67.2056
+    ]
+   },
+   {
+    "ion": "Na+",
+    "replaces_added_water_number": 4644,
+    "pass1_residue_number": 5120,
+    "xyz_inpcrd_frame_A": [
+     40.8512,
+     6.9305,
+     40.0943
+    ]
+   },
+   {
+    "ion": "Na+",
+    "replaces_added_water_number": 5560,
+    "pass1_residue_number": 6036,
+    "xyz_inpcrd_frame_A": [
+     75.769,
+     32.7633,
+     25.8723
+    ]
+   },
+   {
+    "ion": "Na+",
+    "replaces_added_water_number": 10474,
+    "pass1_residue_number": 10950,
+    "xyz_inpcrd_frame_A": [
+     15.6732,
+     29.8005,
+     11.0183
+    ]
+   },
+   {
+    "ion": "Na+",
+    "replaces_added_water_number": 9140,
+    "pass1_residue_number": 9616,
+    "xyz_inpcrd_frame_A": [
+     58.1163,
+     13.8205,
+     5.0613
+    ]
+   },
+   {
+    "ion": "Na+",
+    "replaces_added_water_number": 5265,
+    "pass1_residue_number": 5741,
+    "xyz_inpcrd_frame_A": [
+     55.486,
+     19.5159,
+     21.7263
+    ]
+   },
+   {
+    "ion": "Na+",
+    "replaces_added_water_number": 7190,
+    "pass1_residue_number": 7666,
+    "xyz_inpcrd_frame_A": [
+     7.6818,
+     26.2269,
+     42.2372
+    ]
+   },
+   {
+    "ion": "Na+",
+    "replaces_added_water_number": 847,
+    "pass1_residue_number": 1323,
+    "xyz_inpcrd_frame_A": [
+     51.3341,
+     51.1129,
+     71.8535
+    ]
+   },
+   {
+    "ion": "Na+",
+    "replaces_added_water_number": 6278,
+    "pass1_residue_number": 6754,
+    "xyz_inpcrd_frame_A": [
+     28.3142,
+     77.0947,
+     72.1376
+    ]
+   },
+   {
+    "ion": "Na+",
+    "replaces_added_water_number": 4564,
+    "pass1_residue_number": 5040,
+    "xyz_inpcrd_frame_A": [
+     24.9448,
+     7.046,
+     46.4092
+    ]
+   },
+   {
+    "ion": "Na+",
+    "replaces_added_water_number": 9696,
+    "pass1_residue_number": 10172,
+    "xyz_inpcrd_frame_A": [
+     5.3073,
+     39.6941,
+     21.4933
+    ]
+   },
+   {
+    "ion": "Na+",
+    "replaces_added_water_number": 377,
+    "pass1_residue_number": 853,
+    "xyz_inpcrd_frame_A": [
+     60.9502,
+     18.286,
+     67.208
+    ]
+   },
+   {
+    "ion": "Na+",
+    "replaces_added_water_number": 6708,
+    "pass1_residue_number": 7184,
+    "xyz_inpcrd_frame_A": [
+     27.9726,
+     59.0972,
+     57.0397
+    ]
+   },
+   {
+    "ion": "Na+",
+    "replaces_added_water_number": 9402,
+    "pass1_residue_number": 9878,
+    "xyz_inpcrd_frame_A": [
+     2.7964,
+     64.6045,
+     40.8886
+    ]
+   },
+   {
+    "ion": "Na+",
+    "replaces_added_water_number": 10445,
+    "pass1_residue_number": 10921,
+    "xyz_inpcrd_frame_A": [
+     14.3435,
+     24.0695,
+     24.4415
+    ]
+   },
+   {
+    "ion": "Na+",
+    "replaces_added_water_number": 5484,
+    "pass1_residue_number": 5960,
+    "xyz_inpcrd_frame_A": [
+     67.0831,
+     33.1054,
+     23.7051
+    ]
+   },
+   {
+    "ion": "Na+",
+    "replaces_added_water_number": 781,
+    "pass1_residue_number": 1257,
+    "xyz_inpcrd_frame_A": [
+     44.9269,
+     48.2715,
+     72.6258
+    ]
+   },
+   {
+    "ion": "Na+",
+    "replaces_added_water_number": 3078,
+    "pass1_residue_number": 3554,
+    "xyz_inpcrd_frame_A": [
+     14.4108,
+     30.5881,
+     73.7399
+    ]
+   },
+   {
+    "ion": "Na+",
+    "replaces_added_water_number": 5866,
+    "pass1_residue_number": 6342,
+    "xyz_inpcrd_frame_A": [
+     69.9493,
+     17.548,
+     24.6359
+    ]
+   },
+   {
+    "ion": "Na+",
+    "replaces_added_water_number": 3238,
+    "pass1_residue_number": 3714,
+    "xyz_inpcrd_frame_A": [
+     21.6811,
+     44.1948,
+     69.6606
+    ]
+   },
+   {
+    "ion": "Na+",
+    "replaces_added_water_number": 7599,
+    "pass1_residue_number": 8075,
+    "xyz_inpcrd_frame_A": [
+     38.8258,
+     71.7162,
+     48.6261
+    ]
+   },
+   {
+    "ion": "Na+",
+    "replaces_added_water_number": 5585,
+    "pass1_residue_number": 6061,
+    "xyz_inpcrd_frame_A": [
+     65.2434,
+     31.7257,
+     29.5188
+    ]
+   },
+   {
+    "ion": "Na+",
+    "replaces_added_water_number": 7633,
+    "pass1_residue_number": 8109,
+    "xyz_inpcrd_frame_A": [
+     45.3012,
+     72.3016,
+     53.3246
+    ]
+   },
+   {
+    "ion": "Na+",
+    "replaces_added_water_number": 10181,
+    "pass1_residue_number": 10657,
+    "xyz_inpcrd_frame_A": [
+     25.0914,
+     73.5932,
+     35.1486
+    ]
+   },
+   {
+    "ion": "Na+",
+    "replaces_added_water_number": 4325,
+    "pass1_residue_number": 4801,
+    "xyz_inpcrd_frame_A": [
+     45.0603,
+     63.5284,
+     56.7906
+    ]
+   },
+   {
+    "ion": "Na+",
+    "replaces_added_water_number": 9803,
+    "pass1_residue_number": 10279,
+    "xyz_inpcrd_frame_A": [
+     3.4127,
+     42.9348,
+     35.1486
+    ]
+   },
+   {
+    "ion": "Na+",
+    "replaces_added_water_number": 6341,
+    "pass1_residue_number": 6817,
+    "xyz_inpcrd_frame_A": [
+     8.6912,
+     35.8271,
+     60.1361
+    ]
+   },
+   {
+    "ion": "Na+",
+    "replaces_added_water_number": 8887,
+    "pass1_residue_number": 9363,
+    "xyz_inpcrd_frame_A": [
+     74.5734,
+     48.5894,
+     19.4186
+    ]
+   },
+   {
+    "ion": "Na+",
+    "replaces_added_water_number": 11861,
+    "pass1_residue_number": 12337,
+    "xyz_inpcrd_frame_A": [
+     19.5306,
+     51.1563,
+     7.0342
+    ]
+   },
+   {
+    "ion": "Cl-",
+    "replaces_added_water_number": 8479,
+    "pass1_residue_number": 8955,
+    "xyz_inpcrd_frame_A": [
+     45.0075,
+     11.1503,
+     18.4218
+    ]
+   },
+   {
+    "ion": "Cl-",
+    "replaces_added_water_number": 1899,
+    "pass1_residue_number": 2375,
+    "xyz_inpcrd_frame_A": [
+     56.9032,
+     17.6681,
+     54.4716
+    ]
+   },
+   {
+    "ion": "Cl-",
+    "replaces_added_water_number": 2730,
+    "pass1_residue_number": 3206,
+    "xyz_inpcrd_frame_A": [
+     82.5044,
+     39.0283,
+     42.2823
+    ]
+   },
+   {
+    "ion": "Cl-",
+    "replaces_added_water_number": 9207,
+    "pass1_residue_number": 9683,
+    "xyz_inpcrd_frame_A": [
+     62.1761,
+     29.1568,
+     -0.4778
+    ]
+   },
+   {
+    "ion": "Cl-",
+    "replaces_added_water_number": 9562,
+    "pass1_residue_number": 10038,
+    "xyz_inpcrd_frame_A": [
+     17.0824,
+     70.4021,
+     47.7866
+    ]
+   },
+   {
+    "ion": "Cl-",
+    "replaces_added_water_number": 11916,
+    "pass1_residue_number": 12392,
+    "xyz_inpcrd_frame_A": [
+     22.2794,
+     54.9839,
+     11.7738
+    ]
+   },
+   {
+    "ion": "Cl-",
+    "replaces_added_water_number": 3903,
+    "pass1_residue_number": 4379,
+    "xyz_inpcrd_frame_A": [
+     28.7384,
+     18.8916,
+     56.807
+    ]
+   },
+   {
+    "ion": "Cl-",
+    "replaces_added_water_number": 10357,
+    "pass1_residue_number": 10833,
+    "xyz_inpcrd_frame_A": [
+     42.5287,
+     76.9111,
+     32.5831
+    ]
+   },
+   {
+    "ion": "Cl-",
+    "replaces_added_water_number": 1865,
+    "pass1_residue_number": 2341,
+    "xyz_inpcrd_frame_A": [
+     57.4831,
+     24.5903,
+     50.3323
+    ]
+   },
+   {
+    "ion": "Cl-",
+    "replaces_added_water_number": 9134,
+    "pass1_residue_number": 9610,
+    "xyz_inpcrd_frame_A": [
+     62.6633,
+     25.7889,
+     5.1971
+    ]
+   },
+   {
+    "ion": "Cl-",
+    "replaces_added_water_number": 9333,
+    "pass1_residue_number": 9809,
+    "xyz_inpcrd_frame_A": [
+     3.4219,
+     44.1535,
+     41.678
+    ]
+   },
+   {
+    "ion": "Cl-",
+    "replaces_added_water_number": 3923,
+    "pass1_residue_number": 4399,
+    "xyz_inpcrd_frame_A": [
+     24.9305,
+     16.4617,
+     47.9627
+    ]
+   },
+   {
+    "ion": "Cl-",
+    "replaces_added_water_number": 11036,
+    "pass1_residue_number": 11512,
+    "xyz_inpcrd_frame_A": [
+     51.9811,
+     72.3374,
+     14.1854
+    ]
+   },
+   {
+    "ion": "Cl-",
+    "replaces_added_water_number": 1877,
+    "pass1_residue_number": 2353,
+    "xyz_inpcrd_frame_A": [
+     60.7974,
+     18.1042,
+     47.3694
+    ]
+   },
+   {
+    "ion": "Cl-",
+    "replaces_added_water_number": 11330,
+    "pass1_residue_number": 11806,
+    "xyz_inpcrd_frame_A": [
+     44.5203,
+     30.1347,
+     -1.495
+    ]
+   },
+   {
+    "ion": "Cl-",
+    "replaces_added_water_number": 9993,
+    "pass1_residue_number": 10469,
+    "xyz_inpcrd_frame_A": [
+     11.7939,
+     44.4398,
+     39.0446
+    ]
+   },
+   {
+    "ion": "Cl-",
+    "replaces_added_water_number": 10571,
+    "pass1_residue_number": 11047,
+    "xyz_inpcrd_frame_A": [
+     22.4084,
+     21.1903,
+     14.4558
+    ]
+   },
+   {
+    "ion": "Cl-",
+    "replaces_added_water_number": 11215,
+    "pass1_residue_number": 11691,
+    "xyz_inpcrd_frame_A": [
+     26.5913,
+     31.6168,
+     4.8874
+    ]
+   },
+   {
+    "ion": "Cl-",
+    "replaces_added_water_number": 8194,
+    "pass1_residue_number": 8670,
+    "xyz_inpcrd_frame_A": [
+     61.3596,
+     72.6197,
+     21.5293
+    ]
+   },
+   {
+    "ion": "Cl-",
+    "replaces_added_water_number": 6858,
+    "pass1_residue_number": 7334,
+    "xyz_inpcrd_frame_A": [
+     24.1907,
+     61.5971,
+     44.2264
+    ]
+   },
+   {
+    "ion": "Cl-",
+    "replaces_added_water_number": 11436,
+    "pass1_residue_number": 11912,
+    "xyz_inpcrd_frame_A": [
+     42.6948,
+     44.8943,
+     -2.7444
+    ]
+   },
+   {
+    "ion": "Cl-",
+    "replaces_added_water_number": 2866,
+    "pass1_residue_number": 3342,
+    "xyz_inpcrd_frame_A": [
+     5.3337,
+     46.9256,
+     76.417
+    ]
+   },
+   {
+    "ion": "Cl-",
+    "replaces_added_water_number": 4163,
+    "pass1_residue_number": 4639,
+    "xyz_inpcrd_frame_A": [
+     48.2706,
+     55.871,
+     64.4623
+    ]
+   },
+   {
+    "ion": "Cl-",
+    "replaces_added_water_number": 3985,
+    "pass1_residue_number": 4461,
+    "xyz_inpcrd_frame_A": [
+     22.5918,
+     23.1579,
+     53.9602
+    ]
+   },
+   {
+    "ion": "Cl-",
+    "replaces_added_water_number": 3023,
+    "pass1_residue_number": 3499,
+    "xyz_inpcrd_frame_A": [
+     36.8458,
+     79.0013,
+     70.8419
+    ]
+   },
+   {
+    "ion": "Cl-",
+    "replaces_added_water_number": 8916,
+    "pass1_residue_number": 9392,
+    "xyz_inpcrd_frame_A": [
+     72.0475,
+     63.8159,
+     22.6641
+    ]
+   },
+   {
+    "ion": "Cl-",
+    "replaces_added_water_number": 7094,
+    "pass1_residue_number": 7570,
+    "xyz_inpcrd_frame_A": [
+     6.6005,
+     10.4396,
+     34.094
+    ]
+   },
+   {
+    "ion": "Cl-",
+    "replaces_added_water_number": 752,
+    "pass1_residue_number": 1228,
+    "xyz_inpcrd_frame_A": [
+     35.0301,
+     30.9387,
+     70.7774
+    ]
+   },
+   {
+    "ion": "Cl-",
+    "replaces_added_water_number": 5989,
+    "pass1_residue_number": 6465,
+    "xyz_inpcrd_frame_A": [
+     67.1623,
+     27.1254,
+     14.6925
+    ]
+   },
+   {
+    "ion": "Cl-",
+    "replaces_added_water_number": 3068,
+    "pass1_residue_number": 3544,
+    "xyz_inpcrd_frame_A": [
+     22.1356,
+     20.8521,
+     71.3776
+    ]
+   },
+   {
+    "ion": "Cl-",
+    "replaces_added_water_number": 7898,
+    "pass1_residue_number": 8374,
+    "xyz_inpcrd_frame_A": [
+     27.3939,
+     10.4838,
+     30.2762
+    ]
+   },
+   {
+    "ion": "Cl-",
+    "replaces_added_water_number": 10799,
+    "pass1_residue_number": 11275,
+    "xyz_inpcrd_frame_A": [
+     36.1504,
+     57.2999,
+     12.1555
+    ]
+   },
+   {
+    "ion": "Cl-",
+    "replaces_added_water_number": 9621,
+    "pass1_residue_number": 10097,
+    "xyz_inpcrd_frame_A": [
+     16.979,
+     60.8247,
+     42.1114
+    ]
+   }
+  ]
+ },
+ "zinc_restraints": null,
+ "tleap": {
+  "pass1": {
+   "errors": 0,
+   "warnings": 49,
+   "notes": 2
+  },
+  "pass2": {
+   "errors": 0,
+   "warnings": 47,
+   "notes": 1
+  },
+  "warnings_pass2": {
+   "close_contacts_with_a_hydrogen": 45,
+   "shortest_close_contact_A": 0.897,
+   "close_contacts_with_zinc_or_ligand": [
+    {
+     "distance_A": 1.458,
+     "atoms": "ASN176:HD22 - WAT360:H2"
+    }
+   ],
+   "close_contacts_between_heavy_atoms": [],
+   "charge_not_zero": [
+    "The unperturbed charge of the unit (-1.000000) is not zero.",
+    "The unperturbed charge of the unit (-1.000000) is not zero."
+   ],
+   "one_sided_connection": [],
+   "one_sided_connection_expected": 0,
+   "other": []
+  },
+  "warnings_pass1_other": []
+ },
+ "water_at_the_site": {
+  "crystal_water_O_within_3.5_A_of_a_ligand_heavy_atom": 1,
+  "added_water_O_within_3.5_A_of_a_ligand_heavy_atom": 0,
+  "crystal_water_O_within_2.5_A_of_a_position_of_the_crystal_ligand": 0,
+  "added_water_O_within_2.5_A_of_a_position_of_the_crystal_ligand": 0,
+  "nearest_added_water_O_to_a_ligand_heavy_atom_A": 6.0,
+  "nearest_added_water_O_to_the_zinc_A": 11.34,
+  "nearest_atom_to_each_position_of_the_crystal_ligand_A": {
+   "C1": 0.74,
+   "C2": 0.73,
+   "C3": 0.74,
+   "C4": 0.5,
+   "C5": 0.43,
+   "C6": 0.59,
+   "N1": 0.9,
+   "N2": 0.41,
+   "O1": 0.43,
+   "O2": 0.51,
+   "S": 0.37
+  },
+  "positions_of_the_crystal_ligand_with_no_atom_within_2.0_A": [],
+  "note": "positions of the crystal ligand: the 11 heavy atoms of SAN 304; a water molecule there in start R means that solvateOct filled the place the rotated ligand leaves empty"
+ },
+ "geometry_as_built": {
+  "frame": "fitted on the CA atoms of reference.pdb, as md/analysis/SPEC.md does",
+  "ca_fit_rms_A": 0.0,
+  "largest_deviation_of_an_input_heavy_atom_A": 0.0,
+  "values": {
+   "lig_rmsd_A": {
+    "identity": 0.6104,
+    "ring_flip": 1.5647,
+    "oxygen_swap": 1.2196,
+    "ring_flip+oxygen_swap": 1.8876
+   },
+   "lig_rmsd_symmetry_corrected_A": 0.6104,
+   "d1_N1_Phe131CZ_A": 3.3561,
+   "d2_N1_Asn67OD1_A": 7.7255,
+   "N1_Asn67ND2_A": 6.5574,
+   "Zn_N2_A": 2.2071,
+   "Zn_His94NE2_A": 2.0099,
+   "Zn_His96NE2_A": 2.0206,
+   "Zn_His119ND1_A": 2.0183,
+   "Zn_O1_A": 4.2404,
+   "Zn_O2_A": 2.7751,
+   "N2_Thr199OG1_A": 2.5522,
+   "HN21_Thr199OG1_A": 1.6214,
+   "N2_HN21_Thr199OG1_deg": 149.1132,
+   "tau_fold_deg": 148.6317,
+   "C4_S_N2_deg": 109.4825,
+   "S_N2_A": 1.6775,
+   "S_N2_Zn_deg": 105.9075,
+   "Zn_N2_S_C4_deg": -107.4902,
+   "N_Zn_N_deg": {
+    "N2-Zn-H94NE2": 117.2809,
+    "N2-Zn-H96NE2": 111.6119,
+    "N2-Zn-H119ND1": 110.2917,
+    "H94NE2-Zn-H96NE2": 103.8187,
+    "H94NE2-Zn-H119ND1": 113.5907,
+    "H96NE2-Zn-H119ND1": 98.4086
+   }
+  },
+  "against_starts_csv": {
+   "lig_rmsd_symmetry_corrected_A": {
+    "built": 0.6104,
+    "starts_csv": 0.61,
+    "difference": 0.0004,
+    "tolerance": 0.006,
+    "agrees": true
+   },
+   "d1_N1_Phe131CZ_A": {
+    "built": 3.3561,
+    "starts_csv": 3.356,
+    "difference": 0.0001,
+    "tolerance": 0.002,
+    "agrees": true
+   },
+   "d2_N1_Asn67OD1_A": {
+    "built": 7.7255,
+    "starts_csv": 7.725,
+    "difference": 0.0005,
+    "tolerance": 0.002,
+    "agrees": true
+   },
+   "N1_Asn67ND2_A": {
+    "built": 6.5574,
+    "starts_csv": 6.557,
+    "difference": 0.0004,
+    "tolerance": 0.002,
+    "agrees": true
+   },
+   "Zn_N2_A": {
+    "built": 2.2071,
+    "starts_csv": 2.207,
+    "difference": 0.0001,
+    "tolerance": 0.002,
+    "agrees": true
+   },
+   "Zn_O1_A": {
+    "built": 4.2404,
+    "starts_csv": 4.24,
+    "difference": 0.0004,
+    "tolerance": 0.002,
+    "agrees": true
+   },
+   "Zn_O2_A": {
+    "built": 2.7751,
+    "starts_csv": 2.775,
+    "difference": 0.0001,
+    "tolerance": 0.002,
+    "agrees": true
+   },
+   "N2_Thr199OG1_A": {
+    "built": 2.5522,
+    "starts_csv": 2.552,
+    "difference": 0.0002,
+    "tolerance": 0.002,
+    "agrees": true
+   },
+   "HN21_Thr199OG1_A": {
+    "built": 1.6214,
+    "starts_csv": 1.621,
+    "difference": 0.0004,
+    "tolerance": 0.002,
+    "agrees": true
+   },
+   "N2_HN21_Thr199OG1_deg": {
+    "built": 149.1132,
+    "starts_csv": 149.15,
+    "difference": -0.0368,
+    "tolerance": 0.1,
+    "agrees": true
+   },
+   "tau_fold_deg": {
+    "built": 148.6317,
+    "starts_csv": 148.632,
+    "difference": -0.0003,
+    "tolerance": 0.1,
+    "agrees": true
+   },
+   "C4_S_N2_deg": {
+    "built": 109.4825,
+    "starts_csv": 109.483,
+    "difference": -0.0005,
+    "tolerance": 0.1,
+    "agrees": true
+   },
+   "S_N2_A": {
+    "built": 1.6775,
+    "starts_csv": 1.677,
+    "difference": 0.0005,
+    "tolerance": 0.002,
+    "agrees": true
+   },
+   "S_N2_Zn_deg": {
+    "built": 105.9075,
+    "starts_csv": 105.908,
+    "difference": -0.0005,
+    "tolerance": 0.1,
+    "agrees": true
+   }
+  }
+ },
+ "checks": {
+  "tleap_errors_0": true,
+  "tleap_no_unexpected_warning": true,
+  "protein_chain_unbroken": true,
+  "net_charge_zero": true,
+  "ion_numbers_as_computed": true,
+  "pass2_equals_pass1_except_ions": true,
+  "input_heavy_atoms_at_their_coordinates": true,
+  "selections_resolve_to_the_right_atoms": true,
+  "geometry_agrees_with_starts_csv": true,
+  "zinc_charge_and_type": null,
+  "zinc_lj_is_the_frcmod_value": null,
+  "zinc_not_bonded": null,
+  "zinc_has_the_four_bonds": true,
+  "zinc_bonds_and_angles_as_the_parameter_files": true,
+  "zinc_angles_6_N_Zn_N_6_Zn_N_C_1_Zn_N2_S_1_Zn_N2_H": true,
+  "torsions_through_zinc_all_zero": true,
+  "torsions_through_zinc_zero_or_as_the_n2_file": null,
+  "impropers_with_zinc_none_or_those_of_the_n2_file": true,
+  "n2_file_is_of_the_class_of_the_set": true,
+  "terms_at_N2_are_those_of_the_n2_file": true,
+  "zn_n2_h_is_not_the_120_deg_of_step_2e": true,
+  "site_charges_are_those_of_the_templates": true,
+  "site_charge_plus_one": true,
+  "ligand_equal_atoms_have_equal_charges": true,
+  "solute_hydrogens_where_the_restrained_build_has_them": true,
+  "differs_from_the_compared_set_only_where_the_sets_differ": null,
+  "exclusions_and_1_4_pairs_across_the_zinc_follow_amber": true,
+  "na_cl_are_joung_cheatham_tip3p": true,
+  "ligand_repaired_terms_in_force": true,
+  "ligand_terms_equal_free_anion_topology": null,
+  "ligand_charges_are_those_of_the_mol2": null,
+  "ions_keep_their_distances": true,
+  "no_crystal_water_replaced": true
+ },
+ "checks_failed": [],
+ "outputs_sha256": {
+  "system.prmtop": "98e46802e34ae08c96b5ca4cb187a061bed3c89202ffeeafaa512be43a7e4f16",
+  "system.inpcrd": "9ce16b4c588d2235467e12ebbf6591fec5faa5e1b599437ff5bc8b948f532725",
+  "selections.json": "1e632c48b184f9e85a09e7c732314e03d3f64f93142fb48e79401fe5edf89f2c",
+  "extra_forces.json": "7c2c3c897ed03fb1a5a494f6a97cb9c7000e279a8c3aa1819b8508844b520483",
+  "reference.pdb": "c54ead175e0f3f9aa237414c38ed618380aa3c730e55a211c89cde939233e069"
+ }
+}

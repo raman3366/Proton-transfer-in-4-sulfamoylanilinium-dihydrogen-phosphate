@@ -1,0 +1,257 @@
+{
+  "species": {
+    "sfa_neutral": {
+      "smiles": "Nc1ccc(cc1)S(N)(=O)=O",
+      "charge": 0,
+      "role": "neutral sulfanilamide: the species present at pH 7.4 (primary ligand)",
+      "ccd_check": {
+        "ccd": "SAN",
+        "ccd_smiles": "Nc1ccc(S(N)(=O)=O)cc1",
+        "species_neutral_parent": "Nc1ccc(S(N)(=O)=O)cc1",
+        "match": true
+      },
+      "formula": "C6H8N2O2S",
+      "mw": 172.21,
+      "heavy_atoms": 11,
+      "rotatable_bonds": 1,
+      "geometry": {
+        "source": "DFT",
+        "file": "/root/workspace/cqc-4-sulfamoylanilinium-dihydrogen-phosphate/molecules/sfa/results/sulfanilamide_pcm_d3/opt.xyz"
+      },
+      "active_torsions": 3
+    },
+    "sfa_anion": {
+      "smiles": "Nc1ccc(cc1)S(=O)(=O)[NH-]",
+      "charge": -1,
+      "role": "sulfonamidate anion: the zinc-binding species, and the form used for DHPS/Sul2",
+      "ccd_check": {
+        "ccd": "SAN",
+        "ccd_smiles": "Nc1ccc(S(N)(=O)=O)cc1",
+        "species_neutral_parent": "Nc1ccc(S(N)(=O)=O)cc1",
+        "match": true
+      },
+      "formula": "C6H7N2O2S-",
+      "mw": 171.2,
+      "heavy_atoms": 11,
+      "rotatable_bonds": 1,
+      "geometry": {
+        "source": "DFT",
+        "file": "/root/workspace/cqc-4-sulfamoylanilinium-dihydrogen-phosphate/molecules/sfa/results/sulfonamidate_pcm_d3/opt.xyz"
+      },
+      "active_torsions": 3
+    },
+    "sfa_cation": {
+      "smiles": "[NH3+]c1ccc(cc1)S(N)(=O)=O",
+      "charge": 1,
+      "role": "4-sulfamoylanilinium: the cation of the crystal, sensitivity case only",
+      "ccd_check": {
+        "ccd": "SAN",
+        "ccd_smiles": "Nc1ccc(S(N)(=O)=O)cc1",
+        "species_neutral_parent": "Nc1ccc(S(N)(=O)=O)cc1",
+        "match": true
+      },
+      "formula": "C6H9N2O2S+",
+      "mw": 173.22,
+      "heavy_atoms": 11,
+      "rotatable_bonds": 1,
+      "geometry": {
+        "source": "DFT",
+        "file": "/root/workspace/cqc-4-sulfamoylanilinium-dihydrogen-phosphate/molecules/sfa/results/cation_pcm_d3/opt.xyz"
+      },
+      "active_torsions": 3
+    },
+    "smx_neutral": {
+      "smiles": "Cc1cc(NS(=O)(=O)c2ccc(N)cc2)no1",
+      "charge": 0,
+      "role": "sulfamethoxazole, neutral (pKa 5.7, minor at pH 7.4)",
+      "ccd_check": {
+        "ccd": "08D",
+        "ccd_smiles": "Cc1cc(NS(=O)(=O)c2ccc(N)cc2)no1",
+        "species_neutral_parent": "Cc1cc(NS(=O)(=O)c2ccc(N)cc2)no1",
+        "match": true
+      },
+      "formula": "C10H11N3O3S",
+      "mw": 253.28,
+      "heavy_atoms": 17,
+      "rotatable_bonds": 3,
+      "geometry": {
+        "source": "ETKDGv3+MMFF94s",
+        "seed": 1
+      },
+      "active_torsions": 4
+    },
+    "smx_anion": {
+      "smiles": "Cc1cc([N-]S(=O)(=O)c2ccc(N)cc2)no1",
+      "charge": -1,
+      "role": "sulfamethoxazole anion: the dominant species at pH 7.4",
+      "ccd_check": {
+        "ccd": "08D",
+        "ccd_smiles": "Cc1cc(NS(=O)(=O)c2ccc(N)cc2)no1",
+        "species_neutral_parent": "Cc1cc(NS(=O)(=O)c2ccc(N)cc2)no1",
+        "match": true
+      },
+      "formula": "C10H10N3O3S-",
+      "mw": 252.28,
+      "heavy_atoms": 17,
+      "rotatable_bonds": 3,
+      "geometry": {
+        "source": "ETKDGv3+MMFF94s",
+        "seed": 1
+      },
+      "active_torsions": 4
+    },
+    "paba_anion": {
+      "smiles": "Nc1ccc(cc1)C(=O)[O-]",
+      "charge": -1,
+      "role": "p-aminobenzoate: the DHPS substrate, carboxylate at pH 7.4 (pKa 4.85)",
+      "ccd_check": {
+        "ccd": "PAB",
+        "ccd_smiles": "Nc1ccc(C(=O)O)cc1",
+        "species_neutral_parent": "Nc1ccc(C(=O)O)cc1",
+        "match": true
+      },
+      "formula": "C7H6NO2-",
+      "mw": 136.13,
+      "heavy_atoms": 10,
+      "rotatable_bonds": 1,
+      "geometry": {
+        "source": "ETKDGv3+MMFF94s",
+        "seed": 1
+      },
+      "active_torsions": 2
+    },
+    "azm_neutral": {
+      "smiles": "CC(=O)Nc1nnc(s1)S(N)(=O)=O",
+      "charge": 0,
+      "role": "acetazolamide, neutral (pKa 7.2, roughly half at pH 7.4)",
+      "ccd_check": {
+        "ccd": "AZM",
+        "ccd_smiles": "CC(=O)Nc1nnc(S(N)(=O)=O)s1",
+        "species_neutral_parent": "CC(=O)Nc1nnc(S(N)(=O)=O)s1",
+        "match": true
+      },
+      "formula": "C4H6N4O3S2",
+      "mw": 222.25,
+      "heavy_atoms": 13,
+      "rotatable_bonds": 2,
+      "geometry": {
+        "source": "ETKDGv3+MMFF94s",
+        "seed": 1
+      },
+      "active_torsions": 3
+    },
+    "azm_anion": {
+      "smiles": "CC(=O)Nc1nnc(s1)S(=O)(=O)[NH-]",
+      "charge": -1,
+      "role": "acetazolamide sulfonamidate: the zinc-binding species",
+      "ccd_check": {
+        "ccd": "AZM",
+        "ccd_smiles": "CC(=O)Nc1nnc(S(N)(=O)=O)s1",
+        "species_neutral_parent": "CC(=O)Nc1nnc(S(N)(=O)=O)s1",
+        "match": true
+      },
+      "formula": "C4H5N4O3S2-",
+      "mw": 221.24,
+      "heavy_atoms": 13,
+      "rotatable_bonds": 2,
+      "geometry": {
+        "source": "ETKDGv3+MMFF94s",
+        "seed": 1
+      },
+      "active_torsions": 3
+    },
+    "dhp_anion": {
+      "smiles": "Nc1nc2c(c(=O)[nH]1)N=C(CNc1ccc(C(=O)[O-])cc1)CN2",
+      "charge": -1,
+      "role": "7,8-dihydropteroate, carboxylate deprotonated: the Sul2 co-crystal product",
+      "ccd_check": {
+        "ccd": "78H",
+        "ccd_smiles": "Nc1nc2c(c(=O)[nH]1)N=C(CNc1ccc(C(=O)O)cc1)CN2",
+        "species_neutral_parent": "Nc1nc2c(c(=O)[nH]1)N=C(CNc1ccc(C(=O)O)cc1)CN2",
+        "match": true
+      },
+      "formula": "C14H13N6O3-",
+      "mw": 313.3,
+      "heavy_atoms": 23,
+      "rotatable_bonds": 4,
+      "geometry": {
+        "source": "ETKDGv3+MMFF94s",
+        "seed": 1
+      },
+      "active_torsions": 4
+    },
+    "rli_anion": {
+      "smiles": "CCC(=O)Nc1nc(C)c(-c2csc(Nc3ccc(C(=O)[O-])cc3)n2)s1",
+      "charge": -1,
+      "role": "the 4,5'-bithiazole inhibitor of 4DUH, benzoate deprotonated: the co-crystal ligand of the control receptor (redocking reference)",
+      "ccd_check": {
+        "ccd": "RLI",
+        "ccd_smiles": "CCC(=O)Nc1nc(C)c(-c2csc(Nc3ccc(C(=O)O)cc3)n2)s1",
+        "species_neutral_parent": "CCC(=O)Nc1nc(C)c(-c2csc(Nc3ccc(C(=O)O)cc3)n2)s1",
+        "match": true
+      },
+      "formula": "C17H15N4O3S2-",
+      "mw": 387.47,
+      "heavy_atoms": 26,
+      "rotatable_bonds": 6,
+      "geometry": {
+        "source": "ETKDGv3+MMFF94s",
+        "seed": 1
+      },
+      "active_torsions": 6
+    },
+    "cfx_zwit": {
+      "smiles": "O=C([O-])c1cn(C2CC2)c2cc(N3CC[NH2+]CC3)c(F)cc2c1=O",
+      "charge": 0,
+      "role": "ciprofloxacin, zwitterion (carboxylate, protonated piperazine): a fluoroquinolone, which acts at the GyrA-DNA cleavage complex and not at the GyrB ATP site; comparator of the control receptor",
+      "ccd_check": {
+        "ccd": "CPF",
+        "ccd_smiles": "O=C(O)c1cn(C2CC2)c2cc(N3CCNCC3)c(F)cc2c1=O",
+        "species_neutral_parent": "O=C(O)c1cn(C2CC2)c2cc(N3CCNCC3)c(F)cc2c1=O",
+        "match": true
+      },
+      "formula": "C17H18FN3O3",
+      "mw": 331.35,
+      "heavy_atoms": 24,
+      "rotatable_bonds": 3,
+      "geometry": {
+        "source": "ETKDGv3+MMFF94s",
+        "seed": 1
+      },
+      "active_torsions": 3
+    }
+  },
+  "redock": {
+    "T1_3TZF": [
+      "smx_anion",
+      "smx_neutral"
+    ],
+    "T2_1AJ0": [
+      "sfa_neutral"
+    ],
+    "T3_6RL9": [
+      "sfa_neutral",
+      "sfa_anion"
+    ],
+    "T4_3HS4": [
+      "azm_neutral",
+      "azm_anion"
+    ],
+    "T5_7S2K": [
+      "dhp_anion"
+    ],
+    "C1_4DUH": [
+      "rli_anion"
+    ]
+  },
+  "crossdock": {
+    "T3_6RL9": [
+      "azm_neutral",
+      "azm_anion"
+    ],
+    "T4_3HS4": [
+      "sfa_neutral",
+      "sfa_anion"
+    ]
+  }
+}

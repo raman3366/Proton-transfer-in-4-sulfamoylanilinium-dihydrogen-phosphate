@@ -1,0 +1,211 @@
+{
+  "wavefunction_sha256": "a8757b0651ade26c29ec6a03e668641f8a99b2a902fb132789e9e8f61bbec824",
+  "runs": {
+    "qtaim": {
+      "menu_sequence": [
+        "2",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "10",
+        "1.5",
+        "11",
+        "200",
+        "-1",
+        "-9",
+        "8",
+        "0",
+        "7",
+        "0",
+        "-4",
+        "4",
+        "0",
+        "-5",
+        "4",
+        "0",
+        "-10",
+        "q"
+      ],
+      "exit": 0,
+      "wall_s": 1.9,
+      "threads": 4,
+      "esp_code": null
+    },
+    "charges": {
+      "menu_sequence": [
+        "7",
+        "1",
+        "1",
+        "y",
+        "11",
+        "1",
+        "y",
+        "16",
+        "1",
+        "y",
+        "0",
+        "q"
+      ],
+      "exit": 0,
+      "wall_s": 5.4,
+      "threads": 4,
+      "esp_code": null
+    },
+    "mep_fragments": {
+      "menu_sequence": [
+        "12",
+        "0",
+        "11",
+        "n",
+        "12",
+        "1-20",
+        "n",
+        "-1",
+        "-1",
+        "q"
+      ],
+      "exit": 0,
+      "wall_s": 12.6,
+      "threads": 4,
+      "esp_code": null
+    },
+    "dos": {
+      "menu_sequence": [
+        "10",
+        "8",
+        "7",
+        "3",
+        "-1",
+        "1",
+        "1-20",
+        "0",
+        "2",
+        "-30.0,5.0,5",
+        "3",
+        "0.3",
+        "0",
+        "3",
+        "0",
+        "-10",
+        "q"
+      ],
+      "exit": 0,
+      "wall_s": 1.1,
+      "threads": 4,
+      "esp_code": null
+    }
+  },
+  "case": "cation_pcm_d3",
+  "wavefunction": "molecules/sfa/results/cation_pcm_d3/final.molden",
+  "fragments": [
+    {
+      "name": "cation_pcm_d3",
+      "charge": 1,
+      "h_gained": [],
+      "h_lost": [],
+      "atoms": "1-20"
+    }
+  ],
+  "multiwfn_version": "2026.9.20",
+  "qtaim": {
+    "n_cp": 41,
+    "counts": {
+      "(3,-3)": 20,
+      "(3,-1)": 20,
+      "(3,+1)": 1,
+      "(3,+3)": 0
+    },
+    "cp_searches_logged": {
+      "n": 5,
+      "new_cps_each": [
+        20,
+        21,
+        0,
+        0,
+        0
+      ],
+      "expected_n": 5,
+      "note": "nuclei, midpoints, triangles, pyramids, spheres"
+    },
+    "poincare_hopf": {
+      "n-b+r-c": 1,
+      "satisfied": true
+    },
+    "n_noncovalent_bcp": 0,
+    "case_hbonds_without_bcp": [],
+    "n_bcp_without_bond_path": 0
+  },
+  "status": {
+    "qtaim": {
+      "ok": true,
+      "wall_s": 1.9
+    },
+    "charges": {
+      "ok": true,
+      "wall_s": 5.4
+    },
+    "npa": {
+      "ok": true,
+      "wall_s": 0.2
+    },
+    "mep": {
+      "ok": true,
+      "wall_s": 24.8
+    },
+    "dos": {
+      "ok": true,
+      "wall_s": 1.1
+    }
+  },
+  "charges": {
+    "schemes": [
+      "NPA",
+      "Hirshfeld",
+      "ADCH",
+      "CM5"
+    ],
+    "fragment_sums": {
+      "cation_pcm_d3": {
+        "NPA": 1.0000000000001144,
+        "Hirshfeld": 0.9999999999999999,
+        "ADCH": 1.0000000100000004,
+        "CM5": 1.0000000199999999,
+        "formal_charge": 1
+      }
+    }
+  },
+  "mep": {
+    "n_extrema": 10,
+    "fragments": [
+      {
+        "fragment": "cation_pcm_d3",
+        "min_kcal": -6.978331,
+        "max_kcal": 184.651515
+      }
+    ]
+  },
+  "dos": {
+    "HOMO-1": {
+      "mo": 44,
+      "E_eV": -8.061854860448717,
+      "cation_pcm_d3": 100.0
+    },
+    "HOMO": {
+      "mo": 45,
+      "E_eV": -8.01605392317007,
+      "cation_pcm_d3": 100.0
+    },
+    "LUMO": {
+      "mo": 46,
+      "E_eV": -1.872733075757019,
+      "cation_pcm_d3": 100.0
+    },
+    "LUMO+1": {
+      "mo": 47,
+      "E_eV": -1.4164173050920295,
+      "cation_pcm_d3": 100.0
+    }
+  }
+}

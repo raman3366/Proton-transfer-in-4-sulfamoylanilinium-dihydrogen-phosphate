@@ -1,0 +1,46 @@
+# cqc-md-queue.service: starts the task runner md/gpu/queue.py at boot, so that after a spot pre-emption and the
+# restart of the machine the work goes on without anyone logging in (md/gpu/GPU_RUN.md, section 4).
+#
+# Install (ops/vm/setup_gpu.sh copies the file; enabling and starting are steps of GPU_RUN.md):
+#   sudo install -m 644 /root/workspace/cqc-4-sulfamoylanilinium-dihydrogen-phosphate/md/gpu/cqc-md-queue.service /etc/systemd/system/
+#   sudo systemctl daemon-reload
+#   sudo systemctl enable --now cqc-md-queue.service
+# Look:  systemctl status cqc-md-queue ; journalctl -u cqc-md-queue -n 50 ; sudo cat /root/cqc-sfa-md/status/queue.log
+# Stop:  sudo touch /root/cqc-sfa-md/queue/STOP      (the runner ends its tasks cleanly and exits with 0; with the file
+#        in place it starts nothing, also not after a reboot). `systemctl stop` does the same without the file.
+#
+# The runner exits with 0 when it is asked to stop: then systemd leaves it stopped. Any other end (a crash, a kill)
+# is a failure and it is started again after 20 s; its tasks, which systemd ends with it, are then run again.
+
+[Unit]
+Description=cqc-md task runner (MD and QM tasks of the hCA II campaign, md/gpu/queue.py)
+Documentation=file:///root/workspace/cqc-4-sulfamoylanilinium-dihydrogen-phosphate/md/gpu/GPU_RUN.md
+After=local-fs.target network.target
+ConditionPathExists=/root/workspace/cqc-4-sulfamoylanilinium-dihydrogen-phosphate/md/gpu/queue.py
+# at most 10 starts in 10 minutes; after that the unit stays failed and the heartbeat goes stale
+StartLimitIntervalSec=600
+StartLimitBurst=10
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=-/root/cqc-sfa-md
+Environment=HOME=/root
+Environment=PYTHONUNBUFFERED=1
+# loads the NVIDIA kernel module and makes the device files before the first task; a failure does not stop the start
+ExecStartPre=-/usr/bin/nvidia-smi
+ExecStart=/usr/bin/python3 /root/workspace/cqc-4-sulfamoylanilinium-dihydrogen-phosphate/md/gpu/queue.py run --root /root/cqc-sfa-md
+# SIGTERM goes to the runner only; it passes it on to its tasks and waits for them (run_md.py ends within 500
+# steps). What is left after TimeoutStopSec gets SIGKILL.
+KillMode=mixed
+KillSignal=SIGTERM
+TimeoutStopSec=300
+Restart=on-failure
+RestartSec=20
+# 2: wrong command line, 3: another runner holds the lock. Starting again would not help.
+RestartPreventExitStatus=2 3
+# a task killed for lack of memory is that task's failure; the other tasks and the runner go on
+OOMPolicy=continue
+
+[Install]
+WantedBy=multi-user.target

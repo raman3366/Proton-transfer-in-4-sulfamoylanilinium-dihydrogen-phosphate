@@ -1,0 +1,85 @@
+{
+  "provenance": {
+    "script": "dscf.py",
+    "argv": [
+      "sfa_pair_pcm_d3"
+    ],
+    "case": "sfa_pair_pcm_d3",
+    "case_file": "molecules/sfa/cases/sfa_pair_pcm_d3.json",
+    "charge": 0,
+    "spin": 0,
+    "basis": "6-311++G(d,p)",
+    "grid_level": 4,
+    "environment": "IEF-PCM (water, eps = 78.3553, Lebedev order 29)",
+    "case_xc": "b3lyp",
+    "case_disp": "d3bj",
+    "density_fitting": true,
+    "pyscf_version": "2.14.0",
+    "threads": 8,
+    "host": "cqc-dft-01",
+    "finished": "2026-09-28T13:24:44",
+    "geometry": "molecules/sfa/results/sfa_pair_pcm_d3/opt.xyz",
+    "geometry_sha256": "a21dd40f42c1ec9fc8ddab752a9067f7c6c816d8d881afab0c3d53a8cbb6e870",
+    "proton": {
+      "d_H_N_A": 1.0974250194056019,
+      "d_H_O_A": 1.4840939777321678,
+      "on": "N (ionic pair)"
+    },
+    "wall_min": 265.25
+  },
+  "method": "vertical Delta-SCF: RKS N / UKS doublets N-1, N+1 at the N-electron geometry, same functional, basis, grid and environment; PCM at equilibrium for every charge state",
+  "E_N_Ha": -1536.1106466489646,
+  "dispersion_Ha": -0.05712564096512803,
+  "HOMO_eV": -7.642272647247893,
+  "LUMO_eV": -1.665813453139905,
+  "gap_KS_eV": 5.976459194107988,
+  "N_minus_1": {
+    "charge": 1,
+    "multiplicity": 2,
+    "E_Ha": -1535.8354588942898,
+    "S2": 0.7567093400739964,
+    "S2_ideal": 0.75,
+    "stability_checked": true,
+    "instabilities_followed": 0,
+    "converged": true,
+    "wall_s": 13738.5
+  },
+  "N_plus_1": {
+    "charge": -1,
+    "multiplicity": 2,
+    "E_Ha": -1536.1788970393109,
+    "S2": 0.7574307489680052,
+    "S2_ideal": 0.75,
+    "stability_checked": true,
+    "instabilities_followed": 0,
+    "converged": true,
+    "wall_s": 1990.7
+  },
+  "delta_scf": {
+    "I_eV": 7.488240282621878,
+    "A_eV": 1.8571877331524291,
+    "electronegativity_chi_eV": 4.672714007887153,
+    "chemical_potential_mu_eV": -4.672714007887153,
+    "hardness_eta_eV": 2.8155262747347245,
+    "softness_S_eV-1": 0.177586692934382,
+    "electrophilicity_omega_eV": 3.8774733511520894,
+    "DeltaN_max": 1.6596236553776826
+  },
+  "koopmans": {
+    "I_eV": 7.642272647247893,
+    "A_eV": 1.665813453139905,
+    "electronegativity_chi_eV": 4.6540430501938985,
+    "chemical_potential_mu_eV": -4.6540430501938985,
+    "hardness_eta_eV": 2.988229597053994,
+    "softness_S_eV-1": 0.1673231536468734,
+    "electrophilicity_omega_eV": 3.6242390367882353,
+    "DeltaN_max": 1.557458320733514
+  },
+  "koopmans_label": "Koopmans-type estimate from the N-electron Kohn-Sham orbitals: I = -e(HOMO), A = -e(LUMO)",
+  "fundamental_gap_I_minus_A_eV": 5.631052549469449,
+  "flags": {
+    "electron_unbound_in_gas_phase": false,
+    "spin_contamination_over_0.05": []
+  },
+  "formulas": "chi=(I+A)/2, mu=-chi, eta=(I-A)/2, S=1/(2 eta), omega=mu^2/(2 eta), DeltaN_max=-mu/eta"
+}

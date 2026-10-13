@@ -1,0 +1,12 @@
+| Model | *δ* (Å) | *d*(N1···O5) (Å) | ∠N1–H1A···O5 (°) | *d*(C6···O4) (Å) | ∠C6–H6···O4 (°) | Heavy-bond MAE (Å) | Heavy-bond RMSD (Å) | Angle MAE (°) | C3–C4–S1–N2 (°) |
+|:--------------------------|--------------:|------------------:|-------------------------:|------------------:|---------------------:|--------------:|--------------:|-------------:|-------------------------:|
+| X-ray | −1.02 | 2.760 | 173.7 | 3.288 | 155.7 | – | – | – | 102.7 |
+| Gas phase, B3LYP-D3(BJ)/6-311++G(d,p) | +0.760 | 2.731 | 164.1 | 3.412 | 137.4 | 0.030 | 0.039 | 1.6 | 91.3 |
+| IEF-PCM, B3LYP-D3(BJ)/6-311++G(d,p) | −0.387 | 2.581 | 177.3 | 3.383 | 143.7 | 0.024 | 0.034 | 1.0 | 90.9 |
+| IEF-PCM, B3LYP/6-311++G(d,p) (no D3) | −0.386 | 2.584 | 176.0 | 4.798 | 116.5 | 0.025 | 0.035 | 0.9 | 86.6 |
+| IEF-PCM, B3LYP-D3(BJ)/def2-TZVP | −0.292 | 2.545 | 176.7 | 3.477 | 128.2 | 0.015 | 0.022 | 0.8 | 87.9 |
+| Periodic model, PBE-D3(BJ) | −0.610 | 2.734 | 176.8 | 3.289 | 155.8 | 0.017 | 0.019 | 0.3 | 103.5 |
+
+Table: The two contacts that close the R²₂(8) ring of the ion pair, and the agreement of every model with the X-ray geometry. {#tbl:s-sensitivity}
+
+The models differ in environment (gas phase, IEF-PCM, crystal), dispersion (with and without D3) and basis set (6-311++G(d,p), def2-TZVP). In the gas phase H1A sits on O5, so the first contact is O5–H1A···N1 there. Without D3 the C6–H6···O4 contact opens and the ring breaks while the proton position is unchanged. Only the periodic model keeps the crystal torsion; every isolated ion pair relaxes it to about 90°.

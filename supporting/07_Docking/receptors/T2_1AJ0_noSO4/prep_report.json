@@ -1,0 +1,156 @@
+{
+  "target": "T2_1AJ0",
+  "pdb": "1AJ0",
+  "chain": "A",
+  "ph": 7.4,
+  "rebuild_loops": true,
+  "dropped_het": [
+    "SO4"
+  ],
+  "keep_requested": [
+    "PH2",
+    "SO4"
+  ],
+  "n_protein_residues": 282,
+  "cofactors_kept": [
+    "A/PH2559"
+  ],
+  "metals_kept": [],
+  "waters_kept": [],
+  "altloc_chosen": {},
+  "n_residues_with_altlocs": 0,
+  "water_rule": "kept only waters within 2.6 A of a kept metal; written as a bare OA oxygen (no hydrogens placed)",
+  "deposited_sequence_length": 282,
+  "unobserved_residues_auth_numbering": [],
+  "pdbfixer_seed": 20260928,
+  "missing_residues_terminal_skipped": {},
+  "missing_residues_rebuilt": {},
+  "nonstandard_residues": [],
+  "missing_atoms": {},
+  "propka": {
+    "ok": true,
+    "n_residues": 79,
+    "file": "propka.pka"
+  },
+  "protonation_variants": [
+    {
+      "residue": "A:HIS14",
+      "variant": "HIE",
+      "reason": "PROPKA pKa 6.48; neutral, HIE"
+    },
+    {
+      "residue": "A:HIS16",
+      "variant": "HIE",
+      "reason": "PROPKA pKa 4.2; neutral, HIE"
+    },
+    {
+      "residue": "A:HIS34",
+      "variant": "HIE",
+      "reason": "PROPKA pKa 6.56; neutral, HIE"
+    },
+    {
+      "residue": "A:HIS43",
+      "variant": "HIE",
+      "reason": "PROPKA pKa 5.65; neutral, HIE"
+    },
+    {
+      "residue": "A:ASP96",
+      "variant": "ASH",
+      "reason": "PROPKA pKa 9.74 > 7.4: protonated"
+    },
+    {
+      "residue": "A:HIS112",
+      "variant": "HIE",
+      "reason": "PROPKA pKa 4.57; neutral, HIE"
+    },
+    {
+      "residue": "A:HIS140",
+      "variant": "HIE",
+      "reason": "PROPKA pKa 2.69; neutral, HIE"
+    },
+    {
+      "residue": "A:LYS192",
+      "variant": "LYN",
+      "reason": "PROPKA pKa 6.42 < 7.4: neutral"
+    },
+    {
+      "residue": "A:HIS196",
+      "variant": "HIE",
+      "reason": "PROPKA pKa 5.51; neutral, HIE"
+    },
+    {
+      "residue": "A:HIS208",
+      "variant": "HIE",
+      "reason": "PROPKA pKa 5.28; neutral, HIE"
+    },
+    {
+      "residue": "A:HIS209",
+      "variant": "HIE",
+      "reason": "PROPKA pKa 5.76; neutral, HIE"
+    },
+    {
+      "residue": "A:HIS252",
+      "variant": "HIE",
+      "reason": "PROPKA pKa 3.79; neutral, HIE"
+    },
+    {
+      "residue": "A:HIS257",
+      "variant": "HIE",
+      "reason": "PROPKA pKa 3.89; neutral, HIE"
+    }
+  ],
+  "protonation_flagged": [],
+  "n_hydrogens_added": 16,
+  "minimisation": {
+    "energy_before_kJ_mol": -13876.6,
+    "energy_after_kJ_mol": -17075.8,
+    "n_restrained": 2147,
+    "n_free": 2159,
+    "max_displacement_restrained_A": 0.135,
+    "rms_displacement_restrained_A": 0.023,
+    "max_displacement_free_A": 1.653,
+    "restraint_k_kJ_mol_nm2": 100000.0
+  },
+  "reference_ligand": {
+    "name": "SAN",
+    "chain": "A",
+    "seqid": 561,
+    "heavy_atoms": 11,
+    "smiles": "Nc1ccc(S(N)(=O)=O)cc1",
+    "centre": [
+      41.366,
+      8.449,
+      2.148
+    ]
+  },
+  "mk_prepare_receptor": {
+    "returncode": 0,
+    "stdout": "Template padding will be used.\n\u001b[32m gasteiger charges will be read from template file \n \u001b[0m\n\nFiles written:\n   /root/workspace/cqc-4-sulfamoylanilinium-dihydrogen-phosphate/dock/T2_1AJ0_noSO4/protein.json <-- parameterized receptor\n  /root/workspace/cqc-4-sulfamoylanilinium-dihydrogen-phosphate/dock/T2_1AJ0_noSO4/protein.pdbqt <-- static (i.e., rigid) receptor input file\n/root/workspace/cqc-4-sulfamoylanilinium-dihydrogen-phosphate/dock/T2_1AJ0_noSO4/protein_box.txt <-- Vina-style box dimension file\n/root/workspace/cqc-4-sulfamoylanilinium-dihydrogen-phosphate/dock/T2_1AJ0_noSO4/protein.box.pdb <-- PDB file to visualize the grid box\n",
+    "stderr": "",
+    "cmd": "mk_prepare_receptor.py --read_pdb /root/workspace/cqc-4-sulfamoylanilinium-dihydrogen-phosphate/dock/T2_1AJ0_noSO4/fixed_protein.pdb -o /root/workspace/cqc-4-sulfamoylanilinium-dihydrogen-phosphate/dock/T2_1AJ0_noSO4/protein -p -j --box_size 20.0 20.0 20.0 --box_center 41.366 8.449 2.148 --default_altloc A -v /root/workspace/cqc-4-sulfamoylanilinium-dihydrogen-phosphate/dock/T2_1AJ0_noSO4/protein_box.txt"
+  },
+  "n_receptor_atoms": {
+    "protein": 2614,
+    "cofactor_block": 19,
+    "total": 2633
+  },
+  "checks": {
+    "atom_types": [
+      "A",
+      "C",
+      "HD",
+      "N",
+      "NA",
+      "OA",
+      "SA"
+    ],
+    "all_types_known": true,
+    "receptor_atoms_in_box": 309,
+    "heavy_pairs_below_1.1A": 0,
+    "min_heavy_heavy_distance_A": null,
+    "geometry_ok": true,
+    "ref_ligand_margin_A": 7.07,
+    "receptor_pdbqt_sha256": "f1eec8bd72e9499643e2689cf95c3a3a9a946c6ebd4bdff8b32c82c937f6aa57",
+    "receptor_pdb_sha256": "f788a50985c04a781275adf32d0c0760e9365726763c683d33ee07d4f2c50048"
+  }
+}

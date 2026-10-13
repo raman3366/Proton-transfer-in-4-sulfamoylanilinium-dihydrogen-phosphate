@@ -1,0 +1,39 @@
+{
+ "comment": "REHEARSAL of 6 Oct 2026, NOT a result for the paper and NOT part of the campaign (md/test/REHEARSAL_2e.md). Three runs of the bonded parameter set 2e (MCPB.py step 2e, empirical zinc constants; terms at N2 as built BEFORE gate G-R, not validated), each with the full protocol of md/protocol.json unchanged (2 ns of equilibration) and 5 ns of production: TX0 from start X, TR0 from start R (the run in which the hydration check of the driver applies), TN0 from start N. They are written to /root/cqc-sfa-md/runs_test/bonded_2e/, never to runs/, which is for the campaign; every run folder gets a file REHEARSAL_NOT_A_RESULT.txt. One after another: each waits for the one before it, so a fault found in TX0 stops the other two. The run ids TX0, TR0, TN0 are not names of the plan (X0 is the validation run, X1..R3 the campaign): the analysis then gives no verdict of gate G-V and no campaign table. The manifests say test_only false because the protocol and the equilibration are those of production; the folder and the marker file say what the runs are. Watchdog on the Pi (ops/pi/cqc_gpu_watchdog.py, read 6 Oct 2026): it does not pull runs_test/, so its estimate lists these three as runs whose pull is pending; they are fetched by hand (md/test/REHEARSAL_2e.md).",
+ "env": {
+  "MD": "/root/workspace/cqc-4-sulfamoylanilinium-dihydrogen-phosphate/md",
+  "PY": "/root/cqc-sfa-tools/md/bin/python",
+  "SYS": "/root/cqc-sfa-md/systems",
+  "RUNS": "/root/cqc-sfa-md/runs_test",
+  "MODEL": "bonded_2e"
+ },
+ "tasks": [
+  {"id": "reh2e_TX0",
+   "title": "REHEARSAL (not a result): run TX0, set 2e, start X, 2 ns of equilibration and 5 ns",
+   "cwd": "$RUNS",
+   "resources": "gpu",
+   "depends_on": ["preflight_speed", "preflight_interrupt"],
+   "stop_grace_s": 120,
+   "timeout_s": 3600,
+   "command": "mkdir -p \"$RUNS/$MODEL/TX0\" && echo \"REHEARSAL of 6 Oct 2026, not a result for the paper: parameter set 2e, terms at N2 not validated by gate G-R, one run of 5 ns. See md/test/REHEARSAL_2e.md.\" > \"$RUNS/$MODEL/TX0/REHEARSAL_NOT_A_RESULT.txt\" && \"$PY\" \"$MD/run_md.py\" --system \"$SYS/$MODEL/X\" --out \"$RUNS/$MODEL/TX0\" --run-id TX0 --platform CUDA --stage all --prod-ns 5 --segment-ns 5 --resume",
+   "success_test": "python3 \"$MD/gpu/queue.py\" json \"$RUNS/$MODEL/TX0/manifest.json\" run_id=TX0 status=complete production.complete=true production.completed_ns=5 test_only=false"},
+  {"id": "reh2e_TR0",
+   "title": "REHEARSAL (not a result): run TR0, set 2e, start R (hydration check applies), 2 ns of equilibration or more and 5 ns",
+   "cwd": "$RUNS",
+   "resources": "gpu",
+   "depends_on": ["reh2e_TX0"],
+   "stop_grace_s": 120,
+   "timeout_s": 3600,
+   "command": "mkdir -p \"$RUNS/$MODEL/TR0\" && echo \"REHEARSAL of 6 Oct 2026, not a result for the paper: parameter set 2e, terms at N2 not validated by gate G-R, one run of 5 ns. See md/test/REHEARSAL_2e.md.\" > \"$RUNS/$MODEL/TR0/REHEARSAL_NOT_A_RESULT.txt\" && \"$PY\" \"$MD/run_md.py\" --system \"$SYS/$MODEL/R\" --out \"$RUNS/$MODEL/TR0\" --run-id TR0 --platform CUDA --stage all --prod-ns 5 --segment-ns 5 --resume",
+   "success_test": "python3 \"$MD/gpu/queue.py\" json \"$RUNS/$MODEL/TR0/manifest.json\" run_id=TR0 status=complete production.complete=true production.completed_ns=5 test_only=false"},
+  {"id": "reh2e_TN0",
+   "title": "REHEARSAL (not a result): run TN0, set 2e, start N, 2 ns of equilibration and 5 ns",
+   "cwd": "$RUNS",
+   "resources": "gpu",
+   "depends_on": ["reh2e_TR0"],
+   "stop_grace_s": 120,
+   "timeout_s": 3600,
+   "command": "mkdir -p \"$RUNS/$MODEL/TN0\" && echo \"REHEARSAL of 6 Oct 2026, not a result for the paper: parameter set 2e, terms at N2 not validated by gate G-R, one run of 5 ns. See md/test/REHEARSAL_2e.md.\" > \"$RUNS/$MODEL/TN0/REHEARSAL_NOT_A_RESULT.txt\" && \"$PY\" \"$MD/run_md.py\" --system \"$SYS/$MODEL/N\" --out \"$RUNS/$MODEL/TN0\" --run-id TN0 --platform CUDA --stage all --prod-ns 5 --segment-ns 5 --resume",
+   "success_test": "python3 \"$MD/gpu/queue.py\" json \"$RUNS/$MODEL/TN0/manifest.json\" run_id=TN0 status=complete production.complete=true production.completed_ns=5 test_only=false"}
+ ]
+}

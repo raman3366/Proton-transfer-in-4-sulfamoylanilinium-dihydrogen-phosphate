@@ -1,0 +1,16 @@
+- 2026-09-28 23:20  start: case sulfanilamide_pcm_d3, geometry molecules/sfa/results/sulfanilamide_pcm_d3/opt.xyz, threads 2, basis 6-311++G(d,p), grid 4, IEF-PCM (water, eps = 78.3553, Lebedev order 29)
+- 2026-09-28 23:24  N (90 e): E = -891.7769114633 Ha, 246 s
+- 2026-09-28 23:33  N-1 (89 e, charge +1): E = -891.5570684436 Ha, <S^2> = 0.7745, 514 s
+- 2026-09-28 23:44  N+1 (91 e, charge -1): E = -891.8220035944 Ha, <S^2> = 0.7620, 658 s
+- 2026-09-28 23:44  NPA done in 0 s; sums N +0.0000, N-1 +1.0000, N+1 -1.0000
+- 2026-09-28 23:44  free atom C: E = -37.74985894 Ha, 4pi int r^2 rho = 6.00001 (Z = 6), anisotropy 1.5e-15
+- 2026-09-28 23:44  free atom H: E = -0.44793110 Ha, 4pi int r^2 rho = 1.00000 (Z = 1), anisotropy 1.2e-15
+- 2026-09-28 23:44  free atom N: E = -54.40915980 Ha, 4pi int r^2 rho = 7.00002 (Z = 7), anisotropy 1.7e-15
+- 2026-09-28 23:44  free atom O: E = -74.93707426 Ha, 4pi int r^2 rho = 8.00002 (Z = 8), anisotropy 1.9e-15
+- 2026-09-28 23:44  free atom S: E = -398.04911243 Ha, 4pi int r^2 rho = 16.00004 (Z = 16), anisotropy 1.3e-15
+- 2026-09-28 23:44  Hirshfeld done in 27 s on 438280 grid points; integrated electrons N 89.99997 (90), N-1 88.99997 (89), N+1 90.99997 (91); charge sums N +0.0000, N-1 +1.0000, N+1 -1.0000
+- 2026-09-28 23:44  NPA: sums f+ 1.0000, f- 1.0000, f0 1.0000, Df +0.0000; max f+ C1 0.179, max f- N1 0.293
+- 2026-09-28 23:44  Hirshfeld: sums f+ 1.0000, f- 1.0000, f0 1.0000, Df -0.0000; max f+ C1 0.104, max f- N1 0.187
+- 2026-09-28 23:44  vs dscf.json: dE N -2.27e-13, N-1 +4.09e-12, N+1 +4.55e-13 Ha (same geometry: True)
+- 2026-09-28 23:44  vs mwfn_extra charges.json (N state): max_abs_diff_NPA 1.69e-05, max_abs_diff_Hirshfeld 4.09e-02
+- 2026-09-28 23:44  done in 24.1 min; I = 5.9822 eV, A = 1.2270 eV

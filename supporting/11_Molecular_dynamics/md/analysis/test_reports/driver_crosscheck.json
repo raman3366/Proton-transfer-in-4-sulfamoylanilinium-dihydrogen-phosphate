@@ -1,0 +1,1727 @@
+{
+ "what": "last frame of each production segment and of each equilibration stage: monitor of md/run_md.py (three decimals) against analyse_md.py",
+ "driver_script_sha256": "45e4cf2872beddbfc44696e178a6721d574965c8beb4ec5bb0d83814f6f3bc29",
+ "analysis_script_sha256": "f75e6155de7007000b8c118b5e9989af7fbaf40994b3f684d4c9b3c9bbcf8ea3",
+ "n_compared": 56,
+ "n_compared_production": 14,
+ "n_compared_equilibration": 42,
+ "largest_abs_diff_A": 0.0005,
+ "tolerance_A": 0.001,
+ "all_agree": true,
+ "n_frames_solute": 20,
+ "n_frames_full": 10,
+ "n_atoms_full": 4600,
+ "n_atoms_solute": 111,
+ "equilibration": {
+  "available": true,
+  "stage_table_source": "manifest equilibration.stages",
+  "total_ps": 4.0,
+  "n_frames_solute": 40,
+  "n_frames_full": 20,
+  "frames_per_stage": [
+   [
+    2,
+    2,
+    1,
+    1
+   ],
+   [
+    6,
+    6,
+    3,
+    3
+   ],
+   [
+    6,
+    6,
+    3,
+    3
+   ],
+   [
+    8,
+    8,
+    4,
+    4
+   ],
+   [
+    8,
+    8,
+    4,
+    4
+   ],
+   [
+    10,
+    10,
+    5,
+    5
+   ]
+  ],
+  "manifest_frames_per_stage": [
+   [
+    2,
+    1
+   ],
+   [
+    6,
+    3
+   ],
+   [
+    6,
+    3
+   ],
+   [
+    8,
+    4
+   ],
+   [
+    8,
+    4
+   ],
+   [
+    10,
+    5
+   ]
+  ],
+  "header_first_frame_ps": [
+   0.1,
+   0.3,
+   0.9,
+   1.5,
+   2.3,
+   3.1
+  ],
+  "manifest_stage_start_ps": [
+   0.0,
+   0.2,
+   0.8,
+   1.4,
+   2.2,
+   3.0
+  ],
+  "solute_interval_ps": 0.1,
+  "time_first_frame_ns": -0.0039,
+  "time_last_frame_ns": 0.0,
+  "time_of_the_last_frame_of_every_stage_equals_the_stage_end_of_the_manifest": true,
+  "lines_of_timeseries_equil_full": 20
+ },
+ "checks": {
+  "header_check_solute": {
+   "interval_matches": true,
+   "contiguous": true,
+   "details": []
+  },
+  "header_check_full": {
+   "interval_matches": true,
+   "contiguous": true,
+   "details": []
+  },
+  "manifest_segment_check": {
+   "available": true,
+   "consistent": true,
+   "details": []
+  },
+  "segment_overlap_check": {
+   "suspected": false,
+   "boundaries": [
+    {
+     "segments": [
+      1,
+      2
+     ],
+     "smallest_max_abs_diff_A": 0.334879,
+     "frame_of_previous_segment": 8,
+     "repeated": false
+    }
+   ]
+  },
+  "consistency_full_vs_solute": {
+   "ratio_full_to_solute_interval": 2.0,
+   "n_compared": 10,
+   "max_abs_diff_d_Zn_N2_A": 1e-06
+  },
+  "sources": {
+   "start": "command line",
+   "replica": null,
+   "model": "manifest build_json.model",
+   "system_dir": "command line",
+   "planned_ns": "manifest production.target_ns",
+   "solute_interval_ps": "manifest protocol.output.solute_frame_interval_ps",
+   "full_interval_ps": "manifest protocol.output.full_frame_interval_ps"
+  },
+  "imaging_solute": {
+   "frames_with_box": 20,
+   "frames_without_box": 0,
+   "frames_zinc_moved": 0,
+   "frames_ligand_moved": 0
+  },
+  "full_trajectory": {
+   "n_water_O": 1495,
+   "n_protein_O": 10,
+   "frames_without_box": 0,
+   "name_mismatches": []
+  }
+ },
+ "warnings": [],
+ "rows": [
+  {
+   "step": "seg0001",
+   "frame": 9,
+   "driver_key": "zn_to_lig_N2_A",
+   "driver_value_A": 15.589,
+   "analysis_column": "d_Zn_N2_A",
+   "analysis_value_A": 15.5885,
+   "abs_diff_A": 0.0005
+  },
+  {
+   "step": "seg0001",
+   "frame": 9,
+   "driver_key": "lig_N2_to_thr199_OG1_A",
+   "driver_value_A": 11.551,
+   "analysis_column": "d_N2_T199OG1_A",
+   "analysis_value_A": 11.5508,
+   "abs_diff_A": 0.0002
+  },
+  {
+   "step": "seg0001",
+   "frame": 9,
+   "driver_key": "lig_N1_to_phe131_CZ_A",
+   "driver_value_A": 14.933,
+   "analysis_column": "d1_N1_F131CZ_A",
+   "analysis_value_A": 14.9329,
+   "abs_diff_A": 0.0001
+  },
+  {
+   "step": "seg0001",
+   "frame": 9,
+   "driver_key": "lig_N1_to_asn67_OD1_A",
+   "driver_value_A": 14.81,
+   "analysis_column": "d2_N1_N67OD1_A",
+   "analysis_value_A": 14.8102,
+   "abs_diff_A": 0.0002
+  },
+  {
+   "step": "seg0001",
+   "frame": 9,
+   "driver_key": "zn_to_his94_NE2_A",
+   "driver_value_A": 2.937,
+   "analysis_column": "d_Zn_H94NE2_A",
+   "analysis_value_A": 2.9367,
+   "abs_diff_A": 0.0003
+  },
+  {
+   "step": "seg0001",
+   "frame": 9,
+   "driver_key": "zn_to_his96_NE2_A",
+   "driver_value_A": 2.937,
+   "analysis_column": "d_Zn_H96NE2_A",
+   "analysis_value_A": 2.9367,
+   "abs_diff_A": 0.0003
+  },
+  {
+   "step": "seg0001",
+   "frame": 9,
+   "driver_key": "zn_to_his119_ND1_A",
+   "driver_value_A": 4.835,
+   "analysis_column": "d_Zn_H119ND1_A",
+   "analysis_value_A": 4.8354,
+   "abs_diff_A": 0.0004
+  },
+  {
+   "step": "seg0002",
+   "frame": 19,
+   "driver_key": "zn_to_lig_N2_A",
+   "driver_value_A": 14.226,
+   "analysis_column": "d_Zn_N2_A",
+   "analysis_value_A": 14.2261,
+   "abs_diff_A": 0.0001
+  },
+  {
+   "step": "seg0002",
+   "frame": 19,
+   "driver_key": "lig_N2_to_thr199_OG1_A",
+   "driver_value_A": 10.903,
+   "analysis_column": "d_N2_T199OG1_A",
+   "analysis_value_A": 10.9025,
+   "abs_diff_A": 0.0005
+  },
+  {
+   "step": "seg0002",
+   "frame": 19,
+   "driver_key": "lig_N1_to_phe131_CZ_A",
+   "driver_value_A": 16.351,
+   "analysis_column": "d1_N1_F131CZ_A",
+   "analysis_value_A": 16.3508,
+   "abs_diff_A": 0.0002
+  },
+  {
+   "step": "seg0002",
+   "frame": 19,
+   "driver_key": "lig_N1_to_asn67_OD1_A",
+   "driver_value_A": 14.503,
+   "analysis_column": "d2_N1_N67OD1_A",
+   "analysis_value_A": 14.5032,
+   "abs_diff_A": 0.0002
+  },
+  {
+   "step": "seg0002",
+   "frame": 19,
+   "driver_key": "zn_to_his94_NE2_A",
+   "driver_value_A": 2.933,
+   "analysis_column": "d_Zn_H94NE2_A",
+   "analysis_value_A": 2.9333,
+   "abs_diff_A": 0.0003
+  },
+  {
+   "step": "seg0002",
+   "frame": 19,
+   "driver_key": "zn_to_his96_NE2_A",
+   "driver_value_A": 2.933,
+   "analysis_column": "d_Zn_H96NE2_A",
+   "analysis_value_A": 2.9333,
+   "abs_diff_A": 0.0003
+  },
+  {
+   "step": "seg0002",
+   "frame": 19,
+   "driver_key": "zn_to_his119_ND1_A",
+   "driver_value_A": 4.945,
+   "analysis_column": "d_Zn_H119ND1_A",
+   "analysis_value_A": 4.9451,
+   "abs_diff_A": 0.0001
+  },
+  {
+   "step": "eq01",
+   "frame": 1,
+   "driver_key": "zn_to_lig_N2_A",
+   "driver_value_A": 17.213,
+   "analysis_column": "d_Zn_N2_A",
+   "analysis_value_A": 17.2134,
+   "abs_diff_A": 0.0004
+  },
+  {
+   "step": "eq01",
+   "frame": 1,
+   "driver_key": "lig_N2_to_thr199_OG1_A",
+   "driver_value_A": 12.938,
+   "analysis_column": "d_N2_T199OG1_A",
+   "analysis_value_A": 12.9379,
+   "abs_diff_A": 0.0001
+  },
+  {
+   "step": "eq01",
+   "frame": 1,
+   "driver_key": "lig_N1_to_phe131_CZ_A",
+   "driver_value_A": 13.691,
+   "analysis_column": "d1_N1_F131CZ_A",
+   "analysis_value_A": 13.6908,
+   "abs_diff_A": 0.0002
+  },
+  {
+   "step": "eq01",
+   "frame": 1,
+   "driver_key": "lig_N1_to_asn67_OD1_A",
+   "driver_value_A": 15.244,
+   "analysis_column": "d2_N1_N67OD1_A",
+   "analysis_value_A": 15.2443,
+   "abs_diff_A": 0.0003
+  },
+  {
+   "step": "eq01",
+   "frame": 1,
+   "driver_key": "zn_to_his94_NE2_A",
+   "driver_value_A": 3.001,
+   "analysis_column": "d_Zn_H94NE2_A",
+   "analysis_value_A": 3.0005,
+   "abs_diff_A": 0.0005
+  },
+  {
+   "step": "eq01",
+   "frame": 1,
+   "driver_key": "zn_to_his96_NE2_A",
+   "driver_value_A": 3.001,
+   "analysis_column": "d_Zn_H96NE2_A",
+   "analysis_value_A": 3.0005,
+   "abs_diff_A": 0.0005
+  },
+  {
+   "step": "eq01",
+   "frame": 1,
+   "driver_key": "zn_to_his119_ND1_A",
+   "driver_value_A": 5.021,
+   "analysis_column": "d_Zn_H119ND1_A",
+   "analysis_value_A": 5.0214,
+   "abs_diff_A": 0.0004
+  },
+  {
+   "step": "eq02",
+   "frame": 7,
+   "driver_key": "zn_to_lig_N2_A",
+   "driver_value_A": 16.098,
+   "analysis_column": "d_Zn_N2_A",
+   "analysis_value_A": 16.0976,
+   "abs_diff_A": 0.0004
+  },
+  {
+   "step": "eq02",
+   "frame": 7,
+   "driver_key": "lig_N2_to_thr199_OG1_A",
+   "driver_value_A": 12.24,
+   "analysis_column": "d_N2_T199OG1_A",
+   "analysis_value_A": 12.24,
+   "abs_diff_A": 0.0
+  },
+  {
+   "step": "eq02",
+   "frame": 7,
+   "driver_key": "lig_N1_to_phe131_CZ_A",
+   "driver_value_A": 13.999,
+   "analysis_column": "d1_N1_F131CZ_A",
+   "analysis_value_A": 13.9986,
+   "abs_diff_A": 0.0004
+  },
+  {
+   "step": "eq02",
+   "frame": 7,
+   "driver_key": "lig_N1_to_asn67_OD1_A",
+   "driver_value_A": 14.987,
+   "analysis_column": "d2_N1_N67OD1_A",
+   "analysis_value_A": 14.9869,
+   "abs_diff_A": 0.0001
+  },
+  {
+   "step": "eq02",
+   "frame": 7,
+   "driver_key": "zn_to_his94_NE2_A",
+   "driver_value_A": 2.954,
+   "analysis_column": "d_Zn_H94NE2_A",
+   "analysis_value_A": 2.9539,
+   "abs_diff_A": 0.0001
+  },
+  {
+   "step": "eq02",
+   "frame": 7,
+   "driver_key": "zn_to_his96_NE2_A",
+   "driver_value_A": 2.954,
+   "analysis_column": "d_Zn_H96NE2_A",
+   "analysis_value_A": 2.9539,
+   "abs_diff_A": 0.0001
+  },
+  {
+   "step": "eq02",
+   "frame": 7,
+   "driver_key": "zn_to_his119_ND1_A",
+   "driver_value_A": 5.112,
+   "analysis_column": "d_Zn_H119ND1_A",
+   "analysis_value_A": 5.1122,
+   "abs_diff_A": 0.0002
+  },
+  {
+   "step": "eq03",
+   "frame": 13,
+   "driver_key": "zn_to_lig_N2_A",
+   "driver_value_A": 15.86,
+   "analysis_column": "d_Zn_N2_A",
+   "analysis_value_A": 15.8595,
+   "abs_diff_A": 0.0005
+  },
+  {
+   "step": "eq03",
+   "frame": 13,
+   "driver_key": "lig_N2_to_thr199_OG1_A",
+   "driver_value_A": 12.567,
+   "analysis_column": "d_N2_T199OG1_A",
+   "analysis_value_A": 12.567,
+   "abs_diff_A": 0.0
+  },
+  {
+   "step": "eq03",
+   "frame": 13,
+   "driver_key": "lig_N1_to_phe131_CZ_A",
+   "driver_value_A": 14.073,
+   "analysis_column": "d1_N1_F131CZ_A",
+   "analysis_value_A": 14.0726,
+   "abs_diff_A": 0.0004
+  },
+  {
+   "step": "eq03",
+   "frame": 13,
+   "driver_key": "lig_N1_to_asn67_OD1_A",
+   "driver_value_A": 15.311,
+   "analysis_column": "d2_N1_N67OD1_A",
+   "analysis_value_A": 15.3108,
+   "abs_diff_A": 0.0002
+  },
+  {
+   "step": "eq03",
+   "frame": 13,
+   "driver_key": "zn_to_his94_NE2_A",
+   "driver_value_A": 2.928,
+   "analysis_column": "d_Zn_H94NE2_A",
+   "analysis_value_A": 2.9276,
+   "abs_diff_A": 0.0004
+  },
+  {
+   "step": "eq03",
+   "frame": 13,
+   "driver_key": "zn_to_his96_NE2_A",
+   "driver_value_A": 2.928,
+   "analysis_column": "d_Zn_H96NE2_A",
+   "analysis_value_A": 2.9276,
+   "abs_diff_A": 0.0004
+  },
+  {
+   "step": "eq03",
+   "frame": 13,
+   "driver_key": "zn_to_his119_ND1_A",
+   "driver_value_A": 5.074,
+   "analysis_column": "d_Zn_H119ND1_A",
+   "analysis_value_A": 5.0744,
+   "abs_diff_A": 0.0004
+  },
+  {
+   "step": "eq04",
+   "frame": 21,
+   "driver_key": "zn_to_lig_N2_A",
+   "driver_value_A": 17.22,
+   "analysis_column": "d_Zn_N2_A",
+   "analysis_value_A": 17.2198,
+   "abs_diff_A": 0.0002
+  },
+  {
+   "step": "eq04",
+   "frame": 21,
+   "driver_key": "lig_N2_to_thr199_OG1_A",
+   "driver_value_A": 12.314,
+   "analysis_column": "d_N2_T199OG1_A",
+   "analysis_value_A": 12.3138,
+   "abs_diff_A": 0.0002
+  },
+  {
+   "step": "eq04",
+   "frame": 21,
+   "driver_key": "lig_N1_to_phe131_CZ_A",
+   "driver_value_A": 15.358,
+   "analysis_column": "d1_N1_F131CZ_A",
+   "analysis_value_A": 15.3577,
+   "abs_diff_A": 0.0003
+  },
+  {
+   "step": "eq04",
+   "frame": 21,
+   "driver_key": "lig_N1_to_asn67_OD1_A",
+   "driver_value_A": 15.481,
+   "analysis_column": "d2_N1_N67OD1_A",
+   "analysis_value_A": 15.4806,
+   "abs_diff_A": 0.0004
+  },
+  {
+   "step": "eq04",
+   "frame": 21,
+   "driver_key": "zn_to_his94_NE2_A",
+   "driver_value_A": 2.954,
+   "analysis_column": "d_Zn_H94NE2_A",
+   "analysis_value_A": 2.9538,
+   "abs_diff_A": 0.0002
+  },
+  {
+   "step": "eq04",
+   "frame": 21,
+   "driver_key": "zn_to_his96_NE2_A",
+   "driver_value_A": 2.954,
+   "analysis_column": "d_Zn_H96NE2_A",
+   "analysis_value_A": 2.9538,
+   "abs_diff_A": 0.0002
+  },
+  {
+   "step": "eq04",
+   "frame": 21,
+   "driver_key": "zn_to_his119_ND1_A",
+   "driver_value_A": 5.095,
+   "analysis_column": "d_Zn_H119ND1_A",
+   "analysis_value_A": 5.0949,
+   "abs_diff_A": 0.0001
+  },
+  {
+   "step": "eq05",
+   "frame": 29,
+   "driver_key": "zn_to_lig_N2_A",
+   "driver_value_A": 16.7,
+   "analysis_column": "d_Zn_N2_A",
+   "analysis_value_A": 16.6998,
+   "abs_diff_A": 0.0002
+  },
+  {
+   "step": "eq05",
+   "frame": 29,
+   "driver_key": "lig_N2_to_thr199_OG1_A",
+   "driver_value_A": 11.566,
+   "analysis_column": "d_N2_T199OG1_A",
+   "analysis_value_A": 11.5658,
+   "abs_diff_A": 0.0002
+  },
+  {
+   "step": "eq05",
+   "frame": 29,
+   "driver_key": "lig_N1_to_phe131_CZ_A",
+   "driver_value_A": 15.598,
+   "analysis_column": "d1_N1_F131CZ_A",
+   "analysis_value_A": 15.5979,
+   "abs_diff_A": 0.0001
+  },
+  {
+   "step": "eq05",
+   "frame": 29,
+   "driver_key": "lig_N1_to_asn67_OD1_A",
+   "driver_value_A": 16.603,
+   "analysis_column": "d2_N1_N67OD1_A",
+   "analysis_value_A": 16.6034,
+   "abs_diff_A": 0.0004
+  },
+  {
+   "step": "eq05",
+   "frame": 29,
+   "driver_key": "zn_to_his94_NE2_A",
+   "driver_value_A": 3.014,
+   "analysis_column": "d_Zn_H94NE2_A",
+   "analysis_value_A": 3.0144,
+   "abs_diff_A": 0.0004
+  },
+  {
+   "step": "eq05",
+   "frame": 29,
+   "driver_key": "zn_to_his96_NE2_A",
+   "driver_value_A": 3.014,
+   "analysis_column": "d_Zn_H96NE2_A",
+   "analysis_value_A": 3.0144,
+   "abs_diff_A": 0.0004
+  },
+  {
+   "step": "eq05",
+   "frame": 29,
+   "driver_key": "zn_to_his119_ND1_A",
+   "driver_value_A": 5.255,
+   "analysis_column": "d_Zn_H119ND1_A",
+   "analysis_value_A": 5.2554,
+   "abs_diff_A": 0.0004
+  },
+  {
+   "step": "eq06",
+   "frame": 39,
+   "driver_key": "zn_to_lig_N2_A",
+   "driver_value_A": 16.952,
+   "analysis_column": "d_Zn_N2_A",
+   "analysis_value_A": 16.9519,
+   "abs_diff_A": 0.0001
+  },
+  {
+   "step": "eq06",
+   "frame": 39,
+   "driver_key": "lig_N2_to_thr199_OG1_A",
+   "driver_value_A": 12.766,
+   "analysis_column": "d_N2_T199OG1_A",
+   "analysis_value_A": 12.7655,
+   "abs_diff_A": 0.0005
+  },
+  {
+   "step": "eq06",
+   "frame": 39,
+   "driver_key": "lig_N1_to_phe131_CZ_A",
+   "driver_value_A": 14.878,
+   "analysis_column": "d1_N1_F131CZ_A",
+   "analysis_value_A": 14.878,
+   "abs_diff_A": 0.0
+  },
+  {
+   "step": "eq06",
+   "frame": 39,
+   "driver_key": "lig_N1_to_asn67_OD1_A",
+   "driver_value_A": 15.909,
+   "analysis_column": "d2_N1_N67OD1_A",
+   "analysis_value_A": 15.9089,
+   "abs_diff_A": 0.0001
+  },
+  {
+   "step": "eq06",
+   "frame": 39,
+   "driver_key": "zn_to_his94_NE2_A",
+   "driver_value_A": 3.003,
+   "analysis_column": "d_Zn_H94NE2_A",
+   "analysis_value_A": 3.0031,
+   "abs_diff_A": 0.0001
+  },
+  {
+   "step": "eq06",
+   "frame": 39,
+   "driver_key": "zn_to_his96_NE2_A",
+   "driver_value_A": 3.003,
+   "analysis_column": "d_Zn_H96NE2_A",
+   "analysis_value_A": 3.0031,
+   "abs_diff_A": 0.0001
+  },
+  {
+   "step": "eq06",
+   "frame": 39,
+   "driver_key": "zn_to_his119_ND1_A",
+   "driver_value_A": 5.134,
+   "analysis_column": "d_Zn_H119ND1_A",
+   "analysis_value_A": 5.134,
+   "abs_diff_A": 0.0
+  }
+ ],
+ "hydration_runs_of_the_driver_of_today": {
+  "what": "two short runs of md/run_md.py as it stands, hydration block of md/protocol.json as it stands, on the stand-in systems of the driver tests: steps, times, frames, hydration records and the count at the end of every step against analyse_md.py",
+  "driver_script_sha256_now": "6d797f080ff7567923469dabd86af71ca34183f5c482c14d55bf8038eb9d1822",
+  "protocol_sha256_now": "decda42f5340d06f5f695b4c56b59a7bb796e5872b3a8af1c1a5b426f9c09d9a",
+  "runs": {
+   "dry": {
+    "driver_script_sha256": "6d797f080ff7567923469dabd86af71ca34183f5c482c14d55bf8038eb9d1822",
+    "analysis_script_sha256": "f75e6155de7007000b8c118b5e9989af7fbaf40994b3f684d4c9b3c9bbcf8ea3",
+    "protocol_of_the_run_sha256": "6c8c796eefcc1e500334be90681d7fc6a62d1f7cf408c2c97731bcd1a4c73d42",
+    "system_dir": "/root/cqc-sfa-md/test_driver/hydration/systems/dry",
+    "run_id": "R1",
+    "equil_scale": 0.001,
+    "test_only": true,
+    "n_atoms_full": 3120,
+    "n_atoms_solute": 161,
+    "n_CA": 10,
+    "n_water_O_listed": 623,
+    "output_intervals_ps": [
+     0.1,
+     0.1
+    ],
+    "settings_in_the_manifest": {
+     "after_step": "eq03",
+     "site_atoms": [
+      "C1",
+      "C2",
+      "C3",
+      "C4",
+      "C5",
+      "C6"
+     ],
+     "water_cutoff_A": 2.5,
+     "max_extensions": 4
+    },
+    "settings_used_by_the_analysis": {
+     "site_atoms": [
+      "C1",
+      "C2",
+      "C3",
+      "C4",
+      "C5",
+      "C6"
+     ],
+     "water_cutoff_A": 2.5,
+     "source": "manifest hydration_check.settings",
+     "settings_are_the_defaults": true
+    },
+    "settings_agree": true,
+    "n_extensions_manifest": 4,
+    "final_decision_manifest": "go on: still no water oxygen at the site after 4 extension steps, the most allowed: the run goes on as built, with an empty site",
+    "steps_in_the_manifest": [
+     "eq01",
+     "eq02",
+     "eq03",
+     "eq03x1",
+     "eq03x2",
+     "eq03x3",
+     "eq03x4",
+     "eq04",
+     "eq05",
+     "eq06"
+    ],
+    "steps_read": [
+     "eq01",
+     "eq02",
+     "eq03",
+     "eq03x1",
+     "eq03x2",
+     "eq03x3",
+     "eq03x4",
+     "eq04",
+     "eq05",
+     "eq06"
+    ],
+    "stage_table_source": "manifest equilibration.stages",
+    "total_ps": 4.0,
+    "n_frames_equilibration_solute_full": [
+     40,
+     40
+    ],
+    "time_first_and_last_equilibration_frame_ns": [
+     -0.0039,
+     0.0
+    ],
+    "header_first_frame_ps_solute": [
+     0.1,
+     0.2,
+     0.5,
+     0.8,
+     1.3,
+     1.8,
+     2.3,
+     2.8,
+     3.2,
+     3.6
+    ],
+    "steps": [
+     {
+      "tag": "eq01",
+      "tag_read": "eq01",
+      "stage_and_extension_read": [
+       1,
+       0
+      ],
+      "stage_and_extension_of_the_tag": [
+       1,
+       0
+      ],
+      "time_start_end_ps_manifest": [
+       0.0,
+       0.1
+      ],
+      "time_start_end_ps_read": [
+       0.0,
+       0.1
+      ],
+      "frames_manifest": [
+       1,
+       1
+      ],
+      "frames_read": [
+       1,
+       1
+      ],
+      "frames_expected_by_the_analysis": [
+       1,
+       1
+      ],
+      "last_full_frame_at_the_end_of_the_step": true,
+      "driver_monitor_count_and_nearest_A": [
+       0,
+       13.745
+      ],
+      "analysis_count_and_nearest_A": [
+       0,
+       13.7451
+      ],
+      "abs_diff_nearest_A": 0.0001,
+      "hydration_record_of_the_driver": null,
+      "analysis_driver_hydration_check": null
+     },
+     {
+      "tag": "eq02",
+      "tag_read": "eq02",
+      "stage_and_extension_read": [
+       2,
+       0
+      ],
+      "stage_and_extension_of_the_tag": [
+       2,
+       0
+      ],
+      "time_start_end_ps_manifest": [
+       0.1,
+       0.4
+      ],
+      "time_start_end_ps_read": [
+       0.1,
+       0.4
+      ],
+      "frames_manifest": [
+       3,
+       3
+      ],
+      "frames_read": [
+       3,
+       3
+      ],
+      "frames_expected_by_the_analysis": [
+       3,
+       3
+      ],
+      "last_full_frame_at_the_end_of_the_step": true,
+      "driver_monitor_count_and_nearest_A": [
+       0,
+       12.943
+      ],
+      "analysis_count_and_nearest_A": [
+       0,
+       12.9433
+      ],
+      "abs_diff_nearest_A": 0.0003,
+      "hydration_record_of_the_driver": null,
+      "analysis_driver_hydration_check": null
+     },
+     {
+      "tag": "eq03",
+      "tag_read": "eq03",
+      "stage_and_extension_read": [
+       3,
+       0
+      ],
+      "stage_and_extension_of_the_tag": [
+       3,
+       0
+      ],
+      "time_start_end_ps_manifest": [
+       0.4,
+       0.7
+      ],
+      "time_start_end_ps_read": [
+       0.4,
+       0.7
+      ],
+      "frames_manifest": [
+       3,
+       3
+      ],
+      "frames_read": [
+       3,
+       3
+      ],
+      "frames_expected_by_the_analysis": [
+       3,
+       3
+      ],
+      "last_full_frame_at_the_end_of_the_step": true,
+      "driver_monitor_count_and_nearest_A": [
+       0,
+       12.559
+      ],
+      "analysis_count_and_nearest_A": [
+       0,
+       12.5589
+      ],
+      "abs_diff_nearest_A": 0.0001,
+      "hydration_record_of_the_driver": {
+       "n_water_O": 0,
+       "applies": true,
+       "decision": "extend",
+       "water_cutoff_A": 2.5,
+       "site_atoms": [
+        "C1",
+        "C2",
+        "C3",
+        "C4",
+        "C5",
+        "C6"
+       ],
+       "next_step": "eq03x1"
+      },
+      "analysis_driver_hydration_check": {
+       "n_water_O": 0,
+       "nearest_water_O_A": 12.559,
+       "applies": true,
+       "decision": "extend",
+       "compared": true,
+       "count_agrees": true,
+       "nearest_agrees": true
+      }
+     },
+     {
+      "tag": "eq03x1",
+      "tag_read": "eq03x1",
+      "stage_and_extension_read": [
+       3,
+       1
+      ],
+      "stage_and_extension_of_the_tag": [
+       3,
+       1
+      ],
+      "time_start_end_ps_manifest": [
+       0.7,
+       1.2
+      ],
+      "time_start_end_ps_read": [
+       0.7,
+       1.2
+      ],
+      "frames_manifest": [
+       5,
+       5
+      ],
+      "frames_read": [
+       5,
+       5
+      ],
+      "frames_expected_by_the_analysis": [
+       5,
+       5
+      ],
+      "last_full_frame_at_the_end_of_the_step": true,
+      "driver_monitor_count_and_nearest_A": [
+       0,
+       11.46
+      ],
+      "analysis_count_and_nearest_A": [
+       0,
+       11.4602
+      ],
+      "abs_diff_nearest_A": 0.0002,
+      "hydration_record_of_the_driver": {
+       "n_water_O": 0,
+       "applies": true,
+       "decision": "extend",
+       "water_cutoff_A": 2.5,
+       "site_atoms": [
+        "C1",
+        "C2",
+        "C3",
+        "C4",
+        "C5",
+        "C6"
+       ],
+       "next_step": "eq03x2"
+      },
+      "analysis_driver_hydration_check": {
+       "n_water_O": 0,
+       "nearest_water_O_A": 11.46,
+       "applies": true,
+       "decision": "extend",
+       "compared": true,
+       "count_agrees": true,
+       "nearest_agrees": true
+      }
+     },
+     {
+      "tag": "eq03x2",
+      "tag_read": "eq03x2",
+      "stage_and_extension_read": [
+       3,
+       2
+      ],
+      "stage_and_extension_of_the_tag": [
+       3,
+       2
+      ],
+      "time_start_end_ps_manifest": [
+       1.2,
+       1.7
+      ],
+      "time_start_end_ps_read": [
+       1.2,
+       1.7
+      ],
+      "frames_manifest": [
+       5,
+       5
+      ],
+      "frames_read": [
+       5,
+       5
+      ],
+      "frames_expected_by_the_analysis": [
+       5,
+       5
+      ],
+      "last_full_frame_at_the_end_of_the_step": true,
+      "driver_monitor_count_and_nearest_A": [
+       0,
+       10.714
+      ],
+      "analysis_count_and_nearest_A": [
+       0,
+       10.7141
+      ],
+      "abs_diff_nearest_A": 0.0001,
+      "hydration_record_of_the_driver": {
+       "n_water_O": 0,
+       "applies": true,
+       "decision": "extend",
+       "water_cutoff_A": 2.5,
+       "site_atoms": [
+        "C1",
+        "C2",
+        "C3",
+        "C4",
+        "C5",
+        "C6"
+       ],
+       "next_step": "eq03x3"
+      },
+      "analysis_driver_hydration_check": {
+       "n_water_O": 0,
+       "nearest_water_O_A": 10.714,
+       "applies": true,
+       "decision": "extend",
+       "compared": true,
+       "count_agrees": true,
+       "nearest_agrees": true
+      }
+     },
+     {
+      "tag": "eq03x3",
+      "tag_read": "eq03x3",
+      "stage_and_extension_read": [
+       3,
+       3
+      ],
+      "stage_and_extension_of_the_tag": [
+       3,
+       3
+      ],
+      "time_start_end_ps_manifest": [
+       1.7,
+       2.2
+      ],
+      "time_start_end_ps_read": [
+       1.7,
+       2.2
+      ],
+      "frames_manifest": [
+       5,
+       5
+      ],
+      "frames_read": [
+       5,
+       5
+      ],
+      "frames_expected_by_the_analysis": [
+       5,
+       5
+      ],
+      "last_full_frame_at_the_end_of_the_step": true,
+      "driver_monitor_count_and_nearest_A": [
+       0,
+       10.106
+      ],
+      "analysis_count_and_nearest_A": [
+       0,
+       10.1059
+      ],
+      "abs_diff_nearest_A": 0.0001,
+      "hydration_record_of_the_driver": {
+       "n_water_O": 0,
+       "applies": true,
+       "decision": "extend",
+       "water_cutoff_A": 2.5,
+       "site_atoms": [
+        "C1",
+        "C2",
+        "C3",
+        "C4",
+        "C5",
+        "C6"
+       ],
+       "next_step": "eq03x4"
+      },
+      "analysis_driver_hydration_check": {
+       "n_water_O": 0,
+       "nearest_water_O_A": 10.106,
+       "applies": true,
+       "decision": "extend",
+       "compared": true,
+       "count_agrees": true,
+       "nearest_agrees": true
+      }
+     },
+     {
+      "tag": "eq03x4",
+      "tag_read": "eq03x4",
+      "stage_and_extension_read": [
+       3,
+       4
+      ],
+      "stage_and_extension_of_the_tag": [
+       3,
+       4
+      ],
+      "time_start_end_ps_manifest": [
+       2.2,
+       2.7
+      ],
+      "time_start_end_ps_read": [
+       2.2,
+       2.7
+      ],
+      "frames_manifest": [
+       5,
+       5
+      ],
+      "frames_read": [
+       5,
+       5
+      ],
+      "frames_expected_by_the_analysis": [
+       5,
+       5
+      ],
+      "last_full_frame_at_the_end_of_the_step": true,
+      "driver_monitor_count_and_nearest_A": [
+       0,
+       8.908
+      ],
+      "analysis_count_and_nearest_A": [
+       0,
+       8.9081
+      ],
+      "abs_diff_nearest_A": 0.0001,
+      "hydration_record_of_the_driver": {
+       "n_water_O": 0,
+       "applies": true,
+       "decision": "go on",
+       "water_cutoff_A": 2.5,
+       "site_atoms": [
+        "C1",
+        "C2",
+        "C3",
+        "C4",
+        "C5",
+        "C6"
+       ],
+       "next_step": "eq04"
+      },
+      "analysis_driver_hydration_check": {
+       "n_water_O": 0,
+       "nearest_water_O_A": 8.908,
+       "applies": true,
+       "decision": "go on",
+       "compared": true,
+       "count_agrees": true,
+       "nearest_agrees": true
+      }
+     },
+     {
+      "tag": "eq04",
+      "tag_read": "eq04",
+      "stage_and_extension_read": [
+       4,
+       0
+      ],
+      "stage_and_extension_of_the_tag": [
+       4,
+       0
+      ],
+      "time_start_end_ps_manifest": [
+       2.7,
+       3.1
+      ],
+      "time_start_end_ps_read": [
+       2.7,
+       3.1
+      ],
+      "frames_manifest": [
+       4,
+       4
+      ],
+      "frames_read": [
+       4,
+       4
+      ],
+      "frames_expected_by_the_analysis": [
+       4,
+       4
+      ],
+      "last_full_frame_at_the_end_of_the_step": true,
+      "driver_monitor_count_and_nearest_A": [
+       0,
+       8.993
+      ],
+      "analysis_count_and_nearest_A": [
+       0,
+       8.9933
+      ],
+      "abs_diff_nearest_A": 0.0003,
+      "hydration_record_of_the_driver": null,
+      "analysis_driver_hydration_check": null
+     },
+     {
+      "tag": "eq05",
+      "tag_read": "eq05",
+      "stage_and_extension_read": [
+       5,
+       0
+      ],
+      "stage_and_extension_of_the_tag": [
+       5,
+       0
+      ],
+      "time_start_end_ps_manifest": [
+       3.1,
+       3.5
+      ],
+      "time_start_end_ps_read": [
+       3.1,
+       3.5
+      ],
+      "frames_manifest": [
+       4,
+       4
+      ],
+      "frames_read": [
+       4,
+       4
+      ],
+      "frames_expected_by_the_analysis": [
+       4,
+       4
+      ],
+      "last_full_frame_at_the_end_of_the_step": true,
+      "driver_monitor_count_and_nearest_A": [
+       0,
+       9.078
+      ],
+      "analysis_count_and_nearest_A": [
+       0,
+       9.0782
+      ],
+      "abs_diff_nearest_A": 0.0002,
+      "hydration_record_of_the_driver": null,
+      "analysis_driver_hydration_check": null
+     },
+     {
+      "tag": "eq06",
+      "tag_read": "eq06",
+      "stage_and_extension_read": [
+       6,
+       0
+      ],
+      "stage_and_extension_of_the_tag": [
+       6,
+       0
+      ],
+      "time_start_end_ps_manifest": [
+       3.5,
+       4.0
+      ],
+      "time_start_end_ps_read": [
+       3.5,
+       4.0
+      ],
+      "frames_manifest": [
+       5,
+       5
+      ],
+      "frames_read": [
+       5,
+       5
+      ],
+      "frames_expected_by_the_analysis": [
+       5,
+       5
+      ],
+      "last_full_frame_at_the_end_of_the_step": true,
+      "driver_monitor_count_and_nearest_A": [
+       0,
+       8.089
+      ],
+      "analysis_count_and_nearest_A": [
+       0,
+       8.0895
+      ],
+      "abs_diff_nearest_A": 0.0005,
+      "hydration_record_of_the_driver": null,
+      "analysis_driver_hydration_check": null
+     }
+    ],
+    "production_segments": [
+     {
+      "tag": "seg0001",
+      "driver_monitor_count_and_nearest_A": [
+       0,
+       7.892
+      ],
+      "analysis_count_and_nearest_A": [
+       0,
+       7.8917
+      ],
+      "abs_diff_nearest_A": 0.0003
+     }
+    ],
+    "warnings": []
+   },
+   "wet": {
+    "driver_script_sha256": "6d797f080ff7567923469dabd86af71ca34183f5c482c14d55bf8038eb9d1822",
+    "analysis_script_sha256": "f75e6155de7007000b8c118b5e9989af7fbaf40994b3f684d4c9b3c9bbcf8ea3",
+    "protocol_of_the_run_sha256": "6c8c796eefcc1e500334be90681d7fc6a62d1f7cf408c2c97731bcd1a4c73d42",
+    "system_dir": "/root/cqc-sfa-md/test_driver/hydration/systems/wet",
+    "run_id": "R1",
+    "equil_scale": 0.001,
+    "test_only": true,
+    "n_atoms_full": 3120,
+    "n_atoms_solute": 161,
+    "n_CA": 10,
+    "n_water_O_listed": 985,
+    "output_intervals_ps": [
+     0.1,
+     0.1
+    ],
+    "settings_in_the_manifest": {
+     "after_step": "eq03",
+     "site_atoms": [
+      "C1",
+      "C2",
+      "C3",
+      "C4",
+      "C5",
+      "C6"
+     ],
+     "water_cutoff_A": 2.5,
+     "max_extensions": 4
+    },
+    "settings_used_by_the_analysis": {
+     "site_atoms": [
+      "C1",
+      "C2",
+      "C3",
+      "C4",
+      "C5",
+      "C6"
+     ],
+     "water_cutoff_A": 2.5,
+     "source": "manifest hydration_check.settings",
+     "settings_are_the_defaults": true
+    },
+    "settings_agree": true,
+    "n_extensions_manifest": 0,
+    "final_decision_manifest": "go on: 9 water oxygens at the site",
+    "steps_in_the_manifest": [
+     "eq01",
+     "eq02",
+     "eq03",
+     "eq04",
+     "eq05",
+     "eq06"
+    ],
+    "steps_read": [
+     "eq01",
+     "eq02",
+     "eq03",
+     "eq04",
+     "eq05",
+     "eq06"
+    ],
+    "stage_table_source": "manifest equilibration.stages",
+    "total_ps": 2.0,
+    "n_frames_equilibration_solute_full": [
+     20,
+     20
+    ],
+    "time_first_and_last_equilibration_frame_ns": [
+     -0.0019,
+     0.0
+    ],
+    "header_first_frame_ps_solute": [
+     0.1,
+     0.2,
+     0.5,
+     0.8,
+     1.2,
+     1.6
+    ],
+    "steps": [
+     {
+      "tag": "eq01",
+      "tag_read": "eq01",
+      "stage_and_extension_read": [
+       1,
+       0
+      ],
+      "stage_and_extension_of_the_tag": [
+       1,
+       0
+      ],
+      "time_start_end_ps_manifest": [
+       0.0,
+       0.1
+      ],
+      "time_start_end_ps_read": [
+       0.0,
+       0.1
+      ],
+      "frames_manifest": [
+       1,
+       1
+      ],
+      "frames_read": [
+       1,
+       1
+      ],
+      "frames_expected_by_the_analysis": [
+       1,
+       1
+      ],
+      "last_full_frame_at_the_end_of_the_step": true,
+      "driver_monitor_count_and_nearest_A": [
+       6,
+       1.393
+      ],
+      "analysis_count_and_nearest_A": [
+       6,
+       1.3934
+      ],
+      "abs_diff_nearest_A": 0.0004,
+      "hydration_record_of_the_driver": null,
+      "analysis_driver_hydration_check": null
+     },
+     {
+      "tag": "eq02",
+      "tag_read": "eq02",
+      "stage_and_extension_read": [
+       2,
+       0
+      ],
+      "stage_and_extension_of_the_tag": [
+       2,
+       0
+      ],
+      "time_start_end_ps_manifest": [
+       0.1,
+       0.4
+      ],
+      "time_start_end_ps_read": [
+       0.1,
+       0.4
+      ],
+      "frames_manifest": [
+       3,
+       3
+      ],
+      "frames_read": [
+       3,
+       3
+      ],
+      "frames_expected_by_the_analysis": [
+       3,
+       3
+      ],
+      "last_full_frame_at_the_end_of_the_step": true,
+      "driver_monitor_count_and_nearest_A": [
+       6,
+       1.095
+      ],
+      "analysis_count_and_nearest_A": [
+       6,
+       1.0955
+      ],
+      "abs_diff_nearest_A": 0.0005,
+      "hydration_record_of_the_driver": null,
+      "analysis_driver_hydration_check": null
+     },
+     {
+      "tag": "eq03",
+      "tag_read": "eq03",
+      "stage_and_extension_read": [
+       3,
+       0
+      ],
+      "stage_and_extension_of_the_tag": [
+       3,
+       0
+      ],
+      "time_start_end_ps_manifest": [
+       0.4,
+       0.7
+      ],
+      "time_start_end_ps_read": [
+       0.4,
+       0.7
+      ],
+      "frames_manifest": [
+       3,
+       3
+      ],
+      "frames_read": [
+       3,
+       3
+      ],
+      "frames_expected_by_the_analysis": [
+       3,
+       3
+      ],
+      "last_full_frame_at_the_end_of_the_step": true,
+      "driver_monitor_count_and_nearest_A": [
+       9,
+       1.121
+      ],
+      "analysis_count_and_nearest_A": [
+       9,
+       1.1212
+      ],
+      "abs_diff_nearest_A": 0.0002,
+      "hydration_record_of_the_driver": {
+       "n_water_O": 9,
+       "applies": true,
+       "decision": "go on",
+       "water_cutoff_A": 2.5,
+       "site_atoms": [
+        "C1",
+        "C2",
+        "C3",
+        "C4",
+        "C5",
+        "C6"
+       ],
+       "next_step": "eq04"
+      },
+      "analysis_driver_hydration_check": {
+       "n_water_O": 9,
+       "nearest_water_O_A": 1.121,
+       "applies": true,
+       "decision": "go on",
+       "compared": true,
+       "count_agrees": true,
+       "nearest_agrees": true
+      }
+     },
+     {
+      "tag": "eq04",
+      "tag_read": "eq04",
+      "stage_and_extension_read": [
+       4,
+       0
+      ],
+      "stage_and_extension_of_the_tag": [
+       4,
+       0
+      ],
+      "time_start_end_ps_manifest": [
+       0.7,
+       1.1
+      ],
+      "time_start_end_ps_read": [
+       0.7,
+       1.1
+      ],
+      "frames_manifest": [
+       4,
+       4
+      ],
+      "frames_read": [
+       4,
+       4
+      ],
+      "frames_expected_by_the_analysis": [
+       4,
+       4
+      ],
+      "last_full_frame_at_the_end_of_the_step": true,
+      "driver_monitor_count_and_nearest_A": [
+       8,
+       0.951
+      ],
+      "analysis_count_and_nearest_A": [
+       8,
+       0.9512
+      ],
+      "abs_diff_nearest_A": 0.0002,
+      "hydration_record_of_the_driver": null,
+      "analysis_driver_hydration_check": null
+     },
+     {
+      "tag": "eq05",
+      "tag_read": "eq05",
+      "stage_and_extension_read": [
+       5,
+       0
+      ],
+      "stage_and_extension_of_the_tag": [
+       5,
+       0
+      ],
+      "time_start_end_ps_manifest": [
+       1.1,
+       1.5
+      ],
+      "time_start_end_ps_read": [
+       1.1,
+       1.5
+      ],
+      "frames_manifest": [
+       4,
+       4
+      ],
+      "frames_read": [
+       4,
+       4
+      ],
+      "frames_expected_by_the_analysis": [
+       4,
+       4
+      ],
+      "last_full_frame_at_the_end_of_the_step": true,
+      "driver_monitor_count_and_nearest_A": [
+       7,
+       0.617
+      ],
+      "analysis_count_and_nearest_A": [
+       7,
+       0.6172
+      ],
+      "abs_diff_nearest_A": 0.0002,
+      "hydration_record_of_the_driver": null,
+      "analysis_driver_hydration_check": null
+     },
+     {
+      "tag": "eq06",
+      "tag_read": "eq06",
+      "stage_and_extension_read": [
+       6,
+       0
+      ],
+      "stage_and_extension_of_the_tag": [
+       6,
+       0
+      ],
+      "time_start_end_ps_manifest": [
+       1.5,
+       2.0
+      ],
+      "time_start_end_ps_read": [
+       1.5,
+       2.0
+      ],
+      "frames_manifest": [
+       5,
+       5
+      ],
+      "frames_read": [
+       5,
+       5
+      ],
+      "frames_expected_by_the_analysis": [
+       5,
+       5
+      ],
+      "last_full_frame_at_the_end_of_the_step": true,
+      "driver_monitor_count_and_nearest_A": [
+       6,
+       0.74
+      ],
+      "analysis_count_and_nearest_A": [
+       6,
+       0.7398
+      ],
+      "abs_diff_nearest_A": 0.0002,
+      "hydration_record_of_the_driver": null,
+      "analysis_driver_hydration_check": null
+     }
+    ],
+    "production_segments": [
+     {
+      "tag": "seg0001",
+      "driver_monitor_count_and_nearest_A": [
+       6,
+       0.365
+      ],
+      "analysis_count_and_nearest_A": [
+       6,
+       0.3649
+      ],
+      "abs_diff_nearest_A": 0.0001
+     }
+    ],
+    "warnings": []
+   }
+  },
+  "n_counts_compared": 18,
+  "n_counts_identical": 18,
+  "largest_abs_diff_nearest_A": 0.0005,
+  "tolerance_A": 0.001,
+  "n_hydration_records": 6,
+  "n_extension_steps_read": 4,
+  "all_agree": true
+ }
+}

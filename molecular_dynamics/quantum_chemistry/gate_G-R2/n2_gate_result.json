@@ -1,0 +1,1171 @@
+{
+ "what": "gate G-R2 (md/PLAN.md, entry of 6 Oct 2026, 1:34 PM IST, point 4): verdict of the independent examiner",
+ "written": "2026-10-06 09:08:52 PM IST",
+ "verdict": "NOT ACCEPTED",
+ "accepted": false,
+ "verdict_in_words": "No model of the sulfonamide nitrogen is accepted; the force field stays as built. Both candidates miss conditions 5 and 6, the candidate of the second step also condition 3. These three conditions use no test point, so the verdict does not depend on the test set.",
+ "test_set": "NOT READ. 47 test points are computed and their result files have not been opened (rented machine and the watchdog copy on the Pi). Conditions 1 and 2 are therefore not evaluated. Reason: the verdict is fixed without them, the builder put no candidate forward (none passed the preview that the design requires before a final test), and a read cannot be taken back. To read it: N2_FINAL_TEST=1 python md/qm/n2/final_test/n2_exam_final.py --final (once; a decision for the user).",
+ "candidates": {
+  "charges_as_built": {
+   "what": "candidate with the charges as built: md/qm/n2/n2_terms_new_charges_as_built.frcmod (L5, ridge 0.01)",
+   "frcmod_sha256": "2244a06c6e760ca079ffdd525eac9314dba9c3989e7b116d23e5545101cb7f29",
+   "conditions": {
+    "1 test set, r.m.s. against one reference": {
+     "limit": "at most 1.0 kcal/mol, at least 20 test points",
+     "value": null,
+     "met": "NOT EVALUATED: the test set was left unread",
+     "file": null
+    },
+    "2 test set, largest single deviation": {
+     "limit": "at most 2.5 kcal/mol",
+     "value": null,
+     "met": "NOT EVALUATED: the test set was left unread",
+     "file": null
+    },
+    "3 part A of gate G-R, 23 comparisons, two families": {
+     "limit": "at most 1.0 kcal/mol",
+     "value": 0.7401,
+     "single_reference_beside": 0.7399,
+     "largest": -1.449,
+     "references": [
+      "e_p120",
+      "g3"
+     ],
+     "as_built": {
+      "rms": 3.0753,
+      "single_reference_rms": 3.5039
+     },
+     "from_leave_one_out_errors": 0.8249,
+     "in_sample": true,
+     "met": true,
+     "file": "md/qm/n2/final_test/conditions_fitting_data.json"
+    },
+    "4 every parameter within the bounds of point 2, nothing else changed": {
+     "limit": "K 10 to 300; theta0 within 15 deg of the optimum; torsion and improper coefficients at most 5; periodicity 1 to 3",
+     "value": {
+      "angles": [
+       {
+        "angle": "ZnN2H",
+        "K": 23.041,
+        "theta0": 118.48605,
+        "optimum": 122.756,
+        "theta0_minus_optimum": -4.27
+       },
+       {
+        "angle": "SN2H",
+        "K": 51.074,
+        "theta0": 117.12705,
+        "optimum": 109.083,
+        "theta0_minus_optimum": 8.044
+       },
+       {
+        "angle": "ZnN2S",
+        "K": 20.423,
+        "theta0": 113.22905,
+        "optimum": 107.737,
+        "theta0_minus_optimum": 5.492
+       }
+      ],
+      "torsion_terms": [
+       {
+        "atoms": "NE2-ZN-N2-HN21",
+        "n": 3,
+        "PK": 0.4154,
+        "phase": 8.243
+       },
+       {
+        "atoms": "NE2-ZN-N2-HN21",
+        "n": 3,
+        "PK": 0.4154,
+        "phase": 8.243
+       },
+       {
+        "atoms": "ND1-ZN-N2-HN21",
+        "n": 3,
+        "PK": 0.4154,
+        "phase": 8.243
+       },
+       {
+        "atoms": "O2-S-N2-HN21",
+        "n": 2,
+        "PK": 0.0,
+        "phase": 0.0
+       },
+       {
+        "atoms": "O1-S-N2-HN21",
+        "n": 2,
+        "PK": 0.0,
+        "phase": 0.0
+       },
+       {
+        "atoms": "C4-S-N2-HN21",
+        "n": 1,
+        "PK": 2.124,
+        "phase": 180.0001
+       },
+       {
+        "atoms": "C4-S-N2-HN21",
+        "n": 2,
+        "PK": 2.8826,
+        "phase": 0.0
+       },
+       {
+        "atoms": "C4-S-N2-HN21",
+        "n": 3,
+        "PK": 1.2233,
+        "phase": 0.0
+       },
+       {
+        "atoms": "NE2-ZN-N2-S",
+        "n": 3,
+        "PK": 0.3739,
+        "phase": 292.4391
+       },
+       {
+        "atoms": "NE2-ZN-N2-S",
+        "n": 3,
+        "PK": 0.3739,
+        "phase": 292.4391
+       },
+       {
+        "atoms": "ND1-ZN-N2-S",
+        "n": 3,
+        "PK": 0.3739,
+        "phase": 292.4391
+       },
+       {
+        "atoms": "ZN-N2-S-C4",
+        "n": 1,
+        "PK": 3.1094,
+        "phase": 180.0001
+       },
+       {
+        "atoms": "ZN-N2-S-C4",
+        "n": 2,
+        "PK": 0.1183,
+        "phase": 0.0
+       },
+       {
+        "atoms": "ZN-N2-S-C4",
+        "n": 3,
+        "PK": 0.5797,
+        "phase": 0.0
+       },
+       {
+        "atoms": "ZN-N2-S-O1",
+        "n": 3,
+        "PK": 0.0,
+        "phase": 0.0
+       },
+       {
+        "atoms": "ZN-N2-S-O2",
+        "n": 3,
+        "PK": 0.0,
+        "phase": 0.0
+       }
+      ],
+      "improper": [
+       {
+        "atoms": "ZN-HN21-N2-S",
+        "n": 2,
+        "PK": 0.5301,
+        "phase": 180.0001
+       }
+      ],
+      "outside_bounds": [],
+      "differences_the_plan_does_not_allow": []
+     },
+     "met": true,
+     "file": "md/qm/n2/final_test/conditions_fitting_data.json, topology_differences.json"
+    },
+    "5 leave-one-out error on the fitting set": {
+     "limit": "at most 1.0 kcal/mol",
+     "value": 1.2947,
+     "largest": 5.2914,
+     "largest_at": "n069",
+     "residual_rms": 1.1328,
+     "n_fitting_rows": 177,
+     "n_parameters": 17,
+     "against_one_reference": {
+      "reference": "n005",
+      "rms": 1.3384,
+      "largest": 5.6128
+     },
+     "the_delivered_file_is_this_fit": {
+      "largest_difference_kcal": 0.00036,
+      "holds": true
+     },
+     "met": false,
+     "file": "md/qm/n2/final_test/conditions_fitting_data.json"
+    },
+    "6 force-field minimum of the small model against its quantum-chemical optimum": {
+     "limit": "within 5 deg in Zn-N2-S, Zn-N2-H and S-N2-H",
+     "value": {
+      "from_X": {
+       "Zn_N2_S": -8.422,
+       "Zn_N2_H": -2.742,
+       "S_N2_H": 0.388
+      },
+      "from_the_optimum": {
+       "Zn_N2_S": -8.261,
+       "Zn_N2_H": -2.65,
+       "S_N2_H": 0.369
+      }
+     },
+     "largest_abs_difference_deg": 8.422,
+     "optimum": {
+      "ZnN2S": 107.737,
+      "ZnN2H": 122.756,
+      "SN2H": 109.083
+     },
+     "as_built": {
+      "from_X": {
+       "Zn_N2_S": 2.174,
+       "Zn_N2_H": -15.255,
+       "S_N2_H": 3.739
+      },
+      "from_the_optimum": {
+       "Zn_N2_S": 2.409,
+       "Zn_N2_H": -15.23,
+       "S_N2_H": 3.754
+      }
+     },
+     "met": false,
+     "file": "md/qm/n2/final_test/conditions_fitting_data.json"
+    }
+   },
+   "failed": [
+    "5 leave-one-out error on the fitting set",
+    "6 force-field minimum of the small model against its quantum-chemical optimum"
+   ],
+   "not_evaluated": [
+    "1 test set, r.m.s. against one reference",
+    "2 test set, largest single deviation"
+   ],
+   "accepted": false,
+   "for_the_record": {
+    "Rx_against_X": {
+     "QM": 10.844,
+     "as_built": 14.22,
+     "new": 11.074,
+     "mismatch_before": 3.376,
+     "mismatch_after": 0.23
+    },
+    "inversion_path_against_X": {
+     "points": {
+      "a2": {
+       "signed_volume": 0.516,
+       "QM": 2.925,
+       "as_built": 4.692,
+       "new": 2.781
+      },
+      "a3": {
+       "signed_volume": 0.269,
+       "QM": 5.434,
+       "as_built": 10.29,
+       "new": 5.009
+      },
+      "a4": {
+       "signed_volume": -0.0,
+       "QM": 6.623,
+       "as_built": 13.76,
+       "new": 6.177
+      },
+      "a5": {
+       "signed_volume": -0.246,
+       "QM": 6.624,
+       "as_built": 13.708,
+       "new": 6.5
+      },
+      "a6": {
+       "signed_volume": -0.477,
+       "QM": 6.288,
+       "as_built": 11.565,
+       "new": 6.414
+      }
+     },
+     "flattest_point": "a4",
+     "highest_QM_point": "a5",
+     "cost_of_the_planar_nitrogen": {
+      "point": "a4",
+      "QM": 6.623,
+      "as_built": 13.76,
+      "new": 6.177
+     }
+    },
+    "hydrogen_moved_into_the_plane": {
+     "point": "d1",
+     "signed_volume": 0.0,
+     "QM": 0.462,
+     "as_built": 5.202,
+     "new": -0.472
+    },
+    "turn_about_Zn_N2_against_X": {
+     "e_p015": {
+      "QM": 2.063,
+      "as_built": 0.644,
+      "new": 2.049
+     },
+     "e_p030": {
+      "QM": 4.181,
+      "as_built": 1.757,
+      "new": 4.337
+     },
+     "e_m120": {
+      "QM": 1.511,
+      "as_built": 0.764,
+      "new": 0.764
+     },
+     "e_p120": {
+      "QM": -2.169,
+      "as_built": -1.655,
+      "new": -1.655
+     }
+    }
+   },
+   "fitting_rows_in_sample": {
+    "rms_against_one_reference": 1.1756,
+    "largest": 5.3386,
+    "largest_at": "n069",
+    "rms_about_the_mean": 1.1328,
+    "as_built_rms_against_one_reference": 3.2631,
+    "as_built_rms_about_the_mean": 3.2529,
+    "note": "in-sample for the candidate; NOT condition 1"
+   }
+  },
+  "second_step": {
+   "what": "candidate of the declared second step: md/qm/n2/n2_terms_new.frcmod (L5, ridge 0.01) with the charges fitted to two placements",
+   "frcmod_sha256": "a0aa950f00e4c620ac98acd71becbbe3cc53d8fd7b3a53f05ef1d1f4e1de02a4",
+   "conditions": {
+    "1 test set, r.m.s. against one reference": {
+     "limit": "at most 1.0 kcal/mol, at least 20 test points",
+     "value": null,
+     "met": "NOT EVALUATED: the test set was left unread",
+     "file": null
+    },
+    "2 test set, largest single deviation": {
+     "limit": "at most 2.5 kcal/mol",
+     "value": null,
+     "met": "NOT EVALUATED: the test set was left unread",
+     "file": null
+    },
+    "3 part A of gate G-R, 23 comparisons, two families": {
+     "limit": "at most 1.0 kcal/mol",
+     "value": 1.0923,
+     "single_reference_beside": 1.2012,
+     "largest": -1.8665,
+     "references": [
+      "e_p120",
+      "g3"
+     ],
+     "as_built": {
+      "rms": 2.52,
+      "single_reference_rms": 2.2309
+     },
+     "from_leave_one_out_errors": 1.1792,
+     "in_sample": true,
+     "met": false,
+     "file": "md/qm/n2/final_test/conditions_fitting_data.json"
+    },
+    "4 every parameter within the bounds of point 2, nothing else changed": {
+     "limit": "K 10 to 300; theta0 within 15 deg of the optimum; torsion and improper coefficients at most 5; periodicity 1 to 3",
+     "value": {
+      "angles": [
+       {
+        "angle": "ZnN2H",
+        "K": 23.884,
+        "theta0": 119.12805,
+        "optimum": 122.756,
+        "theta0_minus_optimum": -3.628
+       },
+       {
+        "angle": "SN2H",
+        "K": 49.799,
+        "theta0": 116.24305,
+        "optimum": 109.083,
+        "theta0_minus_optimum": 7.16
+       },
+       {
+        "angle": "ZnN2S",
+        "K": 16.101,
+        "theta0": 110.48005,
+        "optimum": 107.737,
+        "theta0_minus_optimum": 2.743
+       }
+      ],
+      "torsion_terms": [
+       {
+        "atoms": "NE2-ZN-N2-HN21",
+        "n": 3,
+        "PK": 0.3584,
+        "phase": 6.002
+       },
+       {
+        "atoms": "NE2-ZN-N2-HN21",
+        "n": 3,
+        "PK": 0.3584,
+        "phase": 6.002
+       },
+       {
+        "atoms": "ND1-ZN-N2-HN21",
+        "n": 3,
+        "PK": 0.3584,
+        "phase": 6.002
+       },
+       {
+        "atoms": "O2-S-N2-HN21",
+        "n": 2,
+        "PK": 0.0,
+        "phase": 0.0
+       },
+       {
+        "atoms": "O1-S-N2-HN21",
+        "n": 2,
+        "PK": 0.0,
+        "phase": 0.0
+       },
+       {
+        "atoms": "C4-S-N2-HN21",
+        "n": 1,
+        "PK": 1.0837,
+        "phase": 180.0001
+       },
+       {
+        "atoms": "C4-S-N2-HN21",
+        "n": 2,
+        "PK": 2.7938,
+        "phase": 0.0
+       },
+       {
+        "atoms": "C4-S-N2-HN21",
+        "n": 3,
+        "PK": 1.0345,
+        "phase": 0.0
+       },
+       {
+        "atoms": "NE2-ZN-N2-S",
+        "n": 3,
+        "PK": 0.3128,
+        "phase": 294.8801
+       },
+       {
+        "atoms": "NE2-ZN-N2-S",
+        "n": 3,
+        "PK": 0.3128,
+        "phase": 294.8801
+       },
+       {
+        "atoms": "ND1-ZN-N2-S",
+        "n": 3,
+        "PK": 0.3128,
+        "phase": 294.8801
+       },
+       {
+        "atoms": "ZN-N2-S-C4",
+        "n": 1,
+        "PK": 1.8832,
+        "phase": 180.0001
+       },
+       {
+        "atoms": "ZN-N2-S-C4",
+        "n": 2,
+        "PK": 0.4008,
+        "phase": 0.0
+       },
+       {
+        "atoms": "ZN-N2-S-C4",
+        "n": 3,
+        "PK": 0.4766,
+        "phase": 0.0
+       },
+       {
+        "atoms": "ZN-N2-S-O1",
+        "n": 3,
+        "PK": 0.0,
+        "phase": 0.0
+       },
+       {
+        "atoms": "ZN-N2-S-O2",
+        "n": 3,
+        "PK": 0.0,
+        "phase": 0.0
+       }
+      ],
+      "improper": [
+       {
+        "atoms": "ZN-HN21-N2-S",
+        "n": 2,
+        "PK": 0.5515,
+        "phase": 180.0001
+       }
+      ],
+      "outside_bounds": [],
+      "differences_the_plan_does_not_allow": []
+     },
+     "met": true,
+     "file": "md/qm/n2/final_test/conditions_fitting_data.json, topology_differences.json"
+    },
+    "5 leave-one-out error on the fitting set": {
+     "limit": "at most 1.0 kcal/mol",
+     "value": 1.1844,
+     "largest": 5.1075,
+     "largest_at": "n002",
+     "residual_rms": 1.0395,
+     "n_fitting_rows": 177,
+     "n_parameters": 17,
+     "against_one_reference": {
+      "reference": "n005",
+      "rms": 1.2217,
+      "largest": 5.3916
+     },
+     "the_delivered_file_is_this_fit": {
+      "largest_difference_kcal": 0.00044,
+      "holds": true
+     },
+     "met": false,
+     "file": "md/qm/n2/final_test/conditions_fitting_data.json"
+    },
+    "6 force-field minimum of the small model against its quantum-chemical optimum": {
+     "limit": "within 5 deg in Zn-N2-S, Zn-N2-H and S-N2-H",
+     "value": {
+      "from_X": {
+       "Zn_N2_S": -8.511,
+       "Zn_N2_H": -1.784,
+       "S_N2_H": 0.805
+      },
+      "from_the_optimum": {
+       "Zn_N2_S": -8.29,
+       "Zn_N2_H": -1.651,
+       "S_N2_H": 0.791
+      }
+     },
+     "largest_abs_difference_deg": 8.511,
+     "optimum": {
+      "ZnN2S": 107.737,
+      "ZnN2H": 122.756,
+      "SN2H": 109.083
+     },
+     "as_built": {
+      "from_X": {
+       "Zn_N2_S": 3.21,
+       "Zn_N2_H": -15.429,
+       "S_N2_H": 4.776
+      },
+      "from_the_optimum": {
+       "Zn_N2_S": 3.462,
+       "Zn_N2_H": -15.393,
+       "S_N2_H": 4.808
+      }
+     },
+     "met": false,
+     "file": "md/qm/n2/final_test/conditions_fitting_data.json"
+    }
+   },
+   "failed": [
+    "3 part A of gate G-R, 23 comparisons, two families",
+    "5 leave-one-out error on the fitting set",
+    "6 force-field minimum of the small model against its quantum-chemical optimum"
+   ],
+   "not_evaluated": [
+    "1 test set, r.m.s. against one reference",
+    "2 test set, largest single deviation"
+   ],
+   "accepted": false,
+   "for_the_record": {
+    "Rx_against_X": {
+     "QM": 10.844,
+     "as_built": 11.695,
+     "new": 10.858,
+     "mismatch_before": 0.851,
+     "mismatch_after": 0.013
+    },
+    "inversion_path_against_X": {
+     "points": {
+      "a2": {
+       "signed_volume": 0.516,
+       "QM": 2.925,
+       "as_built": 4.179,
+       "new": 2.726
+      },
+      "a3": {
+       "signed_volume": 0.269,
+       "QM": 5.434,
+       "as_built": 9.332,
+       "new": 4.96
+      },
+      "a4": {
+       "signed_volume": -0.0,
+       "QM": 6.623,
+       "as_built": 12.388,
+       "new": 6.218
+      },
+      "a5": {
+       "signed_volume": -0.246,
+       "QM": 6.624,
+       "as_built": 11.941,
+       "new": 6.608
+      },
+      "a6": {
+       "signed_volume": -0.477,
+       "QM": 6.288,
+       "as_built": 9.402,
+       "new": 6.48
+      }
+     },
+     "flattest_point": "a4",
+     "highest_QM_point": "a5",
+     "cost_of_the_planar_nitrogen": {
+      "point": "a4",
+      "QM": 6.623,
+      "as_built": 12.388,
+      "new": 6.218
+     }
+    },
+    "hydrogen_moved_into_the_plane": {
+     "point": "d1",
+     "signed_volume": 0.0,
+     "QM": 0.462,
+     "as_built": 4.008,
+     "new": -0.386
+    },
+    "turn_about_Zn_N2_against_X": {
+     "e_p015": {
+      "QM": 2.063,
+      "as_built": 0.886,
+      "new": 2.113
+     },
+     "e_p030": {
+      "QM": 4.181,
+      "as_built": 2.222,
+      "new": 4.485
+     },
+     "e_m120": {
+      "QM": 1.511,
+      "as_built": 1.025,
+      "new": 1.025
+     },
+     "e_p120": {
+      "QM": -2.169,
+      "as_built": -1.151,
+      "new": -1.151
+     }
+    }
+   },
+   "fitting_rows_in_sample": {
+    "rms_against_one_reference": 1.0762,
+    "largest": 5.051,
+    "largest_at": "n069",
+    "rms_about_the_mean": 1.0395,
+    "as_built_rms_against_one_reference": 3.0975,
+    "as_built_rms_about_the_mean": 2.7111,
+    "note": "in-sample for the candidate; NOT condition 1"
+   }
+  }
+ },
+ "every_candidate_of_the_ladder": {
+  "charges_as_built": {
+   "smallest_leave_one_out_rms": 1.2947,
+   "any_at_most_1": false,
+   "n": 15,
+   "largest_difference_from_the_builder": 0.0
+  },
+  "second_step": {
+   "smallest_leave_one_out_rms": 1.1844,
+   "any_at_most_1": false,
+   "n": 15,
+   "largest_difference_from_the_builder": 0.0
+  }
+ },
+ "integrity": {
+  "file": "md/qm/n2/final_test/integrity.json",
+  "split_sha256": "d38e01b5d47e7abbbc25556dba16721ac1bd078cff4d64b634d814e6e09eb9d7",
+  "split_equal_to_the_recorded": true,
+  "split_equal_on_the_machine": true,
+  "split_drawn_again_from_seed": true,
+  "split_written": "2026-10-06 02:32:25 PM IST",
+  "first_new_single_point_ended": "2026-10-06 02:42:00 PM IST",
+  "points_finished": 188,
+  "fit": 141,
+  "test": 47,
+  "all_converged_first_attempt": true,
+  "fitting_files_with_other_settings": [],
+  "test_files_in_the_repository": [],
+  "copies_of_test_results_elsewhere": [],
+  "fitting_points_left_out_of_the_fits": {
+   "fit": [],
+   "fit_ff2": []
+  }
+ },
+ "own_route": {
+  "file": "md/qm/n2/final_test/mm_energies.json",
+  "route_A_against_route_B": {
+   "T1_minus_route_B": {
+    "mean": 7.71233241256129e-06,
+    "largest_about_the_mean": 5.1279871306737855e-05,
+    "largest_abs": 5.899220371929914e-05
+   },
+   "T2_minus_route_B": {
+    "mean": 7.106682956235813e-06,
+    "largest_about_the_mean": 4.718464659135971e-05,
+    "largest_abs": 5.4291329547595524e-05
+   }
+  },
+  "sander_against_openmm_largest": 0.0017046386168573235,
+  "as_built_against_the_table_of_gate_G_R": {
+   "column": "E_MM (relative to X, md/qm/gr_mm.py)",
+   "n": 36,
+   "largest_abs_difference": 0.0005430538925832451
+  },
+  "d3_gate_routine_against_s_dftd3_largest_hartree": 3.8682945735502017e-13,
+  "d3_stored_against_recomputed_largest_hartree": 5.922540236014129e-12
+ },
+ "designer_gate_script_in_preview_mode": {
+  "charges_as_built": {
+   "verdict": "conditions 3 to 6 and the pre-test do not all hold",
+   "failed": [
+    "c5_leave_one_out",
+    "c6_minimum",
+    "pre_test_one_reference"
+   ],
+   "largest_difference_from_the_examiner": 0.0009999999999998899
+  },
+  "second_step": {
+   "verdict": "conditions 3 to 6 and the pre-test do not all hold",
+   "failed": [
+    "c3_part_A",
+    "c5_leave_one_out",
+    "c6_minimum",
+    "pre_test_one_reference"
+   ],
+   "largest_difference_from_the_examiner": 0.0020000000000000018
+  }
+ },
+ "for_the_record_no_weight_in_the_verdict": {
+  "relaxed_geometries": {
+   "file": "md/qm/n2/final_test/behaviour.json",
+   "topologies": {
+    "T0": "terms and charges as built",
+    "T1": "candidate, charges as built",
+    "T0b": "charges of two placements, terms as built",
+    "T2": "candidate of the second step"
+   },
+   "flattest_nitrogen_of_the_quantum_chemical_run_from_Rx": {
+    "step": 15,
+    "signed_volume": -0.0292,
+    "QM": 5.631,
+    "force_field": {
+     "T0": 8.031,
+     "T1": 3.708,
+     "T0b": 6.224,
+     "T2": 2.946
+    },
+    "force_field_minus_QM": {
+     "T0": 2.4,
+     "T1": -1.923,
+     "T0b": 0.593,
+     "T2": -2.685
+    }
+   },
+   "quantum_chemical_run_from_Rx_last_step": {
+    "step": 66,
+    "time": "2026-10-06 06:49:52 PM IST",
+    "signed_volume": 0.6192,
+    "grad_rms_ligand": 0.00013417516936513923,
+    "Zn_N2_S": 104.604,
+    "Zn_N2_H": 125.547,
+    "S_N2_H": 109.857,
+    "rmsd_ligand_heavy_from_X_run": 0.1237,
+    "e_total_minus_X_run_kcal_mol": -0.011
+   },
+   "rms_along_the_run_from_X": {
+    "T0": 4.237,
+    "T1": 2.328,
+    "T0b": 4.245,
+    "T2": 2.541
+   },
+   "rms_along_the_run_from_Rx": {
+    "T0": 3.977,
+    "T1": 2.625,
+    "T0b": 4.331,
+    "T2": 2.916
+   },
+   "own_relaxation_from_Rx": {
+    "T0": {
+     "R_like_minimum_of_its_own": false,
+     "signed_volume_at_the_end": 0.7832,
+     "end_minus_the_minimum_from_X_kcal": -0.0,
+     "lowest_eigenvalue_of_the_ligand_hessian": 0.0466
+    },
+    "T1": {
+     "R_like_minimum_of_its_own": false,
+     "signed_volume_at_the_end": 0.7802,
+     "end_minus_the_minimum_from_X_kcal": 0.0,
+     "lowest_eigenvalue_of_the_ligand_hessian": 0.11
+    },
+    "T0b": {
+     "R_like_minimum_of_its_own": false,
+     "signed_volume_at_the_end": 0.7635,
+     "end_minus_the_minimum_from_X_kcal": -0.0,
+     "lowest_eigenvalue_of_the_ligand_hessian": 0.0445
+    },
+    "T2": {
+     "R_like_minimum_of_its_own": true,
+     "signed_volume_at_the_end": -0.4119,
+     "end_minus_the_minimum_from_X_kcal": 2.276,
+     "lowest_eigenvalue_of_the_ligand_hessian": 0.0764
+    }
+   }
+  },
+  "built_protein_systems_second_step": {
+   "file": "md/qm/n2/final_test/built_system_second_step.json",
+   "starts": {
+    "X": {
+     "differences_the_plan_does_not_allow": [],
+     "angles": 3,
+     "torsion_quadruples": 8,
+     "impropers": 1,
+     "bonds": 0,
+     "pairs_1_4": 0,
+     "charges_changed": 58,
+     "residues_with_changed_charges": [
+      "HD193",
+      "HD295",
+      "HE1118",
+      "SN1261",
+      "ZN1260"
+     ],
+     "builder_checks_failed": [
+      "torsions_through_zinc_all_zero",
+      "zn_n2_h_is_not_the_120_deg_of_step_2e"
+     ],
+     "real_system_checksums": [
+      {
+       "ok": 6,
+       "of": 6,
+       "exit": 0
+      },
+      {
+       "ok": 6,
+       "of": 6,
+       "exit": 0
+      }
+     ]
+    },
+    "R": {
+     "differences_the_plan_does_not_allow": [],
+     "angles": 3,
+     "torsion_quadruples": 8,
+     "impropers": 1,
+     "bonds": 0,
+     "pairs_1_4": 0,
+     "charges_changed": 58,
+     "residues_with_changed_charges": [
+      "HD193",
+      "HD295",
+      "HE1118",
+      "SN1261",
+      "ZN1260"
+     ],
+     "builder_checks_failed": [
+      "torsions_through_zinc_all_zero",
+      "zn_n2_h_is_not_the_120_deg_of_step_2e"
+     ],
+     "real_system_checksums": [
+      {
+       "ok": 6,
+       "of": 6,
+       "exit": 0
+      },
+      {
+       "ok": 6,
+       "of": 6,
+       "exit": 0
+      }
+     ]
+    }
+   }
+  },
+  "built_protein_systems_charges_as_built": {
+   "file": "md/qm/n2/final_test/built_system_charges_as_built.json",
+   "starts": {
+    "X": {
+     "differences_the_plan_does_not_allow": [],
+     "angles": 3,
+     "torsion_quadruples": 8,
+     "impropers": 1,
+     "bonds": 0,
+     "pairs_1_4": 0,
+     "charges_changed": 0,
+     "residues_with_changed_charges": [],
+     "builder_checks_failed": [
+      "torsions_through_zinc_all_zero"
+     ],
+     "real_system_checksums": [
+      {
+       "ok": 6,
+       "of": 6,
+       "exit": 0
+      },
+      {
+       "ok": 6,
+       "of": 6,
+       "exit": 0
+      }
+     ]
+    },
+    "R": {
+     "differences_the_plan_does_not_allow": [],
+     "angles": 3,
+     "torsion_quadruples": 8,
+     "impropers": 1,
+     "bonds": 0,
+     "pairs_1_4": 0,
+     "charges_changed": 0,
+     "residues_with_changed_charges": [],
+     "builder_checks_failed": [
+      "torsions_through_zinc_all_zero"
+     ],
+     "real_system_checksums": [
+      {
+       "ok": 6,
+       "of": 6,
+       "exit": 0
+      },
+      {
+       "ok": 6,
+       "of": 6,
+       "exit": 0
+      }
+     ]
+    }
+   }
+  },
+  "smoke_test_20_ps_second_step": {
+   "file": "md/qm/n2/final_test/stability_second_step.json",
+   "what": "20 ps smoke tests of throwaway protein systems with candidate terms at N2 (NOT ACCEPTED); for the record of gate G-R2, no weight in the verdict; not an equilibrated run and not a result",
+   "starts": {
+    "X": {
+     "done": true,
+     "finite": true,
+     "ps_at_4_fs": 20.0,
+     "sign_changes_of_the_signed_volume": 2,
+     "frames_with_signed_volume_below_0_3": 11,
+     "frames_with_signed_volume_above_minus_0_3": 100,
+     "frames_d1_above_6_7_A": 6,
+     "frames_d2_below_5_2_A": 8,
+     "frames": 100,
+     "means": {
+      "Zn_N2": 1.921,
+      "Zn_H94": 2.024,
+      "Zn_H96": 2.047,
+      "Zn_H119": 2.03,
+      "Zn_N2_S": 111.66,
+      "Zn_N2_H": 120.453,
+      "S_N2_H": 113.215,
+      "signed_volume": 0.512,
+      "d1_N1_Phe131CZ": 5.388,
+      "d2_N1_Asn67OD1": 6.95,
+      "N2_Thr199OG1": 2.953,
+      "Zn_nearest_O": 2.934,
+      "C4_S_N2": 109.42,
+      "temperature_K": 300.07
+     },
+     "signed_volume_min_max": [
+      -0.103,
+      0.818
+     ]
+    },
+    "R": {
+     "done": true,
+     "finite": true,
+     "ps_at_4_fs": 20.0,
+     "sign_changes_of_the_signed_volume": 25,
+     "frames_with_signed_volume_below_0_3": 87,
+     "frames_with_signed_volume_above_minus_0_3": 78,
+     "frames_d1_above_6_7_A": 88,
+     "frames_d2_below_5_2_A": 91,
+     "frames": 100,
+     "means": {
+      "Zn_N2": 1.913,
+      "Zn_H94": 2.028,
+      "Zn_H96": 2.048,
+      "Zn_H119": 2.019,
+      "Zn_N2_S": 120.745,
+      "Zn_N2_H": 120.846,
+      "S_N2_H": 114.309,
+      "signed_volume": -0.062,
+      "d1_N1_Phe131CZ": 8.035,
+      "d2_N1_Asn67OD1": 4.187,
+      "N2_Thr199OG1": 2.88,
+      "Zn_nearest_O": 3.34,
+      "C4_S_N2": 109.907,
+      "temperature_K": 300.314
+     },
+     "signed_volume_min_max": [
+      -0.486,
+      0.698
+     ]
+    }
+   }
+  },
+  "smoke_test_20_ps_charges_as_built": {
+   "file": "md/qm/n2/final_test/stability_charges_as_built.json",
+   "what": "20 ps smoke tests of throwaway protein systems with candidate terms at N2 (NOT ACCEPTED); for the record of gate G-R2, no weight in the verdict; not an equilibrated run and not a result",
+   "starts": {
+    "X": {
+     "done": false,
+     "finite": null,
+     "ps_at_4_fs": null,
+     "sign_changes_of_the_signed_volume": null,
+     "frames_with_signed_volume_below_0_3": null,
+     "frames_with_signed_volume_above_minus_0_3": null,
+     "frames_d1_above_6_7_A": null,
+     "frames_d2_below_5_2_A": null,
+     "frames": null,
+     "means": {},
+     "signed_volume_min_max": [
+      null,
+      null
+     ]
+    },
+    "R": {
+     "done": true,
+     "finite": true,
+     "ps_at_4_fs": 20.0,
+     "sign_changes_of_the_signed_volume": 11,
+     "frames_with_signed_volume_below_0_3": 98,
+     "frames_with_signed_volume_above_minus_0_3": 33,
+     "frames_d1_above_6_7_A": 100,
+     "frames_d2_below_5_2_A": 92,
+     "frames": 100,
+     "means": {
+      "Zn_N2": 1.942,
+      "Zn_H94": 2.039,
+      "Zn_H96": 2.063,
+      "Zn_H119": 2.026,
+      "Zn_N2_S": 122.985,
+      "Zn_N2_H": 116.011,
+      "S_N2_H": 113.34,
+      "signed_volume": -0.336,
+      "d1_N1_Phe131CZ": 9.543,
+      "d2_N1_Asn67OD1": 4.435,
+      "N2_Thr199OG1": 2.901,
+      "Zn_nearest_O": 3.535,
+      "C4_S_N2": 110.349,
+      "temperature_K": 300.301
+     },
+     "signed_volume_min_max": [
+      -0.687,
+      0.528
+     ]
+    }
+   }
+  },
+  "smoke_test_20_ps_as_built": {
+   "file": "md/qm/n2/final_test/stability_as_built.json",
+   "what": "20 ps smoke tests, CONTROL: the systems as built; for the record of gate G-R2, no weight in the verdict; not an equilibrated run and not a result",
+   "starts": {
+    "X": {
+     "done": true,
+     "finite": true,
+     "ps_at_4_fs": 20.0,
+     "sign_changes_of_the_signed_volume": 0,
+     "frames_with_signed_volume_below_0_3": 0,
+     "frames_with_signed_volume_above_minus_0_3": 100,
+     "frames_d1_above_6_7_A": 0,
+     "frames_d2_below_5_2_A": 0,
+     "frames": 100,
+     "means": {
+      "Zn_N2": 1.937,
+      "Zn_H94": 2.018,
+      "Zn_H96": 2.052,
+      "Zn_H119": 2.03,
+      "Zn_N2_S": 113.762,
+      "Zn_N2_H": 105.859,
+      "S_N2_H": 113.258,
+      "signed_volume": 0.711,
+      "d1_N1_Phe131CZ": 4.505,
+      "d2_N1_Asn67OD1": 7.311,
+      "N2_Thr199OG1": 2.949,
+      "Zn_nearest_O": 2.986,
+      "C4_S_N2": 109.481,
+      "temperature_K": 299.705
+     },
+     "signed_volume_min_max": [
+      0.469,
+      0.858
+     ]
+    },
+    "R": {
+     "done": true,
+     "finite": true,
+     "ps_at_4_fs": 20.0,
+     "sign_changes_of_the_signed_volume": 2,
+     "frames_with_signed_volume_below_0_3": 100,
+     "frames_with_signed_volume_above_minus_0_3": 9,
+     "frames_d1_above_6_7_A": 100,
+     "frames_d2_below_5_2_A": 100,
+     "frames": 100,
+     "means": {
+      "Zn_N2": 1.944,
+      "Zn_H94": 2.022,
+      "Zn_H96": 2.071,
+      "Zn_H119": 2.034,
+      "Zn_N2_S": 122.542,
+      "Zn_N2_H": 108.138,
+      "S_N2_H": 116.574,
+      "signed_volume": -0.486,
+      "d1_N1_Phe131CZ": 9.967,
+      "d2_N1_Asn67OD1": 2.891,
+      "N2_Thr199OG1": 2.897,
+      "Zn_nearest_O": 3.646,
+      "C4_S_N2": 110.486,
+      "temperature_K": 300.248
+     },
+     "signed_volume_min_max": [
+      -0.725,
+      0.082
+     ]
+    }
+   }
+  }
+ },
+ "files": {
+  "behaviour.json": "29a71df4a4e239aae6ee2224740e821741f7c677bd1450aa79c40313fdbba77f",
+  "built_system_charges_as_built.json": "11125a30ea14e23009bde594defa4b4fdd80facb1ce710116c0a6e58a0dc44e6",
+  "built_system_second_step.json": "aed806472c0a6feb7a0b55af9887767d6a2bc2618b30fb52d48c028d981d8cdf",
+  "comparison_with_the_designer.json": "535e21fd38fd007083a02827e0eb25ea700518079f2404618d9dd6727acf91f2",
+  "conditions_fitting_data.json": "faa3d0451bce0f44b8dba059c06097b512f112b3d2ce06c9f99468d5d4675ab2",
+  "d3_check.json": "9d532e47e99c2e6736293c6e812ac006ca297dff29a6dc220e89a9f3e65ea0a7",
+  "first_observation.json": "83274cda112dc9c2602b10da08656aa9f4df17667c94fcca4712f615934c2702",
+  "integrity.json": "2e791b6fd98df8e3287b905937a4289f433f109fd4fae76ba2441e2b7ef03690",
+  "mm_energies.json": "1a76506d3c0bbcce754de7f4409dc8b69b14abda3ecf3b377ad8df861eafdef2",
+  "n2_exam_behaviour.py": "0339c92a591e0be6586420f867502af481a6810ea2205a70420ce544987f3f66",
+  "n2_exam_build.py": "c52fabd6085f7370da0eb03ddd123316b7da4c9e15789d0a6f1b3d0475d9587a",
+  "n2_exam_compare.py": "4068095ab8fc5295d344b579e84249d487d30f078a6fc909a3f936f2375116a0",
+  "n2_exam_conditions.py": "8916ec749ad1f603c2793cdba79f0826ba4f4cc4576156cd69e4f7b2d605e198",
+  "n2_exam_final.py": "9daf2c99c2a56aa48f8a862a4be854bf4878a532039a52212aaba003f316ad98",
+  "n2_exam_integrity.py": "b01fb274175dc81f506612d3f8b326f5ebbaa791f2ea3a0eafad996e59c274a9",
+  "n2_exam_md.py": "d9dcbd4dec2c61ce040d057692204d513377a024632bc782bc8f576a9498293a",
+  "n2_exam_mm.py": "a0bf940b7c43856e8716bb5d69503f4d0672af23000aaa6206099b4d3c35b1e2",
+  "n2_exam_result.py": "836861f88cff0622303b7db37345750a74351075a4965e84481f0d8d566d478c",
+  "stability_as_built.json": "90973ce05181dc957a4b56652ba4624613b9c7671933d030f0cba29a1b8cfe4a",
+  "stability_charges_as_built.json": "755dd2295c5c5da2200ae89bc0597c6b1cd7950dbc604b0ffedc88f0bb9e0daf",
+  "stability_second_step.json": "df5faec2a73e04449f3c7aa98abde6789791ed0ab0004718fbd3288050fb0c44",
+  "topology_differences.json": "2eedc4e311b916969f07e721fb8a02498ffbdb1d9483e21f849b4bad45a3712c"
+ },
+ "limits": {
+  "test_rms": 1.0,
+  "test_largest": 2.5,
+  "part_A_rms": 1.0,
+  "loo_rms": 1.0,
+  "minimum_deg": 5.0,
+  "k_angle": [
+   10.0,
+   300.0
+  ],
+  "theta0_window_deg": 15.0,
+  "torsion_abs_max": 5.0,
+  "improper_abs_max": 5.0
+ }
+}

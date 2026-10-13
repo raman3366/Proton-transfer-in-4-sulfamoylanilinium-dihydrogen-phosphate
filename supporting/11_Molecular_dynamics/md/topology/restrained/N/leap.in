@@ -1,0 +1,83 @@
+source leaprc.protein.ff14SB
+source leaprc.gaff2
+source leaprc.water.tip3p
+loadamberparams /root/workspace/cqc-4-sulfamoylanilinium-dihydrogen-phosphate/md/ligand/sfa_anion_gaff2.frcmod
+loadamberparams /root/workspace/cqc-4-sulfamoylanilinium-dihydrogen-phosphate/md/ligand/sfa_anion_repair.frcmod
+SAN = loadmol2 /root/workspace/cqc-4-sulfamoylanilinium-dihydrogen-phosphate/md/ligand/sfa_anion.mol2
+sys = loadpdb /root/cqc-sfa-md/systems/restrained/N/build/assembly.pdb
+check sys
+charge sys
+saveamberparm sys /root/cqc-sfa-md/systems/restrained/N/build/dry.prmtop /root/cqc-sfa-md/systems/restrained/N/build/dry.inpcrd
+solvateOct sys TIP3PBOX 10.0
+remove sys sys.1830
+remove sys sys.902
+remove sys sys.10118
+remove sys sys.2340
+remove sys sys.3855
+remove sys sys.3635
+remove sys sys.5120
+remove sys sys.6036
+remove sys sys.10950
+remove sys sys.9616
+remove sys sys.5741
+remove sys sys.7666
+remove sys sys.1323
+remove sys sys.6754
+remove sys sys.5040
+remove sys sys.10172
+remove sys sys.853
+remove sys sys.7184
+remove sys sys.9878
+remove sys sys.10921
+remove sys sys.5960
+remove sys sys.1257
+remove sys sys.3554
+remove sys sys.6342
+remove sys sys.3714
+remove sys sys.8075
+remove sys sys.6061
+remove sys sys.8109
+remove sys sys.10657
+remove sys sys.4801
+remove sys sys.10279
+remove sys sys.6817
+remove sys sys.9363
+remove sys sys.12337
+remove sys sys.8955
+remove sys sys.2375
+remove sys sys.3206
+remove sys sys.9683
+remove sys sys.10038
+remove sys sys.12392
+remove sys sys.4379
+remove sys sys.10833
+remove sys sys.2341
+remove sys sys.9610
+remove sys sys.9809
+remove sys sys.4399
+remove sys sys.11512
+remove sys sys.2353
+remove sys sys.11806
+remove sys sys.10469
+remove sys sys.11047
+remove sys sys.11691
+remove sys sys.8670
+remove sys sys.7334
+remove sys sys.11912
+remove sys sys.3342
+remove sys sys.4639
+remove sys sys.4461
+remove sys sys.3499
+remove sys sys.9392
+remove sys sys.7570
+remove sys sys.1228
+remove sys sys.6465
+remove sys sys.3544
+remove sys sys.8374
+remove sys sys.11275
+remove sys sys.10097
+ions = loadpdb /root/cqc-sfa-md/systems/restrained/N/build/ions.pdb
+sys = combine { sys ions }
+charge sys
+saveamberparm sys /root/cqc-sfa-md/systems/restrained/N/build/system_tleap.prmtop /root/cqc-sfa-md/systems/restrained/N/system.inpcrd
+quit

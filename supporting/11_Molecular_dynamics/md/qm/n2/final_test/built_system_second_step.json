@@ -1,0 +1,601 @@
+{
+ "what": "THROWAWAY builds of the protein systems with a candidate file of terms at N2 (NOT ACCEPTED), and their comparison with the systems as built; for the record of gate G-R2, no weight in the verdict",
+ "written": "2026-10-06 07:12:35 PM IST",
+ "candidate": "second_step",
+ "frcmod": "/root/workspace/cqc-4-sulfamoylanilinium-dihydrogen-phosphate/md/qm/n2/n2_terms_new.frcmod",
+ "frcmod_sha256": "a0aa950f00e4c620ac98acd71becbbe3cc53d8fd7b3a53f05ef1d1f4e1de02a4",
+ "mcpb_dir": "/root/workspace/cqc-4-sulfamoylanilinium-dihydrogen-phosphate/md/qm/n2/charges2/mcpb_2e_two",
+ "builder": {
+  "script": "md/build_topology.py",
+  "sha256": "b858d1d1fe1b6006602ab29b2be68328efa6f05315d53cb1b9fb6e506710fbe4"
+ },
+ "work": "/tmp/claude-0/-root-workspace-cqc-4-sulfamoylanilinium-dihydrogen-phosphate/82cc65d7-a11f-4d60-91ee-436dc9534941/scratchpad/n2/final/build_second_step",
+ "starts": {
+  "X": {
+   "real_system_checksums_before": {
+    "ok": 6,
+    "of": 6,
+    "exit": 0
+   },
+   "checks_failed": [
+    "torsions_through_zinc_all_zero",
+    "zn_n2_h_is_not_the_120_deg_of_step_2e"
+   ],
+   "n_checks": 29,
+   "checks_passed": 21,
+   "real_system_checksums_after": {
+    "ok": 6,
+    "of": 6,
+    "exit": 0
+   },
+   "sections": {
+    "n": 44,
+    "identical_text": 33,
+    "different": [
+     "ANGLE_EQUIL_VALUE",
+     "ANGLE_FORCE_CONSTANT",
+     "CHARGE",
+     "DIHEDRALS_INC_HYDROGEN",
+     "DIHEDRALS_WITHOUT_HYDROGEN",
+     "DIHEDRAL_FORCE_CONSTANT",
+     "DIHEDRAL_PERIODICITY",
+     "DIHEDRAL_PHASE",
+     "POINTERS",
+     "SCEE_SCALE_FACTOR",
+     "SCNB_SCALE_FACTOR"
+    ]
+   },
+   "comparison": {
+    "atoms": true,
+    "charges_changed": {
+     "n": 58,
+     "residues": [
+      "HD193",
+      "HD295",
+      "HE1118",
+      "SN1261",
+      "ZN1260"
+     ],
+     "largest": 0.156061,
+     "total_before": 0.0,
+     "total_after": -0.0
+    },
+    "bonds": {
+     "n_before": 40900,
+     "n_after": 40900,
+     "n_different": 0,
+     "different": []
+    },
+    "angles": {
+     "n_before": 7539,
+     "n_after": 7539,
+     "n_different": 3,
+     "different": [
+      {
+       "atoms": "ZN1260:ZN-SN1261:N2-SN1261:S",
+       "before": [
+        50.0,
+        117.5501
+       ],
+       "after": [
+        16.101,
+        110.48
+       ]
+      },
+      {
+       "atoms": "ZN1260:ZN-SN1261:N2-SN1261:HN21",
+       "before": [
+        50.0,
+        107.407
+       ],
+       "after": [
+        23.884,
+        119.1281
+       ]
+      },
+      {
+       "atoms": "SN1261:S-SN1261:N2-SN1261:HN21",
+       "before": [
+        61.55,
+        118.0591
+       ],
+       "after": [
+        49.799,
+        116.243
+       ]
+      }
+     ]
+    },
+    "proper": {
+     "n_before": 11142,
+     "n_after": 11142,
+     "n_different": 8,
+     "different": [
+      {
+       "atoms": "HD193:NE2-ZN1260:ZN-SN1261:N2-SN1261:S",
+       "before": [
+        [
+         3,
+         0.0,
+         0.0
+        ]
+       ],
+       "after": [
+        [
+         3,
+         0.3128,
+         294.88
+        ]
+       ]
+      },
+      {
+       "atoms": "HD193:NE2-ZN1260:ZN-SN1261:N2-SN1261:HN21",
+       "before": [
+        [
+         3,
+         0.0,
+         0.0
+        ]
+       ],
+       "after": [
+        [
+         3,
+         0.3584,
+         6.002
+        ]
+       ]
+      },
+      {
+       "atoms": "HD295:NE2-ZN1260:ZN-SN1261:N2-SN1261:S",
+       "before": [
+        [
+         3,
+         0.0,
+         0.0
+        ]
+       ],
+       "after": [
+        [
+         3,
+         0.3128,
+         294.88
+        ]
+       ]
+      },
+      {
+       "atoms": "HD295:NE2-ZN1260:ZN-SN1261:N2-SN1261:HN21",
+       "before": [
+        [
+         3,
+         0.0,
+         0.0
+        ]
+       ],
+       "after": [
+        [
+         3,
+         0.3584,
+         6.002
+        ]
+       ]
+      },
+      {
+       "atoms": "HE1118:ND1-ZN1260:ZN-SN1261:N2-SN1261:S",
+       "before": [
+        [
+         3,
+         0.0,
+         0.0
+        ]
+       ],
+       "after": [
+        [
+         3,
+         0.3128,
+         294.88
+        ]
+       ]
+      },
+      {
+       "atoms": "HE1118:ND1-ZN1260:ZN-SN1261:N2-SN1261:HN21",
+       "before": [
+        [
+         3,
+         0.0,
+         0.0
+        ]
+       ],
+       "after": [
+        [
+         3,
+         0.3584,
+         6.002
+        ]
+       ]
+      },
+      {
+       "atoms": "ZN1260:ZN-SN1261:N2-SN1261:S-SN1261:C4",
+       "before": [
+        [
+         3,
+         0.0,
+         0.0
+        ]
+       ],
+       "after": [
+        [
+         1,
+         1.8832,
+         180.0
+        ],
+        [
+         2,
+         0.4008,
+         0.0
+        ],
+        [
+         3,
+         0.4766,
+         0.0
+        ]
+       ]
+      },
+      {
+       "atoms": "SN1261:C4-SN1261:S-SN1261:N2-SN1261:HN21",
+       "before": [
+        [
+         1,
+         0.2624,
+         180.0
+        ],
+        [
+         2,
+         2.703,
+         0.0
+        ]
+       ],
+       "after": [
+        [
+         1,
+         1.0837,
+         180.0
+        ],
+        [
+         2,
+         2.7938,
+         0.0
+        ],
+        [
+         3,
+         1.0345,
+         0.0
+        ]
+       ]
+      }
+     ]
+    },
+    "improper": {
+     "n_before": 857,
+     "n_after": 858,
+     "n_different": 1,
+     "different": [
+      {
+       "atoms": "ZN1260:ZN-SN1261:HN21-SN1261:N2-SN1261:S",
+       "before": null,
+       "after": [
+        [
+         2,
+         0.5515,
+         180.0
+        ]
+       ]
+      }
+     ]
+    },
+    "pairs14": {
+     "n_before": 10878,
+     "n_after": 10878,
+     "n_different": 0,
+     "different": []
+    }
+   },
+   "differences_the_plan_does_not_allow": [],
+   "coordinates_identical": true,
+   "prmtop_sha256": "15784eb0e0cf5fde90ab0afdaa01dff58e1441fca0f54db16c6ae0bc9b77d53d",
+   "system": "/tmp/claude-0/-root-workspace-cqc-4-sulfamoylanilinium-dihydrogen-phosphate/82cc65d7-a11f-4d60-91ee-436dc9534941/scratchpad/n2/final/build_second_step/systems/bonded_2e/X"
+  },
+  "R": {
+   "real_system_checksums_before": {
+    "ok": 6,
+    "of": 6,
+    "exit": 0
+   },
+   "checks_failed": [
+    "torsions_through_zinc_all_zero",
+    "zn_n2_h_is_not_the_120_deg_of_step_2e"
+   ],
+   "n_checks": 29,
+   "checks_passed": 21,
+   "real_system_checksums_after": {
+    "ok": 6,
+    "of": 6,
+    "exit": 0
+   },
+   "sections": {
+    "n": 44,
+    "identical_text": 33,
+    "different": [
+     "ANGLE_EQUIL_VALUE",
+     "ANGLE_FORCE_CONSTANT",
+     "CHARGE",
+     "DIHEDRALS_INC_HYDROGEN",
+     "DIHEDRALS_WITHOUT_HYDROGEN",
+     "DIHEDRAL_FORCE_CONSTANT",
+     "DIHEDRAL_PERIODICITY",
+     "DIHEDRAL_PHASE",
+     "POINTERS",
+     "SCEE_SCALE_FACTOR",
+     "SCNB_SCALE_FACTOR"
+    ]
+   },
+   "comparison": {
+    "atoms": true,
+    "charges_changed": {
+     "n": 58,
+     "residues": [
+      "HD193",
+      "HD295",
+      "HE1118",
+      "SN1261",
+      "ZN1260"
+     ],
+     "largest": 0.156061,
+     "total_before": 0.0,
+     "total_after": -0.0
+    },
+    "bonds": {
+     "n_before": 40855,
+     "n_after": 40855,
+     "n_different": 0,
+     "different": []
+    },
+    "angles": {
+     "n_before": 7539,
+     "n_after": 7539,
+     "n_different": 3,
+     "different": [
+      {
+       "atoms": "ZN1260:ZN-SN1261:N2-SN1261:S",
+       "before": [
+        50.0,
+        117.5501
+       ],
+       "after": [
+        16.101,
+        110.48
+       ]
+      },
+      {
+       "atoms": "ZN1260:ZN-SN1261:N2-SN1261:HN21",
+       "before": [
+        50.0,
+        107.407
+       ],
+       "after": [
+        23.884,
+        119.1281
+       ]
+      },
+      {
+       "atoms": "SN1261:S-SN1261:N2-SN1261:HN21",
+       "before": [
+        61.55,
+        118.0591
+       ],
+       "after": [
+        49.799,
+        116.243
+       ]
+      }
+     ]
+    },
+    "proper": {
+     "n_before": 11142,
+     "n_after": 11142,
+     "n_different": 8,
+     "different": [
+      {
+       "atoms": "HD193:NE2-ZN1260:ZN-SN1261:N2-SN1261:S",
+       "before": [
+        [
+         3,
+         0.0,
+         0.0
+        ]
+       ],
+       "after": [
+        [
+         3,
+         0.3128,
+         294.88
+        ]
+       ]
+      },
+      {
+       "atoms": "HD193:NE2-ZN1260:ZN-SN1261:N2-SN1261:HN21",
+       "before": [
+        [
+         3,
+         0.0,
+         0.0
+        ]
+       ],
+       "after": [
+        [
+         3,
+         0.3584,
+         6.002
+        ]
+       ]
+      },
+      {
+       "atoms": "HD295:NE2-ZN1260:ZN-SN1261:N2-SN1261:S",
+       "before": [
+        [
+         3,
+         0.0,
+         0.0
+        ]
+       ],
+       "after": [
+        [
+         3,
+         0.3128,
+         294.88
+        ]
+       ]
+      },
+      {
+       "atoms": "HD295:NE2-ZN1260:ZN-SN1261:N2-SN1261:HN21",
+       "before": [
+        [
+         3,
+         0.0,
+         0.0
+        ]
+       ],
+       "after": [
+        [
+         3,
+         0.3584,
+         6.002
+        ]
+       ]
+      },
+      {
+       "atoms": "HE1118:ND1-ZN1260:ZN-SN1261:N2-SN1261:S",
+       "before": [
+        [
+         3,
+         0.0,
+         0.0
+        ]
+       ],
+       "after": [
+        [
+         3,
+         0.3128,
+         294.88
+        ]
+       ]
+      },
+      {
+       "atoms": "HE1118:ND1-ZN1260:ZN-SN1261:N2-SN1261:HN21",
+       "before": [
+        [
+         3,
+         0.0,
+         0.0
+        ]
+       ],
+       "after": [
+        [
+         3,
+         0.3584,
+         6.002
+        ]
+       ]
+      },
+      {
+       "atoms": "ZN1260:ZN-SN1261:N2-SN1261:S-SN1261:C4",
+       "before": [
+        [
+         3,
+         0.0,
+         0.0
+        ]
+       ],
+       "after": [
+        [
+         1,
+         1.8832,
+         180.0
+        ],
+        [
+         2,
+         0.4008,
+         0.0
+        ],
+        [
+         3,
+         0.4766,
+         0.0
+        ]
+       ]
+      },
+      {
+       "atoms": "SN1261:C4-SN1261:S-SN1261:N2-SN1261:HN21",
+       "before": [
+        [
+         1,
+         0.2624,
+         180.0
+        ],
+        [
+         2,
+         2.703,
+         0.0
+        ]
+       ],
+       "after": [
+        [
+         1,
+         1.0837,
+         180.0
+        ],
+        [
+         2,
+         2.7938,
+         0.0
+        ],
+        [
+         3,
+         1.0345,
+         0.0
+        ]
+       ]
+      }
+     ]
+    },
+    "improper": {
+     "n_before": 857,
+     "n_after": 858,
+     "n_different": 1,
+     "different": [
+      {
+       "atoms": "ZN1260:ZN-SN1261:HN21-SN1261:N2-SN1261:S",
+       "before": null,
+       "after": [
+        [
+         2,
+         0.5515,
+         180.0
+        ]
+       ]
+      }
+     ]
+    },
+    "pairs14": {
+     "n_before": 10878,
+     "n_after": 10878,
+     "n_different": 0,
+     "different": []
+    }
+   },
+   "differences_the_plan_does_not_allow": [],
+   "coordinates_identical": true,
+   "prmtop_sha256": "9678d2d9ad31789be20ef0f7513edf773c543fec7c111dbb3e72b91fddbff92e",
+   "system": "/tmp/claude-0/-root-workspace-cqc-4-sulfamoylanilinium-dihydrogen-phosphate/82cc65d7-a11f-4d60-91ee-436dc9534941/scratchpad/n2/final/build_second_step/systems/bonded_2e/R"
+  }
+ }
+}

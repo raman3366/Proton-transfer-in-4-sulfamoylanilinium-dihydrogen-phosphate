@@ -1,0 +1,22 @@
+Repair of GAFF2 terms at sulfur for the sulfanilamide (neutral) of sulfanilamide (md/ligand_fit.py; load after leaprc.gaff2 and sfa_neutral_gaff2.frcmod)
+MASS
+
+BOND
+n8-sy   300.51    1.7375       r0 was 1.6920; force constant GAFF2
+
+ANGLE
+ca-sy-n8   102.010     113.293       theta0 was 103.180; force constant GAFF2
+n8-sy-o    134.010     109.767       theta0 was 106.960; force constant GAFF2
+hn-n8-sy    56.360     118.443       theta0 was 109.660; force constant GAFF2
+hn-n8-hn    47.890     111.247       theta0 was 106.380; force constant GAFF2
+
+DIHE
+hn-n8-sy-ca   1    2.3128     180.000      -1.0      rotation about S-N, fitted to DFT single points; replaces the term by analogy
+hn-n8-sy-ca   1    2.2133       0.000       2.0
+hn-n8-sy-o    1    0.0000       0.000       2.0      set to zero (the series on H-N-S-C4 carries the rotor)
+ca-ca-sy-n8   1    1.4733     180.000       2.0      rotation about C4-S, fitted to the relaxed DFT scan; replaces X -ca-sy-X for this path
+
+IMPROPER
+
+NONBON
+

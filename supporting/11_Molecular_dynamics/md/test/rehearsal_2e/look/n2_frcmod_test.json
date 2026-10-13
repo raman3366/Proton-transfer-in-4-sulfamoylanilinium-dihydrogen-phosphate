@@ -1,0 +1,286 @@
+{
+ "what": "TEST of md/build_topology.py (6 Oct 2026): --set 2e with a SYNTHETIC file of terms at N2 given by --n2-frcmod; built in scratch; not a model",
+ "checks_failed": [],
+ "checks_not_true": {
+  "zinc_charge_and_type": null,
+  "zinc_lj_is_the_frcmod_value": null,
+  "zinc_not_bonded": null,
+  "solute_hydrogens_where_the_restrained_build_has_them": null,
+  "ligand_terms_equal_free_anion_topology": null,
+  "ligand_charges_are_those_of_the_mol2": null
+ },
+ "terms_at_N2": {
+  "source": "given with --n2-frcmod",
+  "given_file": "/tmp/claude-0/-root-workspace-cqc-4-sulfamoylanilinium-dihydrogen-phosphate/82cc65d7-a11f-4d60-91ee-436dc9534941/scratchpad/rehearsal/buildtest/n2_test.frcmod",
+  "validated_by_gate_GR": "not known to the builder: the file was given",
+  "file": "n2_terms.frcmod (in build/ of the system and in md/topology)",
+  "sha256": "d830201e05b147c27b26f1ebd459b2359e7cec79023bb0473d8bbfc4b7913e95",
+  "atom_types": {
+   "N2": "Y4",
+   "S": "sy",
+   "HN21": "hn",
+   "C4": "ca",
+   "ZN": "M1"
+  },
+  "Zn_N2_H_in_start_X_deg": 107.4065,
+  "loaded": "after every parameter file of MCPB.py, so its terms are the ones in force",
+  "in_the_topology": {
+   "angles": {
+    "Zn-N2-S": {
+     "types": "M1-Y4-sy",
+     "k_kcal_per_mol_rad2": 42.0,
+     "theta0_deg": 119.0,
+     "n2_terms_file": [
+      42.0,
+      119.0
+     ],
+     "as_n2_terms_file": true,
+     "angle_in_this_start_deg": 117.55
+    },
+    "Zn-N2-H": {
+     "types": "M1-Y4-hn",
+     "k_kcal_per_mol_rad2": 33.0,
+     "theta0_deg": 109.0,
+     "n2_terms_file": [
+      33.0,
+      109.0
+     ],
+     "as_n2_terms_file": true,
+     "angle_in_this_start_deg": 107.41
+    },
+    "S-N2-H": {
+     "types": "sy-Y4-hn",
+     "k_kcal_per_mol_rad2": 55.0,
+     "theta0_deg": 112.0,
+     "n2_terms_file": [
+      55.0,
+      112.0
+     ],
+     "as_n2_terms_file": true,
+     "angle_in_this_start_deg": 107.41
+    }
+   },
+   "sum_of_the_three_equilibrium_angles_deg": 340.0,
+   "H-N2-S-C4_k_n_phase": [
+    [
+     0.5,
+     1,
+     180.0
+    ],
+    [
+     1.9,
+     2,
+     0.0
+    ]
+   ],
+   "H-N2-S-C4_n2_terms_file": [
+    [
+     0.5,
+     1,
+     180.0
+    ],
+    [
+     1.9,
+     2,
+     0.0
+    ]
+   ],
+   "all_as_n2_terms_file": true,
+   "Zn-N2-H_is_not_120_deg": true
+  }
+ },
+ "repaired_terms": [
+  {
+   "term": "bond N2-S",
+   "types_free_anion": "n2-sy",
+   "repair_frcmod": [
+    461.21,
+    1.5906
+   ],
+   "in_prmtop": [
+    461.21,
+    1.5906
+   ],
+   "in_force": true
+  },
+  {
+   "term": "angle C4-S-N2",
+   "types_free_anion": "ca-sy-n2",
+   "repair_frcmod": [
+    101.19,
+    117.133
+   ],
+   "in_prmtop": [
+    101.19,
+    117.1331
+   ],
+   "in_force": true
+  },
+  {
+   "term": "angle HN21-N2-S",
+   "types_free_anion": "hn-n2-sy",
+   "repair_frcmod": [
+    61.55,
+    118.059
+   ],
+   "in_prmtop": [
+    55.0,
+    112.0
+   ],
+   "in_force": true,
+   "types_in_this_system": "hn-Y4-sy",
+   "expected_from": "n2_terms.frcmod, which is loaded after the repair frcmod and MCPB.py's frcmod",
+   "n2_terms_file": [
+    55.0,
+    112.0
+   ]
+  },
+  {
+   "term": "torsion HN21-N2-S-C4",
+   "types_free_anion": "hn-n2-sy-ca",
+   "repair_frcmod_k_per_phase": [
+    [
+     0.2624,
+     1,
+     180.0
+    ],
+    [
+     2.703,
+     2,
+     0.0
+    ]
+   ],
+   "gaff2_as_assigned_k_per_phase": [
+    [
+     0.5,
+     3,
+     180.0
+    ],
+    [
+     6.8,
+     1,
+     180.0
+    ]
+   ],
+   "in_prmtop_k_per_phase": [
+    [
+     0.5,
+     1,
+     180.0
+    ],
+    [
+     1.9,
+     2,
+     0.0
+    ]
+   ],
+   "in_force": true,
+   "types_in_this_system": "hn-Y4-sy-ca",
+   "expected_from": "n2_terms.frcmod, which is loaded after the repair frcmod and MCPB.py's frcmod",
+   "n2_terms_file_k_per_phase": [
+    [
+     0.5,
+     1,
+     180.0
+    ],
+    [
+     1.9,
+     2,
+     0.0
+    ]
+   ]
+  },
+  {
+   "term": "torsion HN21-N2-S-O1",
+   "types_free_anion": "hn-n2-sy-o",
+   "repair_frcmod_k_per_phase": [
+    [
+     0.0,
+     2,
+     0.0
+    ]
+   ],
+   "gaff2_as_assigned_k_per_phase": [
+    [
+     0.5,
+     3,
+     180.0
+    ],
+    [
+     6.8,
+     1,
+     180.0
+    ]
+   ],
+   "in_prmtop_k_per_phase": [
+    [
+     0.0,
+     2,
+     0.0
+    ]
+   ],
+   "in_force": true
+  },
+  {
+   "term": "torsion HN21-N2-S-O2",
+   "types_free_anion": "hn-n2-sy-o",
+   "repair_frcmod_k_per_phase": [
+    [
+     0.0,
+     2,
+     0.0
+    ]
+   ],
+   "gaff2_as_assigned_k_per_phase": [
+    [
+     0.5,
+     3,
+     180.0
+    ],
+    [
+     6.8,
+     1,
+     180.0
+    ]
+   ],
+   "in_prmtop_k_per_phase": [
+    [
+     0.0,
+     2,
+     0.0
+    ]
+   ],
+   "in_force": true
+  }
+ ],
+ "zinc_angles_at_N2": [
+  {
+   "angle": "Zn-SN1304:N2-SN1304:S",
+   "kind": "Zn-N2-S",
+   "types": "M1-Y4-sy",
+   "k_kcal_per_mol_rad2": 42.0,
+   "theta0_deg": 119.0,
+   "parameter_file": [
+    42.0,
+    119.0
+   ],
+   "from": "n2_terms.frcmod",
+   "as_file": true,
+   "angle_in_this_start_deg": 117.55
+  },
+  {
+   "angle": "Zn-SN1304:N2-SN1304:HN21",
+   "kind": "Zn-N2-H",
+   "types": "M1-Y4-hn",
+   "k_kcal_per_mol_rad2": 33.0,
+   "theta0_deg": 109.0,
+   "parameter_file": [
+    33.0,
+    109.0
+   ],
+   "from": "n2_terms.frcmod",
+   "as_file": true,
+   "angle_in_this_start_deg": 107.41
+  }
+ ]
+}

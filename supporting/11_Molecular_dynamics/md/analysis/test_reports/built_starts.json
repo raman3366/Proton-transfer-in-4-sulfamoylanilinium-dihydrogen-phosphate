@@ -1,0 +1,429 @@
+{
+ "what": "the built systems (system.inpcrd, restrained-zinc model) as one-frame runs: analyse_md.py against plain formulas",
+ "systems": "/root/cqc-sfa-md/systems/restrained",
+ "analysis_script_sha256": "f75e6155de7007000b8c118b5e9989af7fbaf40994b3f684d4c9b3c9bbcf8ea3",
+ "driver_script_sha256": "6d797f080ff7567923469dabd86af71ca34183f5c482c14d55bf8038eb9d1822",
+ "starts": {
+  "X": {
+   "n_atoms": 40902,
+   "n_solute": 4094,
+   "n_water_O": 12247,
+   "analysis_exit_code": 0,
+   "warnings": [],
+   "state": "C",
+   "role": "production",
+   "box_A_deg": [
+    84.1352,
+    84.1352,
+    84.1352,
+    109.4712,
+    109.4712,
+    109.4712
+   ],
+   "rows": [
+    {
+     "quantity": "n2_volume",
+     "plain_formulas": 0.723989,
+     "analyse_md": 0.724,
+     "abs_diff": 1.1e-05,
+     "agrees": true
+    },
+    {
+     "quantity": "n2_sign",
+     "plain_formulas": 1,
+     "analyse_md": 1.0,
+     "abs_diff": 0.0,
+     "agrees": true
+    },
+    {
+     "quantity": "d_Zn_E106OE1_A",
+     "plain_formulas": 4.003727,
+     "analyse_md": 4.0037,
+     "abs_diff": 2.7e-05,
+     "agrees": true
+    },
+    {
+     "quantity": "d_Zn_E106OE2_A",
+     "plain_formulas": 5.47009,
+     "analyse_md": 5.4701,
+     "abs_diff": 1e-05,
+     "agrees": true
+    },
+    {
+     "quantity": "n_water_ring_place",
+     "plain_formulas": 0,
+     "analyse_md": 0.0,
+     "abs_diff": 0.0,
+     "agrees": true
+    },
+    {
+     "quantity": "d_water_ring_place_min_A",
+     "plain_formulas": 3.02535,
+     "analyse_md": 3.0254,
+     "abs_diff": 5e-05,
+     "agrees": true
+    },
+    {
+     "quantity": "n_water_ring_wide_3p5A",
+     "plain_formulas": 1,
+     "analyse_md": 1.0,
+     "abs_diff": 0.0,
+     "agrees": true
+    },
+    {
+     "quantity": "d_water_ring_wide_min_A",
+     "plain_formulas": 3.02535,
+     "analyse_md": 3.0254,
+     "abs_diff": 5e-05,
+     "agrees": true
+    },
+    {
+     "quantity": "n_water_N1_3p5A",
+     "plain_formulas": 0,
+     "analyse_md": 0.0,
+     "abs_diff": 0.0,
+     "agrees": true
+    },
+    {
+     "quantity": "d_Zn_Owater_min_A",
+     "plain_formulas": 3.685102,
+     "analyse_md": 3.6851,
+     "abs_diff": 2e-06,
+     "agrees": true
+    },
+    {
+     "quantity": "lig_rmsd_identity_A",
+     "plain_formulas": 0.0,
+     "analyse_md": 0.0,
+     "abs_diff": 0.0,
+     "agrees": true
+    },
+    {
+     "quantity": "d1_N1_F131CZ_A",
+     "plain_formulas": 3.8966,
+     "analyse_md": 3.8966,
+     "abs_diff": 0.0,
+     "agrees": true
+    },
+    {
+     "quantity": "d2_N1_N67OD1_A",
+     "plain_formulas": 7.744313,
+     "analyse_md": 7.7443,
+     "abs_diff": 1.3e-05,
+     "agrees": true
+    }
+   ],
+   "water_ring_place": {
+    "note": "section 9D: n_water_ring_place counts the water oxygens within water_cutoff_A of the crystal positions of site_atoms, the quantity of the hydration check of md/run_md.py",
+    "site_atoms": [
+     "C1",
+     "C2",
+     "C3",
+     "C4",
+     "C5",
+     "C6"
+    ],
+    "water_cutoff_A": 2.5,
+    "source": "specification (defaults)",
+    "settings_are_the_defaults": true
+   },
+   "three_nearest_water_O_to_the_crystal_positions_of_the_six_ring_carbons_A": [
+    3.025,
+    3.587,
+    4.148
+   ],
+   "three_nearest_water_O_to_the_seven_positions_of_the_wider_count_A": [
+    3.025,
+    3.587,
+    3.802
+   ],
+   "water_O_within_2p5_3p0_3p5_A_of_the_six_ring_carbon_positions": [
+    0,
+    0,
+    1
+   ]
+  },
+  "N": {
+   "n_atoms": 40911,
+   "n_solute": 4094,
+   "n_water_O": 12250,
+   "analysis_exit_code": 0,
+   "warnings": [],
+   "state": "C",
+   "role": "production",
+   "box_A_deg": [
+    84.1337,
+    84.1337,
+    84.1337,
+    109.4712,
+    109.4712,
+    109.4712
+   ],
+   "rows": [
+    {
+     "quantity": "n2_volume",
+     "plain_formulas": 0.785515,
+     "analyse_md": 0.7855,
+     "abs_diff": 1.5e-05,
+     "agrees": true
+    },
+    {
+     "quantity": "n2_sign",
+     "plain_formulas": 1,
+     "analyse_md": 1.0,
+     "abs_diff": 0.0,
+     "agrees": true
+    },
+    {
+     "quantity": "d_Zn_E106OE1_A",
+     "plain_formulas": 4.003727,
+     "analyse_md": 4.0037,
+     "abs_diff": 2.7e-05,
+     "agrees": true
+    },
+    {
+     "quantity": "d_Zn_E106OE2_A",
+     "plain_formulas": 5.47009,
+     "analyse_md": 5.4701,
+     "abs_diff": 1e-05,
+     "agrees": true
+    },
+    {
+     "quantity": "n_water_ring_place",
+     "plain_formulas": 0,
+     "analyse_md": 0.0,
+     "abs_diff": 0.0,
+     "agrees": true
+    },
+    {
+     "quantity": "d_water_ring_place_min_A",
+     "plain_formulas": 3.02535,
+     "analyse_md": 3.0253,
+     "abs_diff": 5e-05,
+     "agrees": true
+    },
+    {
+     "quantity": "n_water_ring_wide_3p5A",
+     "plain_formulas": 1,
+     "analyse_md": 1.0,
+     "abs_diff": 0.0,
+     "agrees": true
+    },
+    {
+     "quantity": "d_water_ring_wide_min_A",
+     "plain_formulas": 3.02535,
+     "analyse_md": 3.0253,
+     "abs_diff": 5e-05,
+     "agrees": true
+    },
+    {
+     "quantity": "n_water_N1_3p5A",
+     "plain_formulas": 0,
+     "analyse_md": 0.0,
+     "abs_diff": 0.0,
+     "agrees": true
+    },
+    {
+     "quantity": "d_Zn_Owater_min_A",
+     "plain_formulas": 3.685102,
+     "analyse_md": 3.6851,
+     "abs_diff": 2e-06,
+     "agrees": true
+    },
+    {
+     "quantity": "lig_rmsd_identity_A",
+     "plain_formulas": 0.610426,
+     "analyse_md": 0.6104,
+     "abs_diff": 2.6e-05,
+     "agrees": true
+    },
+    {
+     "quantity": "d1_N1_F131CZ_A",
+     "plain_formulas": 3.356145,
+     "analyse_md": 3.3561,
+     "abs_diff": 4.5e-05,
+     "agrees": true
+    },
+    {
+     "quantity": "d2_N1_N67OD1_A",
+     "plain_formulas": 7.725471,
+     "analyse_md": 7.7255,
+     "abs_diff": 2.9e-05,
+     "agrees": true
+    }
+   ],
+   "water_ring_place": {
+    "note": "section 9D: n_water_ring_place counts the water oxygens within water_cutoff_A of the crystal positions of site_atoms, the quantity of the hydration check of md/run_md.py",
+    "site_atoms": [
+     "C1",
+     "C2",
+     "C3",
+     "C4",
+     "C5",
+     "C6"
+    ],
+    "water_cutoff_A": 2.5,
+    "source": "specification (defaults)",
+    "settings_are_the_defaults": true
+   },
+   "three_nearest_water_O_to_the_crystal_positions_of_the_six_ring_carbons_A": [
+    3.025,
+    3.587,
+    4.148
+   ],
+   "three_nearest_water_O_to_the_seven_positions_of_the_wider_count_A": [
+    3.025,
+    3.587,
+    3.802
+   ],
+   "water_O_within_2p5_3p0_3p5_A_of_the_six_ring_carbon_positions": [
+    0,
+    0,
+    1
+   ]
+  },
+  "R": {
+   "n_atoms": 40857,
+   "n_solute": 4094,
+   "n_water_O": 12232,
+   "analysis_exit_code": 0,
+   "warnings": [],
+   "state": "R",
+   "role": "production",
+   "box_A_deg": [
+    84.1209,
+    84.1209,
+    84.1209,
+    109.4712,
+    109.4712,
+    109.4712
+   ],
+   "rows": [
+    {
+     "quantity": "n2_volume",
+     "plain_formulas": -0.710418,
+     "analyse_md": -0.7104,
+     "abs_diff": 1.8e-05,
+     "agrees": true
+    },
+    {
+     "quantity": "n2_sign",
+     "plain_formulas": -1,
+     "analyse_md": -1.0,
+     "abs_diff": 0.0,
+     "agrees": true
+    },
+    {
+     "quantity": "d_Zn_E106OE1_A",
+     "plain_formulas": 4.003727,
+     "analyse_md": 4.0037,
+     "abs_diff": 2.7e-05,
+     "agrees": true
+    },
+    {
+     "quantity": "d_Zn_E106OE2_A",
+     "plain_formulas": 5.47009,
+     "analyse_md": 5.4701,
+     "abs_diff": 1e-05,
+     "agrees": true
+    },
+    {
+     "quantity": "n_water_ring_place",
+     "plain_formulas": 0,
+     "analyse_md": 0.0,
+     "abs_diff": 0.0,
+     "agrees": true
+    },
+    {
+     "quantity": "d_water_ring_place_min_A",
+     "plain_formulas": 4.148081,
+     "analyse_md": 4.1481,
+     "abs_diff": 1.9e-05,
+     "agrees": true
+    },
+    {
+     "quantity": "n_water_ring_wide_3p5A",
+     "plain_formulas": 1,
+     "analyse_md": 1.0,
+     "abs_diff": 0.0,
+     "agrees": true
+    },
+    {
+     "quantity": "d_water_ring_wide_min_A",
+     "plain_formulas": 2.844859,
+     "analyse_md": 2.8449,
+     "abs_diff": 4.1e-05,
+     "agrees": true
+    },
+    {
+     "quantity": "n_water_N1_3p5A",
+     "plain_formulas": 1,
+     "analyse_md": 1.0,
+     "abs_diff": 0.0,
+     "agrees": true
+    },
+    {
+     "quantity": "d_Zn_Owater_min_A",
+     "plain_formulas": 5.984769,
+     "analyse_md": 5.9848,
+     "abs_diff": 3.1e-05,
+     "agrees": true
+    },
+    {
+     "quantity": "lig_rmsd_identity_A",
+     "plain_formulas": 3.573225,
+     "analyse_md": 3.5732,
+     "abs_diff": 2.5e-05,
+     "agrees": true
+    },
+    {
+     "quantity": "d1_N1_F131CZ_A",
+     "plain_formulas": 9.584949,
+     "analyse_md": 9.585,
+     "abs_diff": 5.1e-05,
+     "agrees": true
+    },
+    {
+     "quantity": "d2_N1_N67OD1_A",
+     "plain_formulas": 2.596781,
+     "analyse_md": 2.5968,
+     "abs_diff": 1.9e-05,
+     "agrees": true
+    }
+   ],
+   "water_ring_place": {
+    "note": "section 9D: n_water_ring_place counts the water oxygens within water_cutoff_A of the crystal positions of site_atoms, the quantity of the hydration check of md/run_md.py",
+    "site_atoms": [
+     "C1",
+     "C2",
+     "C3",
+     "C4",
+     "C5",
+     "C6"
+    ],
+    "water_cutoff_A": 2.5,
+    "source": "specification (defaults)",
+    "settings_are_the_defaults": true
+   },
+   "three_nearest_water_O_to_the_crystal_positions_of_the_six_ring_carbons_A": [
+    4.148,
+    4.205,
+    6.147
+   ],
+   "three_nearest_water_O_to_the_seven_positions_of_the_wider_count_A": [
+    2.845,
+    3.802,
+    5.458
+   ],
+   "water_O_within_2p5_3p0_3p5_A_of_the_six_ring_carbon_positions": [
+    0,
+    0,
+    0
+   ]
+  }
+ },
+ "tolerance_A": 0.001,
+ "largest_abs_diff_A": 5.1e-05,
+ "largest_abs_diff_signed_volume": 1.8e-05,
+ "all_agree": true
+}

@@ -1,0 +1,13 @@
+| Descriptor | Formula | Value |
+|---|---|---|
+| E(HOMO) |  | -8.6985 eV |
+| E(LUMO) |  | -0.9883 eV |
+| Energy gap | E(LUMO) - E(HOMO) | 7.7101 eV |
+| Ionization potential (IP) | -E(HOMO) | 8.6985 eV |
+| Electron affinity (EA) | -E(LUMO) | 0.9883 eV |
+| Electronegativity (chi) | (IP+EA)/2 | 4.8434 eV |
+| Chemical potential (mu) | -(IP+EA)/2 | -4.8434 eV |
+| Chemical hardness (eta) | (IP-EA)/2 | 3.8551 eV |
+| Chemical softness (S) | 1/(2 eta) | 0.1297 eV^-1 |
+| Electrophilicity index (omega) | mu^2/(2 eta) | 3.0426 eV |
+| Dipole moment |  | 0.3775 Debye |

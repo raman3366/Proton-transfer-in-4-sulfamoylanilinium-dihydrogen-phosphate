@@ -1,0 +1,216 @@
+{
+  "wavefunction_sha256": "33667a4e42c1e7515f1b97957bb9f1c46e431dc75b02c67713c8b17522fc3e2d",
+  "runs": {
+    "qtaim": {
+      "menu_sequence": [
+        "2",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "10",
+        "1.5",
+        "11",
+        "200",
+        "-1",
+        "-9",
+        "8",
+        "0",
+        "7",
+        "0",
+        "-4",
+        "4",
+        "0",
+        "-5",
+        "4",
+        "0",
+        "-10",
+        "q"
+      ],
+      "exit": 0,
+      "wall_s": 0.4,
+      "threads": 4,
+      "esp_code": null
+    },
+    "charges": {
+      "menu_sequence": [
+        "7",
+        "1",
+        "1",
+        "y",
+        "11",
+        "1",
+        "y",
+        "16",
+        "1",
+        "y",
+        "0",
+        "q"
+      ],
+      "exit": 0,
+      "wall_s": 1.1,
+      "threads": 4,
+      "esp_code": null
+    },
+    "mep_fragments": {
+      "menu_sequence": [
+        "12",
+        "0",
+        "11",
+        "n",
+        "12",
+        "1-8",
+        "n",
+        "-1",
+        "-1",
+        "q"
+      ],
+      "exit": 0,
+      "wall_s": 1.4,
+      "threads": 4,
+      "esp_code": null
+    },
+    "dos": {
+      "menu_sequence": [
+        "10",
+        "8",
+        "7",
+        "3",
+        "-1",
+        "1",
+        "1-8",
+        "0",
+        "2",
+        "-30.0,5.0,5",
+        "3",
+        "0.3",
+        "0",
+        "3",
+        "0",
+        "-10",
+        "q"
+      ],
+      "exit": 0,
+      "wall_s": 0.2,
+      "threads": 4,
+      "esp_code": null
+    }
+  },
+  "case": "urea_gas_d3",
+  "wavefunction": "molecules/sfa/results/urea_gas_d3/final.molden",
+  "fragments": [
+    {
+      "name": "urea_gas_d3",
+      "charge": 0,
+      "h_gained": [],
+      "h_lost": [],
+      "atoms": "1-8"
+    }
+  ],
+  "multiwfn_version": "2026.9.20",
+  "qtaim": {
+    "n_cp": 15,
+    "counts": {
+      "(3,-3)": 8,
+      "(3,-1)": 7,
+      "(3,+1)": 0,
+      "(3,+3)": 0
+    },
+    "cp_searches_logged": {
+      "n": 5,
+      "new_cps_each": [
+        8,
+        7,
+        0,
+        0,
+        0
+      ],
+      "expected_n": 5,
+      "note": "nuclei, midpoints, triangles, pyramids, spheres"
+    },
+    "poincare_hopf": {
+      "n-b+r-c": 1,
+      "satisfied": true
+    },
+    "n_noncovalent_bcp": 0,
+    "case_hbonds_without_bcp": [],
+    "n_bcp_without_bond_path": 0
+  },
+  "status": {
+    "qtaim": {
+      "ok": true,
+      "wall_s": 0.4
+    },
+    "igmh": {
+      "ok": true,
+      "wall_s": 0.0
+    },
+    "charges": {
+      "ok": true,
+      "wall_s": 1.1
+    },
+    "npa": {
+      "ok": true,
+      "wall_s": 0.2
+    },
+    "mep": {
+      "ok": true,
+      "wall_s": 3.6
+    },
+    "dos": {
+      "ok": true,
+      "wall_s": 0.3
+    }
+  },
+  "igmh": "skipped: one fragment only",
+  "charges": {
+    "schemes": [
+      "NPA",
+      "Hirshfeld",
+      "ADCH",
+      "CM5"
+    ],
+    "fragment_sums": {
+      "urea_gas_d3": {
+        "NPA": -1.27675647831893e-14,
+        "Hirshfeld": 9.999999953103078e-09,
+        "ADCH": 1.0000000050247593e-08,
+        "CM5": 1.1102230246251565e-16,
+        "formal_charge": 0
+      }
+    }
+  },
+  "mep": {
+    "n_extrema": 7,
+    "fragments": [
+      {
+        "fragment": "urea_gas_d3",
+        "min_kcal": -44.208209,
+        "max_kcal": 44.217859
+      }
+    ]
+  },
+  "dos": {
+    "HOMO-1": {
+      "mo": 15,
+      "E_eV": -7.923193228115924,
+      "urea_gas_d3": 100.0
+    },
+    "HOMO": {
+      "mo": 16,
+      "E_eV": -7.378503625289441,
+      "urea_gas_d3": 100.0
+    },
+    "LUMO": {
+      "mo": 17,
+      "E_eV": -0.6748320845609717,
+      "urea_gas_d3": 100.0
+    },
+    "LUMO+1": {
+      "mo": 18,
+      "E_eV": 0.053597588020408,
+      "urea_gas_d3": 100.0
+    }
+  }
+}

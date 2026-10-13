@@ -1,0 +1,27 @@
+{
+ "written_ist": "6 Oct 2026, 10:45 PM IST",
+ "log_copied_ist": "6 Oct 2026, 10:44 PM IST",
+ "pull_text": "The watchdog's run that ended at 10:44 PM IST (pulls start every 15 minutes) fetched 17 files (111.9 MB); its line says \"driver checksums: 158 ok, 0 bad\". On the Pi, `/root/cqc-sfa-md/runs/bonded_2e/X1/` then held the minimisation, the six equilibration stages and segments seg0001, seg0002 (8 files of these segments; the sha256 of each was computed again here and equals the driver's record in the pulled manifest: true).",
+ "status_ist": "6 Oct 2026, 10:44 PM IST",
+ "status_excerpt": "**MD runs** (speed now: 924.3 ns per day, from the last 5 finished production segment(s))\n| Run | State | ns done / planned | ns per day (measured) |\n|---|---|---|---|\n| bonded_2e/X1 | **running** | 15 / 100 | 922.1 |\n| bonded_2e/N1 | waiting | 0 / 100 |  |\n| bonded_2e/R1 | waiting | 0 / 100 |  |\n| bonded_2e/X2 | waiting | 0 / 100 |  |\n| bonded_2e/N2 | waiting | 0 / 100 |  |\n| bonded_2e/R2 | waiting | 0 / 100 |  |\n| bonded_2e/X3 | waiting | 0 / 100 |  |\n| bonded_2e/N3 | waiting | 0 / 100 |  |\n| bonded_2e/R3 | waiting | 0 / 100 |  |\n| bonded_2s/R1 | waiting | 0 / 100 |  |\n| bonded_2e_n2fit/R1 | waiting | 0 / 100 |  |\n| bonded_2s/X0 | done | 5 / 5 | 930.1 |\n| bonded_2e/X0 | done | 5 / 5 | 925 |\n| all 16 | 2 done | 25 / 1125 | |\nTest and speed-test folders (not counted): bench, preflight_a, preflight_b.\n**Production ends: about 8 Oct 2026, 3:35 AM IST**, if the machine runs through and the GPU does nothing else (1085 ns of production and 27 ns-equivalents of equilibration, less 1.48 ns of the step now running = 28.8 h at 924.3 ns per day).\nCost at that end: about US$36.14 of the cap US$60.00.\nNot in this estimate: extensions of the held equilibration of the R runs (0 to 2 ns each), pre-emptions and their waiting times.",
+ "speed_text": "3 finished segment(s) of X1 at 924.8, 918.9, 922.6 ns per day (1405 s for 15 ns, that is 922.4 ns per day); the two validation runs gave 930.15 and 925.03.",
+ "ns_day": 922.4199288256228,
+ "prod_s": 9367,
+ "eq_s": 237,
+ "min_s": 36,
+ "run_s": 9640,
+ "ext_s": 87,
+ "end_nine": "7 Oct 2026, 10:20 PM IST",
+ "end_zn": "8 Oct 2026, 1:01 AM IST",
+ "end_all": "8 Oct 2026, 3:41 AM IST",
+ "status_end": "\"Production ends: about 8 Oct 2026, 3:35 AM IST\"",
+ "cost_text": "\nCost: the status program gives about US$36.14 at its end time, against the cap of US$60.00.",
+ "seg_mb": 55.9,
+ "queue_line": "Queue (as pulled; the runner's state of 6 Oct, 10:40 PM): 22 done, 1 running, 10 waiting, 0 failed",
+ "segments_pulled": [
+  "seg0001",
+  "seg0002"
+ ],
+ "pulled_files_checksums_ok": true,
+ "n_segments_done_in_log": 3
+}

@@ -1,0 +1,150 @@
+{
+ "what": "How far the nonbonded force field pulls the four Zn-N distances from r0, for several force constants.\n    Start: the minimised structure of --min-check.  Everything farther than 8 A from the zinc is frozen (mass 0);\n    the residues with an atom within 8 A are minimised with the position restraints of the driver's minimisation\n    and the four harmonic bonds at each k, to 1.0 kJ mol-1 nm-1, without bond constraints (a frozen atom cannot\n    carry one).  A measurement at 0 K; it says how large the systematic pull of the force field is.",
+ "model": "restrained",
+ "start": "X",
+ "started_from": "/root/cqc-sfa-md/systems/_checks/restrained/X/min_300/state_min.xml",
+ "threads": 2,
+ "n_mobile_atoms": 502,
+ "r0_A": {
+  "N2": 1.9314,
+  "H94NE2": 2.0099,
+  "H96NE2": 2.0206,
+  "H119ND1": 2.0183
+ },
+ "chosen_k_kj_per_mol_nm2": 500000.0,
+ "scan": [
+  {
+   "k_kj_per_mol_nm2": 100000.0,
+   "thermal_spread_A_at_300K": 0.0499,
+   "period_fs_free_N_against_Zn": 67.5,
+   "steps_of_4_fs_per_period": 16.9,
+   "zn_distance_minus_r0_A": {
+    "N2": -0.1413,
+    "H94NE2": -0.0587,
+    "H96NE2": -0.0799,
+    "H119ND1": -0.0507
+   },
+   "largest_abs_offset_A": 0.1413,
+   "N_Zn_N_deg": {
+    "N2-Zn-H94NE2": 108.18,
+    "N2-Zn-H96NE2": 122.72,
+    "N2-Zn-H119ND1": 109.87,
+    "H94NE2-Zn-H96NE2": 99.14,
+    "H94NE2-Zn-H119ND1": 112.01,
+    "H96NE2-Zn-H119ND1": 104.5
+   },
+   "Zn_O2_A": 3.14
+  },
+  {
+   "k_kj_per_mol_nm2": 200000.0,
+   "thermal_spread_A_at_300K": 0.0353,
+   "period_fs_free_N_against_Zn": 47.7,
+   "steps_of_4_fs_per_period": 11.9,
+   "zn_distance_minus_r0_A": {
+    "N2": -0.1106,
+    "H94NE2": -0.0409,
+    "H96NE2": -0.0547,
+    "H119ND1": -0.0358
+   },
+   "largest_abs_offset_A": 0.1106,
+   "N_Zn_N_deg": {
+    "N2-Zn-H94NE2": 107.7,
+    "N2-Zn-H96NE2": 122.56,
+    "N2-Zn-H119ND1": 110.25,
+    "H94NE2-Zn-H96NE2": 98.68,
+    "H94NE2-Zn-H119ND1": 112.56,
+    "H96NE2-Zn-H119ND1": 104.68
+   },
+   "Zn_O2_A": 3.131
+  },
+  {
+   "k_kj_per_mol_nm2": 300000.0,
+   "thermal_spread_A_at_300K": 0.0288,
+   "period_fs_free_N_against_Zn": 39.0,
+   "steps_of_4_fs_per_period": 9.7,
+   "zn_distance_minus_r0_A": {
+    "N2": -0.0864,
+    "H94NE2": -0.0291,
+    "H96NE2": -0.0401,
+    "H119ND1": -0.0262
+   },
+   "largest_abs_offset_A": 0.0864,
+   "N_Zn_N_deg": {
+    "N2-Zn-H94NE2": 107.62,
+    "N2-Zn-H96NE2": 122.48,
+    "N2-Zn-H119ND1": 110.49,
+    "H94NE2-Zn-H96NE2": 98.36,
+    "H94NE2-Zn-H119ND1": 112.6,
+    "H96NE2-Zn-H119ND1": 104.83
+   },
+   "Zn_O2_A": 3.121
+  },
+  {
+   "k_kj_per_mol_nm2": 500000.0,
+   "thermal_spread_A_at_300K": 0.0223,
+   "period_fs_free_N_against_Zn": 30.2,
+   "steps_of_4_fs_per_period": 7.5,
+   "zn_distance_minus_r0_A": {
+    "N2": -0.0599,
+    "H94NE2": -0.0199,
+    "H96NE2": -0.0266,
+    "H119ND1": -0.0184
+   },
+   "largest_abs_offset_A": 0.0599,
+   "N_Zn_N_deg": {
+    "N2-Zn-H94NE2": 107.59,
+    "N2-Zn-H96NE2": 122.23,
+    "N2-Zn-H119ND1": 110.65,
+    "H94NE2-Zn-H96NE2": 98.13,
+    "H94NE2-Zn-H119ND1": 112.79,
+    "H96NE2-Zn-H119ND1": 104.98
+   },
+   "Zn_O2_A": 3.112
+  },
+  {
+   "k_kj_per_mol_nm2": 700000.0,
+   "thermal_spread_A_at_300K": 0.0189,
+   "period_fs_free_N_against_Zn": 25.5,
+   "steps_of_4_fs_per_period": 6.4,
+   "zn_distance_minus_r0_A": {
+    "N2": -0.0456,
+    "H94NE2": -0.0143,
+    "H96NE2": -0.0207,
+    "H119ND1": -0.0138
+   },
+   "largest_abs_offset_A": 0.0456,
+   "N_Zn_N_deg": {
+    "N2-Zn-H94NE2": 107.61,
+    "N2-Zn-H96NE2": 122.17,
+    "N2-Zn-H119ND1": 110.78,
+    "H94NE2-Zn-H96NE2": 97.98,
+    "H94NE2-Zn-H119ND1": 112.79,
+    "H96NE2-Zn-H119ND1": 105.01
+   },
+   "Zn_O2_A": 3.105
+  },
+  {
+   "k_kj_per_mol_nm2": 1000000.0,
+   "thermal_spread_A_at_300K": 0.0158,
+   "period_fs_free_N_against_Zn": 21.3,
+   "steps_of_4_fs_per_period": 5.3,
+   "zn_distance_minus_r0_A": {
+    "N2": -0.0331,
+    "H94NE2": -0.0106,
+    "H96NE2": -0.0147,
+    "H119ND1": -0.0094
+   },
+   "largest_abs_offset_A": 0.0331,
+   "N_Zn_N_deg": {
+    "N2-Zn-H94NE2": 107.51,
+    "N2-Zn-H96NE2": 122.34,
+    "N2-Zn-H119ND1": 110.61,
+    "H94NE2-Zn-H96NE2": 97.78,
+    "H94NE2-Zn-H119ND1": 113.13,
+    "H96NE2-Zn-H119ND1": 105.03
+   },
+   "Zn_O2_A": 3.114
+  }
+ ],
+ "period_note": "harmonic period for the reduced mass of a free nitrogen (14.007 amu) against zinc (65.38 amu), the fastest the restraint alone can make; in the molecule the nitrogen carries its ring"
+}

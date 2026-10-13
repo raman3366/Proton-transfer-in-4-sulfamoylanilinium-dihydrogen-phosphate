@@ -1,0 +1,40 @@
+- 2026-09-27 14:29  === pipeline started for sfa_pair_pcm_d3 (from stage 'optimize') ===
+- 2026-09-27 14:29  pre-optimisation at B3LYP/6-31g(d) (254 basis functions)
+- 2026-09-27 15:51  pre-optimisation converged in 45 steps, 81.3 min
+- 2026-09-27 15:51  optimisation started from preopt.xyz; solvent=water
+- 2026-09-27 19:09  optimize FAILED: exit code -15, see logs/optimize.log
+- 2026-09-27 19:09  pipeline stopped at optimize
+- 2026-09-27 19:09  optimisation accepted on negligible forces (rms 7.35e-05, max 1.85e-04) after 64 steps; minimum to be confirmed by frequencies
+- 2026-09-27 19:09  === pipeline started for sfa_pair_pcm_d3 (from stage 'proton_check') ===
+- 2026-09-27 19:09  proton check: H-N 1.097 A, H-O 1.484 A -> proton retained on the donor; bonds broken none, formed none
+- 2026-09-27 19:09  frequencies: holding the machine-wide lock
+- 2026-09-27 19:11  Hessian by parallel finite differences: 162 gradients, 12 workers x 2 threads
+- 2026-09-27 21:34  frequencies (finite-difference (gradients, step 0.005 Bohr, 12 workers x 2 threads)): 0 imaginary, lowest 19.9 cm-1, 143 min
+- 2026-09-27 21:34  FMO: HOMO -7.642 eV, LUMO -1.666 eV, gap 5.976 eV; fragment composition {'4-sulfamoylanilinium cation': 53.7, 'dihydrogen phosphate anion': 46.3} / {'4-sulfamoylanilinium cation': 99.6, 'dihydrogen phosphate anion': 0.4}
+- 2026-09-27 21:34  molden padded from 443 to 445 MOs for Multiwfn compatibility
+- 2026-09-27 21:39  cubes written (ESP 64^3 in 4.8 min)
+- 2026-09-27 21:39  MEP surface: min -0.119246 a.u., max 0.154847 a.u.; 4 minima, 10 maxima
+- 2026-09-27 21:40  NCI: 1775844 grid points, 6 RDG spikes with RDG<0.3
+- 2026-09-27 21:40  ELF plane data written for ['benzene_ring', 'hbond_ring_R22_8', 'sulfonamide_S1_N2_O1']
+- 2026-09-27 21:40  LOL plane data written for ['benzene_ring', 'hbond_ring_R22_8', 'sulfonamide_S1_N2_O1']
+- 2026-09-27 21:40  RESULTS.md assembled
+- 2026-09-27 21:40  === pipeline finished for sfa_pair_pcm_d3 ===
+- 2026-09-28 00:06  scan chain A started (IEF-PCM water (eps=78.3553), out /home/ubuntu/cqc-sfa/molecules/sfa/results/sfa_pair_pcm_d3/scan)
+- 2026-09-28 00:06  scan chain B started (IEF-PCM water (eps=78.3553), out /home/ubuntu/cqc-sfa/molecules/sfa/results/sfa_pair_pcm_d3/scan)
+- 2026-09-28 00:06  eps ladder: eps=8 form N started (IEF-PCM eps=8)
+- 2026-09-28 00:06  eps ladder: eps=4 form N started (IEF-PCM eps=4)
+- 2026-09-28 01:47  eps ladder: eps=8 form N: proton on N, delta -0.257 A, 20 steps
+- 2026-09-28 03:09  eps ladder: eps=20 form N started (IEF-PCM eps=20)
+- 2026-09-28 04:16  eps ladder: eps=20 form N: proton on N, delta -0.350 A, 14 steps
+- 2026-09-28 04:47  QTAIM: 57 CPs {'(3,-3)': 27, '(3,-1)': 28, '(3,+1)': 2, '(3,+3)': 0}, Poincare-Hopf OK; 2 H-bond BCP(s): N1-H1A...O5: rho 0.0783, V/2 -27.2, BE(charged) -27.1 kcal/mol; C6-H6...O4: rho 0.0100, V/2 -1.8, BE(charged) -4.4 kcal/mol
+- 2026-09-28 04:48  IGMH: integral dg_inter 0.280475 a.u.; top atom pairs H1A...O5#1_554 24.4%, N1...O5#1_554 11.9%, H1A...P1#1_554 8.4%, H6...O4#1_554 5.6%
+- 2026-09-28 04:48  charges (Hirshfeld/ADCH/CM5): fragment sums 4-sulfamoylanilinium cation: Hirshfeld +0.671, ADCH +0.758, CM5 +0.729; dihydrogen phosphate anion: Hirshfeld -0.671, ADCH -0.758, CM5 -0.729
+- 2026-09-28 04:48  charges (NPA/Hirshfeld/ADCH/CM5): fragment sums 4-sulfamoylanilinium cation: NPA +0.891, Hirshfeld +0.671, ADCH +0.758, CM5 +0.729; dihydrogen phosphate anion: NPA -0.891, Hirshfeld -0.671, ADCH -0.758, CM5 -0.729
+- 2026-09-28 04:49  DOS/PDOS (Hirshfeld): HOMO 4-sulfamoylanilinium cation 55%, dihydrogen phosphate anion 45%; LUMO 4-sulfamoylanilinium cation 99%, dihydrogen phosphate anion 1%
+- 2026-09-28 06:35  eps ladder: eps=4 form N: proton on O, delta +0.675 A, 80 steps
+- 2026-09-28 06:45  TD-DFT (tddft_b3lyp_noneq.json): S1 5.195 eV (239 nm, f 0.011); first bright 239 nm; all converged
+- 2026-09-28 11:34  NLO (nlo.json): mu 7.247 D, alpha_iso 202.69 a.u., beta_tot 406.6 a.u. (3.512e-30 esu)
+- 2026-09-28 12:30  interaction (interaction.json, ionic): E_int(CP) -16.72 kcal/mol, BSSE 1.39, E_bind -13.88
+- 2026-09-28 13:24  Delta-SCF (dscf.json): I = 7.488 eV, A = 1.857 eV, eta = 2.816 eV (Koopmans I = 7.642, A = 1.666)
+- 2026-09-28 13:24  TD-DFT (tddft_camb3lyp_noneq.json): S1 5.345 eV (232 nm, f 0.015); first bright 232 nm; all converged
+- 2026-09-28 17:38  functional check (fsp_scan.json): B3LYP-D3(BJ) +0.72, -0.54; wB97X-D +0.98, -0.72; M06-2X -0.51, -2.47; PBE0-D3(BJ) -0.05, -1.27; DF-MP2 (FC) +0.20, -1.42 kcal/mol vs end_N_d1.098

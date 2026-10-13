@@ -1,0 +1,19 @@
+- 2026-09-27 14:29  pre-optimisation at B3LYP/6-31g(d) (176 basis functions)
+- 2026-09-27 14:52  pre-optimisation converged in 25 steps, 23.1 min
+- 2026-09-27 14:52  optimisation started from preopt.xyz; solvent=water
+- 2026-09-27 15:09  optimisation converged in 7 steps, 16.5 min, E = -892.21406907 Ha
+- 2026-09-27 15:10  Hessian by parallel finite differences: 120 gradients, 2 workers x 2 threads
+- 2026-09-27 19:40  frequencies (finite-difference (gradients, step 0.005 Bohr, 2 workers x 2 threads)): 0 imaginary, lowest 29.4 cm-1, 270 min
+- 2026-09-27 19:41  FMO: HOMO -8.016 eV, LUMO -1.873 eV, gap 6.143 eV; fragment composition None / None
+- 2026-09-27 19:41  molden padded from 312 to 313 MOs for Multiwfn compatibility
+- 2026-09-27 19:52  cubes written (ESP 64^3 in 10.2 min)
+- 2026-09-28 00:48  Delta-SCF (dscf.json): I = 7.883 eV, A = 2.064 eV, eta = 2.910 eV (Koopmans I = 8.016, A = 1.873)
+- 2026-09-28 04:52  QTAIM: 41 CPs {'(3,-3)': 20, '(3,-1)': 20, '(3,+1)': 1, '(3,+3)': 0}, Poincare-Hopf OK; no H-bond BCPs
+- 2026-09-28 04:52  charges (Hirshfeld/ADCH/CM5): fragment sums cation_pcm_d3: Hirshfeld +1.000, ADCH +1.000, CM5 +1.000
+- 2026-09-28 04:52  charges (NPA/Hirshfeld/ADCH/CM5): fragment sums cation_pcm_d3: NPA +1.000, Hirshfeld +1.000, ADCH +1.000, CM5 +1.000
+- 2026-09-28 04:52  MEP surface: min -0.011121 a.u., max 0.294261 a.u.; 3 minima, 7 maxima
+- 2026-09-28 04:53  DOS/PDOS (Hirshfeld): HOMO cation_pcm_d3 100%; LUMO cation_pcm_d3 100%
+- 2026-09-28 07:40  TD-DFT (tddft_camb3lyp_noneq.json): S1 5.357 eV (231 nm, f 0.024); first bright 231 nm; all converged
+- 2026-09-28 08:37  TD-DFT (tddft_camb3lyp_eq.json): S1 5.321 eV (233 nm, f 0.059); first bright 233 nm; all converged
+- 2026-09-28 09:15  TD-DFT (tddft_b3lyp_noneq.json): S1 5.220 eV (238 nm, f 0.017); first bright 238 nm; all converged
+- 2026-09-28 18:25  functional check (dock_strain.json): B3LYP-D3(BJ) +3.02, +3.06, +3.99, +3.96, +3.69, +3.31, +3.34, +3.31, +3.56, +3.29, +10.67, +4.84, +7.76, +3.58, +6.62, +1.45 kcal/mol vs opt

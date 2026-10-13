@@ -1,0 +1,312 @@
+{
+  "source": "T3_6RL9",
+  "variant": "T3_6RL9_wat4fixed",
+  "rule": "fixed",
+  "note": "the prepared receptor, line for line, plus the named crystal waters appended; nothing else changed",
+  "deposited": {
+    "pdb": "6RL9",
+    "chain": "A"
+  },
+  "frame_check": {
+    "deposited_file": "pdb/6RL9.cif.gz",
+    "chain": "A",
+    "n_ca_compared": 258,
+    "ca_rms_A": 0.013,
+    "ca_max_A": 0.032,
+    "zinc_shift_A": 0.0,
+    "note": "no superposition; the CA shifts are those of the restrained minimisation of the receptor preparation (an alternate conformer is compared with its nearest copy)",
+    "same_frame": true
+  },
+  "water_atoms": {
+    "oxygen": {
+      "type": "OA",
+      "charge": -0.411,
+      "source": "prep_receptor.py water_pdbqt_atoms / control_gyrb.py water_variant (Gasteiger charge of O in Meeko's HOH template)"
+    },
+    "hydrogen": {
+      "type": "HD",
+      "charge": 0.206,
+      "O_H_A": 0.9572,
+      "H_O_H_deg": 104.52,
+      "source": "Gasteiger charge of H in Meeko's HOH template (0.2058)"
+    },
+    "charge_per_water": 0.001
+  },
+  "hydrogen_search": {
+    "orientation": "H1 along +x, H2 in the xy plane, the same for every water"
+  },
+  "waters": {
+    "423": {
+      "occupancy": 1.0,
+      "b_iso": 12.7,
+      "O": [
+        16.195,
+        0.855,
+        9.9
+      ],
+      "H": [
+        [
+          17.152,
+          0.855,
+          9.9
+        ],
+        [
+          15.955,
+          1.782,
+          9.9
+        ]
+      ],
+      "inside_box": true,
+      "nearest_crystal_ligand_atom_A": 6.04
+    },
+    "516": {
+      "occupancy": 1.0,
+      "b_iso": 17.6,
+      "O": [
+        17.34,
+        -1.002,
+        11.429
+      ],
+      "H": [
+        [
+          18.297,
+          -1.002,
+          11.429
+        ],
+        [
+          17.1,
+          -0.075,
+          11.429
+        ]
+      ],
+      "inside_box": true,
+      "nearest_crystal_ligand_atom_A": 5.03
+    },
+    "553": {
+      "occupancy": 1.0,
+      "b_iso": 11.5,
+      "O": [
+        17.161,
+        0.488,
+        13.613
+      ],
+      "H": [
+        [
+          18.118,
+          0.488,
+          13.613
+        ],
+        [
+          16.921,
+          1.415,
+          13.613
+        ]
+      ],
+      "inside_box": true,
+      "nearest_crystal_ligand_atom_A": 2.93
+    },
+    "568": {
+      "occupancy": 1.0,
+      "b_iso": 12.0,
+      "O": [
+        15.782,
+        2.497,
+        12.063
+      ],
+      "H": [
+        [
+          16.739,
+          2.497,
+          12.063
+        ],
+        [
+          15.542,
+          3.424,
+          12.063
+        ]
+      ],
+      "inside_box": true,
+      "nearest_crystal_ligand_atom_A": 3.59
+    }
+  },
+  "hydrogen_bonds": {
+    "423": {
+      "donates": [],
+      "accepts": [
+        {
+          "frm": "ASN62 ND2-H",
+          "H_O": 2.05,
+          "D_O": 2.99,
+          "angle": 155.2
+        }
+      ],
+      "hydrogens_without_partner": 2,
+      "close_H_H": [
+        {
+          "hydrogen": "H1",
+          "to": "ASN62 HD22",
+          "distance": 1.84
+        },
+        {
+          "hydrogen": "H2",
+          "to": "ASN67 HD21",
+          "distance": 1.96
+        }
+      ],
+      "neighbours_within_3p5A": [
+        {
+          "atom": "ASN67 OD1",
+          "distance": 2.62
+        },
+        {
+          "atom": "HOH516 O",
+          "distance": 2.66
+        },
+        {
+          "atom": "HOH568 O",
+          "distance": 2.75
+        },
+        {
+          "atom": "ASN62 ND2",
+          "distance": 2.99
+        },
+        {
+          "atom": "ASN67 CG",
+          "distance": 3.44
+        }
+      ]
+    },
+    "516": {
+      "donates": [],
+      "accepts": [],
+      "hydrogens_without_partner": 2,
+      "close_H_H": [],
+      "neighbours_within_3p5A": [
+        {
+          "atom": "HOH430 O (crystal, not in the receptor)",
+          "distance": 2.54
+        },
+        {
+          "atom": "HOH553 O",
+          "distance": 2.65
+        },
+        {
+          "atom": "HOH423 O",
+          "distance": 2.66
+        }
+      ]
+    },
+    "553": {
+      "donates": [
+        {
+          "hydrogen": "H1",
+          "to": "THR200 OG1",
+          "H_A": 2.21,
+          "O_A": 3.02,
+          "angle": 141.9
+        }
+      ],
+      "accepts": [],
+      "hydrogens_without_partner": 1,
+      "close_H_H": [],
+      "neighbours_within_3p5A": [
+        {
+          "atom": "HOH516 O",
+          "distance": 2.65
+        },
+        {
+          "atom": "HOH568 O",
+          "distance": 2.89
+        },
+        {
+          "atom": "SAN N9 (crystal ligand) (crystal, not in the receptor)",
+          "distance": 2.93
+        },
+        {
+          "atom": "THR200 OG1",
+          "distance": 3.02
+        },
+        {
+          "atom": "SAN C6 (crystal ligand) (crystal, not in the receptor)",
+          "distance": 3.03
+        },
+        {
+          "atom": "THR200 CG2",
+          "distance": 3.28
+        },
+        {
+          "atom": "SAN C5 (crystal ligand) (crystal, not in the receptor)",
+          "distance": 3.44
+        }
+      ]
+    },
+    "568": {
+      "donates": [],
+      "accepts": [
+        {
+          "frm": "GLN92 NE2-H",
+          "H_O": 2.15,
+          "D_O": 3.02,
+          "angle": 144.7
+        }
+      ],
+      "hydrogens_without_partner": 2,
+      "close_H_H": [
+        {
+          "hydrogen": "H2",
+          "to": "GLN92 HE22",
+          "distance": 1.66
+        }
+      ],
+      "neighbours_within_3p5A": [
+        {
+          "atom": "HOH582 O (crystal, not in the receptor)",
+          "distance": 2.73
+        },
+        {
+          "atom": "HOH423 O",
+          "distance": 2.75
+        },
+        {
+          "atom": "HOH553 O",
+          "distance": 2.89
+        },
+        {
+          "atom": "GLN92 NE2",
+          "distance": 3.02
+        },
+        {
+          "atom": "HIS94 CE1",
+          "distance": 3.42
+        },
+        {
+          "atom": "HIS94 ND1",
+          "distance": 3.49
+        }
+      ]
+    }
+  },
+  "file_check": {
+    "receptor_pdbqt_lines": [
+      2510,
+      2522
+    ],
+    "receptor_pdb_lines": [
+      4074,
+      4086
+    ],
+    "source_lines_byte_identical_and_in_order": true
+  },
+  "receptor_total_charge": [
+    2.0,
+    2.004
+  ],
+  "receptor.pdbqt_sha256": {
+    "source": "f335c7365cedd6761c55d344195cc7b4a24091f9407a14f2c6d1bd28d29815bc",
+    "variant": "065b24302f8053e91167474297cb6e4682e2964a2145ce3a0819fc45b87eff82"
+  },
+  "receptor.pdb_sha256": {
+    "source": "b805158dc0881c3d60f4ed2157543b4c911f892d1bc550772d459aecb5935948",
+    "variant": "d8fc6540fb08657bbe51f7bcfc9f1217ce0858cbba55a1a1804b745dc60b4b87"
+  }
+}

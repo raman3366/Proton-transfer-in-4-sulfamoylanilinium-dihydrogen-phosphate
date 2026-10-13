@@ -1,0 +1,105 @@
+source leaprc.protein.ff14SB
+source leaprc.gaff2
+source leaprc.water.tip3p
+addAtomTypes {
+    { "M1" "Zn" "sp3" }
+    { "Y1" "N" "sp3" }
+    { "Y2" "N" "sp3" }
+    { "Y3" "N" "sp3" }
+    { "Y4" "N" "sp3" }
+}
+HD1 = loadmol2 /root/cqc-sfa-md/systems/_selftest_bonded_mock/mcpb/HD1.mol2
+HD2 = loadmol2 /root/cqc-sfa-md/systems/_selftest_bonded_mock/mcpb/HD2.mol2
+HE1 = loadmol2 /root/cqc-sfa-md/systems/_selftest_bonded_mock/mcpb/HE1.mol2
+ZN1 = loadmol2 /root/cqc-sfa-md/systems/_selftest_bonded_mock/mcpb/ZN1.mol2
+SN1 = loadmol2 /root/cqc-sfa-md/systems/_selftest_bonded_mock/mcpb/SN1.mol2
+loadamberparams /root/cqc-sfa-md/systems/_selftest_bonded_mock/mcpb/sfa_anion_gaff2.frcmod
+loadamberparams /root/cqc-sfa-md/systems/_selftest_bonded_mock/mcpb/sfa_anion_repair.frcmod
+loadamberparams /root/cqc-sfa-md/systems/_selftest_bonded_mock/mcpb/CA2_mcpbpy.frcmod
+sys = loadpdb /root/cqc-sfa-md/systems/_selftest_bonded_mock/bonded/X/build/assembly.pdb
+bond sys.93.NE2 sys.260.ZN
+bond sys.95.NE2 sys.260.ZN
+bond sys.118.ND1 sys.260.ZN
+bond sys.260.ZN sys.261.N2
+bond sys.92.C sys.93.N
+bond sys.93.C sys.94.N
+bond sys.94.C sys.95.N
+bond sys.95.C sys.96.N
+bond sys.117.C sys.118.N
+bond sys.118.C sys.119.N
+check sys
+charge sys
+saveamberparm sys /root/cqc-sfa-md/systems/_selftest_bonded_mock/bonded/X/build/dry.prmtop /root/cqc-sfa-md/systems/_selftest_bonded_mock/bonded/X/build/dry.inpcrd
+solvateOct sys TIP3PBOX 10.0
+remove sys sys.1830
+remove sys sys.902
+remove sys sys.10118
+remove sys sys.2340
+remove sys sys.3855
+remove sys sys.3635
+remove sys sys.5120
+remove sys sys.6036
+remove sys sys.10950
+remove sys sys.9616
+remove sys sys.2341
+remove sys sys.9068
+remove sys sys.7666
+remove sys sys.7808
+remove sys sys.6754
+remove sys sys.5040
+remove sys sys.10172
+remove sys sys.853
+remove sys sys.7684
+remove sys sys.4404
+remove sys sys.9878
+remove sys sys.7170
+remove sys sys.10921
+remove sys sys.5960
+remove sys sys.10854
+remove sys sys.3554
+remove sys sys.10261
+remove sys sys.6342
+remove sys sys.4639
+remove sys sys.4461
+remove sys sys.3499
+remove sys sys.9392
+remove sys sys.7570
+remove sys sys.10657
+remove sys sys.8955
+remove sys sys.2375
+remove sys sys.3206
+remove sys sys.9683
+remove sys sys.10038
+remove sys sys.12392
+remove sys sys.4379
+remove sys sys.10833
+remove sys sys.8092
+remove sys sys.5741
+remove sys sys.9610
+remove sys sys.1323
+remove sys sys.4399
+remove sys sys.11512
+remove sys sys.2353
+remove sys sys.11806
+remove sys sys.10469
+remove sys sys.7184
+remove sys sys.11047
+remove sys sys.8691
+remove sys sys.11691
+remove sys sys.8670
+remove sys sys.7334
+remove sys sys.1257
+remove sys sys.3342
+remove sys sys.11548
+remove sys sys.11091
+remove sys sys.3714
+remove sys sys.8075
+remove sys sys.6061
+remove sys sys.8109
+remove sys sys.8008
+remove sys sys.1228
+ions = loadpdb /root/cqc-sfa-md/systems/_selftest_bonded_mock/bonded/X/build/ions.pdb
+sys = combine { sys ions }
+charge sys
+saveamberparm sys /root/cqc-sfa-md/systems/_selftest_bonded_mock/bonded/X/build/system_tleap.prmtop /root/cqc-sfa-md/systems/_selftest_bonded_mock/bonded/X/system.inpcrd
+quit

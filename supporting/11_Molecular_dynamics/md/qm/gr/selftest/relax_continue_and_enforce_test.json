@@ -1,0 +1,347 @@
+{
+ "what": "TEST OF THE MECHANICS with a surrogate energy in place of the quantum chemistry (a harmonic pull of every atom towards a target geometry, plus the D3(BJ) term; method_override.surrogate of md/qm/gr_queue.py relax): no number here is a result of the gate",
+ "written": "2026-10-06 01:41:07 PM IST",
+ "host": "the Pi",
+ "code": {
+  "gr_queue_sha256": "28b59dad8d37f36fd81201cb462ccb0668337a1c207b8231b0a34f119d81a0cd"
+ },
+ "question_1": "does geomeTRIC keyword enforce = 0.1 hold the frozen atoms 1-46 exactly, and does it change where the run ends?",
+ "A1_without_enforce": {
+  "start": "Rx",
+  "surrogate": {
+   "target": "X",
+   "seed": 7,
+   "k": 0.002
+  },
+  "relax": {
+   "maxsteps": 150,
+   "convergence": {}
+  },
+  "state": "done",
+  "n_steps": 99,
+  "crossed": true,
+  "sign_first_changed_at_step": 25,
+  "nitrogen_at_the_end": "pyramidal, the configuration opposite to the start",
+  "signed_volume_N2": {
+   "start": -0.6783,
+   "end": 0.7377,
+   "smallest": -0.6783,
+   "largest": 0.7551,
+   "changed_sign": true
+  },
+  "restarts": [],
+  "stopped_at_the_sign_change_by_the_old_rule": null,
+  "largest_shift_of_a_fixed_atom_over_the_run_A": 0.024431332043873155,
+  "largest_shift_of_a_fixed_atom_in_steps_recorded_by_this_code_A": 0.024431,
+  "shift_of_a_fixed_atom_at_the_end_A": 0.0001463526310789831,
+  "e_total_final": -0.14633699057941807,
+  "final": {
+   "signed_volume": 0.7377,
+   "angle_sum_N2": 331.304,
+   "Zn_N2_S_C4": -131.833,
+   "rmsd_ligand_heavy_from_start": 3.6507,
+   "fixed_atoms_max_shift_A": 0.000146,
+   "rmsd_ligand_heavy_from_X_run": null,
+   "e_total_minus_X_run_kcal_mol": null,
+   "X_run_at": null
+  }
+ },
+ "A2_with_enforce_0p1": {
+  "start": "Rx",
+  "surrogate": {
+   "target": "X",
+   "seed": 7,
+   "k": 0.002
+  },
+  "relax": {
+   "maxsteps": 150,
+   "convergence": {
+    "enforce": 0.1
+   }
+  },
+  "state": "done",
+  "n_steps": 98,
+  "crossed": true,
+  "sign_first_changed_at_step": 25,
+  "nitrogen_at_the_end": "pyramidal, the configuration opposite to the start",
+  "signed_volume_N2": {
+   "start": -0.6783,
+   "end": 0.7342,
+   "smallest": -0.6783,
+   "largest": 0.7571,
+   "changed_sign": true
+  },
+  "restarts": [],
+  "stopped_at_the_sign_change_by_the_old_rule": null,
+  "largest_shift_of_a_fixed_atom_over_the_run_A": 1.0800434679936188e-07,
+  "largest_shift_of_a_fixed_atom_in_steps_recorded_by_this_code_A": 0.0,
+  "shift_of_a_fixed_atom_at_the_end_A": 4.31110542820079e-08,
+  "e_total_final": -0.14633721900583313,
+  "final": {
+   "signed_volume": 0.7342,
+   "angle_sum_N2": 331.643,
+   "Zn_N2_S_C4": -131.757,
+   "rmsd_ligand_heavy_from_start": 3.651,
+   "fixed_atoms_max_shift_A": 0.0,
+   "rmsd_ligand_heavy_from_X_run": null,
+   "e_total_minus_X_run_kcal_mol": null,
+   "X_run_at": null
+  }
+ },
+ "A1_against_A2": {
+  "largest_distance_of_an_atom_between_the_two_end_geometries_A": 0.003850647647836227,
+  "energy_difference_hartree": 2.2842641506093386e-07
+ },
+ "question_2": "is a run that the old rule stopped at the first change of sign (state \"crossed\") continued to convergence by the code of now, with the frozen atoms put back, and recorded as crossed only at the end?",
+ "B_record_as_the_old_code_left_it": {
+  "state": "crossed",
+  "n_steps": 25,
+  "crossed_at_step": 25,
+  "signed_volume_N2": {
+   "start": -0.6783,
+   "end": 0.0283,
+   "smallest": -0.6783,
+   "largest": 0.0283,
+   "changed_sign": true
+  },
+  "code": "gr_queue.py of commit 29d9e5d"
+ },
+ "B_continued_by_the_code_of_now": {
+  "start": "Rx",
+  "surrogate": {
+   "target": "X",
+   "seed": 7,
+   "k": 0.002
+  },
+  "relax": {
+   "maxsteps": 150,
+   "convergence": {
+    "enforce": 0.1
+   }
+  },
+  "state": "done",
+  "n_steps": 113,
+  "crossed": true,
+  "sign_first_changed_at_step": 25,
+  "nitrogen_at_the_end": "pyramidal, the configuration opposite to the start",
+  "signed_volume_N2": {
+   "start": -0.6783,
+   "end": 0.7287,
+   "smallest": -0.6783,
+   "largest": 0.7773,
+   "changed_sign": true
+  },
+  "restarts": [
+   {
+    "at_steps": 25,
+    "time": "2026-10-06 01:26:49 PM IST",
+    "frozen_atoms_put_back_by_at_most_A": 0.004915,
+    "convergence": {
+     "enforce": 0.1
+    }
+   }
+  ],
+  "stopped_at_the_sign_change_by_the_old_rule": {
+   "step": 25,
+   "time": "2026-10-06 01:23:21 PM IST",
+   "note": "stopped at the first change of sign of the signed volume at N2, unconverged, by the rule in force until the plan entry of 6 Oct 2026, 1:09 PM IST; continued from that geometry"
+  },
+  "largest_shift_of_a_fixed_atom_over_the_run_A": 0.024431332043873155,
+  "largest_shift_of_a_fixed_atom_in_steps_recorded_by_this_code_A": 0.0,
+  "shift_of_a_fixed_atom_at_the_end_A": 3.4554247463347565e-08,
+  "e_total_final": -0.14634235881162241,
+  "final": {
+   "signed_volume": 0.7287,
+   "angle_sum_N2": 332.311,
+   "Zn_N2_S_C4": -131.595,
+   "rmsd_ligand_heavy_from_start": 3.6502,
+   "fixed_atoms_max_shift_A": 0.0,
+   "rmsd_ligand_heavy_from_X_run": null,
+   "e_total_minus_X_run_kcal_mol": null,
+   "X_run_at": null
+  }
+ },
+ "question_3": "a run that stays in its configuration: converged, not crossed",
+ "C_from_X_towards_itself": {
+  "start": "X",
+  "surrogate": {
+   "target": "self",
+   "seed": 7,
+   "k": 0.05
+  },
+  "relax": {
+   "maxsteps": 150,
+   "convergence": {
+    "enforce": 0.1
+   }
+  },
+  "state": "done",
+  "n_steps": 40,
+  "crossed": false,
+  "sign_first_changed_at_step": null,
+  "nitrogen_at_the_end": "pyramidal, configuration of the start",
+  "signed_volume_N2": {
+   "start": 0.724,
+   "end": 0.6876,
+   "smallest": 0.6835,
+   "largest": 0.7446,
+   "changed_sign": false
+  },
+  "restarts": [],
+  "stopped_at_the_sign_change_by_the_old_rule": null,
+  "largest_shift_of_a_fixed_atom_over_the_run_A": 1.0853485221673509e-07,
+  "largest_shift_of_a_fixed_atom_in_steps_recorded_by_this_code_A": 0.0,
+  "shift_of_a_fixed_atom_at_the_end_A": 2.0373155606989712e-08,
+  "e_total_final": -0.14487114785875638,
+  "final": {
+   "signed_volume": 0.6876,
+   "angle_sum_N2": 335.629,
+   "Zn_N2_S_C4": -115.184,
+   "rmsd_ligand_heavy_from_start": 0.0763,
+   "fixed_atoms_max_shift_A": 0.0,
+   "rmsd_ligand_heavy_from_X_run": null,
+   "e_total_minus_X_run_kcal_mol": null,
+   "X_run_at": null
+  }
+ },
+ "question_4": "is the distance from the end of the other run recorded at every step, and the summary of both runs written?",
+ "D_from_Rx_with_the_run_from_X_finished": {
+  "start": "Rx",
+  "surrogate": {
+   "target": "X",
+   "seed": 7,
+   "k": 0.002
+  },
+  "relax": {
+   "maxsteps": 150,
+   "convergence": {
+    "enforce": 0.1
+   }
+  },
+  "state": "done",
+  "n_steps": 98,
+  "crossed": true,
+  "sign_first_changed_at_step": 25,
+  "nitrogen_at_the_end": "pyramidal, the configuration opposite to the start",
+  "signed_volume_N2": {
+   "start": -0.6783,
+   "end": 0.7342,
+   "smallest": -0.6783,
+   "largest": 0.7571,
+   "changed_sign": true
+  },
+  "restarts": [],
+  "stopped_at_the_sign_change_by_the_old_rule": null,
+  "largest_shift_of_a_fixed_atom_over_the_run_A": 1.0800434679936188e-07,
+  "largest_shift_of_a_fixed_atom_in_steps_recorded_by_this_code_A": 0.0,
+  "shift_of_a_fixed_atom_at_the_end_A": 4.31110542820079e-08,
+  "e_total_final": -0.14633721900583313,
+  "final": {
+   "signed_volume": 0.7342,
+   "angle_sum_N2": 331.643,
+   "Zn_N2_S_C4": -131.757,
+   "rmsd_ligand_heavy_from_start": 3.651,
+   "fixed_atoms_max_shift_A": 0.0,
+   "rmsd_ligand_heavy_from_X_run": 0.1911,
+   "e_total_minus_X_run_kcal_mol": -0.92,
+   "X_run_at": {
+    "step": 40,
+    "converged": true
+   }
+  }
+ },
+ "D_summary": {
+  "both_converged": true,
+  "configurations_kept": false,
+  "crossed": {
+   "X": false,
+   "Rx": true
+  },
+  "end_points": {
+   "geometries": {
+    "X": "qm_X.xyz",
+    "Rx": "qm_Rx.xyz"
+   },
+   "converged": {
+    "X": true,
+    "Rx": true
+   },
+   "rmsd_ligand_heavy_A": 0.1911,
+   "largest_distance_of_a_ligand_heavy_atom_A": 0.4087,
+   "Rx_minus_X_with_d3": -0.92,
+   "Rx_minus_X_without_d3": 1.1208,
+   "Rx_minus_X_d3_part": -2.0408,
+   "note": "both runs converged: the difference between the two end points"
+  }
+ },
+ "answers": {
+  "enforce_holds_the_frozen_atoms": true,
+  "same_end_with_and_without": true,
+  "old_stop_is_continued": true,
+  "staying_run_not_crossed": true,
+  "distance_from_the_other_run_recorded": true,
+  "enforce_on_a_small_real_case": true
+ },
+ "passed": true,
+ "question_0": "does geomeTRIC keyword enforce = 0.1 do what is claimed on a small case with real quantum-chemical forces (formamide-water, HF/STO-3G, PySCF 2.14.0, geomeTRIC 1.1.1, a distorted start)?",
+ "small_real_case_frozen_atoms_bonded_to_free_atoms": {
+  "without_enforce": {
+   "converged": true,
+   "n_steps": 63,
+   "largest_shift_of_a_frozen_atom_over_the_run_A": 0.005241945219972788,
+   "shift_at_the_end_A": 3.115601082770425e-05,
+   "e_final": -241.65019075942794,
+   "ligand_moved_rms_A": 1.5639203141413653
+  },
+  "with_enforce_0p1": {
+   "converged": true,
+   "n_steps": 69,
+   "largest_shift_of_a_frozen_atom_over_the_run_A": 1.0132578698307526e-07,
+   "shift_at_the_end_A": 1.5310308409954843e-08,
+   "e_final": -241.6501906743983,
+   "ligand_moved_rms_A": 1.5676524660864322
+  },
+  "largest_distance_of_an_atom_between_the_two_ends_A": 0.010768378146192848,
+  "energy_difference_hartree": -8.502965442858113e-08,
+  "what": "A small real case for geomeTRIC's `enforce`: formamide-water at HF/STO-3G (PySCF), the C, O and N of the formamide frozen (atoms that are bonded to free atoms)\nwith `$freeze xyz`, started from a distorted geometry so that the frozen atoms carry forces.  With and without\nenforce = 0.1: the largest shift of a frozen atom at any step, the number of steps, the final energy.\nNot a result of the gate; a test of the keyword on a case with real forces on the frozen atoms.",
+  "versions": {
+   "pyscf": "2.14.0",
+   "geometric": "1.1.1",
+   "numpy": "2.4.6"
+  },
+  "written": "2026-10-06 02:17:16 PM IST",
+  "frozen": "C, O, N of the formamide ($freeze xyz 4-6)",
+  "script": "/tmp/claude-0/-root-workspace-cqc-4-sulfamoylanilinium-dihydrogen-phosphate/82cc65d7-a11f-4d60-91ee-436dc9534941/scratchpad/mdgr3/small_case/small_case_bonded.py",
+  "script_sha256": "feefd4190e61d565ef2cf5fa686f54d44472a82e9bc1786fffe40d16768c4f3e"
+ },
+ "small_real_case_frozen_atoms_a_molecule_of_their_own": {
+  "without_enforce": {
+   "converged": true,
+   "n_steps": 63,
+   "largest_shift_of_a_frozen_atom_over_the_run_A": 1.6930901125533637e-15,
+   "shift_at_the_end_A": 1.318761262609381e-17,
+   "e_final": -241.66555703961842,
+   "ligand_moved_rms_A": 3.5642863454049247
+  },
+  "with_enforce_0p1": {
+   "converged": true,
+   "n_steps": 63,
+   "largest_shift_of_a_frozen_atom_over_the_run_A": 6.564674262914655e-16,
+   "shift_at_the_end_A": 4.2735389221281025e-18,
+   "e_final": -241.66555703961882,
+   "ligand_moved_rms_A": 3.564286343917437
+  },
+  "largest_distance_of_an_atom_between_the_two_ends_A": 8.210884843352329e-09,
+  "energy_difference_hartree": 3.979039320256561e-13,
+  "what": "A small real case for geomeTRIC's `enforce`: formamide-water at HF/STO-3G (PySCF), the three atoms of the water frozen\nwith `$freeze xyz`, started from a distorted geometry so that the frozen atoms carry forces.  With and without\nenforce = 0.1: the largest shift of a frozen atom at any step, the number of steps, the final energy.\nNot a result of the gate; a test of the keyword on a case with real forces on the frozen atoms.",
+  "versions": {
+   "pyscf": "2.14.0",
+   "geometric": "1.1.1",
+   "numpy": "2.4.6"
+  },
+  "written": "2026-10-06 02:15:32 PM IST",
+  "frozen": "the three atoms of the water ($freeze xyz 1-3)",
+  "script": "/tmp/claude-0/-root-workspace-cqc-4-sulfamoylanilinium-dihydrogen-phosphate/82cc65d7-a11f-4d60-91ee-436dc9534941/scratchpad/mdgr3/small_case/small_case.py",
+  "script_sha256": "8924a4603d46337054855fa19eb595d1f646b273cf9ace4704382261c3d22fa4"
+ }
+}

@@ -1,0 +1,25 @@
+# cqc-md-deadman.service (with cqc-md-deadman.timer): the switch ON the rented GPU machine that shuts it down when the
+# Pi has not been seen for 4 hours (md/gpu/deadman.py; md/gpu/GPU_RUN.md, section 4). The Pi's watchdog touches
+# /root/cqc-sfa-md/status/PI_SEEN at every contact; this unit looks at the age of that file.
+#
+# Installed AND started by ops/vm/setup_gpu.sh (also alone: setup_gpu.sh --deadman-only). By hand:
+#   sudo install -m 644 /root/workspace/cqc-4-sulfamoylanilinium-dihydrogen-phosphate/md/gpu/cqc-md-deadman.service \
+#        /root/workspace/cqc-4-sulfamoylanilinium-dihydrogen-phosphate/md/gpu/cqc-md-deadman.timer /etc/systemd/system/
+#   sudo systemctl daemon-reload && sudo systemctl enable --now cqc-md-deadman.timer
+# Look:  systemctl list-timers cqc-md-deadman.timer ; sudo cat /root/cqc-sfa-md/status/deadman.json ; .../deadman.log
+# Off:   sudo touch /root/cqc-sfa-md/status/NO_DEADMAN      (the timer goes on running and does nothing)
+
+[Unit]
+Description=cqc-md switch: shut the machine down when the Pi has not been seen for 4 hours (md/gpu/deadman.py)
+Documentation=file:///root/workspace/cqc-4-sulfamoylanilinium-dihydrogen-phosphate/md/gpu/GPU_RUN.md
+ConditionPathExists=/root/workspace/cqc-4-sulfamoylanilinium-dihydrogen-phosphate/md/gpu/deadman.py
+
+[Service]
+Type=oneshot
+User=root
+Environment=HOME=/root
+Environment=PYTHONUNBUFFERED=1
+Environment=PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+ExecStart=/usr/bin/python3 /root/workspace/cqc-4-sulfamoylanilinium-dihydrogen-phosphate/md/gpu/deadman.py --yes
+# stopping the queue, up to 10 minutes of waiting for its tasks, and the shutdown call fit well inside this
+TimeoutStartSec=20min

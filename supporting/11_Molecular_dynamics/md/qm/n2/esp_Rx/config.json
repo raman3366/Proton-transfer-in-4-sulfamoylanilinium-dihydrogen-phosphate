@@ -1,0 +1,48 @@
+{
+ "prefix": "CA2",
+ "indir": "md/qm/n2/esp_Rx/in",
+ "bulk": "/root/cqc-sfa-md/qm/n2/esp_Rx",
+ "outdir": "md/qm/n2/esp_Rx/results",
+ "threads": 16,
+ "max_memory_mb": 8000,
+ "scf_max_cycle": 60,
+ "method": {
+  "xc": "b3lyp",
+  "basis": "6-31g*",
+  "cart": false,
+  "density_fit": true,
+  "auxbasis": "def2-universal-jkfit"
+ },
+ "opt": {
+  "grid": 3,
+  "conv_tol": 1e-09,
+  "maxsteps": 300,
+  "frozen": []
+ },
+ "hess": {
+  "grid": 3,
+  "conv_tol": 1e-10,
+  "step_bohr": 0.005,
+  "grid_response": true,
+  "atoms": "zinc_site+SAN@S"
+ },
+ "esp": {
+  "grid_scf": 2,
+  "grid_final": [
+   99,
+   590
+  ],
+  "conv_tol": 1e-09,
+  "density": null,
+  "layers": [
+   1.4,
+   1.6,
+   1.8,
+   2.0
+  ]
+ },
+ "jobs": [
+  "esp",
+  "write"
+ ]
+}

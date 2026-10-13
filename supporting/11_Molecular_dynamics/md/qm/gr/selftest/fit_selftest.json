@@ -1,0 +1,755 @@
+{
+ "what": "self-test of gate and fit on synthetic energies (md/qm/gr_fit.py selftest)",
+ "plan": "md/PLAN.md, entries of 6 Oct 2026, 8:56 AM IST and 1:09 PM IST",
+ "mm": "md/qm/gr/mm_2e_main.json",
+ "mm_label": "step 2e, RESP charges with the ligand pairs equal, Zn-N2-H at its value in start X",
+ "written": "2026-10-06 01:40:58 PM IST",
+ "seed": 20261006,
+ "noise_sigma": 0.3,
+ "n_draws": 200,
+ "rule": {
+  "k_range": [
+   10.0,
+   300.0
+  ],
+  "largest_standard_error_theta0": 5.0,
+  "largest_relative_standard_error_k": 0.3,
+  "residual_rms_max": 1.0,
+  "leave_one_out_rms_max": 1.0,
+  "torsion_coefficient_max": 5.0,
+  "theta0_window_around_its_reference": 10.0,
+  "part_A_with_the_fitted_terms_max": 1.0,
+  "window_reference": "Zn-N2-S: crystal value (start X); Zn-N2-H and S-N2-H: quantum-chemical optimum of the small model, all atoms free; without that optimum the condition refuses (plan, 6 Oct 2026, 1:09 PM IST, point 4)",
+  "text": "acceptable: all conditions of `checks`; M2 when acceptable and leave-one-out r.m.s. <= 0.8 x that of M1; else M1 when acceptable; else no parameter file and the gate is reported as failed.  A model that fails only on part A with the fitted terms being above 1.0 is reported as \"terms improved, gate still failed\" and not used"
+ },
+ "window_centres": {
+  "Zn_N2_S": 117.5521,
+  "Zn_N2_H": 122.756,
+  "S_N2_H": 109.083
+ },
+ "window_centres_record": {
+  "sources": {
+   "Zn_N2_S": "start X (crystal structure 6RL9)",
+   "Zn_N2_H": "quantum-chemical optimum of the small model, all atoms free",
+   "S_N2_H": "quantum-chemical optimum of the small model, all atoms free"
+  },
+  "optimum": {
+   "file": "md/qm/gr/binding_check.json",
+   "source": {
+    "kind": "geometry of the finished optimisation (opt_final.npy); the fchk file is not written yet",
+    "file": "/root/cqc-sfa-md/qm/prod/opt_final.npy",
+    "sha256": "ab96538c0fd8c9f5330b16d6e85497e48ed934ccf7b1af46a831290dc5d4bcbe",
+    "provisional": true
+   }
+  },
+  "constructed_hydrogen_of_start_X": {
+   "Zn_N2_H": 107.4065,
+   "S_N2_H": 107.4143
+  },
+  "complete": true
+ },
+ "angles_in_start_X": {
+  "Zn_N2_S": 117.5521,
+  "Zn_N2_H": 107.4065,
+  "S_N2_H": 107.4143
+ },
+ "terms_of_the_topology": {
+  "k": {
+   "Zn_N2_S": 50.0,
+   "Zn_N2_H": 50.0,
+   "S_N2_H": 61.55
+  },
+  "theta0": {
+   "Zn_N2_S": 117.55005066555006,
+   "Zn_N2_H": 107.40604604305861,
+   "S_N2_H": 118.059050327926
+  },
+  "c1": -0.2624,
+  "c2": 2.703
+ },
+ "model_form_reproduces_the_topology_terms": {
+  "spread_of_the_constant": 7.140860810217475e-06,
+  "passed": true
+ },
+ "cases": {
+  "T0_change_nothing": {
+   "what": "energies = the force field itself; right answer: the gate passes, nothing is fitted",
+   "without_noise": {
+    "part_A_before": {
+     "rms": 0.0,
+     "passed": true,
+     "rms_single_reference": 0.0
+    },
+    "fit_run": false,
+    "chosen": null,
+    "outcome": null
+   },
+   "with_noise": {
+    "outcomes_of_200": {
+     "gate_passed_no_fit": 200,
+     "M1": 0,
+     "M2": 0,
+     "none": 0
+    },
+    "expected": "gate passes in (nearly) every draw; no parameter file"
+   },
+   "passed": true
+  },
+  "T0b_reviewer_force_field_minus_D3": {
+   "what": "the reviewer's test (review of 6 Oct 2026, fit_sensitivity case B): energies = force field minus D3(BJ); read without the D3 term the right answer is \"change nothing\"; read with it the gate must pass exactly",
+   "read_without_d3": {
+    "part_A_before": {
+     "rms": 0.9452,
+     "passed": true,
+     "rms_single_reference": 5.185
+    },
+    "fit_run": false,
+    "chosen": null,
+    "outcome": null
+   },
+   "read_with_d3": {
+    "part_A_before": {
+     "rms": 0.0,
+     "passed": true,
+     "rms_single_reference": 0.0
+    },
+    "fit_run": false,
+    "chosen": null,
+    "outcome": null
+   },
+   "passed": true,
+   "nothing_changed": true
+  },
+  "T0c_contact_error_only": {
+   "what": "energies = force field + 3.4 kcal/mol on every point made from Rx + 2.0 on every turn about N2-S (errors of part B); right answer: part A passes, nothing is fitted",
+   "without_noise": {
+    "part_A_before": {
+     "rms": 0.0,
+     "passed": true,
+     "rms_single_reference": 1.8362
+    },
+    "fit_run": false,
+    "chosen": null,
+    "outcome": null
+   },
+   "passed": true
+  },
+  "T1_other_angles_and_torsion_constants_of_the_topology": {
+   "truth": {
+    "k": {
+     "Zn_N2_S": 50.0,
+     "Zn_N2_H": 50.0,
+     "S_N2_H": 61.55
+    },
+    "theta0": {
+     "Zn_N2_S": 121.0021,
+     "Zn_N2_H": 127.346,
+     "S_N2_H": 111.673
+    },
+    "c1": 0.8,
+    "c2": -1.5
+   },
+   "inside_the_rule": true,
+   "without_noise": {
+    "part_A_before": {
+     "rms": 7.9051,
+     "passed": false,
+     "rms_single_reference": 6.3598
+    },
+    "fit_run": true,
+    "chosen": "M1",
+    "outcome": "accepted",
+    "M1": {
+     "parameters": {
+      "k": {
+       "Zn_N2_S": 50.0,
+       "Zn_N2_H": 50.0,
+       "S_N2_H": 61.55
+      },
+      "theta0": {
+       "Zn_N2_S": 121.00209999999996,
+       "Zn_N2_H": 127.34599999999975,
+       "S_N2_H": 111.67299999999983
+      },
+      "c1": 0.7999999999997757,
+      "c2": -1.4999999999999774
+     },
+     "rms_residual": 1.8561356531854126e-13,
+     "leave_one_out_rms": 6.459736239796936e-13,
+     "part_A_after": 0.0,
+     "acceptable": true,
+     "improved_only": false,
+     "failed_checks": []
+    },
+    "M2": {
+     "parameters": {
+      "k": {
+       "Zn_N2_S": 49.999999999999034,
+       "Zn_N2_H": 50.00000000000091,
+       "S_N2_H": 61.55000000000088
+      },
+      "theta0": {
+       "Zn_N2_S": 121.00209999999981,
+       "Zn_N2_H": 127.34599999999936,
+       "S_N2_H": 111.67299999999999
+      },
+      "c1": 0.8000000000000178,
+      "c2": -1.4999999999998266
+     },
+     "rms_residual": 2.5810996677768964e-13,
+     "leave_one_out_rms": 6.833164523057565e-13,
+     "part_A_after": 0.0,
+     "acceptable": true,
+     "improved_only": false,
+     "failed_checks": []
+    }
+   },
+   "largest_errors_without_noise": {
+    "M1": {
+     "theta0": 2.5579538487363607e-13,
+     "k": 0.0,
+     "c": 2.2437607327674414e-13
+    },
+    "M2": {
+     "theta0": 6.394884621840902e-13,
+     "k": 9.663381206337363e-13,
+     "c": 1.7341683644644945e-13
+    }
+   },
+   "passed": true,
+   "with_noise": {
+    "outcomes_of_200": {
+     "gate_passed_no_fit": 0,
+     "M1": 195,
+     "M2": 5,
+     "none": 0
+    },
+    "expected": "a parameter set is released in most draws and scatters about the truth",
+    "released_parameters": {
+     "mean": {
+      "theta0_Zn_N2_S": 121.003,
+      "theta0_Zn_N2_H": 127.405,
+      "theta0_S_N2_H": 111.667,
+      "k_Zn_N2_S": 50.002,
+      "k_Zn_N2_H": 49.904,
+      "k_S_N2_H": 61.55,
+      "c1": 0.798,
+      "c2": -1.509
+     },
+     "sd": {
+      "theta0_Zn_N2_S": 0.319,
+      "theta0_Zn_N2_H": 0.584,
+      "theta0_S_N2_H": 0.289,
+      "k_Zn_N2_S": 0.418,
+      "k_Zn_N2_H": 1.099,
+      "k_S_N2_H": 0.82,
+      "c1": 0.152,
+      "c2": 0.137
+     }
+    }
+   }
+  },
+  "T2_other_constants_as_well": {
+   "truth": {
+    "k": {
+     "Zn_N2_S": 38.0,
+     "Zn_N2_H": 28.0,
+     "S_N2_H": 45.0
+    },
+    "theta0": {
+     "Zn_N2_S": 121.0021,
+     "Zn_N2_H": 127.346,
+     "S_N2_H": 111.673
+    },
+    "c1": 0.8,
+    "c2": -1.5
+   },
+   "inside_the_rule": true,
+   "without_noise": {
+    "part_A_before": {
+     "rms": 5.2425,
+     "passed": false,
+     "rms_single_reference": 3.7335
+    },
+    "fit_run": true,
+    "chosen": "M2",
+    "outcome": "accepted",
+    "M1": {
+     "parameters": {
+      "k": {
+       "Zn_N2_S": 50.0,
+       "Zn_N2_H": 50.0,
+       "S_N2_H": 61.55
+      },
+      "theta0": {
+       "Zn_N2_S": 121.34837881532084,
+       "Zn_N2_H": 119.2595051912072,
+       "S_N2_H": 111.23898112380493
+      },
+      "c1": 0.5239149555570685,
+      "c2": -1.3211268640318248
+     },
+     "rms_residual": 0.4849616413519593,
+     "leave_one_out_rms": 1.2799243753843097,
+     "part_A_after": 0.5975,
+     "acceptable": false,
+     "improved_only": false,
+     "failed_checks": [
+      "leave_one_out_rms_at_most_1"
+     ]
+    },
+    "M2": {
+     "parameters": {
+      "k": {
+       "Zn_N2_S": 37.9999999999992,
+       "Zn_N2_H": 28.00000000000053,
+       "S_N2_H": 45.0000000000004
+      },
+      "theta0": {
+       "Zn_N2_S": 121.00209999999981,
+       "Zn_N2_H": 127.34599999999932,
+       "S_N2_H": 111.67299999999999
+      },
+      "c1": 0.7999999999999341,
+      "c2": -1.4999999999999114
+     },
+     "rms_residual": 3.029065017086683e-13,
+     "leave_one_out_rms": 4.991588320945129e-13,
+     "part_A_after": 0.0,
+     "acceptable": true,
+     "improved_only": false,
+     "failed_checks": []
+    }
+   },
+   "largest_errors_without_noise": {
+    "M1": {
+     "theta0": 8.086494808792807,
+     "k": 22.0,
+     "c": 0.2760850444429316
+    },
+    "M2": {
+     "theta0": 6.821210263296962e-13,
+     "k": 8.029132914089132e-13,
+     "c": 8.859579736508749e-14
+    }
+   },
+   "passed": true,
+   "with_noise": {
+    "outcomes_of_200": {
+     "gate_passed_no_fit": 0,
+     "M1": 0,
+     "M2": 190,
+     "none": 10
+    },
+    "expected": "a parameter set is released in most draws and scatters about the truth",
+    "released_parameters": {
+     "mean": {
+      "theta0_Zn_N2_S": 120.86,
+      "theta0_Zn_N2_H": 127.263,
+      "theta0_S_N2_H": 111.776,
+      "k_Zn_N2_S": 37.729,
+      "k_Zn_N2_H": 28.538,
+      "k_S_N2_H": 44.542,
+      "c1": 0.804,
+      "c2": -1.491
+     },
+     "sd": {
+      "theta0_Zn_N2_S": 0.722,
+      "theta0_Zn_N2_H": 2.486,
+      "theta0_S_N2_H": 0.517,
+      "k_Zn_N2_S": 4.062,
+      "k_Zn_N2_H": 3.637,
+      "k_S_N2_H": 3.3,
+      "c1": 0.159,
+      "c2": 0.122
+     }
+    }
+   }
+  },
+  "T3_outside_the_rule": {
+   "truth": {
+    "k": {
+     "Zn_N2_S": 50.0,
+     "Zn_N2_H": 50.0,
+     "S_N2_H": 61.55
+    },
+    "theta0": {
+     "Zn_N2_S": 131.00209999999998,
+     "Zn_N2_H": 127.346,
+     "S_N2_H": 111.673
+    },
+    "c1": 0.8,
+    "c2": -6.5
+   },
+   "inside_the_rule": false,
+   "without_noise": {
+    "part_A_before": {
+     "rms": 13.4342,
+     "passed": false,
+     "rms_single_reference": 11.3578
+    },
+    "fit_run": true,
+    "chosen": null,
+    "outcome": "no fit accepted",
+    "M1": {
+     "parameters": {
+      "k": {
+       "Zn_N2_S": 50.0,
+       "Zn_N2_H": 50.0,
+       "S_N2_H": 61.55
+      },
+      "theta0": {
+       "Zn_N2_S": 131.00209999999996,
+       "Zn_N2_H": 127.34599999999993,
+       "S_N2_H": 111.6729999999999
+      },
+      "c1": 0.7999999999997573,
+      "c2": -6.500000000000139
+     },
+     "rms_residual": 2.4687653721263095e-13,
+     "leave_one_out_rms": 6.582617619501176e-13,
+     "part_A_after": 0.0,
+     "acceptable": false,
+     "improved_only": false,
+     "failed_checks": [
+      "torsion_coefficients_below_5",
+      "equilibrium_angles_within_10_deg_of_their_reference"
+     ]
+    },
+    "M2": {
+     "parameters": {
+      "k": {
+       "Zn_N2_S": 49.99999999999898,
+       "Zn_N2_H": 50.00000000000095,
+       "S_N2_H": 61.55000000000088
+      },
+      "theta0": {
+       "Zn_N2_S": 131.00209999999993,
+       "Zn_N2_H": 127.34599999999934,
+       "S_N2_H": 111.6729999999999
+      },
+      "c1": 0.7999999999999755,
+      "c2": -6.4999999999999
+     },
+     "rms_residual": 7.297300705876904e-13,
+     "leave_one_out_rms": 7.257219288207914e-13,
+     "part_A_after": 0.0,
+     "acceptable": false,
+     "improved_only": false,
+     "failed_checks": [
+      "torsion_coefficients_below_5",
+      "equilibrium_angles_within_10_deg_of_their_reference"
+     ]
+    }
+   },
+   "passed": true,
+   "with_noise": {
+    "outcomes_of_200": {
+     "gate_passed_no_fit": 0,
+     "M1": 0,
+     "M2": 0,
+     "none": 200
+    },
+    "expected": "no parameter file in (nearly) every draw"
+   }
+  },
+  "T4_without_the_quantum_chemical_optimum": {
+   "what": "the data of T1 (inside the rule), read WITHOUT the quantum-chemical optimum of the small model: the window of the two hydrogen angles has no centre; right answer: no parameter file, refused on that condition alone",
+   "window_centres": {
+    "Zn_N2_S": 117.5521,
+    "Zn_N2_H": null,
+    "S_N2_H": null
+   },
+   "without_noise": {
+    "part_A_before": {
+     "rms": 7.9051,
+     "passed": false,
+     "rms_single_reference": 6.3598
+    },
+    "fit_run": true,
+    "chosen": null,
+    "outcome": "no fit accepted",
+    "M1": {
+     "parameters": {
+      "k": {
+       "Zn_N2_S": 50.0,
+       "Zn_N2_H": 50.0,
+       "S_N2_H": 61.55
+      },
+      "theta0": {
+       "Zn_N2_S": 121.00209999999996,
+       "Zn_N2_H": 127.34599999999975,
+       "S_N2_H": 111.67299999999983
+      },
+      "c1": 0.7999999999997757,
+      "c2": -1.4999999999999774
+     },
+     "rms_residual": 1.8561356531854126e-13,
+     "leave_one_out_rms": 6.459736239796936e-13,
+     "part_A_after": 0.0,
+     "acceptable": false,
+     "improved_only": false,
+     "failed_checks": [
+      "equilibrium_angles_within_10_deg_of_their_reference"
+     ]
+    },
+    "M2": {
+     "parameters": {
+      "k": {
+       "Zn_N2_S": 49.999999999999034,
+       "Zn_N2_H": 50.00000000000091,
+       "S_N2_H": 61.55000000000088
+      },
+      "theta0": {
+       "Zn_N2_S": 121.00209999999981,
+       "Zn_N2_H": 127.34599999999936,
+       "S_N2_H": 111.67299999999999
+      },
+      "c1": 0.8000000000000178,
+      "c2": -1.4999999999998266
+     },
+     "rms_residual": 2.5810996677768964e-13,
+     "leave_one_out_rms": 6.833164523057565e-13,
+     "part_A_after": 0.0,
+     "acceptable": false,
+     "improved_only": false,
+     "failed_checks": [
+      "equilibrium_angles_within_10_deg_of_their_reference"
+     ]
+    }
+   },
+   "passed": true
+  },
+  "T5_terms_improved_gate_still_failed": {
+   "what": "parameters inside the rule; one of the five points with identical fitted coordinates (e_p120) lowered by 2.4 kcal/mol; right answer: \"terms improved, gate still failed\", no parameter file",
+   "truth": {
+    "k": {
+     "Zn_N2_S": 50.0,
+     "Zn_N2_H": 50.0,
+     "S_N2_H": 61.55
+    },
+    "theta0": {
+     "Zn_N2_S": 124.0021,
+     "Zn_N2_H": 128.346,
+     "S_N2_H": 113.673
+    },
+    "c1": 1.5,
+    "c2": -2.5
+   },
+   "lowered": "e_p120",
+   "without_noise": {
+    "part_A_before": {
+     "rms": 8.2288,
+     "passed": false,
+     "rms_single_reference": 4.8016
+    },
+    "fit_run": true,
+    "chosen": null,
+    "outcome": "terms improved, gate still failed",
+    "M1": {
+     "parameters": {
+      "k": {
+       "Zn_N2_S": 50.0,
+       "Zn_N2_H": 50.0,
+       "S_N2_H": 61.55
+      },
+      "theta0": {
+       "Zn_N2_S": 123.67715738610677,
+       "Zn_N2_H": 128.29702071864563,
+       "S_N2_H": 113.62168213319913
+      },
+      "c1": 1.6182088050573649,
+      "c2": -2.4569153348734996
+     },
+     "rms_residual": 0.458860985874681,
+     "leave_one_out_rms": 0.5146151226618474,
+     "part_A_after": 1.9984,
+     "acceptable": false,
+     "improved_only": true,
+     "failed_checks": [
+      "part_A_after_at_most_1"
+     ]
+    },
+    "M2": {
+     "parameters": {
+      "k": {
+       "Zn_N2_S": 52.554818871427926,
+       "Zn_N2_H": 52.87142786202161,
+       "S_N2_H": 64.49368659121386
+      },
+      "theta0": {
+       "Zn_N2_S": 123.666392958397,
+       "Zn_N2_H": 127.26556651489277,
+       "S_N2_H": 113.43837811460328
+      },
+      "c1": 1.5795402723034035,
+      "c2": -2.428649302661378
+     },
+     "rms_residual": 0.45245951909142773,
+     "leave_one_out_rms": 0.5837513134229735,
+     "part_A_after": 1.9453,
+     "acceptable": false,
+     "improved_only": true,
+     "failed_checks": [
+      "part_A_after_at_most_1"
+     ]
+    }
+   },
+   "reason": "terms improved, gate still failed: M1 and M2 meet(s) every other condition and lower(s) part A, but part A with the fitted terms stays above 1.0; not used, no parameter file, the terms stay as built",
+   "passed": true
+  },
+  "T6_Zn_N2_H_11_deg_from_its_centre": {
+   "what": "exact data; equilibrium value of Zn-N2-H 11 deg from the centre of its window; right answer: no parameter file, refused on that condition alone",
+   "truth": {
+    "k": {
+     "Zn_N2_S": 50.0,
+     "Zn_N2_H": 50.0,
+     "S_N2_H": 61.55
+    },
+    "theta0": {
+     "Zn_N2_S": 121.0021,
+     "Zn_N2_H": 133.756,
+     "S_N2_H": 111.673
+    },
+    "c1": 0.8,
+    "c2": -1.5
+   },
+   "without_noise": {
+    "part_A_before": {
+     "rms": 10.2637,
+     "passed": false,
+     "rms_single_reference": 8.7648
+    },
+    "fit_run": true,
+    "chosen": null,
+    "outcome": "no fit accepted",
+    "M1": {
+     "parameters": {
+      "k": {
+       "Zn_N2_S": 50.0,
+       "Zn_N2_H": 50.0,
+       "S_N2_H": 61.55
+      },
+      "theta0": {
+       "Zn_N2_S": 121.00210000000007,
+       "Zn_N2_H": 133.75600000000003,
+       "S_N2_H": 111.67299999999999
+      },
+      "c1": 0.7999999999999566,
+      "c2": -1.5000000000001181
+     },
+     "rms_residual": 2.0426095498840992e-13,
+     "leave_one_out_rms": 5.77212661578909e-13,
+     "part_A_after": 0.0,
+     "acceptable": false,
+     "improved_only": false,
+     "failed_checks": [
+      "equilibrium_angles_within_10_deg_of_their_reference"
+     ]
+    },
+    "M2": {
+     "parameters": {
+      "k": {
+       "Zn_N2_S": 49.99999999999895,
+       "Zn_N2_H": 50.00000000000098,
+       "S_N2_H": 61.55000000000108
+      },
+      "theta0": {
+       "Zn_N2_S": 121.00209999999973,
+       "Zn_N2_H": 133.75599999999915,
+       "S_N2_H": 111.67299999999986
+      },
+      "c1": 0.7999999999999162,
+      "c2": -1.4999999999999158
+     },
+     "rms_residual": 6.99325495280321e-13,
+     "leave_one_out_rms": 7.732916931262525e-13,
+     "part_A_after": 0.0,
+     "acceptable": false,
+     "improved_only": false,
+     "failed_checks": [
+      "equilibrium_angles_within_10_deg_of_their_reference"
+     ]
+    }
+   },
+   "passed": true
+  },
+  "T7_hydrogen_angles_at_the_optimum": {
+   "what": "exact data; equilibrium values of Zn-N2-H and S-N2-H at the centres of their windows (the quantum-chemical optimum); right answer: accepted, parameters back",
+   "truth": {
+    "k": {
+     "Zn_N2_S": 50.0,
+     "Zn_N2_H": 50.0,
+     "S_N2_H": 61.55
+    },
+    "theta0": {
+     "Zn_N2_S": 121.0021,
+     "Zn_N2_H": 122.756,
+     "S_N2_H": 109.083
+    },
+    "c1": 0.8,
+    "c2": -1.5
+   },
+   "distance_from_the_constructed_hydrogen": {
+    "Zn_N2_H": 15.35,
+    "S_N2_H": 1.669
+   },
+   "without_noise": {
+    "part_A_before": {
+     "rms": 5.5123,
+     "passed": false,
+     "rms_single_reference": 4.9056
+    },
+    "fit_run": true,
+    "chosen": "M1",
+    "outcome": "accepted",
+    "M1": {
+     "parameters": {
+      "k": {
+       "Zn_N2_S": 50.0,
+       "Zn_N2_H": 50.0,
+       "S_N2_H": 61.55
+      },
+      "theta0": {
+       "Zn_N2_S": 121.00209999999991,
+       "Zn_N2_H": 122.7559999999998,
+       "S_N2_H": 109.083
+      },
+      "c1": 0.7999999999997944,
+      "c2": -1.5000000000000748
+     },
+     "rms_residual": 2.808576896086482e-13,
+     "leave_one_out_rms": 5.696053775764304e-13,
+     "part_A_after": 0.0,
+     "acceptable": true,
+     "improved_only": false,
+     "failed_checks": []
+    },
+    "M2": {
+     "parameters": {
+      "k": {
+       "Zn_N2_S": 49.9999999999989,
+       "Zn_N2_H": 50.00000000000091,
+       "S_N2_H": 61.550000000000864
+      },
+      "theta0": {
+       "Zn_N2_S": 121.00209999999973,
+       "Zn_N2_H": 122.75599999999945,
+       "S_N2_H": 109.08299999999996
+      },
+      "c1": 0.7999999999998862,
+      "c2": -1.499999999999828
+     },
+     "rms_residual": 5.662655889065239e-13,
+     "leave_one_out_rms": 6.44978339007963e-13,
+     "part_A_after": 0.0,
+     "acceptable": true,
+     "improved_only": false,
+     "failed_checks": []
+    }
+   },
+   "passed": true
+  }
+ },
+ "passed": true
+}

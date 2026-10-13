@@ -1,0 +1,13 @@
+- 2026-09-27 14:29  pre-optimisation at B3LYP/6-31g(d) (176 basis functions)
+- 2026-09-27 14:42  pre-optimisation converged in 30 steps, 12.9 min
+- 2026-09-27 14:42  optimisation started from preopt.xyz; solvent=none (gas phase)
+- 2026-09-27 14:49  optimisation converged in 8 steps, 6.9 min, E = -892.08047894 Ha
+- 2026-09-27 14:49  Hessian by parallel finite differences: 120 gradients, 2 workers x 2 threads
+- 2026-09-27 16:28  frequencies (finite-difference (gradients, step 0.005 Bohr, 2 workers x 2 threads)): 0 imaginary, lowest 20.9 cm-1, 99 min
+- 2026-09-27 16:28  FMO: HOMO -11.185 eV, LUMO -5.658 eV, gap 5.528 eV; fragment composition None / None
+- 2026-09-27 16:28  molden padded from 311 to 313 MOs for Multiwfn compatibility
+- 2026-09-27 16:36  cubes written (ESP 64^3 in 7.0 min)
+- 2026-09-28 01:22  Delta-SCF (dscf.json): I = 13.139 eV, A = 4.108 eV, eta = 4.515 eV (Koopmans I = 11.185, A = 5.658)
+- 2026-09-28 04:54  charges (Hirshfeld/ADCH/CM5): fragment sums cation_gas_d3: Hirshfeld +1.000, ADCH +1.000, CM5 +1.000
+- 2026-09-28 04:54  charges (NPA/Hirshfeld/ADCH/CM5): fragment sums cation_gas_d3: NPA +1.000, Hirshfeld +1.000, ADCH +1.000, CM5 +1.000
+- 2026-09-28 04:55  MEP surface: min 0.02882 a.u., max 0.256429 a.u.; 7 minima, 9 maxima

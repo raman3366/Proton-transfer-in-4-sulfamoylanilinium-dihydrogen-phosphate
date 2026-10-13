@@ -1,0 +1,15 @@
+# cqc-md-deadman.timer: runs cqc-md-deadman.service (md/gpu/deadman.py --yes) for the first time 45 minutes after
+# boot and then every 10 minutes. The 45 minutes are what the Pi's watchdog gets after a start of the machine to be
+# seen (it looks every 5 minutes). See the service file beside this one, and md/gpu/GPU_RUN.md, section 4.
+
+[Unit]
+Description=cqc-md switch: looks every 10 minutes whether the Pi has been seen (first 45 minutes after boot)
+
+[Timer]
+OnBootSec=45min
+OnUnitActiveSec=10min
+AccuracySec=30s
+Unit=cqc-md-deadman.service
+
+[Install]
+WantedBy=timers.target

@@ -1,0 +1,9 @@
+T1_3TZF_seed7
+  Receptor preparation with PDBFixer seed 7 produced a conformation of the rebuilt Ala66-Ala67 loop
+  that Meeko 0.8 could not type: its per-residue RDKit perception derives bonds from interatomic
+  distances and found a five-bonded carbon (AtomValenceException, meeko/polymer.py:2534), so
+  mk_prepare_receptor.py refused the file.  The restrained minimisation had already run and had
+  brought the energy from +36,639 to -21,388 kJ/mol with the deposited atoms held to 0.18 A, so this
+  is a residual local geometry in the guessed loop, not a clash with the crystal structure.
+  Two of the three seeds tried (20260928 and 12345) gave receptors that prepared cleanly and are
+  redocked against each other as the loop-rebuild sensitivity test.  Kept here as evidence.

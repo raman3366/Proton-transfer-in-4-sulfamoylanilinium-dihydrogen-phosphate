@@ -1,0 +1,1340 @@
+{
+ "generated": "2026-09-29T05:12:38",
+ "eps": null,
+ "structures": [
+  "neutral",
+  "salt"
+ ],
+ "cases": {
+  "neutral": "sfa_xclu_neutral",
+  "salt": "sfa_xclu_salt"
+ },
+ "level": {
+  "xc": "b3lyp",
+  "disp": "d3bj",
+  "basis": "6-31+g(d,p)",
+  "basis_print": "6-31+G(d,p)",
+  "spherical_d": true,
+  "grid_level": 3,
+  "density_fitting": true,
+  "auxbasis": "PySCF default for the basis (heavy-aug-cc-pVDZ-JKFIT for 6-31+G(d,p))",
+  "environment": "gas phase",
+  "conv_tol": 1e-08
+ },
+ "n_atoms": 135,
+ "nao": 1755,
+ "qtaim": {
+  "neutral": {
+   "n_cp": 335,
+   "counts": {
+    "(3,-3)": 135,
+    "(3,-1)": 164,
+    "(3,+1)": 33,
+    "(3,+3)": 3
+   },
+   "poincare_hopf": {
+    "n-b+r-c": 1,
+    "satisfied": true
+   },
+   "cp_searches_logged": {
+    "n": 5,
+    "new_cps_each": [
+     135,
+     199,
+     1,
+     0,
+     0
+    ],
+    "expected_n": 5,
+    "note": "nuclei, midpoints, triangles, pyramids, spheres"
+   },
+   "n_noncovalent_bcp": 34,
+   "n_bcp_without_bond_path": 0
+  },
+  "salt": {
+   "n_cp": 339,
+   "counts": {
+    "(3,-3)": 135,
+    "(3,-1)": 166,
+    "(3,+1)": 35,
+    "(3,+3)": 3
+   },
+   "poincare_hopf": {
+    "n-b+r-c": 1,
+    "satisfied": true
+   },
+   "cp_searches_logged": {
+    "n": 5,
+    "new_cps_each": [
+     135,
+     204,
+     0,
+     0,
+     0
+    ],
+    "expected_n": 5,
+    "note": "nuclei, midpoints, triangles, pyramids, spheres"
+   },
+   "n_noncovalent_bcp": 36,
+   "n_bcp_without_bond_path": 0
+  }
+ },
+ "bonds": [
+  {
+   "bond": "N1-H1A...O5",
+   "instance": "N1-H1A...O5 [C0>A0]",
+   "cif_code": "1_554",
+   "salt": {
+    "geometry": {
+     "D-H": 1.0626,
+     "H..A": 1.6729,
+     "D..A": 2.7344,
+     "DHA": 176.7549
+    },
+    "bcp": {
+     "rho": 0.05033926922,
+     "lap": 0.1213646229,
+     "G": 0.03357128671,
+     "V": -0.0368014177,
+     "H": -0.003230130987,
+     "minusG_over_V": 0.9122280827241067,
+     "ellipticity": 0.034751,
+     "eta": 0.295546,
+     "E_HB_Espinosa_kcal": -11.546619131690644,
+     "multiwfn_name": "N1-H1A...O5 [C0>A0]",
+     "class": "intermolecular",
+     "criteria_met": true,
+     "proton_transferred": false,
+     "cp": 222,
+     "bond_path_A": 1.7343055383434614,
+     "nature_Rozas2000": "medium (lap>0, H<0)"
+    },
+    "bcp_is_reverse": false,
+    "bcp_H_A": {
+     "rho": 0.0503393,
+     "lap": 0.121365,
+     "G": 0.0335713,
+     "V": -0.0368014,
+     "H": -0.00323013,
+     "ellipticity": 0.034751,
+     "eta": 0.295546,
+     "d_AB_A": 1.67289,
+     "bond_path_A": 1.73431,
+     "minusG_over_V": 0.9122288825968577,
+     "cp": 222,
+     "class": "intermolecular",
+     "atoms": "H1A@C0-O5@A0"
+    },
+    "bcp_D_H": {
+     "rho": 0.293117,
+     "lap": -1.54627,
+     "G": 0.0447338,
+     "V": -0.476036,
+     "H": -0.431302,
+     "ellipticity": 0.003872,
+     "eta": 1.34521,
+     "d_AB_A": 1.06259,
+     "bond_path_A": 1.06268,
+     "minusG_over_V": 0.09397146434303287,
+     "cp": 213,
+     "class": "covalent",
+     "atoms": "N1@C0-H1A@C0"
+    }
+   },
+   "neutral": {
+    "geometry": {
+     "D-H": 1.616,
+     "H..A": 0.98,
+     "D..A": 2.5959,
+     "DHA": 179.053
+    },
+    "bcp": {
+     "rho": 0.0656318893,
+     "lap": 0.1172068707,
+     "G": 0.04192169547,
+     "V": -0.05454167328,
+     "H": -0.01261997781,
+     "minusG_over_V": 0.7686176999885398,
+     "ellipticity": 0.005074,
+     "eta": 0.342517,
+     "E_HB_Espinosa_kcal": -17.112708355506328,
+     "multiwfn_name": "O5@A0-H1A@C0...N1@C0 (reverse of case H-bond N1-H1A...O5 [C0>A0]: proton transferred)",
+     "class": "intermolecular",
+     "criteria_met": true,
+     "proton_transferred": true,
+     "cp": 217,
+     "bond_path_A": 1.6878818560355684,
+     "nature_Rozas2000": "medium (lap>0, H<0)"
+    },
+    "bcp_is_reverse": true,
+    "bcp_H_A": {
+     "rho": 0.323918,
+     "lap": -1.87022,
+     "G": 0.0898009,
+     "V": -0.647156,
+     "H": -0.557355,
+     "ellipticity": 0.010593,
+     "eta": 1.07387,
+     "d_AB_A": 0.98,
+     "bond_path_A": 0.980377,
+     "minusG_over_V": 0.1387623695059615,
+     "cp": 223,
+     "class": "covalent",
+     "atoms": "H1A@C0-O5@A0"
+    },
+    "bcp_D_H": {
+     "rho": 0.0656319,
+     "lap": 0.117207,
+     "G": 0.0419217,
+     "V": -0.0545417,
+     "H": -0.01262,
+     "ellipticity": 0.005074,
+     "eta": 0.342517,
+     "d_AB_A": 1.61601,
+     "bond_path_A": 1.68788,
+     "minusG_over_V": 0.7686174064981472,
+     "cp": 217,
+     "class": "intermolecular",
+     "atoms": "N1@C0-H1A@C0"
+    }
+   },
+   "delta_neutral_minus_salt": {
+    "rho": 0.015292620079999993,
+    "lap": -0.004157752200000003,
+    "G": 0.008350408759999997,
+    "V": -0.017740255580000003,
+    "H": -0.009389846823,
+    "ellipticity": -0.029676999999999995,
+    "minusG_over_V": -0.14361038273556692,
+    "rho_pct": 30.379106246389796,
+    "H..A_A": -0.6929000000000001
+   },
+   "rho_instances_salt": [
+    0.05033926922,
+    0.05137868983,
+    0.05012582481,
+    0.05078318321,
+    0.04910277895
+   ],
+   "rho_instances_neutral": [
+    0.0656318893,
+    0.06426107557,
+    0.06520270435,
+    0.06506247902,
+    0.06596930121
+   ]
+  },
+  {
+   "bond": "N1-H1B...O6",
+   "instance": "N1-H1B...O6 [C1>A4]",
+   "cif_code": "2_554",
+   "salt": {
+    "geometry": {
+     "D-H": 1.0574,
+     "H..A": 1.7883,
+     "D..A": 2.8357,
+     "DHA": 170.0611
+    },
+    "bcp": {
+     "rho": 0.03726510125,
+     "lap": 0.1030878907,
+     "G": 0.02668502254,
+     "V": -0.0275980724,
+     "H": -0.0009130498555,
+     "minusG_over_V": 0.9669161727396585,
+     "ellipticity": 0.027153,
+     "eta": 0.261339,
+     "E_HB_Espinosa_kcal": -8.659025947568958,
+     "multiwfn_name": "N1-H1B...O6 [C1>A4]",
+     "class": "intermolecular",
+     "criteria_met": true,
+     "proton_transferred": false,
+     "cp": 192,
+     "bond_path_A": 1.8485336827138044,
+     "nature_Rozas2000": "medium (lap>0, H<0)"
+    },
+    "bcp_is_reverse": false,
+    "bcp_H_A": {
+     "rho": 0.0372651,
+     "lap": 0.103088,
+     "G": 0.026685,
+     "V": -0.0275981,
+     "H": -0.00091305,
+     "ellipticity": 0.027153,
+     "eta": 0.261339,
+     "d_AB_A": 1.78833,
+     "bond_path_A": 1.84853,
+     "minusG_over_V": 0.9669143890340277,
+     "cp": 192,
+     "class": "intermolecular",
+     "atoms": "O6@A4-H1B@C1"
+    },
+    "bcp_D_H": {
+     "rho": 0.305,
+     "lap": -1.62924,
+     "G": 0.0410384,
+     "V": -0.489386,
+     "H": -0.448347,
+     "ellipticity": 0.008384,
+     "eta": 1.52314,
+     "d_AB_A": 1.05739,
+     "bond_path_A": 1.05746,
+     "minusG_over_V": 0.0838569145827629,
+     "cp": 204,
+     "class": "covalent",
+     "atoms": "H1B@C1-N1@C1"
+    }
+   },
+   "neutral": {
+    "geometry": {
+     "D-H": 1.0315,
+     "H..A": 1.9764,
+     "D..A": 2.9679,
+     "DHA": 160.2815
+    },
+    "bcp": {
+     "rho": 0.02446266088,
+     "lap": 0.07110271951,
+     "G": 0.01837929226,
+     "V": -0.01898290465,
+     "H": -0.0006036123852,
+     "minusG_over_V": 0.9682023167092081,
+     "ellipticity": 0.017994,
+     "eta": 0.232384,
+     "E_HB_Espinosa_kcal": -5.955976255956827,
+     "multiwfn_name": "N1-H1B...O6 [C1>A4]",
+     "class": "intermolecular",
+     "criteria_met": true,
+     "proton_transferred": false,
+     "cp": 193,
+     "bond_path_A": 2.0376895067170544,
+     "nature_Rozas2000": "medium (lap>0, H<0)"
+    },
+    "bcp_is_reverse": false,
+    "bcp_H_A": {
+     "rho": 0.0244627,
+     "lap": 0.0711027,
+     "G": 0.0183793,
+     "V": -0.0189829,
+     "H": -0.000603612,
+     "ellipticity": 0.017994,
+     "eta": 0.232384,
+     "d_AB_A": 1.97643,
+     "bond_path_A": 2.03769,
+     "minusG_over_V": 0.96820296161282,
+     "cp": 193,
+     "class": "intermolecular",
+     "atoms": "O6@A4-H1B@C1"
+    },
+    "bcp_D_H": {
+     "rho": 0.32593,
+     "lap": -1.72502,
+     "G": 0.0496954,
+     "V": -0.530646,
+     "H": -0.48095,
+     "ellipticity": 0.035232,
+     "eta": 1.67282,
+     "d_AB_A": 1.03148,
+     "bond_path_A": 1.03156,
+     "minusG_over_V": 0.09365075775564125,
+     "cp": 203,
+     "class": "covalent",
+     "atoms": "H1B@C1-N1@C1"
+    }
+   },
+   "delta_neutral_minus_salt": {
+    "rho": -0.012802440370000001,
+    "lap": -0.03198517119000001,
+    "G": -0.00830573028,
+    "V": 0.00861516775,
+    "H": 0.0003094374703,
+    "ellipticity": -0.009159,
+    "minusG_over_V": 0.0012861439695496246,
+    "rho_pct": -34.35503981087399,
+    "H..A_A": 0.18809999999999993
+   },
+   "rho_instances_salt": [
+    0.03726510125,
+    0.03863722718
+   ],
+   "rho_instances_neutral": [
+    0.02446266088,
+    0.024985651
+   ]
+  },
+  {
+   "bond": "N1-H1C...O6",
+   "instance": "N1-H1C...O6 [C0>A4]",
+   "cif_code": "2_654",
+   "salt": {
+    "geometry": {
+     "D-H": 1.052,
+     "H..A": 1.7816,
+     "D..A": 2.8289,
+     "DHA": 173.2434
+    },
+    "bcp": {
+     "rho": 0.0368117632,
+     "lap": 0.104216243,
+     "G": 0.02640997347,
+     "V": -0.0267658862,
+     "H": -0.000355912729,
+     "minusG_over_V": 0.9867027481421483,
+     "ellipticity": 0.028103,
+     "eta": 0.257282,
+     "E_HB_Espinosa_kcal": -8.397923585252927,
+     "multiwfn_name": "N1-H1C...O6 [C0>A4]",
+     "class": "intermolecular",
+     "criteria_met": true,
+     "proton_transferred": false,
+     "cp": 187,
+     "bond_path_A": 1.8446009619670756,
+     "nature_Rozas2000": "medium (lap>0, H<0)"
+    },
+    "bcp_is_reverse": false,
+    "bcp_H_A": {
+     "rho": 0.0368118,
+     "lap": 0.104216,
+     "G": 0.02641,
+     "V": -0.0267659,
+     "H": -0.000355913,
+     "ellipticity": 0.028103,
+     "eta": 0.257282,
+     "d_AB_A": 1.78156,
+     "bond_path_A": 1.8446,
+     "minusG_over_V": 0.9867032306031182,
+     "cp": 187,
+     "class": "intermolecular",
+     "atoms": "O6@A4-H1C@C0"
+    },
+    "bcp_D_H": {
+     "rho": 0.309322,
+     "lap": -1.66573,
+     "G": 0.0407399,
+     "V": -0.497911,
+     "H": -0.457171,
+     "ellipticity": 0.007367,
+     "eta": 1.49265,
+     "d_AB_A": 1.05199,
+     "bond_path_A": 1.05212,
+     "minusG_over_V": 0.08182165085728173,
+     "cp": 197,
+     "class": "covalent",
+     "atoms": "H1C@C0-N1@C0"
+    }
+   },
+   "neutral": {
+    "geometry": {
+     "D-H": 1.0295,
+     "H..A": 1.9261,
+     "D..A": 2.9466,
+     "DHA": 170.6097
+    },
+    "bcp": {
+     "rho": 0.02619055679,
+     "lap": 0.07916920538,
+     "G": 0.01994219255,
+     "V": -0.02009208376,
+     "H": -0.0001498912091,
+     "minusG_over_V": 0.9925397877198577,
+     "ellipticity": 0.018228,
+     "eta": 0.230088,
+     "E_HB_Espinosa_kcal": -6.303986455900771,
+     "multiwfn_name": "N1-H1C...O6 [C0>A4]",
+     "class": "intermolecular",
+     "criteria_met": true,
+     "proton_transferred": false,
+     "cp": 183,
+     "bond_path_A": 1.9883632368589323,
+     "nature_Rozas2000": "medium (lap>0, H<0)"
+    },
+    "bcp_is_reverse": false,
+    "bcp_H_A": {
+     "rho": 0.0261906,
+     "lap": 0.0791692,
+     "G": 0.0199422,
+     "V": -0.0200921,
+     "H": -0.000149891,
+     "ellipticity": 0.018228,
+     "eta": 0.230088,
+     "d_AB_A": 1.92609,
+     "bond_path_A": 1.98836,
+     "minusG_over_V": 0.9925393562644024,
+     "cp": 183,
+     "class": "intermolecular",
+     "atoms": "O6@A4-H1C@C0"
+    },
+    "bcp_D_H": {
+     "rho": 0.329395,
+     "lap": -1.75663,
+     "G": 0.0485823,
+     "V": -0.536323,
+     "H": -0.487741,
+     "ellipticity": 0.031847,
+     "eta": 1.64886,
+     "d_AB_A": 1.02954,
+     "bond_path_A": 1.02979,
+     "minusG_over_V": 0.09058403238347042,
+     "cp": 196,
+     "class": "covalent",
+     "atoms": "H1C@C0-N1@C0"
+    }
+   },
+   "delta_neutral_minus_salt": {
+    "rho": -0.01062120641,
+    "lap": -0.025047037620000004,
+    "G": -0.006467780919999999,
+    "V": 0.006673802439999998,
+    "H": 0.00020602151990000003,
+    "ellipticity": -0.009874999999999998,
+    "minusG_over_V": 0.005837039577709424,
+    "rho_pct": -28.852751095606312,
+    "H..A_A": 0.14449999999999985
+   },
+   "rho_instances_salt": [
+    0.0368117632
+   ],
+   "rho_instances_neutral": [
+    0.02619055679
+   ]
+  },
+  {
+   "bond": "N2-H2A...O3",
+   "instance": "N2-H2A...O3 [C0>A3]",
+   "cif_code": "2_564",
+   "salt": {
+    "geometry": {
+     "D-H": 1.0269,
+     "H..A": 2.0672,
+     "D..A": 3.0612,
+     "DHA": 162.2171
+    },
+    "bcp": {
+     "rho": 0.0193380332,
+     "lap": 0.05547936926,
+     "G": 0.01428342742,
+     "V": -0.01469701252,
+     "H": -0.0004135850997,
+     "minusG_over_V": 0.9718592401389612,
+     "ellipticity": 0.06539,
+     "eta": 0.23583,
+     "E_HB_Espinosa_kcal": -4.611257297898307,
+     "multiwfn_name": "N2-H2A...O3 [C0>A3]",
+     "class": "intermolecular",
+     "criteria_met": true,
+     "proton_transferred": false,
+     "cp": 319,
+     "bond_path_A": 2.1308345509268967,
+     "nature_Rozas2000": "medium (lap>0, H<0)"
+    },
+    "bcp_is_reverse": false,
+    "bcp_H_A": {
+     "rho": 0.019338,
+     "lap": 0.0554794,
+     "G": 0.0142834,
+     "V": -0.014697,
+     "H": -0.000413585,
+     "ellipticity": 0.06539,
+     "eta": 0.23583,
+     "d_AB_A": 2.0672,
+     "bond_path_A": 2.13083,
+     "minusG_over_V": 0.9718582023542219,
+     "cp": 319,
+     "class": "intermolecular",
+     "atoms": "H2A@C0-O3@A3"
+    },
+    "bcp_D_H": {
+     "rho": 0.324869,
+     "lap": -1.73687,
+     "G": 0.0471061,
+     "V": -0.52843,
+     "H": -0.481324,
+     "ellipticity": 0.03565,
+     "eta": 1.61595,
+     "d_AB_A": 1.02693,
+     "bond_path_A": 1.02732,
+     "minusG_over_V": 0.08914350055825748,
+     "cp": 313,
+     "class": "covalent",
+     "atoms": "N2@C0-H2A@C0"
+    }
+   },
+   "neutral": {
+    "geometry": {
+     "D-H": 1.0247,
+     "H..A": 2.1133,
+     "D..A": 3.0859,
+     "DHA": 157.6921
+    },
+    "bcp": {
+     "rho": 0.01728274305,
+     "lap": 0.05272416236,
+     "G": 0.01329099332,
+     "V": -0.01340094605,
+     "H": -0.0001099527303,
+     "minusG_over_V": 0.9917951516564758,
+     "ellipticity": 0.070349,
+     "eta": 0.22566,
+     "E_HB_Espinosa_kcal": -4.204610303468939,
+     "multiwfn_name": "N2-H2A...O3 [C0>A3]",
+     "class": "intermolecular",
+     "criteria_met": true,
+     "proton_transferred": false,
+     "cp": 314,
+     "bond_path_A": 2.1744221508155923,
+     "nature_Rozas2000": "medium (lap>0, H<0)"
+    },
+    "bcp_is_reverse": false,
+    "bcp_H_A": {
+     "rho": 0.0172827,
+     "lap": 0.0527242,
+     "G": 0.013291,
+     "V": -0.0134009,
+     "H": -0.000109953,
+     "ellipticity": 0.070349,
+     "eta": 0.22566,
+     "d_AB_A": 2.11331,
+     "bond_path_A": 2.17442,
+     "minusG_over_V": 0.9917990582722056,
+     "cp": 314,
+     "class": "intermolecular",
+     "atoms": "H2A@C0-O3@A3"
+    },
+    "bcp_D_H": {
+     "rho": 0.32874,
+     "lap": -1.74224,
+     "G": 0.0500574,
+     "V": -0.535675,
+     "H": -0.485618,
+     "ellipticity": 0.037454,
+     "eta": 1.67956,
+     "d_AB_A": 1.02471,
+     "bond_path_A": 1.02508,
+     "minusG_over_V": 0.09344733280440566,
+     "cp": 307,
+     "class": "covalent",
+     "atoms": "N2@C0-H2A@C0"
+    }
+   },
+   "delta_neutral_minus_salt": {
+    "rho": -0.00205529015,
+    "lap": -0.0027552069000000012,
+    "G": -0.0009924341,
+    "V": 0.001296066470000001,
+    "H": 0.0003036323694,
+    "ellipticity": 0.004958999999999991,
+    "minusG_over_V": 0.019935911517514615,
+    "rho_pct": -10.628227435249205,
+    "H..A_A": 0.04610000000000003
+   },
+   "rho_instances_salt": [
+    0.0193380332
+   ],
+   "rho_instances_neutral": [
+    0.01728274305
+   ]
+  },
+  {
+   "bond": "N2-H2B...O2",
+   "instance": "N2-H2B...O2 [C0>C1]",
+   "cif_code": "1_655",
+   "salt": {
+    "geometry": {
+     "D-H": 1.0244,
+     "H..A": 1.962,
+     "D..A": 2.8877,
+     "DHA": 148.8331
+    },
+    "bcp": {
+     "rho": 0.0221693005,
+     "lap": 0.07820327648,
+     "G": 0.01850003564,
+     "V": -0.01744925215,
+     "H": 0.001050783483,
+     "minusG_over_V": 1.0602193997179414,
+     "ellipticity": 0.024076,
+     "eta": 0.204956,
+     "E_HB_Espinosa_kcal": -5.474785519169934,
+     "multiwfn_name": "N2-H2B...O2 [C0>C1]",
+     "class": "intermolecular",
+     "criteria_met": true,
+     "proton_transferred": false,
+     "cp": 304,
+     "bond_path_A": 2.022289152636691,
+     "nature_Rozas2000": "weak (lap>0, H>0)"
+    },
+    "bcp_is_reverse": false,
+    "bcp_H_A": {
+     "rho": 0.0221693,
+     "lap": 0.0782033,
+     "G": 0.0185,
+     "V": -0.0174493,
+     "H": 0.00105078,
+     "ellipticity": 0.024076,
+     "eta": 0.204956,
+     "d_AB_A": 1.96201,
+     "bond_path_A": 2.02229,
+     "minusG_over_V": 1.0602144498633181,
+     "cp": 304,
+     "class": "intermolecular",
+     "atoms": "O2@C1-H2B@C0"
+    },
+    "bcp_D_H": {
+     "rho": 0.328146,
+     "lap": -1.74617,
+     "G": 0.049071,
+     "V": -0.534686,
+     "H": -0.485615,
+     "ellipticity": 0.036599,
+     "eta": 1.6405,
+     "d_AB_A": 1.02442,
+     "bond_path_A": 1.02476,
+     "minusG_over_V": 0.09177535974384965,
+     "cp": 308,
+     "class": "covalent",
+     "atoms": "N2@C0-H2B@C0"
+    }
+   },
+   "neutral": {
+    "geometry": {
+     "D-H": 1.0253,
+     "H..A": 1.93,
+     "D..A": 2.8717,
+     "DHA": 151.2731
+    },
+    "bcp": {
+     "rho": 0.02382058128,
+     "lap": 0.08360758916,
+     "G": 0.01980945665,
+     "V": -0.01871701601,
+     "H": 0.001092440641,
+     "minusG_over_V": 1.0583661754318283,
+     "ellipticity": 0.024802,
+     "eta": 0.208672,
+     "E_HB_Espinosa_kcal": -5.872552435642339,
+     "multiwfn_name": "N2-H2B...O2 [C0>C1]",
+     "class": "intermolecular",
+     "criteria_met": true,
+     "proton_transferred": false,
+     "cp": 299,
+     "bond_path_A": 1.9905217427795663,
+     "nature_Rozas2000": "weak (lap>0, H>0)"
+    },
+    "bcp_is_reverse": false,
+    "bcp_H_A": {
+     "rho": 0.0238206,
+     "lap": 0.0836076,
+     "G": 0.0198095,
+     "V": -0.018717,
+     "H": 0.00109244,
+     "ellipticity": 0.024802,
+     "eta": 0.208672,
+     "d_AB_A": 1.92999,
+     "bond_path_A": 1.99052,
+     "minusG_over_V": 1.0583693968050436,
+     "cp": 299,
+     "class": "intermolecular",
+     "atoms": "O2@C1-H2B@C0"
+    },
+    "bcp_D_H": {
+     "rho": 0.327779,
+     "lap": -1.744,
+     "G": 0.0492652,
+     "V": -0.53453,
+     "H": -0.485265,
+     "ellipticity": 0.036331,
+     "eta": 1.63345,
+     "d_AB_A": 1.02532,
+     "bond_path_A": 1.02567,
+     "minusG_over_V": 0.09216545376311902,
+     "cp": 303,
+     "class": "covalent",
+     "atoms": "N2@C0-H2B@C0"
+    }
+   },
+   "delta_neutral_minus_salt": {
+    "rho": 0.0016512807800000001,
+    "lap": 0.005404312679999995,
+    "G": 0.0013094210100000024,
+    "V": -0.00126776386,
+    "H": 4.165715799999987e-05,
+    "ellipticity": 0.000726000000000001,
+    "minusG_over_V": -0.0018532242861131198,
+    "rho_pct": 7.448501949802155,
+    "H..A_A": -0.03200000000000003
+   },
+   "rho_instances_salt": [
+    0.0221693005
+   ],
+   "rho_instances_neutral": [
+    0.02382058128
+   ]
+  },
+  {
+   "bond": "O3-H3A...O1",
+   "instance": "O3-H3A...O1 [A2>C0]",
+   "cif_code": "1_455",
+   "salt": {
+    "geometry": {
+     "D-H": 0.992,
+     "H..A": 1.7632,
+     "D..A": 2.749,
+     "DHA": 172.0042
+    },
+    "bcp": {
+     "rho": 0.03340120369,
+     "lap": 0.1141415551,
+     "G": 0.02664027969,
+     "V": -0.02474517059,
+     "H": 0.001895109099,
+     "minusG_over_V": 1.0765850085012487,
+     "ellipticity": 0.005391,
+     "eta": 0.230404,
+     "E_HB_Espinosa_kcal": -7.763914490485584,
+     "multiwfn_name": "O3-H3A...O1 [A2>C0]",
+     "class": "intermolecular",
+     "criteria_met": true,
+     "proton_transferred": false,
+     "cp": 258,
+     "bond_path_A": 1.8369092186119058,
+     "nature_Rozas2000": "weak (lap>0, H>0)"
+    },
+    "bcp_is_reverse": false,
+    "bcp_H_A": {
+     "rho": 0.0334012,
+     "lap": 0.114142,
+     "G": 0.0266403,
+     "V": -0.0247452,
+     "H": 0.00189511,
+     "ellipticity": 0.005391,
+     "eta": 0.230404,
+     "d_AB_A": 1.76317,
+     "bond_path_A": 1.83691,
+     "minusG_over_V": 1.0765845497308568,
+     "cp": 258,
+     "class": "intermolecular",
+     "atoms": "H3A@A2-O1@C0"
+    },
+    "bcp_D_H": {
+     "rho": 0.326745,
+     "lap": -1.85904,
+     "G": 0.0679068,
+     "V": -0.600573,
+     "H": -0.532666,
+     "ellipticity": 0.00963,
+     "eta": 1.1328,
+     "d_AB_A": 0.991998,
+     "bond_path_A": 0.992279,
+     "minusG_over_V": 0.11307001813268329,
+     "cp": 245,
+     "class": "covalent",
+     "atoms": "O3@A2-H3A@A2"
+    }
+   },
+   "neutral": {
+    "geometry": {
+     "D-H": 0.9994,
+     "H..A": 1.7156,
+     "D..A": 2.678,
+     "DHA": 160.3251
+    },
+    "bcp": {
+     "rho": 0.03787457167,
+     "lap": 0.1299361648,
+     "G": 0.03069221322,
+     "V": -0.02890038523,
+     "H": 0.001791827993,
+     "minusG_over_V": 1.0620001420652343,
+     "ellipticity": 0.005858,
+     "eta": 0.236424,
+     "E_HB_Espinosa_kcal": -9.067632767037333,
+     "multiwfn_name": "O3-H3A...O1 [A2>C0]",
+     "class": "intermolecular",
+     "criteria_met": true,
+     "proton_transferred": false,
+     "cp": 255,
+     "bond_path_A": 1.7880264035205704,
+     "nature_Rozas2000": "weak (lap>0, H>0)"
+    },
+    "bcp_is_reverse": false,
+    "bcp_H_A": {
+     "rho": 0.0378746,
+     "lap": 0.129936,
+     "G": 0.0306922,
+     "V": -0.0289004,
+     "H": 0.00179183,
+     "ellipticity": 0.005858,
+     "eta": 0.236424,
+     "d_AB_A": 1.71564,
+     "bond_path_A": 1.78803,
+     "minusG_over_V": 1.0619991418803891,
+     "cp": 255,
+     "class": "intermolecular",
+     "atoms": "H3A@A2-O1@C0"
+    },
+    "bcp_D_H": {
+     "rho": 0.318252,
+     "lap": -1.80869,
+     "G": 0.0657998,
+     "V": -0.583772,
+     "H": -0.517973,
+     "ellipticity": 0.008975,
+     "eta": 1.12469,
+     "d_AB_A": 0.999448,
+     "bond_path_A": 0.999695,
+     "minusG_over_V": 0.11271489554141002,
+     "cp": 243,
+     "class": "covalent",
+     "atoms": "O3@A2-H3A@A2"
+    }
+   },
+   "delta_neutral_minus_salt": {
+    "rho": 0.004473367980000004,
+    "lap": 0.015794609700000004,
+    "G": 0.004051933529999999,
+    "V": -0.004155214639999998,
+    "H": -0.000103281106,
+    "ellipticity": 0.0004670000000000004,
+    "minusG_over_V": -0.014584866436014421,
+    "rho_pct": 13.392834646073815,
+    "H..A_A": -0.04760000000000009
+   },
+   "rho_instances_salt": [
+    0.03340120369
+   ],
+   "rho_instances_neutral": [
+    0.03787457167
+   ]
+  },
+  {
+   "bond": "O4-H4A...O5",
+   "instance": "O4-H4A...O5 [A1>A0]",
+   "cif_code": "1_455",
+   "salt": {
+    "geometry": {
+     "D-H": 1.0307,
+     "H..A": 1.4876,
+     "D..A": 2.5031,
+     "DHA": 167.1705
+    },
+    "bcp": {
+     "rho": 0.07131745168,
+     "lap": 0.1791603688,
+     "G": 0.05772392625,
+     "V": -0.07065776029,
+     "H": -0.01293383404,
+     "minusG_over_V": 0.8169509762704652,
+     "ellipticity": 0.007636,
+     "eta": 0.31513,
+     "E_HB_Espinosa_kcal": -22.169206996797993,
+     "multiwfn_name": "O4-H4A...O5 [A1>A0]",
+     "class": "intermolecular",
+     "criteria_met": true,
+     "proton_transferred": false,
+     "cp": 254,
+     "bond_path_A": 1.5495685917941227,
+     "nature_Rozas2000": "medium (lap>0, H<0)"
+    },
+    "bcp_is_reverse": false,
+    "bcp_H_A": {
+     "rho": 0.0713175,
+     "lap": 0.17916,
+     "G": 0.0577239,
+     "V": -0.0706578,
+     "H": -0.0129338,
+     "ellipticity": 0.007636,
+     "eta": 0.31513,
+     "d_AB_A": 1.48763,
+     "bond_path_A": 1.54957,
+     "minusG_over_V": 0.8169501456314802,
+     "cp": 254,
+     "class": "intermolecular",
+     "atoms": "O5@A0-H4A@A1"
+    },
+    "bcp_D_H": {
+     "rho": 0.283943,
+     "lap": -1.44994,
+     "G": 0.0727503,
+     "V": -0.507985,
+     "H": -0.435235,
+     "ellipticity": 0.00994,
+     "eta": 1.04194,
+     "d_AB_A": 1.03069,
+     "bond_path_A": 1.03102,
+     "minusG_over_V": 0.14321348071301318,
+     "cp": 260,
+     "class": "covalent",
+     "atoms": "H4A@A1-O4@A1"
+    }
+   },
+   "neutral": {
+    "geometry": {
+     "D-H": 1.0046,
+     "H..A": 1.5947,
+     "D..A": 2.5793,
+     "DHA": 165.3692
+    },
+    "bcp": {
+     "rho": 0.05418110382,
+     "lap": 0.1655488268,
+     "G": 0.04364401314,
+     "V": -0.04590081958,
+     "H": -0.002256806432,
+     "minusG_over_V": 0.9508329816188437,
+     "ellipticity": 0.037363,
+     "eta": 0.279366,
+     "E_HB_Espinosa_kcal": -14.40159957540735,
+     "multiwfn_name": "O4-H4A...O5 [A1>A0]",
+     "class": "intermolecular",
+     "criteria_met": true,
+     "proton_transferred": false,
+     "cp": 251,
+     "bond_path_A": 1.6641983467233374,
+     "nature_Rozas2000": "medium (lap>0, H<0)"
+    },
+    "bcp_is_reverse": false,
+    "bcp_H_A": {
+     "rho": 0.0541811,
+     "lap": 0.165549,
+     "G": 0.043644,
+     "V": -0.0459008,
+     "H": -0.00225681,
+     "ellipticity": 0.037363,
+     "eta": 0.279366,
+     "d_AB_A": 1.59475,
+     "bond_path_A": 1.6642,
+     "minusG_over_V": 0.9508331009481317,
+     "cp": 251,
+     "class": "intermolecular",
+     "atoms": "O5@A0-H4A@A1"
+    },
+    "bcp_D_H": {
+     "rho": 0.310204,
+     "lap": -1.71217,
+     "G": 0.0707402,
+     "V": -0.569523,
+     "H": -0.498782,
+     "ellipticity": 0.010427,
+     "eta": 1.09394,
+     "d_AB_A": 1.00464,
+     "bond_path_A": 1.00492,
+     "minusG_over_V": 0.12420955782295008,
+     "cp": 259,
+     "class": "covalent",
+     "atoms": "H4A@A1-O4@A1"
+    }
+   },
+   "delta_neutral_minus_salt": {
+    "rho": -0.017136347860000005,
+    "lap": -0.013611542000000004,
+    "G": -0.014079913110000002,
+    "V": 0.024756940709999994,
+    "H": 0.010677027608,
+    "ellipticity": 0.029727,
+    "minusG_over_V": 0.13388200534837846,
+    "rho_pct": -24.028267214160227,
+    "H..A_A": 0.10709999999999997
+   },
+   "rho_instances_salt": [
+    0.07131745168
+   ],
+   "rho_instances_neutral": [
+    0.05418110382
+   ]
+  },
+  {
+   "bond": "C3-H3...O6",
+   "instance": "C3-H3...O6 [C0>A2]",
+   "cif_code": "1_655",
+   "salt": {
+    "geometry": {
+     "D-H": 1.0853,
+     "H..A": 2.4336,
+     "D..A": 3.247,
+     "DHA": 130.6712
+    },
+    "bcp": {
+     "rho": 0.01125009938,
+     "lap": 0.0366185117,
+     "G": 0.008447989957,
+     "V": -0.007741351988,
+     "H": 0.0007066379687,
+     "minusG_over_V": 1.0912809506783014,
+     "ellipticity": 0.07409,
+     "eta": 0.187788,
+     "E_HB_Espinosa_kcal": -2.4288858570193668,
+     "multiwfn_name": "C3-H3...O6 [C0>A2]",
+     "class": "intermolecular",
+     "criteria_met": true,
+     "proton_transferred": false,
+     "cp": 210,
+     "bond_path_A": 2.4821635113144707,
+     "nature_Rozas2000": "weak (lap>0, H>0)"
+    },
+    "bcp_is_reverse": false,
+    "bcp_H_A": {
+     "rho": 0.0112501,
+     "lap": 0.0366185,
+     "G": 0.00844799,
+     "V": -0.00774135,
+     "H": 0.000706638,
+     "ellipticity": 0.07409,
+     "eta": 0.187788,
+     "d_AB_A": 2.43358,
+     "bond_path_A": 2.48216,
+     "minusG_over_V": 1.091281236476842,
+     "cp": 210,
+     "class": "intermolecular",
+     "atoms": "O6@A2-H3@C0"
+    },
+    "bcp_D_H": {
+     "rho": 0.290253,
+     "lap": -1.1037,
+     "G": 0.0351934,
+     "V": -0.346312,
+     "H": -0.311119,
+     "ellipticity": 0.010054,
+     "eta": 1.65397,
+     "d_AB_A": 1.08533,
+     "bond_path_A": 1.08535,
+     "minusG_over_V": 0.10162339162373812,
+     "cp": 232,
+     "class": "covalent",
+     "atoms": "H3@C0-C3@C0"
+    }
+   },
+   "neutral": {
+    "geometry": {
+     "D-H": 1.0857,
+     "H..A": 2.4186,
+     "D..A": 3.1947,
+     "DHA": 127.2381
+    },
+    "bcp": {
+     "rho": 0.01146846946,
+     "lap": 0.03822459503,
+     "G": 0.008733928094,
+     "V": -0.007911707431,
+     "H": 0.000822220663,
+     "minusG_over_V": 1.1039245536024676,
+     "ellipticity": 0.097035,
+     "eta": 0.186664,
+     "E_HB_Espinosa_kcal": -2.4823356842343505,
+     "multiwfn_name": "C3-H3...O6 [C0>A2]",
+     "class": "intermolecular",
+     "criteria_met": true,
+     "proton_transferred": false,
+     "cp": 210,
+     "bond_path_A": 2.469902917568116,
+     "nature_Rozas2000": "weak (lap>0, H>0)"
+    },
+    "bcp_is_reverse": false,
+    "bcp_H_A": {
+     "rho": 0.0114685,
+     "lap": 0.0382246,
+     "G": 0.00873393,
+     "V": -0.00791171,
+     "H": 0.000822221,
+     "ellipticity": 0.097035,
+     "eta": 0.186664,
+     "d_AB_A": 2.41855,
+     "bond_path_A": 2.4699,
+     "minusG_over_V": 1.103924436057439,
+     "cp": 210,
+     "class": "intermolecular",
+     "atoms": "O6@A2-H3@C0"
+    },
+    "bcp_D_H": {
+     "rho": 0.289903,
+     "lap": -1.0982,
+     "G": 0.0353526,
+     "V": -0.345256,
+     "H": -0.309903,
+     "ellipticity": 0.008179,
+     "eta": 1.6467,
+     "d_AB_A": 1.08574,
+     "bond_path_A": 1.08577,
+     "minusG_over_V": 0.10239532404940102,
+     "cp": 230,
+     "class": "covalent",
+     "atoms": "H3@C0-C3@C0"
+    }
+   },
+   "delta_neutral_minus_salt": {
+    "rho": 0.0002183700800000004,
+    "lap": 0.0016060833300000008,
+    "G": 0.0002859381370000011,
+    "V": -0.00017035544300000004,
+    "H": 0.00011558269430000001,
+    "ellipticity": 0.022944999999999993,
+    "minusG_over_V": 0.012643602924166109,
+    "rho_pct": 1.941050230971375,
+    "H..A_A": -0.015000000000000124
+   },
+   "rho_instances_salt": [
+    0.01125009938
+   ],
+   "rho_instances_neutral": [
+    0.01146846946
+   ]
+  },
+  {
+   "bond": "C6-H6...O4",
+   "instance": "C6-H6...O4 [C0>A0]",
+   "cif_code": "1_554",
+   "salt": {
+    "geometry": {
+     "D-H": 1.0893,
+     "H..A": 2.2653,
+     "D..A": 3.2895,
+     "DHA": 155.822
+    },
+    "bcp": {
+     "rho": 0.01432090509,
+     "lap": 0.04294338343,
+     "G": 0.01060637826,
+     "V": -0.01047691067,
+     "H": 0.0001294675949,
+     "minusG_over_V": 1.0123574204341288,
+     "ellipticity": 0.085759,
+     "eta": 0.216733,
+     "E_HB_Espinosa_kcal": -3.2871803518383436,
+     "multiwfn_name": "C6-H6...O4 [C0>A0]",
+     "class": "intermolecular",
+     "criteria_met": true,
+     "proton_transferred": false,
+     "cp": 253,
+     "bond_path_A": 2.3113801622503463,
+     "nature_Rozas2000": "weak (lap>0, H>0)"
+    },
+    "bcp_is_reverse": false,
+    "bcp_H_A": {
+     "rho": 0.0143209,
+     "lap": 0.0429434,
+     "G": 0.0106064,
+     "V": -0.0104769,
+     "H": 0.000129468,
+     "ellipticity": 0.085759,
+     "eta": 0.216733,
+     "d_AB_A": 2.26535,
+     "bond_path_A": 2.31138,
+     "minusG_over_V": 1.012360526491615,
+     "cp": 253,
+     "class": "intermolecular",
+     "atoms": "O4@A0-H6@C0"
+    },
+    "bcp_D_H": {
+     "rho": 0.287184,
+     "lap": -1.0849,
+     "G": 0.0349957,
+     "V": -0.341217,
+     "H": -0.306221,
+     "ellipticity": 0.012679,
+     "eta": 1.6525,
+     "d_AB_A": 1.08931,
+     "bond_path_A": 1.08933,
+     "minusG_over_V": 0.10256141985891676,
+     "cp": 256,
+     "class": "covalent",
+     "atoms": "C6@C0-H6@C0"
+    }
+   },
+   "neutral": {
+    "geometry": {
+     "D-H": 1.0877,
+     "H..A": 2.2971,
+     "D..A": 3.2809,
+     "DHA": 149.4652
+    },
+    "bcp": {
+     "rho": 0.01335888373,
+     "lap": 0.04261775719,
+     "G": 0.01022639457,
+     "V": -0.009798349833,
+     "H": 0.0004280447319,
+     "minusG_over_V": 1.0436853903254588,
+     "ellipticity": 0.068744,
+     "eta": 0.204795,
+     "E_HB_Espinosa_kcal": -3.0742786748869086,
+     "multiwfn_name": "C6-H6...O4 [C0>A0]",
+     "class": "intermolecular",
+     "criteria_met": true,
+     "proton_transferred": false,
+     "cp": 249,
+     "bond_path_A": 2.3412505914052097,
+     "nature_Rozas2000": "weak (lap>0, H>0)"
+    },
+    "bcp_is_reverse": false,
+    "bcp_H_A": {
+     "rho": 0.0133589,
+     "lap": 0.0426178,
+     "G": 0.0102264,
+     "V": -0.00979835,
+     "H": 0.000428045,
+     "ellipticity": 0.068744,
+     "eta": 0.204795,
+     "d_AB_A": 2.29715,
+     "bond_path_A": 2.34125,
+     "minusG_over_V": 1.0436859267121505,
+     "cp": 249,
+     "class": "intermolecular",
+     "atoms": "H6@C0-O4@A0"
+    },
+    "bcp_D_H": {
+     "rho": 0.285734,
+     "lap": -1.04467,
+     "G": 0.0392935,
+     "V": -0.339754,
+     "H": -0.30046,
+     "ellipticity": 0.018494,
+     "eta": 1.61734,
+     "d_AB_A": 1.08768,
+     "bond_path_A": 1.08769,
+     "minusG_over_V": 0.11565279584640652,
+     "cp": 244,
+     "class": "covalent",
+     "atoms": "C6@C0-H6@C0"
+    }
+   },
+   "delta_neutral_minus_salt": {
+    "rho": -0.0009620213600000007,
+    "lap": -0.0003256262400000015,
+    "G": -0.00037998369000000025,
+    "V": 0.0006785608370000005,
+    "H": 0.000298577137,
+    "ellipticity": -0.017015000000000002,
+    "minusG_over_V": 0.03132796989133002,
+    "rho_pct": -6.717601673596462,
+    "H..A_A": 0.03180000000000005
+   },
+   "rho_instances_salt": [
+    0.01432090509,
+    0.01472113919,
+    0.01414759291,
+    0.0141983695,
+    0.01391076328
+   ],
+   "rho_instances_neutral": [
+    0.01335888373,
+    0.01345230026,
+    0.01317786528,
+    0.01324507324,
+    0.01309893023
+   ]
+  }
+ ],
+ "cluster_energy": {
+  "neutral": {
+   "dE_per_fu_kJ": -54.019408526035264,
+   "dE_per_fu_kcal": -12.910948499188704,
+   "n_pairs": 5,
+   "note": "B3LYP-D3(BJ) cluster energy at the fixed periodic PBE-D3(BJ) geometries, every pair of the cluster in the same state; gas-phase cluster (surface ions under-coordinated); compare with the periodic +57.12 (PBE-D3(BJ)) / +52.78 (PBE0-D3(BJ)) kJ/mol per f.u. only qualitatively"
+  }
+ },
+ "units": "atomic units (rho e/bohr^3; lap e/bohr^5; G, V, H hartree/bohr^3); E_HB kcal/mol; distances A",
+ "notes": [
+  "primary instance = the bond at the central ion pair (C0/A0); rho_instances_* lists every instance of the same bond in the cluster (spread = cluster-edge sensitivity)",
+  "N1-H1A...O5 in the constrained neutral cell: the BCP is N1...H1A (proton on O5), marked bcp_is_reverse",
+  "E_HB = V/2 (Espinosa) is carried for completeness only (referee M6 point 2)"
+ ]
+}

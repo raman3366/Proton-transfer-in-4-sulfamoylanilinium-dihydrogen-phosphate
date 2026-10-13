@@ -1,0 +1,80 @@
+{
+  "provenance": {
+    "script": "dscf.py",
+    "argv": [
+      "cation_gas_d3"
+    ],
+    "case": "cation_gas_d3",
+    "case_file": "molecules/sfa/cases/cation_gas_d3.json",
+    "charge": 1,
+    "spin": 0,
+    "basis": "6-311++G(d,p)",
+    "grid_level": 4,
+    "environment": "gas phase",
+    "case_xc": "b3lyp",
+    "case_disp": "d3bj",
+    "density_fitting": true,
+    "pyscf_version": "2.14.0",
+    "threads": 6,
+    "host": "cqc-dft-01",
+    "finished": "2026-09-28T01:22:59",
+    "geometry": "molecules/sfa/results/cation_gas_d3/opt.xyz",
+    "geometry_sha256": "d19662f7a2155a4a5fbf6a0ccb9851f06facdbc0e3da31c372acf9ea43c7b80e",
+    "wall_min": 34.04
+  },
+  "method": "vertical Delta-SCF: RKS N / UKS doublets N-1, N+1 at the N-electron geometry, same functional, basis, grid and environment",
+  "E_N_Ha": -892.0804789361727,
+  "dispersion_Ha": -0.04068382368681582,
+  "HOMO_eV": -11.1854081078695,
+  "LUMO_eV": -5.657737032690518,
+  "gap_KS_eV": 5.527671075178983,
+  "N_minus_1": {
+    "charge": 2,
+    "multiplicity": 2,
+    "E_Ha": -891.5976455860003,
+    "S2": 0.7593582724773285,
+    "S2_ideal": 0.75,
+    "stability_checked": true,
+    "instabilities_followed": 0,
+    "converged": true,
+    "wall_s": 1097.9
+  },
+  "N_plus_1": {
+    "charge": 0,
+    "multiplicity": 2,
+    "E_Ha": -892.231447480055,
+    "S2": 0.7512604057499317,
+    "S2_ideal": 0.75,
+    "stability_checked": true,
+    "instabilities_followed": 0,
+    "converged": true,
+    "wall_s": 899.9
+  },
+  "delta_scf": {
+    "I_eV": 13.138564783983202,
+    "A_eV": 4.10806335857565,
+    "electronegativity_chi_eV": 8.623314071279426,
+    "chemical_potential_mu_eV": -8.623314071279426,
+    "hardness_eta_eV": 4.515250712703777,
+    "softness_S_eV-1": 0.11073582217555203,
+    "electrophilicity_omega_eV": 8.234486887151977,
+    "DeltaN_max": 1.909819547122268
+  },
+  "koopmans": {
+    "I_eV": 11.1854081078695,
+    "A_eV": 5.657737032690518,
+    "electronegativity_chi_eV": 8.42157257028001,
+    "chemical_potential_mu_eV": -8.42157257028001,
+    "hardness_eta_eV": 2.7638355375894914,
+    "softness_S_eV-1": 0.18090801467734233,
+    "electrophilicity_omega_eV": 12.830518240305427,
+    "DeltaN_max": 3.0470599483010385
+  },
+  "koopmans_label": "Koopmans-type estimate from the N-electron Kohn-Sham orbitals: I = -e(HOMO), A = -e(LUMO)",
+  "fundamental_gap_I_minus_A_eV": 9.030501425407554,
+  "flags": {
+    "electron_unbound_in_gas_phase": false,
+    "spin_contamination_over_0.05": []
+  },
+  "formulas": "chi=(I+A)/2, mu=-chi, eta=(I-A)/2, S=1/(2 eta), omega=mu^2/(2 eta), DeltaN_max=-mu/eta"
+}

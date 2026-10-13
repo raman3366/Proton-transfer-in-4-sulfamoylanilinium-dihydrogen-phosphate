@@ -1,0 +1,50 @@
+{
+ "what": "TEST of md/build_topology.py --set 2s (6 Oct 2026) on a RELABELLED COPY of the 2e folder (the word \"empirical\" replaced by \"Seminario\" in the frcmod; the numbers are those of step 2e). Built in scratch; not a Seminario set, not a model",
+ "without_n2_frcmod": "refused: --set 2s needs --n2-frcmod: the terms at N2 are the same in both parameter sets (md/PLAN.md, 6 Oct 2026, 3:02 AM, point 3) and are not taken from this step of MCPB.py. Give the file of gate G-R, or md/topology/bonded_2e/<start>/n2_terms.frcmod",
+ "with_n2_frcmod_of_bonded_2e": {
+  "model": "bonded_2s",
+  "parameter_set": "2s",
+  "checks_failed": [],
+  "checks_not_true": {
+   "zinc_charge_and_type": null,
+   "zinc_lj_is_the_frcmod_value": null,
+   "zinc_not_bonded": null,
+   "solute_hydrogens_where_the_restrained_build_has_them": null,
+   "ligand_terms_equal_free_anion_topology": null,
+   "ligand_charges_are_those_of_the_mol2": null
+  },
+  "method_named_in_the_frcmod": {
+   "named": "2s",
+   "method_named_in_the_frcmod": [
+    "Seminario"
+   ],
+   "expected_method": "Seminario"
+  },
+  "angles_at_N2": {
+   "Zn-N2-S": [
+    50.0,
+    117.55,
+    true
+   ],
+   "Zn-N2-H": [
+    50.0,
+    107.407,
+    true
+   ],
+   "S-N2-H": [
+    61.55,
+    118.059,
+    true
+   ]
+  },
+  "n2_file_sha256": "113e3a2ebdbe99a4389e2ed497b20caaf0e64aebcbc8d547cf39823e9ee2cd00",
+  "source": "given with --n2-frcmod",
+  "outputs_sha256": {
+   "system.prmtop": "a6c57a7c20aaea633317173b691837de56301feeed6f5cf38d687e91c9085aad",
+   "system.inpcrd": "27acb79e664525a7f2c7d7f245d7e8bb4092fb0b2a2f67b1d1ee6c6cd0220d19",
+   "selections.json": "df961b4b5ea88d14d94ecb3a32e258a767c9b4d97821114e52164126371f074f",
+   "extra_forces.json": "7c2c3c897ed03fb1a5a494f6a97cb9c7000e279a8c3aa1819b8508844b520483",
+   "reference.pdb": "c54ead175e0f3f9aa237414c38ed618380aa3c730e55a211c89cde939233e069"
+  }
+ }
+}

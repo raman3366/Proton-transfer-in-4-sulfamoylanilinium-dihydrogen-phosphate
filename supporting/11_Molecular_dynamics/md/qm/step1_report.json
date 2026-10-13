@@ -1,0 +1,412 @@
+{
+ "input": {
+  "n_protein_atoms": 4075,
+  "n_protein_residues": 259,
+  "zn_serial": 4076,
+  "zn_residue": 260,
+  "ligand_residue": 261,
+  "ligand_serials": {
+   "C1": 4077,
+   "C2": 4078,
+   "C3": 4079,
+   "C4": 4080,
+   "C5": 4081,
+   "C6": 4082,
+   "N1": 4083,
+   "N2": 4084,
+   "O1": 4085,
+   "O2": 4086,
+   "S": 4087,
+   "H2": 4088,
+   "H3": 4089,
+   "H5": 4090,
+   "H6": 4091,
+   "HN11": 4092,
+   "HN12": 4093,
+   "HN21": 4094
+  },
+  "n_atoms": 4094,
+  "seq_of": {
+   "94": 93,
+   "96": 95,
+   "119": 118,
+   "199": 197,
+   "106": 105
+  }
+ },
+ "mcpb_input": [
+  "original_pdb CA2_H.pdb",
+  "group_name CA2",
+  "cut_off 2.8",
+  "ion_ids 4076",
+  "ion_mol2files ZN.mol2",
+  "naa_mol2files SAN.mol2",
+  "frcmod_files sfa_anion_gaff2.frcmod sfa_anion_repair.frcmod",
+  "force_field ff14SB",
+  "gaff 2",
+  "water_model TIP3P",
+  "large_opt 0",
+  "software_version gau"
+ ],
+ "zinc_neighbours_within_3p2": [
+  {
+   "serial": 4084,
+   "residue": "SAN261",
+   "atom": "N2",
+   "distance": 1.931,
+   "bonded_by_mcpb": true
+  },
+  {
+   "serial": 1438,
+   "residue": "HID93",
+   "atom": "NE2",
+   "distance": 2.01,
+   "bonded_by_mcpb": true
+  },
+  {
+   "serial": 1818,
+   "residue": "HIE118",
+   "atom": "ND1",
+   "distance": 2.018,
+   "bonded_by_mcpb": true
+  },
+  {
+   "serial": 1475,
+   "residue": "HID95",
+   "atom": "NE2",
+   "distance": 2.021,
+   "bonded_by_mcpb": true
+  },
+  {
+   "serial": 4086,
+   "residue": "SAN261",
+   "atom": "O2",
+   "distance": 2.986,
+   "bonded_by_mcpb": false
+  },
+  {
+   "serial": 4087,
+   "residue": "SAN261",
+   "atom": "S",
+   "distance": 3.022,
+   "bonded_by_mcpb": false
+  }
+ ],
+ "links": [
+  [
+   "4076-ZN",
+   "1438-NE2"
+  ],
+  [
+   "4076-ZN",
+   "1475-NE2"
+  ],
+  [
+   "4076-ZN",
+   "1818-ND1"
+  ],
+  [
+   "4076-ZN",
+   "4084-N2"
+  ]
+ ],
+ "renamed_types": [
+  {
+   "atom": "93-HID-NE2",
+   "serial": 1438,
+   "type_before": "NB",
+   "type_after": "Y1"
+  },
+  {
+   "atom": "95-HID-NE2",
+   "serial": 1475,
+   "type_before": "NB",
+   "type_after": "Y2"
+  },
+  {
+   "atom": "118-HIE-ND1",
+   "serial": 1818,
+   "type_before": "NB",
+   "type_after": "Y3"
+  },
+  {
+   "atom": "260-ZN-ZN",
+   "serial": 4076,
+   "type_before": "ZN",
+   "type_after": "M1"
+  },
+  {
+   "atom": "261-SAN-N2",
+   "serial": 4084,
+   "type_before": "n2",
+   "type_after": "Y4"
+  }
+ ],
+ "small_res": [
+  ""
+ ],
+ "small": {
+  "com": "CA2_small_opt.com",
+  "n_atoms": 64,
+  "composition": {
+   "H": 31,
+   "C": 21,
+   "N": 8,
+   "Zn": 1,
+   "O": 2,
+   "S": 1
+  },
+  "charge": 1,
+  "multiplicity": 1,
+  "electrons": 274,
+  "residues": [
+   [
+    "HID93",
+    15
+   ],
+   [
+    "HID95",
+    15
+   ],
+   [
+    "HIE118",
+    15
+   ],
+   [
+    "ZN260",
+    1
+   ],
+   [
+    "SAN261",
+    18
+   ]
+  ],
+  "route": [
+   "# B3LYP/6-31G* Geom=PrintInputOrient Integral=(Grid=UltraFine) Opt"
+  ],
+  "zinc_index": 46,
+  "zinc_nitrogens": [
+   {
+    "index": 12,
+    "residue": "HID93",
+    "atom": "NE2",
+    "distance_com": 2.01,
+    "distance_pdb": 2.01
+   },
+   {
+    "index": 27,
+    "residue": "HID95",
+    "atom": "NE2",
+    "distance_com": 2.021,
+    "distance_pdb": 2.021
+   },
+   {
+    "index": 38,
+    "residue": "HIE118",
+    "atom": "ND1",
+    "distance_com": 2.018,
+    "distance_pdb": 2.018
+   },
+   {
+    "index": 54,
+    "residue": "SAN261",
+    "atom": "N2",
+    "distance_com": 1.931,
+    "distance_pdb": 1.931
+   }
+  ],
+  "n_zn_n_angles": [
+   {
+    "a": "HID93@NE2",
+    "b": "HID95@NE2",
+    "angle": 103.8
+   },
+   {
+    "a": "HID93@NE2",
+    "b": "HIE118@ND1",
+    "angle": 113.6
+   },
+   {
+    "a": "HID93@NE2",
+    "b": "SAN261@N2",
+    "angle": 108.9
+   },
+   {
+    "a": "HID95@NE2",
+    "b": "HIE118@ND1",
+    "angle": 98.4
+   },
+   {
+    "a": "HID95@NE2",
+    "b": "SAN261@N2",
+    "angle": 114.3
+   },
+   {
+    "a": "HIE118@ND1",
+    "b": "SAN261@N2",
+    "angle": 116.8
+   }
+  ],
+  "tail": [
+   "H          18.205    6.063   13.614",
+   "H          16.551    6.728   13.554",
+   "H          16.288   -0.605   16.817"
+  ]
+ },
+ "large": {
+  "com": "CA2_large_mk.com",
+  "n_atoms": 101,
+  "composition": {
+   "H": 45,
+   "C": 32,
+   "O": 8,
+   "N": 14,
+   "Zn": 1,
+   "S": 1
+  },
+  "charge": 1,
+  "multiplicity": 1,
+  "electrons": 444,
+  "residues": [
+   [
+    "ACE92",
+    6
+   ],
+   [
+    "HID93",
+    17
+   ],
+   [
+    "GLY94",
+    7
+   ],
+   [
+    "HID95",
+    17
+   ],
+   [
+    "NME96",
+    6
+   ],
+   [
+    "ACE117",
+    6
+   ],
+   [
+    "HIE118",
+    17
+   ],
+   [
+    "NME119",
+    6
+   ],
+   [
+    "ZN260",
+    1
+   ],
+   [
+    "SAN261",
+    18
+   ]
+  ],
+  "route": [
+   "# B3LYP/6-31G* Integral=(Grid=UltraFine) Pop(MK,ReadRadii)",
+   "IOp(6/33=2,6/42=6)"
+  ],
+  "zinc_index": 83,
+  "zinc_nitrogens": [
+   {
+    "index": 19,
+    "residue": "HID93",
+    "atom": "NE2",
+    "distance_com": 2.01,
+    "distance_pdb": 2.01
+   },
+   {
+    "index": 43,
+    "residue": "HID95",
+    "atom": "NE2",
+    "distance_com": 2.021,
+    "distance_pdb": 2.021
+   },
+   {
+    "index": 68,
+    "residue": "HIE118",
+    "atom": "ND1",
+    "distance_com": 2.018,
+    "distance_pdb": 2.018
+   },
+   {
+    "index": 91,
+    "residue": "SAN261",
+    "atom": "N2",
+    "distance_com": 1.931,
+    "distance_pdb": 1.931
+   }
+  ],
+  "n_zn_n_angles": [
+   {
+    "a": "HID93@NE2",
+    "b": "HID95@NE2",
+    "angle": 103.8
+   },
+   {
+    "a": "HID93@NE2",
+    "b": "HIE118@ND1",
+    "angle": 113.6
+   },
+   {
+    "a": "HID93@NE2",
+    "b": "SAN261@N2",
+    "angle": 108.9
+   },
+   {
+    "a": "HID95@NE2",
+    "b": "HIE118@ND1",
+    "angle": 98.4
+   },
+   {
+    "a": "HID95@NE2",
+    "b": "SAN261@N2",
+    "angle": 114.3
+   },
+   {
+    "a": "HIE118@ND1",
+    "b": "SAN261@N2",
+    "angle": 116.8
+   }
+  ],
+  "tail": [
+   "Zn 1.456 !VDW radius of Zn2+ from Smith et al. JCTC 2023, 19, 2064"
+  ],
+  "mk_tail_lines": [
+   "H          16.551    6.728   13.554",
+   "H          16.288   -0.605   16.817",
+   "Zn 1.456 !VDW radius of Zn2+ from Smith et al. JCTC 2023, 19, 2064"
+  ]
+ },
+ "software": {
+  "ambertools": "AmberTools 26 (conda-forge), MCPB.py version 2026",
+  "python": "3.12.14"
+ },
+ "sha256": {
+  "md/ligand/sfa_anion.mol2": "f8fba7528dceade5eec4c56ab1d5e450e29c9c54b27e1a34c521edb3865a66fa",
+  "md/ligand/sfa_anion_gaff2.frcmod": "694fd181a8c2b7359a529112a1ba539e681dd2c66a883379607e6e6095ca438c",
+  "md/ligand/sfa_anion_repair.frcmod": "76dda0d181a27e12868eea1a2eff055fbeda708357f200d12a53915fa7d60b86",
+  "md/qm/mcpb/CA2.in": "9d7f77895756d8f588cf1ac1a6d71e44f35250f349c64f06cefcee838009fb2e",
+  "md/qm/mcpb/CA2_H.pdb": "f362b4b1311e1f23370e88a67a305852874973aaa0f0dad63cb5cb696771fc27",
+  "md/qm/mcpb/CA2_large.fingerprint": "d7575022876ee687b404ce90ec9a65548476a51138435ff8baf1d30e552475b7",
+  "md/qm/mcpb/CA2_large.pdb": "f1451f96d71e3680ae53801b78472b2800295701eff8c32a947ad87e2f1007c9",
+  "md/qm/mcpb/CA2_large_mk.com": "f15ebea92458334321703aeda3cbcb6839f4a25145b4b76af43ce021765759ad",
+  "md/qm/mcpb/CA2_small.pdb": "8f24922e36cf799ba9c32e1fb2b4b8914949b2b74c2bcc10eb8f142acdcf1664",
+  "md/qm/mcpb/CA2_small_fc.com": "0019663df2f206537dc9ab4b51634a1cf275fdb984b9b5e088a2b89925b4f231",
+  "md/qm/mcpb/CA2_small_opt.com": "716738fb11c8ef271e591824ee5083978fcb4395fdd8bdeb6f947d59e53ab0cd",
+  "md/qm/mcpb/CA2_standard.fingerprint": "bd6782f0141277c5f0ef6c7effe3c8da41948b3e5cb18a93c31de205a8e31ea9",
+  "md/qm/mcpb/CA2_standard.pdb": "e203ac5d9f743299a6c093928a3771b7da948f6893f820bf6e7cf2d9c810aa96",
+  "md/qm/mcpb/SAN.mol2": "f8fba7528dceade5eec4c56ab1d5e450e29c9c54b27e1a34c521edb3865a66fa",
+  "md/qm/mcpb/ZN.mol2": "43764d1b3ac58bafb266417fdb29589afcb6ac1fe9302ac1be0615ab8952b794",
+  "md/system/ligand_X.pdb": "342ccdd6a6c03302c4fed7ff01dacebbecde97141fab02e375bc0d5e2a62a47b",
+  "md/system/tleap/protein_H.pdb": "087274c7e74ac5803318b9ff8f67155138d3f0eaef242167b9b7217581e61ea4",
+  "md/system/zinc.pdb": "c98aa70a52066f412c0618bbc3fc38e811add4d5d68747b9d02a84a70cd3cea9"
+ }
+}

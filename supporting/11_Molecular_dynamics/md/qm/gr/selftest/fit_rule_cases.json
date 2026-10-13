@@ -1,0 +1,1884 @@
+{
+ "what": "The checker's constructed cases of the fit rule (mdgr2/grcheck/c3_fit.py, seed 20261007), run again on the gr_fit.py",
+ "seed": 20261007,
+ "gr_fit_sha256": "0820098a8939c9f5bff877e2ced7f2b6c61129f28f98bc0df6a08ee267928184",
+ "checker_gr_fit_sha256": "f0fd5fe6fb3e784fa684f5fc8aeb97f5b979ab02328e342607f32cd7efc993d9",
+ "centres_of_the_checker": {
+  "Zn_N2_S": 117.5521,
+  "Zn_N2_H": 107.4065,
+  "S_N2_H": 107.4143
+ },
+ "centres_of_the_rule_now": {
+  "Zn_N2_S": 117.5521,
+  "Zn_N2_H": 122.756,
+  "S_N2_H": 109.083
+ },
+ "centres_record": {
+  "sources": {
+   "Zn_N2_S": "start X (crystal structure 6RL9)",
+   "Zn_N2_H": "quantum-chemical optimum of the small model, all atoms free",
+   "S_N2_H": "quantum-chemical optimum of the small model, all atoms free"
+  },
+  "optimum": {
+   "file": "md/qm/gr/binding_check.json",
+   "source": {
+    "kind": "geometry of the finished optimisation (opt_final.npy); the fchk file is not written yet",
+    "file": "/root/cqc-sfa-md/qm/prod/opt_final.npy",
+    "sha256": "ab96538c0fd8c9f5330b16d6e85497e48ed934ccf7b1af46a831290dc5d4bcbe",
+    "provisional": true
+   }
+  },
+  "constructed_hydrogen_of_start_X": {
+   "Zn_N2_H": 107.4065,
+   "S_N2_H": 107.4143
+  },
+  "complete": true
+ },
+ "shift_of_the_centres": {
+  "Zn_N2_S": 0.0,
+  "Zn_N2_H": 15.349500000000006,
+  "S_N2_H": 1.6687000000000012
+ },
+ "I_as_the_checker_built_them": {
+  "cases": {
+   "R1_large_residual": {
+    "part_A_before": 6.232,
+    "gate_failed_so_fit_runs": true,
+    "chosen": null,
+    "outcome": "no fit accepted",
+    "reason": "neither model acceptable: no parameter file, the terms stay as built, the gate is reported as failed",
+    "M1": {
+     "residual": 2.2194,
+     "loo": 2.5854,
+     "part_A_after": 5.4863,
+     "theta0": {
+      "Zn_N2_S": 120.524,
+      "Zn_N2_H": 110.084,
+      "S_N2_H": 109.29
+     },
+     "k": {
+      "Zn_N2_S": 50.0,
+      "Zn_N2_H": 50.0,
+      "S_N2_H": 61.55
+     },
+     "c1": -2.3518,
+     "c2": -1.503,
+     "acceptable": false,
+     "improved_only": false,
+     "failed_checks": [
+      "residual_rms_at_most_1",
+      "leave_one_out_rms_at_most_1",
+      "part_A_after_at_most_1"
+     ]
+    },
+    "M2": {
+     "residual": 2.1423,
+     "loo": 2.709,
+     "part_A_after": 5.5193,
+     "theta0": {
+      "Zn_N2_S": 116.649,
+      "Zn_N2_H": 112.254,
+      "S_N2_H": 108.61
+     },
+     "k": {
+      "Zn_N2_S": 26.893,
+      "Zn_N2_H": 31.89,
+      "S_N2_H": 81.669
+     },
+     "c1": -2.4048,
+     "c2": -1.4898,
+     "acceptable": false,
+     "improved_only": false,
+     "failed_checks": [
+      "standard_errors_small",
+      "residual_rms_at_most_1",
+      "leave_one_out_rms_at_most_1",
+      "part_A_after_at_most_1"
+     ]
+    },
+    "expected": null,
+    "as_expected": true
+   },
+   "R2_torsion_coefficient_5p5": {
+    "part_A_before": 2.836,
+    "gate_failed_so_fit_runs": true,
+    "chosen": null,
+    "outcome": "no fit accepted",
+    "reason": "neither model acceptable: no parameter file, the terms stay as built, the gate is reported as failed",
+    "M1": {
+     "residual": 0.0,
+     "loo": 0.0,
+     "part_A_after": 0.0,
+     "theta0": {
+      "Zn_N2_S": 120.0,
+      "Zn_N2_H": 110.0,
+      "S_N2_H": 109.0
+     },
+     "k": {
+      "Zn_N2_S": 50.0,
+      "Zn_N2_H": 50.0,
+      "S_N2_H": 61.55
+     },
+     "c1": 1.0,
+     "c2": 5.5,
+     "acceptable": false,
+     "improved_only": false,
+     "failed_checks": [
+      "torsion_coefficients_below_5"
+     ]
+    },
+    "M2": {
+     "residual": 0.0,
+     "loo": 0.0,
+     "part_A_after": 0.0,
+     "theta0": {
+      "Zn_N2_S": 120.0,
+      "Zn_N2_H": 110.0,
+      "S_N2_H": 109.0
+     },
+     "k": {
+      "Zn_N2_S": 50.0,
+      "Zn_N2_H": 50.0,
+      "S_N2_H": 61.55
+     },
+     "c1": 1.0,
+     "c2": 5.5,
+     "acceptable": false,
+     "improved_only": false,
+     "failed_checks": [
+      "torsion_coefficients_below_5"
+     ]
+    },
+    "expected": null,
+    "as_expected": true
+   },
+   "R2b_torsion_coefficient_minus5p5_c1": {
+    "part_A_before": 9.0657,
+    "gate_failed_so_fit_runs": true,
+    "chosen": null,
+    "outcome": "no fit accepted",
+    "reason": "neither model acceptable: no parameter file, the terms stay as built, the gate is reported as failed",
+    "M1": {
+     "residual": 0.0,
+     "loo": 0.0,
+     "part_A_after": 0.0,
+     "theta0": {
+      "Zn_N2_S": 120.0,
+      "Zn_N2_H": 110.0,
+      "S_N2_H": 109.0
+     },
+     "k": {
+      "Zn_N2_S": 50.0,
+      "Zn_N2_H": 50.0,
+      "S_N2_H": 61.55
+     },
+     "c1": -5.5,
+     "c2": 1.0,
+     "acceptable": false,
+     "improved_only": false,
+     "failed_checks": [
+      "torsion_coefficients_below_5"
+     ]
+    },
+    "M2": {
+     "residual": 0.0,
+     "loo": 0.0,
+     "part_A_after": 0.0,
+     "theta0": {
+      "Zn_N2_S": 120.0,
+      "Zn_N2_H": 110.0,
+      "S_N2_H": 109.0
+     },
+     "k": {
+      "Zn_N2_S": 50.0,
+      "Zn_N2_H": 50.0,
+      "S_N2_H": 61.55
+     },
+     "c1": -5.5,
+     "c2": 1.0,
+     "acceptable": false,
+     "improved_only": false,
+     "failed_checks": [
+      "torsion_coefficients_below_5"
+     ]
+    },
+    "expected": null,
+    "as_expected": true
+   },
+   "R4_angle_11_deg_from_structure": {
+    "part_A_before": 4.0782,
+    "gate_failed_so_fit_runs": true,
+    "chosen": null,
+    "outcome": "no fit accepted",
+    "reason": "neither model acceptable: no parameter file, the terms stay as built, the gate is reported as failed",
+    "M1": {
+     "residual": 0.0,
+     "loo": 0.0,
+     "part_A_after": 0.0,
+     "theta0": {
+      "Zn_N2_S": 128.6,
+      "Zn_N2_H": 110.0,
+      "S_N2_H": 109.0
+     },
+     "k": {
+      "Zn_N2_S": 50.0,
+      "Zn_N2_H": 50.0,
+      "S_N2_H": 61.55
+     },
+     "c1": 1.0,
+     "c2": -2.0,
+     "acceptable": false,
+     "improved_only": false,
+     "failed_checks": [
+      "equilibrium_angles_within_10_deg_of_their_reference"
+     ]
+    },
+    "M2": {
+     "residual": 0.0,
+     "loo": 0.0,
+     "part_A_after": 0.0,
+     "theta0": {
+      "Zn_N2_S": 128.6,
+      "Zn_N2_H": 110.0,
+      "S_N2_H": 109.0
+     },
+     "k": {
+      "Zn_N2_S": 50.0,
+      "Zn_N2_H": 50.0,
+      "S_N2_H": 61.55
+     },
+     "c1": 1.0,
+     "c2": -2.0,
+     "acceptable": false,
+     "improved_only": false,
+     "failed_checks": [
+      "equilibrium_angles_within_10_deg_of_their_reference"
+     ]
+    },
+    "expected": null,
+    "as_expected": true
+   },
+   "R5_force_constant_8": {
+    "part_A_before": 3.6772,
+    "gate_failed_so_fit_runs": true,
+    "chosen": null,
+    "outcome": "no fit accepted",
+    "reason": "neither model acceptable: no parameter file, the terms stay as built, the gate is reported as failed",
+    "M1": {
+     "residual": 0.7401,
+     "loo": 1.401,
+     "part_A_after": 1.7741,
+     "theta0": {
+      "Zn_N2_S": 123.892,
+      "Zn_N2_H": 109.468,
+      "S_N2_H": 109.403
+     },
+     "k": {
+      "Zn_N2_S": 50.0,
+      "Zn_N2_H": 50.0,
+      "S_N2_H": 61.55
+     },
+     "c1": 0.8136,
+     "c2": -1.7935,
+     "acceptable": false,
+     "improved_only": false,
+     "failed_checks": [
+      "leave_one_out_rms_at_most_1",
+      "part_A_after_at_most_1"
+     ]
+    },
+    "M2": {
+     "residual": 0.0,
+     "loo": 0.0,
+     "part_A_after": 0.0,
+     "theta0": {
+      "Zn_N2_S": 120.0,
+      "Zn_N2_H": 110.0,
+      "S_N2_H": 109.0
+     },
+     "k": {
+      "Zn_N2_S": 8.0,
+      "Zn_N2_H": 28.0,
+      "S_N2_H": 45.0
+     },
+     "c1": 1.0,
+     "c2": -2.0,
+     "acceptable": false,
+     "improved_only": false,
+     "failed_checks": [
+      "force_constants_in_range"
+     ]
+    },
+    "expected": null,
+    "as_expected": true
+   },
+   "A1_inside_exact": {
+    "part_A_before": 3.8678,
+    "gate_failed_so_fit_runs": true,
+    "chosen": "M1",
+    "outcome": "accepted",
+    "reason": "M1 acceptable; M2 not acceptable or not 20 % better in leave-one-out",
+    "M1": {
+     "residual": 0.0,
+     "loo": 0.0,
+     "part_A_after": 0.0,
+     "theta0": {
+      "Zn_N2_S": 120.0,
+      "Zn_N2_H": 110.0,
+      "S_N2_H": 109.0
+     },
+     "k": {
+      "Zn_N2_S": 50.0,
+      "Zn_N2_H": 50.0,
+      "S_N2_H": 61.55
+     },
+     "c1": 1.0,
+     "c2": -2.0,
+     "acceptable": true,
+     "improved_only": false,
+     "failed_checks": []
+    },
+    "M2": {
+     "residual": 0.0,
+     "loo": 0.0,
+     "part_A_after": 0.0,
+     "theta0": {
+      "Zn_N2_S": 120.0,
+      "Zn_N2_H": 110.0,
+      "S_N2_H": 109.0
+     },
+     "k": {
+      "Zn_N2_S": 50.0,
+      "Zn_N2_H": 50.0,
+      "S_N2_H": 61.55
+     },
+     "c1": 1.0,
+     "c2": -2.0,
+     "acceptable": true,
+     "improved_only": false,
+     "failed_checks": []
+    },
+    "expected": [
+     "M1"
+    ],
+    "as_expected": true
+   },
+   "A2_inside_noise_0p3": {
+    "part_A_before": 3.9671,
+    "gate_failed_so_fit_runs": true,
+    "chosen": "M1",
+    "outcome": "accepted",
+    "reason": "M1 acceptable; M2 not acceptable or not 20 % better in leave-one-out",
+    "M1": {
+     "residual": 0.2498,
+     "loo": 0.428,
+     "part_A_after": 0.3067,
+     "theta0": {
+      "Zn_N2_S": 120.273,
+      "Zn_N2_H": 109.444,
+      "S_N2_H": 108.97
+     },
+     "k": {
+      "Zn_N2_S": 50.0,
+      "Zn_N2_H": 50.0,
+      "S_N2_H": 61.55
+     },
+     "c1": 1.1698,
+     "c2": -2.2462,
+     "acceptable": true,
+     "improved_only": false,
+     "failed_checks": []
+    },
+    "M2": {
+     "residual": 0.2205,
+     "loo": 0.5081,
+     "part_A_after": 0.271,
+     "theta0": {
+      "Zn_N2_S": 120.875,
+      "Zn_N2_H": 109.309,
+      "S_N2_H": 109.064
+     },
+     "k": {
+      "Zn_N2_S": 55.972,
+      "Zn_N2_H": 50.03,
+      "S_N2_H": 57.294
+     },
+     "c1": 1.2178,
+     "c2": -2.2624,
+     "acceptable": true,
+     "improved_only": false,
+     "failed_checks": []
+    },
+    "expected": [
+     "M1",
+     "M2"
+    ],
+    "as_expected": true
+   },
+   "A3_inside_other_constants": {
+    "part_A_before": 3.5719,
+    "gate_failed_so_fit_runs": true,
+    "chosen": "M2",
+    "outcome": "accepted",
+    "reason": "M2 acceptable and its leave-one-out r.m.s. at least 20 % below that of M1",
+    "M1": {
+     "residual": 0.485,
+     "loo": 1.2799,
+     "part_A_after": 0.6348,
+     "theta0": {
+      "Zn_N2_S": 120.587,
+      "Zn_N2_H": 109.546,
+      "S_N2_H": 109.285
+     },
+     "k": {
+      "Zn_N2_S": 50.0,
+      "Zn_N2_H": 50.0,
+      "S_N2_H": 61.55
+     },
+     "c1": 0.7239,
+     "c2": -1.8211,
+     "acceptable": false,
+     "improved_only": false,
+     "failed_checks": [
+      "leave_one_out_rms_at_most_1"
+     ]
+    },
+    "M2": {
+     "residual": 0.0,
+     "loo": 0.0,
+     "part_A_after": 0.0,
+     "theta0": {
+      "Zn_N2_S": 120.0,
+      "Zn_N2_H": 110.0,
+      "S_N2_H": 109.0
+     },
+     "k": {
+      "Zn_N2_S": 38.0,
+      "Zn_N2_H": 28.0,
+      "S_N2_H": 45.0
+     },
+     "c1": 1.0,
+     "c2": -2.0,
+     "acceptable": true,
+     "improved_only": false,
+     "failed_checks": []
+    },
+    "expected": [
+     "M2"
+    ],
+    "as_expected": true
+   },
+   "A4_boundary_c2_4p9": {
+    "part_A_before": 2.6161,
+    "gate_failed_so_fit_runs": true,
+    "chosen": "M2",
+    "outcome": "accepted",
+    "reason": "M2 acceptable and its leave-one-out r.m.s. at least 20 % below that of M1",
+    "M1": {
+     "residual": 0.0,
+     "loo": 0.0,
+     "part_A_after": 0.0,
+     "theta0": {
+      "Zn_N2_S": 120.0,
+      "Zn_N2_H": 110.0,
+      "S_N2_H": 109.0
+     },
+     "k": {
+      "Zn_N2_S": 50.0,
+      "Zn_N2_H": 50.0,
+      "S_N2_H": 61.55
+     },
+     "c1": 1.0,
+     "c2": 4.9,
+     "acceptable": true,
+     "improved_only": false,
+     "failed_checks": []
+    },
+    "M2": {
+     "residual": 0.0,
+     "loo": 0.0,
+     "part_A_after": 0.0,
+     "theta0": {
+      "Zn_N2_S": 120.0,
+      "Zn_N2_H": 110.0,
+      "S_N2_H": 109.0
+     },
+     "k": {
+      "Zn_N2_S": 50.0,
+      "Zn_N2_H": 50.0,
+      "S_N2_H": 61.55
+     },
+     "c1": 1.0,
+     "c2": 4.9,
+     "acceptable": true,
+     "improved_only": false,
+     "failed_checks": []
+    },
+    "expected": [
+     "M1",
+     "M2"
+    ],
+    "as_expected": true
+   }
+  },
+  "against_the_checker": {
+   "R1_large_residual": {
+    "chosen_now": null,
+    "chosen_by_the_checker": null,
+    "same_choice": true,
+    "largest_difference_of_a_number": 0.0,
+    "failed_now": {
+     "M1": [
+      "residual_rms_at_most_1",
+      "leave_one_out_rms_at_most_1",
+      "part_A_after_at_most_1"
+     ],
+     "M2": [
+      "standard_errors_small",
+      "residual_rms_at_most_1",
+      "leave_one_out_rms_at_most_1",
+      "part_A_after_at_most_1"
+     ]
+    },
+    "failed_then": {
+     "M1": [
+      "residual_rms_at_most_1",
+      "leave_one_out_rms_at_most_1"
+     ],
+     "M2": [
+      "standard_errors_small",
+      "residual_rms_at_most_1",
+      "leave_one_out_rms_at_most_1"
+     ]
+    }
+   },
+   "R2_torsion_coefficient_5p5": {
+    "chosen_now": null,
+    "chosen_by_the_checker": null,
+    "same_choice": true,
+    "largest_difference_of_a_number": 0.0,
+    "failed_now": {
+     "M1": [
+      "torsion_coefficients_below_5"
+     ],
+     "M2": [
+      "torsion_coefficients_below_5"
+     ]
+    },
+    "failed_then": {
+     "M1": [
+      "torsion_coefficients_below_5"
+     ],
+     "M2": [
+      "torsion_coefficients_below_5"
+     ]
+    }
+   },
+   "R2b_torsion_coefficient_minus5p5_c1": {
+    "chosen_now": null,
+    "chosen_by_the_checker": null,
+    "same_choice": true,
+    "largest_difference_of_a_number": 0.0,
+    "failed_now": {
+     "M1": [
+      "torsion_coefficients_below_5"
+     ],
+     "M2": [
+      "torsion_coefficients_below_5"
+     ]
+    },
+    "failed_then": {
+     "M1": [
+      "torsion_coefficients_below_5"
+     ],
+     "M2": [
+      "torsion_coefficients_below_5"
+     ]
+    }
+   },
+   "R4_angle_11_deg_from_structure": {
+    "chosen_now": null,
+    "chosen_by_the_checker": null,
+    "same_choice": true,
+    "largest_difference_of_a_number": 0.0,
+    "failed_now": {
+     "M1": [
+      "equilibrium_angles_within_10_deg_of_their_reference"
+     ],
+     "M2": [
+      "equilibrium_angles_within_10_deg_of_their_reference"
+     ]
+    },
+    "failed_then": {
+     "M1": [
+      "equilibrium_angles_within_10_deg_of_the_structure"
+     ],
+     "M2": [
+      "equilibrium_angles_within_10_deg_of_the_structure"
+     ]
+    }
+   },
+   "R5_force_constant_8": {
+    "chosen_now": null,
+    "chosen_by_the_checker": null,
+    "same_choice": true,
+    "largest_difference_of_a_number": 0.0,
+    "failed_now": {
+     "M1": [
+      "leave_one_out_rms_at_most_1",
+      "part_A_after_at_most_1"
+     ],
+     "M2": [
+      "force_constants_in_range"
+     ]
+    },
+    "failed_then": {
+     "M1": [
+      "leave_one_out_rms_at_most_1"
+     ],
+     "M2": [
+      "force_constants_in_range"
+     ]
+    }
+   },
+   "A1_inside_exact": {
+    "chosen_now": "M1",
+    "chosen_by_the_checker": "M1",
+    "same_choice": true,
+    "largest_difference_of_a_number": 0.0,
+    "failed_now": {
+     "M1": [],
+     "M2": []
+    },
+    "failed_then": {
+     "M1": [],
+     "M2": []
+    }
+   },
+   "A2_inside_noise_0p3": {
+    "chosen_now": "M1",
+    "chosen_by_the_checker": "M1",
+    "same_choice": true,
+    "largest_difference_of_a_number": 0.0,
+    "failed_now": {
+     "M1": [],
+     "M2": []
+    },
+    "failed_then": {
+     "M1": [],
+     "M2": []
+    }
+   },
+   "A3_inside_other_constants": {
+    "chosen_now": "M2",
+    "chosen_by_the_checker": "M2",
+    "same_choice": true,
+    "largest_difference_of_a_number": 0.0,
+    "failed_now": {
+     "M1": [
+      "leave_one_out_rms_at_most_1"
+     ],
+     "M2": []
+    },
+    "failed_then": {
+     "M1": [
+      "leave_one_out_rms_at_most_1"
+     ],
+     "M2": []
+    }
+   },
+   "A4_boundary_c2_4p9": {
+    "chosen_now": "M2",
+    "chosen_by_the_checker": "M2",
+    "same_choice": true,
+    "largest_difference_of_a_number": 0.0,
+    "failed_now": {
+     "M1": [],
+     "M2": []
+    },
+    "failed_then": {
+     "M1": [],
+     "M2": []
+    }
+   }
+  },
+  "all_as_expected": true,
+  "all_same_choice_as_the_checker": true
+ },
+ "II_moved_with_the_window": {
+  "cases": {
+   "R1_large_residual": {
+    "part_A_before": 6.8373,
+    "gate_failed_so_fit_runs": true,
+    "chosen": null,
+    "outcome": "no fit accepted",
+    "reason": "neither model acceptable: no parameter file, the terms stay as built, the gate is reported as failed",
+    "M1": {
+     "residual": 2.2194,
+     "loo": 2.5854,
+     "part_A_after": 5.4772,
+     "theta0": {
+      "Zn_N2_S": 120.524,
+      "Zn_N2_H": 125.434,
+      "S_N2_H": 110.959
+     },
+     "k": {
+      "Zn_N2_S": 50.0,
+      "Zn_N2_H": 50.0,
+      "S_N2_H": 61.55
+     },
+     "c1": -2.3518,
+     "c2": -1.503,
+     "acceptable": false,
+     "improved_only": false,
+     "failed_checks": [
+      "residual_rms_at_most_1",
+      "leave_one_out_rms_at_most_1",
+      "part_A_after_at_most_1"
+     ]
+    },
+    "M2": {
+     "residual": 2.1423,
+     "loo": 2.709,
+     "part_A_after": 5.5485,
+     "theta0": {
+      "Zn_N2_S": 116.649,
+      "Zn_N2_H": 136.32,
+      "S_N2_H": 109.868
+     },
+     "k": {
+      "Zn_N2_S": 26.893,
+      "Zn_N2_H": 31.89,
+      "S_N2_H": 81.669
+     },
+     "c1": -2.4048,
+     "c2": -1.4898,
+     "acceptable": false,
+     "improved_only": false,
+     "failed_checks": [
+      "standard_errors_small",
+      "residual_rms_at_most_1",
+      "leave_one_out_rms_at_most_1",
+      "equilibrium_angles_within_10_deg_of_their_reference",
+      "part_A_after_at_most_1"
+     ]
+    },
+    "expected": null,
+    "as_expected": true
+   },
+   "R2_torsion_coefficient_5p5": {
+    "part_A_before": 8.2384,
+    "gate_failed_so_fit_runs": true,
+    "chosen": null,
+    "outcome": "no fit accepted",
+    "reason": "neither model acceptable: no parameter file, the terms stay as built, the gate is reported as failed",
+    "M1": {
+     "residual": 0.0,
+     "loo": 0.0,
+     "part_A_after": 0.0,
+     "theta0": {
+      "Zn_N2_S": 120.0,
+      "Zn_N2_H": 125.349,
+      "S_N2_H": 110.669
+     },
+     "k": {
+      "Zn_N2_S": 50.0,
+      "Zn_N2_H": 50.0,
+      "S_N2_H": 61.55
+     },
+     "c1": 1.0,
+     "c2": 5.5,
+     "acceptable": false,
+     "improved_only": false,
+     "failed_checks": [
+      "torsion_coefficients_below_5"
+     ]
+    },
+    "M2": {
+     "residual": 0.0,
+     "loo": 0.0,
+     "part_A_after": 0.0,
+     "theta0": {
+      "Zn_N2_S": 120.0,
+      "Zn_N2_H": 125.349,
+      "S_N2_H": 110.669
+     },
+     "k": {
+      "Zn_N2_S": 50.0,
+      "Zn_N2_H": 50.0,
+      "S_N2_H": 61.55
+     },
+     "c1": 1.0,
+     "c2": 5.5,
+     "acceptable": false,
+     "improved_only": false,
+     "failed_checks": [
+      "torsion_coefficients_below_5"
+     ]
+    },
+    "expected": null,
+    "as_expected": true
+   },
+   "R2b_torsion_coefficient_minus5p5_c1": {
+    "part_A_before": 7.2817,
+    "gate_failed_so_fit_runs": true,
+    "chosen": null,
+    "outcome": "no fit accepted",
+    "reason": "neither model acceptable: no parameter file, the terms stay as built, the gate is reported as failed",
+    "M1": {
+     "residual": 0.0,
+     "loo": 0.0,
+     "part_A_after": 0.0,
+     "theta0": {
+      "Zn_N2_S": 120.0,
+      "Zn_N2_H": 125.349,
+      "S_N2_H": 110.669
+     },
+     "k": {
+      "Zn_N2_S": 50.0,
+      "Zn_N2_H": 50.0,
+      "S_N2_H": 61.55
+     },
+     "c1": -5.5,
+     "c2": 1.0,
+     "acceptable": false,
+     "improved_only": false,
+     "failed_checks": [
+      "torsion_coefficients_below_5"
+     ]
+    },
+    "M2": {
+     "residual": 0.0,
+     "loo": 0.0,
+     "part_A_after": 0.0,
+     "theta0": {
+      "Zn_N2_S": 120.0,
+      "Zn_N2_H": 125.349,
+      "S_N2_H": 110.669
+     },
+     "k": {
+      "Zn_N2_S": 50.0,
+      "Zn_N2_H": 50.0,
+      "S_N2_H": 61.55
+     },
+     "c1": -5.5,
+     "c2": 1.0,
+     "acceptable": false,
+     "improved_only": false,
+     "failed_checks": [
+      "torsion_coefficients_below_5"
+     ]
+    },
+    "expected": null,
+    "as_expected": true
+   },
+   "R4_angle_11_deg_from_structure": {
+    "part_A_before": 7.0327,
+    "gate_failed_so_fit_runs": true,
+    "chosen": null,
+    "outcome": "no fit accepted",
+    "reason": "neither model acceptable: no parameter file, the terms stay as built, the gate is reported as failed",
+    "M1": {
+     "residual": 0.0,
+     "loo": 0.0,
+     "part_A_after": 0.0,
+     "theta0": {
+      "Zn_N2_S": 128.6,
+      "Zn_N2_H": 125.349,
+      "S_N2_H": 110.669
+     },
+     "k": {
+      "Zn_N2_S": 50.0,
+      "Zn_N2_H": 50.0,
+      "S_N2_H": 61.55
+     },
+     "c1": 1.0,
+     "c2": -2.0,
+     "acceptable": false,
+     "improved_only": false,
+     "failed_checks": [
+      "equilibrium_angles_within_10_deg_of_their_reference"
+     ]
+    },
+    "M2": {
+     "residual": 0.0,
+     "loo": 0.0,
+     "part_A_after": 0.0,
+     "theta0": {
+      "Zn_N2_S": 128.6,
+      "Zn_N2_H": 125.349,
+      "S_N2_H": 110.669
+     },
+     "k": {
+      "Zn_N2_S": 50.0,
+      "Zn_N2_H": 50.0,
+      "S_N2_H": 61.55
+     },
+     "c1": 1.0,
+     "c2": -2.0,
+     "acceptable": false,
+     "improved_only": false,
+     "failed_checks": [
+      "equilibrium_angles_within_10_deg_of_their_reference"
+     ]
+    },
+    "expected": null,
+    "as_expected": true
+   },
+   "R5_force_constant_8": {
+    "part_A_before": 4.9448,
+    "gate_failed_so_fit_runs": true,
+    "chosen": null,
+    "outcome": "no fit accepted",
+    "reason": "neither model acceptable: no parameter file, the terms stay as built, the gate is reported as failed",
+    "M1": {
+     "residual": 0.7401,
+     "loo": 1.401,
+     "part_A_after": 1.781,
+     "theta0": {
+      "Zn_N2_S": 123.892,
+      "Zn_N2_H": 118.063,
+      "S_N2_H": 110.623
+     },
+     "k": {
+      "Zn_N2_S": 50.0,
+      "Zn_N2_H": 50.0,
+      "S_N2_H": 61.55
+     },
+     "c1": 0.8136,
+     "c2": -1.7935,
+     "acceptable": false,
+     "improved_only": false,
+     "failed_checks": [
+      "leave_one_out_rms_at_most_1",
+      "part_A_after_at_most_1"
+     ]
+    },
+    "M2": {
+     "residual": 0.0,
+     "loo": 0.0,
+     "part_A_after": 0.0,
+     "theta0": {
+      "Zn_N2_S": 120.0,
+      "Zn_N2_H": 125.349,
+      "S_N2_H": 110.669
+     },
+     "k": {
+      "Zn_N2_S": 8.0,
+      "Zn_N2_H": 28.0,
+      "S_N2_H": 45.0
+     },
+     "c1": 1.0,
+     "c2": -2.0,
+     "acceptable": false,
+     "improved_only": false,
+     "failed_checks": [
+      "force_constants_in_range"
+     ]
+    },
+    "expected": null,
+    "as_expected": true
+   },
+   "A1_inside_exact": {
+    "part_A_before": 7.404,
+    "gate_failed_so_fit_runs": true,
+    "chosen": "M1",
+    "outcome": "accepted",
+    "reason": "M1 acceptable; M2 not acceptable or not 20 % better in leave-one-out",
+    "M1": {
+     "residual": 0.0,
+     "loo": 0.0,
+     "part_A_after": 0.0,
+     "theta0": {
+      "Zn_N2_S": 120.0,
+      "Zn_N2_H": 125.349,
+      "S_N2_H": 110.669
+     },
+     "k": {
+      "Zn_N2_S": 50.0,
+      "Zn_N2_H": 50.0,
+      "S_N2_H": 61.55
+     },
+     "c1": 1.0,
+     "c2": -2.0,
+     "acceptable": true,
+     "improved_only": false,
+     "failed_checks": []
+    },
+    "M2": {
+     "residual": 0.0,
+     "loo": 0.0,
+     "part_A_after": 0.0,
+     "theta0": {
+      "Zn_N2_S": 120.0,
+      "Zn_N2_H": 125.349,
+      "S_N2_H": 110.669
+     },
+     "k": {
+      "Zn_N2_S": 50.0,
+      "Zn_N2_H": 50.0,
+      "S_N2_H": 61.55
+     },
+     "c1": 1.0,
+     "c2": -2.0,
+     "acceptable": true,
+     "improved_only": false,
+     "failed_checks": []
+    },
+    "expected": [
+     "M1"
+    ],
+    "as_expected": true
+   },
+   "A2_inside_noise_0p3": {
+    "part_A_before": 7.4675,
+    "gate_failed_so_fit_runs": true,
+    "chosen": "M1",
+    "outcome": "accepted",
+    "reason": "M1 acceptable; M2 not acceptable or not 20 % better in leave-one-out",
+    "M1": {
+     "residual": 0.2498,
+     "loo": 0.428,
+     "part_A_after": 0.334,
+     "theta0": {
+      "Zn_N2_S": 120.273,
+      "Zn_N2_H": 124.794,
+      "S_N2_H": 110.639
+     },
+     "k": {
+      "Zn_N2_S": 50.0,
+      "Zn_N2_H": 50.0,
+      "S_N2_H": 61.55
+     },
+     "c1": 1.1698,
+     "c2": -2.2462,
+     "acceptable": true,
+     "improved_only": false,
+     "failed_checks": []
+    },
+    "M2": {
+     "residual": 0.2205,
+     "loo": 0.5081,
+     "part_A_after": 0.2892,
+     "theta0": {
+      "Zn_N2_S": 120.875,
+      "Zn_N2_H": 124.649,
+      "S_N2_H": 110.857
+     },
+     "k": {
+      "Zn_N2_S": 55.972,
+      "Zn_N2_H": 50.03,
+      "S_N2_H": 57.294
+     },
+     "c1": 1.2178,
+     "c2": -2.2624,
+     "acceptable": true,
+     "improved_only": false,
+     "failed_checks": []
+    },
+    "expected": [
+     "M1",
+     "M2"
+    ],
+    "as_expected": true
+   },
+   "A3_inside_other_constants": {
+    "part_A_before": 4.9169,
+    "gate_failed_so_fit_runs": true,
+    "chosen": "M2",
+    "outcome": "accepted",
+    "reason": "M2 acceptable and its leave-one-out r.m.s. at least 20 % below that of M1",
+    "M1": {
+     "residual": 0.485,
+     "loo": 1.2799,
+     "part_A_after": 0.6643,
+     "theta0": {
+      "Zn_N2_S": 120.587,
+      "Zn_N2_H": 118.141,
+      "S_N2_H": 110.505
+     },
+     "k": {
+      "Zn_N2_S": 50.0,
+      "Zn_N2_H": 50.0,
+      "S_N2_H": 61.55
+     },
+     "c1": 0.7239,
+     "c2": -1.8211,
+     "acceptable": false,
+     "improved_only": false,
+     "failed_checks": [
+      "leave_one_out_rms_at_most_1"
+     ]
+    },
+    "M2": {
+     "residual": 0.0,
+     "loo": 0.0,
+     "part_A_after": 0.0,
+     "theta0": {
+      "Zn_N2_S": 120.0,
+      "Zn_N2_H": 125.349,
+      "S_N2_H": 110.669
+     },
+     "k": {
+      "Zn_N2_S": 38.0,
+      "Zn_N2_H": 28.0,
+      "S_N2_H": 45.0
+     },
+     "c1": 1.0,
+     "c2": -2.0,
+     "acceptable": true,
+     "improved_only": false,
+     "failed_checks": []
+    },
+    "expected": [
+     "M2"
+    ],
+    "as_expected": true
+   },
+   "A4_boundary_c2_4p9": {
+    "part_A_before": 7.9968,
+    "gate_failed_so_fit_runs": true,
+    "chosen": "M1",
+    "outcome": "accepted",
+    "reason": "M1 acceptable; M2 not acceptable or not 20 % better in leave-one-out",
+    "M1": {
+     "residual": 0.0,
+     "loo": 0.0,
+     "part_A_after": 0.0,
+     "theta0": {
+      "Zn_N2_S": 120.0,
+      "Zn_N2_H": 125.349,
+      "S_N2_H": 110.669
+     },
+     "k": {
+      "Zn_N2_S": 50.0,
+      "Zn_N2_H": 50.0,
+      "S_N2_H": 61.55
+     },
+     "c1": 1.0,
+     "c2": 4.9,
+     "acceptable": true,
+     "improved_only": false,
+     "failed_checks": []
+    },
+    "M2": {
+     "residual": 0.0,
+     "loo": 0.0,
+     "part_A_after": 0.0,
+     "theta0": {
+      "Zn_N2_S": 120.0,
+      "Zn_N2_H": 125.349,
+      "S_N2_H": 110.669
+     },
+     "k": {
+      "Zn_N2_S": 50.0,
+      "Zn_N2_H": 50.0,
+      "S_N2_H": 61.55
+     },
+     "c1": 1.0,
+     "c2": 4.9,
+     "acceptable": true,
+     "improved_only": false,
+     "failed_checks": []
+    },
+    "expected": [
+     "M1",
+     "M2"
+    ],
+    "as_expected": true
+   }
+  },
+  "all_as_expected": true,
+  "same_choice_as_in_I": false
+ },
+ "III_unmoved_read_with_the_centres_of_now": {
+  "cases": {
+   "R1_large_residual": {
+    "part_A_before": 6.232,
+    "gate_failed_so_fit_runs": true,
+    "chosen": null,
+    "outcome": "no fit accepted",
+    "reason": "neither model acceptable: no parameter file, the terms stay as built, the gate is reported as failed",
+    "M1": {
+     "residual": 2.2194,
+     "loo": 2.5854,
+     "part_A_after": 5.4863,
+     "theta0": {
+      "Zn_N2_S": 120.524,
+      "Zn_N2_H": 110.084,
+      "S_N2_H": 109.29
+     },
+     "k": {
+      "Zn_N2_S": 50.0,
+      "Zn_N2_H": 50.0,
+      "S_N2_H": 61.55
+     },
+     "c1": -2.3518,
+     "c2": -1.503,
+     "acceptable": false,
+     "improved_only": false,
+     "failed_checks": [
+      "residual_rms_at_most_1",
+      "leave_one_out_rms_at_most_1",
+      "equilibrium_angles_within_10_deg_of_their_reference",
+      "part_A_after_at_most_1"
+     ]
+    },
+    "M2": {
+     "residual": 2.1423,
+     "loo": 2.709,
+     "part_A_after": 5.5193,
+     "theta0": {
+      "Zn_N2_S": 116.649,
+      "Zn_N2_H": 112.254,
+      "S_N2_H": 108.61
+     },
+     "k": {
+      "Zn_N2_S": 26.893,
+      "Zn_N2_H": 31.89,
+      "S_N2_H": 81.669
+     },
+     "c1": -2.4048,
+     "c2": -1.4898,
+     "acceptable": false,
+     "improved_only": false,
+     "failed_checks": [
+      "standard_errors_small",
+      "residual_rms_at_most_1",
+      "leave_one_out_rms_at_most_1",
+      "equilibrium_angles_within_10_deg_of_their_reference",
+      "part_A_after_at_most_1"
+     ]
+    },
+    "expected": null,
+    "as_expected": true
+   },
+   "R2_torsion_coefficient_5p5": {
+    "part_A_before": 2.836,
+    "gate_failed_so_fit_runs": true,
+    "chosen": null,
+    "outcome": "no fit accepted",
+    "reason": "neither model acceptable: no parameter file, the terms stay as built, the gate is reported as failed",
+    "M1": {
+     "residual": 0.0,
+     "loo": 0.0,
+     "part_A_after": 0.0,
+     "theta0": {
+      "Zn_N2_S": 120.0,
+      "Zn_N2_H": 110.0,
+      "S_N2_H": 109.0
+     },
+     "k": {
+      "Zn_N2_S": 50.0,
+      "Zn_N2_H": 50.0,
+      "S_N2_H": 61.55
+     },
+     "c1": 1.0,
+     "c2": 5.5,
+     "acceptable": false,
+     "improved_only": false,
+     "failed_checks": [
+      "torsion_coefficients_below_5",
+      "equilibrium_angles_within_10_deg_of_their_reference"
+     ]
+    },
+    "M2": {
+     "residual": 0.0,
+     "loo": 0.0,
+     "part_A_after": 0.0,
+     "theta0": {
+      "Zn_N2_S": 120.0,
+      "Zn_N2_H": 110.0,
+      "S_N2_H": 109.0
+     },
+     "k": {
+      "Zn_N2_S": 50.0,
+      "Zn_N2_H": 50.0,
+      "S_N2_H": 61.55
+     },
+     "c1": 1.0,
+     "c2": 5.5,
+     "acceptable": false,
+     "improved_only": false,
+     "failed_checks": [
+      "torsion_coefficients_below_5",
+      "equilibrium_angles_within_10_deg_of_their_reference"
+     ]
+    },
+    "expected": null,
+    "as_expected": true
+   },
+   "R2b_torsion_coefficient_minus5p5_c1": {
+    "part_A_before": 9.0657,
+    "gate_failed_so_fit_runs": true,
+    "chosen": null,
+    "outcome": "no fit accepted",
+    "reason": "neither model acceptable: no parameter file, the terms stay as built, the gate is reported as failed",
+    "M1": {
+     "residual": 0.0,
+     "loo": 0.0,
+     "part_A_after": 0.0,
+     "theta0": {
+      "Zn_N2_S": 120.0,
+      "Zn_N2_H": 110.0,
+      "S_N2_H": 109.0
+     },
+     "k": {
+      "Zn_N2_S": 50.0,
+      "Zn_N2_H": 50.0,
+      "S_N2_H": 61.55
+     },
+     "c1": -5.5,
+     "c2": 1.0,
+     "acceptable": false,
+     "improved_only": false,
+     "failed_checks": [
+      "torsion_coefficients_below_5",
+      "equilibrium_angles_within_10_deg_of_their_reference"
+     ]
+    },
+    "M2": {
+     "residual": 0.0,
+     "loo": 0.0,
+     "part_A_after": 0.0,
+     "theta0": {
+      "Zn_N2_S": 120.0,
+      "Zn_N2_H": 110.0,
+      "S_N2_H": 109.0
+     },
+     "k": {
+      "Zn_N2_S": 50.0,
+      "Zn_N2_H": 50.0,
+      "S_N2_H": 61.55
+     },
+     "c1": -5.5,
+     "c2": 1.0,
+     "acceptable": false,
+     "improved_only": false,
+     "failed_checks": [
+      "torsion_coefficients_below_5",
+      "equilibrium_angles_within_10_deg_of_their_reference"
+     ]
+    },
+    "expected": null,
+    "as_expected": true
+   },
+   "R4_angle_11_deg_from_structure": {
+    "part_A_before": 4.0782,
+    "gate_failed_so_fit_runs": true,
+    "chosen": null,
+    "outcome": "no fit accepted",
+    "reason": "neither model acceptable: no parameter file, the terms stay as built, the gate is reported as failed",
+    "M1": {
+     "residual": 0.0,
+     "loo": 0.0,
+     "part_A_after": 0.0,
+     "theta0": {
+      "Zn_N2_S": 128.6,
+      "Zn_N2_H": 110.0,
+      "S_N2_H": 109.0
+     },
+     "k": {
+      "Zn_N2_S": 50.0,
+      "Zn_N2_H": 50.0,
+      "S_N2_H": 61.55
+     },
+     "c1": 1.0,
+     "c2": -2.0,
+     "acceptable": false,
+     "improved_only": false,
+     "failed_checks": [
+      "equilibrium_angles_within_10_deg_of_their_reference"
+     ]
+    },
+    "M2": {
+     "residual": 0.0,
+     "loo": 0.0,
+     "part_A_after": 0.0,
+     "theta0": {
+      "Zn_N2_S": 128.6,
+      "Zn_N2_H": 110.0,
+      "S_N2_H": 109.0
+     },
+     "k": {
+      "Zn_N2_S": 50.0,
+      "Zn_N2_H": 50.0,
+      "S_N2_H": 61.55
+     },
+     "c1": 1.0,
+     "c2": -2.0,
+     "acceptable": false,
+     "improved_only": false,
+     "failed_checks": [
+      "equilibrium_angles_within_10_deg_of_their_reference"
+     ]
+    },
+    "expected": null,
+    "as_expected": true
+   },
+   "R5_force_constant_8": {
+    "part_A_before": 3.6772,
+    "gate_failed_so_fit_runs": true,
+    "chosen": null,
+    "outcome": "no fit accepted",
+    "reason": "neither model acceptable: no parameter file, the terms stay as built, the gate is reported as failed",
+    "M1": {
+     "residual": 0.7401,
+     "loo": 1.401,
+     "part_A_after": 1.7741,
+     "theta0": {
+      "Zn_N2_S": 123.892,
+      "Zn_N2_H": 109.468,
+      "S_N2_H": 109.403
+     },
+     "k": {
+      "Zn_N2_S": 50.0,
+      "Zn_N2_H": 50.0,
+      "S_N2_H": 61.55
+     },
+     "c1": 0.8136,
+     "c2": -1.7935,
+     "acceptable": false,
+     "improved_only": false,
+     "failed_checks": [
+      "leave_one_out_rms_at_most_1",
+      "equilibrium_angles_within_10_deg_of_their_reference",
+      "part_A_after_at_most_1"
+     ]
+    },
+    "M2": {
+     "residual": 0.0,
+     "loo": 0.0,
+     "part_A_after": 0.0,
+     "theta0": {
+      "Zn_N2_S": 120.0,
+      "Zn_N2_H": 110.0,
+      "S_N2_H": 109.0
+     },
+     "k": {
+      "Zn_N2_S": 8.0,
+      "Zn_N2_H": 28.0,
+      "S_N2_H": 45.0
+     },
+     "c1": 1.0,
+     "c2": -2.0,
+     "acceptable": false,
+     "improved_only": false,
+     "failed_checks": [
+      "force_constants_in_range",
+      "equilibrium_angles_within_10_deg_of_their_reference"
+     ]
+    },
+    "expected": null,
+    "as_expected": true
+   },
+   "A1_inside_exact": {
+    "part_A_before": 3.8678,
+    "gate_failed_so_fit_runs": true,
+    "chosen": null,
+    "outcome": "no fit accepted",
+    "reason": "neither model acceptable: no parameter file, the terms stay as built, the gate is reported as failed",
+    "M1": {
+     "residual": 0.0,
+     "loo": 0.0,
+     "part_A_after": 0.0,
+     "theta0": {
+      "Zn_N2_S": 120.0,
+      "Zn_N2_H": 110.0,
+      "S_N2_H": 109.0
+     },
+     "k": {
+      "Zn_N2_S": 50.0,
+      "Zn_N2_H": 50.0,
+      "S_N2_H": 61.55
+     },
+     "c1": 1.0,
+     "c2": -2.0,
+     "acceptable": false,
+     "improved_only": false,
+     "failed_checks": [
+      "equilibrium_angles_within_10_deg_of_their_reference"
+     ]
+    },
+    "M2": {
+     "residual": 0.0,
+     "loo": 0.0,
+     "part_A_after": 0.0,
+     "theta0": {
+      "Zn_N2_S": 120.0,
+      "Zn_N2_H": 110.0,
+      "S_N2_H": 109.0
+     },
+     "k": {
+      "Zn_N2_S": 50.0,
+      "Zn_N2_H": 50.0,
+      "S_N2_H": 61.55
+     },
+     "c1": 1.0,
+     "c2": -2.0,
+     "acceptable": false,
+     "improved_only": false,
+     "failed_checks": [
+      "equilibrium_angles_within_10_deg_of_their_reference"
+     ]
+    },
+    "expected": [
+     "M1"
+    ],
+    "as_expected": false
+   },
+   "A2_inside_noise_0p3": {
+    "part_A_before": 3.9671,
+    "gate_failed_so_fit_runs": true,
+    "chosen": null,
+    "outcome": "no fit accepted",
+    "reason": "neither model acceptable: no parameter file, the terms stay as built, the gate is reported as failed",
+    "M1": {
+     "residual": 0.2498,
+     "loo": 0.428,
+     "part_A_after": 0.3067,
+     "theta0": {
+      "Zn_N2_S": 120.273,
+      "Zn_N2_H": 109.444,
+      "S_N2_H": 108.97
+     },
+     "k": {
+      "Zn_N2_S": 50.0,
+      "Zn_N2_H": 50.0,
+      "S_N2_H": 61.55
+     },
+     "c1": 1.1698,
+     "c2": -2.2462,
+     "acceptable": false,
+     "improved_only": false,
+     "failed_checks": [
+      "equilibrium_angles_within_10_deg_of_their_reference"
+     ]
+    },
+    "M2": {
+     "residual": 0.2205,
+     "loo": 0.5081,
+     "part_A_after": 0.271,
+     "theta0": {
+      "Zn_N2_S": 120.875,
+      "Zn_N2_H": 109.309,
+      "S_N2_H": 109.064
+     },
+     "k": {
+      "Zn_N2_S": 55.972,
+      "Zn_N2_H": 50.03,
+      "S_N2_H": 57.294
+     },
+     "c1": 1.2178,
+     "c2": -2.2624,
+     "acceptable": false,
+     "improved_only": false,
+     "failed_checks": [
+      "equilibrium_angles_within_10_deg_of_their_reference"
+     ]
+    },
+    "expected": [
+     "M1",
+     "M2"
+    ],
+    "as_expected": false
+   },
+   "A3_inside_other_constants": {
+    "part_A_before": 3.5719,
+    "gate_failed_so_fit_runs": true,
+    "chosen": null,
+    "outcome": "no fit accepted",
+    "reason": "neither model acceptable: no parameter file, the terms stay as built, the gate is reported as failed",
+    "M1": {
+     "residual": 0.485,
+     "loo": 1.2799,
+     "part_A_after": 0.6348,
+     "theta0": {
+      "Zn_N2_S": 120.587,
+      "Zn_N2_H": 109.546,
+      "S_N2_H": 109.285
+     },
+     "k": {
+      "Zn_N2_S": 50.0,
+      "Zn_N2_H": 50.0,
+      "S_N2_H": 61.55
+     },
+     "c1": 0.7239,
+     "c2": -1.8211,
+     "acceptable": false,
+     "improved_only": false,
+     "failed_checks": [
+      "leave_one_out_rms_at_most_1",
+      "equilibrium_angles_within_10_deg_of_their_reference"
+     ]
+    },
+    "M2": {
+     "residual": 0.0,
+     "loo": 0.0,
+     "part_A_after": 0.0,
+     "theta0": {
+      "Zn_N2_S": 120.0,
+      "Zn_N2_H": 110.0,
+      "S_N2_H": 109.0
+     },
+     "k": {
+      "Zn_N2_S": 38.0,
+      "Zn_N2_H": 28.0,
+      "S_N2_H": 45.0
+     },
+     "c1": 1.0,
+     "c2": -2.0,
+     "acceptable": false,
+     "improved_only": false,
+     "failed_checks": [
+      "equilibrium_angles_within_10_deg_of_their_reference"
+     ]
+    },
+    "expected": [
+     "M2"
+    ],
+    "as_expected": false
+   },
+   "A4_boundary_c2_4p9": {
+    "part_A_before": 2.6161,
+    "gate_failed_so_fit_runs": true,
+    "chosen": null,
+    "outcome": "no fit accepted",
+    "reason": "neither model acceptable: no parameter file, the terms stay as built, the gate is reported as failed",
+    "M1": {
+     "residual": 0.0,
+     "loo": 0.0,
+     "part_A_after": 0.0,
+     "theta0": {
+      "Zn_N2_S": 120.0,
+      "Zn_N2_H": 110.0,
+      "S_N2_H": 109.0
+     },
+     "k": {
+      "Zn_N2_S": 50.0,
+      "Zn_N2_H": 50.0,
+      "S_N2_H": 61.55
+     },
+     "c1": 1.0,
+     "c2": 4.9,
+     "acceptable": false,
+     "improved_only": false,
+     "failed_checks": [
+      "equilibrium_angles_within_10_deg_of_their_reference"
+     ]
+    },
+    "M2": {
+     "residual": 0.0,
+     "loo": 0.0,
+     "part_A_after": 0.0,
+     "theta0": {
+      "Zn_N2_S": 120.0,
+      "Zn_N2_H": 110.0,
+      "S_N2_H": 109.0
+     },
+     "k": {
+      "Zn_N2_S": 50.0,
+      "Zn_N2_H": 50.0,
+      "S_N2_H": 61.55
+     },
+     "c1": 1.0,
+     "c2": 4.9,
+     "acceptable": false,
+     "improved_only": false,
+     "failed_checks": [
+      "equilibrium_angles_within_10_deg_of_their_reference"
+     ]
+    },
+    "expected": [
+     "M1",
+     "M2"
+    ],
+    "as_expected": false
+   }
+  },
+  "none_chosen": true,
+  "accepted_cases_refused_on_the_window_alone": {
+   "A1_inside_exact": true,
+   "A2_inside_noise_0p3": true,
+   "A4_boundary_c2_4p9": true
+  },
+  "note": "Zn-N2-H of the truth is 110 deg, 12.76 deg from the quantum-chemical optimum (122.76): outside the window of now"
+ },
+ "G1_as_the_checker_built_it": {
+  "part_A_before": 4.2886,
+  "gate_failed_so_fit_runs": true,
+  "chosen": null,
+  "outcome": "terms improved, gate still failed",
+  "reason": "terms improved, gate still failed: M1 and M2 meet(s) every other condition and lower(s) part A, but part A with the fitted terms stays above 1.0; not used, no parameter file, the terms stay as built",
+  "M1": {
+   "residual": 0.4589,
+   "loo": 0.5146,
+   "part_A_after": 1.9984,
+   "theta0": {
+    "Zn_N2_S": 123.675,
+    "Zn_N2_H": 112.951,
+    "S_N2_H": 111.949
+   },
+   "k": {
+    "Zn_N2_S": 50.0,
+    "Zn_N2_H": 50.0,
+    "S_N2_H": 61.55
+   },
+   "c1": 1.6182,
+   "c2": -2.4569,
+   "acceptable": false,
+   "improved_only": true,
+   "failed_checks": [
+    "part_A_after_at_most_1"
+   ]
+  },
+  "M2": {
+   "residual": 0.4525,
+   "loo": 0.5838,
+   "part_A_after": 1.945,
+   "theta0": {
+    "Zn_N2_S": 123.664,
+    "Zn_N2_H": 112.753,
+    "S_N2_H": 111.842
+   },
+   "k": {
+    "Zn_N2_S": 52.555,
+    "Zn_N2_H": 52.871,
+    "S_N2_H": 64.494
+   },
+   "c1": 1.5795,
+   "c2": -2.4286,
+   "acceptable": false,
+   "improved_only": true,
+   "failed_checks": [
+    "part_A_after_at_most_1"
+   ]
+  },
+  "lowered": "e_p120",
+  "expected": "terms improved, gate still failed; none chosen",
+  "as_expected": true
+ },
+ "G1_moved_with_the_window": {
+  "part_A_before": 8.2288,
+  "gate_failed_so_fit_runs": true,
+  "chosen": null,
+  "outcome": "terms improved, gate still failed",
+  "reason": "terms improved, gate still failed: M1 and M2 meet(s) every other condition and lower(s) part A, but part A with the fitted terms stays above 1.0; not used, no parameter file, the terms stay as built",
+  "M1": {
+   "residual": 0.4589,
+   "loo": 0.5146,
+   "part_A_after": 1.9984,
+   "theta0": {
+    "Zn_N2_S": 123.675,
+    "Zn_N2_H": 128.301,
+    "S_N2_H": 113.617
+   },
+   "k": {
+    "Zn_N2_S": 50.0,
+    "Zn_N2_H": 50.0,
+    "S_N2_H": 61.55
+   },
+   "c1": 1.6182,
+   "c2": -2.4569,
+   "acceptable": false,
+   "improved_only": true,
+   "failed_checks": [
+    "part_A_after_at_most_1"
+   ]
+  },
+  "M2": {
+   "residual": 0.4525,
+   "loo": 0.5838,
+   "part_A_after": 1.9453,
+   "theta0": {
+    "Zn_N2_S": 123.664,
+    "Zn_N2_H": 127.269,
+    "S_N2_H": 113.434
+   },
+   "k": {
+    "Zn_N2_S": 52.555,
+    "Zn_N2_H": 52.871,
+    "S_N2_H": 64.494
+   },
+   "c1": 1.5795,
+   "c2": -2.4286,
+   "acceptable": false,
+   "improved_only": true,
+   "failed_checks": [
+    "part_A_after_at_most_1"
+   ]
+  },
+  "lowered": "e_p120",
+  "expected": "terms improved, gate still failed; none chosen",
+  "as_expected": true
+ },
+ "G1_by_the_checker": {
+  "chosen": "M1",
+  "part_A_after": 1.9984
+ },
+ "conditions_alone": {
+  "worse": {
+   "before": 1.2,
+   "after": 1.3,
+   "acceptable": false,
+   "failed": [
+    "part_A_number_falls",
+    "part_A_after_at_most_1"
+   ]
+  },
+  "equal": {
+   "before": 1.2,
+   "after": 1.2,
+   "acceptable": false,
+   "failed": [
+    "part_A_number_falls",
+    "part_A_after_at_most_1"
+   ]
+  },
+  "falls_but_above_1": {
+   "before": 1.2,
+   "after": 1.19,
+   "acceptable": false,
+   "failed": [
+    "part_A_after_at_most_1"
+   ]
+  },
+  "falls_to_1p0": {
+   "before": 1.2,
+   "after": 1.0,
+   "acceptable": true,
+   "failed": []
+  },
+  "falls_below_1": {
+   "before": 3.08,
+   "after": 0.95,
+   "acceptable": true,
+   "failed": []
+  },
+  "after_unknown": {
+   "before": 1.2,
+   "after": null,
+   "acceptable": false,
+   "failed": [
+    "part_A_number_falls",
+    "part_A_after_at_most_1"
+   ]
+  },
+  "no_optimum": {
+   "before": 3.08,
+   "after": 0.5,
+   "acceptable": false,
+   "failed": [
+    "equilibrium_angles_within_10_deg_of_their_reference"
+   ]
+  }
+ },
+ "passed": true,
+ "written": "2026-10-06 01:41:07 PM IST",
+ "script": {
+  "file": "/tmp/claude-0/-root-workspace-cqc-4-sulfamoylanilinium-dihydrogen-phosphate/82cc65d7-a11f-4d60-91ee-436dc9534941/scratchpad/mdgr3/c3_new.py",
+  "sha256": "bcd361dca9b96be69d4271980a942f3fc3e5bca3708d11d9d4cb2c16c0db731e",
+  "cases_of": "/tmp/claude-0/-root-workspace-cqc-4-sulfamoylanilinium-dihydrogen-phosphate/82cc65d7-a11f-4d60-91ee-436dc9534941/scratchpad/mdgr2/grcheck/c3_fit.py",
+  "results_of_the_check": "/tmp/claude-0/-root-workspace-cqc-4-sulfamoylanilinium-dihydrogen-phosphate/82cc65d7-a11f-4d60-91ee-436dc9534941/scratchpad/mdgr2/grcheck/c3_fit.json"
+ }
+}

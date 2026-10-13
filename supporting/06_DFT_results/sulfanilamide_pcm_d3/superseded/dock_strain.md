@@ -1,0 +1,7 @@
+> **Superseded.** Rigid DFT single points of the docked poses (VM burst 2), replaced by the relaxed torsion scans (06_DFT_results/torsion_scan/ and <case>/torsion_scan/; facts section 36). Not used in the paper; kept for provenance.
+
+Relative energies (kcal/mol) vs opt, sulfanilamide_pcm_d3 (IEF-PCM (water, eps = 78.3553, Lebedev order 29)), 6-311++G(d,p)
+
+| Method | opt | T1_3TZF__sfa_neutral__vina__cl1_seed02__Hrot | T1_3TZF__sfa_neutral__vinardo__cl1_seed01__Hrot | T3_6RL9__sfa_neutral__ad4zn__cl1_seed03__Hrot | T3_6RL9__sfa_neutral__vina__cl1_seed09__Hrot | T3_6RL9__sfa_neutral__vinardo__cl1_seed09__Hrot | T4_3HS4__sfa_neutral__ad4zn__cl1_seed13__Hrot | T4_3HS4__sfa_neutral__vina__cl1_seed02__Hrot | T4_3HS4__sfa_neutral__vinardo__cl1_seed01__Hrot | T5_7S2K__sfa_neutral__vina__cl1_seed04__Hrot | T5_7S2K__sfa_neutral__vinardo__cl1_seed01__Hrot | T1_3TZF__sfa_neutral__vina__cl1_seed02 | T1_3TZF__sfa_neutral__vinardo__cl1_seed01 | T3_6RL9__sfa_neutral__ad4zn__cl1_seed03 | T3_6RL9__sfa_neutral__vina__cl1_seed09 | T3_6RL9__sfa_neutral__vinardo__cl1_seed09 | T4_3HS4__sfa_neutral__ad4zn__cl1_seed13 | T4_3HS4__sfa_neutral__vina__cl1_seed02 | T4_3HS4__sfa_neutral__vinardo__cl1_seed01 | T5_7S2K__sfa_neutral__vina__cl1_seed04 | T5_7S2K__sfa_neutral__vinardo__cl1_seed01 |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| B3LYP-D3(BJ) | 0.00 | 3.33 | 3.35 | 4.82 | 5.07 | 5.02 | 4.75 | 4.54 | 3.88 | 3.56 | 5.15 | 3.91 | 17.87 | 19.14 | 18.83 | 9.79 | 8.14 | 11.76 | 8.40 | 16.16 | 16.24 |

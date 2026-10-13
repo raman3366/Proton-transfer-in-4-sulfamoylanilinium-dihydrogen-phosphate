@@ -1,0 +1,1188 @@
+{
+ "what": "Checks on the raw frames for md/RESULTS.md (all-atom frames). Written by md/production/site_checks.py; own reading of the DCD files, set beside the series of the two analysis programs.",
+ "script": {
+  "name": "md/production/site_checks.py",
+  "sha256": "32a9ef7688c11b6b1cd3ebc448a4bc22f3efadc4e8867b7f104ac07e284b8700"
+ },
+ "written": "8 Oct 2026, 6:44 AM IST",
+ "tolerances": {
+  "distance_A": 0.001,
+  "angle_deg": 0.01,
+  "signed_volume": 0.001
+ },
+ "runs": [
+  {
+   "run": "bonded_2e/X1",
+   "n_all_atom_frames": 1020,
+   "n_production_frames": 1000,
+   "n_water_O": 12247,
+   "n_protein_O": 382,
+   "beside_the_two_programs": {
+    "analysis": {
+     "largest_difference": {
+      "d_Zn_Owater_min_A": 4.998392141386532e-05,
+      "d_Zn_Oprotein_min_A": 4.9954127575801976e-05,
+      "d_Zn_Osulfonyl_min_full_A": 4.997639983894686e-05,
+      "d_water_ring_place_min_A": 4.9982549450433567e-05
+     },
+     "frames_classed_differently": {
+      "n_water_ring_place": 0,
+      "n_water_N1_3p5A": 0,
+      "n_water_ring_wide_3p5A": 0,
+      "fifth_any": 0,
+      "fifth_water": 0,
+      "fifth_proteinO": 0
+     }
+    },
+    "analysis_recheck": {
+     "largest_difference": {
+      "d_Zn_Owater_min_A": 4.998392141386532e-05,
+      "d_Zn_Oprotein_min_A": 4.9954127575801976e-05,
+      "d_Zn_Osulfonyl_min_full_A": 4.997639983894686e-05,
+      "d_water_ring_place_min_A": 5.195445454342362e-05
+     },
+     "frames_classed_differently": {
+      "n_water_ring_place": 0,
+      "n_water_N1_3p5A": 0,
+      "n_water_ring_wide_3p5A": 0,
+      "fifth_any": 0,
+      "fifth_water": 0,
+      "fifth_proteinO": 0
+     }
+    }
+   },
+   "threshold": {
+    "what": "all-atom frames, equilibration and production, with a value within 0.001 A of a threshold (SPEC.md, section 14): the nearest water, protein or sulfonyl oxygen 2.6 A from the zinc; a water oxygen at the cut-off of n_water_ring_place (2.5 A), of n_water_N1_3p5A or of n_water_ring_wide_3p5A (3.5 A)",
+    "n_zinc_oxygen": 0,
+    "n_ring_place": 0,
+    "n_water_N1": 8,
+    "n_ring_wide": 6,
+    "n_frames_any": 14,
+    "n_frames_any_production": 14,
+    "n_frames_zinc_oxygen_or_ring_place": 0,
+    "n_frames_zinc_oxygen_or_ring_place_production": 0,
+    "nearest_margin_zinc_oxygen_A": 0.008225889343270065
+   },
+   "crystal_water_places": {
+    "what": "a water oxygen within 1.4 A of the place of the crystal water after the fit of the CA atoms; per cent of the all-atom frames",
+    "production": {
+     "423": 32.800000000000004,
+     "516": 59.0,
+     "553": 92.0,
+     "568": 86.3
+    },
+    "production_20_to_100_ns": {
+     "423": 32.25,
+     "516": 61.625,
+     "553": 91.75,
+     "568": 89.625
+    },
+    "n_frames_production": 1000,
+    "n_frames_20_to_100_ns": 800
+   },
+   "water_donating_to_N2": {
+    "what": "a water with O within 3.5 A of N2 and O-H...N2 at least 135 deg (no crystal position is used); per cent of the all-atom frames of the production",
+    "share_production": 92.60000000000001,
+    "mean_O_N2_of_the_donor_A": 2.8884792330218136,
+    "share_while_place_553_occupied": 97.28260869565217
+   },
+   "water_within_8_A_of_the_zinc": {
+    "mean_production_20_to_100_ns": 7.47375,
+    "mean_first_10_ns": 5.84
+   },
+   "by_state_of_the_solute_frame": {
+    "C": {
+     "n_all_atom_frames": 990,
+     "place_553_occupied_share": 92.12121212121212,
+     "water_in_the_place_of_the_crystal_ring_share": 2.2222222222222223
+    },
+    "R": {
+     "n_all_atom_frames": 0,
+     "place_553_occupied_share": null,
+     "water_in_the_place_of_the_crystal_ring_share": null
+    },
+    "I": {
+     "n_all_atom_frames": 10,
+     "place_553_occupied_share": 80.0,
+     "water_in_the_place_of_the_crystal_ring_share": 0.0
+    }
+   }
+  },
+  {
+   "run": "bonded_2e/X2",
+   "n_all_atom_frames": 1020,
+   "n_production_frames": 1000,
+   "n_water_O": 12247,
+   "n_protein_O": 382,
+   "beside_the_two_programs": {
+    "analysis": {
+     "largest_difference": {
+      "d_Zn_Owater_min_A": 4.998419386481601e-05,
+      "d_Zn_Oprotein_min_A": 4.998362074104534e-05,
+      "d_Zn_Osulfonyl_min_full_A": 4.992731491482161e-05,
+      "d_water_ring_place_min_A": 4.999097850166834e-05
+     },
+     "frames_classed_differently": {
+      "n_water_ring_place": 0,
+      "n_water_N1_3p5A": 0,
+      "n_water_ring_wide_3p5A": 0,
+      "fifth_any": 0,
+      "fifth_water": 0,
+      "fifth_proteinO": 0
+     }
+    },
+    "analysis_recheck": {
+     "largest_difference": {
+      "d_Zn_Owater_min_A": 5.050998661459971e-05,
+      "d_Zn_Oprotein_min_A": 4.998362074104534e-05,
+      "d_Zn_Osulfonyl_min_full_A": 4.992731491482161e-05,
+      "d_water_ring_place_min_A": 5.139750338445381e-05
+     },
+     "frames_classed_differently": {
+      "n_water_ring_place": 0,
+      "n_water_N1_3p5A": 0,
+      "n_water_ring_wide_3p5A": 0,
+      "fifth_any": 0,
+      "fifth_water": 0,
+      "fifth_proteinO": 0
+     }
+    }
+   },
+   "threshold": {
+    "what": "all-atom frames, equilibration and production, with a value within 0.001 A of a threshold (SPEC.md, section 14): the nearest water, protein or sulfonyl oxygen 2.6 A from the zinc; a water oxygen at the cut-off of n_water_ring_place (2.5 A), of n_water_N1_3p5A or of n_water_ring_wide_3p5A (3.5 A)",
+    "n_zinc_oxygen": 0,
+    "n_ring_place": 0,
+    "n_water_N1": 7,
+    "n_ring_wide": 10,
+    "n_frames_any": 17,
+    "n_frames_any_production": 17,
+    "n_frames_zinc_oxygen_or_ring_place": 0,
+    "n_frames_zinc_oxygen_or_ring_place_production": 0,
+    "nearest_margin_zinc_oxygen_A": 0.0482155941990019
+   },
+   "crystal_water_places": {
+    "what": "a water oxygen within 1.4 A of the place of the crystal water after the fit of the CA atoms; per cent of the all-atom frames",
+    "production": {
+     "423": 27.0,
+     "516": 75.6,
+     "553": 95.89999999999999,
+     "568": 82.1
+    },
+    "production_20_to_100_ns": {
+     "423": 27.875,
+     "516": 74.0,
+     "553": 96.25,
+     "568": 82.375
+    },
+    "n_frames_production": 1000,
+    "n_frames_20_to_100_ns": 800
+   },
+   "water_donating_to_N2": {
+    "what": "a water with O within 3.5 A of N2 and O-H...N2 at least 135 deg (no crystal position is used); per cent of the all-atom frames of the production",
+    "share_production": 94.19999999999999,
+    "mean_O_N2_of_the_donor_A": 2.883115198484638,
+    "share_while_place_553_occupied": 96.76746611053181
+   },
+   "water_within_8_A_of_the_zinc": {
+    "mean_production_20_to_100_ns": 7.33875,
+    "mean_first_10_ns": 7.36
+   },
+   "by_state_of_the_solute_frame": {
+    "C": {
+     "n_all_atom_frames": 979,
+     "place_553_occupied_share": 96.11848825331971,
+     "water_in_the_place_of_the_crystal_ring_share": 2.5536261491317673
+    },
+    "R": {
+     "n_all_atom_frames": 0,
+     "place_553_occupied_share": null,
+     "water_in_the_place_of_the_crystal_ring_share": null
+    },
+    "I": {
+     "n_all_atom_frames": 21,
+     "place_553_occupied_share": 85.71428571428571,
+     "water_in_the_place_of_the_crystal_ring_share": 14.285714285714285
+    }
+   }
+  },
+  {
+   "run": "bonded_2e/X3",
+   "n_all_atom_frames": 1020,
+   "n_production_frames": 1000,
+   "n_water_O": 12247,
+   "n_protein_O": 382,
+   "beside_the_two_programs": {
+    "analysis": {
+     "largest_difference": {
+      "d_Zn_Owater_min_A": 4.9956430748121505e-05,
+      "d_Zn_Oprotein_min_A": 4.996537377488508e-05,
+      "d_Zn_Osulfonyl_min_full_A": 4.992061500708189e-05,
+      "d_water_ring_place_min_A": 4.998711548376278e-05
+     },
+     "frames_classed_differently": {
+      "n_water_ring_place": 0,
+      "n_water_N1_3p5A": 0,
+      "n_water_ring_wide_3p5A": 0,
+      "fifth_any": 0,
+      "fifth_water": 0,
+      "fifth_proteinO": 0
+     }
+    },
+    "analysis_recheck": {
+     "largest_difference": {
+      "d_Zn_Owater_min_A": 4.9956430748121505e-05,
+      "d_Zn_Oprotein_min_A": 5.2695624907617145e-05,
+      "d_Zn_Osulfonyl_min_full_A": 5.2511236360519575e-05,
+      "d_water_ring_place_min_A": 5.507757917566636e-05
+     },
+     "frames_classed_differently": {
+      "n_water_ring_place": 0,
+      "n_water_N1_3p5A": 0,
+      "n_water_ring_wide_3p5A": 0,
+      "fifth_any": 0,
+      "fifth_water": 0,
+      "fifth_proteinO": 0
+     }
+    }
+   },
+   "threshold": {
+    "what": "all-atom frames, equilibration and production, with a value within 0.001 A of a threshold (SPEC.md, section 14): the nearest water, protein or sulfonyl oxygen 2.6 A from the zinc; a water oxygen at the cut-off of n_water_ring_place (2.5 A), of n_water_N1_3p5A or of n_water_ring_wide_3p5A (3.5 A)",
+    "n_zinc_oxygen": 0,
+    "n_ring_place": 1,
+    "n_water_N1": 2,
+    "n_ring_wide": 9,
+    "n_frames_any": 12,
+    "n_frames_any_production": 12,
+    "n_frames_zinc_oxygen_or_ring_place": 1,
+    "n_frames_zinc_oxygen_or_ring_place_production": 1,
+    "nearest_margin_zinc_oxygen_A": 0.002666535678877313
+   },
+   "crystal_water_places": {
+    "what": "a water oxygen within 1.4 A of the place of the crystal water after the fit of the CA atoms; per cent of the all-atom frames",
+    "production": {
+     "423": 25.3,
+     "516": 28.299999999999997,
+     "553": 94.8,
+     "568": 86.9
+    },
+    "production_20_to_100_ns": {
+     "423": 26.25,
+     "516": 30.375000000000004,
+     "553": 93.625,
+     "568": 86.625
+    },
+    "n_frames_production": 1000,
+    "n_frames_20_to_100_ns": 800
+   },
+   "water_donating_to_N2": {
+    "what": "a water with O within 3.5 A of N2 and O-H...N2 at least 135 deg (no crystal position is used); per cent of the all-atom frames of the production",
+    "share_production": 95.6,
+    "mean_O_N2_of_the_donor_A": 2.875295723458716,
+    "share_while_place_553_occupied": 97.67932489451476
+   },
+   "water_within_8_A_of_the_zinc": {
+    "mean_production_20_to_100_ns": 6.59625,
+    "mean_first_10_ns": 6.55
+   },
+   "by_state_of_the_solute_frame": {
+    "C": {
+     "n_all_atom_frames": 991,
+     "place_553_occupied_share": 94.85368314833501,
+     "water_in_the_place_of_the_crystal_ring_share": 1.3118062563067607
+    },
+    "R": {
+     "n_all_atom_frames": 0,
+     "place_553_occupied_share": null,
+     "water_in_the_place_of_the_crystal_ring_share": null
+    },
+    "I": {
+     "n_all_atom_frames": 9,
+     "place_553_occupied_share": 88.88888888888889,
+     "water_in_the_place_of_the_crystal_ring_share": 0.0
+    }
+   }
+  },
+  {
+   "run": "bonded_2e/N1",
+   "n_all_atom_frames": 1020,
+   "n_production_frames": 1000,
+   "n_water_O": 12250,
+   "n_protein_O": 382,
+   "beside_the_two_programs": {
+    "analysis": {
+     "largest_difference": {
+      "d_Zn_Owater_min_A": 4.972767216759877e-05,
+      "d_Zn_Oprotein_min_A": 4.9976845044596985e-05,
+      "d_Zn_Osulfonyl_min_full_A": 4.994379530209869e-05,
+      "d_water_ring_place_min_A": 4.994097697297306e-05
+     },
+     "frames_classed_differently": {
+      "n_water_ring_place": 0,
+      "n_water_N1_3p5A": 0,
+      "n_water_ring_wide_3p5A": 0,
+      "fifth_any": 0,
+      "fifth_water": 0,
+      "fifth_proteinO": 0
+     }
+    },
+    "analysis_recheck": {
+     "largest_difference": {
+      "d_Zn_Owater_min_A": 5.24050424077771e-05,
+      "d_Zn_Oprotein_min_A": 5.149970771833878e-05,
+      "d_Zn_Osulfonyl_min_full_A": 5.10985337229819e-05,
+      "d_water_ring_place_min_A": 5.059548656793922e-05
+     },
+     "frames_classed_differently": {
+      "n_water_ring_place": 0,
+      "n_water_N1_3p5A": 0,
+      "n_water_ring_wide_3p5A": 0,
+      "fifth_any": 0,
+      "fifth_water": 0,
+      "fifth_proteinO": 0
+     }
+    }
+   },
+   "threshold": {
+    "what": "all-atom frames, equilibration and production, with a value within 0.001 A of a threshold (SPEC.md, section 14): the nearest water, protein or sulfonyl oxygen 2.6 A from the zinc; a water oxygen at the cut-off of n_water_ring_place (2.5 A), of n_water_N1_3p5A or of n_water_ring_wide_3p5A (3.5 A)",
+    "n_zinc_oxygen": 0,
+    "n_ring_place": 0,
+    "n_water_N1": 6,
+    "n_ring_wide": 6,
+    "n_frames_any": 11,
+    "n_frames_any_production": 11,
+    "n_frames_zinc_oxygen_or_ring_place": 0,
+    "n_frames_zinc_oxygen_or_ring_place_production": 0,
+    "nearest_margin_zinc_oxygen_A": 0.002691998506607618
+   },
+   "crystal_water_places": {
+    "what": "a water oxygen within 1.4 A of the place of the crystal water after the fit of the CA atoms; per cent of the all-atom frames",
+    "production": {
+     "423": 20.3,
+     "516": 79.5,
+     "553": 95.8,
+     "568": 84.7
+    },
+    "production_20_to_100_ns": {
+     "423": 19.0,
+     "516": 81.75,
+     "553": 95.875,
+     "568": 85.25
+    },
+    "n_frames_production": 1000,
+    "n_frames_20_to_100_ns": 800
+   },
+   "water_donating_to_N2": {
+    "what": "a water with O within 3.5 A of N2 and O-H...N2 at least 135 deg (no crystal position is used); per cent of the all-atom frames of the production",
+    "share_production": 94.39999999999999,
+    "mean_O_N2_of_the_donor_A": 2.8786013658200122,
+    "share_while_place_553_occupied": 96.97286012526096
+   },
+   "water_within_8_A_of_the_zinc": {
+    "mean_production_20_to_100_ns": 7.3725,
+    "mean_first_10_ns": 7.46
+   },
+   "by_state_of_the_solute_frame": {
+    "C": {
+     "n_all_atom_frames": 999,
+     "place_553_occupied_share": 95.7957957957958,
+     "water_in_the_place_of_the_crystal_ring_share": 2.002002002002002
+    },
+    "R": {
+     "n_all_atom_frames": 0,
+     "place_553_occupied_share": null,
+     "water_in_the_place_of_the_crystal_ring_share": null
+    },
+    "I": {
+     "n_all_atom_frames": 1,
+     "place_553_occupied_share": 100.0,
+     "water_in_the_place_of_the_crystal_ring_share": 0.0
+    }
+   }
+  },
+  {
+   "run": "bonded_2e/N2",
+   "n_all_atom_frames": 1020,
+   "n_production_frames": 1000,
+   "n_water_O": 12250,
+   "n_protein_O": 382,
+   "beside_the_two_programs": {
+    "analysis": {
+     "largest_difference": {
+      "d_Zn_Owater_min_A": 4.999867150967674e-05,
+      "d_Zn_Oprotein_min_A": 4.997541039442055e-05,
+      "d_Zn_Osulfonyl_min_full_A": 4.993513178774833e-05,
+      "d_water_ring_place_min_A": 4.9942388873347454e-05
+     },
+     "frames_classed_differently": {
+      "n_water_ring_place": 0,
+      "n_water_N1_3p5A": 0,
+      "n_water_ring_wide_3p5A": 0,
+      "fifth_any": 0,
+      "fifth_water": 0,
+      "fifth_proteinO": 0
+     }
+    },
+    "analysis_recheck": {
+     "largest_difference": {
+      "d_Zn_Owater_min_A": 5.323534437895461e-05,
+      "d_Zn_Oprotein_min_A": 5.130402824526925e-05,
+      "d_Zn_Osulfonyl_min_full_A": 4.993513178774833e-05,
+      "d_water_ring_place_min_A": 5.266448237462029e-05
+     },
+     "frames_classed_differently": {
+      "n_water_ring_place": 0,
+      "n_water_N1_3p5A": 0,
+      "n_water_ring_wide_3p5A": 0,
+      "fifth_any": 0,
+      "fifth_water": 0,
+      "fifth_proteinO": 0
+     }
+    }
+   },
+   "threshold": {
+    "what": "all-atom frames, equilibration and production, with a value within 0.001 A of a threshold (SPEC.md, section 14): the nearest water, protein or sulfonyl oxygen 2.6 A from the zinc; a water oxygen at the cut-off of n_water_ring_place (2.5 A), of n_water_N1_3p5A or of n_water_ring_wide_3p5A (3.5 A)",
+    "n_zinc_oxygen": 0,
+    "n_ring_place": 0,
+    "n_water_N1": 3,
+    "n_ring_wide": 9,
+    "n_frames_any": 12,
+    "n_frames_any_production": 11,
+    "n_frames_zinc_oxygen_or_ring_place": 0,
+    "n_frames_zinc_oxygen_or_ring_place_production": 0,
+    "nearest_margin_zinc_oxygen_A": 0.0056845658864737025
+   },
+   "crystal_water_places": {
+    "what": "a water oxygen within 1.4 A of the place of the crystal water after the fit of the CA atoms; per cent of the all-atom frames",
+    "production": {
+     "423": 28.999999999999996,
+     "516": 79.0,
+     "553": 94.39999999999999,
+     "568": 84.0
+    },
+    "production_20_to_100_ns": {
+     "423": 32.25,
+     "516": 78.0,
+     "553": 94.125,
+     "568": 83.625
+    },
+    "n_frames_production": 1000,
+    "n_frames_20_to_100_ns": 800
+   },
+   "water_donating_to_N2": {
+    "what": "a water with O within 3.5 A of N2 and O-H...N2 at least 135 deg (no crystal position is used); per cent of the all-atom frames of the production",
+    "share_production": 92.80000000000001,
+    "mean_O_N2_of_the_donor_A": 2.875770490210507,
+    "share_while_place_553_occupied": 96.08050847457628
+   },
+   "water_within_8_A_of_the_zinc": {
+    "mean_production_20_to_100_ns": 7.43125,
+    "mean_first_10_ns": 7.43
+   },
+   "by_state_of_the_solute_frame": {
+    "C": {
+     "n_all_atom_frames": 998,
+     "place_553_occupied_share": 94.38877755511022,
+     "water_in_the_place_of_the_crystal_ring_share": 3.306613226452906
+    },
+    "R": {
+     "n_all_atom_frames": 0,
+     "place_553_occupied_share": null,
+     "water_in_the_place_of_the_crystal_ring_share": null
+    },
+    "I": {
+     "n_all_atom_frames": 2,
+     "place_553_occupied_share": 100.0,
+     "water_in_the_place_of_the_crystal_ring_share": 0.0
+    }
+   }
+  },
+  {
+   "run": "bonded_2e/N3",
+   "n_all_atom_frames": 1020,
+   "n_production_frames": 1000,
+   "n_water_O": 12250,
+   "n_protein_O": 382,
+   "beside_the_two_programs": {
+    "analysis": {
+     "largest_difference": {
+      "d_Zn_Owater_min_A": 4.9973445546136475e-05,
+      "d_Zn_Oprotein_min_A": 4.9913997077322136e-05,
+      "d_Zn_Osulfonyl_min_full_A": 4.999745092337804e-05,
+      "d_water_ring_place_min_A": 4.979015377992724e-05
+     },
+     "frames_classed_differently": {
+      "n_water_ring_place": 0,
+      "n_water_N1_3p5A": 0,
+      "n_water_ring_wide_3p5A": 0,
+      "fifth_any": 0,
+      "fifth_water": 0,
+      "fifth_proteinO": 0
+     }
+    },
+    "analysis_recheck": {
+     "largest_difference": {
+      "d_Zn_Owater_min_A": 5.068327823654073e-05,
+      "d_Zn_Oprotein_min_A": 5.23356535850894e-05,
+      "d_Zn_Osulfonyl_min_full_A": 5.058646226396846e-05,
+      "d_water_ring_place_min_A": 5.3080111289460774e-05
+     },
+     "frames_classed_differently": {
+      "n_water_ring_place": 0,
+      "n_water_N1_3p5A": 0,
+      "n_water_ring_wide_3p5A": 0,
+      "fifth_any": 0,
+      "fifth_water": 0,
+      "fifth_proteinO": 0
+     }
+    }
+   },
+   "threshold": {
+    "what": "all-atom frames, equilibration and production, with a value within 0.001 A of a threshold (SPEC.md, section 14): the nearest water, protein or sulfonyl oxygen 2.6 A from the zinc; a water oxygen at the cut-off of n_water_ring_place (2.5 A), of n_water_N1_3p5A or of n_water_ring_wide_3p5A (3.5 A)",
+    "n_zinc_oxygen": 0,
+    "n_ring_place": 1,
+    "n_water_N1": 7,
+    "n_ring_wide": 10,
+    "n_frames_any": 18,
+    "n_frames_any_production": 18,
+    "n_frames_zinc_oxygen_or_ring_place": 1,
+    "n_frames_zinc_oxygen_or_ring_place_production": 1,
+    "nearest_margin_zinc_oxygen_A": 0.0038119662069187044
+   },
+   "crystal_water_places": {
+    "what": "a water oxygen within 1.4 A of the place of the crystal water after the fit of the CA atoms; per cent of the all-atom frames",
+    "production": {
+     "423": 24.2,
+     "516": 55.2,
+     "553": 86.8,
+     "568": 71.5
+    },
+    "production_20_to_100_ns": {
+     "423": 22.375,
+     "516": 50.375,
+     "553": 84.75,
+     "568": 69.625
+    },
+    "n_frames_production": 1000,
+    "n_frames_20_to_100_ns": 800
+   },
+   "water_donating_to_N2": {
+    "what": "a water with O within 3.5 A of N2 and O-H...N2 at least 135 deg (no crystal position is used); per cent of the all-atom frames of the production",
+    "share_production": 89.7,
+    "mean_O_N2_of_the_donor_A": 2.8869082419096292,
+    "share_while_place_553_occupied": 95.85253456221197
+   },
+   "water_within_8_A_of_the_zinc": {
+    "mean_production_20_to_100_ns": 6.67875,
+    "mean_first_10_ns": 7.34
+   },
+   "by_state_of_the_solute_frame": {
+    "C": {
+     "n_all_atom_frames": 997,
+     "place_553_occupied_share": 86.76028084252758,
+     "water_in_the_place_of_the_crystal_ring_share": 2.708124373119358
+    },
+    "R": {
+     "n_all_atom_frames": 0,
+     "place_553_occupied_share": null,
+     "water_in_the_place_of_the_crystal_ring_share": null
+    },
+    "I": {
+     "n_all_atom_frames": 3,
+     "place_553_occupied_share": 100.0,
+     "water_in_the_place_of_the_crystal_ring_share": 0.0
+    }
+   }
+  },
+  {
+   "run": "bonded_2e/R1",
+   "n_all_atom_frames": 1025,
+   "n_production_frames": 1000,
+   "n_water_O": 12232,
+   "n_protein_O": 382,
+   "beside_the_two_programs": {
+    "analysis": {
+     "largest_difference": {
+      "d_Zn_Owater_min_A": 4.998938626421534e-05,
+      "d_Zn_Oprotein_min_A": 4.999421569928941e-05,
+      "d_Zn_Osulfonyl_min_full_A": 4.999457291754439e-05,
+      "d_water_ring_place_min_A": 4.996147769809056e-05
+     },
+     "frames_classed_differently": {
+      "n_water_ring_place": 0,
+      "n_water_N1_3p5A": 0,
+      "n_water_ring_wide_3p5A": 0,
+      "fifth_any": 0,
+      "fifth_water": 0,
+      "fifth_proteinO": 0
+     }
+    },
+    "analysis_recheck": {
+     "largest_difference": {
+      "d_Zn_Owater_min_A": 5.185545012142967e-05,
+      "d_Zn_Oprotein_min_A": 5.348275983996231e-05,
+      "d_Zn_Osulfonyl_min_full_A": 5.167942121087066e-05,
+      "d_water_ring_place_min_A": 5.363632971944199e-05
+     },
+     "frames_classed_differently": {
+      "n_water_ring_place": 0,
+      "n_water_N1_3p5A": 0,
+      "n_water_ring_wide_3p5A": 0,
+      "fifth_any": 0,
+      "fifth_water": 0,
+      "fifth_proteinO": 0
+     }
+    }
+   },
+   "threshold": {
+    "what": "all-atom frames, equilibration and production, with a value within 0.001 A of a threshold (SPEC.md, section 14): the nearest water, protein or sulfonyl oxygen 2.6 A from the zinc; a water oxygen at the cut-off of n_water_ring_place (2.5 A), of n_water_N1_3p5A or of n_water_ring_wide_3p5A (3.5 A)",
+    "n_zinc_oxygen": 0,
+    "n_ring_place": 0,
+    "n_water_N1": 3,
+    "n_ring_wide": 6,
+    "n_frames_any": 9,
+    "n_frames_any_production": 9,
+    "n_frames_zinc_oxygen_or_ring_place": 0,
+    "n_frames_zinc_oxygen_or_ring_place_production": 0,
+    "nearest_margin_zinc_oxygen_A": 0.009729435019256272
+   },
+   "crystal_water_places": {
+    "what": "a water oxygen within 1.4 A of the place of the crystal water after the fit of the CA atoms; per cent of the all-atom frames",
+    "production": {
+     "423": 17.1,
+     "516": 10.6,
+     "553": 96.7,
+     "568": 86.5
+    },
+    "production_20_to_100_ns": {
+     "423": 14.625,
+     "516": 1.125,
+     "553": 97.375,
+     "568": 88.625
+    },
+    "n_frames_production": 1000,
+    "n_frames_20_to_100_ns": 800
+   },
+   "water_donating_to_N2": {
+    "what": "a water with O within 3.5 A of N2 and O-H...N2 at least 135 deg (no crystal position is used); per cent of the all-atom frames of the production",
+    "share_production": 95.89999999999999,
+    "mean_O_N2_of_the_donor_A": 2.8525360740867676,
+    "share_while_place_553_occupied": 98.13857290589452
+   },
+   "water_within_8_A_of_the_zinc": {
+    "mean_production_20_to_100_ns": 4.77625,
+    "mean_first_10_ns": 7.41
+   },
+   "by_state_of_the_solute_frame": {
+    "C": {
+     "n_all_atom_frames": 989,
+     "place_553_occupied_share": 96.8655207280081,
+     "water_in_the_place_of_the_crystal_ring_share": 1.5166835187057632
+    },
+    "R": {
+     "n_all_atom_frames": 0,
+     "place_553_occupied_share": null,
+     "water_in_the_place_of_the_crystal_ring_share": null
+    },
+    "I": {
+     "n_all_atom_frames": 11,
+     "place_553_occupied_share": 81.81818181818183,
+     "water_in_the_place_of_the_crystal_ring_share": 18.181818181818183
+    }
+   }
+  },
+  {
+   "run": "bonded_2e/R2",
+   "n_all_atom_frames": 1020,
+   "n_production_frames": 1000,
+   "n_water_O": 12232,
+   "n_protein_O": 382,
+   "beside_the_two_programs": {
+    "analysis": {
+     "largest_difference": {
+      "d_Zn_Owater_min_A": 4.9932039157152275e-05,
+      "d_Zn_Oprotein_min_A": 4.988907636604978e-05,
+      "d_Zn_Osulfonyl_min_full_A": 4.998040698245276e-05,
+      "d_water_ring_place_min_A": 4.992011262450191e-05
+     },
+     "frames_classed_differently": {
+      "n_water_ring_place": 0,
+      "n_water_N1_3p5A": 0,
+      "n_water_ring_wide_3p5A": 0,
+      "fifth_any": 0,
+      "fifth_water": 0,
+      "fifth_proteinO": 0
+     }
+    },
+    "analysis_recheck": {
+     "largest_difference": {
+      "d_Zn_Owater_min_A": 5.3696031828032176e-05,
+      "d_Zn_Oprotein_min_A": 4.988907636604978e-05,
+      "d_Zn_Osulfonyl_min_full_A": 5.359239101343505e-05,
+      "d_water_ring_place_min_A": 5.4511540552137916e-05
+     },
+     "frames_classed_differently": {
+      "n_water_ring_place": 0,
+      "n_water_N1_3p5A": 0,
+      "n_water_ring_wide_3p5A": 0,
+      "fifth_any": 0,
+      "fifth_water": 0,
+      "fifth_proteinO": 0
+     }
+    }
+   },
+   "threshold": {
+    "what": "all-atom frames, equilibration and production, with a value within 0.001 A of a threshold (SPEC.md, section 14): the nearest water, protein or sulfonyl oxygen 2.6 A from the zinc; a water oxygen at the cut-off of n_water_ring_place (2.5 A), of n_water_N1_3p5A or of n_water_ring_wide_3p5A (3.5 A)",
+    "n_zinc_oxygen": 0,
+    "n_ring_place": 0,
+    "n_water_N1": 5,
+    "n_ring_wide": 11,
+    "n_frames_any": 15,
+    "n_frames_any_production": 15,
+    "n_frames_zinc_oxygen_or_ring_place": 0,
+    "n_frames_zinc_oxygen_or_ring_place_production": 0,
+    "nearest_margin_zinc_oxygen_A": 0.004094293082760547
+   },
+   "crystal_water_places": {
+    "what": "a water oxygen within 1.4 A of the place of the crystal water after the fit of the CA atoms; per cent of the all-atom frames",
+    "production": {
+     "423": 14.799999999999999,
+     "516": 17.5,
+     "553": 93.2,
+     "568": 87.4
+    },
+    "production_20_to_100_ns": {
+     "423": 11.875,
+     "516": 6.625,
+     "553": 98.125,
+     "568": 93.0
+    },
+    "n_frames_production": 1000,
+    "n_frames_20_to_100_ns": 800
+   },
+   "water_donating_to_N2": {
+    "what": "a water with O within 3.5 A of N2 and O-H...N2 at least 135 deg (no crystal position is used); per cent of the all-atom frames of the production",
+    "share_production": 92.4,
+    "mean_O_N2_of_the_donor_A": 2.8765087627082484,
+    "share_while_place_553_occupied": 97.74678111587983
+   },
+   "water_within_8_A_of_the_zinc": {
+    "mean_production_20_to_100_ns": 5.3175,
+    "mean_first_10_ns": 7.5
+   },
+   "by_state_of_the_solute_frame": {
+    "C": {
+     "n_all_atom_frames": 1000,
+     "place_553_occupied_share": 93.2,
+     "water_in_the_place_of_the_crystal_ring_share": 1.7999999999999998
+    },
+    "R": {
+     "n_all_atom_frames": 0,
+     "place_553_occupied_share": null,
+     "water_in_the_place_of_the_crystal_ring_share": null
+    },
+    "I": {
+     "n_all_atom_frames": 0,
+     "place_553_occupied_share": null,
+     "water_in_the_place_of_the_crystal_ring_share": null
+    }
+   }
+  },
+  {
+   "run": "bonded_2e/R3",
+   "n_all_atom_frames": 1020,
+   "n_production_frames": 1000,
+   "n_water_O": 12232,
+   "n_protein_O": 382,
+   "beside_the_two_programs": {
+    "analysis": {
+     "largest_difference": {
+      "d_Zn_Owater_min_A": 4.9985939564400894e-05,
+      "d_Zn_Oprotein_min_A": 4.9929087547084805e-05,
+      "d_Zn_Osulfonyl_min_full_A": 4.998524052446385e-05,
+      "d_water_ring_place_min_A": 4.990623207712375e-05
+     },
+     "frames_classed_differently": {
+      "n_water_ring_place": 0,
+      "n_water_N1_3p5A": 0,
+      "n_water_ring_wide_3p5A": 0,
+      "fifth_any": 0,
+      "fifth_water": 0,
+      "fifth_proteinO": 0
+     }
+    },
+    "analysis_recheck": {
+     "largest_difference": {
+      "d_Zn_Owater_min_A": 5.3921052571848094e-05,
+      "d_Zn_Oprotein_min_A": 5.5764412060455015e-05,
+      "d_Zn_Osulfonyl_min_full_A": 5.486518932684703e-05,
+      "d_water_ring_place_min_A": 5.974917771656152e-05
+     },
+     "frames_classed_differently": {
+      "n_water_ring_place": 0,
+      "n_water_N1_3p5A": 0,
+      "n_water_ring_wide_3p5A": 0,
+      "fifth_any": 0,
+      "fifth_water": 0,
+      "fifth_proteinO": 0
+     }
+    }
+   },
+   "threshold": {
+    "what": "all-atom frames, equilibration and production, with a value within 0.001 A of a threshold (SPEC.md, section 14): the nearest water, protein or sulfonyl oxygen 2.6 A from the zinc; a water oxygen at the cut-off of n_water_ring_place (2.5 A), of n_water_N1_3p5A or of n_water_ring_wide_3p5A (3.5 A)",
+    "n_zinc_oxygen": 0,
+    "n_ring_place": 0,
+    "n_water_N1": 10,
+    "n_ring_wide": 11,
+    "n_frames_any": 21,
+    "n_frames_any_production": 20,
+    "n_frames_zinc_oxygen_or_ring_place": 0,
+    "n_frames_zinc_oxygen_or_ring_place_production": 0,
+    "nearest_margin_zinc_oxygen_A": 0.005262019882652069
+   },
+   "crystal_water_places": {
+    "what": "a water oxygen within 1.4 A of the place of the crystal water after the fit of the CA atoms; per cent of the all-atom frames",
+    "production": {
+     "423": 12.4,
+     "516": 21.4,
+     "553": 96.89999999999999,
+     "568": 88.2
+    },
+    "production_20_to_100_ns": {
+     "423": 10.5,
+     "516": 8.25,
+     "553": 97.625,
+     "568": 90.625
+    },
+    "n_frames_production": 1000,
+    "n_frames_20_to_100_ns": 800
+   },
+   "water_donating_to_N2": {
+    "what": "a water with O within 3.5 A of N2 and O-H...N2 at least 135 deg (no crystal position is used); per cent of the all-atom frames of the production",
+    "share_production": 96.39999999999999,
+    "mean_O_N2_of_the_donor_A": 2.8656081227649097,
+    "share_while_place_553_occupied": 98.24561403508771
+   },
+   "water_within_8_A_of_the_zinc": {
+    "mean_production_20_to_100_ns": 5.06,
+    "mean_first_10_ns": 7.09
+   },
+   "by_state_of_the_solute_frame": {
+    "C": {
+     "n_all_atom_frames": 997,
+     "place_553_occupied_share": 96.99097291875627,
+     "water_in_the_place_of_the_crystal_ring_share": 1.2036108324974923
+    },
+    "R": {
+     "n_all_atom_frames": 0,
+     "place_553_occupied_share": null,
+     "water_in_the_place_of_the_crystal_ring_share": null
+    },
+    "I": {
+     "n_all_atom_frames": 3,
+     "place_553_occupied_share": 66.66666666666666,
+     "water_in_the_place_of_the_crystal_ring_share": 0.0
+    }
+   }
+  },
+  {
+   "run": "bonded_2s/R1",
+   "n_all_atom_frames": 1020,
+   "n_production_frames": 1000,
+   "n_water_O": 12232,
+   "n_protein_O": 382,
+   "beside_the_two_programs": {
+    "analysis": {
+     "largest_difference": {
+      "d_Zn_Owater_min_A": 4.994619107634435e-05,
+      "d_Zn_Oprotein_min_A": 4.995774319116464e-05,
+      "d_Zn_Osulfonyl_min_full_A": 4.998041451953483e-05,
+      "d_water_ring_place_min_A": 4.996338316010096e-05
+     },
+     "frames_classed_differently": {
+      "n_water_ring_place": 0,
+      "n_water_N1_3p5A": 0,
+      "n_water_ring_wide_3p5A": 0,
+      "fifth_any": 0,
+      "fifth_water": 0,
+      "fifth_proteinO": 0
+     }
+    },
+    "analysis_recheck": {
+     "largest_difference": {
+      "d_Zn_Owater_min_A": 5.1903978716794086e-05,
+      "d_Zn_Oprotein_min_A": 5.287015630450753e-05,
+      "d_Zn_Osulfonyl_min_full_A": 5.3162437240850124e-05,
+      "d_water_ring_place_min_A": 5.256247215612575e-05
+     },
+     "frames_classed_differently": {
+      "n_water_ring_place": 0,
+      "n_water_N1_3p5A": 0,
+      "n_water_ring_wide_3p5A": 0,
+      "fifth_any": 0,
+      "fifth_water": 0,
+      "fifth_proteinO": 0
+     }
+    }
+   },
+   "threshold": {
+    "what": "all-atom frames, equilibration and production, with a value within 0.001 A of a threshold (SPEC.md, section 14): the nearest water, protein or sulfonyl oxygen 2.6 A from the zinc; a water oxygen at the cut-off of n_water_ring_place (2.5 A), of n_water_N1_3p5A or of n_water_ring_wide_3p5A (3.5 A)",
+    "n_zinc_oxygen": 2,
+    "n_ring_place": 1,
+    "n_water_N1": 9,
+    "n_ring_wide": 8,
+    "n_frames_any": 20,
+    "n_frames_any_production": 20,
+    "n_frames_zinc_oxygen_or_ring_place": 3,
+    "n_frames_zinc_oxygen_or_ring_place_production": 3,
+    "nearest_margin_zinc_oxygen_A": 0.00011650263589224608
+   },
+   "crystal_water_places": {
+    "what": "a water oxygen within 1.4 A of the place of the crystal water after the fit of the CA atoms; per cent of the all-atom frames",
+    "production": {
+     "423": 41.4,
+     "516": 49.9,
+     "553": 78.3,
+     "568": 65.4
+    },
+    "production_20_to_100_ns": {
+     "423": 43.125,
+     "516": 48.25,
+     "553": 75.5,
+     "568": 62.125
+    },
+    "n_frames_production": 1000,
+    "n_frames_20_to_100_ns": 800
+   },
+   "water_donating_to_N2": {
+    "what": "a water with O within 3.5 A of N2 and O-H...N2 at least 135 deg (no crystal position is used); per cent of the all-atom frames of the production",
+    "share_production": 80.4,
+    "mean_O_N2_of_the_donor_A": 2.9010644421037814,
+    "share_while_place_553_occupied": 97.57343550446998
+   },
+   "water_within_8_A_of_the_zinc": {
+    "mean_production_20_to_100_ns": 6.85375,
+    "mean_first_10_ns": 7.38
+   },
+   "by_state_of_the_solute_frame": {
+    "C": {
+     "n_all_atom_frames": 986,
+     "place_553_occupied_share": 78.90466531440163,
+     "water_in_the_place_of_the_crystal_ring_share": 10.953346855983773
+    },
+    "R": {
+     "n_all_atom_frames": 0,
+     "place_553_occupied_share": null,
+     "water_in_the_place_of_the_crystal_ring_share": null
+    },
+    "I": {
+     "n_all_atom_frames": 14,
+     "place_553_occupied_share": 35.714285714285715,
+     "water_in_the_place_of_the_crystal_ring_share": 57.14285714285714
+    }
+   }
+  },
+  {
+   "run": "bonded_2e_n2fit/R1",
+   "n_all_atom_frames": 1020,
+   "n_production_frames": 1000,
+   "n_water_O": 12232,
+   "n_protein_O": 382,
+   "beside_the_two_programs": {
+    "analysis": {
+     "largest_difference": {
+      "d_Zn_Owater_min_A": 4.994962332904862e-05,
+      "d_Zn_Oprotein_min_A": 4.998443171011502e-05,
+      "d_Zn_Osulfonyl_min_full_A": 4.9973578073458924e-05,
+      "d_water_ring_place_min_A": 4.995844727684329e-05
+     },
+     "frames_classed_differently": {
+      "n_water_ring_place": 0,
+      "n_water_N1_3p5A": 0,
+      "n_water_ring_wide_3p5A": 0,
+      "fifth_any": 0,
+      "fifth_water": 0,
+      "fifth_proteinO": 0
+     }
+    },
+    "analysis_recheck": {
+     "largest_difference": {
+      "d_Zn_Owater_min_A": 5.317432997609117e-05,
+      "d_Zn_Oprotein_min_A": 5.708400962722848e-05,
+      "d_Zn_Osulfonyl_min_full_A": 5.413049040603468e-05,
+      "d_water_ring_place_min_A": 5.136528947868868e-05
+     },
+     "frames_classed_differently": {
+      "n_water_ring_place": 0,
+      "n_water_N1_3p5A": 0,
+      "n_water_ring_wide_3p5A": 0,
+      "fifth_any": 0,
+      "fifth_water": 0,
+      "fifth_proteinO": 0
+     }
+    }
+   },
+   "threshold": {
+    "what": "all-atom frames, equilibration and production, with a value within 0.001 A of a threshold (SPEC.md, section 14): the nearest water, protein or sulfonyl oxygen 2.6 A from the zinc; a water oxygen at the cut-off of n_water_ring_place (2.5 A), of n_water_N1_3p5A or of n_water_ring_wide_3p5A (3.5 A)",
+    "n_zinc_oxygen": 0,
+    "n_ring_place": 2,
+    "n_water_N1": 6,
+    "n_ring_wide": 8,
+    "n_frames_any": 16,
+    "n_frames_any_production": 16,
+    "n_frames_zinc_oxygen_or_ring_place": 2,
+    "n_frames_zinc_oxygen_or_ring_place_production": 2,
+    "nearest_margin_zinc_oxygen_A": 0.0010986553031675506
+   },
+   "crystal_water_places": {
+    "what": "a water oxygen within 1.4 A of the place of the crystal water after the fit of the CA atoms; per cent of the all-atom frames",
+    "production": {
+     "423": 32.300000000000004,
+     "516": 70.89999999999999,
+     "553": 49.5,
+     "568": 46.0
+    },
+    "production_20_to_100_ns": {
+     "423": 33.125,
+     "516": 70.75,
+     "553": 48.125,
+     "568": 43.375
+    },
+    "n_frames_production": 1000,
+    "n_frames_20_to_100_ns": 800
+   },
+   "water_donating_to_N2": {
+    "what": "a water with O within 3.5 A of N2 and O-H...N2 at least 135 deg (no crystal position is used); per cent of the all-atom frames of the production",
+    "share_production": 52.300000000000004,
+    "mean_O_N2_of_the_donor_A": 2.9096121522605385,
+    "share_while_place_553_occupied": 94.34343434343434
+   },
+   "water_within_8_A_of_the_zinc": {
+    "mean_production_20_to_100_ns": 6.77125,
+    "mean_first_10_ns": 6.54
+   },
+   "by_state_of_the_solute_frame": {
+    "C": {
+     "n_all_atom_frames": 864,
+     "place_553_occupied_share": 57.291666666666664,
+     "water_in_the_place_of_the_crystal_ring_share": 17.59259259259259
+    },
+    "R": {
+     "n_all_atom_frames": 47,
+     "place_553_occupied_share": 0.0,
+     "water_in_the_place_of_the_crystal_ring_share": 70.2127659574468
+    },
+    "I": {
+     "n_all_atom_frames": 89,
+     "place_553_occupied_share": 0.0,
+     "water_in_the_place_of_the_crystal_ring_share": 60.67415730337079
+    }
+   }
+  },
+  {
+   "run": "bonded_2e/X0",
+   "n_all_atom_frames": 70,
+   "n_production_frames": 50,
+   "n_water_O": 12247,
+   "n_protein_O": 382,
+   "beside_the_two_programs": {
+    "analysis": {
+     "largest_difference": {
+      "d_Zn_Owater_min_A": 4.9645238600515285e-05,
+      "d_Zn_Oprotein_min_A": 4.949495326211917e-05,
+      "d_Zn_Osulfonyl_min_full_A": 4.941807981806434e-05,
+      "d_water_ring_place_min_A": 4.984971068644484e-05
+     },
+     "frames_classed_differently": {
+      "n_water_ring_place": 0,
+      "n_water_N1_3p5A": 0,
+      "n_water_ring_wide_3p5A": 0,
+      "fifth_any": 0,
+      "fifth_water": 0,
+      "fifth_proteinO": 0
+     }
+    },
+    "analysis_recheck": {
+     "largest_difference": {
+      "d_Zn_Owater_min_A": 4.9645238600515285e-05,
+      "d_Zn_Oprotein_min_A": 4.949495326211917e-05,
+      "d_Zn_Osulfonyl_min_full_A": 4.941807981806434e-05,
+      "d_water_ring_place_min_A": 4.984971068644484e-05
+     },
+     "frames_classed_differently": {
+      "n_water_ring_place": 0,
+      "n_water_N1_3p5A": 0,
+      "n_water_ring_wide_3p5A": 0,
+      "fifth_any": 0,
+      "fifth_water": 0,
+      "fifth_proteinO": 0
+     }
+    }
+   },
+   "threshold": {
+    "what": "all-atom frames, equilibration and production, with a value within 0.001 A of a threshold (SPEC.md, section 14): the nearest water, protein or sulfonyl oxygen 2.6 A from the zinc; a water oxygen at the cut-off of n_water_ring_place (2.5 A), of n_water_N1_3p5A or of n_water_ring_wide_3p5A (3.5 A)",
+    "n_zinc_oxygen": 0,
+    "n_ring_place": 0,
+    "n_water_N1": 1,
+    "n_ring_wide": 0,
+    "n_frames_any": 1,
+    "n_frames_any_production": 0,
+    "n_frames_zinc_oxygen_or_ring_place": 0,
+    "n_frames_zinc_oxygen_or_ring_place_production": 0,
+    "nearest_margin_zinc_oxygen_A": 0.09322319027981774
+   }
+  },
+  {
+   "run": "bonded_2s/X0",
+   "n_all_atom_frames": 70,
+   "n_production_frames": 50,
+   "n_water_O": 12247,
+   "n_protein_O": 382,
+   "beside_the_two_programs": {
+    "analysis": {
+     "largest_difference": {
+      "d_Zn_Owater_min_A": 4.9826377570116875e-05,
+      "d_Zn_Oprotein_min_A": 4.958414187505866e-05,
+      "d_Zn_Osulfonyl_min_full_A": 4.977845773135314e-05,
+      "d_water_ring_place_min_A": 4.980114190056284e-05
+     },
+     "frames_classed_differently": {
+      "n_water_ring_place": 0,
+      "n_water_N1_3p5A": 0,
+      "n_water_ring_wide_3p5A": 0,
+      "fifth_any": 0,
+      "fifth_water": 0,
+      "fifth_proteinO": 0
+     }
+    },
+    "analysis_recheck": {
+     "largest_difference": {
+      "d_Zn_Owater_min_A": 5.0370516123887654e-05,
+      "d_Zn_Oprotein_min_A": 4.958414187505866e-05,
+      "d_Zn_Osulfonyl_min_full_A": 4.977845773135314e-05,
+      "d_water_ring_place_min_A": 4.980114190056284e-05
+     },
+     "frames_classed_differently": {
+      "n_water_ring_place": 0,
+      "n_water_N1_3p5A": 0,
+      "n_water_ring_wide_3p5A": 0,
+      "fifth_any": 0,
+      "fifth_water": 0,
+      "fifth_proteinO": 0
+     }
+    }
+   },
+   "threshold": {
+    "what": "all-atom frames, equilibration and production, with a value within 0.001 A of a threshold (SPEC.md, section 14): the nearest water, protein or sulfonyl oxygen 2.6 A from the zinc; a water oxygen at the cut-off of n_water_ring_place (2.5 A), of n_water_N1_3p5A or of n_water_ring_wide_3p5A (3.5 A)",
+    "n_zinc_oxygen": 0,
+    "n_ring_place": 0,
+    "n_water_N1": 1,
+    "n_ring_wide": 0,
+    "n_frames_any": 1,
+    "n_frames_any_production": 1,
+    "n_frames_zinc_oxygen_or_ring_place": 0,
+    "n_frames_zinc_oxygen_or_ring_place_production": 0,
+    "nearest_margin_zinc_oxygen_A": 0.004646780828496233
+   }
+  }
+ ]
+}

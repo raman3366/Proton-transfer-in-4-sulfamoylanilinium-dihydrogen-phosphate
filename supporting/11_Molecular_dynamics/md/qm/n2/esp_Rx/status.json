@@ -1,0 +1,90 @@
+{
+ "jobs": {
+  "esp": {
+   "state": "done",
+   "started": "2026-10-06 11:51:49 UTC",
+   "n_points": 19279,
+   "density_per_A2": 6.0,
+   "layers": [
+    1.4,
+    1.6,
+    1.8,
+    2.0
+   ],
+   "radii": {
+    "C": 1.5,
+    "H": 1.2,
+    "N": 1.5,
+    "O": 1.4,
+    "S": 1.75,
+    "Zn": 1.456
+   },
+   "grid_scf": 2,
+   "grid_final": [
+    99,
+    590
+   ],
+   "natm": 101,
+   "nao": 898,
+   "scf_first": {
+    "e_tot": -4791.9997493707815,
+    "seconds": 835.1,
+    "second_order_solver": false
+   },
+   "scf_final": {
+    "e_tot": -4791.999763107593,
+    "seconds": 298.1,
+    "second_order_solver": false
+   },
+   "finished": "2026-10-06 12:11:22 UTC",
+   "e_tot": -4791.999763107593,
+   "esp_seconds": 39.3,
+   "esp_min": -0.02203970388885068,
+   "esp_max": 0.16882109235336884,
+   "check_rinv_max_abs_difference": 7.815970093361102e-14,
+   "dipole_au": [
+    24.988719792600023,
+    -9.542101961673325,
+    24.997267214019303
+   ],
+   "unrestrained_fit": {
+    "rrms": 0.016940062101137788,
+    "zinc_charge": 0.5565877965771685,
+    "sum": 0.9999999999999979
+   },
+   "grid_points_final": 3233400
+  },
+  "write": {
+   "state": "done",
+   "finished": "2026-10-06 12:11:24 UTC",
+   "mk_log": {
+    "file": "/root/workspace/cqc-4-sulfamoylanilinium-dihydrogen-phosphate/md/qm/n2/esp_Rx/in/CA2_large_mk.log",
+    "sha256": "366ea8fc92f8aed982aaccae510671a8678b925e0130bbc34288df49c9a9fba1",
+    "n_points": 19279
+   }
+  }
+ },
+ "pid": 117986,
+ "host": "cqc-md-gpu-01",
+ "config": "/root/workspace/cqc-4-sulfamoylanilinium-dihydrogen-phosphate/md/qm/n2/esp_Rx/config.json",
+ "config_sha256": "e6727c134c9e1b9ff8e0ea126dda1fda2f9836bd5fcd179d532cc145734a92d8",
+ "started": "2026-10-06 11:51:49 UTC",
+ "last_start": "2026-10-06 11:51:49 UTC",
+ "versions": {
+  "pyscf": "2.14.0",
+  "numpy": "2.4.6",
+  "scipy": "1.17.1",
+  "geometric": "1.1.1",
+  "threads": 16,
+  "omp_num_threads_env": "16"
+ },
+ "functional": "libxc 402 HYB_GGA_XC_B3LYP (VWN-RPA), the B3LYP of Gaussian",
+ "jobs_requested": [
+  "esp",
+  "write"
+ ],
+ "state": "finished",
+ "updated": "2026-10-06 12:11:24 UTC",
+ "current_job": null,
+ "finished": "2026-10-06 12:11:24 UTC"
+}

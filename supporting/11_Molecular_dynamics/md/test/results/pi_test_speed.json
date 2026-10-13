@@ -1,0 +1,418 @@
+{
+ "note": "TEST OF THE PIPELINE with the restrained-zinc model (nonbonded Zn2+, four Zn-N distance restraints); NOT a result for the paper",
+ "written": "6 Oct 2026, 8:39:21 AM IST",
+ "runs_dir": "/root/cqc-sfa-md/runs_test",
+ "units": "wall_s and cpu_s in seconds; cores = processor seconds per second of wall time; ns_per_day",
+ "software": {
+  "python": "3.12.14",
+  "numpy": "2.5.3",
+  "machine": "aarch64",
+  "host": "arya",
+  "openmm": "8.6.1",
+  "MDAnalysis": "2.10.0"
+ },
+ "script_sha256": "598fd750c651ad16b78c2726f1dc61231e083de7be459b7baae39b608b403ed4",
+ "runs": {
+  "X1": {
+   "run_dir": "/root/cqc-sfa-md/runs_test/restrained/X1",
+   "n_atoms": 40902,
+   "steps": [
+    {
+     "step": "min",
+     "started_ist": "6 Oct 2026, 1:04:33 AM IST",
+     "ended_ist": "6 Oct 2026, 1:32:09 AM IST",
+     "wall_s_record": 1653.34,
+     "wall_s_start_to_end_of_step": 1656,
+     "pid": 4149915,
+     "threads": "2",
+     "platform": "CPU",
+     "process_cpu_s": 1610.7,
+     "cores_received": 0.973,
+     "kind": "minimisation",
+     "lbfgs_iterations": 4636,
+     "lbfgs_iterations_per_pass": [
+      1005,
+      3619,
+      6,
+      6
+     ],
+     "s_per_iteration": 0.3566,
+     "cpu_s_per_iteration": 0.3474
+    },
+    {
+     "step": "eq01",
+     "started_ist": "6 Oct 2026, 1:32:09 AM IST",
+     "ended_ist": "6 Oct 2026, 1:44:36 AM IST",
+     "wall_s_record": 743.88,
+     "wall_s_start_to_end_of_step": 747,
+     "pid": 4149915,
+     "threads": "2",
+     "platform": "CPU",
+     "process_cpu_s": 747.5,
+     "cores_received": 1.001,
+     "machine_busy_cores": 3.984,
+     "machine_idle_cores": 0.011,
+     "cores_used_by_everything_else": 2.983,
+     "load_average_1min_mean": 8.96,
+     "kind": "equilibration",
+     "timestep_fs": 2.0,
+     "n_steps": 2500,
+     "steps_per_s": 3.3608,
+     "ns_per_day": 0.58,
+     "ensemble": "NVT",
+     "n_restrained_atoms": 2074,
+     "steps_per_cpu_s": 3.3445
+    },
+    {
+     "step": "eq02",
+     "started_ist": "6 Oct 2026, 1:44:37 AM IST",
+     "ended_ist": "6 Oct 2026, 2:37:43 AM IST",
+     "wall_s_record": 3183.15,
+     "wall_s_start_to_end_of_step": 3186,
+     "pid": 4149915,
+     "threads": "2",
+     "platform": "CPU",
+     "process_cpu_s": 2821.3,
+     "cores_received": 0.886,
+     "machine_busy_cores": 3.998,
+     "machine_idle_cores": 0.002,
+     "cores_used_by_everything_else": 3.112,
+     "load_average_1min_mean": 9.78,
+     "kind": "equilibration",
+     "timestep_fs": 2.0,
+     "n_steps": 7500,
+     "steps_per_s": 2.3562,
+     "ns_per_day": 0.41,
+     "ensemble": "NPT",
+     "n_restrained_atoms": 2074,
+     "steps_per_cpu_s": 2.6583
+    },
+    {
+     "step": "eq03",
+     "started_ist": "6 Oct 2026, 2:37:43 AM IST",
+     "ended_ist": "6 Oct 2026, 3:36:00 AM IST",
+     "wall_s_record": 3492.88,
+     "wall_s_start_to_end_of_step": 3497,
+     "pid": 4149915,
+     "threads": "2",
+     "platform": "CPU",
+     "process_cpu_s": 2990.3,
+     "cores_received": 0.855,
+     "machine_busy_cores": 3.996,
+     "machine_idle_cores": 0.003,
+     "cores_used_by_everything_else": 3.141,
+     "load_average_1min_mean": 9.59,
+     "kind": "equilibration",
+     "timestep_fs": 2.0,
+     "n_steps": 7500,
+     "steps_per_s": 2.1472,
+     "ns_per_day": 0.37,
+     "ensemble": "NPT",
+     "n_restrained_atoms": 2074,
+     "steps_per_cpu_s": 2.5081
+    },
+    {
+     "step": "eq04",
+     "started_ist": "6 Oct 2026, 3:36:00 AM IST",
+     "ended_ist": "6 Oct 2026, 4:22:42 AM IST",
+     "wall_s_record": 2798.07,
+     "wall_s_start_to_end_of_step": 2802,
+     "pid": 4149915,
+     "threads": "2",
+     "platform": "CPU",
+     "process_cpu_s": 2192.4,
+     "cores_received": 0.782,
+     "machine_busy_cores": 3.999,
+     "machine_idle_cores": 0.001,
+     "cores_used_by_everything_else": 3.217,
+     "load_average_1min_mean": 11.5,
+     "kind": "equilibration",
+     "timestep_fs": 4.0,
+     "n_steps": 5000,
+     "steps_per_s": 1.7869,
+     "ns_per_day": 0.62,
+     "ensemble": "NPT",
+     "n_restrained_atoms": 1034,
+     "steps_per_cpu_s": 2.2806
+    },
+    {
+     "step": "eq05",
+     "started_ist": "6 Oct 2026, 4:22:42 AM IST",
+     "ended_ist": "6 Oct 2026, 5:10:03 AM IST",
+     "wall_s_record": 2837.68,
+     "wall_s_start_to_end_of_step": 2841,
+     "pid": 4149915,
+     "threads": "2",
+     "platform": "CPU",
+     "process_cpu_s": 2214.6,
+     "cores_received": 0.78,
+     "machine_busy_cores": 3.999,
+     "machine_idle_cores": 0.001,
+     "cores_used_by_everything_else": 3.219,
+     "load_average_1min_mean": 10.41,
+     "kind": "equilibration",
+     "timestep_fs": 4.0,
+     "n_steps": 5000,
+     "steps_per_s": 1.762,
+     "ns_per_day": 0.61,
+     "ensemble": "NPT",
+     "n_restrained_atoms": 1034,
+     "steps_per_cpu_s": 2.2577
+    },
+    {
+     "step": "eq06",
+     "started_ist": "6 Oct 2026, 5:10:03 AM IST",
+     "ended_ist": "6 Oct 2026, 6:08:38 AM IST",
+     "wall_s_record": 3511.8,
+     "wall_s_start_to_end_of_step": 3515,
+     "pid": 4149915,
+     "threads": "2",
+     "platform": "CPU",
+     "process_cpu_s": 2666.5,
+     "cores_received": 0.759,
+     "machine_busy_cores": 3.998,
+     "machine_idle_cores": 0.001,
+     "cores_used_by_everything_else": 3.239,
+     "load_average_1min_mean": 11.95,
+     "kind": "equilibration",
+     "timestep_fs": 4.0,
+     "n_steps": 6250,
+     "steps_per_s": 1.7797,
+     "ns_per_day": 0.62,
+     "ensemble": "NPT",
+     "n_restrained_atoms": 0,
+     "steps_per_cpu_s": 2.3439
+    }
+   ],
+   "cut_off_step": {
+    "step": "seg0001",
+    "kind": "production (cut off; from its state log)",
+    "timestep_fs": 4.0,
+    "n_steps": 12500,
+    "n_steps_planned": 25000,
+    "wall_s_to_the_last_row": 6085.0,
+    "steps_per_s": 2.0544,
+    "ns_per_day": 0.71,
+    "threads": "2",
+    "wall_time_source": "cumulative speed column of the log (two decimals): each wall time is good to about 1 %",
+    "rows": [
+     {
+      "to_time_ps": 10.0,
+      "wall_s": 1290.0,
+      "steps_per_s": 1.939,
+      "ns_per_day": 0.67,
+      "cores_received": 0.789,
+      "cores_used_by_everything_else": 3.21,
+      "load_average_1min_mean": 10.72
+     },
+     {
+      "to_time_ps": 20.0,
+      "wall_s": 1453.0,
+      "steps_per_s": 1.72,
+      "ns_per_day": 0.595,
+      "cores_received": 0.742,
+      "cores_used_by_everything_else": 3.258,
+      "load_average_1min_mean": 13.05
+     },
+     {
+      "to_time_ps": 30.0,
+      "wall_s": 1126.0,
+      "steps_per_s": 2.221,
+      "ns_per_day": 0.767,
+      "cores_received": 0.906,
+      "cores_used_by_everything_else": 3.092,
+      "load_average_1min_mean": 10.66
+     },
+     {
+      "to_time_ps": 40.0,
+      "wall_s": 1068.0,
+      "steps_per_s": 2.34,
+      "ns_per_day": 0.809,
+      "cores_received": 0.946,
+      "cores_used_by_everything_else": 3.04,
+      "load_average_1min_mean": 9.11
+     },
+     {
+      "to_time_ps": 50.0,
+      "wall_s": 1147.0,
+      "steps_per_s": 2.179,
+      "ns_per_day": 0.753,
+      "cores_received": 0.942,
+      "cores_used_by_everything_else": 3.056,
+      "load_average_1min_mean": 9.22
+     }
+    ],
+    "process_cpu_s": 5207.2,
+    "cores_received": 0.856,
+    "steps_per_cpu_s": 2.4005
+   },
+   "summary": {},
+   "invocations": [
+    {
+     "pid": 4149915,
+     "started_ist": "6 Oct 2026, 1:04:32 AM IST",
+     "exit_code": null,
+     "outcome": null
+    }
+   ]
+  }
+ },
+ "pooled_over_md_steps_by_timestep_fs": {
+  "2.0": {
+   "n_steps": 17500,
+   "wall_s": 7419.9,
+   "process_cpu_s": 6559.1,
+   "steps_per_s": 2.3585,
+   "steps_per_cpu_s": 2.668,
+   "cores_received": 0.884
+  },
+  "4.0": {
+   "n_steps": 28750,
+   "wall_s": 15232.1,
+   "process_cpu_s": 12280.7,
+   "steps_per_s": 1.8875,
+   "steps_per_cpu_s": 2.3411,
+   "cores_received": 0.806
+  }
+ },
+ "barostat_volume_changes_in_the_dense_output_test_of_TOPOLOGY": {
+  "file": "/root/workspace/cqc-4-sulfamoylanilinium-dihydrogen-phosphate/md/test/results/N_min300_of_TOPOLOGY_log.csv",
+  "sha256": "c52ada783b575cf96d06d41b9f404816d87569436ea0857ebcb5ca05aba899d1",
+  "note": "start N, restrained model, state log every 0.1 ps: one barostat attempt per row in the 4 fs steps (eq04 on), two in the 2 fs steps; not a run of this test",
+  "by_step": {
+   "eq01": {
+    "log_interval_ps": 0.1,
+    "intervals": 1,
+    "intervals_with_a_volume_change": 0,
+    "relative_volume_changes_percent": []
+   },
+   "eq02": {
+    "log_interval_ps": 0.1,
+    "intervals": 5,
+    "intervals_with_a_volume_change": 4,
+    "relative_volume_changes_percent": [
+     -0.191,
+     -0.491,
+     -0.611,
+     -0.741
+    ]
+   },
+   "eq03": {
+    "log_interval_ps": 0.1,
+    "intervals": 5,
+    "intervals_with_a_volume_change": 2,
+    "relative_volume_changes_percent": [
+     -0.52,
+     -0.523
+    ]
+   },
+   "eq04": {
+    "log_interval_ps": 0.1,
+    "intervals": 7,
+    "intervals_with_a_volume_change": 2,
+    "relative_volume_changes_percent": [
+     -0.758,
+     -0.294
+    ]
+   },
+   "eq05": {
+    "log_interval_ps": 0.1,
+    "intervals": 7,
+    "intervals_with_a_volume_change": 3,
+    "relative_volume_changes_percent": [
+     -0.956,
+     -0.497,
+     -0.626
+    ]
+   },
+   "eq06": {
+    "log_interval_ps": 0.1,
+    "intervals": 9,
+    "intervals_with_a_volume_change": 1,
+    "relative_volume_changes_percent": [
+     -0.274
+    ]
+   },
+   "seg0001": {
+    "log_interval_ps": 0.1,
+    "intervals": 9,
+    "intervals_with_a_volume_change": 2,
+    "relative_volume_changes_percent": [
+     -0.041,
+     -0.644
+    ]
+   },
+   "seg0002": {
+    "log_interval_ps": 0.1,
+    "intervals": 9,
+    "intervals_with_a_volume_change": 0,
+    "relative_volume_changes_percent": []
+   }
+  }
+ },
+ "benchmarks": [],
+ "estimate_validation_run_on_the_pi": {
+  "basis": "steps per second of processor time measured here with 2 threads, pooled over all MD steps of the test runs; the time for another load is steps / (that rate x cores received). ESTIMATE, not measured.",
+  "steps_per_cpu_s_measured_2_threads": 2.4549,
+  "equilibration_steps_of_the_plan": 675000,
+  "validation_steps_5_ns": 1250000,
+  "minimisation_cpu_s_measured_mean": 1610.7,
+  "scenarios": [
+   {
+    "scenario": "4 threads, nothing else running: 4 cores, threading as efficient as with 2 threads (upper bound)",
+    "cores_received": 4.0,
+    "threading_factor": 1.0,
+    "steps_per_s": 9.82,
+    "ns_per_day_at_4_fs": 3.39,
+    "equilibration_2_ns_hours": 19.1,
+    "validation_5_ns_hours": 35.4,
+    "minimisation_hours": 0.11,
+    "all_three_days": 2.27
+   },
+   {
+    "scenario": "4 threads, nothing else running: 4 cores, 15 % lost to threading (assumed)",
+    "cores_received": 4.0,
+    "threading_factor": 0.85,
+    "steps_per_s": 8.347,
+    "ns_per_day_at_4_fs": 2.88,
+    "equilibration_2_ns_hours": 22.5,
+    "validation_5_ns_hours": 41.6,
+    "minimisation_hours": 0.13,
+    "all_three_days": 2.67
+   },
+   {
+    "scenario": "2 threads beside a 4-thread quantum-chemical job, two cores for each job (the scheduler's even split between the two jobs)",
+    "cores_received": 2.0,
+    "threading_factor": 1.0,
+    "steps_per_s": 4.91,
+    "ns_per_day_at_4_fs": 1.7,
+    "equilibration_2_ns_hours": 38.2,
+    "validation_5_ns_hours": 70.7,
+    "minimisation_hours": 0.22,
+    "all_three_days": 4.55
+   },
+   {
+    "scenario": "2 threads beside a 4-thread quantum-chemical job, cores shared evenly per thread (2 of 6 threads on 4 cores)",
+    "cores_received": 1.333,
+    "threading_factor": 1.0,
+    "steps_per_s": 3.273,
+    "ns_per_day_at_4_fs": 1.13,
+    "equilibration_2_ns_hours": 57.3,
+    "validation_5_ns_hours": 106.1,
+    "minimisation_hours": 0.34,
+    "all_three_days": 6.82
+   },
+   {
+    "scenario": "2 threads with the cores this test really received",
+    "cores_received": 0.832,
+    "threading_factor": 1.0,
+    "steps_per_s": 2.042,
+    "ns_per_day_at_4_fs": 0.71,
+    "equilibration_2_ns_hours": 91.8,
+    "validation_5_ns_hours": 170.1,
+    "minimisation_hours": 0.54,
+    "all_three_days": 10.93
+   }
+  ]
+ }
+}

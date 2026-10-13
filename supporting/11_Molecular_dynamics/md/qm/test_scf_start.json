@@ -1,0 +1,47 @@
+{
+ "minao": {
+  "cycles": 11,
+  "converged": true,
+  "e": -2137.52870208977,
+  "seconds": 77.5
+ },
+ "atom": {
+  "cycles": 11,
+  "converged": true,
+  "e": -2137.5287020881674,
+  "seconds": 84.6
+ },
+ "huckel": {
+  "cycles": 13,
+  "converged": true,
+  "e": -2137.528702077076,
+  "seconds": 95.0
+ },
+ "vsap": {
+  "cycles": 16,
+  "converged": true,
+  "e": -2137.5287020805417,
+  "seconds": 111.5
+ },
+ "pbe first, then b3lyp": {
+  "pbe": {
+   "cycles": 9,
+   "converged": true,
+   "e": -2136.7851547146397,
+   "seconds": 81.2
+  },
+  "b3lyp": {
+   "cycles": 7,
+   "converged": true,
+   "e": -2137.528702086091,
+   "seconds": 56.6
+  }
+ },
+ "small_basis_start": {
+  "note": "driver job timing with guess_basis sto-3g on the same system, convergence 1e-9 Hartree; counted in the PySCF logs",
+  "cycles_of_the_sto3g_calculation": 34,
+  "cycles_b3lyp_6_31gs_from_projected_orbitals": 14,
+  "cycles_b3lyp_6_31gs_from_atomic_guess_same_convergence": 14,
+  "source_of_the_last_number": "first SCF of the first run of test_small_chain.py (Cartesian functions), counted in its PySCF log"
+ }
+}

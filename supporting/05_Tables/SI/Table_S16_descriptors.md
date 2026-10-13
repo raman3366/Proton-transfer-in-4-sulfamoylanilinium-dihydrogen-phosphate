@@ -1,0 +1,16 @@
+| Species | Model | Method | *I* (eV) | *A* (eV) | *η* (eV) | *χ* (eV) | *ω* (eV) | *S* (eV⁻¹) |
+|:-------------|:---------------|:--------|--------:|--------:|--------:|--------:|--------:|----------:|
+| Ion pair | IEF-PCM (water) | ΔSCF | 7.488 | 1.857 | 2.816 | 4.673 | 3.877 | 0.178 |
+|  |  | Koopmans | 7.642 | 1.666 | 2.988 | 4.654 | 3.624 | 0.167 |
+| Cation | IEF-PCM (water) | ΔSCF | 7.883 | 2.064 | 2.910 | 4.973 | 4.250 | 0.172 |
+|  |  | Koopmans | 8.016 | 1.873 | 3.072 | 4.944 | 3.979 | 0.163 |
+| Cation | Gas phase | ΔSCF | 13.139 | 4.108 | 4.515 | 8.623 | 8.234 | 0.111 |
+|  |  | Koopmans | 11.185 | 5.658 | 2.764 | 8.422 | 12.831 | 0.181 |
+| Sulfanilamide | IEF-PCM (water) | ΔSCF | 5.982 | 1.227 | 2.378 | 3.605 | 2.732 | 0.210 |
+|  |  | Koopmans | 6.168 | 0.996 | 2.586 | 3.582 | 2.481 | 0.193 |
+| Sulfanilamide | Gas phase | ΔSCF | 8.331 | −0.099 | 4.215 | 4.116 | 2.010 | 0.119 |
+|  |  | Koopmans | 6.478 | 1.129 | 2.675 | 3.803 | 2.704 | 0.187 |
+
+Table: Global reactivity descriptors from vertical ΔSCF energies and from the orbital energies (Koopmans-type, *I* = −*E*~HOMO~, *A* = −*E*~LUMO~), B3LYP-D3(BJ)/6-311++G(d,p). {#tbl:s-descriptors}
+
+Condensed Fukui functions of sulfanilamide and the cation are in @tbl:s-fukui.

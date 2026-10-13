@@ -1,0 +1,124 @@
+{
+ "tag": "eq02",
+ "kind": "equilibration",
+ "started": {
+  "utc": "2026-10-06T05:02:26Z",
+  "ist": "6 Oct 2026, 10:32:26 AM IST"
+ },
+ "host": "cqc-md-gpu-01",
+ "openmm": "8.6.1",
+ "state_in": {
+  "sha256": "5c7441bacb330e7cde1aa9b6dc2cd51adb7a84efd5af356f14d0a75c00451d28",
+  "bytes": 6697982,
+  "file": "state_eq01.xml"
+ },
+ "seeds": {
+  "integrator": 59200215,
+  "barostat": 1690192616
+ },
+ "platform": {
+  "requested": "CUDA",
+  "name": "CUDA",
+  "properties_set": {
+   "Precision": "mixed",
+   "DeterministicForces": "true"
+  },
+  "properties_actual": {
+   "DeviceIndex": "0",
+   "DeviceName": "NVIDIA L40S",
+   "UseBlockingSync": "false",
+   "Precision": "mixed",
+   "UseCpuPme": "false",
+   "CudaCompiler": "",
+   "TempDirectory": "/tmp",
+   "CudaHostCompiler": "",
+   "DisablePmeStream": "false",
+   "DeterministicForces": "true"
+  },
+  "gpu_name": "NVIDIA L40S",
+  "deterministic_forces_set": true,
+  "precision_set": "mixed",
+  "repeatability": "DeterministicForces is set; whether a repeated segment is bit for bit the same has to be checked on the machine (pre-flight test of md/RUN.md)",
+  "attempts": [
+   {
+    "platform": "CUDA",
+    "usable": true
+   }
+  ]
+ },
+ "settings": {
+  "name": "density",
+  "ensemble": "NPT",
+  "timestep_fs": 2.0,
+  "n_steps": 150000,
+  "length_ps": 300.0,
+  "temperature_K": 300.0,
+  "restraint_atoms": "solute_heavy",
+  "restraint_k_kj_per_mol_nm2": 1000.0,
+  "n_restrained_atoms": 2074,
+  "barostat": true
+ },
+ "first_step": 50000,
+ "last_step": 200000,
+ "time_start_ps": 100.0,
+ "time_end_ps": 400.0,
+ "frames": {
+  "solute": 30,
+  "full": 3,
+  "state_log_rows": 30
+ },
+ "final": {
+  "potential_energy_kj_per_mol": -542338.11,
+  "kinetic_energy_kj_per_mol": 104580.794,
+  "temperature_K": 299.69,
+  "volume_nm3": 408.1827,
+  "density_g_per_cm3": 1.02475
+ },
+ "mean_over_state_log": {
+  "temperature_K": 300.12,
+  "density_g_per_cm3": 1.02224,
+  "potential_energy_kj_per_mol": -542088.98
+ },
+ "monitor": {
+  "zn_to_lig_N2_A": 1.973,
+  "lig_N2_to_thr199_OG1_A": 2.785,
+  "lig_N1_to_phe131_CZ_A": 3.479,
+  "lig_N1_to_asn67_OD1_A": 7.544,
+  "zn_to_his94_NE2_A": 2.02,
+  "zn_to_his96_NE2_A": 1.998,
+  "zn_to_his119_ND1_A": 2.085,
+  "n_water_O_within_3.5_A_of_ligand_heavy_atoms": 5,
+  "solute_heavy_rms_displacement_from_start_A": 0.284,
+  "solute_heavy_rms_displacement_note": "translation removed, no rotational fit",
+  "crystal_ring_site": {
+   "n_water_O_within_2.5_A": 0,
+   "nearest_water_O_A": 3.017,
+   "ligand_mean_distance_from_site_A": 0.289
+  }
+ },
+ "wall_s": 55.71,
+ "ns_per_day": 465.27,
+ "ended": {
+  "utc": "2026-10-06T05:03:23Z",
+  "ist": "6 Oct 2026, 10:33:23 AM IST"
+ },
+ "files": {
+  "log_eq02.csv": {
+   "sha256": "18ee91201f6aa7ee14119a40ad7cc87374f4ccdb4201a49f11d7cc55cf1c1f0b",
+   "bytes": 3119
+  },
+  "solute_eq02.dcd": {
+   "sha256": "4d77716db14cfa4d08cf0b2694572277da361643581b96498faadae1eaa1edb9",
+   "bytes": 1476516
+  },
+  "full_eq02.dcd": {
+   "sha256": "0585a9cbc90645c6b7e33a4c381ea8dd505531183a52b086357ff952b9bfe6b0",
+   "bytes": 1472988
+  },
+  "state_eq02.xml": {
+   "sha256": "3ab677df221e88ee347ac40f12037399b6f44c347f27a368c425b12762de06a9",
+   "bytes": 6706449
+  }
+ },
+ "complete": true
+}

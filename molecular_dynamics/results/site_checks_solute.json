@@ -1,0 +1,1842 @@
+{
+ "what": "Checks on the raw frames for md/RESULTS.md (solute frames). Written by md/production/site_checks.py; own reading of the DCD files, set beside the series of the two analysis programs.",
+ "script": {
+  "name": "md/production/site_checks.py",
+  "sha256": "32a9ef7688c11b6b1cd3ebc448a4bc22f3efadc4e8867b7f104ac07e284b8700"
+ },
+ "written": "8 Oct 2026, 6:39 AM IST",
+ "tolerances": {
+  "distance_A": 0.001,
+  "angle_deg": 0.01,
+  "signed_volume": 0.001
+ },
+ "runs": [
+  {
+   "run": "bonded_2e/X1",
+   "n_solute_frames": 10200,
+   "n_production_frames": 10000,
+   "n_equilibration_frames": 200,
+   "n_released_equilibration_frames": 130,
+   "guard": {
+    "largest_neighbour_CA_distance_A": 4.131713237191521,
+    "largest_raw_Zn_N2_A": 2.139702006563626,
+    "largest_raw_Zn_H94NE2_A": 2.2274427144173896
+   },
+   "beside_the_two_programs": {
+    "analysis": {
+     "largest_difference": {
+      "d1_A": 4.999488122869877e-05,
+      "d2_A": 4.999089896529085e-05,
+      "d_N2_T199OG1_A": 4.999694956975276e-05,
+      "ang_N2_HN2_T199OG1_deg": 0.0004999773474310132,
+      "d_Zn_Osulfonyl_min_A": 4.999795241644733e-05,
+      "n2_volume": 4.9998599111589215e-05
+     },
+     "frames_classed_differently": {
+      "state": 0,
+      "hb_N2H_T199OG1": 0,
+      "fifth_sulfonylO": 0,
+      "n2_sign": 0
+     }
+    },
+    "analysis_recheck": {
+     "largest_difference": {
+      "d1_A": 4.999488122869877e-05,
+      "d2_A": 4.999089896529085e-05,
+      "d_N2_T199OG1_A": 4.999694956975276e-05,
+      "ang_N2_HN2_T199OG1_deg": 0.0004999773474310132,
+      "d_Zn_Osulfonyl_min_A": 4.999795241644733e-05,
+      "n2_volume": 4.9998599111589215e-05
+     },
+     "frames_classed_differently": {
+      "state": 0,
+      "hb_N2H_T199OG1": 0,
+      "fifth_sulfonylO": 0,
+      "n2_sign": 0
+     }
+    }
+   },
+   "threshold": {
+    "what": "solute frames, equilibration and production, whose value lies within the tolerance of a threshold (SPEC.md, section 14): d1 6.7 A, d2 5.2 A, N2...OG1(Thr199) 3.5 A (0.001 A each), N2-H...OG1 135 deg (0.01 deg), nearer sulfonyl oxygen to the zinc 2.6 A (0.001 A), |signed volume at N2| below 0.001",
+    "n_d1": 0,
+    "n_d2": 0,
+    "n_hb_distance": 0,
+    "n_hb_angle": 1,
+    "n_sulfonyl_O": 0,
+    "n_n2_sign": 0,
+    "n_frames_any": 1,
+    "n_frames_any_production": 1,
+    "nearest_margin": {
+     "d1_A": 0.0010458613272037454,
+     "d2_A": 0.04815101382694209,
+     "hb_distance_A": 0.0019944454087030827,
+     "hb_angle_deg": 0.006141791304600019,
+     "sulfonyl_O_A": 0.001110617588602203,
+     "abs_n2_volume": 0.15862533768236942
+    },
+    "frames": [
+     {
+      "part": "production",
+      "stage": null,
+      "frame_of_the_joined_reading": 3706
+     }
+    ]
+   },
+   "his64": {
+    "what": "Zn to NE2(His64) and chi1 (N-CA-CB-CG); 'deep in' = chi1 between 0 and 120 deg with the distance at most the limit; shares in per cent of the solute frames of the production from 20 to 100 ns",
+    "n_frames_20_to_100_ns": 8000,
+    "deep_in_share_20_to_100_ns": {
+     "6.5": 0.43750000000000006,
+     "7.0": 0.7250000000000001,
+     "7.5": 0.9375
+    },
+    "chi1_gauche_plus_share_production": 37.19,
+    "Zn_NE2_mean_first_10_ns_A": 9.037537956522504,
+    "Zn_NE2_mean_20_to_100_ns_A": 11.19018187235245,
+    "Zn_NE2_mean_while_deep_in_7.0_A": 6.428337436620522
+   },
+   "departures": {
+    "what": "means over the solute frames of the production; the zinc out of the plane of the His119 ring (least-squares plane of CG, ND1, CD2, CE1, NE2) is the mean of the signed distance, given without its sign, and the mean of the unsigned distance beside it",
+    "zinc_out_of_the_plane_of_the_His119_ring_A": 0.5279495551933685,
+    "zinc_out_of_the_plane_of_the_His119_ring_mean_unsigned_A": 0.5388650115358234,
+    "d_S_C4_A": 1.821235843239884,
+    "ang_O1_S_C4_deg": 101.65661010934485,
+    "ang_S_N2_Zn_deg": 113.71351790088299,
+    "d_S_N2_A": 1.574014924382327
+   },
+   "nitrogen": {
+    "what": "signed volume V at N2 (Zn, H, S) and the sum of the three angles at N2",
+    "production": {
+     "V_min": 0.15862533768236942,
+     "V_max": 0.904432392656987,
+     "n_abs_V_below_0.2": 1,
+     "n_sum_of_angles_above_355_deg": 7,
+     "sum_of_angles_mean_deg": 334.12463954074695,
+     "ang_Zn_N2_H_mean_deg": 107.00846553226268
+    },
+    "from_the_release": {
+     "n_frames": 10130,
+     "V_min": 0.15862533768236942,
+     "V_max": 0.904432392656987,
+     "n_changes_of_sign": 0
+    }
+   },
+   "ligand_against_the_docked_rotated_pose": {
+    "what": "RMSD of the 11 heavy atoms of the ligand to md/system/ligand_R.pdb after the fit of the CA atoms on reference.pdb, smallest of the four equivalent labellings",
+    "production_smallest_A": 2.2021374362966117,
+    "production_mean_A": 3.4541367608116285,
+    "production_frames_within_1.0_A": 0,
+    "held_part_mean_A": 3.6094492856207405,
+    "rmsd_to_the_crystal_pose_production_mean_A": 0.5563697151145632
+   },
+   "rotated_like_frames": {
+    "from_the_release": {
+     "n": 0,
+     "n_with_V_positive": 0,
+     "n_within_1.0_A_of_the_docked_rotated_pose": 0,
+     "d1_mean_A": null,
+     "d2_mean_A": null
+    },
+    "production": {
+     "n": 0,
+     "n_with_V_positive": 0,
+     "n_crystal_like_with_V_negative": 0
+    }
+   }
+  },
+  {
+   "run": "bonded_2e/X2",
+   "n_solute_frames": 10200,
+   "n_production_frames": 10000,
+   "n_equilibration_frames": 200,
+   "n_released_equilibration_frames": 130,
+   "guard": {
+    "largest_neighbour_CA_distance_A": 4.151823105408209,
+    "largest_raw_Zn_N2_A": 2.140567694159565,
+    "largest_raw_Zn_H94NE2_A": 2.2420087290778214
+   },
+   "beside_the_two_programs": {
+    "analysis": {
+     "largest_difference": {
+      "d1_A": 4.9999231660713406e-05,
+      "d2_A": 4.998702576131109e-05,
+      "d_N2_T199OG1_A": 4.999154219964552e-05,
+      "ang_N2_HN2_T199OG1_deg": 0.0004999875906435136,
+      "d_Zn_Osulfonyl_min_A": 4.999993504606337e-05,
+      "n2_volume": 4.999688510387568e-05
+     },
+     "frames_classed_differently": {
+      "state": 0,
+      "hb_N2H_T199OG1": 0,
+      "fifth_sulfonylO": 0,
+      "n2_sign": 0
+     }
+    },
+    "analysis_recheck": {
+     "largest_difference": {
+      "d1_A": 4.9999231660713406e-05,
+      "d2_A": 4.998702576131109e-05,
+      "d_N2_T199OG1_A": 4.999154219964552e-05,
+      "ang_N2_HN2_T199OG1_deg": 0.0004999875906435136,
+      "d_Zn_Osulfonyl_min_A": 4.999993504606337e-05,
+      "n2_volume": 4.999688510387568e-05
+     },
+     "frames_classed_differently": {
+      "state": 0,
+      "hb_N2H_T199OG1": 0,
+      "fifth_sulfonylO": 0,
+      "n2_sign": 0
+     }
+    }
+   },
+   "threshold": {
+    "what": "solute frames, equilibration and production, whose value lies within the tolerance of a threshold (SPEC.md, section 14): d1 6.7 A, d2 5.2 A, N2...OG1(Thr199) 3.5 A (0.001 A each), N2-H...OG1 135 deg (0.01 deg), nearer sulfonyl oxygen to the zinc 2.6 A (0.001 A), |signed volume at N2| below 0.001",
+    "n_d1": 2,
+    "n_d2": 0,
+    "n_hb_distance": 0,
+    "n_hb_angle": 0,
+    "n_sulfonyl_O": 2,
+    "n_n2_sign": 0,
+    "n_frames_any": 4,
+    "n_frames_any_production": 4,
+    "nearest_margin": {
+     "d1_A": 0.00017407396709412382,
+     "d2_A": 0.019370772851641682,
+     "hb_distance_A": 0.003016272037392742,
+     "hb_angle_deg": 0.09420682112360623,
+     "sulfonyl_O_A": 0.0003943792863458917,
+     "abs_n2_volume": 0.21895056993174175
+    },
+    "frames": [
+     {
+      "part": "production",
+      "stage": null,
+      "frame_of_the_joined_reading": 3237
+     },
+     {
+      "part": "production",
+      "stage": null,
+      "frame_of_the_joined_reading": 3956
+     },
+     {
+      "part": "production",
+      "stage": null,
+      "frame_of_the_joined_reading": 6283
+     },
+     {
+      "part": "production",
+      "stage": null,
+      "frame_of_the_joined_reading": 7194
+     }
+    ]
+   },
+   "his64": {
+    "what": "Zn to NE2(His64) and chi1 (N-CA-CB-CG); 'deep in' = chi1 between 0 and 120 deg with the distance at most the limit; shares in per cent of the solute frames of the production from 20 to 100 ns",
+    "n_frames_20_to_100_ns": 8000,
+    "deep_in_share_20_to_100_ns": {
+     "6.5": 4.2250000000000005,
+     "7.0": 6.075,
+     "7.5": 8.2125
+    },
+    "chi1_gauche_plus_share_production": 8.25,
+    "Zn_NE2_mean_first_10_ns_A": 11.888980616223693,
+    "Zn_NE2_mean_20_to_100_ns_A": 11.546869814267136,
+    "Zn_NE2_mean_while_deep_in_7.0_A": 6.228617149626609
+   },
+   "departures": {
+    "what": "means over the solute frames of the production; the zinc out of the plane of the His119 ring (least-squares plane of CG, ND1, CD2, CE1, NE2) is the mean of the signed distance, given without its sign, and the mean of the unsigned distance beside it",
+    "zinc_out_of_the_plane_of_the_His119_ring_A": 0.5101428549990508,
+    "zinc_out_of_the_plane_of_the_His119_ring_mean_unsigned_A": 0.5233605745947297,
+    "d_S_C4_A": 1.821978261822279,
+    "ang_O1_S_C4_deg": 101.62950924574324,
+    "ang_S_N2_Zn_deg": 114.01183732015761,
+    "d_S_N2_A": 1.5741703911027898
+   },
+   "nitrogen": {
+    "what": "signed volume V at N2 (Zn, H, S) and the sum of the three angles at N2",
+    "production": {
+     "V_min": 0.31311900504414064,
+     "V_max": 0.9186359241998178,
+     "n_abs_V_below_0.2": 0,
+     "n_sum_of_angles_above_355_deg": 1,
+     "sum_of_angles_mean_deg": 334.06373282790463,
+     "ang_Zn_N2_H_mean_deg": 106.74415898798331
+    },
+    "from_the_release": {
+     "n_frames": 10130,
+     "V_min": 0.21895056993174175,
+     "V_max": 0.9186359241998178,
+     "n_changes_of_sign": 0
+    }
+   },
+   "ligand_against_the_docked_rotated_pose": {
+    "what": "RMSD of the 11 heavy atoms of the ligand to md/system/ligand_R.pdb after the fit of the CA atoms on reference.pdb, smallest of the four equivalent labellings",
+    "production_smallest_A": 1.6364346180157032,
+    "production_mean_A": 3.436187794189089,
+    "production_frames_within_1.0_A": 0,
+    "held_part_mean_A": 3.581019962825393,
+    "rmsd_to_the_crystal_pose_production_mean_A": 0.5413155427091568
+   },
+   "rotated_like_frames": {
+    "from_the_release": {
+     "n": 0,
+     "n_with_V_positive": 0,
+     "n_within_1.0_A_of_the_docked_rotated_pose": 0,
+     "d1_mean_A": null,
+     "d2_mean_A": null
+    },
+    "production": {
+     "n": 0,
+     "n_with_V_positive": 0,
+     "n_crystal_like_with_V_negative": 0
+    }
+   }
+  },
+  {
+   "run": "bonded_2e/X3",
+   "n_solute_frames": 10200,
+   "n_production_frames": 10000,
+   "n_equilibration_frames": 200,
+   "n_released_equilibration_frames": 130,
+   "guard": {
+    "largest_neighbour_CA_distance_A": 4.1461099555375,
+    "largest_raw_Zn_N2_A": 2.107882267090872,
+    "largest_raw_Zn_H94NE2_A": 2.2493548075012466
+   },
+   "beside_the_two_programs": {
+    "analysis": {
+     "largest_difference": {
+      "d1_A": 4.999840963115787e-05,
+      "d2_A": 4.9995128342139594e-05,
+      "d_N2_T199OG1_A": 4.999937954064393e-05,
+      "ang_N2_HN2_T199OG1_deg": 0.000499946613189195,
+      "d_Zn_Osulfonyl_min_A": 4.999578727193921e-05,
+      "n2_volume": 4.999735725585985e-05
+     },
+     "frames_classed_differently": {
+      "state": 0,
+      "hb_N2H_T199OG1": 0,
+      "fifth_sulfonylO": 0,
+      "n2_sign": 0
+     }
+    },
+    "analysis_recheck": {
+     "largest_difference": {
+      "d1_A": 4.999840963115787e-05,
+      "d2_A": 4.9995128342139594e-05,
+      "d_N2_T199OG1_A": 4.999937954064393e-05,
+      "ang_N2_HN2_T199OG1_deg": 0.000499946613189195,
+      "d_Zn_Osulfonyl_min_A": 4.999578727193921e-05,
+      "n2_volume": 4.999735725585985e-05
+     },
+     "frames_classed_differently": {
+      "state": 0,
+      "hb_N2H_T199OG1": 0,
+      "fifth_sulfonylO": 0,
+      "n2_sign": 0
+     }
+    }
+   },
+   "threshold": {
+    "what": "solute frames, equilibration and production, whose value lies within the tolerance of a threshold (SPEC.md, section 14): d1 6.7 A, d2 5.2 A, N2...OG1(Thr199) 3.5 A (0.001 A each), N2-H...OG1 135 deg (0.01 deg), nearer sulfonyl oxygen to the zinc 2.6 A (0.001 A), |signed volume at N2| below 0.001",
+    "n_d1": 2,
+    "n_d2": 0,
+    "n_hb_distance": 0,
+    "n_hb_angle": 0,
+    "n_sulfonyl_O": 0,
+    "n_n2_sign": 0,
+    "n_frames_any": 2,
+    "n_frames_any_production": 2,
+    "nearest_margin": {
+     "d1_A": 0.00028652782247728936,
+     "d2_A": 0.012661383059442421,
+     "hb_distance_A": 0.0014492284806175704,
+     "hb_angle_deg": 0.39384932238456827,
+     "sulfonyl_O_A": 0.0012392513938501715,
+     "abs_n2_volume": 0.32492595812372005
+    },
+    "frames": [
+     {
+      "part": "production",
+      "stage": null,
+      "frame_of_the_joined_reading": 6453
+     },
+     {
+      "part": "production",
+      "stage": null,
+      "frame_of_the_joined_reading": 7907
+     }
+    ]
+   },
+   "his64": {
+    "what": "Zn to NE2(His64) and chi1 (N-CA-CB-CG); 'deep in' = chi1 between 0 and 120 deg with the distance at most the limit; shares in per cent of the solute frames of the production from 20 to 100 ns",
+    "n_frames_20_to_100_ns": 8000,
+    "deep_in_share_20_to_100_ns": {
+     "6.5": 44.0,
+     "7.0": 52.93750000000001,
+     "7.5": 64.17500000000001
+    },
+    "chi1_gauche_plus_share_production": 89.37,
+    "Zn_NE2_mean_first_10_ns_A": 9.384538229969156,
+    "Zn_NE2_mean_20_to_100_ns_A": 7.307322113075581,
+    "Zn_NE2_mean_while_deep_in_7.0_A": 6.1052406536736274
+   },
+   "departures": {
+    "what": "means over the solute frames of the production; the zinc out of the plane of the His119 ring (least-squares plane of CG, ND1, CD2, CE1, NE2) is the mean of the signed distance, given without its sign, and the mean of the unsigned distance beside it",
+    "zinc_out_of_the_plane_of_the_His119_ring_A": 0.4956928624132449,
+    "zinc_out_of_the_plane_of_the_His119_ring_mean_unsigned_A": 0.5109350560579511,
+    "d_S_C4_A": 1.8215343025982307,
+    "ang_O1_S_C4_deg": 101.6092716180622,
+    "ang_S_N2_Zn_deg": 114.07786146786543,
+    "d_S_N2_A": 1.5740837906880496
+   },
+   "nitrogen": {
+    "what": "signed volume V at N2 (Zn, H, S) and the sum of the three angles at N2",
+    "production": {
+     "V_min": 0.32492595812372005,
+     "V_max": 0.8916920049411159,
+     "n_abs_V_below_0.2": 0,
+     "n_sum_of_angles_above_355_deg": 0,
+     "sum_of_angles_mean_deg": 334.2955421312297,
+     "ang_Zn_N2_H_mean_deg": 106.87442349375245
+    },
+    "from_the_release": {
+     "n_frames": 10130,
+     "V_min": 0.32492595812372005,
+     "V_max": 0.8962166392060551,
+     "n_changes_of_sign": 0
+    }
+   },
+   "ligand_against_the_docked_rotated_pose": {
+    "what": "RMSD of the 11 heavy atoms of the ligand to md/system/ligand_R.pdb after the fit of the CA atoms on reference.pdb, smallest of the four equivalent labellings",
+    "production_smallest_A": 2.0294669404010306,
+    "production_mean_A": 3.43221470626027,
+    "production_frames_within_1.0_A": 0,
+    "held_part_mean_A": 3.6176878795826863,
+    "rmsd_to_the_crystal_pose_production_mean_A": 0.5445631642221894
+   },
+   "rotated_like_frames": {
+    "from_the_release": {
+     "n": 0,
+     "n_with_V_positive": 0,
+     "n_within_1.0_A_of_the_docked_rotated_pose": 0,
+     "d1_mean_A": null,
+     "d2_mean_A": null
+    },
+    "production": {
+     "n": 0,
+     "n_with_V_positive": 0,
+     "n_crystal_like_with_V_negative": 0
+    }
+   }
+  },
+  {
+   "run": "bonded_2e/N1",
+   "n_solute_frames": 10200,
+   "n_production_frames": 10000,
+   "n_equilibration_frames": 200,
+   "n_released_equilibration_frames": 130,
+   "guard": {
+    "largest_neighbour_CA_distance_A": 4.167541294736986,
+    "largest_raw_Zn_N2_A": 2.0814706428567695,
+    "largest_raw_Zn_H94NE2_A": 2.266146354028369
+   },
+   "beside_the_two_programs": {
+    "analysis": {
+     "largest_difference": {
+      "d1_A": 4.9996135271346276e-05,
+      "d2_A": 4.99980682375778e-05,
+      "d_N2_T199OG1_A": 4.999697116359059e-05,
+      "ang_N2_HN2_T199OG1_deg": 0.0004999651651189652,
+      "d_Zn_Osulfonyl_min_A": 4.999659624216335e-05,
+      "n2_volume": 4.9992070560778146e-05
+     },
+     "frames_classed_differently": {
+      "state": 0,
+      "hb_N2H_T199OG1": 0,
+      "fifth_sulfonylO": 0,
+      "n2_sign": 0
+     }
+    },
+    "analysis_recheck": {
+     "largest_difference": {
+      "d1_A": 4.9996135271346276e-05,
+      "d2_A": 4.99980682375778e-05,
+      "d_N2_T199OG1_A": 4.999697116359059e-05,
+      "ang_N2_HN2_T199OG1_deg": 0.0004999651651189652,
+      "d_Zn_Osulfonyl_min_A": 4.999659624216335e-05,
+      "n2_volume": 4.9992070560778146e-05
+     },
+     "frames_classed_differently": {
+      "state": 0,
+      "hb_N2H_T199OG1": 0,
+      "fifth_sulfonylO": 0,
+      "n2_sign": 0
+     }
+    }
+   },
+   "threshold": {
+    "what": "solute frames, equilibration and production, whose value lies within the tolerance of a threshold (SPEC.md, section 14): d1 6.7 A, d2 5.2 A, N2...OG1(Thr199) 3.5 A (0.001 A each), N2-H...OG1 135 deg (0.01 deg), nearer sulfonyl oxygen to the zinc 2.6 A (0.001 A), |signed volume at N2| below 0.001",
+    "n_d1": 0,
+    "n_d2": 0,
+    "n_hb_distance": 1,
+    "n_hb_angle": 0,
+    "n_sulfonyl_O": 0,
+    "n_n2_sign": 0,
+    "n_frames_any": 1,
+    "n_frames_any_production": 1,
+    "nearest_margin": {
+     "d1_A": 0.0011801236942128313,
+     "d2_A": 0.10535131452127366,
+     "hb_distance_A": 0.00011169073126815476,
+     "hb_angle_deg": 0.11071661583437731,
+     "sulfonyl_O_A": 0.001861433925370637,
+     "abs_n2_volume": 0.3061695571667234
+    },
+    "frames": [
+     {
+      "part": "production",
+      "stage": null,
+      "frame_of_the_joined_reading": 9574
+     }
+    ]
+   },
+   "his64": {
+    "what": "Zn to NE2(His64) and chi1 (N-CA-CB-CG); 'deep in' = chi1 between 0 and 120 deg with the distance at most the limit; shares in per cent of the solute frames of the production from 20 to 100 ns",
+    "n_frames_20_to_100_ns": 8000,
+    "deep_in_share_20_to_100_ns": {
+     "6.5": 0.0,
+     "7.0": 0.0,
+     "7.5": 0.0
+    },
+    "chi1_gauche_plus_share_production": 4.19,
+    "Zn_NE2_mean_first_10_ns_A": 11.495407207318767,
+    "Zn_NE2_mean_20_to_100_ns_A": 12.16141359959036,
+    "Zn_NE2_mean_while_deep_in_7.0_A": null
+   },
+   "departures": {
+    "what": "means over the solute frames of the production; the zinc out of the plane of the His119 ring (least-squares plane of CG, ND1, CD2, CE1, NE2) is the mean of the signed distance, given without its sign, and the mean of the unsigned distance beside it",
+    "zinc_out_of_the_plane_of_the_His119_ring_A": 0.48111709882186854,
+    "zinc_out_of_the_plane_of_the_His119_ring_mean_unsigned_A": 0.5004725786619398,
+    "d_S_C4_A": 1.8216809888073469,
+    "ang_O1_S_C4_deg": 101.60735234893377,
+    "ang_S_N2_Zn_deg": 113.97491508434226,
+    "d_S_N2_A": 1.5741851023282056
+   },
+   "nitrogen": {
+    "what": "signed volume V at N2 (Zn, H, S) and the sum of the three angles at N2",
+    "production": {
+     "V_min": 0.3061695571667234,
+     "V_max": 0.9133911572573727,
+     "n_abs_V_below_0.2": 0,
+     "n_sum_of_angles_above_355_deg": 2,
+     "sum_of_angles_mean_deg": 334.2305486183716,
+     "ang_Zn_N2_H_mean_deg": 106.85792920660339
+    },
+    "from_the_release": {
+     "n_frames": 10130,
+     "V_min": 0.3061695571667234,
+     "V_max": 0.9133911572573727,
+     "n_changes_of_sign": 0
+    }
+   },
+   "ligand_against_the_docked_rotated_pose": {
+    "what": "RMSD of the 11 heavy atoms of the ligand to md/system/ligand_R.pdb after the fit of the CA atoms on reference.pdb, smallest of the four equivalent labellings",
+    "production_smallest_A": 2.149321534222961,
+    "production_mean_A": 3.453297921303508,
+    "production_frames_within_1.0_A": 0,
+    "held_part_mean_A": 3.69186988942961,
+    "rmsd_to_the_crystal_pose_production_mean_A": 0.5296927595557516
+   },
+   "rotated_like_frames": {
+    "from_the_release": {
+     "n": 0,
+     "n_with_V_positive": 0,
+     "n_within_1.0_A_of_the_docked_rotated_pose": 0,
+     "d1_mean_A": null,
+     "d2_mean_A": null
+    },
+    "production": {
+     "n": 0,
+     "n_with_V_positive": 0,
+     "n_crystal_like_with_V_negative": 0
+    }
+   }
+  },
+  {
+   "run": "bonded_2e/N2",
+   "n_solute_frames": 10200,
+   "n_production_frames": 10000,
+   "n_equilibration_frames": 200,
+   "n_released_equilibration_frames": 130,
+   "guard": {
+    "largest_neighbour_CA_distance_A": 4.131095835759638,
+    "largest_raw_Zn_N2_A": 2.122069624570947,
+    "largest_raw_Zn_H94NE2_A": 2.2419146206779406
+   },
+   "beside_the_two_programs": {
+    "analysis": {
+     "largest_difference": {
+      "d1_A": 4.999830718954712e-05,
+      "d2_A": 4.999666230176558e-05,
+      "d_N2_T199OG1_A": 4.999766718105647e-05,
+      "ang_N2_HN2_T199OG1_deg": 0.0004999272561008183,
+      "d_Zn_Osulfonyl_min_A": 4.999926728954662e-05,
+      "n2_volume": 4.9999380110410385e-05
+     },
+     "frames_classed_differently": {
+      "state": 0,
+      "hb_N2H_T199OG1": 0,
+      "fifth_sulfonylO": 0,
+      "n2_sign": 0
+     }
+    },
+    "analysis_recheck": {
+     "largest_difference": {
+      "d1_A": 4.999830718954712e-05,
+      "d2_A": 4.999666230176558e-05,
+      "d_N2_T199OG1_A": 4.999766718105647e-05,
+      "ang_N2_HN2_T199OG1_deg": 0.0004999272561008183,
+      "d_Zn_Osulfonyl_min_A": 4.999926728954662e-05,
+      "n2_volume": 4.9999380110410385e-05
+     },
+     "frames_classed_differently": {
+      "state": 0,
+      "hb_N2H_T199OG1": 0,
+      "fifth_sulfonylO": 0,
+      "n2_sign": 0
+     }
+    }
+   },
+   "threshold": {
+    "what": "solute frames, equilibration and production, whose value lies within the tolerance of a threshold (SPEC.md, section 14): d1 6.7 A, d2 5.2 A, N2...OG1(Thr199) 3.5 A (0.001 A each), N2-H...OG1 135 deg (0.01 deg), nearer sulfonyl oxygen to the zinc 2.6 A (0.001 A), |signed volume at N2| below 0.001",
+    "n_d1": 0,
+    "n_d2": 0,
+    "n_hb_distance": 0,
+    "n_hb_angle": 0,
+    "n_sulfonyl_O": 2,
+    "n_n2_sign": 0,
+    "n_frames_any": 2,
+    "n_frames_any_production": 2,
+    "nearest_margin": {
+     "d1_A": 0.0024571124447367865,
+     "d2_A": 0.011407825395220783,
+     "hb_distance_A": 0.0012286950031583643,
+     "hb_angle_deg": 0.06661982827438351,
+     "sulfonyl_O_A": 0.00017302155964316057,
+     "abs_n2_volume": 0.20480847001200536
+    },
+    "frames": [
+     {
+      "part": "production",
+      "stage": null,
+      "frame_of_the_joined_reading": 2588
+     },
+     {
+      "part": "production",
+      "stage": null,
+      "frame_of_the_joined_reading": 8257
+     }
+    ]
+   },
+   "his64": {
+    "what": "Zn to NE2(His64) and chi1 (N-CA-CB-CG); 'deep in' = chi1 between 0 and 120 deg with the distance at most the limit; shares in per cent of the solute frames of the production from 20 to 100 ns",
+    "n_frames_20_to_100_ns": 8000,
+    "deep_in_share_20_to_100_ns": {
+     "6.5": 0.0,
+     "7.0": 0.0,
+     "7.5": 0.0
+    },
+    "chi1_gauche_plus_share_production": 0.0,
+    "Zn_NE2_mean_first_10_ns_A": 12.02820423461511,
+    "Zn_NE2_mean_20_to_100_ns_A": 12.039015471789815,
+    "Zn_NE2_mean_while_deep_in_7.0_A": null
+   },
+   "departures": {
+    "what": "means over the solute frames of the production; the zinc out of the plane of the His119 ring (least-squares plane of CG, ND1, CD2, CE1, NE2) is the mean of the signed distance, given without its sign, and the mean of the unsigned distance beside it",
+    "zinc_out_of_the_plane_of_the_His119_ring_A": 0.5029572823293016,
+    "zinc_out_of_the_plane_of_the_His119_ring_mean_unsigned_A": 0.5169512570559797,
+    "d_S_C4_A": 1.821927876786868,
+    "ang_O1_S_C4_deg": 101.65441717488733,
+    "ang_S_N2_Zn_deg": 113.65810907950745,
+    "d_S_N2_A": 1.5741831311274888
+   },
+   "nitrogen": {
+    "what": "signed volume V at N2 (Zn, H, S) and the sum of the three angles at N2",
+    "production": {
+     "V_min": 0.20480847001200536,
+     "V_max": 0.9056261334903906,
+     "n_abs_V_below_0.2": 0,
+     "n_sum_of_angles_above_355_deg": 5,
+     "sum_of_angles_mean_deg": 333.6857912128166,
+     "ang_Zn_N2_H_mean_deg": 106.74777687616907
+    },
+    "from_the_release": {
+     "n_frames": 10130,
+     "V_min": 0.20480847001200536,
+     "V_max": 0.9056261334903906,
+     "n_changes_of_sign": 0
+    }
+   },
+   "ligand_against_the_docked_rotated_pose": {
+    "what": "RMSD of the 11 heavy atoms of the ligand to md/system/ligand_R.pdb after the fit of the CA atoms on reference.pdb, smallest of the four equivalent labellings",
+    "production_smallest_A": 1.906731392192556,
+    "production_mean_A": 3.4664235530966514,
+    "production_frames_within_1.0_A": 0,
+    "held_part_mean_A": 3.7113822886746197,
+    "rmsd_to_the_crystal_pose_production_mean_A": 0.5427837625145508
+   },
+   "rotated_like_frames": {
+    "from_the_release": {
+     "n": 0,
+     "n_with_V_positive": 0,
+     "n_within_1.0_A_of_the_docked_rotated_pose": 0,
+     "d1_mean_A": null,
+     "d2_mean_A": null
+    },
+    "production": {
+     "n": 0,
+     "n_with_V_positive": 0,
+     "n_crystal_like_with_V_negative": 0
+    }
+   }
+  },
+  {
+   "run": "bonded_2e/N3",
+   "n_solute_frames": 10200,
+   "n_production_frames": 10000,
+   "n_equilibration_frames": 200,
+   "n_released_equilibration_frames": 130,
+   "guard": {
+    "largest_neighbour_CA_distance_A": 4.138367965281235,
+    "largest_raw_Zn_N2_A": 2.1303087170063884,
+    "largest_raw_Zn_H94NE2_A": 2.244847249010016
+   },
+   "beside_the_two_programs": {
+    "analysis": {
+     "largest_difference": {
+      "d1_A": 4.999568260899423e-05,
+      "d2_A": 4.9998561876485326e-05,
+      "d_N2_T199OG1_A": 4.999740458844215e-05,
+      "ang_N2_HN2_T199OG1_deg": 0.0004999557316693881,
+      "d_Zn_Osulfonyl_min_A": 4.999745092337804e-05,
+      "n2_volume": 4.9995912421163524e-05
+     },
+     "frames_classed_differently": {
+      "state": 0,
+      "hb_N2H_T199OG1": 0,
+      "fifth_sulfonylO": 0,
+      "n2_sign": 0
+     }
+    },
+    "analysis_recheck": {
+     "largest_difference": {
+      "d1_A": 4.999568260899423e-05,
+      "d2_A": 4.9998561876485326e-05,
+      "d_N2_T199OG1_A": 4.999740458844215e-05,
+      "ang_N2_HN2_T199OG1_deg": 0.0004999557316693881,
+      "d_Zn_Osulfonyl_min_A": 4.999745092337804e-05,
+      "n2_volume": 4.9995912421163524e-05
+     },
+     "frames_classed_differently": {
+      "state": 0,
+      "hb_N2H_T199OG1": 0,
+      "fifth_sulfonylO": 0,
+      "n2_sign": 0
+     }
+    }
+   },
+   "threshold": {
+    "what": "solute frames, equilibration and production, whose value lies within the tolerance of a threshold (SPEC.md, section 14): d1 6.7 A, d2 5.2 A, N2...OG1(Thr199) 3.5 A (0.001 A each), N2-H...OG1 135 deg (0.01 deg), nearer sulfonyl oxygen to the zinc 2.6 A (0.001 A), |signed volume at N2| below 0.001",
+    "n_d1": 0,
+    "n_d2": 0,
+    "n_hb_distance": 0,
+    "n_hb_angle": 1,
+    "n_sulfonyl_O": 2,
+    "n_n2_sign": 0,
+    "n_frames_any": 3,
+    "n_frames_any_production": 3,
+    "nearest_margin": {
+     "d1_A": 0.009509874418466069,
+     "d2_A": 0.03718524767807985,
+     "hb_distance_A": 0.008202349870412018,
+     "hb_angle_deg": 0.0014274651222478951,
+     "sulfonyl_O_A": 0.00035448562419482244,
+     "abs_n2_volume": 0.26979469706891507
+    },
+    "frames": [
+     {
+      "part": "production",
+      "stage": null,
+      "frame_of_the_joined_reading": 3999
+     },
+     {
+      "part": "production",
+      "stage": null,
+      "frame_of_the_joined_reading": 4592
+     },
+     {
+      "part": "production",
+      "stage": null,
+      "frame_of_the_joined_reading": 5875
+     }
+    ]
+   },
+   "his64": {
+    "what": "Zn to NE2(His64) and chi1 (N-CA-CB-CG); 'deep in' = chi1 between 0 and 120 deg with the distance at most the limit; shares in per cent of the solute frames of the production from 20 to 100 ns",
+    "n_frames_20_to_100_ns": 8000,
+    "deep_in_share_20_to_100_ns": {
+     "6.5": 28.3375,
+     "7.0": 35.3375,
+     "7.5": 40.6875
+    },
+    "chi1_gauche_plus_share_production": 35.25,
+    "Zn_NE2_mean_first_10_ns_A": 12.330024978194286,
+    "Zn_NE2_mean_20_to_100_ns_A": 9.599650706201412,
+    "Zn_NE2_mean_while_deep_in_7.0_A": 6.163260025433682
+   },
+   "departures": {
+    "what": "means over the solute frames of the production; the zinc out of the plane of the His119 ring (least-squares plane of CG, ND1, CD2, CE1, NE2) is the mean of the signed distance, given without its sign, and the mean of the unsigned distance beside it",
+    "zinc_out_of_the_plane_of_the_His119_ring_A": 0.4605715254015963,
+    "zinc_out_of_the_plane_of_the_His119_ring_mean_unsigned_A": 0.48436621064082447,
+    "d_S_C4_A": 1.8208716491689352,
+    "ang_O1_S_C4_deg": 101.62176815336996,
+    "ang_S_N2_Zn_deg": 114.47796820591422,
+    "d_S_N2_A": 1.5739357024446887
+   },
+   "nitrogen": {
+    "what": "signed volume V at N2 (Zn, H, S) and the sum of the three angles at N2",
+    "production": {
+     "V_min": 0.26979469706891507,
+     "V_max": 0.9099326025161627,
+     "n_abs_V_below_0.2": 0,
+     "n_sum_of_angles_above_355_deg": 6,
+     "sum_of_angles_mean_deg": 334.83663723698675,
+     "ang_Zn_N2_H_mean_deg": 106.99782426246544
+    },
+    "from_the_release": {
+     "n_frames": 10130,
+     "V_min": 0.26979469706891507,
+     "V_max": 0.9099326025161627,
+     "n_changes_of_sign": 0
+    }
+   },
+   "ligand_against_the_docked_rotated_pose": {
+    "what": "RMSD of the 11 heavy atoms of the ligand to md/system/ligand_R.pdb after the fit of the CA atoms on reference.pdb, smallest of the four equivalent labellings",
+    "production_smallest_A": 2.225682517211893,
+    "production_mean_A": 3.442280686882289,
+    "production_frames_within_1.0_A": 0,
+    "held_part_mean_A": 3.7033615380027713,
+    "rmsd_to_the_crystal_pose_production_mean_A": 0.6100166424474271
+   },
+   "rotated_like_frames": {
+    "from_the_release": {
+     "n": 0,
+     "n_with_V_positive": 0,
+     "n_within_1.0_A_of_the_docked_rotated_pose": 0,
+     "d1_mean_A": null,
+     "d2_mean_A": null
+    },
+    "production": {
+     "n": 0,
+     "n_with_V_positive": 0,
+     "n_crystal_like_with_V_negative": 0
+    }
+   }
+  },
+  {
+   "run": "bonded_2e/R1",
+   "n_solute_frames": 10250,
+   "n_production_frames": 10000,
+   "n_equilibration_frames": 250,
+   "n_released_equilibration_frames": 130,
+   "guard": {
+    "largest_neighbour_CA_distance_A": 4.132551020771071,
+    "largest_raw_Zn_N2_A": 2.1605658377982926,
+    "largest_raw_Zn_H94NE2_A": 2.230662312007419
+   },
+   "beside_the_two_programs": {
+    "analysis": {
+     "largest_difference": {
+      "d1_A": 4.999817295203712e-05,
+      "d2_A": 4.9997751590424855e-05,
+      "d_N2_T199OG1_A": 4.999584386800038e-05,
+      "ang_N2_HN2_T199OG1_deg": 0.0004999314041356229,
+      "d_Zn_Osulfonyl_min_A": 4.999457291754439e-05,
+      "n2_volume": 4.999697285434923e-05
+     },
+     "frames_classed_differently": {
+      "state": 0,
+      "hb_N2H_T199OG1": 0,
+      "fifth_sulfonylO": 0,
+      "n2_sign": 0
+     }
+    },
+    "analysis_recheck": {
+     "largest_difference": {
+      "d1_A": 4.999817295203712e-05,
+      "d2_A": 4.9997751590424855e-05,
+      "d_N2_T199OG1_A": 4.999584386800038e-05,
+      "ang_N2_HN2_T199OG1_deg": 0.0004999314041356229,
+      "d_Zn_Osulfonyl_min_A": 4.999457291754439e-05,
+      "n2_volume": 4.999697285434923e-05
+     },
+     "frames_classed_differently": {
+      "state": 0,
+      "hb_N2H_T199OG1": 0,
+      "fifth_sulfonylO": 0,
+      "n2_sign": 0
+     }
+    }
+   },
+   "threshold": {
+    "what": "solute frames, equilibration and production, whose value lies within the tolerance of a threshold (SPEC.md, section 14): d1 6.7 A, d2 5.2 A, N2...OG1(Thr199) 3.5 A (0.001 A each), N2-H...OG1 135 deg (0.01 deg), nearer sulfonyl oxygen to the zinc 2.6 A (0.001 A), |signed volume at N2| below 0.001",
+    "n_d1": 1,
+    "n_d2": 0,
+    "n_hb_distance": 0,
+    "n_hb_angle": 0,
+    "n_sulfonyl_O": 1,
+    "n_n2_sign": 0,
+    "n_frames_any": 2,
+    "n_frames_any_production": 2,
+    "nearest_margin": {
+     "d1_A": 0.00032534911776949116,
+     "d2_A": 0.0013678146889999354,
+     "hb_distance_A": 0.011173969933418793,
+     "hb_angle_deg": 0.5489478049605907,
+     "sulfonyl_O_A": 0.0006978743517689345,
+     "abs_n2_volume": 0.2648854341527139
+    },
+    "frames": [
+     {
+      "part": "production",
+      "stage": null,
+      "frame_of_the_joined_reading": 1207
+     },
+     {
+      "part": "production",
+      "stage": null,
+      "frame_of_the_joined_reading": 3318
+     }
+    ]
+   },
+   "his64": {
+    "what": "Zn to NE2(His64) and chi1 (N-CA-CB-CG); 'deep in' = chi1 between 0 and 120 deg with the distance at most the limit; shares in per cent of the solute frames of the production from 20 to 100 ns",
+    "n_frames_20_to_100_ns": 8000,
+    "deep_in_share_20_to_100_ns": {
+     "6.5": 91.3125,
+     "7.0": 96.8375,
+     "7.5": 97.7125
+    },
+    "chi1_gauche_plus_share_production": 84.17,
+    "Zn_NE2_mean_first_10_ns_A": 12.062747272412864,
+    "Zn_NE2_mean_20_to_100_ns_A": 5.946532142548016,
+    "Zn_NE2_mean_while_deep_in_7.0_A": 5.93103593631134
+   },
+   "departures": {
+    "what": "means over the solute frames of the production; the zinc out of the plane of the His119 ring (least-squares plane of CG, ND1, CD2, CE1, NE2) is the mean of the signed distance, given without its sign, and the mean of the unsigned distance beside it",
+    "zinc_out_of_the_plane_of_the_His119_ring_A": 0.4937940004189334,
+    "zinc_out_of_the_plane_of_the_His119_ring_mean_unsigned_A": 0.5097110028514333,
+    "d_S_C4_A": 1.8213521569193851,
+    "ang_O1_S_C4_deg": 101.71153257736336,
+    "ang_S_N2_Zn_deg": 113.91878505818835,
+    "d_S_N2_A": 1.573532074769365
+   },
+   "nitrogen": {
+    "what": "signed volume V at N2 (Zn, H, S) and the sum of the three angles at N2",
+    "production": {
+     "V_min": 0.2648854341527139,
+     "V_max": 0.900225926479515,
+     "n_abs_V_below_0.2": 0,
+     "n_sum_of_angles_above_355_deg": 2,
+     "sum_of_angles_mean_deg": 334.31952177849524,
+     "ang_Zn_N2_H_mean_deg": 106.86368600448111
+    },
+    "from_the_release": {
+     "n_frames": 10130,
+     "V_min": -0.6617228459507216,
+     "V_max": 0.900225926479515,
+     "n_changes_of_sign": 1
+    }
+   },
+   "ligand_against_the_docked_rotated_pose": {
+    "what": "RMSD of the 11 heavy atoms of the ligand to md/system/ligand_R.pdb after the fit of the CA atoms on reference.pdb, smallest of the four equivalent labellings",
+    "production_smallest_A": 1.8963736731088041,
+    "production_mean_A": 3.392921798901292,
+    "production_frames_within_1.0_A": 0,
+    "held_part_mean_A": 0.39112815936130674,
+    "rmsd_to_the_crystal_pose_production_mean_A": 0.5378577107910165
+   },
+   "rotated_like_frames": {
+    "from_the_release": {
+     "n": 27,
+     "n_with_V_positive": 2,
+     "n_within_1.0_A_of_the_docked_rotated_pose": 24,
+     "d1_mean_A": 10.016761342304177,
+     "d2_mean_A": 2.971221948697723
+    },
+    "production": {
+     "n": 0,
+     "n_with_V_positive": 0,
+     "n_crystal_like_with_V_negative": 0
+    }
+   },
+   "change_at_N2": {
+    "what": "torsions NE2(His94)-Zn-N2-S and NE2(His94)-Zn-N2-H (circular means): the released frames before the first frame with V positive, and the production",
+    "first_frame_with_V_positive_ps_from_release": 260,
+    "n_frames_before": 25,
+    "torsion_S_before_deg": -7.8547599356260696,
+    "torsion_S_production_deg": 78.35783849492799,
+    "torsion_H_before_deg": -144.05686372565685,
+    "torsion_H_production_deg": -154.98436577582297,
+    "sum_of_angles_before_mean_deg": 344.5185875479099,
+    "ang_S_N2_Zn_before_mean_deg": 122.7440791868176,
+    "frame_at_530_ps": {
+     "d1_A": 7.85888630512264,
+     "d2_A": 3.251471443460658,
+     "V": 0.29589134065886613,
+     "sum_of_angles_deg": 356.0303097373326,
+     "state": "R"
+    }
+   }
+  },
+  {
+   "run": "bonded_2e/R2",
+   "n_solute_frames": 10200,
+   "n_production_frames": 10000,
+   "n_equilibration_frames": 200,
+   "n_released_equilibration_frames": 130,
+   "guard": {
+    "largest_neighbour_CA_distance_A": 4.148938828142669,
+    "largest_raw_Zn_N2_A": 2.0992461847892026,
+    "largest_raw_Zn_H94NE2_A": 2.2489013095402344
+   },
+   "beside_the_two_programs": {
+    "analysis": {
+     "largest_difference": {
+      "d1_A": 4.999464951627175e-05,
+      "d2_A": 4.998055565152981e-05,
+      "d_N2_T199OG1_A": 4.999741103528521e-05,
+      "ang_N2_HN2_T199OG1_deg": 0.000499993346949168,
+      "d_Zn_Osulfonyl_min_A": 4.999801901428569e-05,
+      "n2_volume": 4.999887535994674e-05
+     },
+     "frames_classed_differently": {
+      "state": 0,
+      "hb_N2H_T199OG1": 0,
+      "fifth_sulfonylO": 0,
+      "n2_sign": 0
+     }
+    },
+    "analysis_recheck": {
+     "largest_difference": {
+      "d1_A": 4.999464951627175e-05,
+      "d2_A": 4.998055565152981e-05,
+      "d_N2_T199OG1_A": 4.999741103528521e-05,
+      "ang_N2_HN2_T199OG1_deg": 0.000499993346949168,
+      "d_Zn_Osulfonyl_min_A": 4.999801901428569e-05,
+      "n2_volume": 4.999887535994674e-05
+     },
+     "frames_classed_differently": {
+      "state": 0,
+      "hb_N2H_T199OG1": 0,
+      "fifth_sulfonylO": 0,
+      "n2_sign": 0
+     }
+    }
+   },
+   "threshold": {
+    "what": "solute frames, equilibration and production, whose value lies within the tolerance of a threshold (SPEC.md, section 14): d1 6.7 A, d2 5.2 A, N2...OG1(Thr199) 3.5 A (0.001 A each), N2-H...OG1 135 deg (0.01 deg), nearer sulfonyl oxygen to the zinc 2.6 A (0.001 A), |signed volume at N2| below 0.001",
+    "n_d1": 0,
+    "n_d2": 0,
+    "n_hb_distance": 0,
+    "n_hb_angle": 0,
+    "n_sulfonyl_O": 1,
+    "n_n2_sign": 0,
+    "n_frames_any": 1,
+    "n_frames_any_production": 1,
+    "nearest_margin": {
+     "d1_A": 0.0025179710167630986,
+     "d2_A": 0.03226267708001096,
+     "hb_distance_A": 0.001264112244999449,
+     "hb_angle_deg": 0.13733547184986605,
+     "sulfonyl_O_A": 0.0003778468182709105,
+     "abs_n2_volume": 0.18060113418866064
+    },
+    "frames": [
+     {
+      "part": "production",
+      "stage": null,
+      "frame_of_the_joined_reading": 6914
+     }
+    ]
+   },
+   "his64": {
+    "what": "Zn to NE2(His64) and chi1 (N-CA-CB-CG); 'deep in' = chi1 between 0 and 120 deg with the distance at most the limit; shares in per cent of the solute frames of the production from 20 to 100 ns",
+    "n_frames_20_to_100_ns": 8000,
+    "deep_in_share_20_to_100_ns": {
+     "6.5": 74.9,
+     "7.0": 87.0375,
+     "7.5": 94.7375
+    },
+    "chi1_gauche_plus_share_production": 84.57000000000001,
+    "Zn_NE2_mean_first_10_ns_A": 12.1680842285286,
+    "Zn_NE2_mean_20_to_100_ns_A": 6.25980293364151,
+    "Zn_NE2_mean_while_deep_in_7.0_A": 6.07239819929053
+   },
+   "departures": {
+    "what": "means over the solute frames of the production; the zinc out of the plane of the His119 ring (least-squares plane of CG, ND1, CD2, CE1, NE2) is the mean of the signed distance, given without its sign, and the mean of the unsigned distance beside it",
+    "zinc_out_of_the_plane_of_the_His119_ring_A": 0.5126569119154633,
+    "zinc_out_of_the_plane_of_the_His119_ring_mean_unsigned_A": 0.5240319387912161,
+    "d_S_C4_A": 1.8224085895979465,
+    "ang_O1_S_C4_deg": 101.664781076216,
+    "ang_S_N2_Zn_deg": 113.96381063864902,
+    "d_S_N2_A": 1.5743545619761061
+   },
+   "nitrogen": {
+    "what": "signed volume V at N2 (Zn, H, S) and the sum of the three angles at N2",
+    "production": {
+     "V_min": 0.18060113418866064,
+     "V_max": 0.8965608594637129,
+     "n_abs_V_below_0.2": 1,
+     "n_sum_of_angles_above_355_deg": 1,
+     "sum_of_angles_mean_deg": 334.21659514235404,
+     "ang_Zn_N2_H_mean_deg": 106.81944398774742
+    },
+    "from_the_release": {
+     "n_frames": 10130,
+     "V_min": -0.6529790938535079,
+     "V_max": 0.8965608594637129,
+     "n_changes_of_sign": 1
+    }
+   },
+   "ligand_against_the_docked_rotated_pose": {
+    "what": "RMSD of the 11 heavy atoms of the ligand to md/system/ligand_R.pdb after the fit of the CA atoms on reference.pdb, smallest of the four equivalent labellings",
+    "production_smallest_A": 2.101431160011315,
+    "production_mean_A": 3.4282909387990315,
+    "production_frames_within_1.0_A": 0,
+    "held_part_mean_A": 0.3771221315861339,
+    "rmsd_to_the_crystal_pose_production_mean_A": 0.5458340762463305
+   },
+   "rotated_like_frames": {
+    "from_the_release": {
+     "n": 35,
+     "n_with_V_positive": 0,
+     "n_within_1.0_A_of_the_docked_rotated_pose": 35,
+     "d1_mean_A": 9.986165545508898,
+     "d2_mean_A": 2.9895905563171823
+    },
+    "production": {
+     "n": 0,
+     "n_with_V_positive": 0,
+     "n_crystal_like_with_V_negative": 0
+    }
+   },
+   "change_at_N2": {
+    "what": "torsions NE2(His94)-Zn-N2-S and NE2(His94)-Zn-N2-H (circular means): the released frames before the first frame with V positive, and the production",
+    "first_frame_with_V_positive_ps_from_release": 360,
+    "n_frames_before": 35,
+    "torsion_S_before_deg": -5.180829234047574,
+    "torsion_S_production_deg": 78.26906899146276,
+    "torsion_H_before_deg": -142.2965878315032,
+    "torsion_H_production_deg": -155.2059018619532,
+    "sum_of_angles_before_mean_deg": 344.9187733930618,
+    "ang_S_N2_Zn_before_mean_deg": 123.15259074325306
+   }
+  },
+  {
+   "run": "bonded_2e/R3",
+   "n_solute_frames": 10200,
+   "n_production_frames": 10000,
+   "n_equilibration_frames": 200,
+   "n_released_equilibration_frames": 130,
+   "guard": {
+    "largest_neighbour_CA_distance_A": 4.139019518206099,
+    "largest_raw_Zn_N2_A": 2.108569198019965,
+    "largest_raw_Zn_H94NE2_A": 2.243020453897856
+   },
+   "beside_the_two_programs": {
+    "analysis": {
+     "largest_difference": {
+      "d1_A": 4.99920730794301e-05,
+      "d2_A": 4.9999765456831824e-05,
+      "d_N2_T199OG1_A": 4.999760837121059e-05,
+      "ang_N2_HN2_T199OG1_deg": 0.0004999343493636843,
+      "d_Zn_Osulfonyl_min_A": 4.999532248772809e-05,
+      "n2_volume": 4.99871409609387e-05
+     },
+     "frames_classed_differently": {
+      "state": 0,
+      "hb_N2H_T199OG1": 0,
+      "fifth_sulfonylO": 0,
+      "n2_sign": 0
+     }
+    },
+    "analysis_recheck": {
+     "largest_difference": {
+      "d1_A": 4.99920730794301e-05,
+      "d2_A": 4.9999765456831824e-05,
+      "d_N2_T199OG1_A": 4.999760837121059e-05,
+      "ang_N2_HN2_T199OG1_deg": 0.0004999343493636843,
+      "d_Zn_Osulfonyl_min_A": 4.999532248772809e-05,
+      "n2_volume": 4.99871409609387e-05
+     },
+     "frames_classed_differently": {
+      "state": 0,
+      "hb_N2H_T199OG1": 0,
+      "fifth_sulfonylO": 0,
+      "n2_sign": 0
+     }
+    }
+   },
+   "threshold": {
+    "what": "solute frames, equilibration and production, whose value lies within the tolerance of a threshold (SPEC.md, section 14): d1 6.7 A, d2 5.2 A, N2...OG1(Thr199) 3.5 A (0.001 A each), N2-H...OG1 135 deg (0.01 deg), nearer sulfonyl oxygen to the zinc 2.6 A (0.001 A), |signed volume at N2| below 0.001",
+    "n_d1": 0,
+    "n_d2": 0,
+    "n_hb_distance": 0,
+    "n_hb_angle": 0,
+    "n_sulfonyl_O": 0,
+    "n_n2_sign": 0,
+    "n_frames_any": 0,
+    "n_frames_any_production": 0,
+    "nearest_margin": {
+     "d1_A": 0.0013713899854348455,
+     "d2_A": 0.004718830190183709,
+     "hb_distance_A": 0.002826937142748509,
+     "hb_angle_deg": 0.17282135390226472,
+     "sulfonyl_O_A": 0.001147030097341517,
+     "abs_n2_volume": 0.1056359790471462
+    },
+    "frames": []
+   },
+   "his64": {
+    "what": "Zn to NE2(His64) and chi1 (N-CA-CB-CG); 'deep in' = chi1 between 0 and 120 deg with the distance at most the limit; shares in per cent of the solute frames of the production from 20 to 100 ns",
+    "n_frames_20_to_100_ns": 8000,
+    "deep_in_share_20_to_100_ns": {
+     "6.5": 77.625,
+     "7.0": 89.3375,
+     "7.5": 95.6625
+    },
+    "chi1_gauche_plus_share_production": 80.17999999999999,
+    "Zn_NE2_mean_first_10_ns_A": 12.142765394800014,
+    "Zn_NE2_mean_20_to_100_ns_A": 6.212172671770668,
+    "Zn_NE2_mean_while_deep_in_7.0_A": 6.062072261014911
+   },
+   "departures": {
+    "what": "means over the solute frames of the production; the zinc out of the plane of the His119 ring (least-squares plane of CG, ND1, CD2, CE1, NE2) is the mean of the signed distance, given without its sign, and the mean of the unsigned distance beside it",
+    "zinc_out_of_the_plane_of_the_His119_ring_A": 0.506603501690099,
+    "zinc_out_of_the_plane_of_the_His119_ring_mean_unsigned_A": 0.5217435343227099,
+    "d_S_C4_A": 1.8220995491321923,
+    "ang_O1_S_C4_deg": 101.60793070704595,
+    "ang_S_N2_Zn_deg": 114.12909824268222,
+    "d_S_N2_A": 1.5741013922973137
+   },
+   "nitrogen": {
+    "what": "signed volume V at N2 (Zn, H, S) and the sum of the three angles at N2",
+    "production": {
+     "V_min": 0.2063594157502626,
+     "V_max": 0.9143018679857353,
+     "n_abs_V_below_0.2": 0,
+     "n_sum_of_angles_above_355_deg": 1,
+     "sum_of_angles_mean_deg": 334.2542607004314,
+     "ang_Zn_N2_H_mean_deg": 106.69847028167494
+    },
+    "from_the_release": {
+     "n_frames": 10130,
+     "V_min": -0.6279095136988011,
+     "V_max": 0.9143018679857353,
+     "n_changes_of_sign": 1
+    }
+   },
+   "ligand_against_the_docked_rotated_pose": {
+    "what": "RMSD of the 11 heavy atoms of the ligand to md/system/ligand_R.pdb after the fit of the CA atoms on reference.pdb, smallest of the four equivalent labellings",
+    "production_smallest_A": 1.9101635054045216,
+    "production_mean_A": 3.413046681510235,
+    "production_frames_within_1.0_A": 0,
+    "held_part_mean_A": 0.3784413797423828,
+    "rmsd_to_the_crystal_pose_production_mean_A": 0.5336310632918431
+   },
+   "rotated_like_frames": {
+    "from_the_release": {
+     "n": 14,
+     "n_with_V_positive": 1,
+     "n_within_1.0_A_of_the_docked_rotated_pose": 13,
+     "d1_mean_A": 9.913792172757175,
+     "d2_mean_A": 2.983254514325001
+    },
+    "production": {
+     "n": 0,
+     "n_with_V_positive": 0,
+     "n_crystal_like_with_V_negative": 0
+    }
+   },
+   "change_at_N2": {
+    "what": "torsions NE2(His94)-Zn-N2-S and NE2(His94)-Zn-N2-H (circular means): the released frames before the first frame with V positive, and the production",
+    "first_frame_with_V_positive_ps_from_release": 140,
+    "n_frames_before": 13,
+    "torsion_S_before_deg": -5.4155786045007535,
+    "torsion_S_production_deg": 78.18550747043233,
+    "torsion_H_before_deg": -146.77182729830315,
+    "torsion_H_production_deg": -155.28844875515114,
+    "sum_of_angles_before_mean_deg": 347.608593455065,
+    "ang_S_N2_Zn_before_mean_deg": 123.5795136882364
+   }
+  },
+  {
+   "run": "bonded_2s/R1",
+   "n_solute_frames": 10200,
+   "n_production_frames": 10000,
+   "n_equilibration_frames": 200,
+   "n_released_equilibration_frames": 130,
+   "guard": {
+    "largest_neighbour_CA_distance_A": 4.153696815188692,
+    "largest_raw_Zn_N2_A": 2.134579502136221,
+    "largest_raw_Zn_H94NE2_A": 2.2237635226946164
+   },
+   "beside_the_two_programs": {
+    "analysis": {
+     "largest_difference": {
+      "d1_A": 4.9983561630995155e-05,
+      "d2_A": 4.999777424163909e-05,
+      "d_N2_T199OG1_A": 4.9998686085572785e-05,
+      "ang_N2_HN2_T199OG1_deg": 0.0004999387783755083,
+      "d_Zn_Osulfonyl_min_A": 4.999381686632276e-05,
+      "n2_volume": 4.997871830036971e-05
+     },
+     "frames_classed_differently": {
+      "state": 0,
+      "hb_N2H_T199OG1": 0,
+      "fifth_sulfonylO": 0,
+      "n2_sign": 0
+     }
+    },
+    "analysis_recheck": {
+     "largest_difference": {
+      "d1_A": 4.9983561630995155e-05,
+      "d2_A": 4.999777424163909e-05,
+      "d_N2_T199OG1_A": 4.9998686085572785e-05,
+      "ang_N2_HN2_T199OG1_deg": 0.0004999387783755083,
+      "d_Zn_Osulfonyl_min_A": 4.999381686632276e-05,
+      "n2_volume": 4.997871830036971e-05
+     },
+     "frames_classed_differently": {
+      "state": 0,
+      "hb_N2H_T199OG1": 0,
+      "fifth_sulfonylO": 0,
+      "n2_sign": 0
+     }
+    }
+   },
+   "threshold": {
+    "what": "solute frames, equilibration and production, whose value lies within the tolerance of a threshold (SPEC.md, section 14): d1 6.7 A, d2 5.2 A, N2...OG1(Thr199) 3.5 A (0.001 A each), N2-H...OG1 135 deg (0.01 deg), nearer sulfonyl oxygen to the zinc 2.6 A (0.001 A), |signed volume at N2| below 0.001",
+    "n_d1": 0,
+    "n_d2": 0,
+    "n_hb_distance": 0,
+    "n_hb_angle": 0,
+    "n_sulfonyl_O": 7,
+    "n_n2_sign": 0,
+    "n_frames_any": 7,
+    "n_frames_any_production": 7,
+    "nearest_margin": {
+     "d1_A": 0.005386903236246354,
+     "d2_A": 0.005359078310264387,
+     "hb_distance_A": 0.0055165790116440405,
+     "hb_angle_deg": 0.21550732093928104,
+     "sulfonyl_O_A": 0.00011650263589224608,
+     "abs_n2_volume": 0.0013651298083866559
+    },
+    "frames": [
+     {
+      "part": "production",
+      "stage": null,
+      "frame_of_the_joined_reading": 257
+     },
+     {
+      "part": "production",
+      "stage": null,
+      "frame_of_the_joined_reading": 759
+     },
+     {
+      "part": "production",
+      "stage": null,
+      "frame_of_the_joined_reading": 916
+     },
+     {
+      "part": "production",
+      "stage": null,
+      "frame_of_the_joined_reading": 2309
+     },
+     {
+      "part": "production",
+      "stage": null,
+      "frame_of_the_joined_reading": 6303
+     },
+     {
+      "part": "production",
+      "stage": null,
+      "frame_of_the_joined_reading": 6566
+     },
+     {
+      "part": "production",
+      "stage": null,
+      "frame_of_the_joined_reading": 8231
+     }
+    ]
+   },
+   "his64": {
+    "what": "Zn to NE2(His64) and chi1 (N-CA-CB-CG); 'deep in' = chi1 between 0 and 120 deg with the distance at most the limit; shares in per cent of the solute frames of the production from 20 to 100 ns",
+    "n_frames_20_to_100_ns": 8000,
+    "deep_in_share_20_to_100_ns": {
+     "6.5": 8.0,
+     "7.0": 13.3,
+     "7.5": 19.25
+    },
+    "chi1_gauche_plus_share_production": 83.52000000000001,
+    "Zn_NE2_mean_first_10_ns_A": 12.207053440500523,
+    "Zn_NE2_mean_20_to_100_ns_A": 8.532748614970544,
+    "Zn_NE2_mean_while_deep_in_7.0_A": 6.366701140576499
+   },
+   "departures": {
+    "what": "means over the solute frames of the production; the zinc out of the plane of the His119 ring (least-squares plane of CG, ND1, CD2, CE1, NE2) is the mean of the signed distance, given without its sign, and the mean of the unsigned distance beside it",
+    "zinc_out_of_the_plane_of_the_His119_ring_A": 0.7033641422618,
+    "zinc_out_of_the_plane_of_the_His119_ring_mean_unsigned_A": 0.7058889897447128,
+    "d_S_C4_A": 1.8222375087165976,
+    "ang_O1_S_C4_deg": 101.75318549207817,
+    "ang_S_N2_Zn_deg": 109.72047138209626,
+    "d_S_N2_A": 1.573579319834142
+   },
+   "nitrogen": {
+    "what": "signed volume V at N2 (Zn, H, S) and the sum of the three angles at N2",
+    "production": {
+     "V_min": -0.483413880053844,
+     "V_max": 0.9109779402271059,
+     "n_abs_V_below_0.2": 0,
+     "n_sum_of_angles_above_355_deg": 10,
+     "sum_of_angles_mean_deg": 332.50826493684167,
+     "ang_Zn_N2_H_mean_deg": 108.79160042283387
+    },
+    "from_the_release": {
+     "n_frames": 10130,
+     "V_min": -0.697482625501093,
+     "V_max": 0.9109779402271059,
+     "n_changes_of_sign": 5
+    }
+   },
+   "ligand_against_the_docked_rotated_pose": {
+    "what": "RMSD of the 11 heavy atoms of the ligand to md/system/ligand_R.pdb after the fit of the CA atoms on reference.pdb, smallest of the four equivalent labellings",
+    "production_smallest_A": 1.2541561288684229,
+    "production_mean_A": 3.2170590176354037,
+    "production_frames_within_1.0_A": 0,
+    "held_part_mean_A": 0.3849329409009998,
+    "rmsd_to_the_crystal_pose_production_mean_A": 0.803619109489952
+   },
+   "rotated_like_frames": {
+    "from_the_release": {
+     "n": 18,
+     "n_with_V_positive": 16,
+     "n_within_1.0_A_of_the_docked_rotated_pose": 5,
+     "d1_mean_A": 7.945206587305402,
+     "d2_mean_A": 3.459496133198053
+    },
+    "production": {
+     "n": 1,
+     "n_with_V_positive": 1,
+     "n_crystal_like_with_V_negative": 2
+    }
+   },
+   "change_at_N2": {
+    "what": "torsions NE2(His94)-Zn-N2-S and NE2(His94)-Zn-N2-H (circular means): the released frames before the first frame with V positive, and the production",
+    "first_frame_with_V_positive_ps_from_release": 30,
+    "n_frames_before": 2,
+    "torsion_S_before_deg": 1.3106705662695282,
+    "torsion_S_production_deg": 79.36296840550949,
+    "torsion_H_before_deg": -128.15015175309722,
+    "torsion_H_production_deg": -154.79360862269536,
+    "sum_of_angles_before_mean_deg": 339.3496460153826,
+    "ang_S_N2_Zn_before_mean_deg": 122.31203989567902
+   }
+  },
+  {
+   "run": "bonded_2e_n2fit/R1",
+   "n_solute_frames": 10200,
+   "n_production_frames": 10000,
+   "n_equilibration_frames": 200,
+   "n_released_equilibration_frames": 130,
+   "guard": {
+    "largest_neighbour_CA_distance_A": 4.1402983244218,
+    "largest_raw_Zn_N2_A": 2.119306058221269,
+    "largest_raw_Zn_H94NE2_A": 2.2602288216428406
+   },
+   "beside_the_two_programs": {
+    "analysis": {
+     "largest_difference": {
+      "d1_A": 4.999828212959301e-05,
+      "d2_A": 4.999531995331097e-05,
+      "d_N2_T199OG1_A": 4.99945003369362e-05,
+      "ang_N2_HN2_T199OG1_deg": 0.0004999713383710969,
+      "d_Zn_Osulfonyl_min_A": 4.999781870962394e-05,
+      "n2_volume": 4.999689269408192e-05
+     },
+     "frames_classed_differently": {
+      "state": 0,
+      "hb_N2H_T199OG1": 0,
+      "fifth_sulfonylO": 0,
+      "n2_sign": 0
+     }
+    },
+    "analysis_recheck": {
+     "largest_difference": {
+      "d1_A": 4.999828212959301e-05,
+      "d2_A": 4.999531995331097e-05,
+      "d_N2_T199OG1_A": 4.99945003369362e-05,
+      "ang_N2_HN2_T199OG1_deg": 0.0004999713383710969,
+      "d_Zn_Osulfonyl_min_A": 4.999781870962394e-05,
+      "n2_volume": 4.999689269408192e-05
+     },
+     "frames_classed_differently": {
+      "state": 0,
+      "hb_N2H_T199OG1": 0,
+      "fifth_sulfonylO": 0,
+      "n2_sign": 0
+     }
+    }
+   },
+   "threshold": {
+    "what": "solute frames, equilibration and production, whose value lies within the tolerance of a threshold (SPEC.md, section 14): d1 6.7 A, d2 5.2 A, N2...OG1(Thr199) 3.5 A (0.001 A each), N2-H...OG1 135 deg (0.01 deg), nearer sulfonyl oxygen to the zinc 2.6 A (0.001 A), |signed volume at N2| below 0.001",
+    "n_d1": 6,
+    "n_d2": 2,
+    "n_hb_distance": 0,
+    "n_hb_angle": 0,
+    "n_sulfonyl_O": 8,
+    "n_n2_sign": 5,
+    "n_frames_any": 21,
+    "n_frames_any_production": 21,
+    "nearest_margin": {
+     "d1_A": 0.0001608213255641644,
+     "d2_A": 0.0004305817689385094,
+     "hb_distance_A": 0.009917548384087205,
+     "hb_angle_deg": 0.023849549155045224,
+     "sulfonyl_O_A": 9.992765609467824e-05,
+     "abs_n2_volume": 0.00022949472018990447
+    },
+    "frames": [
+     {
+      "part": "production",
+      "stage": null,
+      "frame_of_the_joined_reading": 270
+     },
+     {
+      "part": "production",
+      "stage": null,
+      "frame_of_the_joined_reading": 1456
+     },
+     {
+      "part": "production",
+      "stage": null,
+      "frame_of_the_joined_reading": 1779
+     },
+     {
+      "part": "production",
+      "stage": null,
+      "frame_of_the_joined_reading": 1952
+     },
+     {
+      "part": "production",
+      "stage": null,
+      "frame_of_the_joined_reading": 2068
+     },
+     {
+      "part": "production",
+      "stage": null,
+      "frame_of_the_joined_reading": 2447
+     },
+     {
+      "part": "production",
+      "stage": null,
+      "frame_of_the_joined_reading": 2885
+     },
+     {
+      "part": "production",
+      "stage": null,
+      "frame_of_the_joined_reading": 4291
+     },
+     {
+      "part": "production",
+      "stage": null,
+      "frame_of_the_joined_reading": 4373
+     },
+     {
+      "part": "production",
+      "stage": null,
+      "frame_of_the_joined_reading": 4974
+     },
+     {
+      "part": "production",
+      "stage": null,
+      "frame_of_the_joined_reading": 5369
+     },
+     {
+      "part": "production",
+      "stage": null,
+      "frame_of_the_joined_reading": 5890
+     },
+     {
+      "part": "production",
+      "stage": null,
+      "frame_of_the_joined_reading": 6373
+     },
+     {
+      "part": "production",
+      "stage": null,
+      "frame_of_the_joined_reading": 8015
+     },
+     {
+      "part": "production",
+      "stage": null,
+      "frame_of_the_joined_reading": 8047
+     },
+     {
+      "part": "production",
+      "stage": null,
+      "frame_of_the_joined_reading": 8399
+     },
+     {
+      "part": "production",
+      "stage": null,
+      "frame_of_the_joined_reading": 8425
+     },
+     {
+      "part": "production",
+      "stage": null,
+      "frame_of_the_joined_reading": 8669
+     },
+     {
+      "part": "production",
+      "stage": null,
+      "frame_of_the_joined_reading": 8680
+     },
+     {
+      "part": "production",
+      "stage": null,
+      "frame_of_the_joined_reading": 8716
+     },
+     {
+      "part": "production",
+      "stage": null,
+      "frame_of_the_joined_reading": 9895
+     }
+    ]
+   },
+   "his64": {
+    "what": "Zn to NE2(His64) and chi1 (N-CA-CB-CG); 'deep in' = chi1 between 0 and 120 deg with the distance at most the limit; shares in per cent of the solute frames of the production from 20 to 100 ns",
+    "n_frames_20_to_100_ns": 8000,
+    "deep_in_share_20_to_100_ns": {
+     "6.5": 0.0,
+     "7.0": 0.0,
+     "7.5": 0.0
+    },
+    "chi1_gauche_plus_share_production": 0.02,
+    "Zn_NE2_mean_first_10_ns_A": 11.85649250969826,
+    "Zn_NE2_mean_20_to_100_ns_A": 11.970390706503155,
+    "Zn_NE2_mean_while_deep_in_7.0_A": null
+   },
+   "departures": {
+    "what": "means over the solute frames of the production; the zinc out of the plane of the His119 ring (least-squares plane of CG, ND1, CD2, CE1, NE2) is the mean of the signed distance, given without its sign, and the mean of the unsigned distance beside it",
+    "zinc_out_of_the_plane_of_the_His119_ring_A": 0.4093725420935459,
+    "zinc_out_of_the_plane_of_the_His119_ring_mean_unsigned_A": 0.45320634594332404,
+    "d_S_C4_A": 1.8206492417011184,
+    "ang_O1_S_C4_deg": 101.59708835137002,
+    "ang_S_N2_Zn_deg": 112.14930929246279,
+    "d_S_N2_A": 1.5728771848014966
+   },
+   "nitrogen": {
+    "what": "signed volume V at N2 (Zn, H, S) and the sum of the three angles at N2",
+    "production": {
+     "V_min": -0.6673629929708818,
+     "V_max": 0.8887326894770622,
+     "n_abs_V_below_0.2": 902,
+     "n_sum_of_angles_above_355_deg": 1697,
+     "sum_of_angles_mean_deg": 344.5242801432659,
+     "ang_Zn_N2_H_mean_deg": 119.55166099397019
+    },
+    "from_the_release": {
+     "n_frames": 10130,
+     "V_min": -0.6673629929708818,
+     "V_max": 0.8887326894770622,
+     "n_changes_of_sign": 979
+    }
+   },
+   "ligand_against_the_docked_rotated_pose": {
+    "what": "RMSD of the 11 heavy atoms of the ligand to md/system/ligand_R.pdb after the fit of the CA atoms on reference.pdb, smallest of the four equivalent labellings",
+    "production_smallest_A": 0.5203488564786366,
+    "production_mean_A": 2.9679781854311034,
+    "production_frames_within_1.0_A": 80,
+    "held_part_mean_A": 0.40011016830313006,
+    "rmsd_to_the_crystal_pose_production_mean_A": 0.9922718481785571
+   },
+   "rotated_like_frames": {
+    "from_the_release": {
+     "n": 396,
+     "n_with_V_positive": 181,
+     "n_within_1.0_A_of_the_docked_rotated_pose": 79,
+     "d1_mean_A": 7.7938342680537644,
+     "d2_mean_A": 3.8486942457041198
+    },
+    "production": {
+     "n": 393,
+     "n_with_V_positive": 179,
+     "n_crystal_like_with_V_negative": 309
+    }
+   },
+   "change_at_N2": {
+    "what": "torsions NE2(His94)-Zn-N2-S and NE2(His94)-Zn-N2-H (circular means): the released frames before the first frame with V positive, and the production",
+    "first_frame_with_V_positive_ps_from_release": 20,
+    "n_frames_before": 1,
+    "torsion_S_before_deg": 23.0248572010497,
+    "torsion_S_production_deg": 67.47022425293244,
+    "torsion_H_before_deg": -148.1789367891505,
+    "torsion_H_production_deg": -151.81058813562407,
+    "sum_of_angles_before_mean_deg": 359.44066243622893,
+    "ang_S_N2_Zn_before_mean_deg": 125.68619579993958
+   }
+  },
+  {
+   "run": "bonded_2e/X0",
+   "n_solute_frames": 700,
+   "n_production_frames": 500,
+   "n_equilibration_frames": 200,
+   "n_released_equilibration_frames": 130,
+   "guard": {
+    "largest_neighbour_CA_distance_A": 4.109286047132709,
+    "largest_raw_Zn_N2_A": 2.050886335976516,
+    "largest_raw_Zn_H94NE2_A": 2.2011422396666322
+   },
+   "beside_the_two_programs": {
+    "analysis": {
+     "largest_difference": {
+      "d1_A": 4.992557231364714e-05,
+      "d2_A": 4.996176128369001e-05,
+      "d_N2_T199OG1_A": 4.999605462874257e-05,
+      "ang_N2_HN2_T199OG1_deg": 0.0004982237517765498,
+      "d_Zn_Osulfonyl_min_A": 4.9926364958707836e-05,
+      "n2_volume": 4.982907891970534e-05
+     },
+     "frames_classed_differently": {
+      "state": 0,
+      "hb_N2H_T199OG1": 0,
+      "fifth_sulfonylO": 0,
+      "n2_sign": 0
+     }
+    },
+    "analysis_recheck": {
+     "largest_difference": {
+      "d1_A": 4.992557231364714e-05,
+      "d2_A": 4.996176128369001e-05,
+      "d_N2_T199OG1_A": 4.999605462874257e-05,
+      "ang_N2_HN2_T199OG1_deg": 0.0004982237517765498,
+      "d_Zn_Osulfonyl_min_A": 4.9926364958707836e-05,
+      "n2_volume": 4.982907891970534e-05
+     },
+     "frames_classed_differently": {
+      "state": 0,
+      "hb_N2H_T199OG1": 0,
+      "fifth_sulfonylO": 0,
+      "n2_sign": 0
+     }
+    }
+   },
+   "threshold": {
+    "what": "solute frames, equilibration and production, whose value lies within the tolerance of a threshold (SPEC.md, section 14): d1 6.7 A, d2 5.2 A, N2...OG1(Thr199) 3.5 A (0.001 A each), N2-H...OG1 135 deg (0.01 deg), nearer sulfonyl oxygen to the zinc 2.6 A (0.001 A), |signed volume at N2| below 0.001",
+    "n_d1": 0,
+    "n_d2": 0,
+    "n_hb_distance": 0,
+    "n_hb_angle": 0,
+    "n_sulfonyl_O": 0,
+    "n_n2_sign": 0,
+    "n_frames_any": 0,
+    "n_frames_any_production": 0,
+    "nearest_margin": {
+     "d1_A": 0.2119205323024822,
+     "d2_A": 0.16975686982167115,
+     "hb_distance_A": 0.11819412933655205,
+     "hb_angle_deg": 3.509364547356313,
+     "sulfonyl_O_A": 0.00941169831837918,
+     "abs_n2_volume": 0.4021006656436913
+    },
+    "frames": []
+   }
+  },
+  {
+   "run": "bonded_2s/X0",
+   "n_solute_frames": 700,
+   "n_production_frames": 500,
+   "n_equilibration_frames": 200,
+   "n_released_equilibration_frames": 130,
+   "guard": {
+    "largest_neighbour_CA_distance_A": 4.105772284710938,
+    "largest_raw_Zn_N2_A": 2.1353436361314544,
+    "largest_raw_Zn_H94NE2_A": 2.237665429377062
+   },
+   "beside_the_two_programs": {
+    "analysis": {
+     "largest_difference": {
+      "d1_A": 4.9952911429507196e-05,
+      "d2_A": 4.993338052017293e-05,
+      "d_N2_T199OG1_A": 4.9823104320445566e-05,
+      "ang_N2_HN2_T199OG1_deg": 0.0004998658732802141,
+      "d_Zn_Osulfonyl_min_A": 4.98982515035884e-05,
+      "n2_volume": 4.998764234098729e-05
+     },
+     "frames_classed_differently": {
+      "state": 0,
+      "hb_N2H_T199OG1": 0,
+      "fifth_sulfonylO": 0,
+      "n2_sign": 0
+     }
+    },
+    "analysis_recheck": {
+     "largest_difference": {
+      "d1_A": 4.9952911429507196e-05,
+      "d2_A": 4.993338052017293e-05,
+      "d_N2_T199OG1_A": 4.9823104320445566e-05,
+      "ang_N2_HN2_T199OG1_deg": 0.0004998658732802141,
+      "d_Zn_Osulfonyl_min_A": 4.98982515035884e-05,
+      "n2_volume": 4.998764234098729e-05
+     },
+     "frames_classed_differently": {
+      "state": 0,
+      "hb_N2H_T199OG1": 0,
+      "fifth_sulfonylO": 0,
+      "n2_sign": 0
+     }
+    }
+   },
+   "threshold": {
+    "what": "solute frames, equilibration and production, whose value lies within the tolerance of a threshold (SPEC.md, section 14): d1 6.7 A, d2 5.2 A, N2...OG1(Thr199) 3.5 A (0.001 A each), N2-H...OG1 135 deg (0.01 deg), nearer sulfonyl oxygen to the zinc 2.6 A (0.001 A), |signed volume at N2| below 0.001",
+    "n_d1": 0,
+    "n_d2": 1,
+    "n_hb_distance": 0,
+    "n_hb_angle": 0,
+    "n_sulfonyl_O": 0,
+    "n_n2_sign": 0,
+    "n_frames_any": 1,
+    "n_frames_any_production": 0,
+    "nearest_margin": {
+     "d1_A": 0.07495308123858102,
+     "d2_A": 0.0001624775939026435,
+     "hb_distance_A": 0.14336570845954055,
+     "hb_angle_deg": 3.3694769564488922,
+     "sulfonyl_O_A": 0.004646780828496233,
+     "abs_n2_volume": 0.42176809705819684
+    },
+    "frames": [
+     {
+      "part": "equilibration",
+      "stage": 4,
+      "frame_of_the_joined_reading": 94
+     }
+    ]
+   }
+  }
+ ]
+}

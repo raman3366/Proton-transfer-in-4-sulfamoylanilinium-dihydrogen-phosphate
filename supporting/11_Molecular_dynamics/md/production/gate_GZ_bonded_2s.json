@@ -1,0 +1,1761 @@
+{
+ "schema": "cqc-sfa-md gate G-Z, version 1",
+ "written": {
+  "utc": "2026-10-06T16:31:51Z",
+  "ist": "6 Oct 2026, 10:01:51 PM IST"
+ },
+ "test_of_the_program_only": false,
+ "script": {
+  "path": "/root/workspace/cqc-4-sulfamoylanilinium-dihydrogen-phosphate/md/production/gate_GZ.py",
+  "sha256": "680c974ea76ac5ee7c0e05ece7b2f1e407f8413a5d3a596c0c73a6c7c8ceebef"
+ },
+ "run": {
+  "dir": "/root/cqc-sfa-md/runs/bonded_2s/X0",
+  "run_id": "X0",
+  "status": "complete",
+  "system_dir": "/root/cqc-sfa-md/systems/bonded_2s/X",
+  "model": "bonded_2s",
+  "parameter_set": "2s",
+  "system_prmtop_sha256": "5c1e5543950f05d4db0a707f6e739657ff506c7b1166047e50af3fdc9674b319",
+  "run_seed": 1793718340
+ },
+ "inputs": {
+  "/root/cqc-sfa-md/runs/bonded_2s/X0/analysis/timeseries_equil_solute.csv": "b6ceaf89e7fbb11d359a9c52811888db554ad5830f0cf9392fcae0362bc841c5",
+  "/root/cqc-sfa-md/runs/bonded_2s/X0/analysis/timeseries_equil_full.csv": "64732134a790c320eb47fba9c71a61a000358c44fd0037912e36fe8c25840845"
+ },
+ "criteria": {
+  "source": "md/analysis/SPEC.md, section 11, GV3 parts a to d, as printed",
+  "a_window_A": [
+   1.83,
+   2.03
+  ],
+  "b_window_A": [
+   1.91,
+   2.12
+  ],
+  "c_references_6RL9_deg": {
+   "ang_N2_Zn_H94NE2_deg": 108.9,
+   "ang_N2_Zn_H96NE2_deg": 114.3,
+   "ang_N2_Zn_H119ND1_deg": 116.8,
+   "ang_H94NE2_Zn_H96NE2_deg": 103.8,
+   "ang_H94NE2_Zn_H119ND1_deg": 113.6,
+   "ang_H96NE2_Zn_H119ND1_deg": 98.4
+  },
+  "c_tolerance_deg": 10.0,
+  "d": "an oxygen within 2.6 A of the zinc in at most 5 % of the frames, in the solute frames (sulfonyl O) and in the all-atom frames (any O), and at least one all-atom frame"
+ },
+ "second_program": {
+  "files": {
+   "/root/cqc-sfa-md/runs/bonded_2s/X0/analysis_recheck/timeseries_equil_solute.csv": "b6ceaf89e7fbb11d359a9c52811888db554ad5830f0cf9392fcae0362bc841c5",
+   "/root/cqc-sfa-md/runs/bonded_2s/X0/analysis_recheck/timeseries_equil_full.csv": "64732134a790c320eb47fba9c71a61a000358c44fd0037912e36fe8c25840845"
+  },
+  "same_number_of_rows": true,
+  "values_compared_on_the_gate_frames": 144,
+  "largest_difference": 0.0,
+  "files_identical_byte_for_byte": true,
+  "agree": true
+ },
+ "frames_of_the_gate": {
+  "step": "eq01",
+  "settings": {
+   "name": "heat",
+   "ensemble": "NVT",
+   "timestep_fs": 2.0,
+   "n_steps": 50000,
+   "length_ps": 100.0,
+   "temperature_K": [
+    50.0,
+    300.0
+   ],
+   "restraint_atoms": "solute_heavy",
+   "restraint_k_kj_per_mol_nm2": 1000.0,
+   "n_restrained_atoms": 2074,
+   "barostat": false
+  },
+  "time_after_minimisation_ps": [
+   0.0,
+   100.0
+  ],
+  "solute_frames": {
+   "n": 10,
+   "frame_numbers_of_the_equilibration_series": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+   ],
+   "time_ns_of_the_series": [
+    -1.99,
+    -1.98,
+    -1.97,
+    -1.96,
+    -1.95,
+    -1.94,
+    -1.93,
+    -1.92,
+    -1.91,
+    -1.9
+   ],
+   "interval_ps": 10.0,
+   "file": "solute_eq01.dcd",
+   "sha256": "8542460bc773b8c286e948b67c841d129a953a361737bf250aa1dc1e2ba8c730"
+  },
+  "full_frames": {
+   "n": 1,
+   "frame_numbers_of_the_equilibration_series": [
+    0
+   ],
+   "time_ns_of_the_series": [
+    -1.9
+   ],
+   "interval_ps": 100.0,
+   "file": "full_eq01.dcd",
+   "sha256": "8cfbb794b5e4f60104e7e6e3fd34d3e9fef41e1560331f992e08944c2beda8fd"
+  },
+  "temperature_at_the_end_K": 296.29,
+  "note": "time zero of the series is the end of the equilibration, so the first 100 ps after the minimisation are -1.99 to -1.90 ns; the heavy atoms of the solute (protein, zinc, ligand) are held in this step to the coordinates of system.inpcrd, for start X the crystal positions (U = 0.5 k d^2, k = 1000 kJ mol-1 nm-2 = 2.39 kcal mol-1 A-2): far weaker than a zinc bond term, but not negligible beside an angle term at the zinc, so the angles of this step lean towards the crystal; the stages from the fourth on hold no atom of the zinc site"
+ },
+ "gate_GZ": {
+  "n_solute_frames": 10,
+  "n_full_frames": 1,
+  "a_Zn_N2": {
+   "mean_A": 1.91145,
+   "sd_A": 0.043928,
+   "min_A": 1.8526,
+   "max_A": 1.9822,
+   "window_A": [
+    1.83,
+    2.03
+   ],
+   "passed": true
+  },
+  "b_Zn_NHis": {
+   "d_Zn_H94NE2_A": {
+    "mean_A": 1.9983,
+    "sd_A": 0.050259,
+    "min_A": 1.9228,
+    "max_A": 2.063,
+    "window_A": [
+     1.91,
+     2.12
+    ],
+    "passed": true
+   },
+   "d_Zn_H96NE2_A": {
+    "mean_A": 2.10943,
+    "sd_A": 0.065149,
+    "min_A": 2.0009,
+    "max_A": 2.2415,
+    "window_A": [
+     1.91,
+     2.12
+    ],
+    "passed": true
+   },
+   "d_Zn_H119ND1_A": {
+    "mean_A": 2.04783,
+    "sd_A": 0.056922,
+    "min_A": 1.9905,
+    "max_A": 2.1438,
+    "window_A": [
+     1.91,
+     2.12
+    ],
+    "passed": true
+   }
+  },
+  "c_N_Zn_N": {
+   "ang_N2_Zn_H94NE2_deg": {
+    "mean_deg": 113.0803,
+    "sd_deg": 2.527202,
+    "min_deg": 109.661,
+    "max_deg": 117.524,
+    "reference_6RL9_deg": 108.9,
+    "deviation_deg": 4.1803,
+    "window_deg": [
+     98.9,
+     118.9
+    ],
+    "passed": true
+   },
+   "ang_N2_Zn_H96NE2_deg": {
+    "mean_deg": 110.4505,
+    "sd_deg": 2.518171,
+    "min_deg": 106.639,
+    "max_deg": 115.595,
+    "reference_6RL9_deg": 114.3,
+    "deviation_deg": -3.8495,
+    "window_deg": [
+     104.3,
+     124.3
+    ],
+    "passed": true
+   },
+   "ang_N2_Zn_H119ND1_deg": {
+    "mean_deg": 116.3896,
+    "sd_deg": 3.884319,
+    "min_deg": 109.793,
+    "max_deg": 122.228,
+    "reference_6RL9_deg": 116.8,
+    "deviation_deg": -0.4104,
+    "window_deg": [
+     106.8,
+     126.8
+    ],
+    "passed": true
+   },
+   "ang_H94NE2_Zn_H96NE2_deg": {
+    "mean_deg": 103.4364,
+    "sd_deg": 2.744629,
+    "min_deg": 99.986,
+    "max_deg": 108.361,
+    "reference_6RL9_deg": 103.8,
+    "deviation_deg": -0.3636,
+    "window_deg": [
+     93.8,
+     113.8
+    ],
+    "passed": true
+   },
+   "ang_H94NE2_Zn_H119ND1_deg": {
+    "mean_deg": 114.9331,
+    "sd_deg": 2.662689,
+    "min_deg": 108.926,
+    "max_deg": 119.309,
+    "reference_6RL9_deg": 113.6,
+    "deviation_deg": 1.3331,
+    "window_deg": [
+     103.6,
+     123.6
+    ],
+    "passed": true
+   },
+   "ang_H96NE2_Zn_H119ND1_deg": {
+    "mean_deg": 96.0465,
+    "sd_deg": 1.421312,
+    "min_deg": 94.554,
+    "max_deg": 98.775,
+    "reference_6RL9_deg": 98.4,
+    "deviation_deg": -2.3535,
+    "window_deg": [
+     88.4,
+     108.4
+    ],
+    "passed": true
+   }
+  },
+  "d_fifth_ligand": {
+   "limit_max_fraction": 0.05,
+   "solute_frames": {
+    "flag": "fifth_sulfonylO",
+    "count": 0,
+    "n": 10,
+    "fraction": 0.0,
+    "nearest_sulfonyl_O_min_A": 2.6418,
+    "passed": true
+   },
+   "full_frames": {
+    "flag": "fifth_any",
+    "count": 0,
+    "n": 1,
+    "fraction": 0.0,
+    "nearest_O_of_any_kind_min_A": 2.8948,
+    "nearest_water_O_min_A": 3.5169,
+    "nearest_protein_O_min_A": 3.9063,
+    "passed": true
+   },
+   "passed": true
+  },
+  "reported_zn_glu106": {
+   "d_Zn_E106OE1_A": {
+    "mean_A": 4.04856,
+    "min_A": 3.8744,
+    "count_within": 0,
+    "n": 10,
+    "fraction_within": 0.0
+   },
+   "d_Zn_E106OE2_A": {
+    "mean_A": 5.60183,
+    "min_A": 5.4055,
+    "count_within": 0,
+    "n": 10,
+    "fraction_within": 0.0
+   },
+   "note": "reported by name; no criterion",
+   "distance_max_A": 2.6
+  },
+  "passed": true,
+  "failed_parts": [],
+  "verdict": "PASSED"
+ },
+ "for_information": {
+  "note": "for information; no verdict of the gate is taken from these",
+  "minimisation": {
+   "lbfgs_iterations_per_pass": [
+    906,
+    3312,
+    6,
+    7
+   ],
+   "restrained_atoms_displacement_A": {
+    "rms": 0.2842,
+    "max": 1.9312
+   },
+   "monitor_of_the_driver": {
+    "zn_to_lig_N2_A": 1.949,
+    "zn_to_his94_NE2_A": 1.993,
+    "zn_to_his96_NE2_A": 2.105,
+    "zn_to_his119_ND1_A": 2.056
+   },
+   "structure": {
+    "available": true,
+    "file": "/root/cqc-sfa-md/runs/bonded_2s/X0/state_min.xml",
+    "sha256": "b38ffc7cec8972cf920075754d0abe3a21e4280680f70e2ae27e12c6cdbdc9f5",
+    "n_positions_read": 40902,
+    "note": "solute atoms are never wrapped; plain distances",
+    "d_Zn_N2_A": 1.9493,
+    "d_Zn_H94NE2_A": 1.9932,
+    "d_Zn_H96NE2_A": 2.105,
+    "d_Zn_H119ND1_A": 2.0559,
+    "ang_N2_Zn_H94NE2_deg": 111.845,
+    "ang_N2_Zn_H94NE2_deg_minus_6RL9": 2.945,
+    "ang_N2_Zn_H96NE2_deg": 109.855,
+    "ang_N2_Zn_H96NE2_deg_minus_6RL9": -4.445,
+    "ang_N2_Zn_H119ND1_deg": 117.737,
+    "ang_N2_Zn_H119ND1_deg_minus_6RL9": 0.937,
+    "ang_H94NE2_Zn_H96NE2_deg": 102.797,
+    "ang_H94NE2_Zn_H96NE2_deg_minus_6RL9": -1.003,
+    "ang_H94NE2_Zn_H119ND1_deg": 115.094,
+    "ang_H94NE2_Zn_H119ND1_deg_minus_6RL9": 1.494,
+    "ang_H96NE2_Zn_H119ND1_deg": 97.181,
+    "ang_H96NE2_Zn_H119ND1_deg_minus_6RL9": -1.219,
+    "d_Zn_O1_A": 3.9718,
+    "d_Zn_O2_A": 2.8386,
+    "d_Zn_E106OE1_A": 4.0435,
+    "d_Zn_E106OE2_A": 5.5722,
+    "each_value_in_its_window": true
+   }
+  },
+  "frame_at_100_ps_alone": {
+   "n_solute_frames": 1,
+   "n_full_frames": 1,
+   "a_Zn_N2": {
+    "mean_A": 1.8977,
+    "sd_A": null,
+    "min_A": 1.8977,
+    "max_A": 1.8977,
+    "window_A": [
+     1.83,
+     2.03
+    ],
+    "passed": true
+   },
+   "b_Zn_NHis": {
+    "d_Zn_H94NE2_A": {
+     "mean_A": 2.0534,
+     "sd_A": null,
+     "min_A": 2.0534,
+     "max_A": 2.0534,
+     "window_A": [
+      1.91,
+      2.12
+     ],
+     "passed": true
+    },
+    "d_Zn_H96NE2_A": {
+     "mean_A": 2.1095,
+     "sd_A": null,
+     "min_A": 2.1095,
+     "max_A": 2.1095,
+     "window_A": [
+      1.91,
+      2.12
+     ],
+     "passed": true
+    },
+    "d_Zn_H119ND1_A": {
+     "mean_A": 1.9988,
+     "sd_A": null,
+     "min_A": 1.9988,
+     "max_A": 1.9988,
+     "window_A": [
+      1.91,
+      2.12
+     ],
+     "passed": true
+    }
+   },
+   "c_N_Zn_N": {
+    "ang_N2_Zn_H94NE2_deg": {
+     "mean_deg": 114.053,
+     "sd_deg": null,
+     "min_deg": 114.053,
+     "max_deg": 114.053,
+     "reference_6RL9_deg": 108.9,
+     "deviation_deg": 5.153,
+     "window_deg": [
+      98.9,
+      118.9
+     ],
+     "passed": true
+    },
+    "ang_N2_Zn_H96NE2_deg": {
+     "mean_deg": 110.191,
+     "sd_deg": null,
+     "min_deg": 110.191,
+     "max_deg": 110.191,
+     "reference_6RL9_deg": 114.3,
+     "deviation_deg": -4.109,
+     "window_deg": [
+      104.3,
+      124.3
+     ],
+     "passed": true
+    },
+    "ang_N2_Zn_H119ND1_deg": {
+     "mean_deg": 110.97,
+     "sd_deg": null,
+     "min_deg": 110.97,
+     "max_deg": 110.97,
+     "reference_6RL9_deg": 116.8,
+     "deviation_deg": -5.83,
+     "window_deg": [
+      106.8,
+      126.8
+     ],
+     "passed": true
+    },
+    "ang_H94NE2_Zn_H96NE2_deg": {
+     "mean_deg": 108.361,
+     "sd_deg": null,
+     "min_deg": 108.361,
+     "max_deg": 108.361,
+     "reference_6RL9_deg": 103.8,
+     "deviation_deg": 4.561,
+     "window_deg": [
+      93.8,
+      113.8
+     ],
+     "passed": true
+    },
+    "ang_H94NE2_Zn_H119ND1_deg": {
+     "mean_deg": 116.148,
+     "sd_deg": null,
+     "min_deg": 116.148,
+     "max_deg": 116.148,
+     "reference_6RL9_deg": 113.6,
+     "deviation_deg": 2.548,
+     "window_deg": [
+      103.6,
+      123.6
+     ],
+     "passed": true
+    },
+    "ang_H96NE2_Zn_H119ND1_deg": {
+     "mean_deg": 95.433,
+     "sd_deg": null,
+     "min_deg": 95.433,
+     "max_deg": 95.433,
+     "reference_6RL9_deg": 98.4,
+     "deviation_deg": -2.967,
+     "window_deg": [
+      88.4,
+      108.4
+     ],
+     "passed": true
+    }
+   },
+   "d_fifth_ligand": {
+    "limit_max_fraction": 0.05,
+    "solute_frames": {
+     "flag": "fifth_sulfonylO",
+     "count": 0,
+     "n": 1,
+     "fraction": 0.0,
+     "nearest_sulfonyl_O_min_A": 2.8948,
+     "passed": true
+    },
+    "full_frames": {
+     "flag": "fifth_any",
+     "count": 0,
+     "n": 1,
+     "fraction": 0.0,
+     "nearest_O_of_any_kind_min_A": 2.8948,
+     "nearest_water_O_min_A": 3.5169,
+     "nearest_protein_O_min_A": 3.9063,
+     "passed": true
+    },
+    "passed": true
+   },
+   "reported_zn_glu106": {
+    "d_Zn_E106OE1_A": {
+     "mean_A": 4.2534,
+     "min_A": 4.2534,
+     "count_within": 0,
+     "n": 1,
+     "fraction_within": 0.0
+    },
+    "d_Zn_E106OE2_A": {
+     "mean_A": 5.5665,
+     "min_A": 5.5665,
+     "count_within": 0,
+     "n": 1,
+     "fraction_within": 0.0
+    },
+    "note": "reported by name; no criterion",
+    "distance_max_A": 2.6
+   },
+   "passed": true,
+   "failed_parts": []
+  },
+  "by_equilibration_stage": {
+   "stage_1": {
+    "n_solute_frames": 10,
+    "n_full_frames": 1,
+    "a_Zn_N2": {
+     "mean_A": 1.91145,
+     "sd_A": 0.043928,
+     "min_A": 1.8526,
+     "max_A": 1.9822,
+     "window_A": [
+      1.83,
+      2.03
+     ],
+     "passed": true
+    },
+    "b_Zn_NHis": {
+     "d_Zn_H94NE2_A": {
+      "mean_A": 1.9983,
+      "sd_A": 0.050259,
+      "min_A": 1.9228,
+      "max_A": 2.063,
+      "window_A": [
+       1.91,
+       2.12
+      ],
+      "passed": true
+     },
+     "d_Zn_H96NE2_A": {
+      "mean_A": 2.10943,
+      "sd_A": 0.065149,
+      "min_A": 2.0009,
+      "max_A": 2.2415,
+      "window_A": [
+       1.91,
+       2.12
+      ],
+      "passed": true
+     },
+     "d_Zn_H119ND1_A": {
+      "mean_A": 2.04783,
+      "sd_A": 0.056922,
+      "min_A": 1.9905,
+      "max_A": 2.1438,
+      "window_A": [
+       1.91,
+       2.12
+      ],
+      "passed": true
+     }
+    },
+    "c_N_Zn_N": {
+     "ang_N2_Zn_H94NE2_deg": {
+      "mean_deg": 113.0803,
+      "sd_deg": 2.527202,
+      "min_deg": 109.661,
+      "max_deg": 117.524,
+      "reference_6RL9_deg": 108.9,
+      "deviation_deg": 4.1803,
+      "window_deg": [
+       98.9,
+       118.9
+      ],
+      "passed": true
+     },
+     "ang_N2_Zn_H96NE2_deg": {
+      "mean_deg": 110.4505,
+      "sd_deg": 2.518171,
+      "min_deg": 106.639,
+      "max_deg": 115.595,
+      "reference_6RL9_deg": 114.3,
+      "deviation_deg": -3.8495,
+      "window_deg": [
+       104.3,
+       124.3
+      ],
+      "passed": true
+     },
+     "ang_N2_Zn_H119ND1_deg": {
+      "mean_deg": 116.3896,
+      "sd_deg": 3.884319,
+      "min_deg": 109.793,
+      "max_deg": 122.228,
+      "reference_6RL9_deg": 116.8,
+      "deviation_deg": -0.4104,
+      "window_deg": [
+       106.8,
+       126.8
+      ],
+      "passed": true
+     },
+     "ang_H94NE2_Zn_H96NE2_deg": {
+      "mean_deg": 103.4364,
+      "sd_deg": 2.744629,
+      "min_deg": 99.986,
+      "max_deg": 108.361,
+      "reference_6RL9_deg": 103.8,
+      "deviation_deg": -0.3636,
+      "window_deg": [
+       93.8,
+       113.8
+      ],
+      "passed": true
+     },
+     "ang_H94NE2_Zn_H119ND1_deg": {
+      "mean_deg": 114.9331,
+      "sd_deg": 2.662689,
+      "min_deg": 108.926,
+      "max_deg": 119.309,
+      "reference_6RL9_deg": 113.6,
+      "deviation_deg": 1.3331,
+      "window_deg": [
+       103.6,
+       123.6
+      ],
+      "passed": true
+     },
+     "ang_H96NE2_Zn_H119ND1_deg": {
+      "mean_deg": 96.0465,
+      "sd_deg": 1.421312,
+      "min_deg": 94.554,
+      "max_deg": 98.775,
+      "reference_6RL9_deg": 98.4,
+      "deviation_deg": -2.3535,
+      "window_deg": [
+       88.4,
+       108.4
+      ],
+      "passed": true
+     }
+    },
+    "d_fifth_ligand": {
+     "limit_max_fraction": 0.05,
+     "solute_frames": {
+      "flag": "fifth_sulfonylO",
+      "count": 0,
+      "n": 10,
+      "fraction": 0.0,
+      "nearest_sulfonyl_O_min_A": 2.6418,
+      "passed": true
+     },
+     "full_frames": {
+      "flag": "fifth_any",
+      "count": 0,
+      "n": 1,
+      "fraction": 0.0,
+      "nearest_O_of_any_kind_min_A": 2.8948,
+      "nearest_water_O_min_A": 3.5169,
+      "nearest_protein_O_min_A": 3.9063,
+      "passed": true
+     },
+     "passed": true
+    },
+    "reported_zn_glu106": {
+     "d_Zn_E106OE1_A": {
+      "mean_A": 4.04856,
+      "min_A": 3.8744,
+      "count_within": 0,
+      "n": 10,
+      "fraction_within": 0.0
+     },
+     "d_Zn_E106OE2_A": {
+      "mean_A": 5.60183,
+      "min_A": 5.4055,
+      "count_within": 0,
+      "n": 10,
+      "fraction_within": 0.0
+     },
+     "note": "reported by name; no criterion",
+     "distance_max_A": 2.6
+    },
+    "passed": true,
+    "failed_parts": [],
+    "settings": {
+     "name": "heat",
+     "ensemble": "NVT",
+     "timestep_fs": 2.0,
+     "n_steps": 50000,
+     "length_ps": 100.0,
+     "temperature_K": [
+      50.0,
+      300.0
+     ],
+     "restraint_atoms": "solute_heavy",
+     "restraint_k_kj_per_mol_nm2": 1000.0,
+     "n_restrained_atoms": 2074,
+     "barostat": false
+    },
+    "includes_extension_steps": false
+   },
+   "stage_2": {
+    "n_solute_frames": 30,
+    "n_full_frames": 3,
+    "a_Zn_N2": {
+     "mean_A": 1.925853,
+     "sd_A": 0.040801,
+     "min_A": 1.8157,
+     "max_A": 2.0034,
+     "window_A": [
+      1.83,
+      2.03
+     ],
+     "passed": true
+    },
+    "b_Zn_NHis": {
+     "d_Zn_H94NE2_A": {
+      "mean_A": 1.990647,
+      "sd_A": 0.052542,
+      "min_A": 1.8904,
+      "max_A": 2.0998,
+      "window_A": [
+       1.91,
+       2.12
+      ],
+      "passed": true
+     },
+     "d_Zn_H96NE2_A": {
+      "mean_A": 2.102763,
+      "sd_A": 0.066173,
+      "min_A": 1.9761,
+      "max_A": 2.2218,
+      "window_A": [
+       1.91,
+       2.12
+      ],
+      "passed": true
+     },
+     "d_Zn_H119ND1_A": {
+      "mean_A": 2.022533,
+      "sd_A": 0.066427,
+      "min_A": 1.9077,
+      "max_A": 2.1908,
+      "window_A": [
+       1.91,
+       2.12
+      ],
+      "passed": true
+     }
+    },
+    "c_N_Zn_N": {
+     "ang_N2_Zn_H94NE2_deg": {
+      "mean_deg": 112.641067,
+      "sd_deg": 3.469422,
+      "min_deg": 107.838,
+      "max_deg": 119.992,
+      "reference_6RL9_deg": 108.9,
+      "deviation_deg": 3.741067,
+      "window_deg": [
+       98.9,
+       118.9
+      ],
+      "passed": true
+     },
+     "ang_N2_Zn_H96NE2_deg": {
+      "mean_deg": 110.0728,
+      "sd_deg": 3.383443,
+      "min_deg": 104.154,
+      "max_deg": 116.006,
+      "reference_6RL9_deg": 114.3,
+      "deviation_deg": -4.2272,
+      "window_deg": [
+       104.3,
+       124.3
+      ],
+      "passed": true
+     },
+     "ang_N2_Zn_H119ND1_deg": {
+      "mean_deg": 117.191567,
+      "sd_deg": 4.548766,
+      "min_deg": 107.126,
+      "max_deg": 124.158,
+      "reference_6RL9_deg": 116.8,
+      "deviation_deg": 0.391567,
+      "window_deg": [
+       106.8,
+       126.8
+      ],
+      "passed": true
+     },
+     "ang_H94NE2_Zn_H96NE2_deg": {
+      "mean_deg": 102.32,
+      "sd_deg": 2.825332,
+      "min_deg": 97.327,
+      "max_deg": 108.169,
+      "reference_6RL9_deg": 103.8,
+      "deviation_deg": -1.48,
+      "window_deg": [
+       93.8,
+       113.8
+      ],
+      "passed": true
+     },
+     "ang_H94NE2_Zn_H119ND1_deg": {
+      "mean_deg": 115.771833,
+      "sd_deg": 3.808454,
+      "min_deg": 108.413,
+      "max_deg": 120.507,
+      "reference_6RL9_deg": 113.6,
+      "deviation_deg": 2.171833,
+      "window_deg": [
+       103.6,
+       123.6
+      ],
+      "passed": true
+     },
+     "ang_H96NE2_Zn_H119ND1_deg": {
+      "mean_deg": 95.718633,
+      "sd_deg": 3.733116,
+      "min_deg": 89.314,
+      "max_deg": 106.608,
+      "reference_6RL9_deg": 98.4,
+      "deviation_deg": -2.681367,
+      "window_deg": [
+       88.4,
+       108.4
+      ],
+      "passed": true
+     }
+    },
+    "d_fifth_ligand": {
+     "limit_max_fraction": 0.05,
+     "solute_frames": {
+      "flag": "fifth_sulfonylO",
+      "count": 2,
+      "n": 30,
+      "fraction": 0.066667,
+      "nearest_sulfonyl_O_min_A": 2.5123,
+      "passed": false
+     },
+     "full_frames": {
+      "flag": "fifth_any",
+      "count": 0,
+      "n": 3,
+      "fraction": 0.0,
+      "nearest_O_of_any_kind_min_A": 2.7555,
+      "nearest_water_O_min_A": 3.511,
+      "nearest_protein_O_min_A": 3.8238,
+      "passed": true
+     },
+     "passed": false
+    },
+    "reported_zn_glu106": {
+     "d_Zn_E106OE1_A": {
+      "mean_A": 4.177343,
+      "min_A": 3.9447,
+      "count_within": 0,
+      "n": 30,
+      "fraction_within": 0.0
+     },
+     "d_Zn_E106OE2_A": {
+      "mean_A": 5.628397,
+      "min_A": 5.2764,
+      "count_within": 0,
+      "n": 30,
+      "fraction_within": 0.0
+     },
+     "note": "reported by name; no criterion",
+     "distance_max_A": 2.6
+    },
+    "passed": false,
+    "failed_parts": [
+     "d: fifth ligand"
+    ],
+    "settings": {
+     "name": "density",
+     "ensemble": "NPT",
+     "timestep_fs": 2.0,
+     "n_steps": 150000,
+     "length_ps": 300.0,
+     "temperature_K": 300.0,
+     "restraint_atoms": "solute_heavy",
+     "restraint_k_kj_per_mol_nm2": 1000.0,
+     "n_restrained_atoms": 2074,
+     "barostat": true
+    },
+    "includes_extension_steps": false
+   },
+   "stage_3": {
+    "n_solute_frames": 30,
+    "n_full_frames": 3,
+    "a_Zn_N2": {
+     "mean_A": 1.96159,
+     "sd_A": 0.050761,
+     "min_A": 1.8701,
+     "max_A": 2.0615,
+     "window_A": [
+      1.83,
+      2.03
+     ],
+     "passed": true
+    },
+    "b_Zn_NHis": {
+     "d_Zn_H94NE2_A": {
+      "mean_A": 2.00624,
+      "sd_A": 0.058795,
+      "min_A": 1.8885,
+      "max_A": 2.1092,
+      "window_A": [
+       1.91,
+       2.12
+      ],
+      "passed": true
+     },
+     "d_Zn_H96NE2_A": {
+      "mean_A": 2.07752,
+      "sd_A": 0.069415,
+      "min_A": 1.9464,
+      "max_A": 2.2011,
+      "window_A": [
+       1.91,
+       2.12
+      ],
+      "passed": true
+     },
+     "d_Zn_H119ND1_A": {
+      "mean_A": 2.040827,
+      "sd_A": 0.077263,
+      "min_A": 1.9223,
+      "max_A": 2.2336,
+      "window_A": [
+       1.91,
+       2.12
+      ],
+      "passed": true
+     }
+    },
+    "c_N_Zn_N": {
+     "ang_N2_Zn_H94NE2_deg": {
+      "mean_deg": 110.981067,
+      "sd_deg": 2.969384,
+      "min_deg": 104.071,
+      "max_deg": 117.332,
+      "reference_6RL9_deg": 108.9,
+      "deviation_deg": 2.081067,
+      "window_deg": [
+       98.9,
+       118.9
+      ],
+      "passed": true
+     },
+     "ang_N2_Zn_H96NE2_deg": {
+      "mean_deg": 110.244433,
+      "sd_deg": 3.282866,
+      "min_deg": 104.144,
+      "max_deg": 115.797,
+      "reference_6RL9_deg": 114.3,
+      "deviation_deg": -4.055567,
+      "window_deg": [
+       104.3,
+       124.3
+      ],
+      "passed": true
+     },
+     "ang_N2_Zn_H119ND1_deg": {
+      "mean_deg": 115.841633,
+      "sd_deg": 4.61063,
+      "min_deg": 105.525,
+      "max_deg": 127.676,
+      "reference_6RL9_deg": 116.8,
+      "deviation_deg": -0.958367,
+      "window_deg": [
+       106.8,
+       126.8
+      ],
+      "passed": true
+     },
+     "ang_H94NE2_Zn_H96NE2_deg": {
+      "mean_deg": 102.959167,
+      "sd_deg": 3.908786,
+      "min_deg": 95.205,
+      "max_deg": 110.57,
+      "reference_6RL9_deg": 103.8,
+      "deviation_deg": -0.840833,
+      "window_deg": [
+       93.8,
+       113.8
+      ],
+      "passed": true
+     },
+     "ang_H94NE2_Zn_H119ND1_deg": {
+      "mean_deg": 117.242267,
+      "sd_deg": 3.776194,
+      "min_deg": 108.845,
+      "max_deg": 124.228,
+      "reference_6RL9_deg": 113.6,
+      "deviation_deg": 3.642267,
+      "window_deg": [
+       103.6,
+       123.6
+      ],
+      "passed": true
+     },
+     "ang_H96NE2_Zn_H119ND1_deg": {
+      "mean_deg": 97.258367,
+      "sd_deg": 3.365836,
+      "min_deg": 88.445,
+      "max_deg": 102.635,
+      "reference_6RL9_deg": 98.4,
+      "deviation_deg": -1.141633,
+      "window_deg": [
+       88.4,
+       108.4
+      ],
+      "passed": true
+     }
+    },
+    "d_fifth_ligand": {
+     "limit_max_fraction": 0.05,
+     "solute_frames": {
+      "flag": "fifth_sulfonylO",
+      "count": 1,
+      "n": 30,
+      "fraction": 0.033333,
+      "nearest_sulfonyl_O_min_A": 2.5609,
+      "passed": true
+     },
+     "full_frames": {
+      "flag": "fifth_any",
+      "count": 0,
+      "n": 3,
+      "fraction": 0.0,
+      "nearest_O_of_any_kind_min_A": 2.6449,
+      "nearest_water_O_min_A": 3.5568,
+      "nearest_protein_O_min_A": 3.7482,
+      "passed": true
+     },
+     "passed": true
+    },
+    "reported_zn_glu106": {
+     "d_Zn_E106OE1_A": {
+      "mean_A": 4.117137,
+      "min_A": 3.8193,
+      "count_within": 0,
+      "n": 30,
+      "fraction_within": 0.0
+     },
+     "d_Zn_E106OE2_A": {
+      "mean_A": 5.640083,
+      "min_A": 5.2242,
+      "count_within": 0,
+      "n": 30,
+      "fraction_within": 0.0
+     },
+     "note": "reported by name; no criterion",
+     "distance_max_A": 2.6
+    },
+    "passed": true,
+    "failed_parts": [],
+    "settings": {
+     "name": "loosen",
+     "ensemble": "NPT",
+     "timestep_fs": 2.0,
+     "n_steps": 150000,
+     "length_ps": 300.0,
+     "temperature_K": 300.0,
+     "restraint_atoms": "solute_heavy",
+     "restraint_k_kj_per_mol_nm2": 250.0,
+     "n_restrained_atoms": 2074,
+     "barostat": true
+    },
+    "includes_extension_steps": false
+   },
+   "stage_4": {
+    "n_solute_frames": 40,
+    "n_full_frames": 4,
+    "a_Zn_N2": {
+     "mean_A": 1.948585,
+     "sd_A": 0.055714,
+     "min_A": 1.8085,
+     "max_A": 2.1353,
+     "window_A": [
+      1.83,
+      2.03
+     ],
+     "passed": true
+    },
+    "b_Zn_NHis": {
+     "d_Zn_H94NE2_A": {
+      "mean_A": 2.006727,
+      "sd_A": 0.066699,
+      "min_A": 1.863,
+      "max_A": 2.1239,
+      "window_A": [
+       1.91,
+       2.12
+      ],
+      "passed": true
+     },
+     "d_Zn_H96NE2_A": {
+      "mean_A": 2.105548,
+      "sd_A": 0.06155,
+      "min_A": 1.9832,
+      "max_A": 2.242,
+      "window_A": [
+       1.91,
+       2.12
+      ],
+      "passed": true
+     },
+     "d_Zn_H119ND1_A": {
+      "mean_A": 2.078073,
+      "sd_A": 0.064269,
+      "min_A": 1.9386,
+      "max_A": 2.2323,
+      "window_A": [
+       1.91,
+       2.12
+      ],
+      "passed": true
+     }
+    },
+    "c_N_Zn_N": {
+     "ang_N2_Zn_H94NE2_deg": {
+      "mean_deg": 112.66485,
+      "sd_deg": 3.49448,
+      "min_deg": 105.51,
+      "max_deg": 120.054,
+      "reference_6RL9_deg": 108.9,
+      "deviation_deg": 3.76485,
+      "window_deg": [
+       98.9,
+       118.9
+      ],
+      "passed": true
+     },
+     "ang_N2_Zn_H96NE2_deg": {
+      "mean_deg": 107.618975,
+      "sd_deg": 3.427619,
+      "min_deg": 95.618,
+      "max_deg": 115.546,
+      "reference_6RL9_deg": 114.3,
+      "deviation_deg": -6.681025,
+      "window_deg": [
+       104.3,
+       124.3
+      ],
+      "passed": true
+     },
+     "ang_N2_Zn_H119ND1_deg": {
+      "mean_deg": 118.99785,
+      "sd_deg": 4.64341,
+      "min_deg": 107.495,
+      "max_deg": 129.345,
+      "reference_6RL9_deg": 116.8,
+      "deviation_deg": 2.19785,
+      "window_deg": [
+       106.8,
+       126.8
+      ],
+      "passed": true
+     },
+     "ang_H94NE2_Zn_H96NE2_deg": {
+      "mean_deg": 99.99265,
+      "sd_deg": 3.441033,
+      "min_deg": 93.712,
+      "max_deg": 107.439,
+      "reference_6RL9_deg": 103.8,
+      "deviation_deg": -3.80735,
+      "window_deg": [
+       93.8,
+       113.8
+      ],
+      "passed": true
+     },
+     "ang_H94NE2_Zn_H119ND1_deg": {
+      "mean_deg": 115.5658,
+      "sd_deg": 3.220444,
+      "min_deg": 108.723,
+      "max_deg": 123.527,
+      "reference_6RL9_deg": 113.6,
+      "deviation_deg": 1.9658,
+      "window_deg": [
+       103.6,
+       123.6
+      ],
+      "passed": true
+     },
+     "ang_H96NE2_Zn_H119ND1_deg": {
+      "mean_deg": 97.974725,
+      "sd_deg": 3.903258,
+      "min_deg": 89.241,
+      "max_deg": 104.944,
+      "reference_6RL9_deg": 98.4,
+      "deviation_deg": -0.425275,
+      "window_deg": [
+       88.4,
+       108.4
+      ],
+      "passed": true
+     }
+    },
+    "d_fifth_ligand": {
+     "limit_max_fraction": 0.05,
+     "solute_frames": {
+      "flag": "fifth_sulfonylO",
+      "count": 0,
+      "n": 40,
+      "fraction": 0.0,
+      "nearest_sulfonyl_O_min_A": 2.6805,
+      "passed": true
+     },
+     "full_frames": {
+      "flag": "fifth_any",
+      "count": 0,
+      "n": 4,
+      "fraction": 0.0,
+      "nearest_O_of_any_kind_min_A": 2.728,
+      "nearest_water_O_min_A": 3.4797,
+      "nearest_protein_O_min_A": 3.8728,
+      "passed": true
+     },
+     "passed": true
+    },
+    "reported_zn_glu106": {
+     "d_Zn_E106OE1_A": {
+      "mean_A": 4.106015,
+      "min_A": 3.7711,
+      "count_within": 0,
+      "n": 40,
+      "fraction_within": 0.0
+     },
+     "d_Zn_E106OE2_A": {
+      "mean_A": 5.775713,
+      "min_A": 5.2275,
+      "count_within": 0,
+      "n": 40,
+      "fraction_within": 0.0
+     },
+     "note": "reported by name; no criterion",
+     "distance_max_A": 2.6
+    },
+    "passed": true,
+    "failed_parts": [],
+    "settings": {
+     "name": "release_side_chains_zinc_ligand",
+     "ensemble": "NPT",
+     "timestep_fs": 4.0,
+     "n_steps": 100000,
+     "length_ps": 400.0,
+     "temperature_K": 300.0,
+     "restraint_atoms": "protein_backbone",
+     "restraint_k_kj_per_mol_nm2": 250.0,
+     "n_restrained_atoms": 1034,
+     "barostat": true
+    },
+    "includes_extension_steps": false
+   },
+   "stage_5": {
+    "n_solute_frames": 40,
+    "n_full_frames": 4,
+    "a_Zn_N2": {
+     "mean_A": 1.950617,
+     "sd_A": 0.051216,
+     "min_A": 1.8735,
+     "max_A": 2.0595,
+     "window_A": [
+      1.83,
+      2.03
+     ],
+     "passed": true
+    },
+    "b_Zn_NHis": {
+     "d_Zn_H94NE2_A": {
+      "mean_A": 2.007998,
+      "sd_A": 0.058337,
+      "min_A": 1.8371,
+      "max_A": 2.1168,
+      "window_A": [
+       1.91,
+       2.12
+      ],
+      "passed": true
+     },
+     "d_Zn_H96NE2_A": {
+      "mean_A": 2.086385,
+      "sd_A": 0.069368,
+      "min_A": 1.961,
+      "max_A": 2.2186,
+      "window_A": [
+       1.91,
+       2.12
+      ],
+      "passed": true
+     },
+     "d_Zn_H119ND1_A": {
+      "mean_A": 2.062588,
+      "sd_A": 0.069318,
+      "min_A": 1.88,
+      "max_A": 2.1833,
+      "window_A": [
+       1.91,
+       2.12
+      ],
+      "passed": true
+     }
+    },
+    "c_N_Zn_N": {
+     "ang_N2_Zn_H94NE2_deg": {
+      "mean_deg": 112.07275,
+      "sd_deg": 4.291456,
+      "min_deg": 103.497,
+      "max_deg": 122.235,
+      "reference_6RL9_deg": 108.9,
+      "deviation_deg": 3.17275,
+      "window_deg": [
+       98.9,
+       118.9
+      ],
+      "passed": true
+     },
+     "ang_N2_Zn_H96NE2_deg": {
+      "mean_deg": 108.4582,
+      "sd_deg": 3.490748,
+      "min_deg": 98.812,
+      "max_deg": 115.1,
+      "reference_6RL9_deg": 114.3,
+      "deviation_deg": -5.8418,
+      "window_deg": [
+       104.3,
+       124.3
+      ],
+      "passed": true
+     },
+     "ang_N2_Zn_H119ND1_deg": {
+      "mean_deg": 119.687125,
+      "sd_deg": 4.41377,
+      "min_deg": 109.299,
+      "max_deg": 129.389,
+      "reference_6RL9_deg": 116.8,
+      "deviation_deg": 2.887125,
+      "window_deg": [
+       106.8,
+       126.8
+      ],
+      "passed": true
+     },
+     "ang_H94NE2_Zn_H96NE2_deg": {
+      "mean_deg": 102.145925,
+      "sd_deg": 4.036797,
+      "min_deg": 91.748,
+      "max_deg": 109.889,
+      "reference_6RL9_deg": 103.8,
+      "deviation_deg": -1.654075,
+      "window_deg": [
+       93.8,
+       113.8
+      ],
+      "passed": true
+     },
+     "ang_H94NE2_Zn_H119ND1_deg": {
+      "mean_deg": 114.77105,
+      "sd_deg": 3.952863,
+      "min_deg": 108.227,
+      "max_deg": 123.705,
+      "reference_6RL9_deg": 113.6,
+      "deviation_deg": 1.17105,
+      "window_deg": [
+       103.6,
+       123.6
+      ],
+      "passed": true
+     },
+     "ang_H96NE2_Zn_H119ND1_deg": {
+      "mean_deg": 96.039525,
+      "sd_deg": 3.505809,
+      "min_deg": 90.106,
+      "max_deg": 104.431,
+      "reference_6RL9_deg": 98.4,
+      "deviation_deg": -2.360475,
+      "window_deg": [
+       88.4,
+       108.4
+      ],
+      "passed": true
+     }
+    },
+    "d_fifth_ligand": {
+     "limit_max_fraction": 0.05,
+     "solute_frames": {
+      "flag": "fifth_sulfonylO",
+      "count": 1,
+      "n": 40,
+      "fraction": 0.025,
+      "nearest_sulfonyl_O_min_A": 2.5534,
+      "passed": true
+     },
+     "full_frames": {
+      "flag": "fifth_any",
+      "count": 0,
+      "n": 4,
+      "fraction": 0.0,
+      "nearest_O_of_any_kind_min_A": 2.6957,
+      "nearest_water_O_min_A": 3.3365,
+      "nearest_protein_O_min_A": 3.7652,
+      "passed": true
+     },
+     "passed": true
+    },
+    "reported_zn_glu106": {
+     "d_Zn_E106OE1_A": {
+      "mean_A": 4.167563,
+      "min_A": 3.7905,
+      "count_within": 0,
+      "n": 40,
+      "fraction_within": 0.0
+     },
+     "d_Zn_E106OE2_A": {
+      "mean_A": 5.658402,
+      "min_A": 5.1569,
+      "count_within": 0,
+      "n": 40,
+      "fraction_within": 0.0
+     },
+     "note": "reported by name; no criterion",
+     "distance_max_A": 2.6
+    },
+    "passed": true,
+    "failed_parts": [],
+    "settings": {
+     "name": "loosen_backbone",
+     "ensemble": "NPT",
+     "timestep_fs": 4.0,
+     "n_steps": 100000,
+     "length_ps": 400.0,
+     "temperature_K": 300.0,
+     "restraint_atoms": "protein_backbone",
+     "restraint_k_kj_per_mol_nm2": 50.0,
+     "n_restrained_atoms": 1034,
+     "barostat": true
+    },
+    "includes_extension_steps": false
+   },
+   "stage_6": {
+    "n_solute_frames": 50,
+    "n_full_frames": 5,
+    "a_Zn_N2": {
+     "mean_A": 1.968646,
+     "sd_A": 0.046344,
+     "min_A": 1.8802,
+     "max_A": 2.0545,
+     "window_A": [
+      1.83,
+      2.03
+     ],
+     "passed": true
+    },
+    "b_Zn_NHis": {
+     "d_Zn_H94NE2_A": {
+      "mean_A": 2.029372,
+      "sd_A": 0.056428,
+      "min_A": 1.9147,
+      "max_A": 2.1453,
+      "window_A": [
+       1.91,
+       2.12
+      ],
+      "passed": true
+     },
+     "d_Zn_H96NE2_A": {
+      "mean_A": 2.105744,
+      "sd_A": 0.067211,
+      "min_A": 1.9314,
+      "max_A": 2.2667,
+      "window_A": [
+       1.91,
+       2.12
+      ],
+      "passed": true
+     },
+     "d_Zn_H119ND1_A": {
+      "mean_A": 2.057346,
+      "sd_A": 0.063263,
+      "min_A": 1.8793,
+      "max_A": 2.1824,
+      "window_A": [
+       1.91,
+       2.12
+      ],
+      "passed": true
+     }
+    },
+    "c_N_Zn_N": {
+     "ang_N2_Zn_H94NE2_deg": {
+      "mean_deg": 112.24892,
+      "sd_deg": 3.817432,
+      "min_deg": 105.31,
+      "max_deg": 122.118,
+      "reference_6RL9_deg": 108.9,
+      "deviation_deg": 3.34892,
+      "window_deg": [
+       98.9,
+       118.9
+      ],
+      "passed": true
+     },
+     "ang_N2_Zn_H96NE2_deg": {
+      "mean_deg": 108.39894,
+      "sd_deg": 3.897181,
+      "min_deg": 100.395,
+      "max_deg": 118.115,
+      "reference_6RL9_deg": 114.3,
+      "deviation_deg": -5.90106,
+      "window_deg": [
+       104.3,
+       124.3
+      ],
+      "passed": true
+     },
+     "ang_N2_Zn_H119ND1_deg": {
+      "mean_deg": 118.53924,
+      "sd_deg": 4.528482,
+      "min_deg": 107.644,
+      "max_deg": 129.864,
+      "reference_6RL9_deg": 116.8,
+      "deviation_deg": 1.73924,
+      "window_deg": [
+       106.8,
+       126.8
+      ],
+      "passed": true
+     },
+     "ang_H94NE2_Zn_H96NE2_deg": {
+      "mean_deg": 102.62408,
+      "sd_deg": 3.979411,
+      "min_deg": 94.406,
+      "max_deg": 112.887,
+      "reference_6RL9_deg": 103.8,
+      "deviation_deg": -1.17592,
+      "window_deg": [
+       93.8,
+       113.8
+      ],
+      "passed": true
+     },
+     "ang_H94NE2_Zn_H119ND1_deg": {
+      "mean_deg": 114.89628,
+      "sd_deg": 4.532645,
+      "min_deg": 103.214,
+      "max_deg": 121.309,
+      "reference_6RL9_deg": 113.6,
+      "deviation_deg": 1.29628,
+      "window_deg": [
+       103.6,
+       123.6
+      ],
+      "passed": true
+     },
+     "ang_H96NE2_Zn_H119ND1_deg": {
+      "mean_deg": 96.94058,
+      "sd_deg": 4.429657,
+      "min_deg": 88.553,
+      "max_deg": 108.015,
+      "reference_6RL9_deg": 98.4,
+      "deviation_deg": -1.45942,
+      "window_deg": [
+       88.4,
+       108.4
+      ],
+      "passed": true
+     }
+    },
+    "d_fifth_ligand": {
+     "limit_max_fraction": 0.05,
+     "solute_frames": {
+      "flag": "fifth_sulfonylO",
+      "count": 1,
+      "n": 50,
+      "fraction": 0.02,
+      "nearest_sulfonyl_O_min_A": 2.5915,
+      "passed": true
+     },
+     "full_frames": {
+      "flag": "fifth_any",
+      "count": 0,
+      "n": 5,
+      "fraction": 0.0,
+      "nearest_O_of_any_kind_min_A": 2.645,
+      "nearest_water_O_min_A": 3.5387,
+      "nearest_protein_O_min_A": 3.6762,
+      "passed": true
+     },
+     "passed": true
+    },
+    "reported_zn_glu106": {
+     "d_Zn_E106OE1_A": {
+      "mean_A": 4.197532,
+      "min_A": 3.6762,
+      "count_within": 0,
+      "n": 50,
+      "fraction_within": 0.0
+     },
+     "d_Zn_E106OE2_A": {
+      "mean_A": 5.657324,
+      "min_A": 5.1449,
+      "count_within": 0,
+      "n": 50,
+      "fraction_within": 0.0
+     },
+     "note": "reported by name; no criterion",
+     "distance_max_A": 2.6
+    },
+    "passed": true,
+    "failed_parts": [],
+    "settings": {
+     "name": "free",
+     "ensemble": "NPT",
+     "timestep_fs": 4.0,
+     "n_steps": 125000,
+     "length_ps": 500.0,
+     "temperature_K": 300.0,
+     "restraint_atoms": "none",
+     "restraint_k_kj_per_mol_nm2": 0.0,
+     "n_restrained_atoms": 0,
+     "barostat": true
+    },
+    "includes_extension_steps": false
+   }
+  },
+  "production_GV3_of_gate_GV": {
+   "file": "/root/cqc-sfa-md/runs/bonded_2s/X0/analysis/summary.json",
+   "sha256": "8c44fb2d3ab2aaf2231c5152931351a2b868e38309877ce1be8da4c7dda7dff9",
+   "GV3_zinc": {
+    "criteria": {
+     "d_Zn_N2_A": {
+      "mean_A": 1.952221,
+      "window_A": [
+       1.83,
+       2.03
+      ],
+      "passed": true
+     },
+     "d_Zn_H94NE2_A": {
+      "mean_A": 2.017209,
+      "window_A": [
+       1.91,
+       2.12
+      ],
+      "passed": true
+     },
+     "d_Zn_H96NE2_A": {
+      "mean_A": 2.096659,
+      "window_A": [
+       1.91,
+       2.12
+      ],
+      "passed": true
+     },
+     "d_Zn_H119ND1_A": {
+      "mean_A": 2.054899,
+      "window_A": [
+       1.91,
+       2.12
+      ],
+      "passed": true
+     },
+     "ang_N2_Zn_H94NE2_deg": {
+      "mean_deg": 113.239917,
+      "reference_6RL9_deg": 108.9,
+      "tolerance_deg": 10.0,
+      "deviation_deg": 4.339917,
+      "window_deg": [
+       98.9,
+       118.9
+      ],
+      "passed": true
+     },
+     "ang_N2_Zn_H96NE2_deg": {
+      "mean_deg": 107.957375,
+      "reference_6RL9_deg": 114.3,
+      "tolerance_deg": 10.0,
+      "deviation_deg": -6.342625,
+      "window_deg": [
+       104.3,
+       124.3
+      ],
+      "passed": true
+     },
+     "ang_N2_Zn_H119ND1_deg": {
+      "mean_deg": 118.493403,
+      "reference_6RL9_deg": 116.8,
+      "tolerance_deg": 10.0,
+      "deviation_deg": 1.693403,
+      "window_deg": [
+       106.8,
+       126.8
+      ],
+      "passed": true
+     },
+     "ang_H94NE2_Zn_H96NE2_deg": {
+      "mean_deg": 101.700238,
+      "reference_6RL9_deg": 103.8,
+      "tolerance_deg": 10.0,
+      "deviation_deg": -2.099762,
+      "window_deg": [
+       93.8,
+       113.8
+      ],
+      "passed": true
+     },
+     "ang_H94NE2_Zn_H119ND1_deg": {
+      "mean_deg": 115.046929,
+      "reference_6RL9_deg": 113.6,
+      "tolerance_deg": 10.0,
+      "deviation_deg": 1.446929,
+      "window_deg": [
+       103.6,
+       123.6
+      ],
+      "passed": true
+     },
+     "ang_H96NE2_Zn_H119ND1_deg": {
+      "mean_deg": 96.633566,
+      "reference_6RL9_deg": 98.4,
+      "tolerance_deg": 10.0,
+      "deviation_deg": -1.766434,
+      "window_deg": [
+       88.4,
+       108.4
+      ],
+      "passed": true
+     },
+     "fifth_ligand": {
+      "limit_max_fraction": 0.05,
+      "solute_trajectory": {
+       "flag": "fifth_sulfonylO",
+       "count": 13,
+       "n": 500,
+       "fraction": 0.026,
+       "passed": true
+      },
+      "full_trajectory": {
+       "flag": "fifth_any",
+       "available": true,
+       "count": 3,
+       "n": 50,
+       "fraction": 0.06,
+       "passed": false
+      },
+      "passed": false
+     }
+    },
+    "passed": false
+   }
+  }
+ }
+}

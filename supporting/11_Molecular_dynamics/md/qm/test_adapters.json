@@ -1,0 +1,223 @@
+{
+ "seed": 20261005,
+ "all_passed": true,
+ "results": [
+  {
+   "test": "T1 .com reader, small model",
+   "passed": true,
+   "natm": 64,
+   "charge": 1,
+   "multiplicity": 1,
+   "elements_match_pdb": true,
+   "max_coordinate_difference_to_pdb": 0.0
+  },
+  {
+   "test": "T1 .com reader, large model",
+   "passed": true,
+   "natm": 101,
+   "charge": 1,
+   "multiplicity": 1,
+   "elements_match_pdb": true,
+   "max_coordinate_difference_to_pdb": 0.0,
+   "radii": {
+    "Zn": 1.456
+   },
+   "iop": {
+    "6/33": 2,
+    "6/42": 6
+   },
+   "n_frozen": 0
+  },
+  {
+   "test": "T1 .com reader, force-constant input",
+   "passed": true,
+   "route": "# B3LYP/6-31G* Opt=CalcAll Geom=AllCheckpoint Guess=Read Integral=(Grid=UltraFine) IOp(7/33=1)"
+  },
+  {
+   "test": "T1 .com reader, flagged atoms (large_opt 1 form)",
+   "passed": true,
+   "frozen": [
+    false,
+    true
+   ]
+  },
+  {
+   "test": "T2 fchk round trip through pymsmt, random arrays, 2-101 atoms",
+   "passed": true,
+   "largest_relative_error_coordinates": 1.2495329215767015e-09,
+   "largest_relative_error_hessian": 4.506286429078473e-09,
+   "largest_relative_error_own_reader": 4.506286429078473e-09
+  },
+  {
+   "test": "T2 fchk lower-triangle order",
+   "passed": true,
+   "first_six_numbers": [
+    0.0,
+    1000.0,
+    1001.0,
+    2000.0,
+    2001.0,
+    2002.0
+   ]
+  },
+  {
+   "test": "T2 fchk refuses a non-symmetric matrix",
+   "passed": true,
+   "message": "Hessian is not symmetric: largest |H - H^T| = 1.000e+00 Hartree/Bohr^2"
+  },
+  {
+   "test": "T3 units, diatomic through fchk and MCPB.py Seminario",
+   "passed": true,
+   "force_constant_in": 123.4,
+   "force_constant_out": 123.4,
+   "distance_in": 2.015,
+   "distance_out": 2.015
+  },
+  {
+   "test": "T3 bent triatomic with bond and angle terms: file route (pymsmt) equals array route (own code)",
+   "passed": true,
+   "bonds_in": [
+    150.0,
+    80.0
+   ],
+   "bonds_out_pymsmt_from_file": [
+    149.626,
+    79.15
+   ],
+   "bonds_out_own_code_from_array": [
+    149.626,
+    79.15
+   ],
+   "angle_constant_in": 40.0,
+   "angle_constant_pymsmt_from_file": 48.303,
+   "angle_constant_own_code_from_array": 48.303,
+   "note": "the angle constant of the method is an estimate; here it is 21 % above the input",
+   "distances_out": [
+    2.02,
+    1.93
+   ],
+   "angle_out": 109.5,
+   "constants": {
+    "B_TO_A": 0.529177249,
+    "H_TO_KCAL_MOL": 627.5095
+   }
+  },
+  {
+   "test": "T3 units, one harmonic angle term through fchk and MCPB.py Seminario against the closed form",
+   "passed": true,
+   "cases": [
+    {
+     "angle_in": 90.0,
+     "angle_out": 90.0,
+     "k_in": 40.0,
+     "k_closed_form": 20.0,
+     "k_pymsmt_from_file": 20.0
+    },
+    {
+     "angle_in": 109.5,
+     "angle_out": 109.5,
+     "k_in": 40.0,
+     "k_closed_form": 26.6796,
+     "k_pymsmt_from_file": 26.6796
+    },
+    {
+     "angle_in": 120.0,
+     "angle_out": 120.0,
+     "k_in": 40.0,
+     "k_closed_form": 30.0035,
+     "k_pymsmt_from_file": 30.0035
+    }
+   ]
+  },
+  {
+   "test": "T4 MK log round trip, small (5 atoms, 37 points)",
+   "passed": true,
+   "pymsmt": {
+    "n_atoms": 5,
+    "n_points": 37,
+    "max_err_atoms_bohr": 1.1204134651165987e-06,
+    "max_err_points_bohr": 1.3505430302984678e-06,
+    "max_err_potential": 4.81612907207718e-07
+   },
+   "espgen": {
+    "n_atoms": 5,
+    "n_points": 37,
+    "max_err_atoms_bohr": 4.6938174875776895e-06,
+    "max_err_points_bohr": 1.4360375445221507e-05,
+    "max_err_potential": 4.81612907207718e-07,
+    "max_difference_to_pymsmt_file": 0.0
+   }
+  },
+  {
+   "test": "T4 MK log round trip, real size (101 atoms, 45000 points)",
+   "passed": true,
+   "pymsmt": {
+    "n_atoms": 101,
+    "n_points": 45000,
+    "max_err_atoms_bohr": 1.377354632126071e-06,
+    "max_err_points_bohr": 1.4419636258367063e-06,
+    "max_err_potential": 4.999879240092514e-07
+   },
+   "espgen": {
+    "n_atoms": 101,
+    "n_points": 45000,
+    "max_err_atoms_bohr": 5.100222622900219e-06,
+    "max_err_points_bohr": 1.4360375445221507e-05,
+    "max_err_potential": 4.999879240092514e-07,
+    "max_difference_to_pymsmt_file": 0.0
+   }
+  },
+  {
+   "test": "T4 MK log round trip, 99,999 points, the limit of the .esp header (12 atoms, 99999 points)",
+   "passed": true,
+   "pymsmt": {
+    "n_atoms": 12,
+    "n_points": 99999,
+    "max_err_atoms_bohr": 1.1500346701609487e-06,
+    "max_err_points_bohr": 1.442388541050832e-06,
+    "max_err_potential": 4.999904505836872e-07
+   },
+   "espgen": {
+    "n_atoms": 12,
+    "n_points": 99999,
+    "max_err_atoms_bohr": 5.0141038414608374e-06,
+    "max_err_points_bohr": 1.4360375445221507e-05,
+    "max_err_potential": 4.999904505836872e-07,
+    "max_difference_to_pymsmt_file": 0.0
+   }
+  },
+  {
+   "test": "T4 MK log writer refuses more than 99,999 points",
+   "passed": true,
+   "message": "100000 fit points: the .esp format of resp holds at most 99,999"
+  },
+  {
+   "test": "T5 Merz-Kollman points of the large model",
+   "passed": true,
+   "n_points": 20357,
+   "per_layer": {
+    "1.4": 4715,
+    "1.6": 4899,
+    "1.8": 5193,
+    "2.0": 5550
+   },
+   "radii_used": {
+    "H": 1.2,
+    "C": 1.5,
+    "O": 1.4,
+    "N": 1.5,
+    "Zn": 1.456,
+    "S": 1.75
+   },
+   "density_per_A2": 6.0,
+   "max_deviation_from_own_sphere": 1.9984014443252818e-15,
+   "nearest_point_to_any_atom_in_units_of_its_radius": 1.3999999999999986,
+   "single_atom_points": 1904,
+   "single_atom_expected_from_area": 1995.0
+  }
+ ],
+ "readers": {
+  "pymsmt": "pymsmt.mol.gauio of AmberTools 26 (MCPB.py version 2026)",
+  "espgen": "/root/cqc-sfa-tools/md/bin/espgen"
+ }
+}

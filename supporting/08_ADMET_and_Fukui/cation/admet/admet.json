@@ -1,0 +1,505 @@
+{
+  "provenance": {
+    "script": "paper/si/compute/admet.py",
+    "argv": [
+      "--tdc-dir",
+      "/tmp/claude-0/-root-workspace/0662f566-95fe-4239-a83c-3d1a6bdb371b/scratchpad/tdc",
+      "--tdc-ids",
+      "molecules/sfa/results/sulfanilamide_pcm_d3/admet/tdc_dataverse_ids.json"
+    ],
+    "finished": "2026-09-28T23:46:32",
+    "versions": {
+      "python": "3.11.16",
+      "rdkit": "2026.03.6",
+      "admet_ai": "1.4.0",
+      "chemprop": "1.6.1",
+      "torch": "2.5.0",
+      "numpy": "1.26.4",
+      "machine": "aarch64",
+      "host": "arya"
+    },
+    "admet_ai_reference_set": "DrugBank approved drugs shipped with ADMET-AI (drugbank_approved.csv), 2579 molecules",
+    "threads": 2
+  },
+  "species": "4-sulfamoylanilinium cation",
+  "role": "reference only: not present at pH 7.4; ADMET-AI endpoints are out of their training domain",
+  "identity": {
+    "smiles_input": "[NH3+]c1ccc(cc1)S(N)(=O)=O",
+    "smiles_canonical": "NS(=O)(=O)c1ccc([NH3+])cc1",
+    "inchikey": "FDDDEECHVMSUSB-UHFFFAOYSA-O",
+    "inchi": "InChI=1S/C6H8N2O2S/c7-5-1-3-6(4-2-5)11(8,9)10/h1-4H,7H2,(H2,8,9,10)/p+1",
+    "dft_geometry": "molecules/sfa/results/cation_pcm_d3/opt.xyz",
+    "dft_geometry_sha256": "834fd35cabe995f09d194ab65e718c9daf4810553dde8798df0915a7c45aec59",
+    "smiles_from_dft_geometry": "NS(=O)(=O)c1ccc([NH3+])cc1",
+    "inchikey_from_dft_geometry": "FDDDEECHVMSUSB-UHFFFAOYSA-O",
+    "identity_ok": true
+  },
+  "rdkit_descriptors": {
+    "MW": 173.21699999999998,
+    "exact_mass": 173.03792494809,
+    "formula": "C6H9N2O2S+",
+    "formal_charge": 1,
+    "heavy_atoms": 11,
+    "atoms_incl_H": 20,
+    "cLogP_Crippen": -0.7926000000000002,
+    "MR_Crippen": 40.3633,
+    "TPSA_NO": 87.79999999999998,
+    "TPSA_NOSP": 96.18,
+    "HBD_Lipinski_NHOH": 5,
+    "HBA_Lipinski_NO": 4,
+    "HBD_RDKit": 2,
+    "HBA_RDKit": 2,
+    "rotatable_bonds": 1,
+    "rings": 1,
+    "aromatic_rings": 1,
+    "Fsp3": 0.0,
+    "QED": 0.5824327009395514
+  },
+  "rules": {
+    "Lipinski": {
+      "MW <= 500": true,
+      "cLogP <= 5": true,
+      "HBD (NH+OH) <= 5": true,
+      "HBA (N+O) <= 10": true
+    },
+    "Veber": {
+      "rotatable bonds <= 10": true,
+      "TPSA <= 140": true
+    },
+    "Ghose": {
+      "-0.4 <= cLogP <= 5.6": false,
+      "40 <= MR <= 130": true,
+      "160 <= MW <= 480": true,
+      "20 <= atoms (incl. H) <= 70": true
+    },
+    "Egan": {
+      "cLogP <= 5.88": true,
+      "TPSA <= 131.6": true
+    }
+  },
+  "rule_summary": {
+    "Lipinski": {
+      "violations": [],
+      "n_violations": 0,
+      "passes": true
+    },
+    "Veber": {
+      "violations": [],
+      "n_violations": 0,
+      "passes": true
+    },
+    "Ghose": {
+      "violations": [
+        "-0.4 <= cLogP <= 5.6"
+      ],
+      "n_violations": 1,
+      "passes": false
+    },
+    "Egan": {
+      "violations": [],
+      "n_violations": 0,
+      "passes": true
+    }
+  },
+  "admet_ai": {
+    "molecular_weight": {
+      "name": "Molecular Weight",
+      "category": "Physicochemical",
+      "task": "regression",
+      "units": "Dalton",
+      "value": 173.21699999999998,
+      "drugbank_percentile": 13.183404420317952
+    },
+    "logP": {
+      "name": "LogP",
+      "category": "Physicochemical",
+      "task": "regression",
+      "units": "log-ratio",
+      "value": -0.7925999999999997,
+      "drugbank_percentile": 16.9445521519969
+    },
+    "hydrogen_bond_acceptors": {
+      "name": "Hydrogen Bond Acceptors",
+      "category": "Physicochemical",
+      "task": "regression",
+      "units": "#",
+      "value": 2.0,
+      "drugbank_percentile": 16.38231872818922
+    },
+    "hydrogen_bond_donors": {
+      "name": "Hydrogen Bond Donors",
+      "category": "Physicochemical",
+      "task": "regression",
+      "units": "#",
+      "value": 2.0,
+      "drugbank_percentile": 60.85692128732067
+    },
+    "Lipinski": {
+      "name": "Lipinski Rule of 5",
+      "category": "Physicochemical",
+      "task": "regression",
+      "units": "# of 4",
+      "value": 4.0,
+      "drugbank_percentile": 63.80379992245056
+    },
+    "QED": {
+      "name": "Quantitative Estimate of Druglikeness (QED)",
+      "category": "Physicochemical",
+      "task": "regression",
+      "units": "-",
+      "value": 0.5824327009395515,
+      "drugbank_percentile": 58.47227607599845
+    },
+    "stereo_centers": {
+      "name": "Stereo Centers",
+      "category": "Physicochemical",
+      "task": "regression",
+      "units": "#",
+      "value": 0.0,
+      "drugbank_percentile": 22.489336952307095
+    },
+    "tpsa": {
+      "name": "Topological Polar Surface Area (TPSA)",
+      "category": "Physicochemical",
+      "task": "regression",
+      "units": "\u00c5^2",
+      "value": 87.80000000000001,
+      "drugbank_percentile": 59.24777045366421
+    },
+    "HIA_Hou": {
+      "name": "Human Intestinal Absorption",
+      "category": "Absorption",
+      "task": "classification",
+      "units": "-",
+      "value": 0.7320739209651947,
+      "drugbank_percentile": 21.32609538580845
+    },
+    "Bioavailability_Ma": {
+      "name": "Oral Bioavailability",
+      "category": "Absorption",
+      "task": "classification",
+      "units": "-",
+      "value": 0.5010904908180237,
+      "drugbank_percentile": 19.50368359829391
+    },
+    "Solubility_AqSolDB": {
+      "name": "Aqueous Solubility",
+      "category": "Absorption",
+      "task": "regression",
+      "units": "log(mol/L)",
+      "value": -1.2070743926761949,
+      "drugbank_percentile": 80.22489336952307
+    },
+    "Lipophilicity_AstraZeneca": {
+      "name": "Lipophilicity",
+      "category": "Absorption",
+      "task": "regression",
+      "units": "log-ratio",
+      "value": -0.035115586564055334,
+      "drugbank_percentile": 25.668863900736717
+    },
+    "HydrationFreeEnergy_FreeSolv": {
+      "name": "Hydration Free Energy",
+      "category": "Absorption",
+      "task": "regression",
+      "units": "kcal/mol",
+      "value": -11.210861083528878,
+      "drugbank_percentile": 34.121752617293524
+    },
+    "Caco2_Wang": {
+      "name": "Cell Effective Permeability",
+      "category": "Absorption",
+      "task": "regression",
+      "units": "log(10^-6 cm/s)",
+      "value": -5.088538668061086,
+      "drugbank_percentile": 43.27258627374951
+    },
+    "PAMPA_NCATS": {
+      "name": "PAMPA Permeability",
+      "category": "Absorption",
+      "task": "classification",
+      "units": "-",
+      "value": 0.3172247802838683,
+      "drugbank_percentile": 26.172935246219463
+    },
+    "Pgp_Broccatelli": {
+      "name": "P-glycoprotein Inhibition",
+      "category": "Absorption",
+      "task": "classification",
+      "units": "-",
+      "value": 0.031164469197392464,
+      "drugbank_percentile": 36.83598293912369
+    },
+    "BBB_Martins": {
+      "name": "Blood-Brain Barrier Penetration",
+      "category": "Distribution",
+      "task": "classification",
+      "units": "-",
+      "value": 0.42414478659629823,
+      "drugbank_percentile": 25.901512214036448
+    },
+    "PPBR_AZ": {
+      "name": "Plasma Protein Binding Rate",
+      "category": "Distribution",
+      "task": "regression",
+      "units": "%",
+      "value": 41.42529902062243,
+      "drugbank_percentile": 15.238464521132222
+    },
+    "VDss_Lombardo": {
+      "name": "Volume of Distribution at Steady State",
+      "category": "Distribution",
+      "task": "regression",
+      "units": "L/kg",
+      "value": -0.18274926227548907,
+      "drugbank_percentile": 34.93602171384257
+    },
+    "Half_Life_Obach": {
+      "name": "Half Life",
+      "category": "Excretion",
+      "task": "regression",
+      "units": "hr",
+      "value": 10.571259838572413,
+      "drugbank_percentile": 55.02132609538581
+    },
+    "Clearance_Hepatocyte_AZ": {
+      "name": "Drug Clearance (Hepatocyte)",
+      "category": "Excretion",
+      "task": "regression",
+      "units": "uL/min/10^6 cells",
+      "value": 2.1370924420985418,
+      "drugbank_percentile": 16.556804963164016
+    },
+    "Clearance_Microsome_AZ": {
+      "name": "Drug Clearance (Microsome)",
+      "category": "Excretion",
+      "task": "regression",
+      "units": "uL/min/mg",
+      "value": -9.3672227311758,
+      "drugbank_percentile": 17.060876308646762
+    },
+    "CYP1A2_Veith": {
+      "name": "CYP1A2 Inhibition",
+      "category": "Metabolism",
+      "task": "classification",
+      "units": "-",
+      "value": 0.005668413534294814,
+      "drugbank_percentile": 27.21985265606824
+    },
+    "CYP2C19_Veith": {
+      "name": "CYP2C19 Inhibition",
+      "category": "Metabolism",
+      "task": "classification",
+      "units": "-",
+      "value": 0.0024867745312803892,
+      "drugbank_percentile": 5.273361768127181
+    },
+    "CYP2C9_Veith": {
+      "name": "CYP2C9 Inhibition",
+      "category": "Metabolism",
+      "task": "classification",
+      "units": "-",
+      "value": 0.0004058610851643607,
+      "drugbank_percentile": 5.0794881737107405
+    },
+    "CYP2D6_Veith": {
+      "name": "CYP2D6 Inhibition",
+      "category": "Metabolism",
+      "task": "classification",
+      "units": "-",
+      "value": 0.0036816308071138336,
+      "drugbank_percentile": 14.6568437378829
+    },
+    "CYP3A4_Veith": {
+      "name": "CYP3A4 Inhibition",
+      "category": "Metabolism",
+      "task": "classification",
+      "units": "-",
+      "value": 0.00015541568136541174,
+      "drugbank_percentile": 10.158976347421481
+    },
+    "CYP2C9_Substrate_CarbonMangels": {
+      "name": "CYP2C9 Substrate",
+      "category": "Metabolism",
+      "task": "classification",
+      "units": "-",
+      "value": 0.11405677199363709,
+      "drugbank_percentile": 40.4032570763862
+    },
+    "CYP2D6_Substrate_CarbonMangels": {
+      "name": "CYP2D6 Substrate",
+      "category": "Metabolism",
+      "task": "classification",
+      "units": "-",
+      "value": 0.0485215307213366,
+      "drugbank_percentile": 32.72586273749515
+    },
+    "CYP3A4_Substrate_CarbonMangels": {
+      "name": "CYP3A4 Substrate",
+      "category": "Metabolism",
+      "task": "classification",
+      "units": "-",
+      "value": 0.12696339339017867,
+      "drugbank_percentile": 13.958898797983714
+    },
+    "hERG": {
+      "name": "hERG Blocking",
+      "category": "Toxicity",
+      "task": "classification",
+      "units": "-",
+      "value": 0.010195003158878535,
+      "drugbank_percentile": 8.375339278790229
+    },
+    "ClinTox": {
+      "name": "Clinical Toxicity",
+      "category": "Toxicity",
+      "task": "classification",
+      "units": "-",
+      "value": 0.0007921067623101408,
+      "drugbank_percentile": 3.0244280728964714
+    },
+    "AMES": {
+      "name": "Mutagenicity",
+      "category": "Toxicity",
+      "task": "classification",
+      "units": "-",
+      "value": 0.007148463705379982,
+      "drugbank_percentile": 2.6366808840635905
+    },
+    "DILI": {
+      "name": "Drug Induced Liver Injury",
+      "category": "Toxicity",
+      "task": "classification",
+      "units": "-",
+      "value": 0.8585769414901734,
+      "drugbank_percentile": 77.16169057774331
+    },
+    "Carcinogens_Lagunin": {
+      "name": "Carcinogenicity",
+      "category": "Toxicity",
+      "task": "classification",
+      "units": "-",
+      "value": 0.23679813146591186,
+      "drugbank_percentile": 64.36603334625823
+    },
+    "LD50_Zhu": {
+      "name": "Acute Toxicity LD50",
+      "category": "Toxicity",
+      "task": "regression",
+      "units": "log(1/(mol/kg))",
+      "value": 1.942086707727697,
+      "drugbank_percentile": 17.913920124079098
+    },
+    "Skin_Reaction": {
+      "name": "Skin Reaction",
+      "category": "Toxicity",
+      "task": "classification",
+      "units": "-",
+      "value": 0.0448884030804038,
+      "drugbank_percentile": 0.6979449398991857
+    },
+    "NR-AR": {
+      "name": "Androgen Receptor (Full Length)",
+      "category": "Toxicity",
+      "task": "classification",
+      "units": "-",
+      "value": 0.030306948348879814,
+      "drugbank_percentile": 59.44164404808065
+    },
+    "NR-AR-LBD": {
+      "name": "Androgen Receptor (Ligand Binding Domain)",
+      "category": "Toxicity",
+      "task": "classification",
+      "units": "-",
+      "value": 0.012809755047783256,
+      "drugbank_percentile": 55.409073284218685
+    },
+    "NR-AhR": {
+      "name": "Aryl Hydrocarbon Receptor",
+      "category": "Toxicity",
+      "task": "classification",
+      "units": "-",
+      "value": 0.004273358988575638,
+      "drugbank_percentile": 23.18728189220628
+    },
+    "NR-Aromatase": {
+      "name": "Aromatase",
+      "category": "Toxicity",
+      "task": "classification",
+      "units": "-",
+      "value": 0.0005713311488989347,
+      "drugbank_percentile": 11.477316789453276
+    },
+    "NR-ER": {
+      "name": "Estrogen Receptor (Full Length)",
+      "category": "Toxicity",
+      "task": "classification",
+      "units": "-",
+      "value": 0.02257440946996212,
+      "drugbank_percentile": 7.987592089957348
+    },
+    "NR-ER-LBD": {
+      "name": "Estrogen Receptor (Ligand Binding Domain)",
+      "category": "Toxicity",
+      "task": "classification",
+      "units": "-",
+      "value": 0.0005856903342646546,
+      "drugbank_percentile": 4.226444358278402
+    },
+    "NR-PPAR-gamma": {
+      "name": "Peroxisome Proliferator-Activated Receptor Gamma",
+      "category": "Toxicity",
+      "task": "classification",
+      "units": "-",
+      "value": 2.604396900096617e-06,
+      "drugbank_percentile": 2.791779759596743
+    },
+    "SR-ARE": {
+      "name": "Nuclear Factor (Erythroid-Derived 2)-Like 2/Antioxidant Responsive Element",
+      "category": "Toxicity",
+      "task": "classification",
+      "units": "-",
+      "value": 0.005314263980835676,
+      "drugbank_percentile": 4.536642109344707
+    },
+    "SR-ATAD5": {
+      "name": "ATPase Family AAA Domain-Containing Protein 5 (ATAD5)",
+      "category": "Toxicity",
+      "task": "classification",
+      "units": "-",
+      "value": 3.7417888779600614e-05,
+      "drugbank_percentile": 4.575416828227995
+    },
+    "SR-HSE": {
+      "name": "Heat Shock Factor Response Element",
+      "category": "Toxicity",
+      "task": "classification",
+      "units": "-",
+      "value": 0.0007345905614783987,
+      "drugbank_percentile": 7.871267933307483
+    },
+    "SR-MMP": {
+      "name": "Mitochondrial Membrane Potential",
+      "category": "Toxicity",
+      "task": "classification",
+      "units": "-",
+      "value": 0.00702649494051002,
+      "drugbank_percentile": 29.89530825901512
+    },
+    "SR-p53": {
+      "name": "Tumor Protein p53",
+      "category": "Toxicity",
+      "task": "classification",
+      "units": "-",
+      "value": 0.0003338307109515881,
+      "drugbank_percentile": 6.5141527723924
+    }
+  },
+  "admet_ai_vs_shipped_drugbank_row": null,
+  "notes": [
+    "cLogP is Wildman-Crippen (RDKit); Ghose and Egan defined their filters with ALOGP/AlogP98.",
+    "TPSA_NO is Ertl TPSA over N and O (the original definition, used for Veber/Egan); TPSA_NOSP adds S and P.",
+    "ADMET-AI classification outputs are model probabilities (0-1), not measured outcomes.",
+    "A prediction for a molecule that is in the training set reproduces its label; see training_set."
+  ]
+}

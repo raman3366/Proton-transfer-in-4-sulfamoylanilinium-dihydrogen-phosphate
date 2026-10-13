@@ -1,0 +1,103 @@
+{
+  "n_cp": 57,
+  "counts": {
+    "(3,-3)": 27,
+    "(3,-1)": 28,
+    "(3,+1)": 2,
+    "(3,+3)": 0
+  },
+  "cp_searches_logged": {
+    "n": 5,
+    "new_cps_each": [
+      27,
+      30,
+      0,
+      0,
+      0
+    ],
+    "expected_n": 5,
+    "note": "nuclei, midpoints, triangles, pyramids, spheres"
+  },
+  "poincare_hopf": {
+    "n-b+r-c": 1,
+    "satisfied": true
+  },
+  "n_noncovalent_bcp": 2,
+  "case_hbonds_without_bcp": [],
+  "n_bcp_without_bond_path": 0,
+  "hbonds": [
+    {
+      "name": "N1-H1A...O5",
+      "cls": "intermolecular",
+      "hbond_criteria_met": true,
+      "case_hbond": "N1-H1A...O5",
+      "fragments": "4-sulfamoylanilinium cation / dihydrogen phosphate anion",
+      "cp": 33,
+      "donor": "N1",
+      "hydrogen": "H1A",
+      "acceptor": "O5#1_554",
+      "D-H_A": 1.0974250193703456,
+      "H..A_A": 1.4840939776844897,
+      "D..A_A": 2.58080136564125,
+      "DHA_deg": 177.2671306580428,
+      "d_AB_A": 1.4840939776844897,
+      "bond_path_A": 1.5189571822008265,
+      "rho": 0.0782549112,
+      "lap": 0.1557970816,
+      "G": 0.0627843636,
+      "V": -0.08661945682,
+      "H": -0.02383509321,
+      "minusG_over_V": 0.7248298004277419,
+      "ellipticity": 0.02334,
+      "eta": 0.343576,
+      "E_HB_Espinosa_kcal": -27.177264893641954,
+      "E_HB_Espinosa_kJ": -113.70967631499794,
+      "BE_Emamian_neutral_kcal": -16.714805590496,
+      "BE_Emamian_charged_kcal": -27.073337188207997,
+      "Emamian_fit_used": "charged",
+      "BE_Emamian_kcal": -27.073337188207997,
+      "nature_Rozas2000": "medium (lap>0, H<0)"
+    },
+    {
+      "name": "C6-H6...O4",
+      "cls": "intermolecular",
+      "hbond_criteria_met": true,
+      "case_hbond": "C6-H6...O4",
+      "fragments": "4-sulfamoylanilinium cation / dihydrogen phosphate anion",
+      "cp": 40,
+      "donor": "C6",
+      "hydrogen": "H6",
+      "acceptor": "O4#1_554",
+      "D-H_A": 1.0830039278247272,
+      "H..A_A": 2.448935916810085,
+      "D..A_A": 3.3831508937393915,
+      "DHA_deg": 143.70999464945197,
+      "d_AB_A": 2.448935916810085,
+      "bond_path_A": 2.4872047707575615,
+      "rho": 0.009977288667,
+      "lap": 0.03178634537,
+      "G": 0.006914321888,
+      "V": -0.005882057434,
+      "H": 0.001032264454,
+      "minusG_over_V": 1.1754937733238053,
+      "ellipticity": 0.062606,
+      "eta": 0.193746,
+      "E_HB_Espinosa_kcal": -1.845523383223565,
+      "E_HB_Espinosa_kJ": -7.721669835407396,
+      "BE_Emamian_neutral_kcal": -1.4834335558343599,
+      "BE_Emamian_charged_kcal": -4.38195211559078,
+      "Emamian_fit_used": "charged",
+      "BE_Emamian_kcal": -4.38195211559078,
+      "nature_Rozas2000": "weak (lap>0, H>0)"
+    }
+  ],
+  "other_noncovalent": [],
+  "formulae": {
+    "E_HB_Espinosa": "V(r_BCP)/2 [Espinosa, Molins, Lecomte, CPL 285 (1998) 170, doi:10.1016/S0009-2614(98)00036-0]",
+    "BE_Emamian_neutral": "BE/kcal mol-1 = -223.08 rho_BCP/a.u. + 0.7423 [doi:10.1002/jcc.26068]",
+    "BE_Emamian_charged": "BE/kcal mol-1 = -332.34 rho_BCP/a.u. - 1.0661 [doi:10.1002/jcc.26068]",
+    "fit_choice": "charged if either fragment has a net charge; ion pairs are outside both training sets",
+    "nature": "Rozas, Alkorta, Elguero, JACS 122 (2000) 11154, doi:10.1021/ja0017864",
+    "hbond_criteria": "BCP between H (bonded to D) and acceptor A, H...A < Bondi sum, D-H...A >= 110 deg"
+  }
+}

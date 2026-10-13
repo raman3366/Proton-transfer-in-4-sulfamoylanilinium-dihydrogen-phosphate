@@ -1,0 +1,133 @@
+{
+ "what": "Size of the box for several buffers of solvateOct (pass 1 only, restrained model, no ions): atoms, cell\n    edge, and how near the solute comes to its own image.  For the choice of the buffer; builds nothing.",
+ "start": "X",
+ "plan_atoms": 25600,
+ "chosen_buffer_A": 10.0,
+ "note": "'any orientation' = cell edge minus the largest atom-atom distance of protein, zinc and ligand: the nearest the solute can come to its image if it turns as a rigid body. All values are for the box as tleap builds it; at 1 bar the box shrinks (see the density).",
+ "inputs_sha256": {
+  "md/system/protein_md.pdb": "e5abb73ca92fa9b399ab8c0bbba368024e10d3807147e382d431b0d29e260494",
+  "md/system/zinc.pdb": "c98aa70a52066f412c0618bbc3fc38e811add4d5d68747b9d02a84a70cd3cea9",
+  "md/system/ligand_X.pdb": "342ccdd6a6c03302c4fed7ff01dacebbecde97141fab02e375bc0d5e2a62a47b",
+  "md/system/waters_X.pdb": "4ab7791df97d7ded2faa587922460350b790b459d9257d37b7bd8b75dab82126"
+ },
+ "software": {
+  "ambertools": "ambertools-26.0-cuda_None_nompi_py312h1ea3936_100",
+  "tleap": "/root/cqc-sfa-tools/md/bin/tleap",
+  "python": "3.12.14",
+  "parmed": "4.3.1",
+  "numpy": "2.5.3",
+  "scipy": "1.18.1"
+ },
+ "rows": [
+  {
+   "solvateOct_buffer_A": 4.5,
+   "atoms_before_ions": 26186,
+   "water_molecules": 7364,
+   "ion_pairs_by_the_rule": 20,
+   "atoms_with_ions": 26104,
+   "cell_edge_A": 73.135,
+   "volume_nm3": 301.1,
+   "density_as_built_g_per_cm3": 0.8932,
+   "solute_to_own_image_as_built_A": 22.58,
+   "solute_largest_extent_A": 60.76,
+   "solute_to_own_image_any_orientation_A": 12.37,
+   "tleap_lines": [
+    "Scaling up box by a factor of 1.193906 to meet diagonal cut criterion",
+    "Solute vdw bounding box:              52.389 47.265 60.896",
+    "Total bounding box for atom centers:  83.449 83.449 83.449",
+    "(box expansion for 'iso' is  33.1%)",
+    "Volume: 301132.647 A^3 (oct)",
+    "Total mass 161974.424 amu,  Density 0.893 g/cc",
+    "Added 7149 residues."
+   ]
+  },
+  {
+   "solvateOct_buffer_A": 6.0,
+   "atoms_before_ions": 29747,
+   "water_molecules": 8551,
+   "ion_pairs_by_the_rule": 23,
+   "atoms_with_ions": 29653,
+   "cell_edge_A": 76.135,
+   "volume_nm3": 339.7,
+   "density_as_built_g_per_cm3": 0.8962,
+   "solute_to_own_image_as_built_A": 25.25,
+   "solute_largest_extent_A": 60.76,
+   "solute_to_own_image_any_orientation_A": 15.37,
+   "tleap_lines": [
+    "Scaling up box by a factor of 1.192292 to meet diagonal cut criterion",
+    "Solute vdw bounding box:              52.389 47.265 60.896",
+    "Total bounding box for atom centers:  86.913 86.913 86.913",
+    "(box expansion for 'iso' is  31.5%)",
+    "Volume: 339730.819 A^3 (oct)",
+    "Total mass 183359.416 amu,  Density 0.896 g/cc",
+    "Added 8336 residues."
+   ]
+  },
+  {
+   "solvateOct_buffer_A": 8.0,
+   "atoms_before_ions": 35171,
+   "water_molecules": 10359,
+   "ion_pairs_by_the_rule": 28,
+   "atoms_with_ions": 35057,
+   "cell_edge_A": 80.135,
+   "volume_nm3": 396.1,
+   "density_as_built_g_per_cm3": 0.9051,
+   "solute_to_own_image_as_built_A": 28.79,
+   "solute_largest_extent_A": 60.76,
+   "solute_to_own_image_any_orientation_A": 19.37,
+   "tleap_lines": [
+    "Scaling up box by a factor of 1.190337 to meet diagonal cut criterion",
+    "Solute vdw bounding box:              52.389 47.265 60.896",
+    "Total bounding box for atom centers:  91.532 91.532 91.532",
+    "(box expansion for 'iso' is  29.5%)",
+    "Volume: 396139.753 A^3 (oct)",
+    "Total mass 215932.344 amu,  Density 0.905 g/cc",
+    "Added 10144 residues."
+   ]
+  },
+  {
+   "solvateOct_buffer_A": 10.0,
+   "atoms_before_ions": 41036,
+   "water_molecules": 12314,
+   "ion_pairs_by_the_rule": 33,
+   "atoms_with_ions": 40902,
+   "cell_edge_A": 84.135,
+   "volume_nm3": 458.5,
+   "density_as_built_g_per_cm3": 0.9097,
+   "solute_to_own_image_as_built_A": 32.43,
+   "solute_largest_extent_A": 60.76,
+   "solute_to_own_image_any_orientation_A": 23.37,
+   "tleap_lines": [
+    "Scaling up box by a factor of 1.188575 to meet diagonal cut criterion",
+    "Solute vdw bounding box:              52.389 47.265 60.896",
+    "Total bounding box for atom centers:  96.151 96.151 96.151",
+    "(box expansion for 'iso' is  27.8%)",
+    "Volume: 458470.746 A^3 (oct)",
+    "Total mass 251153.624 amu,  Density 0.910 g/cc",
+    "Added 12099 residues."
+   ]
+  },
+  {
+   "solvateOct_buffer_A": 12.0,
+   "atoms_before_ions": 47363,
+   "water_molecules": 14423,
+   "ion_pairs_by_the_rule": 39,
+   "atoms_with_ions": 47205,
+   "cell_edge_A": 88.135,
+   "volume_nm3": 527.0,
+   "density_as_built_g_per_cm3": 0.9111,
+   "solute_to_own_image_as_built_A": 36.15,
+   "solute_largest_extent_A": 60.76,
+   "solute_to_own_image_any_orientation_A": 27.37,
+   "tleap_lines": [
+    "Scaling up box by a factor of 1.186979 to meet diagonal cut criterion",
+    "Solute vdw bounding box:              52.389 47.265 60.896",
+    "Total bounding box for atom centers:  100.770 100.770 100.770",
+    "(box expansion for 'iso' is  26.3%)",
+    "Volume: 527019.403 A^3 (oct)",
+    "Total mass 289149.368 amu,  Density 0.911 g/cc",
+    "Added 14208 residues."
+   ]
+  }
+ ]
+}

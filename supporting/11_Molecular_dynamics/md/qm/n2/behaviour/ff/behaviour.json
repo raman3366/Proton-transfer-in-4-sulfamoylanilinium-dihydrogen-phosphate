@@ -1,0 +1,865 @@
+{
+ "what": "first look at the behaviour of the small model with a candidate set of terms at N2 (md/N2.md, section 6.7); A TEST on 64 atoms in vacuum, not the gate and not a result; written by md/qm/n2_behaviour.py",
+ "written": "2026-10-06 06:37:11 PM IST",
+ "model": {
+  "file": "/root/workspace/cqc-4-sulfamoylanilinium-dihydrogen-phosphate/md/qm/n2/fit/MODEL_01_L5_ridge0.01.json",
+  "sha256": "6fb67e268340e4b6c75ace79b6f23d36b683018bd32fc3ff216fa1901e6d6d92",
+  "name": "L5_ridge0.01"
+ },
+ "force_field_copy": "ff",
+ "quantum_chemical_optimum": {
+  "angles_at_N2": {
+   "Zn_N2_S": 107.7373,
+   "Zn_N2_H": 122.7565,
+   "S_N2_H": 109.0832
+  },
+  "signed_volume": 0.6323,
+  "C4_S_N2": 107.103,
+  "N2_S": 1.6353,
+  "Zn_N2": 1.9665,
+  "Zn_N2_S_C4": -144.173,
+  "source": "/root/cqc-sfa-md/qm/prod/opt_final.npy",
+  "note": "B3LYP/6-31G* without a dispersion term, all atoms free"
+ },
+ "quantum_chemical_relaxations_zinc_and_imidazoles_fixed": {
+  "X": {
+   "file": "/root/workspace/cqc-4-sulfamoylanilinium-dihydrogen-phosphate/md/qm/gr/relax/qm_X.json",
+   "sha256": "4be980807d976666fb567569bb3792fd853b8adffcff68d03353e64d870541e9",
+   "state": "done",
+   "converged": null,
+   "crossed": null,
+   "n_steps": 55,
+   "last_step": {
+    "step": 55,
+    "time": "2026-10-06 03:11:51 PM IST",
+    "seconds": 230.8,
+    "e_scf": -3584.5258708069478,
+    "e_d3": -0.14557218480934841,
+    "e_total": -3584.671442991757,
+    "grad_rms_ligand": 5.8769022210809776e-05,
+    "grad_max_ligand": 0.0003037595086079481,
+    "signed_volume": 0.6286,
+    "Zn_N2": 1.9571,
+    "N2_S": 1.6341,
+    "Zn_N2_S": 104.113,
+    "Zn_N2_H": 125.382,
+    "S_N2_H": 109.785,
+    "C4_S_N2": 106.423,
+    "Zn_N2_S_C4": -148.813,
+    "rmsd_ligand_heavy_from_start": 2.2949
+   },
+   "geometry": "/root/workspace/cqc-4-sulfamoylanilinium-dihydrogen-phosphate/md/qm/gr/relax/qm_X.xyz",
+   "geometry_sha256": "c7e8a206eae8753a68fcf2b8d2575b46e056165d16efff76bcd540fd13bdf774"
+  },
+  "Rx": {
+   "file": "/root/cqc-sfa-md/from_gpu/repo_md/qm/gr/relax/qm_Rx.json",
+   "sha256": "3284e1acd54ae2f064d26afb61efc0da609ecd7fdd5793c604c7ed20a7e5e642",
+   "state": "running",
+   "converged": null,
+   "crossed": false,
+   "n_steps": 58,
+   "last_step": {
+    "step": 58,
+    "time": "2026-10-06 06:24:30 PM IST",
+    "seconds": 266.5,
+    "e_scf": -3584.5259042981443,
+    "e_d3": -0.1455567790578234,
+    "e_total": -3584.671461077202,
+    "grad_rms_ligand": 0.00013838139342332753,
+    "grad_max_ligand": 0.0006007275201969087,
+    "signed_volume": 0.6191,
+    "Zn_N2": 1.9546,
+    "N2_S": 1.6342,
+    "Zn_N2_S": 104.508,
+    "Zn_N2_H": 125.579,
+    "S_N2_H": 109.922,
+    "angle_sum_N2": 340.009,
+    "C4_S_N2": 106.363,
+    "Zn_N2_S_C4": -147.698,
+    "rmsd_ligand_heavy_from_start": 5.2776,
+    "fixed_atoms_max_shift_A": 0.0,
+    "rmsd_ligand_heavy_from_X_run": 0.1042,
+    "e_total_minus_X_run_kcal_mol": -0.0113
+   },
+   "geometry": "/root/cqc-sfa-md/from_gpu/repo_md/qm/gr/relax/qm_Rx_last.xyz",
+   "geometry_sha256": "114001ad9baa1343caa9d1e6add1048d398b7a606b210629167005637488faf5"
+  }
+ },
+ "force_fields": {
+  "as_built": {
+   "prmtop": "/root/workspace/cqc-4-sulfamoylanilinium-dihydrogen-phosphate/md/qm/n2/ff/small_as_built.prmtop",
+   "prmtop_sha256": "7f448969b833447cbcbb4abefbf519f51e3ea9580900733722b92e7117a5a18e",
+   "minimum_all_atoms_free": {
+    "from_X": {
+     "Zn_N2_S": 109.91,
+     "Zn_N2_H": 107.5,
+     "S_N2_H": 112.82,
+     "angle_sum": 330.23,
+     "C4_S_N2": 111.34,
+     "signed_volume": 0.7508,
+     "Zn_N2": 1.9126,
+     "N2_S": 1.572,
+     "turn_about_Zn_N2": 90.66,
+     "Zn_N2_S_C4": -146.86,
+     "energy": 41.817,
+     "minus_the_optimum": {
+      "Zn_N2_S": 2.17,
+      "Zn_N2_H": -15.26,
+      "S_N2_H": 3.74
+     },
+     "within_5_deg": false,
+     "binding_check_quantities_minus_the_optimum": {
+      "C4_S_N2": 4.24,
+      "N2_S": -0.0633,
+      "Zn_N2_S": 2.17,
+      "tolerances": {
+       "C4_S_N2": 2.0,
+       "N2_S": 0.02,
+       "Zn_N2_S": 3.0
+      },
+      "within": false,
+      "note": "reported; by the plan (6 Oct, 1:09 PM, point 3) the ligand terms are not re-tuned to this optimum"
+     }
+    },
+    "from_the_optimum": {
+     "Zn_N2_S": 110.15,
+     "Zn_N2_H": 107.53,
+     "S_N2_H": 112.84,
+     "angle_sum": 330.51,
+     "C4_S_N2": 111.33,
+     "signed_volume": 0.748,
+     "Zn_N2": 1.9132,
+     "N2_S": 1.572,
+     "turn_about_Zn_N2": 90.33,
+     "Zn_N2_S_C4": -146.11,
+     "energy": 41.788,
+     "minus_the_optimum": {
+      "Zn_N2_S": 2.41,
+      "Zn_N2_H": -15.23,
+      "S_N2_H": 3.76
+     },
+     "within_5_deg": false,
+     "binding_check_quantities_minus_the_optimum": {
+      "C4_S_N2": 4.23,
+      "N2_S": -0.0633,
+      "Zn_N2_S": 2.41,
+      "tolerances": {
+       "C4_S_N2": 2.0,
+       "N2_S": 0.02,
+       "Zn_N2_S": 3.0
+      },
+      "within": false,
+      "note": "reported; by the plan (6 Oct, 1:09 PM, point 3) the ligand terms are not re-tuned to this optimum"
+     }
+    }
+   },
+   "zinc_and_imidazoles_fixed": {
+    "minimiser_from_X": {
+     "start": {
+      "Zn_N2_S": 117.55,
+      "Zn_N2_H": 107.41,
+      "S_N2_H": 107.41,
+      "angle_sum": 332.37,
+      "C4_S_N2": 108.79,
+      "signed_volume": 0.724,
+      "Zn_N2": 1.9314,
+      "N2_S": 1.5963,
+      "turn_about_Zn_N2": 74.24,
+      "Zn_N2_S_C4": -117.03
+     },
+     "end": {
+      "Zn_N2_S": 107.5,
+      "Zn_N2_H": 106.95,
+      "S_N2_H": 112.34,
+      "angle_sum": 326.79,
+      "C4_S_N2": 111.3,
+      "signed_volume": 0.7832,
+      "Zn_N2": 1.9049,
+      "N2_S": 1.571,
+      "turn_about_Zn_N2": 92.27,
+      "Zn_N2_S_C4": -154.14
+     },
+     "energy_start": 72.769,
+     "energy_end": 62.682,
+     "ligand_heavy_atoms_moved_A": 2.249,
+     "largest_shift_of_a_fixed_atom_A": 0.0
+    },
+    "minimiser_from_Rx": {
+     "start": {
+      "Zn_N2_S": 123.83,
+      "Zn_N2_H": 105.77,
+      "S_N2_H": 105.77,
+      "angle_sum": 335.37,
+      "C4_S_N2": 108.79,
+      "signed_volume": -0.6783,
+      "Zn_N2": 1.9314,
+      "N2_S": 1.5963,
+      "turn_about_Zn_N2": -11.46,
+      "Zn_N2_S_C4": -21.34
+     },
+     "end": {
+      "Zn_N2_S": 107.5,
+      "Zn_N2_H": 106.95,
+      "S_N2_H": 112.34,
+      "angle_sum": 326.79,
+      "C4_S_N2": 111.3,
+      "signed_volume": 0.7832,
+      "Zn_N2": 1.9049,
+      "N2_S": 1.571,
+      "turn_about_Zn_N2": 92.27,
+      "Zn_N2_S_C4": -154.14
+     },
+     "energy_start": 86.99,
+     "energy_end": 62.682,
+     "ligand_heavy_atoms_moved_A": 5.383,
+     "largest_shift_of_a_fixed_atom_A": 0.0
+    },
+    "descent_from_Rx": {
+     "steps": 58003,
+     "energy_start": 86.99,
+     "energy_end": 71.255,
+     "fell_by": 15.735,
+     "largest_force_at_the_end_kcal_per_A": 7.2049,
+     "ended": "went over to the configuration of X (signed volume above +0.3)",
+     "sign_changed": {
+      "step": 57782,
+      "energy_below_the_start": 15.284
+     },
+     "trace": [
+      {
+       "step": 0,
+       "e": 0.0,
+       "signed_volume": -0.6783
+      },
+      {
+       "step": 2000,
+       "e": -13.8369,
+       "signed_volume": -0.4424
+      },
+      {
+       "step": 4000,
+       "e": -14.118,
+       "signed_volume": -0.4289
+      },
+      {
+       "step": 6000,
+       "e": -14.2467,
+       "signed_volume": -0.4206
+      },
+      {
+       "step": 8000,
+       "e": -14.3238,
+       "signed_volume": -0.4138
+      },
+      {
+       "step": 10000,
+       "e": -14.3793,
+       "signed_volume": -0.4077
+      },
+      {
+       "step": 12000,
+       "e": -14.4239,
+       "signed_volume": -0.4022
+      },
+      {
+       "step": 14000,
+       "e": -14.4626,
+       "signed_volume": -0.397
+      },
+      {
+       "step": 16000,
+       "e": -14.4978,
+       "signed_volume": -0.392
+      },
+      {
+       "step": 18000,
+       "e": -14.5307,
+       "signed_volume": -0.3872
+      },
+      {
+       "step": 20000,
+       "e": -14.5623,
+       "signed_volume": -0.3823
+      },
+      {
+       "step": 22000,
+       "e": -14.5927,
+       "signed_volume": -0.3775
+      },
+      {
+       "step": 24000,
+       "e": -14.6223,
+       "signed_volume": -0.3725
+      },
+      {
+       "step": 26000,
+       "e": -14.6512,
+       "signed_volume": -0.3675
+      },
+      {
+       "step": 28000,
+       "e": -14.6798,
+       "signed_volume": -0.3623
+      },
+      {
+       "step": 30000,
+       "e": -14.7083,
+       "signed_volume": -0.357
+      },
+      {
+       "step": 32000,
+       "e": -14.7369,
+       "signed_volume": -0.3514
+      },
+      {
+       "step": 34000,
+       "e": -14.7658,
+       "signed_volume": -0.3456
+      },
+      {
+       "step": 36000,
+       "e": -14.7951,
+       "signed_volume": -0.3394
+      },
+      {
+       "step": 38000,
+       "e": -14.825,
+       "signed_volume": -0.3327
+      },
+      {
+       "step": 40000,
+       "e": -14.8557,
+       "signed_volume": -0.3256
+      },
+      {
+       "step": 42000,
+       "e": -14.8873,
+       "signed_volume": -0.3178
+      },
+      {
+       "step": 44000,
+       "e": -14.9201,
+       "signed_volume": -0.3092
+      },
+      {
+       "step": 46000,
+       "e": -14.9543,
+       "signed_volume": -0.2996
+      },
+      {
+       "step": 48000,
+       "e": -14.9903,
+       "signed_volume": -0.2884
+      },
+      {
+       "step": 50000,
+       "e": -15.0286,
+       "signed_volume": -0.2751
+      },
+      {
+       "step": 52000,
+       "e": -15.0703,
+       "signed_volume": -0.2583
+      },
+      {
+       "step": 54000,
+       "e": -15.116,
+       "signed_volume": -0.2354
+      },
+      {
+       "step": 56000,
+       "e": -15.1689,
+       "signed_volume": -0.1972
+      },
+      {
+       "step": 58000,
+       "e": -15.7289,
+       "signed_volume": 0.2951
+      },
+      {
+       "step": 58003,
+       "e": -15.7351,
+       "signed_volume": 0.3001
+      }
+     ],
+     "start": {
+      "Zn_N2_S": 123.83,
+      "Zn_N2_H": 105.77,
+      "S_N2_H": 105.77,
+      "angle_sum": 335.37,
+      "C4_S_N2": 108.79,
+      "signed_volume": -0.6783,
+      "Zn_N2": 1.9314,
+      "N2_S": 1.5963,
+      "turn_about_Zn_N2": -11.46,
+      "Zn_N2_S_C4": -21.34
+     },
+     "end": {
+      "Zn_N2_S": 120.3,
+      "Zn_N2_H": 116.54,
+      "S_N2_H": 119.09,
+      "angle_sum": 355.94,
+      "C4_S_N2": 108.99,
+      "signed_volume": 0.3001,
+      "Zn_N2": 1.9126,
+      "N2_S": 1.5721,
+      "turn_about_Zn_N2": 45.04,
+      "Zn_N2_S_C4": -82.27
+     },
+     "ligand_heavy_atoms_moved_A": 1.53,
+     "ligand_heavy_atoms_from_the_minimum_reached_from_X_A": 4.383,
+     "energy_above_the_minimum_reached_from_X": 8.573,
+     "minimiser_started_at_the_end_of_the_descent": {
+      "end": {
+       "Zn_N2_S": 107.5,
+       "Zn_N2_H": 106.95,
+       "S_N2_H": 112.34,
+       "angle_sum": 326.79,
+       "C4_S_N2": 111.3,
+       "signed_volume": 0.7832,
+       "Zn_N2": 1.9049,
+       "N2_S": 1.571,
+       "turn_about_Zn_N2": 92.27,
+       "Zn_N2_S_C4": -154.14
+      },
+      "energy": 62.682,
+      "ligand_heavy_atoms_moved_A": 4.382
+     }
+    },
+    "reading": {
+     "R_like_placement_has_a_minimum_of_its_own": false,
+     "descent_from_Rx_ends_with_a_nitrogen": "pyramidal, as in X",
+     "minimiser_from_the_end_of_the_descent_ends_with_a_nitrogen": "pyramidal, as in X",
+     "descent_from_Rx_changed_sign": true,
+     "two_relaxed_configurations": false,
+     "E_relaxed_from_Rx_minus_from_X": 0.0,
+     "note": "signed volume at N2: above +0.3 the configuration of X, below -0.3 the R-like one, between: planar or nearly"
+    }
+   },
+   "at_the_geometries_of_the_quantum_chemical_relaxations": {
+    "X": {
+     "energy": 81.847,
+     "Zn_N2_S": 104.11,
+     "Zn_N2_H": 125.38,
+     "S_N2_H": 109.78,
+     "angle_sum": 339.28,
+     "C4_S_N2": 106.42,
+     "signed_volume": 0.6286,
+     "Zn_N2": 1.9571,
+     "N2_S": 1.6341,
+     "turn_about_Zn_N2": 85.23,
+     "Zn_N2_S_C4": -148.81,
+     "largest_shift_of_a_fixed_atom_A": 0.0001,
+     "ligand_heavy_atoms_from_the_force_field_minimum_reached_from_X_A": 0.262,
+     "ligand_heavy_atoms_from_the_force_field_end_reached_from_Rx_A": 0.262,
+     "energy_above_the_force_field_minimum_reached_from_X": 19.165
+    },
+    "Rx": {
+     "energy": 81.687,
+     "Zn_N2_S": 104.51,
+     "Zn_N2_H": 125.58,
+     "S_N2_H": 109.92,
+     "angle_sum": 340.01,
+     "C4_S_N2": 106.36,
+     "signed_volume": 0.6191,
+     "Zn_N2": 1.9546,
+     "N2_S": 1.6342,
+     "turn_about_Zn_N2": 84.93,
+     "Zn_N2_S_C4": -147.7,
+     "largest_shift_of_a_fixed_atom_A": 0.0,
+     "ligand_heavy_atoms_from_the_force_field_minimum_reached_from_X_A": 0.281,
+     "ligand_heavy_atoms_from_the_force_field_end_reached_from_Rx_A": 0.281,
+     "energy_above_the_force_field_minimum_reached_from_X": 19.005
+    },
+    "from_Rx_minus_from_X": -0.16
+   },
+   "constructed_points_against_X": {
+    "X": 0.0,
+    "a2": 4.692,
+    "a3": 10.29,
+    "a4": 13.76,
+    "a5": 13.708,
+    "a6": 11.565,
+    "Rx": 14.22,
+    "d1": 5.202,
+    "g1": 17.422
+   }
+  },
+  "candidate": {
+   "prmtop": "/root/workspace/cqc-4-sulfamoylanilinium-dihydrogen-phosphate/md/qm/n2/behaviour/ff/work/small.prmtop",
+   "prmtop_sha256": "c5878cb57a49750f425d87b5fd7c12ebcc728ae3839a3dfb028182816603c7fc",
+   "minimum_all_atoms_free": {
+    "from_X": {
+     "Zn_N2_S": 99.32,
+     "Zn_N2_H": 120.01,
+     "S_N2_H": 109.47,
+     "angle_sum": 328.8,
+     "C4_S_N2": 111.13,
+     "signed_volume": 0.7473,
+     "Zn_N2": 1.9229,
+     "N2_S": 1.5741,
+     "turn_about_Zn_N2": 90.24,
+     "Zn_N2_S_C4": -153.7,
+     "energy": 52.386,
+     "minus_the_optimum": {
+      "Zn_N2_S": -8.42,
+      "Zn_N2_H": -2.75,
+      "S_N2_H": 0.39
+     },
+     "within_5_deg": false,
+     "binding_check_quantities_minus_the_optimum": {
+      "C4_S_N2": 4.03,
+      "N2_S": -0.0612,
+      "Zn_N2_S": -8.42,
+      "tolerances": {
+       "C4_S_N2": 2.0,
+       "N2_S": 0.02,
+       "Zn_N2_S": 3.0
+      },
+      "within": false,
+      "note": "reported; by the plan (6 Oct, 1:09 PM, point 3) the ligand terms are not re-tuned to this optimum"
+     }
+    },
+    "from_the_optimum": {
+     "Zn_N2_S": 99.48,
+     "Zn_N2_H": 120.11,
+     "S_N2_H": 109.45,
+     "angle_sum": 329.03,
+     "C4_S_N2": 111.11,
+     "signed_volume": 0.7452,
+     "Zn_N2": 1.9234,
+     "N2_S": 1.5741,
+     "turn_about_Zn_N2": 89.94,
+     "Zn_N2_S_C4": -153.35,
+     "energy": 52.408,
+     "minus_the_optimum": {
+      "Zn_N2_S": -8.26,
+      "Zn_N2_H": -2.65,
+      "S_N2_H": 0.37
+     },
+     "within_5_deg": false,
+     "binding_check_quantities_minus_the_optimum": {
+      "C4_S_N2": 4.01,
+      "N2_S": -0.0612,
+      "Zn_N2_S": -8.26,
+      "tolerances": {
+       "C4_S_N2": 2.0,
+       "N2_S": 0.02,
+       "Zn_N2_S": 3.0
+      },
+      "within": false,
+      "note": "reported; by the plan (6 Oct, 1:09 PM, point 3) the ligand terms are not re-tuned to this optimum"
+     }
+    }
+   },
+   "zinc_and_imidazoles_fixed": {
+    "minimiser_from_X": {
+     "start": {
+      "Zn_N2_S": 117.55,
+      "Zn_N2_H": 107.41,
+      "S_N2_H": 107.41,
+      "angle_sum": 332.37,
+      "C4_S_N2": 108.79,
+      "signed_volume": 0.724,
+      "Zn_N2": 1.9314,
+      "N2_S": 1.5963,
+      "turn_about_Zn_N2": 74.24,
+      "Zn_N2_S_C4": -117.03
+     },
+     "end": {
+      "Zn_N2_S": 97.68,
+      "Zn_N2_H": 118.56,
+      "S_N2_H": 108.79,
+      "angle_sum": 325.03,
+      "C4_S_N2": 111.0,
+      "signed_volume": 0.7802,
+      "Zn_N2": 1.923,
+      "N2_S": 1.5731,
+      "turn_about_Zn_N2": 94.96,
+      "Zn_N2_S_C4": -160.76
+     },
+     "energy_start": 86.224,
+     "energy_end": 72.483,
+     "ligand_heavy_atoms_moved_A": 2.68,
+     "largest_shift_of_a_fixed_atom_A": 0.0
+    },
+    "minimiser_from_Rx": {
+     "start": {
+      "Zn_N2_S": 123.83,
+      "Zn_N2_H": 105.77,
+      "S_N2_H": 105.77,
+      "angle_sum": 335.37,
+      "C4_S_N2": 108.79,
+      "signed_volume": -0.6783,
+      "Zn_N2": 1.9314,
+      "N2_S": 1.5963,
+      "turn_about_Zn_N2": -11.46,
+      "Zn_N2_S_C4": -21.34
+     },
+     "end": {
+      "Zn_N2_S": 97.68,
+      "Zn_N2_H": 118.56,
+      "S_N2_H": 108.79,
+      "angle_sum": 325.03,
+      "C4_S_N2": 111.0,
+      "signed_volume": 0.7802,
+      "Zn_N2": 1.923,
+      "N2_S": 1.5731,
+      "turn_about_Zn_N2": 94.96,
+      "Zn_N2_S_C4": -160.76
+     },
+     "energy_start": 97.298,
+     "energy_end": 72.483,
+     "ligand_heavy_atoms_moved_A": 5.664,
+     "largest_shift_of_a_fixed_atom_A": 0.0
+    },
+    "descent_from_Rx": {
+     "steps": 42822,
+     "energy_start": 97.298,
+     "energy_end": 75.889,
+     "fell_by": 21.409,
+     "largest_force_at_the_end_kcal_per_A": 0.6925,
+     "ended": "went over to the configuration of X (signed volume above +0.3)",
+     "sign_changed": {
+      "step": 24626,
+      "energy_below_the_start": 20.296
+     },
+     "trace": [
+      {
+       "step": 0,
+       "e": 0.0,
+       "signed_volume": -0.6783
+      },
+      {
+       "step": 2000,
+       "e": -18.0449,
+       "signed_volume": -0.2497
+      },
+      {
+       "step": 4000,
+       "e": -18.5773,
+       "signed_volume": -0.2235
+      },
+      {
+       "step": 6000,
+       "e": -18.8901,
+       "signed_volume": -0.2037
+      },
+      {
+       "step": 8000,
+       "e": -19.1206,
+       "signed_volume": -0.1853
+      },
+      {
+       "step": 10000,
+       "e": -19.3083,
+       "signed_volume": -0.168
+      },
+      {
+       "step": 12000,
+       "e": -19.4718,
+       "signed_volume": -0.1511
+      },
+      {
+       "step": 14000,
+       "e": -19.6209,
+       "signed_volume": -0.1341
+      },
+      {
+       "step": 16000,
+       "e": -19.76,
+       "signed_volume": -0.1162
+      },
+      {
+       "step": 18000,
+       "e": -19.8905,
+       "signed_volume": -0.0966
+      },
+      {
+       "step": 20000,
+       "e": -20.0165,
+       "signed_volume": -0.0737
+      },
+      {
+       "step": 22000,
+       "e": -20.1382,
+       "signed_volume": -0.0458
+      },
+      {
+       "step": 24000,
+       "e": -20.2585,
+       "signed_volume": -0.0117
+      },
+      {
+       "step": 26000,
+       "e": -20.3784,
+       "signed_volume": 0.0271
+      },
+      {
+       "step": 28000,
+       "e": -20.4986,
+       "signed_volume": 0.067
+      },
+      {
+       "step": 30000,
+       "e": -20.6175,
+       "signed_volume": 0.1047
+      },
+      {
+       "step": 32000,
+       "e": -20.7392,
+       "signed_volume": 0.1406
+      },
+      {
+       "step": 34000,
+       "e": -20.8633,
+       "signed_volume": 0.1746
+      },
+      {
+       "step": 36000,
+       "e": -20.9877,
+       "signed_volume": 0.2065
+      },
+      {
+       "step": 38000,
+       "e": -21.1128,
+       "signed_volume": 0.2363
+      },
+      {
+       "step": 40000,
+       "e": -21.2367,
+       "signed_volume": 0.2641
+      },
+      {
+       "step": 42000,
+       "e": -21.3589,
+       "signed_volume": 0.2899
+      },
+      {
+       "step": 42822,
+       "e": -21.4089,
+       "signed_volume": 0.3001
+      }
+     ],
+     "start": {
+      "Zn_N2_S": 123.83,
+      "Zn_N2_H": 105.77,
+      "S_N2_H": 105.77,
+      "angle_sum": 335.37,
+      "C4_S_N2": 108.79,
+      "signed_volume": -0.6783,
+      "Zn_N2": 1.9314,
+      "N2_S": 1.5963,
+      "turn_about_Zn_N2": -11.46,
+      "Zn_N2_S_C4": -21.34
+     },
+     "end": {
+      "Zn_N2_S": 111.92,
+      "Zn_N2_H": 130.13,
+      "S_N2_H": 113.71,
+      "angle_sum": 355.76,
+      "C4_S_N2": 110.57,
+      "signed_volume": 0.3001,
+      "Zn_N2": 1.9175,
+      "N2_S": 1.5707,
+      "turn_about_Zn_N2": 50.92,
+      "Zn_N2_S_C4": -88.47
+     },
+     "ligand_heavy_atoms_moved_A": 2.09,
+     "ligand_heavy_atoms_from_the_minimum_reached_from_X_A": 4.228,
+     "energy_above_the_minimum_reached_from_X": 3.406,
+     "minimiser_started_at_the_end_of_the_descent": {
+      "end": {
+       "Zn_N2_S": 97.68,
+       "Zn_N2_H": 118.56,
+       "S_N2_H": 108.79,
+       "angle_sum": 325.03,
+       "C4_S_N2": 111.0,
+       "signed_volume": 0.7802,
+       "Zn_N2": 1.923,
+       "N2_S": 1.5731,
+       "turn_about_Zn_N2": 94.96,
+       "Zn_N2_S_C4": -160.76
+      },
+      "energy": 72.483,
+      "ligand_heavy_atoms_moved_A": 4.228
+     }
+    },
+    "reading": {
+     "R_like_placement_has_a_minimum_of_its_own": false,
+     "descent_from_Rx_ends_with_a_nitrogen": "pyramidal, as in X",
+     "minimiser_from_the_end_of_the_descent_ends_with_a_nitrogen": "pyramidal, as in X",
+     "descent_from_Rx_changed_sign": true,
+     "two_relaxed_configurations": false,
+     "E_relaxed_from_Rx_minus_from_X": 0.0,
+     "note": "signed volume at N2: above +0.3 the configuration of X, below -0.3 the R-like one, between: planar or nearly"
+    }
+   },
+   "at_the_geometries_of_the_quantum_chemical_relaxations": {
+    "X": {
+     "energy": 86.374,
+     "Zn_N2_S": 104.11,
+     "Zn_N2_H": 125.38,
+     "S_N2_H": 109.78,
+     "angle_sum": 339.28,
+     "C4_S_N2": 106.42,
+     "signed_volume": 0.6286,
+     "Zn_N2": 1.9571,
+     "N2_S": 1.6341,
+     "turn_about_Zn_N2": 85.23,
+     "Zn_N2_S_C4": -148.81,
+     "largest_shift_of_a_fixed_atom_A": 0.0001,
+     "ligand_heavy_atoms_from_the_force_field_minimum_reached_from_X_A": 0.559,
+     "ligand_heavy_atoms_from_the_force_field_end_reached_from_Rx_A": 0.559,
+     "energy_above_the_force_field_minimum_reached_from_X": 13.891
+    },
+    "Rx": {
+     "energy": 86.284,
+     "Zn_N2_S": 104.51,
+     "Zn_N2_H": 125.58,
+     "S_N2_H": 109.92,
+     "angle_sum": 340.01,
+     "C4_S_N2": 106.36,
+     "signed_volume": 0.6191,
+     "Zn_N2": 1.9546,
+     "N2_S": 1.6342,
+     "turn_about_Zn_N2": 84.93,
+     "Zn_N2_S_C4": -147.7,
+     "largest_shift_of_a_fixed_atom_A": 0.0,
+     "ligand_heavy_atoms_from_the_force_field_minimum_reached_from_X_A": 0.653,
+     "ligand_heavy_atoms_from_the_force_field_end_reached_from_Rx_A": 0.653,
+     "energy_above_the_force_field_minimum_reached_from_X": 13.801
+    },
+    "from_Rx_minus_from_X": -0.09
+   },
+   "constructed_points_against_X": {
+    "X": 0.0,
+    "a2": 2.781,
+    "a3": 5.009,
+    "a4": 6.177,
+    "a5": 6.5,
+    "a6": 6.414,
+    "Rx": 11.074,
+    "d1": -0.472,
+    "g1": 10.762
+   }
+  }
+ },
+ "quantum_chemistry_constructed_points_against_X": {
+  "X": 0.0,
+  "a2": 2.925,
+  "a3": 5.434,
+  "a4": 6.623,
+  "a5": 6.624,
+  "a6": 6.288,
+  "Rx": 10.844,
+  "d1": 0.462,
+  "g1": 11.318
+ },
+ "quantum_chemistry_from_Rx_minus_from_X_at_the_last_steps": {
+  "kcal": -0.011,
+  "with_D3": true,
+  "a_result": false,
+  "note": "the distance between two runs on their way unless both have converged"
+ }
+}

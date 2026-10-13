@@ -1,0 +1,822 @@
+{
+ "generated_utc": "2026-09-29T05:42:02+00:00",
+ "method": {
+  "what": "constrained N1-H1A proton-transfer profile in the crystal (referee M2/M3): d(N1-H1A) of both formula units held by pw.x CONSTRAINTS (distance), every other coordinate relaxed (O5, H1A across the bond included), fixed X-ray cell, PBE-D3(BJ)/SSSP; PBE0-D3(BJ) single points at each point (SG15 hybrid correction, as for relax_i vs relax_iirfix)",
+  "optimiser": "pw.x damped dynamics (ion_dynamics 'damp', BFGS-preconditioned quick-min) or FIRE, SHAKE constraints; QE 7.5 refuses CONSTRAINTS with BFGS (PW/src/input.f90: 'constraints only with fixed-cell dynamics'); per point: ion_dynamics",
+  "thresholds": "forc_conv_thr 0.001 Ry/bohr on the constrained forces, etot_conv_thr 0.0001 Ry, conv_thr 1e-09 Ry (defaults; see the run inputs)",
+  "reference": "relax_i (the salt, BFGS, [70, 560] Ry, k 2x1x1): E = -905.1504964963 Ry, d(N1-H1A) 1.0626 A",
+  "units": "meV per cell (54 atoms, Z = 2: both protons move) and kJ/mol per formula unit (= per cell / 2); slopes dE/dd in meV/A per cell and kJ/mol/A per formula unit"
+ },
+ "relax_i": {
+  "energy_Ry": -905.1504964963,
+  "formula_units": [
+   {
+    "d_N1_H1A_A": 1.0626,
+    "d_H1A_O5_A": 1.6729,
+    "delta_A": -0.6103,
+    "d_N1_O5_A": 2.7344,
+    "angle_N1_H1A_O5_deg": 176.75,
+    "d_P1_O5_A": 1.5297,
+    "proton_on": "N",
+    "O4_H4A_O5": {
+     "d_O4_H4A_A": 1.0307,
+     "d_H4A_O5_A": 1.4876,
+     "d_O4_O5_A": 2.5031
+    }
+   },
+   {
+    "d_N1_H1A_A": 1.0626,
+    "d_H1A_O5_A": 1.6729,
+    "delta_A": -0.6103,
+    "d_N1_O5_A": 2.7344,
+    "angle_N1_H1A_O5_deg": 176.75,
+    "d_P1_O5_A": 1.5297,
+    "proton_on": "N",
+    "O4_H4A_O5": {
+     "d_O4_H4A_A": 1.0307,
+     "d_H4A_O5_A": 1.4876,
+     "d_O4_O5_A": 2.5031
+    }
+   }
+  ],
+  "file": "/home/ubuntu/cqc-sfa/molecules/sfa/results/periodic_qe/runs/relax_i/relax_i.out"
+ },
+ "context_iirfix": {
+  "what": "the earlier single constrained point (H1A and O5 fixed in space, O5-H1A 0.98 A); the profile replaces it",
+  "E_minus_i_meV_cell": 1183.95,
+  "E_minus_i_kJ_mol_per_formula_unit": 57.117,
+  "formula_unit_1": {
+   "d_N1_H1A_A": 1.616,
+   "d_H1A_O5_A": 0.98,
+   "delta_A": 0.636,
+   "d_N1_O5_A": 2.5959,
+   "angle_N1_H1A_O5_deg": 179.05,
+   "d_P1_O5_A": 1.586,
+   "proton_on": "O",
+   "O4_H4A_O5": {
+    "d_O4_H4A_A": 1.0046,
+    "d_H4A_O5_A": 1.5947,
+    "d_O4_O5_A": 2.5793
+   }
+  }
+ },
+ "hybrid_variants": [
+  "sg15_e100"
+ ],
+ "profile": [
+  {
+   "point": "prof110",
+   "d_N1_H1A_target_A": 1.1,
+   "converged": true,
+   "E_PBE_D3BJ_meV_cell": 28.74,
+   "E_PBE_D3BJ_kJ_mol_per_fu": 1.387,
+   "slope_meV_A_cell": 1505.2,
+   "delta_A": -0.5128,
+   "d_N1_O5_A": 2.7119,
+   "d_H1A_O5_A": 1.6128,
+   "angle_N1_H1A_O5_deg": 176.94,
+   "d_P1_O5_A": 1.5326,
+   "d_O4_O5_A": 2.5082,
+   "pressure_kbar": -6.21,
+   "same_setting_as_relax_i": true,
+   "E_PBE0_D3BJ_meV_cell": 54.99,
+   "E_PBE0_D3BJ_kJ_mol_per_fu": 2.653,
+   "hybrid_correction_meV_cell": 26.25,
+   "PBE0_converged": true
+  },
+  {
+   "point": "prof125",
+   "d_N1_H1A_target_A": 1.25,
+   "converged": true,
+   "E_PBE_D3BJ_meV_cell": 408.89,
+   "E_PBE_D3BJ_kJ_mol_per_fu": 19.726,
+   "slope_meV_A_cell": 2766.8,
+   "delta_A": -0.1044,
+   "d_N1_O5_A": 2.6031,
+   "d_H1A_O5_A": 1.3544,
+   "angle_N1_H1A_O5_deg": 176.4,
+   "d_P1_O5_A": 1.5486,
+   "d_O4_O5_A": 2.525,
+   "pressure_kbar": -6.19,
+   "same_setting_as_relax_i": true,
+   "E_PBE0_D3BJ_meV_cell": 494.11,
+   "E_PBE0_D3BJ_kJ_mol_per_fu": 23.837,
+   "hybrid_correction_meV_cell": 85.22,
+   "PBE0_converged": true
+  },
+  {
+   "point": "prof140",
+   "d_N1_H1A_target_A": 1.4,
+   "converged": true,
+   "E_PBE_D3BJ_meV_cell": 716.67,
+   "E_PBE_D3BJ_kJ_mol_per_fu": 34.574,
+   "slope_meV_A_cell": 1441.9,
+   "delta_A": 0.2305,
+   "d_N1_O5_A": 2.5676,
+   "d_H1A_O5_A": 1.1695,
+   "angle_N1_H1A_O5_deg": 175.51,
+   "d_P1_O5_A": 1.5673,
+   "d_O4_O5_A": 2.5428,
+   "pressure_kbar": -2.54,
+   "same_setting_as_relax_i": true,
+   "E_PBE0_D3BJ_meV_cell": 771.63,
+   "E_PBE0_D3BJ_kJ_mol_per_fu": 37.226,
+   "hybrid_correction_meV_cell": 54.96,
+   "PBE0_converged": true
+  },
+  {
+   "point": "prof155",
+   "d_N1_H1A_target_A": 1.55,
+   "converged": true,
+   "E_PBE_D3BJ_meV_cell": 892.83,
+   "E_PBE_D3BJ_kJ_mol_per_fu": 43.073,
+   "slope_meV_A_cell": 1152.9,
+   "delta_A": 0.4689,
+   "d_N1_O5_A": 2.6286,
+   "d_H1A_O5_A": 1.0811,
+   "angle_N1_H1A_O5_deg": 174.96,
+   "d_P1_O5_A": 1.5816,
+   "d_O4_O5_A": 2.5585,
+   "pressure_kbar": 0.34,
+   "same_setting_as_relax_i": true,
+   "E_PBE0_D3BJ_meV_cell": 896.87,
+   "E_PBE0_D3BJ_kJ_mol_per_fu": 43.267,
+   "hybrid_correction_meV_cell": 4.04,
+   "PBE0_converged": true
+  },
+  {
+   "point": "prof170",
+   "d_N1_H1A_target_A": 1.7,
+   "converged": true,
+   "E_PBE_D3BJ_meV_cell": 1069.26,
+   "E_PBE_D3BJ_kJ_mol_per_fu": 51.584,
+   "slope_meV_A_cell": 1297.2,
+   "delta_A": 0.663,
+   "d_N1_O5_A": 2.7343,
+   "d_H1A_O5_A": 1.037,
+   "angle_N1_H1A_O5_deg": 174.82,
+   "d_P1_O5_A": 1.5915,
+   "d_O4_O5_A": 2.5659,
+   "pressure_kbar": 2.36,
+   "same_setting_as_relax_i": true,
+   "E_PBE0_D3BJ_meV_cell": 1036.96,
+   "E_PBE0_D3BJ_kJ_mol_per_fu": 50.026,
+   "hybrid_correction_meV_cell": -32.31,
+   "PBE0_converged": true
+  }
+ ],
+ "relax_i_row": {
+  "d_N1_H1A_A": 1.0626,
+  "E_meV_cell": 0.0,
+  "delta_A": -0.6103,
+  "d_N1_O5_A": 2.7344,
+  "d_H1A_O5_A": 1.6729
+ },
+ "neutral_minimum": {
+  "PBE_D3BJ": {
+   "answer": "no",
+   "text": "PBE-D3(BJ): no neutral minimum between d(N1-H1A) = 1.0626 and 1.7 A; the energy rises monotonically to +1069.3 meV/cell at 1.7 A and the constraint force pushes the proton back to N1 at every point"
+  },
+  "PBE0_D3BJ": {
+   "answer": "no",
+   "text": "PBE0-D3(BJ) single points at the PBE-D3(BJ) geometries: no neutral minimum between d(N1-H1A) = 1.0626 and 1.7 A; the energy rises monotonically to +1037.0 meV/cell at 1.7 A"
+  },
+  "complete": {
+   "PBE_points": 5,
+   "PBE0_points": 5,
+   "expected": 5
+  }
+ },
+ "single_transfer_control": {
+  "tag": "relax_iir1",
+  "converged": true,
+  "ion_dynamics": "bfgs",
+  "ecut_Ry": [
+   70,
+   560
+  ],
+  "k": "2x1x1",
+  "targets_A": [],
+  "energy_Ry": -905.1505719379,
+  "n_symops": 1,
+  "steps": [
+   51,
+   49
+  ],
+  "n_scf": 51,
+  "restarts": 0,
+  "wall_s_last_part": 2122.04,
+  "pressure_kbar_final": -4.36,
+  "max_force_Ry_bohr": 0.000453,
+  "max_constrained_force_Ry_bohr": null,
+  "formula_units": [
+   {
+    "d_N1_H1A_A": 1.063,
+    "d_H1A_O5_A": 1.6686,
+    "delta_A": -0.6057,
+    "d_N1_O5_A": 2.7309,
+    "angle_N1_H1A_O5_deg": 177.27,
+    "d_P1_O5_A": 1.5301,
+    "proton_on": "N",
+    "O4_H4A_O5": {
+     "d_O4_H4A_A": 1.0305,
+     "d_H4A_O5_A": 1.4923,
+     "d_O4_O5_A": 2.5071
+    }
+   },
+   {
+    "d_N1_H1A_A": 1.0629,
+    "d_H1A_O5_A": 1.6685,
+    "delta_A": -0.6055,
+    "d_N1_O5_A": 2.7304,
+    "angle_N1_H1A_O5_deg": 176.89,
+    "d_P1_O5_A": 1.53,
+    "proton_on": "N",
+    "O4_H4A_O5": {
+     "d_O4_H4A_A": 1.0305,
+     "d_H4A_O5_A": 1.4925,
+     "d_O4_O5_A": 2.5076
+    }
+   }
+  ],
+  "sym_dev_A": 0.01109,
+  "same_setting_as_relax_i": true,
+  "E_minus_i_meV_cell": -1.03,
+  "E_minus_i_kJ_mol_per_formula_unit": -0.05,
+  "rmsd_all_atoms_vs_relax_i_A": 0.0117,
+  "what": "relax_i with H1A moved 0.98 A from O5 in formula unit 1 only, unconstrained BFGS (no symmetry): does the proton return?",
+  "E_minus_i_note": "one proton moved: the per-cell value is the cost of one transferred proton",
+  "verdict": "the proton returned to N1: the salt is recovered (single minimum)"
+ },
+ "points": {
+  "prof110": {
+   "tag": "relax_prof110",
+   "converged": true,
+   "ion_dynamics": "damp",
+   "ecut_Ry": [
+    70,
+    560
+   ],
+   "k": "2x1x1",
+   "targets_A": [
+    1.1,
+    1.1
+   ],
+   "energy_Ry": -905.1483837917,
+   "n_symops": 2,
+   "steps": 7,
+   "n_scf": 8,
+   "restarts": 0,
+   "wall_s_last_part": 468.2,
+   "pressure_kbar_final": -6.21,
+   "max_force_Ry_bohr": 0.028032,
+   "max_constrained_force_Ry_bohr": 0.000543,
+   "formula_units": [
+    {
+     "d_N1_H1A_A": 1.1,
+     "d_H1A_O5_A": 1.6128,
+     "delta_A": -0.5128,
+     "d_N1_O5_A": 2.7119,
+     "angle_N1_H1A_O5_deg": 176.94,
+     "d_P1_O5_A": 1.5326,
+     "proton_on": "N",
+     "O4_H4A_O5": {
+      "d_O4_H4A_A": 1.0285,
+      "d_H4A_O5_A": 1.4967,
+      "d_O4_O5_A": 2.5082
+     }
+    },
+    {
+     "d_N1_H1A_A": 1.1,
+     "d_H1A_O5_A": 1.6128,
+     "delta_A": -0.5128,
+     "d_N1_O5_A": 2.7119,
+     "angle_N1_H1A_O5_deg": 176.94,
+     "d_P1_O5_A": 1.5326,
+     "proton_on": "N",
+     "O4_H4A_O5": {
+      "d_O4_H4A_A": 1.0285,
+      "d_H4A_O5_A": 1.4967,
+      "d_O4_O5_A": 2.5082
+     }
+    }
+   ],
+   "sym_dev_A": 0.0,
+   "same_setting_as_relax_i": true,
+   "E_minus_i_meV_cell": 28.74,
+   "E_minus_i_kJ_mol_per_formula_unit": 1.387,
+   "rmsd_all_atoms_vs_relax_i_A": 0.015,
+   "slope": {
+    "dE_dd_per_fu_eV_A": [
+     0.7526,
+     0.7526
+    ],
+    "dE_dd_cell_meV_A": 1505.2,
+    "dE_dd_kJ_mol_A_per_formula_unit": 72.61,
+    "H1A_force_perpendicular_to_NH_Ry_bohr": [
+     0.00027,
+     0.00027
+    ],
+    "how": "constraint force at the constrained minimum: dE/dd = (F_N1 - F_H1A).u / 2 per formula unit (u = N1->H1A); per cell = sum over both formula units (both distances move)"
+   },
+   "seed": {
+    "seed": "interp",
+    "w": 0.0676,
+    "how": "every atom interpolated relax_i -> relax_iirfix at w, then H1A put d from N1 along the interpolated N1->H1A direction (both formula units)",
+    "from": null
+   }
+  },
+  "prof125": {
+   "tag": "relax_prof125",
+   "converged": true,
+   "ion_dynamics": "damp",
+   "ecut_Ry": [
+    70,
+    560
+   ],
+   "k": "2x1x1",
+   "targets_A": [
+    1.25,
+    1.25
+   ],
+   "energy_Ry": -905.120443796,
+   "n_symops": 2,
+   "steps": 12,
+   "n_scf": 13,
+   "restarts": 0,
+   "wall_s_last_part": 766.46,
+   "pressure_kbar_final": -6.19,
+   "max_force_Ry_bohr": 0.051459,
+   "max_constrained_force_Ry_bohr": 0.000934,
+   "formula_units": [
+    {
+     "d_N1_H1A_A": 1.25,
+     "d_H1A_O5_A": 1.3544,
+     "delta_A": -0.1044,
+     "d_N1_O5_A": 2.6031,
+     "angle_N1_H1A_O5_deg": 176.4,
+     "d_P1_O5_A": 1.5486,
+     "proton_on": "N",
+     "O4_H4A_O5": {
+      "d_O4_H4A_A": 1.0192,
+      "d_H4A_O5_A": 1.5272,
+      "d_O4_O5_A": 2.525
+     }
+    },
+    {
+     "d_N1_H1A_A": 1.25,
+     "d_H1A_O5_A": 1.3544,
+     "delta_A": -0.1044,
+     "d_N1_O5_A": 2.6031,
+     "angle_N1_H1A_O5_deg": 176.4,
+     "d_P1_O5_A": 1.5486,
+     "proton_on": "N",
+     "O4_H4A_O5": {
+      "d_O4_H4A_A": 1.0192,
+      "d_H4A_O5_A": 1.5272,
+      "d_O4_O5_A": 2.525
+     }
+    }
+   ],
+   "sym_dev_A": 0.0,
+   "same_setting_as_relax_i": true,
+   "E_minus_i_meV_cell": 408.89,
+   "E_minus_i_kJ_mol_per_formula_unit": 19.726,
+   "rmsd_all_atoms_vs_relax_i_A": 0.0785,
+   "slope": {
+    "dE_dd_per_fu_eV_A": [
+     1.3834,
+     1.3834
+    ],
+    "dE_dd_cell_meV_A": 2766.8,
+    "dE_dd_kJ_mol_A_per_formula_unit": 133.48,
+    "H1A_force_perpendicular_to_NH_Ry_bohr": [
+     0.00017,
+     0.00017
+    ],
+    "how": "constraint force at the constrained minimum: dE/dd = (F_N1 - F_H1A).u / 2 per formula unit (u = N1->H1A); per cell = sum over both formula units (both distances move)"
+   },
+   "seed": {
+    "seed": "interp",
+    "w": 0.3386,
+    "how": "every atom interpolated relax_i -> relax_iirfix at w, then H1A put d from N1 along the interpolated N1->H1A direction (both formula units)",
+    "from": null
+   }
+  },
+  "prof140": {
+   "tag": "relax_prof140",
+   "converged": true,
+   "ion_dynamics": "damp",
+   "ecut_Ry": [
+    70,
+    560
+   ],
+   "k": "2x1x1",
+   "targets_A": [
+    1.4,
+    1.4
+   ],
+   "energy_Ry": -905.0978223586,
+   "n_symops": 2,
+   "steps": 12,
+   "n_scf": 13,
+   "restarts": 0,
+   "wall_s_last_part": 856.78,
+   "pressure_kbar_final": -2.54,
+   "max_force_Ry_bohr": 0.027357,
+   "max_constrained_force_Ry_bohr": 0.000998,
+   "formula_units": [
+    {
+     "d_N1_H1A_A": 1.4,
+     "d_H1A_O5_A": 1.1695,
+     "delta_A": 0.2305,
+     "d_N1_O5_A": 2.5676,
+     "angle_N1_H1A_O5_deg": 175.51,
+     "d_P1_O5_A": 1.5673,
+     "proton_on": "O",
+     "O4_H4A_O5": {
+      "d_O4_H4A_A": 1.0128,
+      "d_H4A_O5_A": 1.5515,
+      "d_O4_O5_A": 2.5428
+     }
+    },
+    {
+     "d_N1_H1A_A": 1.4,
+     "d_H1A_O5_A": 1.1695,
+     "delta_A": 0.2305,
+     "d_N1_O5_A": 2.5676,
+     "angle_N1_H1A_O5_deg": 175.51,
+     "d_P1_O5_A": 1.5673,
+     "proton_on": "O",
+     "O4_H4A_O5": {
+      "d_O4_H4A_A": 1.0128,
+      "d_H4A_O5_A": 1.5515,
+      "d_O4_O5_A": 2.5428
+     }
+    }
+   ],
+   "sym_dev_A": 0.0,
+   "same_setting_as_relax_i": true,
+   "E_minus_i_meV_cell": 716.67,
+   "E_minus_i_kJ_mol_per_formula_unit": 34.574,
+   "rmsd_all_atoms_vs_relax_i_A": 0.1349,
+   "slope": {
+    "dE_dd_per_fu_eV_A": [
+     0.7209,
+     0.7209
+    ],
+    "dE_dd_cell_meV_A": 1441.9,
+    "dE_dd_kJ_mol_A_per_formula_unit": 69.56,
+    "H1A_force_perpendicular_to_NH_Ry_bohr": [
+     0.00054,
+     0.00054
+    ],
+    "how": "constraint force at the constrained minimum: dE/dd = (F_N1 - F_H1A).u / 2 per formula unit (u = N1->H1A); per cell = sum over both formula units (both distances move)"
+   },
+   "seed": {
+    "seed": "interp",
+    "w": 0.6097,
+    "how": "every atom interpolated relax_i -> relax_iirfix at w, then H1A put d from N1 along the interpolated N1->H1A direction (both formula units)",
+    "from": null
+   }
+  },
+  "prof155": {
+   "tag": "relax_prof155",
+   "converged": true,
+   "ion_dynamics": "damp",
+   "ecut_Ry": [
+    70,
+    560
+   ],
+   "k": "2x1x1",
+   "targets_A": [
+    1.55,
+    1.55
+   ],
+   "energy_Ry": -905.0848745583,
+   "n_symops": 2,
+   "steps": 18,
+   "n_scf": 19,
+   "restarts": 0,
+   "wall_s_last_part": 1117.07,
+   "pressure_kbar_final": 0.34,
+   "max_force_Ry_bohr": 0.02143,
+   "max_constrained_force_Ry_bohr": 0.000912,
+   "formula_units": [
+    {
+     "d_N1_H1A_A": 1.55,
+     "d_H1A_O5_A": 1.0811,
+     "delta_A": 0.4689,
+     "d_N1_O5_A": 2.6286,
+     "angle_N1_H1A_O5_deg": 174.96,
+     "d_P1_O5_A": 1.5816,
+     "proton_on": "O",
+     "O4_H4A_O5": {
+      "d_O4_H4A_A": 1.0095,
+      "d_H4A_O5_A": 1.566,
+      "d_O4_O5_A": 2.5585
+     }
+    },
+    {
+     "d_N1_H1A_A": 1.55,
+     "d_H1A_O5_A": 1.0811,
+     "delta_A": 0.4689,
+     "d_N1_O5_A": 2.6286,
+     "angle_N1_H1A_O5_deg": 174.96,
+     "d_P1_O5_A": 1.5816,
+     "proton_on": "O",
+     "O4_H4A_O5": {
+      "d_O4_H4A_A": 1.0095,
+      "d_H4A_O5_A": 1.566,
+      "d_O4_O5_A": 2.5585
+     }
+    }
+   ],
+   "sym_dev_A": 0.0,
+   "same_setting_as_relax_i": true,
+   "E_minus_i_meV_cell": 892.83,
+   "E_minus_i_kJ_mol_per_formula_unit": 43.073,
+   "rmsd_all_atoms_vs_relax_i_A": 0.1816,
+   "slope": {
+    "dE_dd_per_fu_eV_A": [
+     0.5764,
+     0.5764
+    ],
+    "dE_dd_cell_meV_A": 1152.9,
+    "dE_dd_kJ_mol_A_per_formula_unit": 55.62,
+    "H1A_force_perpendicular_to_NH_Ry_bohr": [
+     0.00027,
+     0.00027
+    ],
+    "how": "constraint force at the constrained minimum: dE/dd = (F_N1 - F_H1A).u / 2 per formula unit (u = N1->H1A); per cell = sum over both formula units (both distances move)"
+   },
+   "seed": {
+    "seed": "interp",
+    "w": 0.8807,
+    "how": "every atom interpolated relax_i -> relax_iirfix at w, then H1A put d from N1 along the interpolated N1->H1A direction (both formula units)",
+    "from": null
+   }
+  },
+  "prof170": {
+   "tag": "relax_prof170",
+   "converged": true,
+   "ion_dynamics": "damp",
+   "ecut_Ry": [
+    70,
+    560
+   ],
+   "k": "2x1x1",
+   "targets_A": [
+    1.7,
+    1.7
+   ],
+   "energy_Ry": -905.0719070006,
+   "n_symops": 2,
+   "steps": 32,
+   "n_scf": 33,
+   "restarts": 0,
+   "wall_s_last_part": 2052.66,
+   "pressure_kbar_final": 2.36,
+   "max_force_Ry_bohr": 0.023959,
+   "max_constrained_force_Ry_bohr": 0.000953,
+   "formula_units": [
+    {
+     "d_N1_H1A_A": 1.7,
+     "d_H1A_O5_A": 1.037,
+     "delta_A": 0.663,
+     "d_N1_O5_A": 2.7343,
+     "angle_N1_H1A_O5_deg": 174.82,
+     "d_P1_O5_A": 1.5915,
+     "proton_on": "O",
+     "O4_H4A_O5": {
+      "d_O4_H4A_A": 1.0068,
+      "d_H4A_O5_A": 1.5736,
+      "d_O4_O5_A": 2.5659
+     }
+    },
+    {
+     "d_N1_H1A_A": 1.7,
+     "d_H1A_O5_A": 1.037,
+     "delta_A": 0.663,
+     "d_N1_O5_A": 2.7343,
+     "angle_N1_H1A_O5_deg": 174.82,
+     "d_P1_O5_A": 1.5915,
+     "proton_on": "O",
+     "O4_H4A_O5": {
+      "d_O4_H4A_A": 1.0068,
+      "d_H4A_O5_A": 1.5736,
+      "d_O4_O5_A": 2.5659
+     }
+    }
+   ],
+   "sym_dev_A": 0.0,
+   "same_setting_as_relax_i": true,
+   "E_minus_i_meV_cell": 1069.26,
+   "E_minus_i_kJ_mol_per_formula_unit": 51.584,
+   "rmsd_all_atoms_vs_relax_i_A": 0.2093,
+   "slope": {
+    "dE_dd_per_fu_eV_A": [
+     0.6486,
+     0.6486
+    ],
+    "dE_dd_cell_meV_A": 1297.2,
+    "dE_dd_kJ_mol_A_per_formula_unit": 62.58,
+    "H1A_force_perpendicular_to_NH_Ry_bohr": [
+     0.0006,
+     0.0006
+    ],
+    "how": "constraint force at the constrained minimum: dE/dd = (F_N1 - F_H1A).u / 2 per formula unit (u = N1->H1A); per cell = sum over both formula units (both distances move)"
+   },
+   "seed": {
+    "seed": "interp",
+    "w": 1.0,
+    "how": "every atom interpolated relax_i -> relax_iirfix at w, then H1A put d from N1 along the interpolated N1->H1A direction (both formula units)",
+    "from": null
+   }
+  }
+ },
+ "hybrid": {
+  "sg15_e100": {
+   "prof110": {
+    "same_setting": true,
+    "converged": true,
+    "pseudopotentials": "SG15",
+    "ecut_Ry": [
+     100,
+     400
+    ],
+    "k": "2x1x1",
+    "nq": [
+     1,
+     1,
+     1
+    ],
+    "PBE0_D3BJ_meV_cell": 57.56,
+    "PBE0_D3BJ_kJ_mol_per_formula_unit": 2.777,
+    "PBE_D3BJ_same_setting_meV_cell": 31.32,
+    "hybrid_correction_meV_cell": 26.25,
+    "hybrid_correction_kJ_mol_per_formula_unit": 1.266,
+    "split_of_the_correction_meV_cell": {
+     "exact_exchange_25pct": 26.42,
+     "D3_parameters_pbe0_vs_pbe": -0.17,
+     "D3_parameters_simple_dftd3": -0.17,
+     "how": "first SCF of each PBE0 run = PBE electrons with the pbe0 D3(BJ) parameters; D3 part = first-SCF difference minus PBE-D3 difference; exact-exchange part = the rest"
+    },
+    "PBE_D3BJ_meV_cell": 28.74,
+    "PBE_D3BJ_kJ_mol_per_formula_unit": 1.387,
+    "PBE_D3BJ_note": "SSSP relaxes (70/560 Ry, 2x1x1): the production PBE-D3(BJ) value",
+    "best_estimate_PBE0_D3BJ_meV_cell": 54.99,
+    "best_estimate_PBE0_D3BJ_kJ_mol_per_formula_unit": 2.653,
+    "best_estimate_how": "PBE-D3(BJ)/SSSP relax difference + hybrid correction (PBE0-D3(BJ) minus PBE-D3(BJ) with the same potentials, cutoff and k grid)",
+    "PBE_D3BJ_SG15_minus_SSSP_meV_cell": 2.58,
+    "status": "converged (EXX dexx < conv_thr in both runs)",
+    "tag": "hybrid_prof110_sg15_e100",
+    "pbe0_wall_s": 830.0
+   },
+   "prof125": {
+    "same_setting": true,
+    "converged": true,
+    "pseudopotentials": "SG15",
+    "ecut_Ry": [
+     100,
+     400
+    ],
+    "k": "2x1x1",
+    "nq": [
+     1,
+     1,
+     1
+    ],
+    "PBE0_D3BJ_meV_cell": 496.35,
+    "PBE0_D3BJ_kJ_mol_per_formula_unit": 23.945,
+    "PBE_D3BJ_same_setting_meV_cell": 411.13,
+    "hybrid_correction_meV_cell": 85.22,
+    "hybrid_correction_kJ_mol_per_formula_unit": 4.111,
+    "split_of_the_correction_meV_cell": {
+     "exact_exchange_25pct": 86.41,
+     "D3_parameters_pbe0_vs_pbe": -1.19,
+     "D3_parameters_simple_dftd3": -1.18,
+     "how": "first SCF of each PBE0 run = PBE electrons with the pbe0 D3(BJ) parameters; D3 part = first-SCF difference minus PBE-D3 difference; exact-exchange part = the rest"
+    },
+    "PBE_D3BJ_meV_cell": 408.89,
+    "PBE_D3BJ_kJ_mol_per_formula_unit": 19.726,
+    "PBE_D3BJ_note": "SSSP relaxes (70/560 Ry, 2x1x1): the production PBE-D3(BJ) value",
+    "best_estimate_PBE0_D3BJ_meV_cell": 494.11,
+    "best_estimate_PBE0_D3BJ_kJ_mol_per_formula_unit": 23.837,
+    "best_estimate_how": "PBE-D3(BJ)/SSSP relax difference + hybrid correction (PBE0-D3(BJ) minus PBE-D3(BJ) with the same potentials, cutoff and k grid)",
+    "PBE_D3BJ_SG15_minus_SSSP_meV_cell": 2.24,
+    "status": "converged (EXX dexx < conv_thr in both runs)",
+    "tag": "hybrid_prof125_sg15_e100",
+    "pbe0_wall_s": 908.64
+   },
+   "prof140": {
+    "same_setting": true,
+    "converged": true,
+    "pseudopotentials": "SG15",
+    "ecut_Ry": [
+     100,
+     400
+    ],
+    "k": "2x1x1",
+    "nq": [
+     1,
+     1,
+     1
+    ],
+    "PBE0_D3BJ_meV_cell": 771.85,
+    "PBE0_D3BJ_kJ_mol_per_formula_unit": 37.236,
+    "PBE_D3BJ_same_setting_meV_cell": 716.88,
+    "hybrid_correction_meV_cell": 54.96,
+    "hybrid_correction_kJ_mol_per_formula_unit": 2.652,
+    "split_of_the_correction_meV_cell": {
+     "exact_exchange_25pct": 57.78,
+     "D3_parameters_pbe0_vs_pbe": -2.82,
+     "D3_parameters_simple_dftd3": -2.81,
+     "how": "first SCF of each PBE0 run = PBE electrons with the pbe0 D3(BJ) parameters; D3 part = first-SCF difference minus PBE-D3 difference; exact-exchange part = the rest"
+    },
+    "PBE_D3BJ_meV_cell": 716.67,
+    "PBE_D3BJ_kJ_mol_per_formula_unit": 34.574,
+    "PBE_D3BJ_note": "SSSP relaxes (70/560 Ry, 2x1x1): the production PBE-D3(BJ) value",
+    "best_estimate_PBE0_D3BJ_meV_cell": 771.63,
+    "best_estimate_PBE0_D3BJ_kJ_mol_per_formula_unit": 37.226,
+    "best_estimate_how": "PBE-D3(BJ)/SSSP relax difference + hybrid correction (PBE0-D3(BJ) minus PBE-D3(BJ) with the same potentials, cutoff and k grid)",
+    "PBE_D3BJ_SG15_minus_SSSP_meV_cell": 0.21,
+    "status": "converged (EXX dexx < conv_thr in both runs)",
+    "tag": "hybrid_prof140_sg15_e100",
+    "pbe0_wall_s": 917.81
+   },
+   "prof155": {
+    "same_setting": true,
+    "converged": true,
+    "pseudopotentials": "SG15",
+    "ecut_Ry": [
+     100,
+     400
+    ],
+    "k": "2x1x1",
+    "nq": [
+     1,
+     1,
+     1
+    ],
+    "PBE0_D3BJ_meV_cell": 892.92,
+    "PBE0_D3BJ_kJ_mol_per_formula_unit": 43.077,
+    "PBE_D3BJ_same_setting_meV_cell": 888.89,
+    "hybrid_correction_meV_cell": 4.04,
+    "hybrid_correction_kJ_mol_per_formula_unit": 0.195,
+    "split_of_the_correction_meV_cell": {
+     "exact_exchange_25pct": 6.69,
+     "D3_parameters_pbe0_vs_pbe": -2.66,
+     "D3_parameters_simple_dftd3": -2.65,
+     "how": "first SCF of each PBE0 run = PBE electrons with the pbe0 D3(BJ) parameters; D3 part = first-SCF difference minus PBE-D3 difference; exact-exchange part = the rest"
+    },
+    "PBE_D3BJ_meV_cell": 892.83,
+    "PBE_D3BJ_kJ_mol_per_formula_unit": 43.073,
+    "PBE_D3BJ_note": "SSSP relaxes (70/560 Ry, 2x1x1): the production PBE-D3(BJ) value",
+    "best_estimate_PBE0_D3BJ_meV_cell": 896.87,
+    "best_estimate_PBE0_D3BJ_kJ_mol_per_formula_unit": 43.267,
+    "best_estimate_how": "PBE-D3(BJ)/SSSP relax difference + hybrid correction (PBE0-D3(BJ) minus PBE-D3(BJ) with the same potentials, cutoff and k grid)",
+    "PBE_D3BJ_SG15_minus_SSSP_meV_cell": -3.94,
+    "status": "converged (EXX dexx < conv_thr in both runs)",
+    "tag": "hybrid_prof155_sg15_e100",
+    "pbe0_wall_s": 925.43
+   },
+   "prof170": {
+    "same_setting": true,
+    "converged": true,
+    "pseudopotentials": "SG15",
+    "ecut_Ry": [
+     100,
+     400
+    ],
+    "k": "2x1x1",
+    "nq": [
+     1,
+     1,
+     1
+    ],
+    "PBE0_D3BJ_meV_cell": 1029.99,
+    "PBE0_D3BJ_kJ_mol_per_formula_unit": 49.69,
+    "PBE_D3BJ_same_setting_meV_cell": 1062.3,
+    "hybrid_correction_meV_cell": -32.31,
+    "hybrid_correction_kJ_mol_per_formula_unit": -1.559,
+    "split_of_the_correction_meV_cell": {
+     "exact_exchange_25pct": -29.95,
+     "D3_parameters_pbe0_vs_pbe": -2.35,
+     "D3_parameters_simple_dftd3": -2.35,
+     "how": "first SCF of each PBE0 run = PBE electrons with the pbe0 D3(BJ) parameters; D3 part = first-SCF difference minus PBE-D3 difference; exact-exchange part = the rest"
+    },
+    "PBE_D3BJ_meV_cell": 1069.26,
+    "PBE_D3BJ_kJ_mol_per_formula_unit": 51.584,
+    "PBE_D3BJ_note": "SSSP relaxes (70/560 Ry, 2x1x1): the production PBE-D3(BJ) value",
+    "best_estimate_PBE0_D3BJ_meV_cell": 1036.96,
+    "best_estimate_PBE0_D3BJ_kJ_mol_per_formula_unit": 50.026,
+    "best_estimate_how": "PBE-D3(BJ)/SSSP relax difference + hybrid correction (PBE0-D3(BJ) minus PBE-D3(BJ) with the same potentials, cutoff and k grid)",
+    "PBE_D3BJ_SG15_minus_SSSP_meV_cell": -6.96,
+    "status": "converged (EXX dexx < conv_thr in both runs)",
+    "tag": "hybrid_prof170_sg15_e100",
+    "pbe0_wall_s": 955.61
+   }
+  }
+ }
+}

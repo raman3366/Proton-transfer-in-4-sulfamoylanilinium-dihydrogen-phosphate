@@ -1,0 +1,786 @@
+{
+ "what": "rules of sections 9A, 9B, 9D and 9E on arrays typed by hand (unit_checks.py)",
+ "spec": "1.3 (6 Oct 2026)",
+ "analysis_script_sha256": "f75e6155de7007000b8c118b5e9989af7fbaf40994b3f684d4c9b3c9bbcf8ea3",
+ "n_checks": 32,
+ "n_passed": 32,
+ "all_passed": true,
+ "checks": [
+  {
+   "check": "example 1 (325 frames, start sign +1): frames positive, negative, zero",
+   "returned": [
+    102,
+    220,
+    3
+   ],
+   "expected": [
+    102,
+    220,
+    3
+   ],
+   "passed": true
+  },
+  {
+   "check": "example 1: assigned sign of frames 3, 4 (zero after +) and 125 (zero after -)",
+   "returned": [
+    1,
+    1,
+    -1
+   ],
+   "expected": [
+    1,
+    1,
+    -1
+   ],
+   "passed": true
+  },
+  {
+   "check": "example 1: stretches, long stretches",
+   "returned": [
+    4,
+    2
+   ],
+   "expected": [
+    4,
+    2
+   ],
+   "passed": true
+  },
+  {
+   "check": "example 1: long stretches (sign, first frame, frames)",
+   "returned": [
+    [
+     -1,
+     5,
+     121
+    ],
+    [
+     -1,
+     225,
+     100
+    ]
+   ],
+   "expected": [
+    [
+     -1,
+     5,
+     121
+    ],
+    [
+     -1,
+     225,
+     100
+    ]
+   ],
+   "passed": true
+  },
+  {
+   "check": "example 1: lasting sign changes (frame, time, from, to)",
+   "returned": [
+    [
+     5,
+     0.06,
+     1,
+     -1
+    ]
+   ],
+   "expected": [
+    [
+     5,
+     0.06,
+     1,
+     -1
+    ]
+   ],
+   "passed": true
+  },
+  {
+   "check": "example 2 (start sign -1, two frames of zero volume first): assigned signs of frames 0, 1, 2",
+   "returned": [
+    -1,
+    -1,
+    1
+   ],
+   "expected": [
+    -1,
+    -1,
+    1
+   ],
+   "passed": true
+  },
+  {
+   "check": "example 2: lasting sign changes (frame, time, from, to)",
+   "returned": [
+    [
+     2,
+     0.03,
+     -1,
+     1
+    ]
+   ],
+   "expected": [
+    [
+     2,
+     0.03,
+     -1,
+     1
+    ]
+   ],
+   "passed": true
+  },
+  {
+   "check": "example 2: sign of the first frame as written (0), count_zero",
+   "returned": [
+    0,
+    2
+   ],
+   "expected": [
+    0,
+    2
+   ],
+   "passed": true
+  },
+  {
+   "check": "example 3 (60 frames of the other sign): long stretches, lasting changes, window frames",
+   "returned": [
+    0,
+    0,
+    60
+   ],
+   "expected": [
+    0,
+    0,
+    60
+   ],
+   "passed": true
+  },
+  {
+   "check": "example 4 (start state C, 150 frames R then 50 frames C): first passage frame and time",
+   "returned": [
+    0,
+    0.01
+   ],
+   "expected": [
+    0,
+    0.01
+   ],
+   "passed": true
+  },
+  {
+   "check": "example 4: before (frames, count, fraction) and after (frames, count, fraction)",
+   "returned": [
+    0,
+    0,
+    null,
+    200,
+    100,
+    0.5
+   ],
+   "expected": [
+    0,
+    0,
+    null,
+    200,
+    100,
+    0.5
+   ],
+   "passed": true
+  },
+  {
+   "check": "example 5 (no first passage): available, and the six numbers",
+   "returned": [
+    false,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ],
+   "expected": [
+    false,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ],
+   "passed": true
+  },
+  {
+   "check": "frames expected in a stage: 0-100 ps at 10 ps; 5-20 ps at 10 ps; 0-5 ps at 10 ps; 75-100 ps at 10 ps; 0-0.6 ps at 0.1 ps; 100-400 ps at 100 ps",
+   "returned": [
+    10,
+    1,
+    0,
+    2,
+    6,
+    3
+   ],
+   "expected": [
+    10,
+    1,
+    0,
+    2,
+    6,
+    3
+   ],
+   "passed": true
+  },
+  {
+   "check": "stage table without a manifest: source, steps, end of the last stage",
+   "returned": [
+    "protocol (constants of the specification)",
+    [
+     "eq01",
+     "eq02",
+     "eq03",
+     "eq04",
+     "eq05",
+     "eq06"
+    ],
+    2000.0
+   ],
+   "expected": [
+    "protocol (constants of the specification)",
+    [
+     "eq01",
+     "eq02",
+     "eq03",
+     "eq04",
+     "eq05",
+     "eq06"
+    ],
+    2000.0
+   ],
+   "passed": true
+  },
+  {
+   "check": "stage table from a manifest with two stages: source and table",
+   "returned": [
+    "manifest equilibration.stages",
+    {
+     "eq01": [
+      0.0,
+      5.0
+     ],
+     "eq02": [
+      5.0,
+      20.0
+     ]
+    }
+   ],
+   "expected": [
+    "manifest equilibration.stages",
+    {
+     "eq01": [
+      0.0,
+      5.0
+     ],
+     "eq02": [
+      5.0,
+      20.0
+     ]
+    }
+   ],
+   "passed": true
+  },
+  {
+   "check": "stage table from a manifest with extension steps: the steps in the order of the run (eq03x0, eq3b and min are no steps)",
+   "returned": [
+    "eq03",
+    "eq03x1",
+    "eq03x2",
+    "eq04",
+    "eq10"
+   ],
+   "expected": [
+    "eq03",
+    "eq03x1",
+    "eq03x2",
+    "eq04",
+    "eq10"
+   ],
+   "passed": true
+  },
+  {
+   "check": "stage and extension number of eq03x2, of eq04 and of eq10",
+   "returned": [
+    [
+     3,
+     2
+    ],
+    [
+     4,
+     0
+    ],
+    [
+     10,
+     0
+    ]
+   ],
+   "expected": [
+    [
+     3,
+     2
+    ],
+    [
+     4,
+     0
+    ],
+    [
+     10,
+     0
+    ]
+   ],
+   "passed": true
+  },
+  {
+   "check": "files taken as equilibration steps of the solute, in the order of the run",
+   "returned": [
+    "solute_eq03.dcd",
+    "solute_eq03x1.dcd",
+    "solute_eq03x2.dcd",
+    "solute_eq04.dcd"
+   ],
+   "expected": [
+    "solute_eq03.dcd",
+    "solute_eq03x1.dcd",
+    "solute_eq03x2.dcd",
+    "solute_eq04.dcd"
+   ],
+   "passed": true
+  },
+  {
+   "check": "count of the driver read from a manifest: steps and counts",
+   "returned": {
+    "eq03": 0,
+    "eq03x1": 2
+   },
+   "expected": {
+    "eq03": 0,
+    "eq03x1": 2
+   },
+   "passed": true
+  },
+  {
+   "check": "settings of section 9D without a manifest: six ring carbons, 2.5 A, defaults, no warning",
+   "returned": [
+    [
+     "C1",
+     "C2",
+     "C3",
+     "C4",
+     "C5",
+     "C6"
+    ],
+    2.5,
+    "specification (defaults)",
+    true,
+    0
+   ],
+   "expected": [
+    [
+     "C1",
+     "C2",
+     "C3",
+     "C4",
+     "C5",
+     "C6"
+    ],
+    2.5,
+    "specification (defaults)",
+    true,
+    0
+   ],
+   "passed": true
+  },
+  {
+   "check": "a manifest whose protocol had no hydration block (no settings): defaults, no warning",
+   "returned": [
+    [
+     "C1",
+     "C2",
+     "C3",
+     "C4",
+     "C5",
+     "C6"
+    ],
+    2.5,
+    "specification (defaults)",
+    true,
+    0
+   ],
+   "expected": [
+    [
+     "C1",
+     "C2",
+     "C3",
+     "C4",
+     "C5",
+     "C6"
+    ],
+    2.5,
+    "specification (defaults)",
+    true,
+    0
+   ],
+   "passed": true
+  },
+  {
+   "check": "settings of the manifest equal to the defaults (as md/run_md.py writes them now): taken from the manifest, no warning",
+   "returned": [
+    [
+     "C1",
+     "C2",
+     "C3",
+     "C4",
+     "C5",
+     "C6"
+    ],
+    2.5,
+    "manifest hydration_check.settings",
+    true,
+    0
+   ],
+   "expected": [
+    [
+     "C1",
+     "C2",
+     "C3",
+     "C4",
+     "C5",
+     "C6"
+    ],
+    2.5,
+    "manifest hydration_check.settings",
+    true,
+    0
+   ],
+   "passed": true
+  },
+  {
+   "check": "the six ring carbons in another order: still the defaults, the order of the manifest kept",
+   "returned": [
+    [
+     "C6",
+     "C5",
+     "C4",
+     "C3",
+     "C2",
+     "C1"
+    ],
+    2.5,
+    "manifest hydration_check.settings",
+    true,
+    0
+   ],
+   "expected": [
+    [
+     "C6",
+     "C5",
+     "C4",
+     "C3",
+     "C2",
+     "C1"
+    ],
+    2.5,
+    "manifest hydration_check.settings",
+    true,
+    0
+   ],
+   "passed": true
+  },
+  {
+   "check": "settings of the driver before 8:01 AM of 6 Oct 2026 (seven atoms, 3.5 A): followed, one warning",
+   "returned": [
+    [
+     "C1",
+     "C2",
+     "C3",
+     "C4",
+     "C5",
+     "C6",
+     "N1"
+    ],
+    3.5,
+    "manifest hydration_check.settings",
+    false,
+    1
+   ],
+   "expected": [
+    [
+     "C1",
+     "C2",
+     "C3",
+     "C4",
+     "C5",
+     "C6",
+     "N1"
+    ],
+    3.5,
+    "manifest hydration_check.settings",
+    false,
+    1
+   ],
+   "passed": true
+  },
+  {
+   "check": "settings of the protocol between 8:01 and 8:56 AM (six ring carbons, 3.5 A): followed, one warning",
+   "returned": [
+    [
+     "C1",
+     "C2",
+     "C3",
+     "C4",
+     "C5",
+     "C6"
+    ],
+    3.5,
+    "manifest hydration_check.settings",
+    false,
+    1
+   ],
+   "expected": [
+    [
+     "C1",
+     "C2",
+     "C3",
+     "C4",
+     "C5",
+     "C6"
+    ],
+    3.5,
+    "manifest hydration_check.settings",
+    false,
+    1
+   ],
+   "passed": true
+  },
+  {
+   "check": "settings of the manifest that cannot be used (a site atom that is no heavy atom of the ligand): both defaults, one warning",
+   "returned": [
+    [
+     "C1",
+     "C2",
+     "C3",
+     "C4",
+     "C5",
+     "C6"
+    ],
+    2.5,
+    "specification (defaults)",
+    true,
+    1
+   ],
+   "expected": [
+    [
+     "C1",
+     "C2",
+     "C3",
+     "C4",
+     "C5",
+     "C6"
+    ],
+    2.5,
+    "specification (defaults)",
+    true,
+    1
+   ],
+   "passed": true
+  },
+  {
+   "check": "settings of the manifest that cannot be used (a site atom named twice): both defaults, one warning",
+   "returned": [
+    [
+     "C1",
+     "C2",
+     "C3",
+     "C4",
+     "C5",
+     "C6"
+    ],
+    2.5,
+    "specification (defaults)",
+    true,
+    1
+   ],
+   "expected": [
+    [
+     "C1",
+     "C2",
+     "C3",
+     "C4",
+     "C5",
+     "C6"
+    ],
+    2.5,
+    "specification (defaults)",
+    true,
+    1
+   ],
+   "passed": true
+  },
+  {
+   "check": "settings of the manifest that cannot be used (an empty list of site atoms): both defaults, one warning",
+   "returned": [
+    [
+     "C1",
+     "C2",
+     "C3",
+     "C4",
+     "C5",
+     "C6"
+    ],
+    2.5,
+    "specification (defaults)",
+    true,
+    1
+   ],
+   "expected": [
+    [
+     "C1",
+     "C2",
+     "C3",
+     "C4",
+     "C5",
+     "C6"
+    ],
+    2.5,
+    "specification (defaults)",
+    true,
+    1
+   ],
+   "passed": true
+  },
+  {
+   "check": "settings of the manifest that cannot be used (a cut-off of zero): both defaults, one warning",
+   "returned": [
+    [
+     "C1",
+     "C2",
+     "C3",
+     "C4",
+     "C5",
+     "C6"
+    ],
+    2.5,
+    "specification (defaults)",
+    true,
+    1
+   ],
+   "expected": [
+    [
+     "C1",
+     "C2",
+     "C3",
+     "C4",
+     "C5",
+     "C6"
+    ],
+    2.5,
+    "specification (defaults)",
+    true,
+    1
+   ],
+   "passed": true
+  },
+  {
+   "check": "settings of the manifest that cannot be used (a cut-off that is text): both defaults, one warning",
+   "returned": [
+    [
+     "C1",
+     "C2",
+     "C3",
+     "C4",
+     "C5",
+     "C6"
+    ],
+    2.5,
+    "specification (defaults)",
+    true,
+    1
+   ],
+   "expected": [
+    [
+     "C1",
+     "C2",
+     "C3",
+     "C4",
+     "C5",
+     "C6"
+    ],
+    2.5,
+    "specification (defaults)",
+    true,
+    1
+   ],
+   "passed": true
+  },
+  {
+   "check": "settings of the manifest that cannot be used (no cut-off): both defaults, one warning",
+   "returned": [
+    [
+     "C1",
+     "C2",
+     "C3",
+     "C4",
+     "C5",
+     "C6"
+    ],
+    2.5,
+    "specification (defaults)",
+    true,
+    1
+   ],
+   "expected": [
+    [
+     "C1",
+     "C2",
+     "C3",
+     "C4",
+     "C5",
+     "C6"
+    ],
+    2.5,
+    "specification (defaults)",
+    true,
+    1
+   ],
+   "passed": true
+  },
+  {
+   "check": "settings of the manifest that cannot be used (no site atoms): both defaults, one warning",
+   "returned": [
+    [
+     "C1",
+     "C2",
+     "C3",
+     "C4",
+     "C5",
+     "C6"
+    ],
+    2.5,
+    "specification (defaults)",
+    true,
+    1
+   ],
+   "expected": [
+    [
+     "C1",
+     "C2",
+     "C3",
+     "C4",
+     "C5",
+     "C6"
+    ],
+    2.5,
+    "specification (defaults)",
+    true,
+    1
+   ],
+   "passed": true
+  }
+ ]
+}

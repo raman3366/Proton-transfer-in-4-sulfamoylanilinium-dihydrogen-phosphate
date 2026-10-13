@@ -1,0 +1,24 @@
+- 2026-09-27 14:29  === pipeline started for sfa_pair_gas_d3 (from stage 'optimize') ===
+- 2026-09-27 14:29  pre-optimisation at B3LYP/6-31g(d) (254 basis functions)
+- 2026-09-27 15:10  pre-optimisation converged in 45 steps, 40.6 min
+- 2026-09-27 15:10  optimisation started from preopt.xyz; solvent=none (gas phase)
+- 2026-09-27 16:02  optimisation converged in 27 steps, 52.5 min, E = -1536.05594903 Ha
+- 2026-09-27 16:02  proton check: H-N 1.758 A, H-O 0.998 A -> PROTON TRANSFERRED to the acceptor; bonds broken ['N1-H1A'], formed ['H1A-O5#1_554']
+- 2026-09-27 16:02  frequencies skipped: computed on the IEF-PCM (primary) model instead
+- 2026-09-27 16:03  FMO: HOMO -7.159 eV, LUMO -1.521 eV, gap 5.637 eV; fragment composition {'4-sulfamoylanilinium cation': 98.7, 'dihydrogen phosphate anion': 1.3} / {'4-sulfamoylanilinium cation': 100.2, 'dihydrogen phosphate anion': -0.2}
+- 2026-09-27 16:03  molden padded from 443 to 445 MOs for Multiwfn compatibility
+- 2026-09-27 16:12  cubes written (ESP 64^3 in 9.1 min)
+- 2026-09-27 16:13  MEP surface: min -0.062335 a.u., max 0.099421 a.u.; 7 minima, 13 maxima
+- 2026-09-27 16:13  NCI: 1768697 grid points, 6 RDG spikes with RDG<0.3
+- 2026-09-27 16:13  ELF plane data written for ['benzene_ring', 'hbond_ring_R22_8', 'sulfonamide_S1_N2_O1']
+- 2026-09-27 16:13  LOL plane data written for ['benzene_ring', 'hbond_ring_R22_8', 'sulfonamide_S1_N2_O1']
+- 2026-09-27 16:14  RESULTS.md assembled
+- 2026-09-27 16:14  === pipeline finished for sfa_pair_gas_d3 ===
+- 2026-09-28 04:49  QTAIM: 59 CPs {'(3,-3)': 27, '(3,-1)': 29, '(3,+1)': 3, '(3,+3)': 0}, Poincare-Hopf OK; 3 H-bond BCP(s): O5#1_554-H1A...N1 (reverse of case H-bond N1-H1A...O5: proton transferred): rho 0.0472, V/2 -12.9, BE(neutral) -9.8 kcal/mol; N1-H1B...O4#1_554: rho 0.0091, V/2 -1.9, BE(neutral) -1.3 kcal/mol; C6-H6...O4: rho 0.0083, V/2 -1.6, BE(neutral) -1.1 kcal/mol
+- 2026-09-28 04:51  IGMH: integral dg_inter 0.239891 a.u.; top atom pairs N1...H1A 17.3%, N1...O5#1_554 8.7%, C1...H1A 6.5%, H1B...H1A 5.9%
+- 2026-09-28 04:51  charges (Hirshfeld/ADCH/CM5): fragment sums 4-sulfamoylanilinium cation (-H1A): Hirshfeld +0.124, ADCH +0.115, CM5 +0.103; dihydrogen phosphate anion (+H1A): Hirshfeld -0.124, ADCH -0.115, CM5 -0.103
+- 2026-09-28 04:51  charges (NPA/Hirshfeld/ADCH/CM5): fragment sums 4-sulfamoylanilinium cation (-H1A): NPA +0.062, Hirshfeld +0.124, ADCH +0.115, CM5 +0.103; dihydrogen phosphate anion (+H1A): NPA -0.062, Hirshfeld -0.124, ADCH -0.115, CM5 -0.103
+- 2026-09-28 04:52  DOS/PDOS (Hirshfeld): HOMO 4-sulfamoylanilinium cation (-H1A) 97%, dihydrogen phosphate anion (+H1A) 3%; LUMO 4-sulfamoylanilinium cation (-H1A) 98%, dihydrogen phosphate anion (+H1A) 2%
+- 2026-09-28 11:50  NLO (nlo_geom-sfa_pair_pcm_d3.json): mu 6.290 D, alpha_iso 151.39 a.u., beta_tot 573.2 a.u. (4.952e-30 esu)
+- 2026-09-28 12:26  interaction (interaction.json, neutral): E_int(CP) -12.83 kcal/mol, BSSE 1.36, E_bind -10.24
+- 2026-09-28 12:33  interaction (interaction_geom-sfa_pair_pcm_d3.json, ionic): E_int(CP) -128.60 kcal/mol, BSSE 1.77, E_bind -116.63

@@ -1,0 +1,10 @@
+source leaprc.protein.ff14SB
+source leaprc.water.tip3p
+prot = loadpdb /root/workspace/cqc-4-sulfamoylanilinium-dihydrogen-phosphate/md/system/protein_md.pdb
+wat = loadpdb /root/workspace/cqc-4-sulfamoylanilinium-dihydrogen-phosphate/md/system/waters_R.pdb
+sys = combine { prot wat }
+check sys
+charge sys
+saveamberparm sys /root/cqc-sfa-md/system/tleap/R.prmtop /root/cqc-sfa-md/system/tleap/R.inpcrd
+savepdb sys /root/cqc-sfa-md/system/tleap/R.pdb
+quit

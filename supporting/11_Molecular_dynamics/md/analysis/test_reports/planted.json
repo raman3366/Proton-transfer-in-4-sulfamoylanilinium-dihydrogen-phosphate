@@ -1,0 +1,423 @@
+{
+ "written_by": "md/analysis/make_test_trajectory.py",
+ "sha256_of_this_script": "b98c4a8d18a2b8326ba3a25b0393335cd73dad572ade0f40fcfd6edb46b2a14a",
+ "seed": 20261005,
+ "inputs_sha256": {
+  "md/system/tleap/protein_H.pdb": "087274c7e74ac5803318b9ff8f67155138d3f0eaef242167b9b7217581e61ea4",
+  "md/system/zinc.pdb": "c98aa70a52066f412c0618bbc3fc38e811add4d5d68747b9d02a84a70cd3cea9",
+  "md/system/ligand_X.pdb": "342ccdd6a6c03302c4fed7ff01dacebbecde97141fab02e375bc0d5e2a62a47b",
+  "md/system/ligand_N.pdb": "27bfd0783f8d43c768ea3ea5efc32fdfa9b3ba7c16b7419ed52093ca9067d05e",
+  "md/system/ligand_R.pdb": "8300cc02815be661cecf7281c6e84dcba410b7b8b994af5c0b78d60487d5cb01",
+  "md/system/starts.csv": "ee90fb3fcdd80da8de6e6bd1f44d269ff50de31189c6107488652f8453d06b62"
+ },
+ "software": {
+  "python": "3.12.14",
+  "numpy": "2.5.3",
+  "openmm": "8.6.1"
+ },
+ "n_atoms": 410,
+ "n_solute": 288,
+ "n_CA": 258,
+ "second_system_with_ND2": {
+  "n_atoms": 411,
+  "n_solute": 289
+ },
+ "gate_GV": {
+  "references_typed_from_the_specification": {
+   "ang_N2_Zn_H94NE2_deg": 108.9,
+   "ang_N2_Zn_H96NE2_deg": 114.3,
+   "ang_N2_Zn_H119ND1_deg": 116.8,
+   "ang_H94NE2_Zn_H96NE2_deg": 103.8,
+   "ang_H94NE2_Zn_H119ND1_deg": 113.6,
+   "ang_H96NE2_Zn_H119ND1_deg": 98.4,
+   "ang_C4_S_N2_deg": 108.8,
+   "tau_fold_deg": 132.1
+  },
+  "crystal_start_by_second_formulas": {
+   "ang_N2_Zn_H94NE2_deg": 108.92003729311574,
+   "ang_N2_Zn_H96NE2_deg": 114.27963830716179,
+   "ang_N2_Zn_H119ND1_deg": 116.83284721177193,
+   "ang_H94NE2_Zn_H96NE2_deg": 103.81867026044353,
+   "ang_H94NE2_Zn_H119ND1_deg": 113.59070523964924,
+   "ang_H96NE2_Zn_H119ND1_deg": 98.40864497282294,
+   "ang_C4_S_N2_deg": 108.79459849546063,
+   "tau_fold_deg": 132.0560689577839
+  },
+  "runs": {
+   "test/X0": {
+    "verdict_by_design": "PASSED",
+    "not_met": [],
+    "deviations_deg": {
+     "ang_N2_Zn_H94NE2_deg": -0.8239640926129539,
+     "ang_N2_Zn_H96NE2_deg": -0.8405447617065107,
+     "ang_N2_Zn_H119ND1_deg": -0.7763339112063932,
+     "ang_H94NE2_Zn_H96NE2_deg": 0.731086874903454,
+     "ang_H94NE2_Zn_H119ND1_deg": 0.9306669083827472,
+     "ang_H96NE2_Zn_H119ND1_deg": 0.8072049714215837,
+     "ang_C4_S_N2_deg": -0.005401504539364055,
+     "tau_fold_deg": -0.043931042216087235
+    },
+    "means": {
+     "lig_rmsd_A": 0.0,
+     "d_Zn_N2_A": 1.9614422072637847,
+     "d_Zn_H94NE2_A": 2.0022304765441152,
+     "d_Zn_H96NE2_A": 2.0102671709220945,
+     "d_Zn_H119ND1_A": 2.0066429155056453
+    },
+    "fifth_solute": [
+     0,
+     500
+    ],
+    "fifth_full": [
+     2,
+     50
+    ]
+   },
+   "edge/X0": {
+    "verdict_by_design": "PASSED",
+    "not_met": [],
+    "deviations_deg": {
+     "ang_N2_Zn_H94NE2_deg": -0.4006915561898552,
+     "ang_N2_Zn_H96NE2_deg": -1.4152297443885402,
+     "ang_N2_Zn_H119ND1_deg": -5.092392304905687,
+     "ang_H94NE2_Zn_H96NE2_deg": -0.058368478193898454,
+     "ang_H94NE2_Zn_H119ND1_deg": -2.370800026004858,
+     "ang_H96NE2_Zn_H119ND1_deg": 9.15181102311756,
+     "ang_C4_S_N2_deg": 2.494598495460693,
+     "tau_fold_deg": 18.956068957784055
+    },
+    "means": {
+     "lig_rmsd_A": 0.2728935949498716,
+     "d_Zn_N2_A": 1.950080118247564,
+     "d_Zn_H94NE2_A": 2.003943193856597,
+     "d_Zn_H96NE2_A": 2.03408673757368,
+     "d_Zn_H119ND1_A": 2.005087050710804
+    },
+    "fifth_solute": [
+     25,
+     500
+    ],
+    "fifth_full": [
+     2,
+     50
+    ]
+   },
+   "angle/X0": {
+    "verdict_by_design": "FAILED",
+    "not_met": [
+     "GV3 ang_H96NE2_Zn_H119ND1_deg"
+    ],
+    "deviations_deg": {
+     "ang_N2_Zn_H94NE2_deg": -0.8239640926129539,
+     "ang_N2_Zn_H96NE2_deg": -0.8405447617065107,
+     "ang_N2_Zn_H119ND1_deg": -7.083657215457322,
+     "ang_H94NE2_Zn_H96NE2_deg": 0.731086874903454,
+     "ang_H94NE2_Zn_H119ND1_deg": -3.289256628291767,
+     "ang_H96NE2_Zn_H119ND1_deg": 11.845104862992756,
+     "ang_C4_S_N2_deg": -0.005401504539364055,
+     "tau_fold_deg": -0.043931042216087235
+    },
+    "means": {
+     "lig_rmsd_A": 0.0,
+     "d_Zn_N2_A": 1.9614422072637847,
+     "d_Zn_H94NE2_A": 2.0022304765441152,
+     "d_Zn_H96NE2_A": 2.0102671709220945,
+     "d_Zn_H119ND1_A": 2.009810983055529
+    },
+    "fifth_solute": [
+     0,
+     500
+    ],
+    "fifth_full": [
+     2,
+     50
+    ]
+   },
+   "sulfonyl/X0": {
+    "verdict_by_design": "FAILED",
+    "not_met": [
+     "GV3 fifth ligand, solute trajectory"
+    ],
+    "deviations_deg": {
+     "ang_N2_Zn_H94NE2_deg": -0.3837606547329244,
+     "ang_N2_Zn_H96NE2_deg": -1.438217143695823,
+     "ang_N2_Zn_H119ND1_deg": -0.10653236069248351,
+     "ang_H94NE2_Zn_H96NE2_deg": -0.0899466923177954,
+     "ang_H94NE2_Zn_H119ND1_deg": 0.8721587430572839,
+     "ang_H96NE2_Zn_H119ND1_deg": 0.09446645441167334,
+     "ang_C4_S_N2_deg": -0.005401504539364055,
+     "tau_fold_deg": -0.043931042216087235
+    },
+    "means": {
+     "lig_rmsd_A": 0.0,
+     "d_Zn_N2_A": 1.9496256346869154,
+     "d_Zn_H94NE2_A": 2.0040117025490964,
+     "d_Zn_H96NE2_A": 2.0350395202397435,
+     "d_Zn_H119ND1_A": 2.006223609847559
+    },
+    "fifth_solute": [
+     26,
+     500
+    ],
+    "fifth_full": [
+     2,
+     50
+    ]
+   },
+   "water/X0": {
+    "verdict_by_design": "FAILED",
+    "not_met": [
+     "GV3 fifth ligand, full trajectory"
+    ],
+    "deviations_deg": {
+     "ang_N2_Zn_H94NE2_deg": -0.7393095853283427,
+     "ang_N2_Zn_H96NE2_deg": -0.9554817582429109,
+     "ang_N2_Zn_H119ND1_deg": -0.6475259207229556,
+     "ang_H94NE2_Zn_H96NE2_deg": 0.5731958042839835,
+     "ang_H94NE2_Zn_H119ND1_deg": 0.9194153381278483,
+     "ang_H96NE2_Zn_H119ND1_deg": 0.6701398719965965,
+     "ang_C4_S_N2_deg": -0.005401504539364055,
+     "tau_fold_deg": -0.043931042216087235
+    },
+    "means": {
+     "lig_rmsd_A": 0.0,
+     "d_Zn_N2_A": 1.9591697894605407,
+     "d_Zn_H94NE2_A": 2.0025730200066114,
+     "d_Zn_H96NE2_A": 2.0150310842524117,
+     "d_Zn_H119ND1_A": 2.0065622798021674
+    },
+    "fifth_solute": [
+     5,
+     500
+    ],
+    "fifth_full": [
+     3,
+     50
+    ]
+   },
+   "csn/X0": {
+    "verdict_by_design": "FAILED",
+    "not_met": [
+     "GV4 ang_C4_S_N2_deg"
+    ],
+    "deviations_deg": {
+     "ang_N2_Zn_H94NE2_deg": -0.8239640926129539,
+     "ang_N2_Zn_H96NE2_deg": -0.8405447617065107,
+     "ang_N2_Zn_H119ND1_deg": -0.7763339112063932,
+     "ang_H94NE2_Zn_H96NE2_deg": 0.731086874903454,
+     "ang_H94NE2_Zn_H119ND1_deg": 0.9306669083827472,
+     "ang_H96NE2_Zn_H119ND1_deg": 0.8072049714215837,
+     "ang_C4_S_N2_deg": 3.494598495460636,
+     "tau_fold_deg": -0.043931042216087235
+    },
+    "means": {
+     "lig_rmsd_A": 0.1874091258019153,
+     "d_Zn_N2_A": 1.9614422072637847,
+     "d_Zn_H94NE2_A": 2.0022304765441152,
+     "d_Zn_H96NE2_A": 2.0102671709220945,
+     "d_Zn_H119ND1_A": 2.0066429155056453
+    },
+    "fifth_solute": [
+     0,
+     500
+    ],
+    "fifth_full": [
+     2,
+     50
+    ]
+   },
+   "tau/X0": {
+    "verdict_by_design": "FAILED",
+    "not_met": [
+     "GV4 tau_fold_deg"
+    ],
+    "deviations_deg": {
+     "ang_N2_Zn_H94NE2_deg": -0.8239640926129539,
+     "ang_N2_Zn_H96NE2_deg": -0.8405447617065107,
+     "ang_N2_Zn_H119ND1_deg": -0.7763339112063932,
+     "ang_H94NE2_Zn_H96NE2_deg": 0.731086874903454,
+     "ang_H94NE2_Zn_H119ND1_deg": 0.9306669083827472,
+     "ang_H96NE2_Zn_H119ND1_deg": 0.8072049714215837,
+     "ang_C4_S_N2_deg": -0.005401504539364055,
+     "tau_fold_deg": 20.956068957783998
+    },
+    "means": {
+     "lig_rmsd_A": 0.2651792369318177,
+     "d_Zn_N2_A": 1.9614422072637847,
+     "d_Zn_H94NE2_A": 2.0022304765441152,
+     "d_Zn_H96NE2_A": 2.0102671709220945,
+     "d_Zn_H119ND1_A": 2.0066429155056453
+    },
+    "fifth_solute": [
+     0,
+     500
+    ],
+    "fifth_full": [
+     2,
+     50
+    ]
+   },
+   "long/X0": {
+    "verdict_by_design": "PASSED",
+    "not_met": [],
+    "deviations_deg": {
+     "ang_N2_Zn_H94NE2_deg": -0.8239640926129539,
+     "ang_N2_Zn_H96NE2_deg": -0.8405447617064965,
+     "ang_N2_Zn_H119ND1_deg": -0.776333911206379,
+     "ang_H94NE2_Zn_H96NE2_deg": 0.7310868749034682,
+     "ang_H94NE2_Zn_H119ND1_deg": 0.9306669083827472,
+     "ang_H96NE2_Zn_H119ND1_deg": 0.8072049714215837,
+     "ang_C4_S_N2_deg": -0.005401504539364055,
+     "tau_fold_deg": -0.043931042216087235
+    },
+    "means": {
+     "lig_rmsd_A": 0.0,
+     "d_Zn_N2_A": 1.9614422072637845,
+     "d_Zn_H94NE2_A": 2.0022304765441152,
+     "d_Zn_H96NE2_A": 2.0102671709220945,
+     "d_Zn_H119ND1_A": 2.0066429155056453
+    },
+    "fifth_solute": [
+     0,
+     600
+    ],
+    "fifth_full": [
+     3,
+     60
+    ]
+   },
+   "short/X0": {
+    "verdict_by_design": "PASSED",
+    "not_met": [],
+    "deviations_deg": {
+     "ang_N2_Zn_H94NE2_deg": -0.8239640926129539,
+     "ang_N2_Zn_H96NE2_deg": -0.8405447617064965,
+     "ang_N2_Zn_H119ND1_deg": -0.776333911206379,
+     "ang_H94NE2_Zn_H96NE2_deg": 0.7310868749034682,
+     "ang_H94NE2_Zn_H119ND1_deg": 0.9306669083827472,
+     "ang_H96NE2_Zn_H119ND1_deg": 0.8072049714215837,
+     "ang_C4_S_N2_deg": -0.005401504539364055,
+     "tau_fold_deg": -0.043931042216087235
+    },
+    "means": {
+     "lig_rmsd_A": 0.0,
+     "d_Zn_N2_A": 1.9614422072637845,
+     "d_Zn_H94NE2_A": 2.0022304765441152,
+     "d_Zn_H96NE2_A": 2.0102671709220945,
+     "d_Zn_H119ND1_A": 2.0066429155056453
+    },
+    "fifth_solute": [
+     0,
+     300
+    ],
+    "fifth_full": [
+     1,
+     30
+    ]
+   },
+   "gate/R1": {
+    "verdict_by_design": null,
+    "not_met": [
+     "GV1 ligand RMSD",
+     "GV3 Zn-N2"
+    ],
+    "deviations_deg": {
+     "ang_N2_Zn_H94NE2_deg": 3.830053855822868,
+     "ang_N2_Zn_H96NE2_deg": -1.9143253381012926,
+     "ang_N2_Zn_H119ND1_deg": -4.751299936036148,
+     "ang_H94NE2_Zn_H96NE2_deg": 0.8105141291428026,
+     "ang_H94NE2_Zn_H119ND1_deg": 0.9501340890243455,
+     "ang_H96NE2_Zn_H119ND1_deg": 0.7074667892639326,
+     "ang_C4_S_N2_deg": 0.39292672676387497,
+     "tau_fold_deg": 6.63632656652149
+    },
+    "means": {
+     "lig_rmsd_A": 2.2332653633723503,
+     "d_Zn_N2_A": 2.151257966743302,
+     "d_Zn_H94NE2_A": 1.9998802354988277,
+     "d_Zn_H96NE2_A": 2.0108075345464167,
+     "d_Zn_H119ND1_A": 2.00863973639625
+    },
+    "fifth_solute": [
+     0,
+     400
+    ],
+    "fifth_full": [
+     1,
+     40
+    ]
+   }
+  }
+ },
+ "poses": {
+  "T_rigid_move": {
+   "lig_rmsd_A": 3.561568032197386,
+   "lig_rmsd_labelling": 0,
+   "d1_N1_F131CZ_A": 9.555739407513087,
+   "d2_N1_N67OD1_A": 2.634449396598138,
+   "state": "R",
+   "tau_fold_deg": 132.05606895778385,
+   "d_S_N2_A": 1.5963326720956394,
+   "d_Zn_N2_A": 2.199629262577965
+  },
+  "I_translation_3A": {
+   "lig_rmsd_A": 2.9999999999999996,
+   "d1_N1_F131CZ_A": 6.8966001847764655,
+   "d2_N1_N67OD1_A": 6.7318617523430015,
+   "state": "I"
+  }
+ },
+ "constants": {
+  "EPS": 0.01,
+  "DZN_A": 0.3,
+  "DW_NEAR_A": 2.4,
+  "DW_FAR_A": 3.69,
+  "RHO_IN_A": 3.0,
+  "RHO_OUT_A": 6.0,
+  "BOX_L_A": 90.0,
+  "BOX_AMP_A": 0.2
+ },
+ "campaign_design": {
+  "n_runs": 5,
+  "n_complete": 4,
+  "all_nine_complete": false,
+  "final": false,
+  "rule1.n_X_runs": 3,
+  "rule1.n_X_left_crystal": 2,
+  "rule1.failed": true,
+  "n_converted.X": 1,
+  "n_converted.N": 0,
+  "n_converted.R": 1,
+  "n_stayed.X": 1,
+  "n_stayed.N": 1,
+  "n_stayed.R": 0,
+  "n_mixed.X": 1,
+  "outcome": "validation_failed",
+  "rule4_sensitivity_run_required": false
+ },
+ "runs": [
+  "test/X1",
+  "test/X2",
+  "test/X3",
+  "test/N1",
+  "test/R1",
+  "test/X9",
+  "test/X0",
+  "edge/X0",
+  "angle/X0",
+  "sulfonyl/X0",
+  "water/X0",
+  "csn/X0",
+  "tau/X0",
+  "long/X0",
+  "short/X0",
+  "gate/R1",
+  "conv/R1",
+  "flip/X1",
+  "scaled/N1",
+  "ext/R1",
+  "place/R1",
+  "default/R1",
+  "glu/X0"
+ ]
+}

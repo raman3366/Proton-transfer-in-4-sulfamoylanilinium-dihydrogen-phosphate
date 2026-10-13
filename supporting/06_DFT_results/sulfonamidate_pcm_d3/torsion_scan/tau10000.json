@@ -1,0 +1,104 @@
+{
+  "case": "sulfonamidate_pcm_d3",
+  "species": "sfa_anion",
+  "kind": "constrained",
+  "target_tau_fold_deg": 100.0,
+  "branch": "C3",
+  "constraint": {
+    "dihedral": [
+      "C3",
+      "C4",
+      "S1",
+      "N2"
+    ],
+    "atoms_1based": [
+      3,
+      4,
+      11,
+      8
+    ],
+    "value_deg": 100.0
+  },
+  "constraint_dev_deg": 1.6342482922482304e-11,
+  "labels": [
+    "grid 100"
+  ],
+  "rigid_rotation_deg": -1.6985343382226006,
+  "status": "done",
+  "converged": true,
+  "accepted_on": null,
+  "stopped": null,
+  "steps": 4,
+  "wall_min": 7.47,
+  "E_Ha": -891.2945111926567,
+  "metrics": {
+    "tau_C3_deg": 100.00000000001634,
+    "tau_C5_deg": -76.14876506003564,
+    "tau_fold_deg": 100.00000000001634,
+    "d_C4_S1_A": 1.8062207080433192,
+    "d_S1_N2_A": 1.5800565770163264,
+    "a_C4_S1_N2_deg": 109.83859281964344,
+    "S1_out_of_plane_deg": 3.3109585652205924,
+    "N1_angle_sum_deg": 343.73280703124976,
+    "N2_angle_sum_deg": null,
+    "tau_C4_S1_N2_H_deg": {
+      "H2B": -68.66881149475091
+    }
+  },
+  "started_from": "/home/ubuntu/cqc-sfa/molecules/sfa/results/sulfonamidate_pcm_d3/opt.xyz with the S1 side of C4-S1 rotated rigidly by -1.70 deg (closest contact 2.54 A)",
+  "level": {
+    "xc": "b3lyp",
+    "disp": "d3bj",
+    "basis": "6-311++G(d,p)",
+    "environment": "IEF-PCM water (eps=78.3553)",
+    "grid_level": 4,
+    "pcm_lebedev_order": 29,
+    "density_fitting": true,
+    "n_basis": 299
+  },
+  "history": [
+    {
+      "step": 0,
+      "E_Ha": -891.2945101998381,
+      "gmax": 0.0003225917380303145,
+      "grms": 7.781041333391244e-05,
+      "t_s": 159.8,
+      "dihedral_deg": 100.00000000000003,
+      "grms_conv": 0.0001299539599920359,
+      "gmax_conv": 0.0003256135649407763
+    },
+    {
+      "step": 1,
+      "E_Ha": -891.2945098127174,
+      "gmax": 0.00037302319195180005,
+      "grms": 0.00011028392915128213,
+      "t_s": 265.4,
+      "dihedral_deg": 99.99999999996625,
+      "grms_conv": 0.00018497329446681276,
+      "gmax_conv": 0.0005345221690598028
+    },
+    {
+      "step": 2,
+      "E_Ha": -891.2945110224248,
+      "gmax": 0.0001270843472513869,
+      "grms": 4.104967120493595e-05,
+      "t_s": 357.0,
+      "dihedral_deg": 100.00000000002836,
+      "grms_conv": 5.8953682672378354e-05,
+      "gmax_conv": 0.00015048441875314063
+    },
+    {
+      "step": 3,
+      "E_Ha": -891.2945111926567,
+      "gmax": 7.52729529743118e-05,
+      "grms": 2.6286211759958075e-05,
+      "t_s": 448.4,
+      "dihedral_deg": 100.00000000001634,
+      "grms_conv": 2.0687504959399043e-05,
+      "gmax_conv": 5.009135271808129e-05
+    }
+  ],
+  "host": "cqc-dft-01",
+  "time": "2026-09-29T05:26:27",
+  "threads": 4
+}

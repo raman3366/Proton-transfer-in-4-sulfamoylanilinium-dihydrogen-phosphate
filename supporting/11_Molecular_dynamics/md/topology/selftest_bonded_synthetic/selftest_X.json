@@ -1,0 +1,407 @@
+{
+ "what": "The bonded path on a folder that already holds the output of MCPB.py steps 2 to 4, for example the one\n    md/qm/test_after_qm.py makes from SYNTHETIC quantum-chemical files (mol2 files written by MCPB.py itself).\n    The result goes to a folder marked as a test; it is not a zinc model.",
+ "start": "X",
+ "mcpb_folder": "/tmp/claude-0/-root-workspace-cqc-4-sulfamoylanilinium-dihydrogen-phosphate/82cc65d7-a11f-4d60-91ee-436dc9534941/scratchpad/mdprep/zinc/after_qm_test/mcpb",
+ "build": {
+  "composition": {
+   "atoms": 40902,
+   "residues": 12575,
+   "protein_atoms": 4075,
+   "protein_residues_with_ACE": 259,
+   "zinc_atoms": 1,
+   "ligand_atoms": 18,
+   "solute_atoms": 4094,
+   "water_molecules": 12247,
+   "crystal_water_molecules": 215,
+   "added_water_molecules": 12032,
+   "Na+": 34,
+   "Cl-": 33,
+   "plan_atoms": 25600,
+   "atoms_over_plan_percent": 59.8
+  },
+  "charge": {
+   "solute_with_crystal_water_e": -1.0,
+   "net_e": -0.0
+  },
+  "mcpb": {
+   "dir": "/tmp/claude-0/-root-workspace-cqc-4-sulfamoylanilinium-dihydrogen-phosphate/82cc65d7-a11f-4d60-91ee-436dc9534941/scratchpad/mdprep/zinc/after_qm_test/mcpb",
+   "group": "CA2",
+   "atom_types_added": [
+    [
+     "M1",
+     "Zn",
+     "sp3"
+    ],
+    [
+     "Y1",
+     "N",
+     "sp3"
+    ],
+    [
+     "Y2",
+     "N",
+     "sp3"
+    ],
+    [
+     "Y3",
+     "N",
+     "sp3"
+    ],
+    [
+     "Y4",
+     "N",
+     "sp3"
+    ]
+   ],
+   "renamed_residues": {
+    "93": "HD1",
+    "95": "HD2",
+    "118": "HE1",
+    "260": "ZN1",
+    "261": "SN1"
+   },
+   "bond_commands": [
+    "bond sys.93.NE2 sys.260.ZN",
+    "bond sys.95.NE2 sys.260.ZN",
+    "bond sys.118.ND1 sys.260.ZN",
+    "bond sys.260.ZN sys.261.N2",
+    "bond sys.92.C sys.93.N",
+    "bond sys.93.C sys.94.N",
+    "bond sys.94.C sys.95.N",
+    "bond sys.95.C sys.96.N",
+    "bond sys.117.C sys.118.N",
+    "bond sys.118.C sys.119.N"
+   ],
+   "frcmod_files_named_by_mcpb": [
+    "sfa_anion_gaff2.frcmod",
+    "sfa_anion_repair.frcmod",
+    "frcmod.ions1lm_126_tip3p",
+    "CA2_mcpbpy.frcmod"
+   ],
+   "residue_names_that_differ_without_a_mol2_unit": [],
+   "files_sha256": {
+    "/tmp/claude-0/-root-workspace-cqc-4-sulfamoylanilinium-dihydrogen-phosphate/82cc65d7-a11f-4d60-91ee-436dc9534941/scratchpad/mdprep/zinc/after_qm_test/mcpb/CA2_mcpbpy.frcmod": "38221d1d52d8b0af047145619d29bdeee11fdaf3010c452503facd01ec8f29c9",
+    "/tmp/claude-0/-root-workspace-cqc-4-sulfamoylanilinium-dihydrogen-phosphate/82cc65d7-a11f-4d60-91ee-436dc9534941/scratchpad/mdprep/zinc/after_qm_test/mcpb/CA2_mcpbpy.pdb": "0506c52c98d1241b13a340995b4e974002bcde02ab73dcf552dcb5734184a522",
+    "/tmp/claude-0/-root-workspace-cqc-4-sulfamoylanilinium-dihydrogen-phosphate/82cc65d7-a11f-4d60-91ee-436dc9534941/scratchpad/mdprep/zinc/after_qm_test/mcpb/CA2_tleap.in": "d16b000ce275b6a62b75e0d6637627c76d071a898df4077f0bb29925713f5f12",
+    "/tmp/claude-0/-root-workspace-cqc-4-sulfamoylanilinium-dihydrogen-phosphate/82cc65d7-a11f-4d60-91ee-436dc9534941/scratchpad/mdprep/zinc/after_qm_test/mcpb/HD1.mol2": "e04cd5e31a8d0af7b6e5f7c6a3688732ceffcdf9a29e32076916f370110a4dfc",
+    "/tmp/claude-0/-root-workspace-cqc-4-sulfamoylanilinium-dihydrogen-phosphate/82cc65d7-a11f-4d60-91ee-436dc9534941/scratchpad/mdprep/zinc/after_qm_test/mcpb/HD2.mol2": "75df3f81e78cad217dfaa5de1ffc3fa7a229814ece022f0aedef4aead8c94c70",
+    "/tmp/claude-0/-root-workspace-cqc-4-sulfamoylanilinium-dihydrogen-phosphate/82cc65d7-a11f-4d60-91ee-436dc9534941/scratchpad/mdprep/zinc/after_qm_test/mcpb/HE1.mol2": "5e1b4eabab9782fa739652252f9920afe4b715965cb56007533fa92e1a98655a",
+    "/tmp/claude-0/-root-workspace-cqc-4-sulfamoylanilinium-dihydrogen-phosphate/82cc65d7-a11f-4d60-91ee-436dc9534941/scratchpad/mdprep/zinc/after_qm_test/mcpb/SN1.mol2": "f1a0074d2b620b4659f71026e4291f1792647d490d1ae2f162785dd68b2ec06f",
+    "/tmp/claude-0/-root-workspace-cqc-4-sulfamoylanilinium-dihydrogen-phosphate/82cc65d7-a11f-4d60-91ee-436dc9534941/scratchpad/mdprep/zinc/after_qm_test/mcpb/ZN1.mol2": "705574571be0dc5319c5099a1de743542de502bfba5a405ba5858035fa01e338",
+    "/tmp/claude-0/-root-workspace-cqc-4-sulfamoylanilinium-dihydrogen-phosphate/82cc65d7-a11f-4d60-91ee-436dc9534941/scratchpad/mdprep/zinc/after_qm_test/mcpb/sfa_anion_gaff2.frcmod": "694fd181a8c2b7359a529112a1ba539e681dd2c66a883379607e6e6095ca438c",
+    "/tmp/claude-0/-root-workspace-cqc-4-sulfamoylanilinium-dihydrogen-phosphate/82cc65d7-a11f-4d60-91ee-436dc9534941/scratchpad/mdprep/zinc/after_qm_test/mcpb/sfa_anion_repair.frcmod": "76dda0d181a27e12868eea1a2eff055fbeda708357f200d12a53915fa7d60b86"
+   },
+   "sfa_anion_gaff2.frcmod_same_as_md_ligand": true,
+   "sfa_anion_repair.frcmod_same_as_md_ligand": true
+  },
+  "zinc_site_bonded": {
+   "zinc_bonded_to": [
+    "HD194:NE2",
+    "HD296:NE2",
+    "HE1119:ND1",
+    "SN1304:N2"
+   ],
+   "expected": [
+    "HD194:NE2",
+    "HD296:NE2",
+    "HE1119:ND1",
+    "SN1304:N2"
+   ],
+   "zinc_has_the_four_bonds": true,
+   "bonds_to_zinc": [
+    {
+     "to": "SN1:N2",
+     "k_kcal_per_mol_A2": 122.1,
+     "r0_A": 1.931
+    },
+    {
+     "to": "HE1:ND1",
+     "k_kcal_per_mol_A2": 74.3,
+     "r0_A": 2.018
+    },
+    {
+     "to": "HD2:NE2",
+     "k_kcal_per_mol_A2": 73.3,
+     "r0_A": 2.021
+    },
+    {
+     "to": "HD1:NE2",
+     "k_kcal_per_mol_A2": 78.0,
+     "r0_A": 2.01
+    }
+   ],
+   "angles_with_zinc": [
+    {
+     "atoms": "ZN1:ZN-N2-SN1:S",
+     "k_kcal_per_mol_rad2": 50.0,
+     "theta0_deg": 117.55
+    },
+    {
+     "atoms": "HE1:CG-ND1-ZN1:ZN",
+     "k_kcal_per_mol_rad2": 50.0,
+     "theta0_deg": 131.22
+    },
+    {
+     "atoms": "HE1:ND1-ZN-SN1:N2",
+     "k_kcal_per_mol_rad2": 35.0,
+     "theta0_deg": 116.83
+    },
+    {
+     "atoms": "HE1:CE1-ND1-ZN1:ZN",
+     "k_kcal_per_mol_rad2": 50.0,
+     "theta0_deg": 121.05
+    },
+    {
+     "atoms": "HD2:CE1-NE2-ZN1:ZN",
+     "k_kcal_per_mol_rad2": 50.0,
+     "theta0_deg": 129.31
+    },
+    {
+     "atoms": "HD2:NE2-ZN-HE1:ND1",
+     "k_kcal_per_mol_rad2": 35.0,
+     "theta0_deg": 98.41
+    },
+    {
+     "atoms": "HD2:NE2-ZN-SN1:N2",
+     "k_kcal_per_mol_rad2": 35.0,
+     "theta0_deg": 114.28
+    },
+    {
+     "atoms": "HD2:CD2-NE2-ZN1:ZN",
+     "k_kcal_per_mol_rad2": 50.0,
+     "theta0_deg": 122.91
+    },
+    {
+     "atoms": "HD1:CE1-NE2-ZN1:ZN",
+     "k_kcal_per_mol_rad2": 50.0,
+     "theta0_deg": 127.89
+    },
+    {
+     "atoms": "HD1:NE2-ZN-HD2:NE2",
+     "k_kcal_per_mol_rad2": 35.0,
+     "theta0_deg": 103.82
+    },
+    {
+     "atoms": "HD1:NE2-ZN-HE1:ND1",
+     "k_kcal_per_mol_rad2": 35.0,
+     "theta0_deg": 113.59
+    },
+    {
+     "atoms": "HD1:NE2-ZN-SN1:N2",
+     "k_kcal_per_mol_rad2": 35.0,
+     "theta0_deg": 108.92
+    },
+    {
+     "atoms": "HD1:CD2-NE2-ZN1:ZN",
+     "k_kcal_per_mol_rad2": 50.0,
+     "theta0_deg": 124.21
+    },
+    {
+     "atoms": "ZN1:ZN-N2-SN1:HN21",
+     "k_kcal_per_mol_rad2": 50.0,
+     "theta0_deg": 120.0
+    }
+   ],
+   "n_angles_centred_on_zinc": 6,
+   "torsions_through_zinc": {
+    "n": 39,
+    "largest_abs_k_kcal_per_mol": 0.0
+   },
+   "charge_of_zinc_site_residues_e": {
+    "HD1": 0.03037,
+    "HD2": 0.03015,
+    "HE1": 0.0367,
+    "ZN1": 1.87842,
+    "SN1": -0.97563
+   },
+   "charge_of_zinc_site_e": 1.0,
+   "ligand_atom_types": {
+    "C1": "ca",
+    "C2": "ca",
+    "C3": "ca",
+    "C4": "ca",
+    "C5": "ca",
+    "C6": "ca",
+    "N1": "nv",
+    "N2": "Y4",
+    "O1": "o",
+    "O2": "o",
+    "S": "sy",
+    "H2": "ha",
+    "H3": "ha",
+    "H5": "ha",
+    "H6": "ha",
+    "HN11": "hn",
+    "HN12": "hn",
+    "HN21": "hn"
+   }
+  },
+  "checks": {
+   "tleap_errors_0": true,
+   "tleap_no_unexpected_warning": true,
+   "protein_chain_unbroken": true,
+   "net_charge_zero": true,
+   "ion_numbers_as_computed": true,
+   "pass2_equals_pass1_except_ions": true,
+   "input_heavy_atoms_at_their_coordinates": true,
+   "selections_resolve_to_the_right_atoms": true,
+   "geometry_agrees_with_starts_csv": true,
+   "zinc_charge_and_type": null,
+   "zinc_lj_is_the_frcmod_value": null,
+   "zinc_not_bonded": null,
+   "zinc_has_the_four_bonds": true,
+   "na_cl_are_joung_cheatham_tip3p": true,
+   "ligand_repaired_terms_in_force": true,
+   "ligand_terms_equal_free_anion_topology": null,
+   "ligand_charges_are_those_of_the_mol2": null,
+   "ions_keep_their_distances": true,
+   "no_crystal_water_replaced": true
+  },
+  "checks_failed": []
+ },
+ "repaired_terms": [
+  {
+   "term": "bond N2-S",
+   "types_free_anion": "n2-sy",
+   "repair_frcmod": [
+    461.21,
+    1.5906
+   ],
+   "in_prmtop": [
+    461.21,
+    1.5906
+   ],
+   "in_force": true
+  },
+  {
+   "term": "angle C4-S-N2",
+   "types_free_anion": "ca-sy-n2",
+   "repair_frcmod": [
+    101.19,
+    117.133
+   ],
+   "in_prmtop": [
+    101.19,
+    117.1331
+   ],
+   "in_force": true
+  },
+  {
+   "term": "angle HN21-N2-S",
+   "types_free_anion": "hn-n2-sy",
+   "repair_frcmod": [
+    61.55,
+    118.059
+   ],
+   "in_prmtop": [
+    61.55,
+    118.0591
+   ],
+   "in_force": true
+  },
+  {
+   "term": "torsion HN21-N2-S-C4",
+   "types_free_anion": "hn-n2-sy-ca",
+   "repair_frcmod_k_per_phase": [
+    [
+     0.2624,
+     1,
+     180.0
+    ],
+    [
+     2.703,
+     2,
+     0.0
+    ]
+   ],
+   "gaff2_as_assigned_k_per_phase": [
+    [
+     0.5,
+     3,
+     180.0
+    ],
+    [
+     6.8,
+     1,
+     180.0
+    ]
+   ],
+   "in_prmtop_k_per_phase": [
+    [
+     0.2624,
+     1,
+     180.0
+    ],
+    [
+     2.703,
+     2,
+     0.0
+    ]
+   ],
+   "in_force": true
+  },
+  {
+   "term": "torsion HN21-N2-S-O1",
+   "types_free_anion": "hn-n2-sy-o",
+   "repair_frcmod_k_per_phase": [
+    [
+     0.0,
+     2,
+     0.0
+    ]
+   ],
+   "gaff2_as_assigned_k_per_phase": [
+    [
+     0.5,
+     3,
+     180.0
+    ],
+    [
+     6.8,
+     1,
+     180.0
+    ]
+   ],
+   "in_prmtop_k_per_phase": [
+    [
+     0.0,
+     2,
+     0.0
+    ]
+   ],
+   "in_force": true
+  },
+  {
+   "term": "torsion HN21-N2-S-O2",
+   "types_free_anion": "hn-n2-sy-o",
+   "repair_frcmod_k_per_phase": [
+    [
+     0.0,
+     2,
+     0.0
+    ]
+   ],
+   "gaff2_as_assigned_k_per_phase": [
+    [
+     0.5,
+     3,
+     180.0
+    ],
+    [
+     6.8,
+     1,
+     180.0
+    ]
+   ],
+   "in_prmtop_k_per_phase": [
+    [
+     0.0,
+     2,
+     0.0
+    ]
+   ],
+   "in_force": true
+  }
+ ],
+ "tleap_warnings_other": []
+}

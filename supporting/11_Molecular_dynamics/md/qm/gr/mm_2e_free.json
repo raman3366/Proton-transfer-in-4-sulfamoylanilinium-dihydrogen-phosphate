@@ -1,0 +1,2421 @@
+{
+ "label": "step 2e, charges of MCPB.py WITHOUT the ligand equivalences, Zn-N2-H of start X",
+ "params": "/root/cqc-sfa-md/qm/gr/mcpb_2e_free",
+ "points_file": "/root/workspace/cqc-4-sulfamoylanilinium-dihydrogen-phosphate/md/qm/gr/points.json",
+ "points_sha256": "fbab11970eda09ceb67bafd8dfd8ffd2791b0ff11ddccf7d00221c937ac3bd54",
+ "schemes": {
+  "methyl": {
+   "scheme": "methyl",
+   "inputs": {
+    "HD1.mol2": "7e16a57c20f815547dcb61cbdd942ed113860959e432747ddff459f3e48791a9",
+    "HD2.mol2": "ee60e92ec5289264a5cb7c36f1c23eb3be768a0b68d1b3ef2783235b178037f4",
+    "HE1.mol2": "1548dd062a4b042fd72e123e6cb0196f27c79b143c9807ed0202c5658443f1f7",
+    "ZN1.mol2": "b5e77827e98fadb6040c1660259803e72200ac865e7f143742fbf660ff123acf",
+    "SN1.mol2": "6fc4a343bf2b725f558839613d2e2e8fd2c20145c122c138b3e78a83945a9dd9",
+    "sfa_anion_gaff2.frcmod": "694fd181a8c2b7359a529112a1ba539e681dd2c66a883379607e6e6095ca438c",
+    "sfa_anion_repair.frcmod": "76dda0d181a27e12868eea1a2eff055fbeda708357f200d12a53915fa7d60b86",
+    "CA2_mcpbpy.frcmod": "38221d1d52d8b0af047145619d29bdeee11fdaf3010c452503facd01ec8f29c9"
+   },
+   "n2h": {
+    "mode": "structure",
+    "k": 50.0,
+    "theta0": 107.4065,
+    "replaced_line": "M1-Y4-hn    50.00     120.00    Created by empirical method using MCPB.py"
+   },
+   "frcmods": [
+    "sfa_anion_gaff2.frcmod",
+    "sfa_anion_repair.frcmod",
+    "CA2_mcpbpy.frcmod",
+    "n2h_structure.frcmod"
+   ],
+   "cap_charges": {
+    "HD1": {
+     "removed_backbone_charge": -0.075116,
+     "H1": 0.101401,
+     "CH3": -0.259118,
+     "H2": 0.101401,
+     "H3": 0.101401,
+     "residue_total": 0.329679
+    },
+    "HD2": {
+     "removed_backbone_charge": -0.072133,
+     "H1": 0.086699,
+     "CH3": -0.226731,
+     "H2": 0.086699,
+     "H3": 0.086699,
+     "residue_total": 0.400839
+    },
+    "HE1": {
+     "removed_backbone_charge": -0.075118,
+     "H1": 0.116079,
+     "CH3": -0.365376,
+     "H2": 0.116079,
+     "H3": 0.116079,
+     "residue_total": 0.449796
+    }
+   },
+   "tleap_warnings": [
+    "/root/cqc-sfa-tools/md/bin/teLeap: Warning!",
+    "Ignoring the warning from Unit Checking.",
+    "/root/cqc-sfa-tools/md/bin/teLeap: Warning!",
+    "check:  Warnings: 1",
+    "Exiting LEaP: Errors = 0; Warnings = 2; Notes = 1."
+   ],
+   "prmtop": "/root/cqc-sfa-md/qm/gr/mm/free/methyl/small.prmtop",
+   "topology_check": {
+    "natoms": 64,
+    "order_is_qm_order": true,
+    "total_charge": 0.999999,
+    "n_bonds": 67,
+    "n_angles": 117,
+    "n_dihedrals": 204,
+    "zinc_bonded_to": [
+     "HD1:NE2",
+     "HD2:NE2",
+     "HE1:ND1",
+     "SN1:N2"
+    ],
+    "dry_complex": null
+   },
+   "rest_two_ways_largest_difference": 7.105427357601002e-14,
+   "relative_energy": {
+    "X": 0.0,
+    "R": 38.0906,
+    "Rx": 15.2327,
+    "a4": 14.6999,
+    "a3": 11.0535,
+    "a5": 14.7113,
+    "a2": 5.141,
+    "a6": 12.5839,
+    "d1": 5.2316,
+    "d3": 1.3351,
+    "d4": 3.6538,
+    "d5": -0.0856,
+    "d6": 4.9145,
+    "d2": 7.5209,
+    "Nx": 2.6918,
+    "c1_m030": 0.4219,
+    "c2_m015": 12.2584,
+    "c1_p030": 6.1803,
+    "c2_m030": 11.3457,
+    "c1_m060": 2.5562,
+    "c2_m120": 11.6564,
+    "c1_m090": 6.0884,
+    "c2_m150": 6.3608,
+    "c1_m120": 8.796,
+    "c2_m180": 4.9318,
+    "N": 29.5608,
+    "e_p015": 0.7833,
+    "e_p030": 2.0059,
+    "e_m120": 1.3795,
+    "e_p120": -1.2291,
+    "f_p08": 3.3094,
+    "f_m08": -0.6103,
+    "g1": 18.453,
+    "g2": 15.5432,
+    "g3": 16.4079,
+    "g4": 19.5081,
+    "g5": 14.7316,
+    "g6": 21.2862
+   },
+   "total": {
+    "X": 70.679974,
+    "R": 108.77053,
+    "Rx": 85.912713,
+    "a4": 85.379848,
+    "a3": 81.733514,
+    "a5": 85.391266,
+    "a2": 75.820983,
+    "a6": 83.263888,
+    "d1": 75.911538,
+    "d3": 72.015098,
+    "d4": 74.333766,
+    "d5": 70.594354,
+    "d6": 75.594439,
+    "d2": 78.200847,
+    "Nx": 73.371772,
+    "c1_m030": 71.101885,
+    "c2_m015": 82.93839,
+    "c1_p030": 76.860236,
+    "c2_m030": 82.025708,
+    "c1_m060": 73.236212,
+    "c2_m120": 82.336411,
+    "c1_m090": 76.768358,
+    "c2_m150": 77.040733,
+    "c1_m120": 79.476024,
+    "c2_m180": 75.611763,
+    "N": 100.240773,
+    "e_p015": 71.463318,
+    "e_p030": 72.685901,
+    "e_m120": 72.059519,
+    "e_p120": 69.450842,
+    "f_p08": 73.98934,
+    "f_m08": 70.069704,
+    "g1": 89.132941,
+    "g2": 86.22315,
+    "g3": 87.087827,
+    "g4": 90.188103,
+    "g5": 85.411595,
+    "g6": 91.966173
+   },
+   "rest": {
+    "X": 66.651783,
+    "R": 106.111819,
+    "Rx": 81.947483,
+    "a4": 76.960784,
+    "a3": 74.811875,
+    "a5": 77.94187,
+    "a2": 71.365276,
+    "a6": 78.098857,
+    "d1": 71.55599,
+    "d3": 67.010291,
+    "d4": 66.669662,
+    "d5": 69.574769,
+    "d6": 63.304175,
+    "d2": 70.696043,
+    "Nx": 68.323654,
+    "c1_m030": 68.701195,
+    "c2_m015": 79.193403,
+    "c1_p030": 70.041561,
+    "c2_m030": 77.783797,
+    "c1_m060": 69.767717,
+    "c2_m120": 74.040043,
+    "c1_m090": 70.701372,
+    "c2_m150": 71.187212,
+    "c1_m120": 71.950861,
+    "c2_m180": 71.743207,
+    "N": 93.958345,
+    "e_p015": 67.435127,
+    "e_p030": 68.65771,
+    "e_m120": 68.031328,
+    "e_p120": 65.422651,
+    "f_p08": 69.518769,
+    "f_m08": 64.629905,
+    "g1": 81.598674,
+    "g2": 78.804012,
+    "g3": 80.343157,
+    "g4": 83.638703,
+    "g5": 83.435248,
+    "g6": 80.001499
+   }
+  },
+  "group": {
+   "scheme": "group",
+   "inputs": {
+    "HD1.mol2": "7e16a57c20f815547dcb61cbdd942ed113860959e432747ddff459f3e48791a9",
+    "HD2.mol2": "ee60e92ec5289264a5cb7c36f1c23eb3be768a0b68d1b3ef2783235b178037f4",
+    "HE1.mol2": "1548dd062a4b042fd72e123e6cb0196f27c79b143c9807ed0202c5658443f1f7",
+    "ZN1.mol2": "b5e77827e98fadb6040c1660259803e72200ac865e7f143742fbf660ff123acf",
+    "SN1.mol2": "6fc4a343bf2b725f558839613d2e2e8fd2c20145c122c138b3e78a83945a9dd9",
+    "sfa_anion_gaff2.frcmod": "694fd181a8c2b7359a529112a1ba539e681dd2c66a883379607e6e6095ca438c",
+    "sfa_anion_repair.frcmod": "76dda0d181a27e12868eea1a2eff055fbeda708357f200d12a53915fa7d60b86",
+    "CA2_mcpbpy.frcmod": "38221d1d52d8b0af047145619d29bdeee11fdaf3010c452503facd01ec8f29c9"
+   },
+   "n2h": {
+    "mode": "structure",
+    "k": 50.0,
+    "theta0": 107.4065,
+    "replaced_line": "M1-Y4-hn    50.00     120.00    Created by empirical method using MCPB.py"
+   },
+   "frcmods": [
+    "sfa_anion_gaff2.frcmod",
+    "sfa_anion_repair.frcmod",
+    "CA2_mcpbpy.frcmod",
+    "n2h_structure.frcmod"
+   ],
+   "cap_charges": {
+    "HD1": {
+     "removed_backbone_charge": -0.075116,
+     "H1": -0.104516,
+     "CH3": 0.0188,
+     "H2": 0.101401,
+     "H3": 0.0294,
+     "residue_total": 0.329679
+    },
+    "HD2": {
+     "removed_backbone_charge": -0.072133,
+     "H1": -0.101533,
+     "CH3": 0.0188,
+     "H2": 0.086699,
+     "H3": 0.0294,
+     "residue_total": 0.400839
+    },
+    "HE1": {
+     "removed_backbone_charge": -0.075118,
+     "H1": -0.104518,
+     "CH3": -0.0581,
+     "H2": 0.116079,
+     "H3": 0.0294,
+     "residue_total": 0.449796
+    }
+   },
+   "tleap_warnings": [
+    "/root/cqc-sfa-tools/md/bin/teLeap: Warning!",
+    "Ignoring the warning from Unit Checking.",
+    "/root/cqc-sfa-tools/md/bin/teLeap: Warning!",
+    "check:  Warnings: 1",
+    "Exiting LEaP: Errors = 0; Warnings = 2; Notes = 1."
+   ],
+   "prmtop": "/root/cqc-sfa-md/qm/gr/mm/free/group/small.prmtop",
+   "topology_check": {
+    "natoms": 64,
+    "order_is_qm_order": true,
+    "total_charge": 0.999999,
+    "n_bonds": 67,
+    "n_angles": 117,
+    "n_dihedrals": 204,
+    "zinc_bonded_to": [
+     "HD1:NE2",
+     "HD2:NE2",
+     "HE1:ND1",
+     "SN1:N2"
+    ],
+    "dry_complex": null
+   },
+   "rest_two_ways_largest_difference": 7.105427357601002e-14,
+   "relative_energy": {
+    "X": 0.0,
+    "R": 38.5499,
+    "Rx": 15.5831,
+    "a4": 14.9174,
+    "a3": 11.2097,
+    "a5": 14.975,
+    "a2": 5.222,
+    "a6": 12.8893,
+    "d1": 5.2103,
+    "d3": 1.3251,
+    "d4": 3.6638,
+    "d5": -0.0902,
+    "d6": 4.9205,
+    "d2": 7.4835,
+    "Nx": 2.609,
+    "c1_m030": 0.5232,
+    "c2_m015": 12.612,
+    "c1_p030": 6.1868,
+    "c2_m030": 11.7024,
+    "c1_m060": 2.6961,
+    "c2_m120": 11.9356,
+    "c1_m090": 6.1839,
+    "c2_m150": 6.6343,
+    "c1_m120": 8.9062,
+    "c2_m180": 5.2415,
+    "N": 29.4923,
+    "e_p015": 0.7521,
+    "e_p030": 2.0059,
+    "e_m120": 1.7256,
+    "e_p120": -1.0431,
+    "f_p08": 3.3773,
+    "f_m08": -0.6867,
+    "g1": 18.8223,
+    "g2": 15.9678,
+    "g3": 16.7568,
+    "g4": 19.8608,
+    "g5": 15.0879,
+    "g6": 21.6319
+   },
+   "total": {
+    "X": 60.565121,
+    "R": 99.115028,
+    "Rx": 76.148257,
+    "a4": 75.48255,
+    "a3": 71.774857,
+    "a5": 75.540098,
+    "a2": 65.787158,
+    "a6": 73.454408,
+    "d1": 65.775377,
+    "d3": 61.890223,
+    "d4": 64.22893,
+    "d5": 60.474913,
+    "d6": 65.485595,
+    "d2": 68.048589,
+    "Nx": 63.174081,
+    "c1_m030": 61.088298,
+    "c2_m015": 73.177114,
+    "c1_p030": 66.751939,
+    "c2_m030": 72.267495,
+    "c1_m060": 63.261185,
+    "c2_m120": 72.500693,
+    "c1_m090": 66.749006,
+    "c2_m150": 67.199391,
+    "c1_m120": 69.471316,
+    "c2_m180": 65.806594,
+    "N": 90.057403,
+    "e_p015": 61.317239,
+    "e_p030": 62.571046,
+    "e_m120": 62.290708,
+    "e_p120": 59.522052,
+    "f_p08": 63.942439,
+    "f_m08": 59.878424,
+    "g1": 79.3874,
+    "g2": 76.532899,
+    "g3": 77.321939,
+    "g4": 80.425955,
+    "g5": 75.653013,
+    "g6": 82.196993
+   },
+   "rest": {
+    "X": 56.53693,
+    "R": 96.456317,
+    "Rx": 72.183028,
+    "a4": 67.063486,
+    "a3": 64.853218,
+    "a5": 68.090702,
+    "a2": 61.33145,
+    "a6": 68.289377,
+    "d1": 61.419829,
+    "d3": 56.885416,
+    "d4": 56.564826,
+    "d5": 59.455328,
+    "d6": 53.195331,
+    "d2": 60.543785,
+    "Nx": 58.125963,
+    "c1_m030": 58.687608,
+    "c2_m015": 69.432126,
+    "c1_p030": 59.933264,
+    "c2_m030": 68.025584,
+    "c1_m060": 59.792691,
+    "c2_m120": 64.204325,
+    "c1_m090": 60.682021,
+    "c2_m150": 61.34587,
+    "c1_m120": 61.946153,
+    "c2_m180": 61.938037,
+    "N": 83.774975,
+    "e_p015": 57.289048,
+    "e_p030": 58.542855,
+    "e_m120": 58.262517,
+    "e_p120": 55.493861,
+    "f_p08": 59.471867,
+    "f_m08": 54.438625,
+    "g1": 71.853133,
+    "g2": 69.113761,
+    "g3": 70.577269,
+    "g4": 73.876555,
+    "g5": 73.676666,
+    "g6": 70.23232
+   }
+  },
+  "spread": {
+   "scheme": "spread",
+   "inputs": {
+    "HD1.mol2": "7e16a57c20f815547dcb61cbdd942ed113860959e432747ddff459f3e48791a9",
+    "HD2.mol2": "ee60e92ec5289264a5cb7c36f1c23eb3be768a0b68d1b3ef2783235b178037f4",
+    "HE1.mol2": "1548dd062a4b042fd72e123e6cb0196f27c79b143c9807ed0202c5658443f1f7",
+    "ZN1.mol2": "b5e77827e98fadb6040c1660259803e72200ac865e7f143742fbf660ff123acf",
+    "SN1.mol2": "6fc4a343bf2b725f558839613d2e2e8fd2c20145c122c138b3e78a83945a9dd9",
+    "sfa_anion_gaff2.frcmod": "694fd181a8c2b7359a529112a1ba539e681dd2c66a883379607e6e6095ca438c",
+    "sfa_anion_repair.frcmod": "76dda0d181a27e12868eea1a2eff055fbeda708357f200d12a53915fa7d60b86",
+    "CA2_mcpbpy.frcmod": "38221d1d52d8b0af047145619d29bdeee11fdaf3010c452503facd01ec8f29c9"
+   },
+   "n2h": {
+    "mode": "structure",
+    "k": 50.0,
+    "theta0": 107.4065,
+    "replaced_line": "M1-Y4-hn    50.00     120.00    Created by empirical method using MCPB.py"
+   },
+   "frcmods": [
+    "sfa_anion_gaff2.frcmod",
+    "sfa_anion_repair.frcmod",
+    "CA2_mcpbpy.frcmod",
+    "n2h_structure.frcmod"
+   ],
+   "cap_charges": {
+    "HD1": {
+     "removed_backbone_charge": -0.075116,
+     "H1": -0.005008,
+     "CH3": 0.013792,
+     "H2": 0.096393,
+     "H3": -0.005008,
+     "residue_total": 0.329679
+    },
+    "HD2": {
+     "removed_backbone_charge": -0.072133,
+     "H1": -0.004809,
+     "CH3": 0.013991,
+     "H2": 0.08189,
+     "H3": -0.004809,
+     "residue_total": 0.400839
+    },
+    "HE1": {
+     "removed_backbone_charge": -0.075118,
+     "H1": -0.005008,
+     "CH3": -0.063108,
+     "H2": 0.111071,
+     "H3": -0.005008,
+     "residue_total": 0.449796
+    }
+   },
+   "tleap_warnings": [
+    "/root/cqc-sfa-tools/md/bin/teLeap: Warning!",
+    "Ignoring the warning from Unit Checking.",
+    "/root/cqc-sfa-tools/md/bin/teLeap: Warning!",
+    "check:  Warnings: 1",
+    "Exiting LEaP: Errors = 0; Warnings = 2; Notes = 1."
+   ],
+   "prmtop": "/root/cqc-sfa-md/qm/gr/mm/free/spread/small.prmtop",
+   "topology_check": {
+    "natoms": 64,
+    "order_is_qm_order": true,
+    "total_charge": 0.999991,
+    "n_bonds": 67,
+    "n_angles": 117,
+    "n_dihedrals": 204,
+    "zinc_bonded_to": [
+     "HD1:NE2",
+     "HD2:NE2",
+     "HE1:ND1",
+     "SN1:N2"
+    ],
+    "dry_complex": null
+   },
+   "rest_two_ways_largest_difference": 7.105427357601002e-14,
+   "relative_energy": {
+    "X": 0.0,
+    "R": 38.1514,
+    "Rx": 15.2427,
+    "a4": 14.646,
+    "a3": 11.0019,
+    "a5": 14.6601,
+    "a2": 5.1021,
+    "a6": 12.5447,
+    "d1": 5.2713,
+    "d3": 1.3789,
+    "d4": 3.6042,
+    "d5": -0.1014,
+    "d6": 4.9332,
+    "d2": 7.5389,
+    "Nx": 2.6097,
+    "c1_m030": 0.5789,
+    "c2_m015": 12.2462,
+    "c1_p030": 6.1704,
+    "c2_m030": 11.3835,
+    "c1_m060": 2.7371,
+    "c2_m120": 11.8278,
+    "c1_m090": 6.1246,
+    "c2_m150": 6.5586,
+    "c1_m120": 8.7174,
+    "c2_m180": 5.2217,
+    "N": 29.5902,
+    "e_p015": 0.764,
+    "e_p030": 2.0517,
+    "e_m120": 1.7686,
+    "e_p120": -0.7775,
+    "f_p08": 3.298,
+    "f_m08": -0.5979,
+    "g1": 18.5568,
+    "g2": 15.7043,
+    "g3": 16.4779,
+    "g4": 19.4556,
+    "g5": 14.7445,
+    "g6": 21.3
+   },
+   "total": {
+    "X": 60.278177,
+    "R": 98.429597,
+    "Rx": 75.520839,
+    "a4": 74.924155,
+    "a3": 71.280095,
+    "a5": 74.938243,
+    "a2": 65.380321,
+    "a6": 72.822898,
+    "d1": 65.549459,
+    "d3": 61.657126,
+    "d4": 63.882413,
+    "d5": 60.176798,
+    "d6": 65.211329,
+    "d2": 67.817068,
+    "Nx": 62.887913,
+    "c1_m030": 60.857031,
+    "c2_m015": 72.524341,
+    "c1_p030": 66.448591,
+    "c2_m030": 71.661675,
+    "c1_m060": 63.01532,
+    "c2_m120": 72.106016,
+    "c1_m090": 66.402807,
+    "c2_m150": 66.836815,
+    "c1_m120": 68.995563,
+    "c2_m180": 65.499872,
+    "N": 89.868337,
+    "e_p015": 61.042223,
+    "e_p030": 62.329876,
+    "e_m120": 62.046729,
+    "e_p120": 59.500636,
+    "f_p08": 63.576132,
+    "f_m08": 59.680286,
+    "g1": 78.834987,
+    "g2": 75.9825,
+    "g3": 76.7561,
+    "g4": 79.73376,
+    "g5": 75.022689,
+    "g6": 81.578142
+   },
+   "rest": {
+    "X": 56.249986,
+    "R": 95.770886,
+    "Rx": 71.555609,
+    "a4": 66.50509,
+    "a3": 64.358456,
+    "a5": 67.488846,
+    "a2": 60.924614,
+    "a6": 67.657867,
+    "d1": 61.193911,
+    "d3": 56.652319,
+    "d4": 56.218309,
+    "d5": 59.157213,
+    "d6": 52.921065,
+    "d2": 60.312264,
+    "Nx": 57.839795,
+    "c1_m030": 58.456341,
+    "c2_m015": 68.779354,
+    "c1_p030": 59.629916,
+    "c2_m030": 67.419764,
+    "c1_m060": 59.546825,
+    "c2_m120": 63.809648,
+    "c1_m090": 60.335821,
+    "c2_m150": 60.983294,
+    "c1_m120": 61.4704,
+    "c2_m180": 61.631315,
+    "N": 83.585909,
+    "e_p015": 57.014033,
+    "e_p030": 58.301685,
+    "e_m120": 58.018538,
+    "e_p120": 55.472445,
+    "f_p08": 59.105561,
+    "f_m08": 54.240487,
+    "g1": 71.30072,
+    "g2": 68.563362,
+    "g3": 70.01143,
+    "g4": 73.18436,
+    "g5": 73.046341,
+    "g6": 69.613469
+   }
+  }
+ },
+ "used_scheme": "methyl",
+ "note": "energies in kcal/mol; relative energies are relative to point X",
+ "fit_terms_in_topology": {
+  "angles": {
+   "Zn_N2_H": {
+    "k": 50.0,
+    "theta0": 107.40604604305861
+   },
+   "S_N2_H": {
+    "k": 61.55,
+    "theta0": 118.059050327926
+   },
+   "Zn_N2_S": {
+    "k": 50.0,
+    "theta0": 117.55005066555006
+   }
+  },
+  "torsion_H_N2_S_C4": [
+   {
+    "n": 1,
+    "phase": 180.00007714362235,
+    "k": 0.2624
+   },
+   {
+    "n": 2,
+    "phase": 0.0,
+    "k": 2.703
+   }
+  ],
+  "other_torsions_about_N2_S": [
+   {
+    "atoms": "O1-S-N2-HN21",
+    "n": 2,
+    "phase": 0.0,
+    "k": 0.0
+   },
+   {
+    "atoms": "O2-S-N2-HN21",
+    "n": 2,
+    "phase": 0.0,
+    "k": 0.0
+   },
+   {
+    "atoms": "ZN-N2-S-C4",
+    "n": 3,
+    "phase": 0.0,
+    "k": 0.0
+   },
+   {
+    "atoms": "ZN-N2-S-O1",
+    "n": 3,
+    "phase": 0.0,
+    "k": 0.0
+   },
+   {
+    "atoms": "ZN-N2-S-O2",
+    "n": 3,
+    "phase": 0.0,
+    "k": 0.0
+   }
+  ]
+ },
+ "points": {
+  "X": {
+   "energy": {
+    "bond": 4.2957,
+    "angle": 87.217381,
+    "torsion": 16.261495,
+    "nonbonded": -37.094603,
+    "total": 70.679974,
+    "rest_openmm": 66.651783,
+    "fit_terms": 4.028191,
+    "rest": 66.651783
+   },
+   "internal": {
+    "signed_volume": 0.72399,
+    "Zn_N2_S": 117.5521,
+    "Zn_N2_H": 107.4065,
+    "S_N2_H": 107.41429,
+    "H_N2_S_C4": 121.82122,
+    "H_N2_S_O1": 5.3825,
+    "H_N2_S_O2": -124.13385,
+    "C4_S_N2": 108.7946,
+    "S_N2": 1.59633,
+    "Zn_N2": 1.93144,
+    "Zn_N2_S_C4": -117.02986
+   },
+   "split": {
+    "bond": 4.2957,
+    "angle_N2": 2.124491,
+    "angle_other": 85.09289,
+    "torsion_N2S": 1.9037,
+    "torsion_other": 14.357795,
+    "nb_ligand": -47.071523,
+    "lj_ligand_frame": -3.982335,
+    "coulomb_ligand_frame": -71.044536,
+    "nb_frame": 85.00379
+   },
+   "split_extra": {
+    "lj_ligand_frame_r12": 2.53559747,
+    "lj_ligand_frame_r6": -6.51793223,
+    "nonbonded_own_sum_minus_openmm": 0.0,
+    "parts_minus_total": 0.0
+   }
+  },
+  "R": {
+   "energy": {
+    "bond": 17.698813,
+    "angle": 96.386258,
+    "torsion": 18.389871,
+    "nonbonded": -23.704412,
+    "total": 108.77053,
+    "rest_openmm": 106.111819,
+    "fit_terms": 2.658711,
+    "rest": 106.111819
+   },
+   "internal": {
+    "signed_volume": -0.71042,
+    "Zn_N2_S": 119.52856,
+    "Zn_N2_H": 106.90701,
+    "S_N2_H": 106.89866,
+    "H_N2_S_C4": 89.30158,
+    "H_N2_S_O1": -27.15022,
+    "H_N2_S_O2": -154.34001,
+    "C4_S_N2": 109.43192,
+    "S_N2": 1.67725,
+    "Zn_N2": 2.23515,
+    "Zn_N2_S_C4": -32.1244
+   },
+   "split": {
+    "bond": 17.698813,
+    "angle_N2": 2.398706,
+    "angle_other": 93.987552,
+    "torsion_N2S": 0.260004,
+    "torsion_other": 18.129867,
+    "nb_ligand": -47.226161,
+    "lj_ligand_frame": -6.153348,
+    "coulomb_ligand_frame": -55.328693,
+    "nb_frame": 85.00379
+   },
+   "split_extra": {
+    "lj_ligand_frame_r12": 7.44648251,
+    "lj_ligand_frame_r6": -13.59983054,
+    "nonbonded_own_sum_minus_openmm": 0.0,
+    "parts_minus_total": 0.0
+   }
+  },
+  "Rx": {
+   "energy": {
+    "bond": 4.295286,
+    "angle": 89.517617,
+    "torsion": 14.851976,
+    "nonbonded": -22.752167,
+    "total": 85.912713,
+    "rest_openmm": 81.947483,
+    "fit_terms": 3.96523,
+    "rest": 81.947483
+   },
+   "internal": {
+    "signed_volume": -0.67827,
+    "Zn_N2_S": 123.82724,
+    "Zn_N2_H": 105.77271,
+    "S_N2_H": 105.77271,
+    "H_N2_S_C4": 100.61511,
+    "H_N2_S_O1": -15.82361,
+    "H_N2_S_O2": -145.33996,
+    "C4_S_N2": 108.7946,
+    "S_N2": 1.59633,
+    "Zn_N2": 1.93144,
+    "Zn_N2_S_C4": -21.34292
+   },
+   "split": {
+    "bond": 4.295286,
+    "angle_N2": 3.471049,
+    "angle_other": 86.046569,
+    "torsion_N2S": 0.494181,
+    "torsion_other": 14.357795,
+    "nb_ligand": -46.362592,
+    "lj_ligand_frame": -2.986004,
+    "coulomb_ligand_frame": -58.407362,
+    "nb_frame": 85.00379
+   },
+   "split_extra": {
+    "lj_ligand_frame_r12": 15.16830007,
+    "lj_ligand_frame_r6": -18.15430383,
+    "nonbonded_own_sum_minus_openmm": 0.0,
+    "parts_minus_total": 0.0
+   }
+  },
+  "a4": {
+   "energy": {
+    "bond": 4.295286,
+    "angle": 92.577706,
+    "torsion": 15.556686,
+    "nonbonded": -27.049829,
+    "total": 85.379848,
+    "rest_openmm": 76.960784,
+    "fit_terms": 8.419065,
+    "rest": 76.960784
+   },
+   "internal": {
+    "signed_volume": -0.0,
+    "Zn_N2_S": 138.62521,
+    "Zn_N2_H": 108.19185,
+    "S_N2_H": 113.18294,
+    "H_N2_S_C4": 113.11941,
+    "H_N2_S_O1": -3.3193,
+    "H_N2_S_O2": -132.83565,
+    "C4_S_N2": 108.7946,
+    "S_N2": 1.59633,
+    "Zn_N2": 1.93144,
+    "Zn_N2_S_C4": -66.88059
+   },
+   "split": {
+    "bond": 4.295286,
+    "angle_N2": 7.220175,
+    "angle_other": 85.357531,
+    "torsion_N2S": 1.19889,
+    "torsion_other": 14.357795,
+    "nb_ligand": -45.55547,
+    "lj_ligand_frame": -4.370729,
+    "coulomb_ligand_frame": -62.127421,
+    "nb_frame": 85.00379
+   },
+   "split_extra": {
+    "lj_ligand_frame_r12": 1.21538693,
+    "lj_ligand_frame_r6": -5.58611598,
+    "nonbonded_own_sum_minus_openmm": 0.0,
+    "parts_minus_total": -0.0
+   }
+  },
+  "a3": {
+   "energy": {
+    "bond": 4.295286,
+    "angle": 90.316688,
+    "torsion": 16.17364,
+    "nonbonded": -29.052101,
+    "total": 81.733514,
+    "rest_openmm": 74.811875,
+    "fit_terms": 6.921639,
+    "rest": 74.811875
+   },
+   "internal": {
+    "signed_volume": 0.26883,
+    "Zn_N2_S": 134.99691,
+    "Zn_N2_H": 108.32978,
+    "S_N2_H": 113.12403,
+    "H_N2_S_C4": 120.81952,
+    "H_N2_S_O1": 4.3808,
+    "H_N2_S_O2": -125.13554,
+    "C4_S_N2": 108.7946,
+    "S_N2": 1.59633,
+    "Zn_N2": 1.93144,
+    "Zn_N2_S_C4": -83.59701
+   },
+   "split": {
+    "bond": 4.295286,
+    "angle_N2": 5.105794,
+    "angle_other": 85.210894,
+    "torsion_N2S": 1.815845,
+    "torsion_other": 14.357795,
+    "nb_ligand": -45.874764,
+    "lj_ligand_frame": -4.141153,
+    "coulomb_ligand_frame": -64.039974,
+    "nb_frame": 85.00379
+   },
+   "split_extra": {
+    "lj_ligand_frame_r12": 1.18496501,
+    "lj_ligand_frame_r6": -5.32611825,
+    "nonbonded_own_sum_minus_openmm": -0.0,
+    "parts_minus_total": -0.0
+   }
+  },
+  "a5": {
+   "energy": {
+    "bond": 4.295286,
+    "angle": 92.282665,
+    "torsion": 15.065046,
+    "nonbonded": -26.251732,
+    "total": 85.391266,
+    "rest_openmm": 77.94187,
+    "fit_terms": 7.449396,
+    "rest": 77.94187
+   },
+   "internal": {
+    "signed_volume": -0.24555,
+    "Zn_N2_S": 137.4204,
+    "Zn_N2_H": 107.71405,
+    "S_N2_H": 111.83173,
+    "H_N2_S_C4": 105.28468,
+    "H_N2_S_O1": -11.15404,
+    "H_N2_S_O2": -140.67038,
+    "C4_S_N2": 108.7946,
+    "S_N2": 1.59633,
+    "Zn_N2": 1.93144,
+    "Zn_N2_S_C4": -51.70136
+   },
+   "split": {
+    "bond": 4.295286,
+    "angle_N2": 6.742145,
+    "angle_other": 85.54052,
+    "torsion_N2S": 0.707251,
+    "torsion_other": 14.357795,
+    "nb_ligand": -45.439174,
+    "lj_ligand_frame": -4.935164,
+    "coulomb_ligand_frame": -60.881184,
+    "nb_frame": 85.00379
+   },
+   "split_extra": {
+    "lj_ligand_frame_r12": 1.5819289,
+    "lj_ligand_frame_r6": -6.5170927,
+    "nonbonded_own_sum_minus_openmm": 0.0,
+    "parts_minus_total": 0.0
+   }
+  },
+  "a2": {
+   "energy": {
+    "bond": 4.295286,
+    "angle": 87.485096,
+    "torsion": 16.450866,
+    "nonbonded": -32.410264,
+    "total": 75.820983,
+    "rest_openmm": 71.365276,
+    "fit_terms": 4.455708,
+    "rest": 71.365276
+   },
+   "internal": {
+    "signed_volume": 0.51643,
+    "Zn_N2_S": 127.42441,
+    "Zn_N2_H": 108.06404,
+    "S_N2_H": 111.24329,
+    "H_N2_S_C4": 123.92876,
+    "H_N2_S_O1": 7.49004,
+    "H_N2_S_O2": -122.02631,
+    "C4_S_N2": 108.7946,
+    "S_N2": 1.59633,
+    "Zn_N2": 1.93144,
+    "Zn_N2_S_C4": -100.31343
+   },
+   "split": {
+    "bond": 4.295286,
+    "angle_N2": 2.362637,
+    "angle_other": 85.122458,
+    "torsion_N2S": 2.09307,
+    "torsion_other": 14.357795,
+    "nb_ligand": -46.353925,
+    "lj_ligand_frame": -4.11578,
+    "coulomb_ligand_frame": -66.94435,
+    "nb_frame": 85.00379
+   },
+   "split_extra": {
+    "lj_ligand_frame_r12": 1.44836941,
+    "lj_ligand_frame_r6": -5.56414943,
+    "nonbonded_own_sum_minus_openmm": 0.0,
+    "parts_minus_total": 0.0
+   }
+  },
+  "a6": {
+   "energy": {
+    "bond": 4.295286,
+    "angle": 90.443248,
+    "torsion": 14.849963,
+    "nonbonded": -26.32461,
+    "total": 83.263888,
+    "rest_openmm": 78.098857,
+    "fit_terms": 5.165031,
+    "rest": 78.098857
+   },
+   "internal": {
+    "signed_volume": -0.4766,
+    "Zn_N2_S": 132.12418,
+    "Zn_N2_H": 106.90454,
+    "S_N2_H": 109.31384,
+    "H_N2_S_C4": 100.56293,
+    "H_N2_S_O1": -15.87579,
+    "H_N2_S_O2": -145.39213,
+    "C4_S_N2": 108.7946,
+    "S_N2": 1.59633,
+    "Zn_N2": 1.93144,
+    "Zn_N2_S_C4": -36.52214
+   },
+   "split": {
+    "bond": 4.295286,
+    "angle_N2": 4.672863,
+    "angle_other": 85.770385,
+    "torsion_N2S": 0.492168,
+    "torsion_other": 14.357795,
+    "nb_ligand": -45.659342,
+    "lj_ligand_frame": -5.965188,
+    "coulomb_ligand_frame": -59.70387,
+    "nb_frame": 85.00379
+   },
+   "split_extra": {
+    "lj_ligand_frame_r12": 3.27388493,
+    "lj_ligand_frame_r6": -9.23907304,
+    "nonbonded_own_sum_minus_openmm": -0.0,
+    "parts_minus_total": -0.0
+   }
+  },
+  "d1": {
+   "energy": {
+    "bond": 4.295286,
+    "angle": 88.188791,
+    "torsion": 15.617443,
+    "nonbonded": -32.189981,
+    "total": 75.911538,
+    "rest_openmm": 71.55599,
+    "fit_terms": 4.355548,
+    "rest": 71.55599
+   },
+   "internal": {
+    "signed_volume": 0.0,
+    "Zn_N2_S": 117.5521,
+    "Zn_N2_H": 121.22395,
+    "S_N2_H": 121.22395,
+    "H_N2_S_C4": 62.97014,
+    "H_N2_S_O1": -53.46858,
+    "H_N2_S_O2": 177.01508,
+    "C4_S_N2": 108.7946,
+    "S_N2": 1.59633,
+    "Zn_N2": 1.93144,
+    "Zn_N2_S_C4": -117.02986
+   },
+   "split": {
+    "bond": 4.295286,
+    "angle_N2": 3.0959,
+    "angle_other": 85.09289,
+    "torsion_N2S": 1.259647,
+    "torsion_other": 14.357795,
+    "nb_ligand": -41.911274,
+    "lj_ligand_frame": -3.977677,
+    "coulomb_ligand_frame": -71.304821,
+    "nb_frame": 85.00379
+   },
+   "split_extra": {
+    "lj_ligand_frame_r12": 2.53542555,
+    "lj_ligand_frame_r6": -6.51310261,
+    "nonbonded_own_sum_minus_openmm": 0.0,
+    "parts_minus_total": 0.0
+   }
+  },
+  "d3": {
+   "energy": {
+    "bond": 4.2957,
+    "angle": 89.410793,
+    "torsion": 15.044699,
+    "nonbonded": -36.736095,
+    "total": 72.015098,
+    "rest_openmm": 67.010291,
+    "fit_terms": 5.004807,
+    "rest": 67.010291
+   },
+   "internal": {
+    "signed_volume": 0.5652,
+    "Zn_N2_S": 117.5521,
+    "Zn_N2_H": 119.4065,
+    "S_N2_H": 107.41429,
+    "H_N2_S_C4": 104.89225,
+    "H_N2_S_O1": -11.54647,
+    "H_N2_S_O2": -141.06281,
+    "C4_S_N2": 108.7946,
+    "S_N2": 1.59633,
+    "Zn_N2": 1.93144,
+    "Zn_N2_S_C4": -117.02986
+   },
+   "split": {
+    "bond": 4.2957,
+    "angle_N2": 4.317903,
+    "angle_other": 85.09289,
+    "torsion_N2S": 0.686904,
+    "torsion_other": 14.357795,
+    "nb_ligand": -46.277612,
+    "lj_ligand_frame": -3.976053,
+    "coulomb_ligand_frame": -71.48622,
+    "nb_frame": 85.00379
+   },
+   "split_extra": {
+    "lj_ligand_frame_r12": 2.53512114,
+    "lj_ligand_frame_r6": -6.51117403,
+    "nonbonded_own_sum_minus_openmm": 0.0,
+    "parts_minus_total": 0.0
+   }
+  },
+  "d4": {
+   "energy": {
+    "bond": 4.2957,
+    "angle": 89.41046,
+    "torsion": 17.70433,
+    "nonbonded": -37.076723,
+    "total": 74.333766,
+    "rest_openmm": 66.669662,
+    "fit_terms": 7.664104,
+    "rest": 66.669662
+   },
+   "internal": {
+    "signed_volume": 0.81333,
+    "Zn_N2_S": 117.5521,
+    "Zn_N2_H": 95.4065,
+    "S_N2_H": 107.41429,
+    "H_N2_S_C4": 137.00695,
+    "H_N2_S_O1": 20.56823,
+    "H_N2_S_O2": -108.94812,
+    "C4_S_N2": 108.7946,
+    "S_N2": 1.59633,
+    "Zn_N2": 1.93144,
+    "Zn_N2_S_C4": -117.02986
+   },
+   "split": {
+    "bond": 4.2957,
+    "angle_N2": 4.317569,
+    "angle_other": 85.09289,
+    "torsion_N2S": 3.346534,
+    "torsion_other": 14.357795,
+    "nb_ligand": -47.541267,
+    "lj_ligand_frame": -3.991264,
+    "coulomb_ligand_frame": -70.547983,
+    "nb_frame": 85.00379
+   },
+   "split_extra": {
+    "lj_ligand_frame_r12": 2.53655388,
+    "lj_ligand_frame_r6": -6.52781799,
+    "nonbonded_own_sum_minus_openmm": 0.0,
+    "parts_minus_total": 0.0
+   }
+  },
+  "d5": {
+   "energy": {
+    "bond": 4.2957,
+    "angle": 85.127326,
+    "torsion": 15.342944,
+    "nonbonded": -34.171616,
+    "total": 70.594354,
+    "rest_openmm": 69.574769,
+    "fit_terms": 1.019585,
+    "rest": 69.574769
+   },
+   "internal": {
+    "signed_volume": 0.56519,
+    "Zn_N2_S": 117.5521,
+    "Zn_N2_H": 107.4065,
+    "S_N2_H": 119.41429,
+    "H_N2_S_C4": 110.00956,
+    "H_N2_S_O1": -6.42916,
+    "H_N2_S_O2": -135.94551,
+    "C4_S_N2": 108.7946,
+    "S_N2": 1.59633,
+    "Zn_N2": 1.93144,
+    "Zn_N2_S_C4": -117.02986
+   },
+   "split": {
+    "bond": 4.2957,
+    "angle_N2": 0.034436,
+    "angle_other": 85.09289,
+    "torsion_N2S": 0.985149,
+    "torsion_other": 14.357795,
+    "nb_ligand": -44.344318,
+    "lj_ligand_frame": -3.984165,
+    "coulomb_ligand_frame": -70.846924,
+    "nb_frame": 85.00379
+   },
+   "split_extra": {
+    "lj_ligand_frame_r12": 2.53596164,
+    "lj_ligand_frame_r6": -6.5201263,
+    "nonbonded_own_sum_minus_openmm": 0.0,
+    "parts_minus_total": 0.0
+   }
+  },
+  "d6": {
+   "energy": {
+    "bond": 4.2957,
+    "angle": 94.707206,
+    "torsion": 17.033744,
+    "nonbonded": -40.442211,
+    "total": 75.594439,
+    "rest_openmm": 63.304175,
+    "fit_terms": 12.290265,
+    "rest": 63.304175
+   },
+   "internal": {
+    "signed_volume": 0.81335,
+    "Zn_N2_S": 117.5521,
+    "Zn_N2_H": 107.4065,
+    "S_N2_H": 95.41429,
+    "H_N2_S_C4": 130.11666,
+    "H_N2_S_O1": 13.67794,
+    "H_N2_S_O2": -115.83841,
+    "C4_S_N2": 108.7946,
+    "S_N2": 1.59633,
+    "Zn_N2": 1.93144,
+    "Zn_N2_S_C4": -117.02986
+   },
+   "split": {
+    "bond": 4.2957,
+    "angle_N2": 9.614316,
+    "angle_other": 85.09289,
+    "torsion_N2S": 2.675949,
+    "torsion_other": 14.357795,
+    "nb_ligand": -50.247337,
+    "lj_ligand_frame": -3.981408,
+    "coulomb_ligand_frame": -71.217255,
+    "nb_frame": 85.00379
+   },
+   "split_extra": {
+    "lj_ligand_frame_r12": 2.53547673,
+    "lj_ligand_frame_r6": -6.51688519,
+    "nonbonded_own_sum_minus_openmm": 0.0,
+    "parts_minus_total": 0.0
+   }
+  },
+  "d2": {
+   "energy": {
+    "bond": 4.295286,
+    "angle": 87.218935,
+    "torsion": 19.736554,
+    "nonbonded": -33.049929,
+    "total": 78.200847,
+    "rest_openmm": 70.696043,
+    "fit_terms": 7.504804,
+    "rest": 70.696043
+   },
+   "internal": {
+    "signed_volume": -0.72399,
+    "Zn_N2_S": 117.5521,
+    "Zn_N2_H": 107.41039,
+    "S_N2_H": 107.41039,
+    "H_N2_S_C4": 4.12108,
+    "H_N2_S_O1": -112.31763,
+    "H_N2_S_O2": 118.16602,
+    "C4_S_N2": 108.7946,
+    "S_N2": 1.59633,
+    "Zn_N2": 1.93144,
+    "Zn_N2_S_C4": -117.02986
+   },
+   "split": {
+    "bond": 4.295286,
+    "angle_N2": 2.126045,
+    "angle_other": 85.09289,
+    "torsion_N2S": 5.378759,
+    "torsion_other": 14.357795,
+    "nb_ligand": -42.720412,
+    "lj_ligand_frame": -3.984923,
+    "coulomb_ligand_frame": -71.348384,
+    "nb_frame": 85.00379
+   },
+   "split_extra": {
+    "lj_ligand_frame_r12": 2.5360087,
+    "lj_ligand_frame_r6": -6.52093164,
+    "nonbonded_own_sum_minus_openmm": 0.0,
+    "parts_minus_total": 0.0
+   }
+  },
+  "Nx": {
+   "energy": {
+    "bond": 4.295286,
+    "angle": 88.026381,
+    "torsion": 17.324349,
+    "nonbonded": -36.274245,
+    "total": 73.371772,
+    "rest_openmm": 68.323654,
+    "fit_terms": 5.048118,
+    "rest": 68.323654
+   },
+   "internal": {
+    "signed_volume": 0.72681,
+    "Zn_N2_S": 117.10572,
+    "Zn_N2_H": 107.53059,
+    "S_N2_H": 107.53059,
+    "H_N2_S_C4": 133.11028,
+    "H_N2_S_O1": 16.67156,
+    "H_N2_S_O2": -112.84479,
+    "C4_S_N2": 108.7946,
+    "S_N2": 1.59633,
+    "Zn_N2": 1.93144,
+    "Zn_N2_S_C4": -105.78875
+   },
+   "split": {
+    "bond": 4.295286,
+    "angle_N2": 2.081564,
+    "angle_other": 85.944817,
+    "torsion_N2S": 2.966554,
+    "torsion_other": 14.357795,
+    "nb_ligand": -47.413777,
+    "lj_ligand_frame": -4.133174,
+    "coulomb_ligand_frame": -69.731084,
+    "nb_frame": 85.00379
+   },
+   "split_extra": {
+    "lj_ligand_frame_r12": 2.99829574,
+    "lj_ligand_frame_r6": -7.13146961,
+    "nonbonded_own_sum_minus_openmm": -0.0,
+    "parts_minus_total": 0.0
+   }
+  },
+  "c1_m030": {
+   "energy": {
+    "bond": 4.2957,
+    "angle": 87.217381,
+    "torsion": 14.633994,
+    "nonbonded": -35.04519,
+    "total": 71.101885,
+    "rest_openmm": 68.701195,
+    "fit_terms": 2.40069,
+    "rest": 68.701195
+   },
+   "internal": {
+    "signed_volume": 0.72399,
+    "Zn_N2_S": 117.5521,
+    "Zn_N2_H": 107.4065,
+    "S_N2_H": 107.41429,
+    "H_N2_S_C4": 91.82122,
+    "H_N2_S_O1": -24.6175,
+    "H_N2_S_O2": -154.13385,
+    "C4_S_N2": 108.7946,
+    "S_N2": 1.59633,
+    "Zn_N2": 1.93144,
+    "Zn_N2_S_C4": -147.02986
+   },
+   "split": {
+    "bond": 4.2957,
+    "angle_N2": 2.124491,
+    "angle_other": 85.09289,
+    "torsion_N2S": 0.276199,
+    "torsion_other": 14.357795,
+    "nb_ligand": -45.490115,
+    "lj_ligand_frame": -0.619541,
+    "coulomb_ligand_frame": -73.939324,
+    "nb_frame": 85.00379
+   },
+   "split_extra": {
+    "lj_ligand_frame_r12": 5.70030891,
+    "lj_ligand_frame_r6": -6.31984989,
+    "nonbonded_own_sum_minus_openmm": -0.0,
+    "parts_minus_total": -0.0
+   }
+  },
+  "c2_m015": {
+   "energy": {
+    "bond": 4.295286,
+    "angle": 89.517617,
+    "torsion": 14.631734,
+    "nonbonded": -25.506246,
+    "total": 82.93839,
+    "rest_openmm": 79.193403,
+    "fit_terms": 3.744987,
+    "rest": 79.193403
+   },
+   "internal": {
+    "signed_volume": -0.67827,
+    "Zn_N2_S": 123.82724,
+    "Zn_N2_H": 105.77271,
+    "S_N2_H": 105.77271,
+    "H_N2_S_C4": 85.61511,
+    "H_N2_S_O1": -30.82361,
+    "H_N2_S_O2": -160.33996,
+    "C4_S_N2": 108.7946,
+    "S_N2": 1.59633,
+    "Zn_N2": 1.93144,
+    "Zn_N2_S_C4": -36.34292
+   },
+   "split": {
+    "bond": 4.295286,
+    "angle_N2": 3.471049,
+    "angle_other": 86.046568,
+    "torsion_N2S": 0.273939,
+    "torsion_other": 14.357795,
+    "nb_ligand": -45.378422,
+    "lj_ligand_frame": -5.110278,
+    "coulomb_ligand_frame": -60.021337,
+    "nb_frame": 85.00379
+   },
+   "split_extra": {
+    "lj_ligand_frame_r12": 6.86017575,
+    "lj_ligand_frame_r6": -11.97045368,
+    "nonbonded_own_sum_minus_openmm": 0.0,
+    "parts_minus_total": 0.0
+   }
+  },
+  "c1_p030": {
+   "energy": {
+    "bond": 4.2957,
+    "angle": 87.217381,
+    "torsion": 19.051979,
+    "nonbonded": -33.704824,
+    "total": 76.860236,
+    "rest_openmm": 70.041561,
+    "fit_terms": 6.818675,
+    "rest": 70.041561
+   },
+   "internal": {
+    "signed_volume": 0.72399,
+    "Zn_N2_S": 117.5521,
+    "Zn_N2_H": 107.4065,
+    "S_N2_H": 107.41429,
+    "H_N2_S_C4": 151.82122,
+    "H_N2_S_O1": 35.3825,
+    "H_N2_S_O2": -94.13385,
+    "C4_S_N2": 108.7946,
+    "S_N2": 1.59633,
+    "Zn_N2": 1.93144,
+    "Zn_N2_S_C4": -87.02986
+   },
+   "split": {
+    "bond": 4.2957,
+    "angle_N2": 2.124491,
+    "angle_other": 85.09289,
+    "torsion_N2S": 4.694184,
+    "torsion_other": 14.357795,
+    "nb_ligand": -47.822138,
+    "lj_ligand_frame": -2.836888,
+    "coulomb_ligand_frame": -68.049589,
+    "nb_frame": 85.00379
+   },
+   "split_extra": {
+    "lj_ligand_frame_r12": 6.83643002,
+    "lj_ligand_frame_r6": -9.67331764,
+    "nonbonded_own_sum_minus_openmm": 0.0,
+    "parts_minus_total": 0.0
+   }
+  },
+  "c2_m030": {
+   "energy": {
+    "bond": 4.295286,
+    "angle": 89.517617,
+    "torsion": 15.128658,
+    "nonbonded": -26.915853,
+    "total": 82.025708,
+    "rest_openmm": 77.783797,
+    "fit_terms": 4.241911,
+    "rest": 77.783797
+   },
+   "internal": {
+    "signed_volume": -0.67827,
+    "Zn_N2_S": 123.82724,
+    "Zn_N2_H": 105.77271,
+    "S_N2_H": 105.77271,
+    "H_N2_S_C4": 70.61511,
+    "H_N2_S_O1": -45.82361,
+    "H_N2_S_O2": -175.33996,
+    "C4_S_N2": 108.7946,
+    "S_N2": 1.59633,
+    "Zn_N2": 1.93144,
+    "Zn_N2_S_C4": -51.34292
+   },
+   "split": {
+    "bond": 4.295286,
+    "angle_N2": 3.471049,
+    "angle_other": 86.046568,
+    "torsion_N2S": 0.770862,
+    "torsion_other": 14.357795,
+    "nb_ligand": -44.341781,
+    "lj_ligand_frame": -4.803377,
+    "coulomb_ligand_frame": -62.774485,
+    "nb_frame": 85.00379
+   },
+   "split_extra": {
+    "lj_ligand_frame_r12": 4.4919096,
+    "lj_ligand_frame_r6": -9.29528614,
+    "nonbonded_own_sum_minus_openmm": 0.0,
+    "parts_minus_total": 0.0
+   }
+  },
+  "c1_m060": {
+   "energy": {
+    "bond": 4.2957,
+    "angle": 87.217381,
+    "torsion": 15.701799,
+    "nonbonded": -33.978668,
+    "total": 73.236212,
+    "rest_openmm": 69.767717,
+    "fit_terms": 3.468494,
+    "rest": 69.767717
+   },
+   "internal": {
+    "signed_volume": 0.72399,
+    "Zn_N2_S": 117.5521,
+    "Zn_N2_H": 107.4065,
+    "S_N2_H": 107.41429,
+    "H_N2_S_C4": 61.82122,
+    "H_N2_S_O1": -54.6175,
+    "H_N2_S_O2": 175.86615,
+    "C4_S_N2": 108.7946,
+    "S_N2": 1.59633,
+    "Zn_N2": 1.93144,
+    "Zn_N2_S_C4": -177.02986
+   },
+   "split": {
+    "bond": 4.2957,
+    "angle_N2": 2.124491,
+    "angle_other": 85.09289,
+    "torsion_N2S": 1.344004,
+    "torsion_other": 14.357795,
+    "nb_ligand": -43.543884,
+    "lj_ligand_frame": -1.386485,
+    "coulomb_ligand_frame": -74.05209,
+    "nb_frame": 85.00379
+   },
+   "split_extra": {
+    "lj_ligand_frame_r12": 4.50621197,
+    "lj_ligand_frame_r6": -5.89269742,
+    "nonbonded_own_sum_minus_openmm": -0.0,
+    "parts_minus_total": -0.0
+   }
+  },
+  "c2_m120": {
+   "energy": {
+    "bond": 4.295286,
+    "angle": 89.517617,
+    "torsion": 19.183114,
+    "nonbonded": -30.659606,
+    "total": 82.336411,
+    "rest_openmm": 74.040043,
+    "fit_terms": 8.296368,
+    "rest": 74.040043
+   },
+   "internal": {
+    "signed_volume": -0.67827,
+    "Zn_N2_S": 123.82724,
+    "Zn_N2_H": 105.77271,
+    "S_N2_H": 105.77271,
+    "H_N2_S_C4": -19.38489,
+    "H_N2_S_O1": -135.82361,
+    "H_N2_S_O2": 94.66004,
+    "C4_S_N2": 108.7946,
+    "S_N2": 1.59633,
+    "Zn_N2": 1.93144,
+    "Zn_N2_S_C4": -141.34292
+   },
+   "split": {
+    "bond": 4.295286,
+    "angle_N2": 3.471049,
+    "angle_other": 86.046568,
+    "torsion_N2S": 4.825319,
+    "torsion_other": 14.357795,
+    "nb_ligand": -43.690589,
+    "lj_ligand_frame": -2.832733,
+    "coulomb_ligand_frame": -69.140075,
+    "nb_frame": 85.00379
+   },
+   "split_extra": {
+    "lj_ligand_frame_r12": 2.10451099,
+    "lj_ligand_frame_r6": -4.93724356,
+    "nonbonded_own_sum_minus_openmm": 0.0,
+    "parts_minus_total": -0.0
+   }
+  },
+  "c1_m090": {
+   "energy": {
+    "bond": 4.2957,
+    "angle": 87.217381,
+    "torsion": 18.30029,
+    "nonbonded": -33.045013,
+    "total": 76.768358,
+    "rest_openmm": 70.701372,
+    "fit_terms": 6.066985,
+    "rest": 70.701372
+   },
+   "internal": {
+    "signed_volume": 0.72399,
+    "Zn_N2_S": 117.5521,
+    "Zn_N2_H": 107.4065,
+    "S_N2_H": 107.41429,
+    "H_N2_S_C4": 31.82122,
+    "H_N2_S_O1": -84.6175,
+    "H_N2_S_O2": 145.86615,
+    "C4_S_N2": 108.7946,
+    "S_N2": 1.59633,
+    "Zn_N2": 1.93144,
+    "Zn_N2_S_C4": 152.97014
+   },
+   "split": {
+    "bond": 4.2957,
+    "angle_N2": 2.124491,
+    "angle_other": 85.09289,
+    "torsion_N2S": 3.942495,
+    "torsion_other": 14.357795,
+    "nb_ligand": -42.473432,
+    "lj_ligand_frame": -3.477537,
+    "coulomb_ligand_frame": -72.097834,
+    "nb_frame": 85.00379
+   },
+   "split_extra": {
+    "lj_ligand_frame_r12": 1.9865442,
+    "lj_ligand_frame_r6": -5.46408158,
+    "nonbonded_own_sum_minus_openmm": 0.0,
+    "parts_minus_total": 0.0
+   }
+  },
+  "c2_m150": {
+   "energy": {
+    "bond": 4.295286,
+    "angle": 89.517617,
+    "torsion": 16.740268,
+    "nonbonded": -33.512438,
+    "total": 77.040733,
+    "rest_openmm": 71.187212,
+    "fit_terms": 5.853521,
+    "rest": 71.187212
+   },
+   "internal": {
+    "signed_volume": -0.67827,
+    "Zn_N2_S": 123.82724,
+    "Zn_N2_H": 105.77271,
+    "S_N2_H": 105.77271,
+    "H_N2_S_C4": -49.38489,
+    "H_N2_S_O1": -165.82361,
+    "H_N2_S_O2": 64.66004,
+    "C4_S_N2": 108.7946,
+    "S_N2": 1.59633,
+    "Zn_N2": 1.93144,
+    "Zn_N2_S_C4": -171.34292
+   },
+   "split": {
+    "bond": 4.295286,
+    "angle_N2": 3.471049,
+    "angle_other": 86.046568,
+    "torsion_N2S": 2.382473,
+    "torsion_other": 14.357795,
+    "nb_ligand": -45.096605,
+    "lj_ligand_frame": -2.891874,
+    "coulomb_ligand_frame": -70.527749,
+    "nb_frame": 85.00379
+   },
+   "split_extra": {
+    "lj_ligand_frame_r12": 1.7134972,
+    "lj_ligand_frame_r6": -4.60537164,
+    "nonbonded_own_sum_minus_openmm": 0.0,
+    "parts_minus_total": 0.0
+   }
+  },
+  "c1_m120": {
+   "energy": {
+    "bond": 4.2957,
+    "angle": 87.217381,
+    "torsion": 19.758468,
+    "nonbonded": -31.795524,
+    "total": 79.476024,
+    "rest_openmm": 71.950861,
+    "fit_terms": 7.525163,
+    "rest": 71.950861
+   },
+   "internal": {
+    "signed_volume": 0.72399,
+    "Zn_N2_S": 117.5521,
+    "Zn_N2_H": 107.4065,
+    "S_N2_H": 107.41429,
+    "H_N2_S_C4": 1.82122,
+    "H_N2_S_O1": -114.6175,
+    "H_N2_S_O2": 115.86615,
+    "C4_S_N2": 108.7946,
+    "S_N2": 1.59633,
+    "Zn_N2": 1.93144,
+    "Zn_N2_S_C4": 122.97014
+   },
+   "split": {
+    "bond": 4.2957,
+    "angle_N2": 2.124491,
+    "angle_other": 85.09289,
+    "torsion_N2S": 5.400672,
+    "torsion_other": 14.357795,
+    "nb_ligand": -42.780297,
+    "lj_ligand_frame": -4.018105,
+    "coulomb_ligand_frame": -70.000913,
+    "nb_frame": 85.00379
+   },
+   "split_extra": {
+    "lj_ligand_frame_r12": 2.22249186,
+    "lj_ligand_frame_r6": -6.24059677,
+    "nonbonded_own_sum_minus_openmm": 0.0,
+    "parts_minus_total": 0.0
+   }
+  },
+  "c2_m180": {
+   "energy": {
+    "bond": 4.295286,
+    "angle": 89.517617,
+    "torsion": 14.755303,
+    "nonbonded": -32.956443,
+    "total": 75.611763,
+    "rest_openmm": 71.743207,
+    "fit_terms": 3.868557,
+    "rest": 71.743207
+   },
+   "internal": {
+    "signed_volume": -0.67827,
+    "Zn_N2_S": 123.82724,
+    "Zn_N2_H": 105.77271,
+    "S_N2_H": 105.77271,
+    "H_N2_S_C4": -79.38489,
+    "H_N2_S_O1": 164.17639,
+    "H_N2_S_O2": 34.66004,
+    "C4_S_N2": 108.7946,
+    "S_N2": 1.59633,
+    "Zn_N2": 1.93144,
+    "Zn_N2_S_C4": 158.65708
+   },
+   "split": {
+    "bond": 4.295286,
+    "angle_N2": 3.471049,
+    "angle_other": 86.046568,
+    "torsion_N2S": 0.397508,
+    "torsion_other": 14.357795,
+    "nb_ligand": -46.813131,
+    "lj_ligand_frame": -0.157151,
+    "coulomb_ligand_frame": -70.989951,
+    "nb_frame": 85.00379
+   },
+   "split_extra": {
+    "lj_ligand_frame_r12": 5.72587528,
+    "lj_ligand_frame_r6": -5.88302608,
+    "nonbonded_own_sum_minus_openmm": -0.0,
+    "parts_minus_total": 0.0
+   }
+  },
+  "N": {
+   "energy": {
+    "bond": 15.737114,
+    "angle": 97.436153,
+    "torsion": 25.915781,
+    "nonbonded": -38.848274,
+    "total": 100.240773,
+    "rest_openmm": 93.958345,
+    "fit_terms": 6.282428,
+    "rest": 93.958345
+   },
+   "internal": {
+    "signed_volume": 0.78551,
+    "Zn_N2_S": 105.90753,
+    "Zn_N2_H": 110.35253,
+    "S_N2_H": 110.32582,
+    "H_N2_S_C4": 133.08838,
+    "H_N2_S_O1": 16.66553,
+    "H_N2_S_O2": -110.51343,
+    "C4_S_N2": 109.48251,
+    "S_N2": 1.67745,
+    "Zn_N2": 2.20712,
+    "Zn_N2_S_C4": -107.49023
+   },
+   "split": {
+    "bond": 15.737114,
+    "angle_N2": 3.318008,
+    "angle_other": 94.118144,
+    "torsion_N2S": 2.96442,
+    "torsion_other": 22.951361,
+    "nb_ligand": -49.127448,
+    "lj_ligand_frame": -3.384995,
+    "coulomb_ligand_frame": -71.339622,
+    "nb_frame": 85.00379
+   },
+   "split_extra": {
+    "lj_ligand_frame_r12": 3.74858326,
+    "lj_ligand_frame_r6": -7.13357831,
+    "nonbonded_own_sum_minus_openmm": -0.0,
+    "parts_minus_total": 0.0
+   }
+  },
+  "e_p015": {
+   "energy": {
+    "bond": 4.2957,
+    "angle": 87.217381,
+    "torsion": 16.261495,
+    "nonbonded": -36.311258,
+    "total": 71.463318,
+    "rest_openmm": 67.435127,
+    "fit_terms": 4.028191,
+    "rest": 67.435127
+   },
+   "internal": {
+    "signed_volume": 0.72399,
+    "Zn_N2_S": 117.5521,
+    "Zn_N2_H": 107.4065,
+    "S_N2_H": 107.41429,
+    "H_N2_S_C4": 121.82122,
+    "H_N2_S_O1": 5.3825,
+    "H_N2_S_O2": -124.13385,
+    "C4_S_N2": 108.7946,
+    "S_N2": 1.59633,
+    "Zn_N2": 1.93144,
+    "Zn_N2_S_C4": -117.02986
+   },
+   "split": {
+    "bond": 4.2957,
+    "angle_N2": 2.124491,
+    "angle_other": 85.09289,
+    "torsion_N2S": 1.9037,
+    "torsion_other": 14.357795,
+    "nb_ligand": -47.071523,
+    "lj_ligand_frame": -3.890841,
+    "coulomb_ligand_frame": -70.352685,
+    "nb_frame": 85.00379
+   },
+   "split_extra": {
+    "lj_ligand_frame_r12": 2.24145563,
+    "lj_ligand_frame_r6": -6.13229666,
+    "nonbonded_own_sum_minus_openmm": 0.0,
+    "parts_minus_total": 0.0
+   }
+  },
+  "e_p030": {
+   "energy": {
+    "bond": 4.2957,
+    "angle": 87.217381,
+    "torsion": 16.261495,
+    "nonbonded": -35.088676,
+    "total": 72.685901,
+    "rest_openmm": 68.65771,
+    "fit_terms": 4.028191,
+    "rest": 68.65771
+   },
+   "internal": {
+    "signed_volume": 0.72399,
+    "Zn_N2_S": 117.5521,
+    "Zn_N2_H": 107.4065,
+    "S_N2_H": 107.41429,
+    "H_N2_S_C4": 121.82122,
+    "H_N2_S_O1": 5.3825,
+    "H_N2_S_O2": -124.13385,
+    "C4_S_N2": 108.7946,
+    "S_N2": 1.59633,
+    "Zn_N2": 1.93144,
+    "Zn_N2_S_C4": -117.02986
+   },
+   "split": {
+    "bond": 4.2957,
+    "angle_N2": 2.124491,
+    "angle_other": 85.092891,
+    "torsion_N2S": 1.9037,
+    "torsion_other": 14.357795,
+    "nb_ligand": -47.071523,
+    "lj_ligand_frame": -2.943383,
+    "coulomb_ligand_frame": -70.077561,
+    "nb_frame": 85.00379
+   },
+   "split_extra": {
+    "lj_ligand_frame_r12": 3.36172777,
+    "lj_ligand_frame_r6": -6.30511046,
+    "nonbonded_own_sum_minus_openmm": -0.0,
+    "parts_minus_total": -0.0
+   }
+  },
+  "e_m120": {
+   "energy": {
+    "bond": 4.2957,
+    "angle": 87.217381,
+    "torsion": 16.261495,
+    "nonbonded": -35.715057,
+    "total": 72.059519,
+    "rest_openmm": 68.031328,
+    "fit_terms": 4.028191,
+    "rest": 68.031328
+   },
+   "internal": {
+    "signed_volume": 0.72399,
+    "Zn_N2_S": 117.5521,
+    "Zn_N2_H": 107.4065,
+    "S_N2_H": 107.41429,
+    "H_N2_S_C4": 121.82122,
+    "H_N2_S_O1": 5.3825,
+    "H_N2_S_O2": -124.13385,
+    "C4_S_N2": 108.7946,
+    "S_N2": 1.59633,
+    "Zn_N2": 1.93144,
+    "Zn_N2_S_C4": -117.02986
+   },
+   "split": {
+    "bond": 4.2957,
+    "angle_N2": 2.124491,
+    "angle_other": 85.09289,
+    "torsion_N2S": 1.9037,
+    "torsion_other": 14.357795,
+    "nb_ligand": -47.071523,
+    "lj_ligand_frame": -3.512607,
+    "coulomb_ligand_frame": -70.134717,
+    "nb_frame": 85.00379
+   },
+   "split_extra": {
+    "lj_ligand_frame_r12": 3.33383336,
+    "lj_ligand_frame_r6": -6.84644073,
+    "nonbonded_own_sum_minus_openmm": 0.0,
+    "parts_minus_total": 0.0
+   }
+  },
+  "e_p120": {
+   "energy": {
+    "bond": 4.2957,
+    "angle": 87.217381,
+    "torsion": 16.261495,
+    "nonbonded": -38.323735,
+    "total": 69.450842,
+    "rest_openmm": 65.422651,
+    "fit_terms": 4.028191,
+    "rest": 65.422651
+   },
+   "internal": {
+    "signed_volume": 0.72399,
+    "Zn_N2_S": 117.5521,
+    "Zn_N2_H": 107.4065,
+    "S_N2_H": 107.41429,
+    "H_N2_S_C4": 121.82122,
+    "H_N2_S_O1": 5.3825,
+    "H_N2_S_O2": -124.13385,
+    "C4_S_N2": 108.7946,
+    "S_N2": 1.59633,
+    "Zn_N2": 1.93144,
+    "Zn_N2_S_C4": -117.02986
+   },
+   "split": {
+    "bond": 4.2957,
+    "angle_N2": 2.124491,
+    "angle_other": 85.09289,
+    "torsion_N2S": 1.9037,
+    "torsion_other": 14.357795,
+    "nb_ligand": -47.071523,
+    "lj_ligand_frame": -2.87841,
+    "coulomb_ligand_frame": -73.377592,
+    "nb_frame": 85.00379
+   },
+   "split_extra": {
+    "lj_ligand_frame_r12": 3.5924555,
+    "lj_ligand_frame_r6": -6.47086576,
+    "nonbonded_own_sum_minus_openmm": 0.0,
+    "parts_minus_total": 0.0
+   }
+  },
+  "f_p08": {
+   "energy": {
+    "bond": 4.2957,
+    "angle": 88.192657,
+    "torsion": 15.7286,
+    "nonbonded": -34.227617,
+    "total": 73.98934,
+    "rest_openmm": 69.518769,
+    "fit_terms": 4.470571,
+    "rest": 69.518769
+   },
+   "internal": {
+    "signed_volume": 0.61543,
+    "Zn_N2_S": 125.5521,
+    "Zn_N2_H": 107.4065,
+    "S_N2_H": 107.41429,
+    "H_N2_S_C4": 115.41588,
+    "H_N2_S_O1": -1.02283,
+    "H_N2_S_O2": -130.53918,
+    "C4_S_N2": 108.7946,
+    "S_N2": 1.59633,
+    "Zn_N2": 1.93144,
+    "Zn_N2_S_C4": -117.02986
+   },
+   "split": {
+    "bond": 4.2957,
+    "angle_N2": 3.099767,
+    "angle_other": 85.09289,
+    "torsion_N2S": 1.370804,
+    "torsion_other": 14.357795,
+    "nb_ligand": -46.805109,
+    "lj_ligand_frame": -3.728486,
+    "coulomb_ligand_frame": -68.697812,
+    "nb_frame": 85.00379
+   },
+   "split_extra": {
+    "lj_ligand_frame_r12": 1.30294993,
+    "lj_ligand_frame_r6": -5.0314355,
+    "nonbonded_own_sum_minus_openmm": -0.0,
+    "parts_minus_total": -0.0
+   }
+  },
+  "f_m08": {
+   "energy": {
+    "bond": 4.2957,
+    "angle": 88.191656,
+    "torsion": 16.698829,
+    "nonbonded": -39.116481,
+    "total": 70.069704,
+    "rest_openmm": 64.629905,
+    "fit_terms": 5.439799,
+    "rest": 64.629905
+   },
+   "internal": {
+    "signed_volume": 0.80562,
+    "Zn_N2_S": 109.5521,
+    "Zn_N2_H": 107.4065,
+    "S_N2_H": 107.41429,
+    "H_N2_S_C4": 126.60465,
+    "H_N2_S_O1": 10.16593,
+    "H_N2_S_O2": -119.35041,
+    "C4_S_N2": 108.7946,
+    "S_N2": 1.59633,
+    "Zn_N2": 1.93144,
+    "Zn_N2_S_C4": -117.02986
+   },
+   "split": {
+    "bond": 4.2957,
+    "angle_N2": 3.098766,
+    "angle_other": 85.09289,
+    "torsion_N2S": 2.341033,
+    "torsion_other": 14.357795,
+    "nb_ligand": -47.243184,
+    "lj_ligand_frame": -3.221702,
+    "coulomb_ligand_frame": -73.655385,
+    "nb_frame": 85.00379
+   },
+   "split_extra": {
+    "lj_ligand_frame_r12": 5.7380386,
+    "lj_ligand_frame_r6": -8.95974051,
+    "nonbonded_own_sum_minus_openmm": 0.0,
+    "parts_minus_total": 0.0
+   }
+  },
+  "g1": {
+   "energy": {
+    "bond": 4.295286,
+    "angle": 88.384105,
+    "torsion": 19.554527,
+    "nonbonded": -23.100976,
+    "total": 89.132941,
+    "rest_openmm": 81.598674,
+    "fit_terms": 7.534268,
+    "rest": 81.598674
+   },
+   "internal": {
+    "signed_volume": -0.0,
+    "Zn_N2_S": 123.82724,
+    "Zn_N2_H": 118.08638,
+    "S_N2_H": 118.08638,
+    "H_N2_S_C4": 158.65708,
+    "H_N2_S_O1": 42.21837,
+    "H_N2_S_O2": -87.29798,
+    "C4_S_N2": 108.7946,
+    "S_N2": 1.59633,
+    "Zn_N2": 1.93144,
+    "Zn_N2_S_C4": -21.34292
+   },
+   "split": {
+    "bond": 4.295286,
+    "angle_N2": 2.337536,
+    "angle_other": 86.046569,
+    "torsion_N2S": 5.196732,
+    "torsion_other": 14.357795,
+    "nb_ligand": -45.819645,
+    "lj_ligand_frame": -2.978913,
+    "coulomb_ligand_frame": -59.306208,
+    "nb_frame": 85.00379
+   },
+   "split_extra": {
+    "lj_ligand_frame_r12": 15.16749315,
+    "lj_ligand_frame_r6": -18.14640649,
+    "nonbonded_own_sum_minus_openmm": 0.0,
+    "parts_minus_total": 0.0
+   }
+  },
+  "g2": {
+   "energy": {
+    "bond": 4.295286,
+    "angle": 89.517617,
+    "torsion": 18.305885,
+    "nonbonded": -25.895637,
+    "total": 86.22315,
+    "rest_openmm": 78.804012,
+    "fit_terms": 7.419138,
+    "rest": 78.804012
+   },
+   "internal": {
+    "signed_volume": 0.67827,
+    "Zn_N2_S": 123.82724,
+    "Zn_N2_H": 105.77271,
+    "S_N2_H": 105.77271,
+    "H_N2_S_C4": -143.30094,
+    "H_N2_S_O1": 100.26034,
+    "H_N2_S_O2": -29.256,
+    "C4_S_N2": 108.7946,
+    "S_N2": 1.59633,
+    "Zn_N2": 1.93144,
+    "Zn_N2_S_C4": -21.34292
+   },
+   "split": {
+    "bond": 4.295286,
+    "angle_N2": 3.471049,
+    "angle_other": 86.046569,
+    "torsion_N2S": 3.948089,
+    "torsion_other": 14.357795,
+    "nb_ligand": -48.727371,
+    "lj_ligand_frame": -2.987304,
+    "coulomb_ligand_frame": -59.184753,
+    "nb_frame": 85.00379
+   },
+   "split_extra": {
+    "lj_ligand_frame_r12": 15.16866454,
+    "lj_ligand_frame_r6": -18.15596837,
+    "nonbonded_own_sum_minus_openmm": 0.0,
+    "parts_minus_total": 0.0
+   }
+  },
+  "g3": {
+   "energy": {
+    "bond": 4.295286,
+    "angle": 91.11381,
+    "torsion": 16.035224,
+    "nonbonded": -24.356492,
+    "total": 87.087827,
+    "rest_openmm": 80.343157,
+    "fit_terms": 6.74467,
+    "rest": 80.343157
+   },
+   "internal": {
+    "signed_volume": -0.508,
+    "Zn_N2_S": 123.82724,
+    "Zn_N2_H": 117.77271,
+    "S_N2_H": 105.77271,
+    "H_N2_S_C4": 119.20413,
+    "H_N2_S_O1": 2.76541,
+    "H_N2_S_O2": -126.75093,
+    "C4_S_N2": 108.7946,
+    "S_N2": 1.59633,
+    "Zn_N2": 1.93144,
+    "Zn_N2_S_C4": -21.34292
+   },
+   "split": {
+    "bond": 4.295286,
+    "angle_N2": 5.067241,
+    "angle_other": 86.046569,
+    "torsion_N2S": 1.677429,
+    "torsion_other": 14.357795,
+    "nb_ligand": -47.321025,
+    "lj_ligand_frame": -2.977679,
+    "coulomb_ligand_frame": -59.061579,
+    "nb_frame": 85.00379
+   },
+   "split_extra": {
+    "lj_ligand_frame_r12": 15.16731049,
+    "lj_ligand_frame_r6": -18.14498917,
+    "nonbonded_own_sum_minus_openmm": 0.0,
+    "parts_minus_total": 0.0
+   }
+  },
+  "g4": {
+   "energy": {
+    "bond": 4.295286,
+    "angle": 92.307915,
+    "torsion": 14.645849,
+    "nonbonded": -21.060946,
+    "total": 90.188103,
+    "rest_openmm": 83.638703,
+    "fit_terms": 6.5494,
+    "rest": 83.638703
+   },
+   "internal": {
+    "signed_volume": -0.76939,
+    "Zn_N2_S": 123.82724,
+    "Zn_N2_H": 93.77271,
+    "S_N2_H": 105.77271,
+    "H_N2_S_C4": 84.41591,
+    "H_N2_S_O1": -32.02281,
+    "H_N2_S_O2": -161.53915,
+    "C4_S_N2": 108.7946,
+    "S_N2": 1.59633,
+    "Zn_N2": 1.93144,
+    "Zn_N2_S_C4": -21.34292
+   },
+   "split": {
+    "bond": 4.295286,
+    "angle_N2": 6.261346,
+    "angle_other": 86.046569,
+    "torsion_N2S": 0.288053,
+    "torsion_other": 14.357795,
+    "nb_ligand": -45.295303,
+    "lj_ligand_frame": -2.997482,
+    "coulomb_ligand_frame": -57.771952,
+    "nb_frame": 85.00379
+   },
+   "split_extra": {
+    "lj_ligand_frame_r12": 15.17051451,
+    "lj_ligand_frame_r6": -18.16799661,
+    "nonbonded_own_sum_minus_openmm": 0.0,
+    "parts_minus_total": 0.0
+   }
+  },
+  "g5": {
+   "energy": {
+    "bond": 4.295286,
+    "angle": 86.688883,
+    "torsion": 15.691829,
+    "nonbonded": -21.264402,
+    "total": 85.411595,
+    "rest_openmm": 83.435248,
+    "fit_terms": 1.976348,
+    "rest": 83.435248
+   },
+   "internal": {
+    "signed_volume": -0.508,
+    "Zn_N2_S": 123.82724,
+    "Zn_N2_H": 105.77271,
+    "S_N2_H": 117.77271,
+    "H_N2_S_C4": 114.93706,
+    "H_N2_S_O1": -1.50166,
+    "H_N2_S_O2": -131.018,
+    "C4_S_N2": 108.7946,
+    "S_N2": 1.59633,
+    "Zn_N2": 1.93144,
+    "Zn_N2_S_C4": -21.34292
+   },
+   "split": {
+    "bond": 4.295286,
+    "angle_N2": 0.642314,
+    "angle_other": 86.046569,
+    "torsion_N2S": 1.334034,
+    "torsion_other": 14.357795,
+    "nb_ligand": -44.810714,
+    "lj_ligand_frame": -2.985891,
+    "coulomb_ligand_frame": -58.471587,
+    "nb_frame": 85.00379
+   },
+   "split_extra": {
+    "lj_ligand_frame_r12": 15.1680887,
+    "lj_ligand_frame_r6": -18.15397978,
+    "nonbonded_own_sum_minus_openmm": 0.0,
+    "parts_minus_total": 0.0
+   }
+  },
+  "g6": {
+   "energy": {
+    "bond": 4.295286,
+    "angle": 97.746122,
+    "torsion": 14.622915,
+    "nonbonded": -24.69815,
+    "total": 91.966173,
+    "rest_openmm": 80.001499,
+    "fit_terms": 11.964673,
+    "rest": 80.001499
+   },
+   "internal": {
+    "signed_volume": -0.76939,
+    "Zn_N2_S": 123.82724,
+    "Zn_N2_H": 105.77271,
+    "S_N2_H": 93.77271,
+    "H_N2_S_C4": 90.50304,
+    "H_N2_S_O1": -25.93568,
+    "H_N2_S_O2": -155.45203,
+    "C4_S_N2": 108.7946,
+    "S_N2": 1.59633,
+    "Zn_N2": 1.93144,
+    "Zn_N2_S_C4": -21.34292
+   },
+   "split": {
+    "bond": 4.295286,
+    "angle_N2": 11.699553,
+    "angle_other": 86.046569,
+    "torsion_N2S": 0.26512,
+    "torsion_other": 14.357795,
+    "nb_ligand": -48.318237,
+    "lj_ligand_frame": -2.985903,
+    "coulomb_ligand_frame": -58.397801,
+    "nb_frame": 85.00379
+   },
+   "split_extra": {
+    "lj_ligand_frame_r12": 15.16843653,
+    "lj_ligand_frame_r6": -18.15433943,
+    "nonbonded_own_sum_minus_openmm": 0.0,
+    "parts_minus_total": 0.0
+   }
+  }
+ },
+ "n2h": {
+  "mode": "structure",
+  "k": 50.0,
+  "theta0": 107.4065,
+  "replaced_line": "M1-Y4-hn    50.00     120.00    Created by empirical method using MCPB.py"
+ },
+ "frcmods": [
+  "sfa_anion_gaff2.frcmod",
+  "sfa_anion_repair.frcmod",
+  "CA2_mcpbpy.frcmod",
+  "n2h_structure.frcmod"
+ ],
+ "inputs_sha256": {
+  "HD1.mol2": "7e16a57c20f815547dcb61cbdd942ed113860959e432747ddff459f3e48791a9",
+  "HD2.mol2": "ee60e92ec5289264a5cb7c36f1c23eb3be768a0b68d1b3ef2783235b178037f4",
+  "HE1.mol2": "1548dd062a4b042fd72e123e6cb0196f27c79b143c9807ed0202c5658443f1f7",
+  "ZN1.mol2": "b5e77827e98fadb6040c1660259803e72200ac865e7f143742fbf660ff123acf",
+  "SN1.mol2": "6fc4a343bf2b725f558839613d2e2e8fd2c20145c122c138b3e78a83945a9dd9",
+  "sfa_anion_gaff2.frcmod": "694fd181a8c2b7359a529112a1ba539e681dd2c66a883379607e6e6095ca438c",
+  "sfa_anion_repair.frcmod": "76dda0d181a27e12868eea1a2eff055fbeda708357f200d12a53915fa7d60b86",
+  "CA2_mcpbpy.frcmod": "38221d1d52d8b0af047145619d29bdeee11fdaf3010c452503facd01ec8f29c9"
+ },
+ "cap_test": {
+  "methyl_minus_group": {
+   "largest_abs": 0.4594,
+   "at": "R",
+   "rms": 0.2359,
+   "per_point": {
+    "X": 0.0,
+    "R": -0.4594,
+    "Rx": -0.3504,
+    "a4": -0.2176,
+    "a3": -0.1562,
+    "a5": -0.2637,
+    "a2": -0.081,
+    "a6": -0.3054,
+    "d1": 0.0213,
+    "d3": 0.01,
+    "d4": -0.01,
+    "d5": 0.0046,
+    "d6": -0.006,
+    "d2": 0.0374,
+    "Nx": 0.0828,
+    "c1_m030": -0.1013,
+    "c2_m015": -0.3536,
+    "c1_p030": -0.0066,
+    "c2_m030": -0.3566,
+    "c1_m060": -0.1398,
+    "c2_m120": -0.2791,
+    "c1_m090": -0.0955,
+    "c2_m150": -0.2735,
+    "c1_m120": -0.1101,
+    "c2_m180": -0.3097,
+    "N": 0.0685,
+    "e_p015": 0.0312,
+    "e_p030": 0.0,
+    "e_m120": -0.346,
+    "e_p120": -0.1861,
+    "f_p08": -0.068,
+    "f_m08": 0.0764,
+    "g1": -0.3693,
+    "g2": -0.4246,
+    "g3": -0.349,
+    "g4": -0.3527,
+    "g5": -0.3563,
+    "g6": -0.3457
+   }
+  },
+  "methyl_minus_spread": {
+   "largest_abs": 0.4516,
+   "at": "e_p120",
+   "rms": 0.1309,
+   "per_point": {
+    "X": 0.0,
+    "R": -0.0609,
+    "Rx": -0.0099,
+    "a4": 0.0539,
+    "a3": 0.0516,
+    "a5": 0.0512,
+    "a2": 0.0389,
+    "a6": 0.0392,
+    "d1": -0.0397,
+    "d3": -0.0438,
+    "d4": 0.0496,
+    "d5": 0.0158,
+    "d6": -0.0187,
+    "d2": -0.018,
+    "Nx": 0.0821,
+    "c1_m030": -0.1569,
+    "c2_m015": 0.0123,
+    "c1_p030": 0.0098,
+    "c2_m030": -0.0378,
+    "c1_m060": -0.1809,
+    "c2_m120": -0.1714,
+    "c1_m090": -0.0362,
+    "c2_m150": -0.1979,
+    "c1_m120": 0.0787,
+    "c2_m180": -0.2899,
+    "N": -0.0294,
+    "e_p015": 0.0193,
+    "e_p030": -0.0458,
+    "e_m120": -0.389,
+    "e_p120": -0.4516,
+    "f_p08": 0.0114,
+    "f_m08": -0.0124,
+    "g1": -0.1038,
+    "g2": -0.1611,
+    "g3": -0.0701,
+    "g4": 0.0525,
+    "g5": -0.0129,
+    "g6": -0.0138
+   }
+  },
+  "group_minus_spread": {
+   "largest_abs": 0.4053,
+   "at": "g4",
+   "rms": 0.2079,
+   "per_point": {
+    "X": 0.0,
+    "R": 0.3985,
+    "Rx": 0.3405,
+    "a4": 0.2715,
+    "a3": 0.2078,
+    "a5": 0.3149,
+    "a2": 0.1199,
+    "a6": 0.3446,
+    "d1": -0.061,
+    "d3": -0.0538,
+    "d4": 0.0596,
+    "d5": 0.0112,
+    "d6": -0.0127,
+    "d2": -0.0554,
+    "Nx": -0.0008,
+    "c1_m030": -0.0557,
+    "c2_m015": 0.3658,
+    "c1_p030": 0.0164,
+    "c2_m030": 0.3189,
+    "c1_m060": -0.0411,
+    "c2_m120": 0.1077,
+    "c1_m090": 0.0593,
+    "c2_m150": 0.0756,
+    "c1_m120": 0.1888,
+    "c2_m180": 0.0198,
+    "N": -0.0979,
+    "e_p015": -0.0119,
+    "e_p030": -0.0458,
+    "e_m120": -0.043,
+    "e_p120": -0.2655,
+    "f_p08": 0.0794,
+    "f_m08": -0.0888,
+    "g1": 0.2655,
+    "g2": 0.2635,
+    "g3": 0.2789,
+    "g4": 0.4053,
+    "g5": 0.3434,
+    "g6": 0.3319
+   }
+  }
+ },
+ "cap_test_largest_abs_two_reasonable": 0.4594,
+ "cap_test_largest_abs_all": 0.4594,
+ "versions": {
+  "openmm": "8.6.1",
+  "parmed": "4.3.1",
+  "numpy": "2.5.3",
+  "python": "3.12.14",
+  "amberhome": "/root/cqc-sfa-tools/md"
+ }
+}

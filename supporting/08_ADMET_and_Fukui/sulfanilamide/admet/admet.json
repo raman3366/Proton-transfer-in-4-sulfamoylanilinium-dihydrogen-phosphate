@@ -1,0 +1,1027 @@
+{
+  "provenance": {
+    "script": "paper/si/compute/admet.py",
+    "argv": [
+      "--tdc-dir",
+      "/tmp/claude-0/-root-workspace/0662f566-95fe-4239-a83c-3d1a6bdb371b/scratchpad/tdc",
+      "--tdc-ids",
+      "molecules/sfa/results/sulfanilamide_pcm_d3/admet/tdc_dataverse_ids.json"
+    ],
+    "finished": "2026-09-28T23:46:32",
+    "versions": {
+      "python": "3.11.16",
+      "rdkit": "2026.03.6",
+      "admet_ai": "1.4.0",
+      "chemprop": "1.6.1",
+      "torch": "2.5.0",
+      "numpy": "1.26.4",
+      "machine": "aarch64",
+      "host": "arya"
+    },
+    "admet_ai_reference_set": "DrugBank approved drugs shipped with ADMET-AI (drugbank_approved.csv), 2579 molecules",
+    "threads": 2
+  },
+  "species": "sulfanilamide (neutral)",
+  "role": "primary: the species present at pH 7.4 (anilinium pKa about 2, sulfonamide pKa about 10.4)",
+  "identity": {
+    "smiles_input": "Nc1ccc(cc1)S(N)(=O)=O",
+    "smiles_canonical": "Nc1ccc(S(N)(=O)=O)cc1",
+    "inchikey": "FDDDEECHVMSUSB-UHFFFAOYSA-N",
+    "inchi": "InChI=1S/C6H8N2O2S/c7-5-1-3-6(4-2-5)11(8,9)10/h1-4H,7H2,(H2,8,9,10)",
+    "dft_geometry": "molecules/sfa/results/sulfanilamide_pcm_d3/opt.xyz",
+    "dft_geometry_sha256": "ec161459e7f119de584ac468230bf18bb3d1718d349dde9d70c7d13e4e6500f2",
+    "smiles_from_dft_geometry": "Nc1ccc(S(N)(=O)=O)cc1",
+    "inchikey_from_dft_geometry": "FDDDEECHVMSUSB-UHFFFAOYSA-N",
+    "identity_ok": true
+  },
+  "rdkit_descriptors": {
+    "MW": 172.20899999999997,
+    "exact_mass": 172.030648496,
+    "formula": "C6H8N2O2S",
+    "formal_charge": 0,
+    "heavy_atoms": 11,
+    "atoms_incl_H": 19,
+    "cLogP_Crippen": -0.08379999999999999,
+    "MR_Crippen": 42.2276,
+    "TPSA_NO": 86.18,
+    "TPSA_NOSP": 94.56,
+    "HBD_Lipinski_NHOH": 4,
+    "HBA_Lipinski_NO": 4,
+    "HBD_RDKit": 2,
+    "HBA_RDKit": 3,
+    "rotatable_bonds": 1,
+    "rings": 1,
+    "aromatic_rings": 1,
+    "Fsp3": 0.0,
+    "QED": 0.5805509816764027
+  },
+  "rules": {
+    "Lipinski": {
+      "MW <= 500": true,
+      "cLogP <= 5": true,
+      "HBD (NH+OH) <= 5": true,
+      "HBA (N+O) <= 10": true
+    },
+    "Veber": {
+      "rotatable bonds <= 10": true,
+      "TPSA <= 140": true
+    },
+    "Ghose": {
+      "-0.4 <= cLogP <= 5.6": true,
+      "40 <= MR <= 130": true,
+      "160 <= MW <= 480": true,
+      "20 <= atoms (incl. H) <= 70": false
+    },
+    "Egan": {
+      "cLogP <= 5.88": true,
+      "TPSA <= 131.6": true
+    }
+  },
+  "rule_summary": {
+    "Lipinski": {
+      "violations": [],
+      "n_violations": 0,
+      "passes": true
+    },
+    "Veber": {
+      "violations": [],
+      "n_violations": 0,
+      "passes": true
+    },
+    "Ghose": {
+      "violations": [
+        "20 <= atoms (incl. H) <= 70"
+      ],
+      "n_violations": 1,
+      "passes": false
+    },
+    "Egan": {
+      "violations": [],
+      "n_violations": 0,
+      "passes": true
+    }
+  },
+  "admet_ai": {
+    "molecular_weight": {
+      "name": "Molecular Weight",
+      "category": "Physicochemical",
+      "task": "regression",
+      "units": "Dalton",
+      "value": 172.20900000000003,
+      "drugbank_percentile": 13.105854982551376
+    },
+    "logP": {
+      "name": "LogP",
+      "category": "Physicochemical",
+      "task": "regression",
+      "units": "log-ratio",
+      "value": -0.08380000000000004,
+      "drugbank_percentile": 22.024040325707638
+    },
+    "hydrogen_bond_acceptors": {
+      "name": "Hydrogen Bond Acceptors",
+      "category": "Physicochemical",
+      "task": "regression",
+      "units": "#",
+      "value": 3.0,
+      "drugbank_percentile": 31.17487398216363
+    },
+    "hydrogen_bond_donors": {
+      "name": "Hydrogen Bond Donors",
+      "category": "Physicochemical",
+      "task": "regression",
+      "units": "#",
+      "value": 2.0,
+      "drugbank_percentile": 60.85692128732067
+    },
+    "Lipinski": {
+      "name": "Lipinski Rule of 5",
+      "category": "Physicochemical",
+      "task": "regression",
+      "units": "# of 4",
+      "value": 4.0,
+      "drugbank_percentile": 63.80379992245056
+    },
+    "QED": {
+      "name": "Quantitative Estimate of Druglikeness (QED)",
+      "category": "Physicochemical",
+      "task": "regression",
+      "units": "-",
+      "value": 0.5805509816764027,
+      "drugbank_percentile": 58.317177200465295
+    },
+    "stereo_centers": {
+      "name": "Stereo Centers",
+      "category": "Physicochemical",
+      "task": "regression",
+      "units": "#",
+      "value": 0.0,
+      "drugbank_percentile": 22.489336952307095
+    },
+    "tpsa": {
+      "name": "Topological Polar Surface Area (TPSA)",
+      "category": "Physicochemical",
+      "task": "regression",
+      "units": "\u00c5^2",
+      "value": 86.18,
+      "drugbank_percentile": 58.1426909654905
+    },
+    "HIA_Hou": {
+      "name": "Human Intestinal Absorption",
+      "category": "Absorption",
+      "task": "classification",
+      "units": "-",
+      "value": 0.9681321859359742,
+      "drugbank_percentile": 32.99728576967817,
+      "training_set": {
+        "dataset": "hia_hou",
+        "sulfanilamide_in_set": false,
+        "label": null
+      }
+    },
+    "Bioavailability_Ma": {
+      "name": "Oral Bioavailability",
+      "category": "Absorption",
+      "task": "classification",
+      "units": "-",
+      "value": 0.7277830600738525,
+      "drugbank_percentile": 40.28693291973633,
+      "training_set": {
+        "dataset": "bioavailability_ma",
+        "sulfanilamide_in_set": false,
+        "label": null
+      }
+    },
+    "Solubility_AqSolDB": {
+      "name": "Aqueous Solubility",
+      "category": "Absorption",
+      "task": "regression",
+      "units": "log(mol/L)",
+      "value": -1.6743473578763157,
+      "drugbank_percentile": 74.09848778596356,
+      "training_set": {
+        "dataset": "solubility_aqsoldb",
+        "sulfanilamide_in_set": true,
+        "label": -1.34
+      }
+    },
+    "Lipophilicity_AstraZeneca": {
+      "name": "Lipophilicity",
+      "category": "Absorption",
+      "task": "regression",
+      "units": "log-ratio",
+      "value": 0.5074461446159874,
+      "drugbank_percentile": 34.509499806126406,
+      "training_set": {
+        "dataset": "lipophilicity_astrazeneca",
+        "sulfanilamide_in_set": false,
+        "label": null
+      }
+    },
+    "HydrationFreeEnergy_FreeSolv": {
+      "name": "Hydration Free Energy",
+      "category": "Absorption",
+      "task": "regression",
+      "units": "kcal/mol",
+      "value": -10.239694463386222,
+      "drugbank_percentile": 44.048080651415276,
+      "training_set": {
+        "dataset": "hydrationfreeenergy_freesolv",
+        "sulfanilamide_in_set": false,
+        "label": null
+      }
+    },
+    "Caco2_Wang": {
+      "name": "Cell Effective Permeability",
+      "category": "Absorption",
+      "task": "regression",
+      "units": "log(10^-6 cm/s)",
+      "value": -5.223259919161218,
+      "drugbank_percentile": 35.59519193485847,
+      "training_set": {
+        "dataset": "caco2_wang",
+        "sulfanilamide_in_set": false,
+        "label": null
+      }
+    },
+    "PAMPA_NCATS": {
+      "name": "PAMPA Permeability",
+      "category": "Absorption",
+      "task": "classification",
+      "units": "-",
+      "value": 0.24322198061272501,
+      "drugbank_percentile": 23.148507173322994,
+      "training_set": {
+        "dataset": "pampa_ncats",
+        "sulfanilamide_in_set": false,
+        "label": null
+      }
+    },
+    "Pgp_Broccatelli": {
+      "name": "P-glycoprotein Inhibition",
+      "category": "Absorption",
+      "task": "classification",
+      "units": "-",
+      "value": 0.06645738780498504,
+      "drugbank_percentile": 46.64598681659558,
+      "training_set": {
+        "dataset": "pgp_broccatelli",
+        "sulfanilamide_in_set": false,
+        "label": null
+      }
+    },
+    "BBB_Martins": {
+      "name": "Blood-Brain Barrier Penetration",
+      "category": "Distribution",
+      "task": "classification",
+      "units": "-",
+      "value": 0.7396659255027771,
+      "drugbank_percentile": 50.019387359441644,
+      "training_set": {
+        "dataset": "bbb_martins",
+        "sulfanilamide_in_set": false,
+        "label": null
+      }
+    },
+    "PPBR_AZ": {
+      "name": "Plasma Protein Binding Rate",
+      "category": "Distribution",
+      "task": "regression",
+      "units": "%",
+      "value": 53.832947717506485,
+      "drugbank_percentile": 25.746413338503295,
+      "training_set": {
+        "dataset": "ppbr_az",
+        "sulfanilamide_in_set": false,
+        "label": null
+      }
+    },
+    "VDss_Lombardo": {
+      "name": "Volume of Distribution at Steady State",
+      "category": "Distribution",
+      "task": "regression",
+      "units": "L/kg",
+      "value": -1.1454891965363576,
+      "drugbank_percentile": 27.142303218301667,
+      "training_set": {
+        "dataset": "vdss_lombardo",
+        "sulfanilamide_in_set": false,
+        "label": null
+      }
+    },
+    "Half_Life_Obach": {
+      "name": "Half Life",
+      "category": "Excretion",
+      "task": "regression",
+      "units": "hr",
+      "value": 16.296536254856033,
+      "drugbank_percentile": 62.73749515316014,
+      "training_set": {
+        "dataset": "half_life_obach",
+        "sulfanilamide_in_set": false,
+        "label": null
+      }
+    },
+    "Clearance_Hepatocyte_AZ": {
+      "name": "Drug Clearance (Hepatocyte)",
+      "category": "Excretion",
+      "task": "regression",
+      "units": "uL/min/10^6 cells",
+      "value": 1.2084612201576739,
+      "drugbank_percentile": 15.742535866614967,
+      "training_set": {
+        "dataset": "clearance_hepatocyte_az",
+        "sulfanilamide_in_set": false,
+        "label": null
+      }
+    },
+    "Clearance_Microsome_AZ": {
+      "name": "Drug Clearance (Microsome)",
+      "category": "Excretion",
+      "task": "regression",
+      "units": "uL/min/mg",
+      "value": -3.3137698904765607,
+      "drugbank_percentile": 24.27297402093835,
+      "training_set": {
+        "dataset": "clearance_microsome_az",
+        "sulfanilamide_in_set": false,
+        "label": null
+      }
+    },
+    "CYP1A2_Veith": {
+      "name": "CYP1A2 Inhibition",
+      "category": "Metabolism",
+      "task": "classification",
+      "units": "-",
+      "value": 0.006809965404681861,
+      "drugbank_percentile": 29.042264443582784,
+      "training_set": {
+        "dataset": "cyp1a2_veith",
+        "sulfanilamide_in_set": true,
+        "label": 0.0
+      }
+    },
+    "CYP2C19_Veith": {
+      "name": "CYP2C19 Inhibition",
+      "category": "Metabolism",
+      "task": "classification",
+      "units": "-",
+      "value": 0.011920097078836988,
+      "drugbank_percentile": 18.224117875145403,
+      "training_set": {
+        "dataset": "cyp2c19_veith",
+        "sulfanilamide_in_set": true,
+        "label": 0.0
+      }
+    },
+    "CYP2C9_Veith": {
+      "name": "CYP2C9 Inhibition",
+      "category": "Metabolism",
+      "task": "classification",
+      "units": "-",
+      "value": 0.006625081686070189,
+      "drugbank_percentile": 25.552539744086854,
+      "training_set": {
+        "dataset": "cyp2c9_veith",
+        "sulfanilamide_in_set": true,
+        "label": 0.0
+      }
+    },
+    "CYP2D6_Veith": {
+      "name": "CYP2D6 Inhibition",
+      "category": "Metabolism",
+      "task": "classification",
+      "units": "-",
+      "value": 0.004835180300869979,
+      "drugbank_percentile": 17.409848778596356,
+      "training_set": {
+        "dataset": "cyp2d6_veith",
+        "sulfanilamide_in_set": true,
+        "label": 0.0
+      }
+    },
+    "CYP3A4_Veith": {
+      "name": "CYP3A4 Inhibition",
+      "category": "Metabolism",
+      "task": "classification",
+      "units": "-",
+      "value": 0.0007042884157272056,
+      "drugbank_percentile": 15.781310585498254,
+      "training_set": {
+        "dataset": "cyp3a4_veith",
+        "sulfanilamide_in_set": true,
+        "label": 0.0
+      }
+    },
+    "CYP2C9_Substrate_CarbonMangels": {
+      "name": "CYP2C9 Substrate",
+      "category": "Metabolism",
+      "task": "classification",
+      "units": "-",
+      "value": 0.14362294599413872,
+      "drugbank_percentile": 49.05001938735944,
+      "training_set": {
+        "dataset": "cyp2c9_substrate_carbonmangels",
+        "sulfanilamide_in_set": true,
+        "label": 0.0
+      }
+    },
+    "CYP2D6_Substrate_CarbonMangels": {
+      "name": "CYP2D6 Substrate",
+      "category": "Metabolism",
+      "task": "classification",
+      "units": "-",
+      "value": 0.032684451621025803,
+      "drugbank_percentile": 23.962776269872045,
+      "training_set": {
+        "dataset": "cyp2d6_substrate_carbonmangels",
+        "sulfanilamide_in_set": true,
+        "label": 0.0
+      }
+    },
+    "CYP3A4_Substrate_CarbonMangels": {
+      "name": "CYP3A4 Substrate",
+      "category": "Metabolism",
+      "task": "classification",
+      "units": "-",
+      "value": 0.09831518530845643,
+      "drugbank_percentile": 10.003877471888329,
+      "training_set": {
+        "dataset": "cyp3a4_substrate_carbonmangels",
+        "sulfanilamide_in_set": true,
+        "label": 0.0
+      }
+    },
+    "hERG": {
+      "name": "hERG Blocking",
+      "category": "Toxicity",
+      "task": "classification",
+      "units": "-",
+      "value": 0.016194462194107473,
+      "drugbank_percentile": 12.369135323768901,
+      "training_set": {
+        "dataset": "herg",
+        "sulfanilamide_in_set": false,
+        "label": null
+      }
+    },
+    "ClinTox": {
+      "name": "Clinical Toxicity",
+      "category": "Toxicity",
+      "task": "classification",
+      "units": "-",
+      "value": 0.011647350434213877,
+      "drugbank_percentile": 12.911981388134937,
+      "training_set": {
+        "dataset": "clintox",
+        "sulfanilamide_in_set": true,
+        "label": 0.0
+      }
+    },
+    "AMES": {
+      "name": "Mutagenicity",
+      "category": "Toxicity",
+      "task": "classification",
+      "units": "-",
+      "value": 0.010978406999493017,
+      "drugbank_percentile": 3.9162466072120976,
+      "training_set": {
+        "dataset": "ames",
+        "sulfanilamide_in_set": true,
+        "label": 0.0
+      }
+    },
+    "DILI": {
+      "name": "Drug Induced Liver Injury",
+      "category": "Toxicity",
+      "task": "classification",
+      "units": "-",
+      "value": 0.9525257825851441,
+      "drugbank_percentile": 89.68592477704536,
+      "training_set": {
+        "dataset": "dili",
+        "sulfanilamide_in_set": true,
+        "label": 1.0
+      }
+    },
+    "Carcinogens_Lagunin": {
+      "name": "Carcinogenicity",
+      "category": "Toxicity",
+      "task": "classification",
+      "units": "-",
+      "value": 0.36925835758447645,
+      "drugbank_percentile": 79.91469561845676,
+      "training_set": {
+        "dataset": "carcinogens_lagunin",
+        "sulfanilamide_in_set": false,
+        "label": null
+      }
+    },
+    "LD50_Zhu": {
+      "name": "Acute Toxicity LD50",
+      "category": "Toxicity",
+      "task": "regression",
+      "units": "log(1/(mol/kg))",
+      "value": 1.6592555222743872,
+      "drugbank_percentile": 9.18960837533928,
+      "training_set": {
+        "dataset": "ld50_zhu",
+        "sulfanilamide_in_set": true,
+        "label": 1.645
+      }
+    },
+    "Skin_Reaction": {
+      "name": "Skin Reaction",
+      "category": "Toxicity",
+      "task": "classification",
+      "units": "-",
+      "value": 0.03718054555356502,
+      "drugbank_percentile": 0.5816207832493214,
+      "training_set": {
+        "dataset": "skin_reaction",
+        "sulfanilamide_in_set": true,
+        "label": 0.0
+      }
+    },
+    "NR-AR": {
+      "name": "Androgen Receptor (Full Length)",
+      "category": "Toxicity",
+      "task": "classification",
+      "units": "-",
+      "value": 0.03676782287657261,
+      "drugbank_percentile": 64.79255525397441,
+      "training_set": {
+        "dataset": "tox21",
+        "sulfanilamide_in_set": true,
+        "label": 0.0
+      }
+    },
+    "NR-AR-LBD": {
+      "name": "Androgen Receptor (Ligand Binding Domain)",
+      "category": "Toxicity",
+      "task": "classification",
+      "units": "-",
+      "value": 0.016344283428043126,
+      "drugbank_percentile": 61.14773167894533,
+      "training_set": {
+        "dataset": "tox21",
+        "sulfanilamide_in_set": true,
+        "label": 0.0
+      }
+    },
+    "NR-AhR": {
+      "name": "Aryl Hydrocarbon Receptor",
+      "category": "Toxicity",
+      "task": "classification",
+      "units": "-",
+      "value": 0.013127012457698584,
+      "drugbank_percentile": 39.31756494765413,
+      "training_set": {
+        "dataset": "tox21",
+        "sulfanilamide_in_set": true,
+        "label": 0.0
+      }
+    },
+    "NR-Aromatase": {
+      "name": "Aromatase",
+      "category": "Toxicity",
+      "task": "classification",
+      "units": "-",
+      "value": 0.0017726840285831713,
+      "drugbank_percentile": 20.046529662659946,
+      "training_set": {
+        "dataset": "tox21",
+        "sulfanilamide_in_set": true,
+        "label": 1.0
+      }
+    },
+    "NR-ER": {
+      "name": "Estrogen Receptor (Full Length)",
+      "category": "Toxicity",
+      "task": "classification",
+      "units": "-",
+      "value": 0.02096577696502209,
+      "drugbank_percentile": 7.32842186894145,
+      "training_set": {
+        "dataset": "tox21",
+        "sulfanilamide_in_set": true,
+        "label": 0.0
+      }
+    },
+    "NR-ER-LBD": {
+      "name": "Estrogen Receptor (Ligand Binding Domain)",
+      "category": "Toxicity",
+      "task": "classification",
+      "units": "-",
+      "value": 0.0008998335091746412,
+      "drugbank_percentile": 6.087630864676231,
+      "training_set": {
+        "dataset": "tox21",
+        "sulfanilamide_in_set": true,
+        "label": 0.0
+      }
+    },
+    "NR-PPAR-gamma": {
+      "name": "Peroxisome Proliferator-Activated Receptor Gamma",
+      "category": "Toxicity",
+      "task": "classification",
+      "units": "-",
+      "value": 9.12543912363617e-06,
+      "drugbank_percentile": 3.4121752617293524,
+      "training_set": {
+        "dataset": "tox21",
+        "sulfanilamide_in_set": true,
+        "label": 0.0
+      }
+    },
+    "SR-ARE": {
+      "name": "Nuclear Factor (Erythroid-Derived 2)-Like 2/Antioxidant Responsive Element",
+      "category": "Toxicity",
+      "task": "classification",
+      "units": "-",
+      "value": 0.009219130640849471,
+      "drugbank_percentile": 8.801861186506397,
+      "training_set": {
+        "dataset": "tox21",
+        "sulfanilamide_in_set": true,
+        "label": 0.0
+      }
+    },
+    "SR-ATAD5": {
+      "name": "ATPase Family AAA Domain-Containing Protein 5 (ATAD5)",
+      "category": "Toxicity",
+      "task": "classification",
+      "units": "-",
+      "value": 0.0001371392485452816,
+      "drugbank_percentile": 7.910042652190771,
+      "training_set": {
+        "dataset": "tox21",
+        "sulfanilamide_in_set": true,
+        "label": 0.0
+      }
+    },
+    "SR-HSE": {
+      "name": "Heat Shock Factor Response Element",
+      "category": "Toxicity",
+      "task": "classification",
+      "units": "-",
+      "value": 0.002561168122338131,
+      "drugbank_percentile": 19.968980224893368,
+      "training_set": {
+        "dataset": "tox21",
+        "sulfanilamide_in_set": true,
+        "label": 0.0
+      }
+    },
+    "SR-MMP": {
+      "name": "Mitochondrial Membrane Potential",
+      "category": "Toxicity",
+      "task": "classification",
+      "units": "-",
+      "value": 0.02191764987073839,
+      "drugbank_percentile": 42.923613803799924,
+      "training_set": {
+        "dataset": "tox21",
+        "sulfanilamide_in_set": true,
+        "label": 0.0
+      }
+    },
+    "SR-p53": {
+      "name": "Tumor Protein p53",
+      "category": "Toxicity",
+      "task": "classification",
+      "units": "-",
+      "value": 0.001430254451406654,
+      "drugbank_percentile": 15.354788677782086,
+      "training_set": {
+        "dataset": "tox21",
+        "sulfanilamide_in_set": true,
+        "label": 0.0
+      }
+    }
+  },
+  "admet_ai_vs_shipped_drugbank_row": {
+    "drugbank_id": "DB00259",
+    "max_abs_diff_vs_shipped_prediction": 1.9869714833475882e-06,
+    "n_compared": 49
+  },
+  "notes": [
+    "cLogP is Wildman-Crippen (RDKit); Ghose and Egan defined their filters with ALOGP/AlogP98.",
+    "TPSA_NO is Ertl TPSA over N and O (the original definition, used for Veber/Egan); TPSA_NOSP adds S and P.",
+    "ADMET-AI classification outputs are model probabilities (0-1), not measured outcomes.",
+    "A prediction for a molecule that is in the training set reproduces its label; see training_set."
+  ],
+  "tdc_training_sets": {
+    "ames": {
+      "n": 7278,
+      "sha256": "825c2b4c31c9cec81aa32eb394fd24e6b32ee4959905d4272e56483ecb6f3e16",
+      "dataverse_file_id": 4259564,
+      "sulfanilamide_in_set": true,
+      "rows": [
+        {
+          "Drug_ID": "Drug 4734",
+          "Drug": "Nc1ccc(S(N)(=O)=O)cc1",
+          "Y": "0"
+        }
+      ]
+    },
+    "bbb_martins": {
+      "n": 2039,
+      "sha256": "eb32676c7bf6e2bcd98b7625186bbb2ba4e4644c1d1468dfa18b6be665bd5e98",
+      "dataverse_file_id": 4259566,
+      "sulfanilamide_in_set": false,
+      "rows": []
+    },
+    "bioavailability_ma": {
+      "n": 640,
+      "sha256": "43d5b270657a819a48615e7976081b9215456ce4e5cad91a0a36d9fb5bd78508",
+      "dataverse_file_id": 4259567,
+      "sulfanilamide_in_set": false,
+      "rows": []
+    },
+    "caco2_wang": {
+      "n": 910,
+      "sha256": "447d9f1af487c06b080145a2361dbe45af5b27afc83e1a975dd29b9ea535d6ab",
+      "dataverse_file_id": 4259569,
+      "sulfanilamide_in_set": false,
+      "rows": []
+    },
+    "carcinogens_lagunin": {
+      "n": 280,
+      "sha256": "fe057a144d31a5883c0d9902173c4d208b9af826670d47d4ed0eeabf798fc160",
+      "dataverse_file_id": 4259570,
+      "sulfanilamide_in_set": false,
+      "rows": []
+    },
+    "clearance_hepatocyte_az": {
+      "n": 1213,
+      "sha256": "2c217f46600c22e107b72faa2bfb1d9bf799213aee47b601f6e0d6d73b68f274",
+      "dataverse_file_id": 4266187,
+      "sulfanilamide_in_set": false,
+      "rows": []
+    },
+    "clearance_microsome_az": {
+      "n": 1102,
+      "sha256": "4c9047dc1860cc05d5bdc09aa9cfef86a40740605c2ff06990b1fceb6085db9d",
+      "dataverse_file_id": 4266186,
+      "sulfanilamide_in_set": false,
+      "rows": []
+    },
+    "clintox": {
+      "n": 1478,
+      "sha256": "6dbb8ee35b64f9efca4cac6de32183c82264a1195de10a1cb2b4a35b4b2e4d21",
+      "dataverse_file_id": 4259572,
+      "sulfanilamide_in_set": true,
+      "rows": [
+        {
+          "Drug_ID": "Drug 200",
+          "Drug": "Nc1ccc(S(N)(=O)=O)cc1",
+          "Y": "0"
+        }
+      ]
+    },
+    "cyp1a2_veith": {
+      "n": 12579,
+      "sha256": "a18b335832495d4cfa4ecffccf7cdfa12eb08e84b6703aebcc25564e5f21553e",
+      "dataverse_file_id": 4259573,
+      "sulfanilamide_in_set": true,
+      "rows": [
+        {
+          "Drug_ID": "5333.0",
+          "Drug": "Nc1ccc(S(N)(=O)=O)cc1",
+          "Y": "0"
+        }
+      ]
+    },
+    "cyp2c19_veith": {
+      "n": 12665,
+      "sha256": "8cf4c9cde4b7693ab37ceeb66efdcc8b05b8848d33f06255d52ba7e6db754ebc",
+      "dataverse_file_id": 4259576,
+      "sulfanilamide_in_set": true,
+      "rows": [
+        {
+          "Drug_ID": "5333.0",
+          "Drug": "Nc1ccc(S(N)(=O)=O)cc1",
+          "Y": "0"
+        }
+      ]
+    },
+    "cyp2c9_substrate_carbonmangels": {
+      "n": 669,
+      "sha256": "a4b3d458cbca8cb74850464b15d5ab1f64787ea346cc38eedae29a388412f041",
+      "dataverse_file_id": 4259584,
+      "sulfanilamide_in_set": true,
+      "rows": [
+        {
+          "Drug_ID": "sulfanilamide",
+          "Drug": "Nc1ccc(S(N)(=O)=O)cc1",
+          "Y": "0"
+        }
+      ]
+    },
+    "cyp2c9_veith": {
+      "n": 12092,
+      "sha256": "272bfd9de9899dd978993e23ccfb2a56680912ef6c8d89c0a9eac7f36c1c55c9",
+      "dataverse_file_id": 4259577,
+      "sulfanilamide_in_set": true,
+      "rows": [
+        {
+          "Drug_ID": "5333.0",
+          "Drug": "Nc1ccc(S(N)(=O)=O)cc1",
+          "Y": "0"
+        }
+      ]
+    },
+    "cyp2d6_substrate_carbonmangels": {
+      "n": 667,
+      "sha256": "6eab25986d9a65595140447940f46d134ffd6c7c3fca3f25b5aaabcc30aa57d5",
+      "dataverse_file_id": 4259578,
+      "sulfanilamide_in_set": true,
+      "rows": [
+        {
+          "Drug_ID": "sulfanilamide",
+          "Drug": "Nc1ccc(S(N)(=O)=O)cc1",
+          "Y": "0"
+        }
+      ]
+    },
+    "cyp2d6_veith": {
+      "n": 13130,
+      "sha256": "1b50a2f02a6d9c02d29fd9e3684d661f64bfe8afb1fea09e5ffb3d54174c411b",
+      "dataverse_file_id": 4259580,
+      "sulfanilamide_in_set": true,
+      "rows": [
+        {
+          "Drug_ID": "5333.0",
+          "Drug": "Nc1ccc(S(N)(=O)=O)cc1",
+          "Y": "0"
+        }
+      ]
+    },
+    "cyp3a4_substrate_carbonmangels": {
+      "n": 670,
+      "sha256": "678341b7e40630a70b4e38b20e22dc73fbd8aff13fdd32cd7f6d702b62b5005e",
+      "dataverse_file_id": 4259581,
+      "sulfanilamide_in_set": true,
+      "rows": [
+        {
+          "Drug_ID": "sulfanilamide",
+          "Drug": "Nc1ccc(S(N)(=O)=O)cc1",
+          "Y": "0"
+        }
+      ]
+    },
+    "cyp3a4_veith": {
+      "n": 12328,
+      "sha256": "4c85a4cea9ffadd36fdd188f96b866d1d8db5d333a6d423172cf4363a585565a",
+      "dataverse_file_id": 4259582,
+      "sulfanilamide_in_set": true,
+      "rows": [
+        {
+          "Drug_ID": "5333.0",
+          "Drug": "Nc1ccc(S(N)(=O)=O)cc1",
+          "Y": "0"
+        }
+      ]
+    },
+    "dili": {
+      "n": 475,
+      "sha256": "d3961647ff6df9711b6aa4b9fe59d6cbeb40f9d23dd6e9d51d6656e6e6df5ed8",
+      "dataverse_file_id": 4259585,
+      "sulfanilamide_in_set": true,
+      "rows": [
+        {
+          "Drug_ID": "5333.0",
+          "Drug": "Nc1ccc(S(N)(=O)=O)cc1",
+          "Y": "1.0"
+        }
+      ]
+    },
+    "half_life_obach": {
+      "n": 667,
+      "sha256": "79fb8c943b64a9488bce588d747b59af1a782f1ce46bc51137c61fb895ede1df",
+      "dataverse_file_id": 4266799,
+      "sulfanilamide_in_set": false,
+      "rows": []
+    },
+    "herg": {
+      "n": 655,
+      "sha256": "dfce97b6a89b710d20c93cf211f005fbee0d8445a60ca7df584cac430798a379",
+      "dataverse_file_id": 4259588,
+      "sulfanilamide_in_set": false,
+      "rows": []
+    },
+    "hia_hou": {
+      "n": 578,
+      "sha256": "9040c5985fd366acf736bca1587902af28450976410fe99db82027e5d9c713b4",
+      "dataverse_file_id": 4259591,
+      "sulfanilamide_in_set": false,
+      "rows": []
+    },
+    "hydrationfreeenergy_freesolv": {
+      "n": 642,
+      "sha256": "5b5485a133996a7d19f83466199ee6117279e7dc8693db5107e44f99e680125a",
+      "dataverse_file_id": 4259594,
+      "sulfanilamide_in_set": false,
+      "rows": []
+    },
+    "ld50_zhu": {
+      "n": 7385,
+      "sha256": "fdae7cfe7840fcca3341be0126cb6cbf1b16a4fcde42865f98cb9ca607f5ff16",
+      "dataverse_file_id": 4267146,
+      "sulfanilamide_in_set": true,
+      "rows": [
+        {
+          "ID": "Benzenesulfonamide, 4-amino-",
+          "X": "Nc1ccc(S(N)(=O)=O)cc1",
+          "Y": "1.645"
+        }
+      ]
+    },
+    "lipophilicity_astrazeneca": {
+      "n": 4200,
+      "sha256": "14add1edb356e62f78256ff964c0cbba03c007be3ff48d6d4c18679f307f1d4c",
+      "dataverse_file_id": 4259595,
+      "sulfanilamide_in_set": false,
+      "rows": []
+    },
+    "pampa_ncats": {
+      "n": 2035,
+      "sha256": "18b0ae755310cad7e4b6c3cdbe4a3c9190609995103c92536d41a4536511d854",
+      "dataverse_file_id": 6695858,
+      "sulfanilamide_in_set": false,
+      "rows": []
+    },
+    "pgp_broccatelli": {
+      "n": 1219,
+      "sha256": "4fddc785a4f7109a92c60781fad9070a3917309cac5a78ac8e37bba17c54c9c0",
+      "dataverse_file_id": 4259597,
+      "sulfanilamide_in_set": false,
+      "rows": []
+    },
+    "ppbr_az": {
+      "n": 2828,
+      "sha256": "54c9520f4b6e04419b18bab7335583c3865d86fc53db40f74c2cff1577c8ec1b",
+      "dataverse_file_id": 6413140,
+      "sulfanilamide_in_set": false,
+      "rows": []
+    },
+    "skin_reaction": {
+      "n": 404,
+      "sha256": "95869192c2b252cf57eee429bff37a1f0b736f0ecec8f40799f05fb03dcee537",
+      "dataverse_file_id": 4259609,
+      "sulfanilamide_in_set": true,
+      "rows": [
+        {
+          "Drug_ID": "Sulfanilamide",
+          "Drug": "Nc1ccc(S(N)(=O)=O)cc1",
+          "Y": "0"
+        }
+      ]
+    },
+    "solubility_aqsoldb": {
+      "n": 9982,
+      "sha256": "0b593f7b55abbe477ba4284aefd7b5450551f4ed21ac4aed80a097931141c9a4",
+      "dataverse_file_id": 4259610,
+      "sulfanilamide_in_set": true,
+      "rows": [
+        {
+          "Drug_ID": "Sulfanilamide",
+          "Drug": "Nc1ccc(S(N)(=O)=O)cc1",
+          "Y": "-1.34"
+        }
+      ]
+    },
+    "tox21": {
+      "n": 7831,
+      "sha256": "c32b1df7bcbe09101a4e20977a9ecc491f5707ca3ddc6afb1b507bfd4952fba7",
+      "dataverse_file_id": 4259612,
+      "sulfanilamide_in_set": true,
+      "rows": [
+        {
+          "NR-AR": "0.0",
+          "NR-AR-LBD": "0.0",
+          "NR-AhR": "0.0",
+          "NR-Aromatase": "1.0",
+          "NR-ER": "0.0",
+          "NR-ER-LBD": "0.0",
+          "NR-PPAR-gamma": "0.0",
+          "SR-ARE": "0.0",
+          "SR-ATAD5": "0.0",
+          "SR-HSE": "0.0",
+          "SR-MMP": "0.0",
+          "SR-p53": "0.0",
+          "ID": "TOX3622",
+          "X": "Nc1ccc(S(N)(=O)=O)cc1"
+        }
+      ]
+    },
+    "vdss_lombardo": {
+      "n": 1130,
+      "sha256": "00bb7e0dea19f78c4c1887e27ecf476135d9de2ef5ecc26d7c645c37bd9cb7af",
+      "dataverse_file_id": 4267387,
+      "sulfanilamide_in_set": false,
+      "rows": []
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+ "label": "gate G-R: B3LYP/6-31G* single points of the small zinc model, settings of stage S2",
+ "bulk": "/root/cqc-sfa-md/qm/gr",
+ "small_out": "md/qm/gr",
+ "points": "md/qm/gr/points.json",
+ "qm_config": "md/qm/config_prod.json",
+ "threads": 4,
+ "nice": 10,
+ "wait_for": {
+  "pid_file": "/root/cqc-sfa-md/qm/prod/driver.pid",
+  "status": "/root/cqc-sfa-md/qm/prod/status.json",
+  "done_states": [
+   "finished"
+  ],
+  "grace_minutes": 15,
+  "between_points": false
+ },
+ "mcpb_source": "md/qm/mcpb",
+ "step2": "2e",
+ "placeholder_params": null,
+ "guess": "atomic",
+ "guess_checkpoint": "/root/cqc-sfa-md/qm/prod/opt.chk",
+ "timing_reference_status": "/root/cqc-sfa-md/qm/prod/status.json",
+ "only": null,
+ "method_override": null,
+ "poll_seconds": 30
+}

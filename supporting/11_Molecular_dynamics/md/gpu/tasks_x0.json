@@ -1,0 +1,29 @@
+{
+ "comment": "Validation runs X0 (md/PLAN.md, stage S4, gate G-V; entry of 6 Oct 2026, 9:15 PM IST, points 1 and 2; md/PRODUCTION.md): 5 ns from the crystal pose with the full protocol of md/protocol.json, one for each zinc set that is simulated (md/RUN.md: a second zinc model has its own X0). X0_2s is the validation run of the Seminario set, which the plan makes the primary set if it passes gate G-Z and gate G-V; X0_2e is that of the empirical set, the primary set if 2s fails and the zinc sensitivity set otherwise. X0_2e waits for X0_2s, so the two run one after the other in this order, also after a restart. Both gates are judged on the Pi from the pulled runs (md/analysis, both programs); the runner cannot judge a gate, and no production task is in this file. Time limit of one attempt: one hour (a run takes about 15 minutes).",
+ "env": {
+  "MD": "/root/workspace/cqc-4-sulfamoylanilinium-dihydrogen-phosphate/md",
+  "PY": "/root/cqc-sfa-tools/md/bin/python",
+  "SYS": "/root/cqc-sfa-md/systems",
+  "RUNS": "/root/cqc-sfa-md/runs"
+ },
+ "tasks": [
+  {"id": "X0_2s",
+   "title": "validation run X0 of zinc set 2s (Seminario): 5 ns from the crystal pose (gates G-Z and G-V)",
+   "cwd": "$RUNS",
+   "resources": "gpu",
+   "depends_on": ["preflight_speed", "preflight_interrupt"],
+   "stop_grace_s": 120,
+   "timeout_s": 3600,
+   "command": "\"$PY\" \"$MD/run_md.py\" --system \"$SYS/bonded_2s/X\" --out \"$RUNS/bonded_2s/X0\" --run-id X0 --platform CUDA --stage all --prod-ns 5 --segment-ns 5 --resume",
+   "success_test": "python3 \"$MD/gpu/queue.py\" json \"$RUNS/bonded_2s/X0/manifest.json\" run_id=X0 status=complete production.complete=true production.completed_ns=5 test_only=false"},
+  {"id": "X0_2e",
+   "title": "validation run X0 of zinc set 2e (empirical): 5 ns from the crystal pose (gates G-Z and G-V)",
+   "cwd": "$RUNS",
+   "resources": "gpu",
+   "depends_on": ["X0_2s"],
+   "stop_grace_s": 120,
+   "timeout_s": 3600,
+   "command": "\"$PY\" \"$MD/run_md.py\" --system \"$SYS/bonded_2e/X\" --out \"$RUNS/bonded_2e/X0\" --run-id X0 --platform CUDA --stage all --prod-ns 5 --segment-ns 5 --resume",
+   "success_test": "python3 \"$MD/gpu/queue.py\" json \"$RUNS/bonded_2e/X0/manifest.json\" run_id=X0 status=complete production.complete=true production.completed_ns=5 test_only=false"}
+ ]
+}

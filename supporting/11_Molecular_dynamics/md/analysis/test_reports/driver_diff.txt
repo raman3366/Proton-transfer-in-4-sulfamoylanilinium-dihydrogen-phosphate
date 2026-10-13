@@ -1,0 +1,12 @@
+diff --git a/md/run_md.py b/md/run_md.py
+index 8838e7a..175ff2e 100644
+--- a/md/run_md.py
++++ b/md/run_md.py
+@@ -326,6 +326,7 @@ class DcdWriter:
+             head += struct.pack("<80s", line.encode("ascii", "replace")[:80].ljust(80))
+         head += struct.pack("<4i", 164, 4, n_atoms, 4)
+         self.f.write(head)
++        self.f.flush()          # a new file is a valid header-only DCD from the start (a run in progress can be analysed)
+ 
+     def write(self, pos_nm, box_nm):
+         if pos_nm.shape != (self.n_atoms, 3):

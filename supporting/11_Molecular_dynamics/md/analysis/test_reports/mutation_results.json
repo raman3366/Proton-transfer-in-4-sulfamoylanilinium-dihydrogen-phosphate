@@ -1,0 +1,1966 @@
+{
+ "M01 no symmetry correction of the ligand RMSD": {
+  "replacements": 1,
+  "analysis_exit": 0,
+  "compare_exit": 1,
+  "n_values": 7339,
+  "n_failed": 224,
+  "runs_with_a_failure": [
+   "angle/X0",
+   "conv/R1",
+   "csn/X0",
+   "edge/X0",
+   "flip/X1",
+   "gate/R1",
+   "glu/X0",
+   "long/X0",
+   "short/X0",
+   "sulfonyl/X0",
+   "tau/X0",
+   "test/R1",
+   "test/X0",
+   "test/X1",
+   "test/X2",
+   "test/X3",
+   "water/X0"
+  ],
+  "examples": [
+   "test/R1: every frame: lig_rmsd_A, largest difference: planted 0.0, returned 1.7895",
+   "test/R1: every frame: lig_rmsd_labelling, frames that differ: planted 0, returned 1650",
+   "test/R1: frames with labelling identity: planted 1350, returned 3000"
+  ],
+  "mode": "all runs"
+ },
+ "M02 no fit on the CA atoms": {
+  "replacements": 1,
+  "analysis_exit": 0,
+  "compare_exit": 1,
+  "n_values": 7339,
+  "n_failed": 953,
+  "runs_with_a_failure": [
+   "angle/X0",
+   "campaign",
+   "conv/R1",
+   "csn/X0",
+   "default/R1",
+   "edge/X0",
+   "ext/R1",
+   "flip/X1",
+   "gate/R1",
+   "glu/X0",
+   "long/X0",
+   "place/R1",
+   "scaled/N1",
+   "short/X0",
+   "sulfonyl/X0",
+   "tau/X0",
+   "test/N1",
+   "test/R1",
+   "test/X0",
+   "test/X1",
+   "test/X2",
+   "test/X3",
+   "water/X0"
+  ],
+  "examples": [
+   "test/N1: every frame: lig_rmsd_A, largest difference: planted 0.0, returned 12.592874",
+   "test/N1: every frame: lig_rmsd_labelling, frames that differ: planted 0, returned 865",
+   "test/N1: every frame: lig_rmsd_identity_A, largest difference: planted 0.0, returned 12.659774"
+  ],
+  "mode": "all runs"
+ },
+ "M03 no imaging of zinc and ligand": {
+  "replacements": 1,
+  "analysis_exit": 0,
+  "compare_exit": 1,
+  "n_values": 7339,
+  "n_failed": 2433,
+  "runs_with_a_failure": [
+   "angle/X0",
+   "campaign",
+   "conv/R1",
+   "csn/X0",
+   "default/R1",
+   "edge/X0",
+   "ext/R1",
+   "flip/X1",
+   "gate/R1",
+   "glu/X0",
+   "long/X0",
+   "place/R1",
+   "scaled/N1",
+   "short/X0",
+   "sulfonyl/X0",
+   "tau/X0",
+   "test/N1",
+   "test/R1",
+   "test/X0",
+   "test/X1",
+   "test/X2",
+   "test/X3",
+   "test/X9 (overlap)",
+   "water/X0"
+  ],
+  "examples": [
+   "test/N1: frames in which the ligand was in another periodic image: planted 176, returned 0",
+   "test/N1: frames in which the zinc was in another periodic image: planted 112, returned 0",
+   "test/N1: warnings: planted 0, returned 1"
+  ],
+  "mode": "all runs"
+ },
+ "M04 water distances without minimum image": {
+  "replacements": 1,
+  "analysis_exit": 0,
+  "compare_exit": 1,
+  "n_values": 7339,
+  "n_failed": 678,
+  "runs_with_a_failure": [
+   "angle/X0",
+   "conv/R1",
+   "csn/X0",
+   "default/R1",
+   "edge/X0",
+   "ext/R1",
+   "flip/X1",
+   "gate/R1",
+   "glu/X0",
+   "long/X0",
+   "place/R1",
+   "scaled/N1",
+   "short/X0",
+   "sulfonyl/X0",
+   "tau/X0",
+   "test/N1",
+   "test/R1",
+   "test/X0",
+   "test/X1",
+   "test/X2",
+   "test/X3",
+   "test/X9 (overlap)",
+   "water/X0"
+  ],
+  "examples": [
+   "test/N1: warnings: planted 0, returned 2",
+   "test/N1: every full frame: d_Zn_Owater_min_A, largest difference: planted 0.0, returned 72.0889",
+   "test/N1: every full frame: water_O_index_nearest_Zn, frames that differ: planted 0, returned 90"
+  ],
+  "mode": "all runs"
+ },
+ "M05 90 % rule strict (more than 90 %)": {
+  "replacements": 1,
+  "analysis_exit": 0,
+  "compare_exit": 1,
+  "n_values": 7339,
+  "n_failed": 3,
+  "runs_with_a_failure": [
+   "campaign",
+   "test/X1"
+  ],
+  "examples": [
+   "test/X1: verdict: planted CONVERTED, returned MIXED",
+   "campaign: n_converted.X: planted 1, returned 0",
+   "campaign: n_mixed.X: planted 1, returned 2"
+  ],
+  "mode": "all runs"
+ },
+ "M06 hydrogen-bond angle at the donor, not at the hydrogen": {
+  "replacements": 1,
+  "analysis_exit": 0,
+  "compare_exit": 1,
+  "n_values": 7339,
+  "n_failed": 166,
+  "runs_with_a_failure": [
+   "angle/X0",
+   "conv/R1",
+   "csn/X0",
+   "default/R1",
+   "edge/X0",
+   "ext/R1",
+   "flip/X1",
+   "gate/R1",
+   "glu/X0",
+   "long/X0",
+   "place/R1",
+   "scaled/N1",
+   "short/X0",
+   "sulfonyl/X0",
+   "tau/X0",
+   "test/N1",
+   "test/R1",
+   "test/X0",
+   "test/X1",
+   "test/X2",
+   "test/X3",
+   "water/X0"
+  ],
+  "examples": [
+   "test/N1: every frame: ang_N2_HN2_T199OG1_deg, largest difference: planted 0.0, returned 180.0",
+   "test/N1: every frame: hb_N2H_T199OG1, frames that differ: planted 0, returned 1234",
+   "test/N1: frames with the hydrogen bond N2-H...OG1: planted 988, returned 246"
+  ],
+  "mode": "all runs"
+ },
+ "M07 time axis from zero": {
+  "replacements": 1,
+  "analysis_exit": 0,
+  "compare_exit": 1,
+  "n_values": 7339,
+  "n_failed": 6,
+  "runs_with_a_failure": [
+   "conv/R1",
+   "flip/X1",
+   "gate/R1",
+   "test/R1",
+   "test/X1",
+   "test/X3"
+  ],
+  "examples": [
+   "test/R1: first passage into the opposite state: planted 8.01, returned 8.0",
+   "test/X1: first passage into the opposite state: planted 9.01, returned 9.0",
+   "test/X3: first passage into the opposite state: planted 9.01, returned 9.0"
+  ],
+  "mode": "all runs"
+ },
+ "M08 dwell of 0.4 ns instead of 1 ns": {
+  "replacements": 1,
+  "analysis_exit": 0,
+  "compare_exit": 1,
+  "n_values": 7339,
+  "n_failed": 14,
+  "runs_with_a_failure": [
+   "test/X1",
+   "test/X3"
+  ],
+  "examples": [
+   "test/X1: first passage into the opposite state: planted 9.01, returned 3.01",
+   "test/X1: transitions: planted 3, returned 5",
+   "test/X1: long visits (at least 1 ns): planted 5, returned 6"
+  ],
+  "mode": "all runs"
+ },
+ "M09 tau_fold from one torsion only": {
+  "replacements": 1,
+  "analysis_exit": 0,
+  "compare_exit": 1,
+  "n_values": 7339,
+  "n_failed": 165,
+  "runs_with_a_failure": [
+   "angle/X0",
+   "conv/R1",
+   "csn/X0",
+   "edge/X0",
+   "flip/X1",
+   "gate/R1",
+   "glu/X0",
+   "long/X0",
+   "short/X0",
+   "sulfonyl/X0",
+   "tau/X0",
+   "test/R1",
+   "test/X0",
+   "test/X1",
+   "test/X2",
+   "test/X3",
+   "water/X0"
+  ],
+  "examples": [
+   "test/R1: every frame: tau_fold_deg, largest difference: planted 0.0, returned 81.965069",
+   "test/R1: tau_fold_deg: mean: planted 134.906312, returned 104.852659",
+   "test/R1: tau_fold_deg: sd: planted 4.726594, returned 41.878066"
+  ],
+  "mode": "all runs"
+ },
+ "M10 intermediate frames not carried": {
+  "replacements": 1,
+  "analysis_exit": 0,
+  "compare_exit": 1,
+  "n_values": 7339,
+  "n_failed": 13,
+  "runs_with_a_failure": [
+   "test/X1",
+   "test/X3"
+  ],
+  "examples": [
+   "test/X1: first passage into the opposite state: planted 9.01, returned 9.71",
+   "test/X1: hydrogen bond around the first passage: frame of the first passage: planted 900, returned 970",
+   "test/X1: hydrogen bond N2-H...OG1 before the first passage: frames, frames with the bond: planted [900, 720], returned [970, 760]"
+  ],
+  "mode": "all runs"
+ },
+ "M11 last half taken as the first half": {
+  "replacements": 1,
+  "analysis_exit": 0,
+  "compare_exit": 1,
+  "n_values": 7339,
+  "n_failed": 134,
+  "runs_with_a_failure": [
+   "campaign",
+   "conv/R1",
+   "edge/X0",
+   "flip/X1",
+   "gate/R1",
+   "glu/X0",
+   "sulfonyl/X0",
+   "test/R1",
+   "test/X1",
+   "test/X3",
+   "water/X0"
+  ],
+  "examples": [
+   "test/R1: lig_rmsd_A: mean_last_half: planted 0.0, returned 1.90572",
+   "test/R1: lig_rmsd_A: sd_last_half: planted 0.0, returned 1.782637",
+   "test/R1: d_Zn_N2_A: mean_last_half: planted 1.961442, returned 2.123418"
+  ],
+  "mode": "all runs"
+ },
+ "M12 midpoint of d1 at 7.0 instead of 6.7 A": {
+  "replacements": 1,
+  "analysis_exit": 0,
+  "compare_exit": 1,
+  "n_values": 7339,
+  "n_failed": 43,
+  "runs_with_a_failure": [
+   "flip/X1",
+   "test/X1",
+   "test/X3"
+  ],
+  "examples": [
+   "test/X1: every frame: state, frames that differ: planted 0, returned 20",
+   "test/X1: first passage into the opposite state: planted 9.01, returned 9.71",
+   "test/X1: count_C: planted 1050, returned 1070"
+  ],
+  "mode": "all runs"
+ },
+ "M13 fifth ligand at 2.3 instead of 2.6 A": {
+  "replacements": 1,
+  "analysis_exit": 0,
+  "compare_exit": 1,
+  "n_values": 7339,
+  "n_failed": 142,
+  "runs_with_a_failure": [
+   "angle/X0",
+   "conv/R1",
+   "csn/X0",
+   "default/R1",
+   "edge/X0",
+   "ext/R1",
+   "flip/X1",
+   "gate/R1",
+   "glu/X0",
+   "long/X0",
+   "place/R1",
+   "scaled/N1",
+   "short/X0",
+   "sulfonyl/X0",
+   "tau/X0",
+   "test/N1",
+   "test/R1",
+   "test/X0",
+   "test/X1",
+   "test/X2",
+   "test/X3",
+   "water/X0"
+  ],
+  "examples": [
+   "test/N1: every full frame: fifth_water, frames that differ: planted 0, returned 12",
+   "test/N1: every full frame: fifth_any, frames that differ: planted 0, returned 12",
+   "test/N1: full frames with a water within 2.6 A of the zinc: planted 12, returned 0"
+  ],
+  "mode": "all runs"
+ },
+ "M14 solute index taken as the index of the full system": {
+  "replacements": 1,
+  "analysis_exit": 1,
+  "compare_exit": 1,
+  "n_failed": null,
+  "note": "IndexError: list index out of range",
+  "mode": "all runs"
+ },
+ "M15 standard deviation with N - 1 in the denominator": {
+  "replacements": 1,
+  "analysis_exit": 0,
+  "compare_exit": 1,
+  "n_values": 7339,
+  "n_failed": 7,
+  "runs_with_a_failure": [
+   "flip/X1",
+   "gate/R1"
+  ],
+  "examples": [
+   "gate/R1: lig_rmsd_A: sd: planted 1.72988, returned 1.732046",
+   "gate/R1: d1_N1_F131CZ_A: sd: planted 2.75386, returned 2.757309",
+   "gate/R1: d2_N1_N67OD1_A: sd: planted 2.297419, returned 2.300296"
+  ],
+  "largest_difference_of_a_standard_deviation": 0.006477,
+  "where": "gate/R1 tau_fold_deg: sd",
+  "n_frames_there": 400,
+  "all_failures_are_standard_deviations": true,
+  "failures": [
+   {
+    "run": "gate/R1",
+    "quantity": "lig_rmsd_A: sd",
+    "unit": "A",
+    "planted": 1.72988,
+    "returned": 1.732046,
+    "frames": 400
+   },
+   {
+    "run": "gate/R1",
+    "quantity": "d1_N1_F131CZ_A: sd",
+    "unit": "A",
+    "planted": 2.75386,
+    "returned": 2.757309,
+    "frames": 400
+   },
+   {
+    "run": "gate/R1",
+    "quantity": "d2_N1_N67OD1_A: sd",
+    "unit": "A",
+    "planted": 2.297419,
+    "returned": 2.300296,
+    "frames": 400
+   },
+   {
+    "run": "flip/X1",
+    "quantity": "lig_rmsd_A: sd",
+    "unit": "A",
+    "planted": 1.772858,
+    "returned": 1.77582,
+    "frames": 300
+   },
+   {
+    "run": "flip/X1",
+    "quantity": "d1_N1_F131CZ_A: sd",
+    "unit": "A",
+    "planted": 2.805627,
+    "returned": 2.810315,
+    "frames": 300
+   },
+   {
+    "run": "flip/X1",
+    "quantity": "d2_N1_N67OD1_A: sd",
+    "unit": "A",
+    "planted": 2.540447,
+    "returned": 2.544692,
+    "frames": 300
+   },
+   {
+    "run": "flip/X1",
+    "quantity": "n2_volume: sd",
+    "unit": "",
+    "planted": 0.601049,
+    "returned": 0.602053,
+    "frames": 300
+   }
+  ],
+  "mode": "all runs"
+ },
+ "M16 N-Zn-N angles in the window 100-120 degrees (the rule of version 1.0)": {
+  "replacements": 1,
+  "analysis_exit": 0,
+  "compare_exit": 1,
+  "n_values": 7339,
+  "n_failed": 53,
+  "runs_with_a_failure": [
+   "angle/X0",
+   "conv/R1",
+   "csn/X0",
+   "default/R1",
+   "ext/R1",
+   "flip/X1",
+   "gate/R1",
+   "glu/X0",
+   "long/X0",
+   "place/R1",
+   "scaled/N1",
+   "short/X0",
+   "sulfonyl/X0",
+   "tau/X0",
+   "test/N1",
+   "test/R1",
+   "test/X0",
+   "test/X1",
+   "test/X2",
+   "test/X3",
+   "water/X0"
+  ],
+  "examples": [
+   "test/N1: gate G-V: the criteria that are not met: planted GV3 Zn-N2, GV3 fifth ligand, full trajectory, returned GV3 Zn-N2, GV3 ang_H96NE2_Zn_H119ND1_deg, GV3 fifth ligand, full trajectory",
+   "test/R1: gate G-V: the criteria that are not met: planted GV3 Zn-N2, GV3 fifth ligand, full trajectory, returned GV3 Zn-N2, GV3 ang_H96NE2_Zn_H119ND1_deg, GV3 fifth ligand, full trajectory",
+   "test/X0: gate G-V: the criteria that are not met: planted none, returned GV3 ang_H96NE2_Zn_H119ND1_deg"
+  ],
+  "mode": "all runs"
+ },
+ "M17 N-Zn-N angles within 12 instead of 10 degrees": {
+  "mode": "staged",
+  "stage": "A",
+  "runs_with_the_copy": [
+   "angle/X0"
+  ],
+  "replacements": 1,
+  "analysis_exit": 0,
+  "compare_exit": 1,
+  "n_values": 334,
+  "n_failed": 6,
+  "runs_with_a_failure": [
+   "angle/X0"
+  ],
+  "examples": [
+   "angle/X0: gate G-V: the criteria that are not met: planted GV3 ang_H96NE2_Zn_H119ND1_deg, returned none",
+   "angle/X0: gate G-V: all criteria met: planted False, returned True",
+   "angle/X0: gate G-V: GV3 as a whole: planted False, returned True"
+  ]
+ },
+ "M18 N-Zn-N angles within 8 instead of 10 degrees": {
+  "mode": "staged",
+  "stage": "A",
+  "runs_with_the_copy": [
+   "edge/X0"
+  ],
+  "replacements": 1,
+  "analysis_exit": 0,
+  "compare_exit": 1,
+  "n_values": 334,
+  "n_failed": 6,
+  "runs_with_a_failure": [
+   "edge/X0"
+  ],
+  "examples": [
+   "edge/X0: gate G-V: the criteria that are not met: planted none, returned GV3 ang_H96NE2_Zn_H119ND1_deg",
+   "edge/X0: gate G-V: all criteria met: planted True, returned False",
+   "edge/X0: gate G-V: GV3 as a whole: planted True, returned False"
+  ]
+ },
+ "M19 references of two N-Zn-N angles exchanged (108.9 and 98.4)": {
+  "mode": "staged",
+  "stage": "A",
+  "runs_with_the_copy": [
+   "ext/R1",
+   "scaled/N1"
+  ],
+  "replacements": 2,
+  "analysis_exit": 0,
+  "compare_exit": 1,
+  "n_values": 987,
+  "n_failed": 8,
+  "runs_with_a_failure": [
+   "ext/R1",
+   "scaled/N1"
+  ],
+  "examples": [
+   "ext/R1: gate G-V: the criteria that are not met: planted GV1 ligand RMSD, GV3 Zn-N2, returned GV1 ligand RMSD, GV3 Zn-N2, GV3 ang_N2_Zn_H94NE2_deg",
+   "ext/R1: gate G-V: ang_N2_Zn_H94NE2_deg, mean minus its value in 6RL9: planted 6.622465, returned 17.122462",
+   "ext/R1: gate G-V: ang_H96NE2_Zn_H119ND1_deg, mean minus its value in 6RL9: planted 0.647624, returned -9.852373"
+  ]
+ },
+ "M20 fifth ligand: no frame allowed (the rule of version 1.0)": {
+  "mode": "staged",
+  "stage": "A",
+  "runs_with_the_copy": [
+   "ext/R1",
+   "scaled/N1"
+  ],
+  "replacements": 1,
+  "analysis_exit": 0,
+  "compare_exit": 1,
+  "n_values": 987,
+  "n_failed": 4,
+  "runs_with_a_failure": [
+   "ext/R1",
+   "scaled/N1"
+  ],
+  "examples": [
+   "ext/R1: gate G-V: the criteria that are not met: planted GV1 ligand RMSD, GV3 Zn-N2, returned GV1 ligand RMSD, GV3 Zn-N2, GV3 fifth ligand, full trajectory",
+   "ext/R1: gate G-V: fifth-ligand criterion as a whole (both fractions): planted True, returned False",
+   "scaled/N1: gate G-V: the criteria that are not met: planted GV3 Zn-N2, returned GV3 Zn-N2, GV3 fifth ligand, full trajectory"
+  ]
+ },
+ "M21 fifth ligand: up to 10 % instead of 5 % of the frames": {
+  "mode": "staged",
+  "stage": "A",
+  "runs_with_the_copy": [
+   "sulfonyl/X0",
+   "water/X0"
+  ],
+  "replacements": 1,
+  "analysis_exit": 0,
+  "compare_exit": 1,
+  "n_values": 642,
+  "n_failed": 14,
+  "runs_with_a_failure": [
+   "sulfonyl/X0",
+   "water/X0"
+  ],
+  "examples": [
+   "sulfonyl/X0: gate G-V: the criteria that are not met: planted GV3 fifth ligand, solute trajectory, returned none",
+   "sulfonyl/X0: gate G-V: all criteria met: planted False, returned True",
+   "sulfonyl/X0: gate G-V: GV3 as a whole: planted False, returned True"
+  ]
+ },
+ "M22 fifth ligand, solute trajectory: fewer than 5 % (limit not included)": {
+  "mode": "staged",
+  "stage": "A",
+  "runs_with_the_copy": [
+   "edge/X0"
+  ],
+  "replacements": 1,
+  "analysis_exit": 0,
+  "compare_exit": 1,
+  "n_values": 334,
+  "n_failed": 7,
+  "runs_with_a_failure": [
+   "edge/X0"
+  ],
+  "examples": [
+   "edge/X0: gate G-V: the criteria that are not met: planted none, returned GV3 fifth ligand, solute trajectory",
+   "edge/X0: gate G-V: all criteria met: planted True, returned False",
+   "edge/X0: gate G-V: GV3 as a whole: planted True, returned False"
+  ]
+ },
+ "M23 fifth ligand, full trajectory: fewer than 5 % (limit not included)": {
+  "mode": "staged",
+  "stage": "A",
+  "runs_with_the_copy": [
+   "ext/R1",
+   "scaled/N1"
+  ],
+  "replacements": 1,
+  "analysis_exit": 0,
+  "compare_exit": 1,
+  "n_values": 987,
+  "n_failed": 4,
+  "runs_with_a_failure": [
+   "ext/R1",
+   "scaled/N1"
+  ],
+  "examples": [
+   "ext/R1: gate G-V: the criteria that are not met: planted GV1 ligand RMSD, GV3 Zn-N2, returned GV1 ligand RMSD, GV3 Zn-N2, GV3 fifth ligand, full trajectory",
+   "ext/R1: gate G-V: fifth-ligand criterion as a whole (both fractions): planted True, returned False",
+   "scaled/N1: gate G-V: the criteria that are not met: planted GV3 Zn-N2, returned GV3 Zn-N2, GV3 fifth ligand, full trajectory"
+  ]
+ },
+ "M24 fifth ligand: the solute trajectory is not counted": {
+  "mode": "staged",
+  "stage": "A",
+  "runs_with_the_copy": [
+   "sulfonyl/X0"
+  ],
+  "replacements": 1,
+  "analysis_exit": 0,
+  "compare_exit": 1,
+  "n_values": 349,
+  "n_failed": 5,
+  "runs_with_a_failure": [
+   "sulfonyl/X0"
+  ],
+  "examples": [
+   "sulfonyl/X0: gate G-V: all criteria met: planted False, returned True",
+   "sulfonyl/X0: gate G-V: GV3 as a whole: planted False, returned True",
+   "sulfonyl/X0: gate G-V: fifth-ligand criterion as a whole (both fractions): planted False, returned True"
+  ]
+ },
+ "M25 fifth ligand: the full trajectory is not counted": {
+  "mode": "staged",
+  "stage": "A",
+  "runs_with_the_copy": [
+   "water/X0",
+   "test/N1"
+  ],
+  "replacements": 1,
+  "analysis_exit": 0,
+  "compare_exit": 1,
+  "n_values": 629,
+  "n_failed": 6,
+  "runs_with_a_failure": [
+   "test/N1",
+   "water/X0"
+  ],
+  "examples": [
+   "test/N1: gate G-V: fifth-ligand criterion as a whole (both fractions): planted False, returned True",
+   "water/X0: gate G-V: all criteria met: planted False, returned True",
+   "water/X0: gate G-V: GV3 as a whole: planted False, returned True"
+  ]
+ },
+ "M26 fifth ligand: one fraction over the frames of both trajectories together": {
+  "mode": "staged",
+  "stage": "A",
+  "runs_with_the_copy": [
+   "sulfonyl/X0",
+   "water/X0"
+  ],
+  "replacements": 2,
+  "analysis_exit": 0,
+  "compare_exit": 1,
+  "n_values": 642,
+  "n_failed": 9,
+  "runs_with_a_failure": [
+   "sulfonyl/X0",
+   "water/X0"
+  ],
+  "examples": [
+   "sulfonyl/X0: gate G-V: the criteria that are not met: planted GV3 fifth ligand, solute trajectory, returned GV3 fifth ligand, full trajectory, GV3 fifth ligand, solute trajectory",
+   "sulfonyl/X0: gate G-V by design: the criteria that are not met: planted GV3 fifth ligand, solute trajectory, returned GV3 fifth ligand, full trajectory, GV3 fifth ligand, solute trajectory",
+   "water/X0: gate G-V: the criteria that are not met: planted GV3 fifth ligand, full trajectory, returned none"
+  ]
+ },
+ "M27 fifth ligand, full trajectory: water and protein oxygen only, no sulfonyl oxygen": {
+  "mode": "staged",
+  "stage": "A",
+  "runs_with_the_copy": [
+   "edge/X0",
+   "water/X0"
+  ],
+  "replacements": 1,
+  "analysis_exit": 0,
+  "compare_exit": 1,
+  "n_values": 627,
+  "n_failed": 13,
+  "runs_with_a_failure": [
+   "edge/X0",
+   "water/X0"
+  ],
+  "examples": [
+   "edge/X0: every full frame: fifth_any, frames that differ: planted 0, returned 1",
+   "edge/X0: gate G-V: full frames with any oxygen within 2.6 A of the zinc: planted 2, returned 1",
+   "edge/X0: by design: full frames with any oxygen within 2.6 A: planted 2, returned 1"
+  ]
+ },
+ "M28 fifth ligand: fractions over the last half of the run": {
+  "mode": "staged",
+  "stage": "A",
+  "runs_with_the_copy": [
+   "ext/R1",
+   "scaled/N1"
+  ],
+  "replacements": 1,
+  "analysis_exit": 0,
+  "compare_exit": 1,
+  "n_values": 987,
+  "n_failed": 6,
+  "runs_with_a_failure": [
+   "ext/R1",
+   "scaled/N1"
+  ],
+  "examples": [
+   "ext/R1: gate G-V: solute frames counted for that fraction: planted 200, returned 100",
+   "ext/R1: gate G-V: full frames with any oxygen within 2.6 A of the zinc: planted 1, returned 0",
+   "ext/R1: gate G-V: full frames counted for that fraction: planted 20, returned 10"
+  ]
+ },
+ "M29 C4-S-N2 within 4 instead of 3 degrees": {
+  "mode": "staged",
+  "stage": "A",
+  "runs_with_the_copy": [
+   "csn/X0"
+  ],
+  "replacements": 1,
+  "analysis_exit": 0,
+  "compare_exit": 1,
+  "n_values": 334,
+  "n_failed": 6,
+  "runs_with_a_failure": [
+   "csn/X0"
+  ],
+  "examples": [
+   "csn/X0: gate G-V: the criteria that are not met: planted GV4 ang_C4_S_N2_deg, returned none",
+   "csn/X0: gate G-V: all criteria met: planted False, returned True",
+   "csn/X0: gate G-V: GV4 as a whole: planted False, returned True"
+  ]
+ },
+ "M30 C4-S-N2 within 2 instead of 3 degrees": {
+  "mode": "staged",
+  "stage": "A",
+  "runs_with_the_copy": [
+   "edge/X0"
+  ],
+  "replacements": 1,
+  "analysis_exit": 0,
+  "compare_exit": 1,
+  "n_values": 334,
+  "n_failed": 6,
+  "runs_with_a_failure": [
+   "edge/X0"
+  ],
+  "examples": [
+   "edge/X0: gate G-V: the criteria that are not met: planted none, returned GV4 ang_C4_S_N2_deg",
+   "edge/X0: gate G-V: all criteria met: planted True, returned False",
+   "edge/X0: gate G-V: GV4 as a whole: planted True, returned False"
+  ]
+ },
+ "M31 tau_fold within 25 instead of 20 degrees": {
+  "mode": "staged",
+  "stage": "A",
+  "runs_with_the_copy": [
+   "tau/X0"
+  ],
+  "replacements": 1,
+  "analysis_exit": 0,
+  "compare_exit": 1,
+  "n_values": 334,
+  "n_failed": 6,
+  "runs_with_a_failure": [
+   "tau/X0"
+  ],
+  "examples": [
+   "tau/X0: gate G-V: the criteria that are not met: planted GV4 tau_fold_deg, returned none",
+   "tau/X0: gate G-V: all criteria met: planted False, returned True",
+   "tau/X0: gate G-V: GV4 as a whole: planted False, returned True"
+  ]
+ },
+ "M32 tau_fold within 15 instead of 20 degrees": {
+  "mode": "staged",
+  "stage": "A",
+  "runs_with_the_copy": [
+   "scaled/N1",
+   "edge/X0"
+  ],
+  "replacements": 1,
+  "analysis_exit": 0,
+  "compare_exit": 1,
+  "n_values": 764,
+  "n_failed": 8,
+  "runs_with_a_failure": [
+   "edge/X0",
+   "scaled/N1"
+  ],
+  "examples": [
+   "edge/X0: gate G-V: the criteria that are not met: planted none, returned GV4 tau_fold_deg",
+   "edge/X0: gate G-V: all criteria met: planted True, returned False",
+   "edge/X0: gate G-V: GV4 as a whole: planted True, returned False"
+  ]
+ },
+ "M33 C4-S-N2 and tau_fold reported only, not part of the verdict (version 1.0)": {
+  "mode": "staged",
+  "stage": "A",
+  "runs_with_the_copy": [
+   "csn/X0",
+   "tau/X0"
+  ],
+  "replacements": 1,
+  "analysis_exit": 0,
+  "compare_exit": 1,
+  "n_values": 612,
+  "n_failed": 6,
+  "runs_with_a_failure": [
+   "csn/X0",
+   "tau/X0"
+  ],
+  "examples": [
+   "csn/X0: gate G-V: all criteria met: planted False, returned True",
+   "csn/X0: gate G-V: verdict (none for a run that is not X0): planted FAILED, returned PASSED",
+   "csn/X0: gate G-V by design: verdict: planted FAILED, returned PASSED"
+  ]
+ },
+ "M34 run X0 not treated as the validation run": {
+  "mode": "staged",
+  "stage": "A",
+  "runs_with_the_copy": [
+   "short/X0",
+   "angle/X0"
+  ],
+  "replacements": 1,
+  "analysis_exit": 0,
+  "compare_exit": 1,
+  "n_values": 627,
+  "n_failed": 13,
+  "runs_with_a_failure": [
+   "angle/X0",
+   "short/X0"
+  ],
+  "examples": [
+   "angle/X0: warnings: planted 0, returned 1",
+   "angle/X0: role of the run (X0 = validation): planted validation, returned production",
+   "angle/X0: gate G-V applies to this run (only to X0): planted True, returned False"
+  ]
+ },
+ "M35 validation run: planned length from the manifest, then 100 ns": {
+  "mode": "staged",
+  "stage": "A",
+  "runs_with_the_copy": [
+   "short/X0",
+   "csn/X0"
+  ],
+  "replacements": 1,
+  "analysis_exit": 0,
+  "compare_exit": 1,
+  "n_values": 627,
+  "n_failed": 6,
+  "runs_with_a_failure": [
+   "csn/X0",
+   "short/X0"
+  ],
+  "examples": [
+   "csn/X0: verdict provisional (run not finished): planted False, returned True",
+   "csn/X0: run complete: planted True, returned False",
+   "csn/X0: planned length (X0: 5 ns by the specification): planted 5.0, returned 100.0"
+  ]
+ },
+ "M36 run X0 entered in the campaign table": {
+  "mode": "staged",
+  "stage": "A",
+  "runs_with_the_copy": [
+   "campaign table (from the summaries)"
+  ],
+  "replacements": 2,
+  "analysis_exit": 0,
+  "compare_exit": 1,
+  "n_values": 56,
+  "n_failed": 7,
+  "runs_with_a_failure": [
+   "campaign"
+  ],
+  "examples": [
+   "campaign: n_runs: planted 5, returned 6",
+   "campaign: n_complete: planted 4, returned 5",
+   "campaign: rule1.n_X_runs: planted 3, returned 4"
+  ]
+ },
+ "M37 gate G-V with a verdict for every run of start X (version 1.0)": {
+  "mode": "staged",
+  "stage": "A",
+  "runs_with_the_copy": [
+   "flip/X1",
+   "test/X1"
+  ],
+  "replacements": 1,
+  "analysis_exit": 0,
+  "compare_exit": 1,
+  "n_values": 802,
+  "n_failed": 4,
+  "runs_with_a_failure": [
+   "flip/X1",
+   "test/X1"
+  ],
+  "examples": [
+   "test/X1: gate G-V applies to this run (only to X0): planted False, returned True",
+   "test/X1: gate G-V: verdict (none for a run that is not X0): planted None, returned FAILED",
+   "flip/X1: gate G-V applies to this run (only to X0): planted False, returned True"
+  ]
+ },
+ "M38 rule 1 applied to the validation run as well": {
+  "mode": "staged",
+  "stage": "A",
+  "runs_with_the_copy": [
+   "short/X0",
+   "angle/X0"
+  ],
+  "replacements": 1,
+  "analysis_exit": 0,
+  "compare_exit": 1,
+  "n_values": 627,
+  "n_failed": 2,
+  "runs_with_a_failure": [
+   "angle/X0",
+   "short/X0"
+  ],
+  "examples": [
+   "angle/X0: rule 1 applies to this run (production runs of start X): planted False, returned True",
+   "short/X0: rule 1 applies to this run (production runs of start X): planted False, returned True"
+  ]
+ },
+ "M39 Asn67 flag reversed (set where OD1 is nearer)": {
+  "mode": "staged",
+  "stage": "A",
+  "runs_with_the_copy": [
+   "ext/R1",
+   "scaled/N1"
+  ],
+  "replacements": 1,
+  "analysis_exit": 0,
+  "compare_exit": 1,
+  "n_values": 987,
+  "n_failed": 10,
+  "runs_with_a_failure": [
+   "ext/R1",
+   "scaled/N1"
+  ],
+  "examples": [
+   "ext/R1: every frame: asn67_ND2_nearer_N1, frames that differ: planted 0, returned 200",
+   "ext/R1: frames with ND2 nearer to the aniline N than OD1: planted 0, returned 200",
+   "ext/R1: state R: frames, and frames with ND2 nearer: planted [200, 0], returned [200, 200]"
+  ]
+ },
+ "M40 distance to Asn67 ND2 taken to OD1": {
+  "mode": "staged",
+  "stage": "A",
+  "runs_with_the_copy": [
+   "ext/R1",
+   "scaled/N1"
+  ],
+  "replacements": 1,
+  "analysis_exit": 0,
+  "compare_exit": 1,
+  "n_values": 987,
+  "n_failed": 11,
+  "runs_with_a_failure": [
+   "ext/R1",
+   "scaled/N1"
+  ],
+  "examples": [
+   "ext/R1: every frame: d_N1_N67ND2_A, largest difference: planted 0.0, returned 0.7134260000000001",
+   "ext/R1: frame 2, d_N1_N67ND2_A against starts.csv (R, N1_Asn67ND2): planted 3.31, returned 2.5968",
+   "ext/R1: equilibration, every frame: d_N1_N67ND2_A, largest difference: planted 0.0, returned 0.7134260000000001"
+  ]
+ },
+ "M41 orientation distance d2 to the nearer of OD1 and ND2": {
+  "mode": "staged",
+  "stage": "A",
+  "runs_with_the_copy": [
+   "scaled/N1",
+   "flip/X1"
+  ],
+  "replacements": 1,
+  "analysis_exit": 0,
+  "compare_exit": 1,
+  "n_values": 949,
+  "n_failed": 22,
+  "runs_with_a_failure": [
+   "flip/X1",
+   "scaled/N1"
+  ],
+  "examples": [
+   "flip/X1: every frame: d2_N1_N67OD1_A, largest difference: planted 0.0, returned 1.193213",
+   "flip/X1: every frame: asn67_ND2_nearer_N1, frames that differ: planted 0, returned 155",
+   "flip/X1: d2_N1_N67OD1_A: mean: planted 5.257671, returned 4.650351"
+  ]
+ },
+ "M42 signed volume at N2 with HN21 and S exchanged (the sign reversed)": {
+  "mode": "staged",
+  "stage": "A",
+  "runs_with_the_copy": [
+   "ext/R1",
+   "scaled/N1"
+  ],
+  "replacements": 1,
+  "analysis_exit": 0,
+  "compare_exit": 1,
+  "n_values": 987,
+  "n_failed": 109,
+  "runs_with_a_failure": [
+   "ext/R1",
+   "scaled/N1"
+  ],
+  "examples": [
+   "ext/R1: every frame: n2_volume, largest difference: planted 0.0, returned 1.4208180000000001",
+   "ext/R1: every frame: n2_sign, frames that differ: planted 0, returned 200",
+   "ext/R1: every frame: n2_sign_assigned, frames that differ: planted 0, returned 200"
+  ]
+ },
+ "M43 signed volume at N2 from vectors that are not normalised": {
+  "mode": "staged",
+  "stage": "A",
+  "runs_with_the_copy": [
+   "ext/R1",
+   "scaled/N1"
+  ],
+  "replacements": 1,
+  "analysis_exit": 0,
+  "compare_exit": 1,
+  "n_values": 987,
+  "n_failed": 27,
+  "runs_with_a_failure": [
+   "ext/R1",
+   "scaled/N1"
+  ],
+  "examples": [
+   "ext/R1: every frame: n2_volume, largest difference: planted 0.0, returned 2.372782",
+   "ext/R1: n2_volume: mean: planted -0.710418, returned -2.754813",
+   "ext/R1: n2_volume: sd: planted 0.0, returned 0.109456"
+  ]
+ },
+ "M44 sign at N2 of the rotated start taken as +1": {
+  "mode": "staged",
+  "stage": "A",
+  "runs_with_the_copy": [
+   "ext/R1",
+   "gate/R1"
+  ],
+  "replacements": 1,
+  "analysis_exit": 0,
+  "compare_exit": 1,
+  "n_values": 851,
+  "n_failed": 14,
+  "runs_with_a_failure": [
+   "ext/R1",
+   "gate/R1"
+  ],
+  "examples": [
+   "gate/R1: N2: sign of the start as built (X and N +1, R -1): planted -1, returned 1",
+   "gate/R1: first production frame: sign at N2, and whether it differs from the sign of the start: planted [-1, False], returned [-1, True]",
+   "ext/R1: N2: sign of the start as built (X and N +1, R -1): planted -1, returned 1"
+  ]
+ },
+ "M45 a sign change at N2 counts after 0.5 ns instead of 1 ns": {
+  "mode": "staged",
+  "stage": "A",
+  "runs_with_the_copy": [
+   "conv/R1"
+  ],
+  "replacements": 1,
+  "analysis_exit": 0,
+  "compare_exit": 1,
+  "n_values": 531,
+  "n_failed": 10,
+  "runs_with_a_failure": [
+   "conv/R1"
+  ],
+  "examples": [
+   "conv/R1: N2: stretches of one sign, and those of at least 1 ns: planted [6, 5], returned [6, 6]",
+   "conv/R1: N2: the stretches of at least 1 ns (sign, first frame, frames): planted [[-1, 0, 200], [-1, 299, 101], [1, 400, 100], [-1, 500, 100], [1, 600, 1600]], returned [[-1, 0, 200], [1, 200, 99], [-1, 299, 101], [1, 400, 100], [-1, 500, 100], [1, 600, 1600]]",
+   "conv/R1: N2: number of sign changes that last at least 1 ns: planted 3, returned 5"
+  ]
+ },
+ "M46 a stretch of exactly 1 ns is not long (more than 100 frames asked)": {
+  "mode": "staged",
+  "stage": "A",
+  "runs_with_the_copy": [
+   "conv/R1"
+  ],
+  "replacements": 1,
+  "analysis_exit": 0,
+  "compare_exit": 1,
+  "n_values": 531,
+  "n_failed": 10,
+  "runs_with_a_failure": [
+   "conv/R1"
+  ],
+  "examples": [
+   "conv/R1: N2: stretches of one sign, and those of at least 1 ns: planted [6, 5], returned [6, 3]",
+   "conv/R1: N2: the stretches of at least 1 ns (sign, first frame, frames): planted [[-1, 0, 200], [-1, 299, 101], [1, 400, 100], [-1, 500, 100], [1, 600, 1600]], returned [[-1, 0, 200], [-1, 299, 101], [1, 600, 1600]]",
+   "conv/R1: N2: number of sign changes that last at least 1 ns: planted 3, returned 1"
+  ]
+ },
+ "M47 every change of sign at N2 counted (short stretches not left out)": {
+  "mode": "staged",
+  "stage": "A",
+  "runs_with_the_copy": [
+   "short/X0",
+   "gate/R1"
+  ],
+  "replacements": 1,
+  "analysis_exit": 0,
+  "compare_exit": 1,
+  "n_values": 643,
+  "n_failed": 14,
+  "runs_with_a_failure": [
+   "gate/R1",
+   "short/X0"
+  ],
+  "examples": [
+   "gate/R1: N2: stretches of one sign, and those of at least 1 ns: planted [159, 0], returned [159, 159]",
+   "gate/R1: N2: the stretches of at least 1 ns (sign, first frame, frames): planted [], returned [[-1, 0, 4], [1, 4, 1], [-1, 5, 4], [1, 9, 1], [-1, 10, 4], [1, 14, 1], [-1, 15, 4], [1, 19, 1], [-1, 20, 4], [1, 24, 1], [-1, 25, 4], [1, 29, 1], [-1, 30, 4], [1, 34, 1], [-1, 35, 4], [1, 39, 1], [-1, 40, 4], [1, 44, 1], [-1, 45, 4], [1, 49, 1], [-1, 50, 4], [1, 54, 1], [-1, 55, 4], [1, 59, 1], [-1, 60, 4], [1, 64, 1], [-1, 65, 4], [1, 69, 1], [-1, 70, 4], [1, 74, 1], [-1, 75, 4], [1, 79, 1], [-1, 80, 4], [1, 84, 1], [-1, 85, 4], [1, 89, 1], [-1, 90, 4], [1, 94, 1], [-1, 95, 4], [1, 99, 1], [-1, 100, 4], [1, 104, 1], [-1, 105, 4], [1, 109, 1], [-1, 110, 4], [1, 114, 1], [-1, 115, 4], [1, 119, 1], [-1, 120, 4], [1, 124, 1], [-1, 125, 4], [1, 129, 1], [-1, 130, 4], [1, 134, 1], [-1, 135, 4], [1, 139, 1], [-1, 140, 4], [1, 144, 1], [-1, 145, 4], [1, 149, 1], [-1, 150, 4], [1, 154, 1], [-1, 155, 4], [1, 159, 1], [-1, 160, 4], [1, 164, 1], [-1, 165, 4], [1, 169, 1], [-1, 170, 4], [1, 174, 1], [-1, 175, 4], [1, 179, 1], [-1, 180, 4], [1, 184, 1], [-1, 185, 4], [1, 189, 1], [-1, 190, 4], [1, 194, 1], [-1, 195, 4], [1, 199, 1], [-1, 200, 4], [1, 204, 1], [-1, 205, 4], [1, 209, 1], [-1, 210, 4], [1, 214, 1], [-1, 215, 4], [1, 219, 1], [-1, 220, 4], [1, 224, 1], [-1, 225, 4], [1, 229, 1], [-1, 230, 4], [1, 234, 1], [-1, 235, 4], [1, 239, 1], [-1, 240, 4], [1, 244, 1], [-1, 245, 4], [1, 249, 5], [-1, 254, 1], [1, 255, 4], [-1, 259, 1], [1, 260, 4], [-1, 264, 1], [1, 265, 4], [-1, 269, 1], [1, 270, 4], [-1, 274, 1], [1, 275, 4], [-1, 279, 1], [1, 280, 4], [-1, 284, 1], [1, 285, 4], [-1, 289, 1], [1, 290, 4], [-1, 294, 1], [1, 295, 4], [-1, 299, 1], [1, 300, 4], [-1, 304, 1], [1, 305, 4], [-1, 309, 1], [1, 310, 4], [-1, 314, 1], [1, 315, 4], [-1, 319, 1], [1, 320, 4], [-1, 324, 1], [1, 325, 4], [-1, 329, 1], [1, 330, 4], [-1, 334, 1], [1, 335, 4], [-1, 339, 1], [1, 340, 4], [-1, 344, 1], [1, 345, 4], [-1, 349, 1], [1, 350, 4], [-1, 354, 1], [1, 355, 4], [-1, 359, 1], [1, 360, 4], [-1, 364, 1], [1, 365, 4], [-1, 369, 1], [1, 370, 4], [-1, 374, 1], [1, 375, 4], [-1, 379, 1], [1, 380, 4], [-1, 384, 1], [1, 385, 4], [-1, 389, 1], [1, 390, 4], [-1, 394, 1], [1, 395, 4], [-1, 399, 1]]",
+   "gate/R1: N2: number of sign changes that last at least 1 ns: planted 0, returned 158"
+  ]
+ },
+ "M48 time of a sign change at N2 counted from zero": {
+  "mode": "staged",
+  "stage": "A",
+  "runs_with_the_copy": [
+   "flip/X1",
+   "conv/R1"
+  ],
+  "replacements": 1,
+  "analysis_exit": 0,
+  "compare_exit": 1,
+  "n_values": 994,
+  "n_failed": 6,
+  "runs_with_a_failure": [
+   "conv/R1",
+   "flip/X1"
+  ],
+  "examples": [
+   "conv/R1: N2: times of these sign changes: planted [4.01, 5.01, 6.01], returned [4.0, 5.0, 6.0]",
+   "conv/R1: N2: time of the first lasting sign change: planted 4.01, returned 4.0",
+   "conv/R1: by design: times of the sign changes that last at least 1 ns: planted [4.01, 5.01, 6.01], returned [4.0, 5.0, 6.0]"
+  ]
+ },
+ "M49 sign at N2 counted per assigned state, not per state of the frame": {
+  "mode": "staged",
+  "stage": "A",
+  "runs_with_the_copy": [
+   "flip/X1",
+   "test/X1"
+  ],
+  "replacements": 1,
+  "analysis_exit": 0,
+  "compare_exit": 1,
+  "n_values": 802,
+  "n_failed": 10,
+  "runs_with_a_failure": [
+   "flip/X1",
+   "test/X1"
+  ],
+  "examples": [
+   "test/X1: N2, frames of state R: number, positive, negative, zero: planted [1930, 386, 1544, 0], returned [1950, 402, 1548, 0]",
+   "test/X1: N2, frames of state R: fraction positive (none without a frame of that state): planted 0.2, returned 0.206154",
+   "test/X1: N2, frames of state I: number, positive, negative, zero: planted [20, 16, 4, 0], returned [0, 0, 0, 0]"
+  ]
+ },
+ "M50 sign at N2 of the last 20 ns counted over the whole run": {
+  "mode": "staged",
+  "stage": "A",
+  "runs_with_the_copy": [
+   "conv/R1",
+   "test/R1"
+  ],
+  "replacements": 1,
+  "analysis_exit": 0,
+  "compare_exit": 1,
+  "n_values": 814,
+  "n_failed": 4,
+  "runs_with_a_failure": [
+   "conv/R1",
+   "test/R1"
+  ],
+  "examples": [
+   "test/R1: N2: positive, negative and zero in the last 20 ns: planted [1600, 400, 0], returned [1920, 1080, 0]",
+   "test/R1: N2: fraction positive in the last 20 ns: planted 0.8, returned 0.96",
+   "conv/R1: N2: positive, negative and zero in the last 20 ns: planted [1799, 201, 0], returned [1799, 401, 0]"
+  ]
+ },
+ "M51 hydrogen bond split at the first frame in the opposite state (not at the first long visit)": {
+  "mode": "staged",
+  "stage": "A",
+  "runs_with_the_copy": [
+   "test/X1",
+   "test/X3"
+  ],
+  "replacements": 1,
+  "analysis_exit": 0,
+  "compare_exit": 1,
+  "n_values": 622,
+  "n_failed": 8,
+  "runs_with_a_failure": [
+   "test/X1",
+   "test/X3"
+  ],
+  "examples": [
+   "test/X1: hydrogen bond around the first passage: frame of the first passage: planted 900, returned 300",
+   "test/X1: hydrogen bond N2-H...OG1 before the first passage: frames, frames with the bond: planted [900, 720], returned [300, 240]",
+   "test/X1: hydrogen bond N2-H...OG1 from the first passage on: frames, frames with the bond: planted [2100, 1664], returned [2700, 2144]"
+  ]
+ },
+ "M52 the frame of the first passage counted with the frames before it": {
+  "mode": "staged",
+  "stage": "A",
+  "runs_with_the_copy": [
+   "flip/X1",
+   "gate/R1"
+  ],
+  "replacements": 1,
+  "analysis_exit": 0,
+  "compare_exit": 1,
+  "n_values": 813,
+  "n_failed": 9,
+  "runs_with_a_failure": [
+   "flip/X1",
+   "gate/R1"
+  ],
+  "examples": [
+   "gate/R1: hydrogen bond N2-H...OG1 before the first passage: frames, frames with the bond: planted [250, 200], returned [251, 201]",
+   "gate/R1: hydrogen bond N2-H...OG1 from the first passage on: frames, frames with the bond: planted [150, 120], returned [149, 119]",
+   "gate/R1: hydrogen bond N2-H...OG1, fraction before the first passage: planted 0.8, returned 0.800797"
+  ]
+ },
+ "M53 hydrogen bond of Thr199 N-H to the sulfonyl oxygens split instead of N2-H...OG1": {
+  "mode": "staged",
+  "stage": "A",
+  "runs_with_the_copy": [
+   "flip/X1",
+   "gate/R1"
+  ],
+  "replacements": 1,
+  "analysis_exit": 0,
+  "compare_exit": 1,
+  "n_values": 813,
+  "n_failed": 7,
+  "runs_with_a_failure": [
+   "flip/X1",
+   "gate/R1"
+  ],
+  "examples": [
+   "gate/R1: hydrogen bond N2-H...OG1 before the first passage: frames, frames with the bond: planted [250, 200], returned [250, 0]",
+   "gate/R1: hydrogen bond N2-H...OG1 from the first passage on: frames, frames with the bond: planted [150, 120], returned [150, 150]",
+   "gate/R1: hydrogen bond N2-H...OG1, fraction before the first passage: planted 0.8, returned 0.0"
+  ]
+ },
+ "M54 OE1 and OE2 of Glu106 exchanged": {
+  "mode": "staged",
+  "stage": "A",
+  "runs_with_the_copy": [
+   "ext/R1",
+   "scaled/N1"
+  ],
+  "replacements": 1,
+  "analysis_exit": 0,
+  "compare_exit": 1,
+  "n_values": 987,
+  "n_failed": 36,
+  "runs_with_a_failure": [
+   "ext/R1",
+   "scaled/N1"
+  ],
+  "examples": [
+   "ext/R1: every frame: d_Zn_E106OE1_A, largest difference: planted 0.0, returned 1.4663730000000008",
+   "ext/R1: every frame: d_Zn_E106OE2_A, largest difference: planted 0.0, returned 1.4663899999999996",
+   "ext/R1: d_Zn_E106OE1_A: mean: planted 4.010967, returned 5.476411"
+  ]
+ },
+ "M55 Glu106 counted within 2.8 instead of 2.6 A": {
+  "mode": "staged",
+  "stage": "A",
+  "runs_with_the_copy": [
+   "conv/R1"
+  ],
+  "replacements": 1,
+  "analysis_exit": 0,
+  "compare_exit": 1,
+  "n_values": 531,
+  "n_failed": 6,
+  "runs_with_a_failure": [
+   "conv/R1"
+  ],
+  "examples": [
+   "conv/R1: every frame: fifth_E106OE1, frames that differ: planted 0, returned 22",
+   "conv/R1: every frame: fifth_E106OE, frames that differ: planted 0, returned 22",
+   "conv/R1: Glu106: solute frames with OE1, with OE2, with either within 2.6 A of the zinc: planted [44, 22, 66], returned [66, 22, 88]"
+  ]
+ },
+ "M56 Glu106 counted within 2.52 instead of 2.6 A": {
+  "mode": "staged",
+  "stage": "A",
+  "runs_with_the_copy": [
+   "conv/R1"
+  ],
+  "replacements": 1,
+  "analysis_exit": 0,
+  "compare_exit": 1,
+  "n_values": 531,
+  "n_failed": 5,
+  "runs_with_a_failure": [
+   "conv/R1"
+  ],
+  "examples": [
+   "conv/R1: every frame: fifth_E106OE2, frames that differ: planted 0, returned 22",
+   "conv/R1: every frame: fifth_E106OE, frames that differ: planted 0, returned 22",
+   "conv/R1: Glu106: solute frames with OE1, with OE2, with either within 2.6 A of the zinc: planted [44, 22, 66], returned [44, 0, 44]"
+  ]
+ },
+ "M57 Glu106 made a criterion: counted in the solute fraction of the fifth ligand of gate G-V": {
+  "mode": "staged",
+  "stage": "A",
+  "runs_with_the_copy": [
+   "glu/X0",
+   "conv/R1"
+  ],
+  "replacements": 1,
+  "analysis_exit": 0,
+  "compare_exit": 1,
+  "n_values": 840,
+  "n_failed": 9,
+  "runs_with_a_failure": [
+   "conv/R1",
+   "glu/X0"
+  ],
+  "examples": [
+   "conv/R1: gate G-V: solute frames with a sulfonyl oxygen within 2.6 A of the zinc: planted 0, returned 66",
+   "glu/X0: gate G-V: the criteria that are not met: planted none, returned GV3 fifth ligand, solute trajectory",
+   "glu/X0: gate G-V: all criteria met: planted True, returned False"
+  ]
+ },
+ "M58 crystal ring positions not carried into the frame (no fit of the full frame)": {
+  "mode": "staged",
+  "stage": "A",
+  "runs_with_the_copy": [
+   "default/R1",
+   "place/R1",
+   "ext/R1"
+  ],
+  "replacements": 1,
+  "analysis_exit": 0,
+  "compare_exit": 1,
+  "n_values": 1379,
+  "n_failed": 134,
+  "runs_with_a_failure": [
+   "default/R1",
+   "ext/R1",
+   "place/R1"
+  ],
+  "examples": [
+   "ext/R1: warnings: planted 1, returned 4",
+   "ext/R1: every full frame: n_water_ring_wide_3p5A, frames that differ: planted 0, returned 17",
+   "ext/R1: every full frame: d_water_ring_wide_min_A, largest difference: planted 0.0, returned 12.4778"
+  ]
+ },
+ "M59 the fit applied the wrong way round (rotation not inverted)": {
+  "mode": "staged",
+  "stage": "A",
+  "runs_with_the_copy": [
+   "default/R1",
+   "place/R1",
+   "ext/R1"
+  ],
+  "replacements": 1,
+  "analysis_exit": 0,
+  "compare_exit": 1,
+  "n_values": 1379,
+  "n_failed": 128,
+  "runs_with_a_failure": [
+   "default/R1",
+   "ext/R1",
+   "place/R1"
+  ],
+  "examples": [
+   "ext/R1: warnings: planted 1, returned 4",
+   "ext/R1: every full frame: n_water_ring_wide_3p5A, frames that differ: planted 0, returned 13",
+   "ext/R1: every full frame: d_water_ring_wide_min_A, largest difference: planted 0.0, returned 2.2154000000000003"
+  ]
+ },
+ "M60 ring positions of the ligand in the frame instead of the crystal positions": {
+  "mode": "staged",
+  "stage": "A",
+  "runs_with_the_copy": [
+   "default/R1",
+   "place/R1",
+   "ext/R1"
+  ],
+  "replacements": 1,
+  "analysis_exit": 0,
+  "compare_exit": 1,
+  "n_values": 1379,
+  "n_failed": 149,
+  "runs_with_a_failure": [
+   "default/R1",
+   "ext/R1",
+   "place/R1"
+  ],
+  "examples": [
+   "ext/R1: warnings: planted 1, returned 4",
+   "ext/R1: every full frame: n_water_ring_wide_3p5A, frames that differ: planted 0, returned 15",
+   "ext/R1: every full frame: d_water_ring_wide_min_A, largest difference: planted 0.0, returned 2.6"
+  ]
+ },
+ "M61 the wider count within 3.3 instead of 3.5 A": {
+  "mode": "staged",
+  "stage": "A",
+  "runs_with_the_copy": [
+   "default/R1",
+   "place/R1",
+   "ext/R1"
+  ],
+  "replacements": 1,
+  "analysis_exit": 0,
+  "compare_exit": 1,
+  "n_values": 1379,
+  "n_failed": 11,
+  "runs_with_a_failure": [
+   "ext/R1"
+  ],
+  "examples": [
+   "ext/R1: every full frame: n_water_ring_wide_3p5A, frames that differ: planted 0, returned 20",
+   "ext/R1: water at the crystal ring positions: mean number within 3.5 A: planted 1.0, returned 0.0",
+   "ext/R1: campaign-table value: mean number of water oxygens at the crystal ring positions: planted 1.0, returned 0.0"
+  ]
+ },
+ "M62 the wider count within 3.7 instead of 3.5 A": {
+  "mode": "staged",
+  "stage": "A",
+  "runs_with_the_copy": [
+   "default/R1",
+   "place/R1",
+   "ext/R1"
+  ],
+  "replacements": 1,
+  "analysis_exit": 0,
+  "compare_exit": 1,
+  "n_values": 1379,
+  "n_failed": 38,
+  "runs_with_a_failure": [
+   "default/R1",
+   "ext/R1",
+   "place/R1"
+  ],
+  "examples": [
+   "ext/R1: every full frame: n_water_ring_wide_3p5A, frames that differ: planted 0, returned 20",
+   "ext/R1: water at the crystal ring positions: mean number within 3.5 A: planted 1.0, returned 2.0",
+   "ext/R1: campaign-table value: mean number of water oxygens at the crystal ring positions: planted 1.0, returned 2.0"
+  ]
+ },
+ "M63 pairs of water and position counted instead of water molecules": {
+  "mode": "staged",
+  "stage": "A",
+  "runs_with_the_copy": [
+   "default/R1",
+   "place/R1",
+   "ext/R1"
+  ],
+  "replacements": 1,
+  "analysis_exit": 0,
+  "compare_exit": 1,
+  "n_values": 1379,
+  "n_failed": 32,
+  "runs_with_a_failure": [
+   "default/R1",
+   "place/R1"
+  ],
+  "examples": [
+   "default/R1: every full frame: n_water_ring_wide_3p5A, frames that differ: planted 0, returned 20",
+   "default/R1: every full frame: n_water_ring_place, frames that differ: planted 0, returned 5",
+   "default/R1: water at the crystal ring positions: mean number within 3.5 A: planted 1.75, returned 7.25"
+  ]
+ },
+ "M64 water at the ring positions without the minimum image": {
+  "mode": "staged",
+  "stage": "A",
+  "runs_with_the_copy": [
+   "default/R1",
+   "place/R1",
+   "ext/R1"
+  ],
+  "replacements": 1,
+  "analysis_exit": 0,
+  "compare_exit": 1,
+  "n_values": 1379,
+  "n_failed": 115,
+  "runs_with_a_failure": [
+   "default/R1",
+   "ext/R1",
+   "place/R1"
+  ],
+  "examples": [
+   "ext/R1: warnings: planted 1, returned 2",
+   "ext/R1: every full frame: n_water_ring_wide_3p5A, frames that differ: planted 0, returned 12",
+   "ext/R1: every full frame: d_water_ring_wide_min_A, largest difference: planted 0.0, returned 11.9734"
+  ]
+ },
+ "M65 the count of the driver on seven positions (the aniline N added, as version 1.2 counted)": {
+  "mode": "staged",
+  "stage": "A",
+  "runs_with_the_copy": [
+   "default/R1",
+   "place/R1",
+   "ext/R1"
+  ],
+  "replacements": 1,
+  "analysis_exit": 0,
+  "compare_exit": 1,
+  "n_values": 1379,
+  "n_failed": 12,
+  "runs_with_a_failure": [
+   "default/R1",
+   "place/R1"
+  ],
+  "examples": [
+   "default/R1: every full frame: n_water_ring_place, frames that differ: planted 0, returned 5",
+   "default/R1: every full frame: d_water_ring_place_min_A, largest difference: planted 0.0, returned 0.10000000000000009",
+   "default/R1: water in the place of the ring: site atoms and cut-off used: planted [['C1', 'C2', 'C3', 'C4', 'C5', 'C6'], 2.5], returned [['C1', 'C2', 'C3', 'C4', 'C5', 'C6', 'N1'], 2.5]"
+  ]
+ },
+ "M66 equilibration time counted from the start of the equilibration (positive times)": {
+  "mode": "staged",
+  "stage": "A",
+  "runs_with_the_copy": [
+   "ext/R1",
+   "scaled/N1"
+  ],
+  "replacements": 1,
+  "analysis_exit": 0,
+  "compare_exit": 1,
+  "n_values": 987,
+  "n_failed": 34,
+  "runs_with_a_failure": [
+   "ext/R1",
+   "scaled/N1"
+  ],
+  "examples": [
+   "ext/R1: equilibration, every frame: time, largest difference: planted 0.0, returned 3.0",
+   "ext/R1: equilibration: no time above zero: planted True, returned False",
+   "ext/R1: equilibration, every full frame: time, largest difference: planted 0.0, returned 3.0"
+  ]
+ },
+ "M67 first frame of a stage put at the start of the stage": {
+  "mode": "staged",
+  "stage": "A",
+  "runs_with_the_copy": [
+   "ext/R1",
+   "scaled/N1"
+  ],
+  "replacements": 1,
+  "analysis_exit": 0,
+  "compare_exit": 1,
+  "n_values": 987,
+  "n_failed": 32,
+  "runs_with_a_failure": [
+   "ext/R1",
+   "scaled/N1"
+  ],
+  "examples": [
+   "ext/R1: equilibration, every frame: time, largest difference: planted 0.0, returned 0.010000000000000231",
+   "ext/R1: equilibration, every full frame: time, largest difference: planted 0.0, returned 0.10000000000000009",
+   "ext/R1: equilibration, stage 1: last solute frame (frame, time, state, sign at N2): planted [9, -2.9, 'R', -1], returned [9, -2.91, 'R', -1]"
+  ]
+ },
+ "M68 stage table of the protocol used although the manifest lists the stages": {
+  "mode": "staged",
+  "stage": "A",
+  "runs_with_the_copy": [
+   "ext/R1",
+   "scaled/N1"
+  ],
+  "replacements": 1,
+  "analysis_exit": 0,
+  "compare_exit": 1,
+  "n_values": 893,
+  "n_failed": 65,
+  "runs_with_a_failure": [
+   "ext/R1",
+   "scaled/N1"
+  ],
+  "examples": [
+   "ext/R1: warnings: planted 1, returned 9",
+   "ext/R1: campaign-table value: solute frames of the equilibration: planted 300, returned 200",
+   "ext/R1: equilibration: solute frames and full frames read: planted [300, 30], returned [200, 20]"
+  ]
+ },
+ "M69 equilibration frames read as frames of the production": {
+  "mode": "staged",
+  "stage": "A",
+  "runs_with_the_copy": [
+   "ext/R1",
+   "scaled/N1"
+  ],
+  "replacements": 1,
+  "analysis_exit": 0,
+  "compare_exit": 1,
+  "n_values": 987,
+  "n_failed": 76,
+  "runs_with_a_failure": [
+   "ext/R1",
+   "scaled/N1"
+  ],
+  "examples": [
+   "ext/R1: solute frames seen: planted 200, returned 400",
+   "ext/R1: DCD headers: segments contiguous (none = the headers tell nothing): planted None, returned False",
+   "ext/R1: manifest and files agree (none = no list): planted True, returned False"
+  ]
+ },
+ "M70 first production frame said to differ only when it is in the opposite state": {
+  "mode": "staged",
+  "stage": "A",
+  "runs_with_the_copy": [
+   "flip/X1"
+  ],
+  "replacements": 1,
+  "analysis_exit": 0,
+  "compare_exit": 1,
+  "n_values": 519,
+  "n_failed": 3,
+  "runs_with_a_failure": [
+   "flip/X1"
+  ],
+  "examples": [
+   "flip/X1: first production frame: state, and whether it differs from the state of the start: planted ['I', True], returned ['I', False]",
+   "flip/X1: campaign-table values: state of the first frame, differs from the start, sign at N2: planted ['I', True, -1], returned ['I', False, -1]",
+   "flip/X1: by design: state of the first production frame, differs from the start; sign at N2, differs from the start: planted ['I', True, -1, True], returned ['I', False, -1, True]"
+  ]
+ },
+ "M71 sign at N2 of the first production frame compared with +1 for every start": {
+  "mode": "staged",
+  "stage": "A",
+  "runs_with_the_copy": [
+   "ext/R1",
+   "gate/R1"
+  ],
+  "replacements": 1,
+  "analysis_exit": 0,
+  "compare_exit": 1,
+  "n_values": 851,
+  "n_failed": 3,
+  "runs_with_a_failure": [
+   "ext/R1",
+   "gate/R1"
+  ],
+  "examples": [
+   "gate/R1: first production frame: sign at N2, and whether it differs from the sign of the start: planted [-1, False], returned [-1, True]",
+   "ext/R1: first production frame: sign at N2, and whether it differs from the sign of the start: planted [-1, False], returned [-1, True]",
+   "ext/R1: by design: state of the first production frame, differs from the start; sign at N2, differs from the start: planted ['R', False, -1, False], returned ['R', False, -1, True]"
+  ]
+ },
+ "M72 no imaging of zinc and ligand in the equilibration frames": {
+  "mode": "staged",
+  "stage": "A",
+  "runs_with_the_copy": [
+   "ext/R1",
+   "scaled/N1"
+  ],
+  "replacements": 1,
+  "analysis_exit": 0,
+  "compare_exit": 1,
+  "n_values": 987,
+  "n_failed": 94,
+  "runs_with_a_failure": [
+   "ext/R1",
+   "scaled/N1"
+  ],
+  "examples": [
+   "ext/R1: equilibration, every frame: lig_rmsd_A, largest difference: planted 0.0, returned 146.137675",
+   "ext/R1: equilibration, every frame: lig_rmsd_identity_A, largest difference: planted 0.0, returned 146.137675",
+   "ext/R1: equilibration, every frame: d1_N1_F131CZ_A, largest difference: planted 0.0, returned 147.16715100000002"
+  ]
+ },
+ "M73 extension steps of the held part left out (only the files eqNN read)": {
+  "mode": "staged",
+  "stage": "A",
+  "runs_with_the_copy": [
+   "ext/R1"
+  ],
+  "replacements": 1,
+  "analysis_exit": 0,
+  "compare_exit": 1,
+  "n_values": 463,
+  "n_failed": 24,
+  "runs_with_a_failure": [
+   "ext/R1"
+  ],
+  "examples": [
+   "ext/R1: campaign-table value: solute frames of the equilibration: planted 300, returned 200",
+   "ext/R1: equilibration: solute frames and full frames read: planted [300, 30], returned [200, 20]",
+   "ext/R1: equilibration: lines of timeseries_equil_solute.csv: planted 300, returned 200"
+  ]
+ },
+ "M74 extension steps read after all stages, not after their own stage": {
+  "mode": "staged",
+  "stage": "A",
+  "runs_with_the_copy": [
+   "ext/R1",
+   "glu/X0"
+  ],
+  "replacements": 1,
+  "analysis_exit": 1,
+  "compare_exit": 1,
+  "n_failed": null,
+  "note": "KeyError: 1000"
+ },
+ "M75 the count of the driver compared with the first full frame of the step, not the last": {
+  "mode": "staged",
+  "stage": "A",
+  "runs_with_the_copy": [
+   "ext/R1",
+   "flip/X1"
+  ],
+  "replacements": 1,
+  "analysis_exit": 0,
+  "compare_exit": 1,
+  "n_values": 1020,
+  "n_failed": 22,
+  "runs_with_a_failure": [
+   "ext/R1",
+   "flip/X1"
+  ],
+  "examples": [
+   "ext/R1: warnings: planted 1, returned 2",
+   "ext/R1: equilibration, stage 2: last full frame (frame, time, water oxygens at the crystal ring positions): planted [3, -2.6, 0], returned [1, -2.8, 0]",
+   "ext/R1: equilibration, stage 3: last full frame (frame, time, water oxygens at the crystal ring positions): planted [6, -2.3, 0], returned [4, -2.5, 0]"
+  ]
+ },
+ "M76 the wider count without the aniline N (six positions instead of seven)": {
+  "mode": "staged",
+  "stage": "A",
+  "runs_with_the_copy": [
+   "default/R1",
+   "place/R1",
+   "ext/R1"
+  ],
+  "replacements": 1,
+  "analysis_exit": 0,
+  "compare_exit": 1,
+  "n_values": 1379,
+  "n_failed": 45,
+  "runs_with_a_failure": [
+   "default/R1",
+   "ext/R1",
+   "place/R1"
+  ],
+  "examples": [
+   "ext/R1: every full frame: n_water_ring_wide_3p5A, frames that differ: planted 0, returned 20",
+   "ext/R1: every full frame: d_water_ring_wide_min_A, largest difference: planted 0.0, returned 0.20000000000000018",
+   "ext/R1: water at the crystal ring positions: mean number within 3.5 A: planted 1.0, returned 0.0"
+  ]
+ },
+ "M77 the count of the driver within 2.7 instead of 2.5 A (default cut-off)": {
+  "mode": "staged",
+  "stage": "A",
+  "runs_with_the_copy": [
+   "default/R1",
+   "place/R1",
+   "ext/R1"
+  ],
+  "replacements": 1,
+  "analysis_exit": 0,
+  "compare_exit": 1,
+  "n_values": 1379,
+  "n_failed": 9,
+  "runs_with_a_failure": [
+   "default/R1",
+   "place/R1"
+  ],
+  "examples": [
+   "default/R1: every full frame: n_water_ring_place, frames that differ: planted 0, returned 10",
+   "default/R1: water in the place of the ring: site atoms and cut-off used: planted [['C1', 'C2', 'C3', 'C4', 'C5', 'C6'], 2.5], returned [['C1', 'C2', 'C3', 'C4', 'C5', 'C6'], 2.7]",
+   "default/R1: water in the place of the ring: mean number: planted 1.0, returned 1.5"
+  ]
+ },
+ "M78 the count of the driver within 2.3 instead of 2.5 A (default cut-off)": {
+  "mode": "staged",
+  "stage": "A",
+  "runs_with_the_copy": [
+   "default/R1",
+   "place/R1",
+   "ext/R1"
+  ],
+  "replacements": 1,
+  "analysis_exit": 0,
+  "compare_exit": 1,
+  "n_values": 1379,
+  "n_failed": 10,
+  "runs_with_a_failure": [
+   "default/R1",
+   "place/R1"
+  ],
+  "examples": [
+   "default/R1: every full frame: n_water_ring_place, frames that differ: planted 0, returned 15",
+   "default/R1: water in the place of the ring: site atoms and cut-off used: planted [['C1', 'C2', 'C3', 'C4', 'C5', 'C6'], 2.5], returned [['C1', 'C2', 'C3', 'C4', 'C5', 'C6'], 2.3]",
+   "default/R1: water in the place of the ring: mean number: planted 1.0, returned 0.25"
+  ]
+ },
+ "M79 site atoms and cut-off of the manifest not read (the defaults for every run)": {
+  "mode": "staged",
+  "stage": "A",
+  "runs_with_the_copy": [
+   "default/R1",
+   "place/R1",
+   "ext/R1"
+  ],
+  "replacements": 1,
+  "analysis_exit": 0,
+  "compare_exit": 1,
+  "n_values": 1379,
+  "n_failed": 30,
+  "runs_with_a_failure": [
+   "ext/R1",
+   "place/R1"
+  ],
+  "examples": [
+   "ext/R1: every full frame: n_water_ring_place, frames that differ: planted 0, returned 20",
+   "ext/R1: every full frame: d_water_ring_place_min_A, largest difference: planted 0.0, returned 0.20000000000000018",
+   "ext/R1: water in the place of the ring: site atoms and cut-off used: planted [['C1', 'C2', 'C3', 'C4', 'C5', 'C6', 'N1'], 3.5], returned [['C1', 'C2', 'C3', 'C4', 'C5', 'C6'], 2.5]"
+  ]
+ },
+ "M80 the cut-off of the manifest read, its site atoms not": {
+  "mode": "staged",
+  "stage": "A",
+  "runs_with_the_copy": [
+   "default/R1",
+   "place/R1",
+   "ext/R1"
+  ],
+  "replacements": 1,
+  "analysis_exit": 0,
+  "compare_exit": 1,
+  "n_values": 1379,
+  "n_failed": 27,
+  "runs_with_a_failure": [
+   "ext/R1"
+  ],
+  "examples": [
+   "ext/R1: warnings: planted 1, returned 2",
+   "ext/R1: every full frame: n_water_ring_place, frames that differ: planted 0, returned 20",
+   "ext/R1: every full frame: d_water_ring_place_min_A, largest difference: planted 0.0, returned 0.20000000000000018"
+  ]
+ },
+ "M81 the site atoms of the manifest read, its cut-off not": {
+  "mode": "staged",
+  "stage": "A",
+  "runs_with_the_copy": [
+   "default/R1",
+   "place/R1",
+   "ext/R1"
+  ],
+  "replacements": 1,
+  "analysis_exit": 0,
+  "compare_exit": 1,
+  "n_values": 1379,
+  "n_failed": 17,
+  "runs_with_a_failure": [
+   "ext/R1"
+  ],
+  "examples": [
+   "ext/R1: warnings: planted 1, returned 2",
+   "ext/R1: every full frame: n_water_ring_place, frames that differ: planted 0, returned 20",
+   "ext/R1: water in the place of the ring: site atoms and cut-off used: planted [['C1', 'C2', 'C3', 'C4', 'C5', 'C6', 'N1'], 3.5], returned [['C1', 'C2', 'C3', 'C4', 'C5', 'C6', 'N1'], 2.5]"
+  ]
+ },
+ "M82 the count of the driver compared with the wider count (the comparison of version 1.2)": {
+  "mode": "staged",
+  "stage": "A",
+  "runs_with_the_copy": [
+   "default/R1",
+   "place/R1",
+   "ext/R1"
+  ],
+  "replacements": 1,
+  "analysis_exit": 0,
+  "compare_exit": 1,
+  "n_values": 1379,
+  "n_failed": 6,
+  "runs_with_a_failure": [
+   "place/R1"
+  ],
+  "examples": [
+   "place/R1: warnings: planted 0, returned 4",
+   "place/R1: equilibration, stage 3: the count of the driver in the manifest (none: not recorded), and whether the analysis agrees with it: planted [0, True], returned [0, False]",
+   "place/R1: equilibration, stage 3, extension step 1: the count of the driver in the manifest (none: not recorded), and whether the analysis agrees with it: planted [0, True], returned [0, False]"
+  ]
+ },
+ "M83 the nearest distance of the driver compared with that of the wider count": {
+  "mode": "staged",
+  "stage": "A",
+  "runs_with_the_copy": [
+   "default/R1",
+   "place/R1",
+   "ext/R1"
+  ],
+  "replacements": 1,
+  "analysis_exit": 0,
+  "compare_exit": 1,
+  "n_values": 1379,
+  "n_failed": 2,
+  "runs_with_a_failure": [
+   "place/R1"
+  ],
+  "examples": [
+   "place/R1: warnings: planted 0, returned 1",
+   "place/R1: by design: equilibration, the nearest water oxygen of the driver at the end of these steps agrees with the analysis: planted [True, True, True, True], returned [True, True, True, False]"
+  ]
+ },
+ "M84 no warning when the settings of a run are not those of the plan": {
+  "mode": "staged",
+  "stage": "A",
+  "runs_with_the_copy": [
+   "default/R1",
+   "place/R1",
+   "ext/R1"
+  ],
+  "replacements": 1,
+  "analysis_exit": 0,
+  "compare_exit": 1,
+  "n_values": 1379,
+  "n_failed": 1,
+  "runs_with_a_failure": [
+   "ext/R1"
+  ],
+  "examples": [
+   "ext/R1: warnings: planted 1, returned 0"
+  ]
+ }
+}

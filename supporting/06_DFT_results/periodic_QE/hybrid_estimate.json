@@ -1,0 +1,48 @@
+{
+ "setting": {
+  "ecut_Ry": [
+   70,
+   560
+  ],
+  "k": "2x1x1",
+  "nk_irr": 2
+ },
+ "pbe_scf_core_h": 0.1,
+ "exx_per_kq_pair_per_loop_core_s": [
+  987.4,
+  1974.8
+ ],
+ "outer_loops_assumed": [
+  4,
+  7
+ ],
+ "estimate_per_single_point": {
+  "nq 1x1x1": {
+   "core_h": [
+    2.5,
+    8.1
+   ],
+   "wall_h_24_ranks": [
+    0.14,
+    0.45
+   ]
+  },
+  "nq 2x1x1 (QE 7.5 default = k grid)": {
+   "core_h": [
+    4.7,
+    15.8
+   ],
+   "wall_h_24_ranks": [
+    0.26,
+    0.88
+   ]
+  }
+ },
+ "basis": "FFT-count model (no complete probe)",
+ "status": "UNVERIFIED order-of-magnitude estimate",
+ "ecutfock_Ry": 280,
+ "notes": [
+  "Two single points are needed for Delta E: relax_i and the neutral form (relax_ii if it stays on O5, otherwise the constrained relax_iifix).  Because PBE biases acid-base crystals towards the salt (LeBlanc et al. 2018, doi:10.1002/anie.201809381), this hybrid check is what tests the PBE conclusion.  A hybrid relaxation would cost roughly the per-point figure times the number of BFGS steps and is not proposed.",
+  "nq 1x1x1 is the usual cheap choice for an insulator with a 3x2x2 k grid; the QE 7.5 default (nq = k grid) is ~12x dearer."
+ ]
+}

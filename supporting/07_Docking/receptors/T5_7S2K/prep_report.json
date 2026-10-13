@@ -1,0 +1,165 @@
+{
+  "target": "T5_7S2K",
+  "pdb": "7S2K",
+  "chain": "A",
+  "ph": 7.4,
+  "rebuild_loops": true,
+  "dropped_het": [],
+  "keep_requested": [
+    "MG",
+    "POP"
+  ],
+  "n_protein_residues": 268,
+  "cofactors_kept": [
+    "A/POP302"
+  ],
+  "metals_kept": [
+    "A/MG303"
+  ],
+  "waters_kept": [
+    {
+      "id": "A/HOH452",
+      "metal_dist": 1.95
+    },
+    {
+      "id": "A/HOH479",
+      "metal_dist": 2.19
+    },
+    {
+      "id": "A/HOH495",
+      "metal_dist": 2.13
+    }
+  ],
+  "altloc_chosen": {
+    "A:HOH406": "A",
+    "A:HOH469": "B",
+    "A:HOH475": "B",
+    "A:HOH548": "B",
+    "A:HOH549": "B",
+    "A:HOH550": "A",
+    "A:HOH554": "A",
+    "A:HOH566": "A",
+    "A:HOH568": "A",
+    "A:HOH576": "B",
+    "A:HOH588": "A",
+    "A:HOH589": "B",
+    "A:HOH596": "A",
+    "B:HOH424": "A",
+    "B:HOH451": "A",
+    "B:HOH460": "A",
+    "B:HOH479": "A",
+    "B:HOH486": "B",
+    "B:HOH513": "A",
+    "B:HOH537": "B",
+    "B:HOH538": "B",
+    "B:HOH552": "A",
+    "B:HOH558": "A"
+  },
+  "n_residues_with_altlocs": 23,
+  "water_rule": "kept only waters within 2.6 A of a kept metal; written as a bare OA oxygen (no hydrogens placed)",
+  "deposited_sequence_length": 271,
+  "unobserved_residues_auth_numbering": [
+    "1",
+    "2",
+    "3"
+  ],
+  "pdbfixer_seed": 20260928,
+  "missing_residues_terminal_skipped": {
+    "0:0": [
+      "MET",
+      "ASN",
+      "LYS"
+    ]
+  },
+  "missing_residues_rebuilt": {},
+  "nonstandard_residues": [],
+  "missing_atoms": {},
+  "propka": {
+    "ok": true,
+    "n_residues": 67,
+    "file": "propka.pka"
+  },
+  "protonation_variants": [
+    {
+      "residue": "A:ASP85",
+      "variant": "ASH",
+      "reason": "PROPKA pKa 7.61 > 7.4: protonated"
+    },
+    {
+      "residue": "A:HIS129",
+      "variant": "HIE",
+      "reason": "PROPKA pKa 4.52; neutral, HIE"
+    },
+    {
+      "residue": "A:HIS149",
+      "variant": "HIE",
+      "reason": "PROPKA pKa 7.02; neutral, HIE"
+    },
+    {
+      "residue": "A:GLU235",
+      "variant": "GLH",
+      "reason": "PROPKA pKa 7.79 > 7.4: protonated"
+    },
+    {
+      "residue": "A:HIS249",
+      "variant": "HIE",
+      "reason": "PROPKA pKa 1.17; neutral, HIE"
+    }
+  ],
+  "protonation_flagged": [],
+  "n_hydrogens_added": 5,
+  "minimisation": {
+    "energy_before_kJ_mol": -22825.4,
+    "energy_after_kJ_mol": -24414.8,
+    "n_restrained": 1981,
+    "n_free": 2007,
+    "max_displacement_restrained_A": 0.175,
+    "rms_displacement_restrained_A": 0.016,
+    "max_displacement_free_A": 1.547,
+    "restraint_k_kJ_mol_nm2": 100000.0
+  },
+  "reference_ligand": {
+    "name": "78H",
+    "chain": "A",
+    "seqid": 301,
+    "heavy_atoms": 23,
+    "smiles": "Nc1nc2c(c(=O)[nH]1)N=C(CNc1ccc(C(=O)O)cc1)CN2",
+    "centre": [
+      25.924,
+      4.432,
+      7.893
+    ]
+  },
+  "mk_prepare_receptor": {
+    "returncode": 0,
+    "stdout": "Template padding will be used.\n\u001b[32m gasteiger charges will be read from template file \n \u001b[0m\n\nFiles written:\n   /root/workspace/cqc-4-sulfamoylanilinium-dihydrogen-phosphate/dock/T5_7S2K/protein.json <-- parameterized receptor\n  /root/workspace/cqc-4-sulfamoylanilinium-dihydrogen-phosphate/dock/T5_7S2K/protein.pdbqt <-- static (i.e., rigid) receptor input file\n/root/workspace/cqc-4-sulfamoylanilinium-dihydrogen-phosphate/dock/T5_7S2K/protein_box.txt <-- Vina-style box dimension file\n/root/workspace/cqc-4-sulfamoylanilinium-dihydrogen-phosphate/dock/T5_7S2K/protein.box.pdb <-- PDB file to visualize the grid box\n",
+    "stderr": "",
+    "cmd": "mk_prepare_receptor.py --read_pdb /root/workspace/cqc-4-sulfamoylanilinium-dihydrogen-phosphate/dock/T5_7S2K/fixed_protein.pdb -o /root/workspace/cqc-4-sulfamoylanilinium-dihydrogen-phosphate/dock/T5_7S2K/protein -p -j --box_size 20.0 20.0 20.0 --box_center 25.924 4.432 7.893 --default_altloc A -v /root/workspace/cqc-4-sulfamoylanilinium-dihydrogen-phosphate/dock/T5_7S2K/protein_box.txt"
+  },
+  "n_receptor_atoms": {
+    "protein": 2419,
+    "cofactor_block": 13,
+    "total": 2432
+  },
+  "checks": {
+    "atom_types": [
+      "A",
+      "C",
+      "HD",
+      "Mg",
+      "N",
+      "NA",
+      "OA",
+      "P",
+      "SA"
+    ],
+    "all_types_known": true,
+    "receptor_atoms_in_box": 489,
+    "heavy_pairs_below_1.1A": 0,
+    "min_heavy_heavy_distance_A": null,
+    "geometry_ok": true,
+    "ref_ligand_margin_A": 3.67,
+    "receptor_pdbqt_sha256": "81531f8ef481089cf037d26fd595c45dead991f14132d266ee691aa60301a4df",
+    "receptor_pdb_sha256": "910302fc3e5e91a4b4e30327731243ae0726eb73014c2e72e43de161f36ffb19"
+  }
+}

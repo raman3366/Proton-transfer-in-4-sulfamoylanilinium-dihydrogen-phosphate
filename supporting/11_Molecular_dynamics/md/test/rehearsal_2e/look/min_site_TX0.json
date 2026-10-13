@@ -1,0 +1,497 @@
+{
+ "what": "min_site.py RUN_DIR SYSTEM_DIR OUT.json: the zinc site and the ligand before and after the minimisation of a\nREHEARSAL run on the GPU (state_min.xml against system.inpcrd), with the functions of md/build_topology.py; also\nthe amide hydrogens of the residues after the three zinc histidines.  Not a result for the paper.",
+ "run": "/tmp/claude-0/-root-workspace-cqc-4-sulfamoylanilinium-dihydrogen-phosphate/82cc65d7-a11f-4d60-91ee-436dc9534941/scratchpad/rehearsal/runs_test/bonded_2e/TX0",
+ "system": "/root/cqc-sfa-md/systems/bonded_2e/X",
+ "r0_A": {
+  "N2": 1.931,
+  "H119ND1": 2.018,
+  "H96NE2": 2.021,
+  "H94NE2": 2.01
+ },
+ "states": {
+  "as built (system.inpcrd)": {
+   "lig_rmsd_symmetry_corrected_A": 0.0,
+   "ca_rmsd_A": 0.0,
+   "d1_N1_Phe131CZ_A": 3.897,
+   "d2_N1_Asn67OD1_A": 7.744,
+   "zn_distances_A": {
+    "N2": 1.9314,
+    "H94NE2": 2.0099,
+    "H96NE2": 2.0206,
+    "H119ND1": 2.0183
+   },
+   "zn_distance_minus_r0_A": {
+    "N2": 0.0004,
+    "H94NE2": -0.0001,
+    "H96NE2": -0.0004,
+    "H119ND1": 0.0003
+   },
+   "N_Zn_N_deg": {
+    "N2-Zn-H94NE2": 108.92,
+    "N2-Zn-H96NE2": 114.28,
+    "N2-Zn-H119ND1": 116.83,
+    "H94NE2-Zn-H96NE2": 103.82,
+    "H94NE2-Zn-H119ND1": 113.59,
+    "H96NE2-Zn-H119ND1": 98.41
+   },
+   "Zn_O1_A": 4.051,
+   "Zn_O2_A": 2.986,
+   "S_N2_A": 1.5963,
+   "C4_S_N2_deg": 108.79,
+   "tau_fold_deg": 132.06,
+   "Zn_N2_S_C4_deg": -117.03,
+   "N2_Thr199OG1_A": 2.861,
+   "N2_HN21_Thr199OG1_deg": 163.7,
+   "n2_signed_volume_Zn_H_S": 0.724,
+   "Zn_N2_S_deg": 117.55,
+   "Zn_N2_HN21_deg": 107.41,
+   "S_N2_HN21_deg": 107.41,
+   "amide_H": {
+    "PHE95": {
+     "C-N-H_deg": 118.3,
+     "improper_C_CA_N_H_deg": -179.3
+    },
+    "TRP97": {
+     "C-N-H_deg": 122.1,
+     "improper_C_CA_N_H_deg": -176.5
+    },
+    "LEU120": {
+     "C-N-H_deg": 117.8,
+     "improper_C_CA_N_H_deg": -177.1
+    }
+   }
+  },
+  "min": {
+   "lig_rmsd_symmetry_corrected_A": 0.1976,
+   "ca_rmsd_A": 0.1257,
+   "d1_N1_Phe131CZ_A": 3.724,
+   "d2_N1_Asn67OD1_A": 7.76,
+   "zn_distances_A": {
+    "N2": 1.9266,
+    "H94NE2": 2.0068,
+    "H96NE2": 2.0313,
+    "H119ND1": 2.0426
+   },
+   "zn_distance_minus_r0_A": {
+    "N2": -0.0044,
+    "H94NE2": -0.0032,
+    "H96NE2": 0.0103,
+    "H119ND1": 0.0246
+   },
+   "N_Zn_N_deg": {
+    "N2-Zn-H94NE2": 104.38,
+    "N2-Zn-H96NE2": 115.74,
+    "N2-Zn-H119ND1": 118.76,
+    "H94NE2-Zn-H96NE2": 102.67,
+    "H94NE2-Zn-H119ND1": 114.8,
+    "H96NE2-Zn-H119ND1": 99.72
+   },
+   "Zn_O1_A": 3.979,
+   "Zn_O2_A": 2.975,
+   "S_N2_A": 1.5724,
+   "C4_S_N2_deg": 108.97,
+   "tau_fold_deg": 130.58,
+   "Zn_N2_S_C4_deg": -125.94,
+   "N2_Thr199OG1_A": 2.852,
+   "N2_HN21_Thr199OG1_deg": 169.3,
+   "n2_signed_volume_Zn_H_S": 0.7378,
+   "Zn_N2_S_deg": 113.46,
+   "Zn_N2_HN21_deg": 104.64,
+   "S_N2_HN21_deg": 113.12,
+   "amide_H": {
+    "PHE95": {
+     "C-N-H_deg": 118.3,
+     "improper_C_CA_N_H_deg": 175.7
+    },
+    "TRP97": {
+     "C-N-H_deg": 118.8,
+     "improper_C_CA_N_H_deg": -176.9
+    },
+    "LEU120": {
+     "C-N-H_deg": 118.0,
+     "improper_C_CA_N_H_deg": 168.8
+    }
+   },
+   "moved_A": {
+    "ZN": 0.146,
+    "C1": 0.226,
+    "C2": 0.217,
+    "C3": 0.187,
+    "C4": 0.177,
+    "C5": 0.238,
+    "C6": 0.257,
+    "N1": 0.229,
+    "N2": 0.231,
+    "O1": 0.129,
+    "O2": 0.099,
+    "S": 0.112,
+    "HN21": 0.359
+   },
+   "largest_move_of_zinc_or_a_ligand_heavy_atom_A": 0.257
+  },
+  "eq01": {
+   "lig_rmsd_symmetry_corrected_A": 0.3544,
+   "ca_rmsd_A": 0.2095,
+   "d1_N1_Phe131CZ_A": 3.897,
+   "d2_N1_Asn67OD1_A": 6.462,
+   "zn_distances_A": {
+    "N2": 1.9068,
+    "H94NE2": 1.976,
+    "H96NE2": 1.9515,
+    "H119ND1": 1.9316
+   },
+   "zn_distance_minus_r0_A": {
+    "N2": -0.0242,
+    "H94NE2": -0.034,
+    "H96NE2": -0.0695,
+    "H119ND1": -0.0864
+   },
+   "N_Zn_N_deg": {
+    "N2-Zn-H94NE2": 106.17,
+    "N2-Zn-H96NE2": 116.31,
+    "N2-Zn-H119ND1": 117.21,
+    "H94NE2-Zn-H96NE2": 99.11,
+    "H94NE2-Zn-H119ND1": 113.87,
+    "H96NE2-Zn-H119ND1": 102.94
+   },
+   "Zn_O1_A": 3.966,
+   "Zn_O2_A": 2.954,
+   "S_N2_A": 1.5783,
+   "C4_S_N2_deg": 107.31,
+   "tau_fold_deg": 151.27,
+   "Zn_N2_S_C4_deg": -122.14,
+   "N2_Thr199OG1_A": 2.832,
+   "N2_HN21_Thr199OG1_deg": 169.6,
+   "n2_signed_volume_Zn_H_S": 0.7134,
+   "Zn_N2_S_deg": 113.1,
+   "Zn_N2_HN21_deg": 105.38,
+   "S_N2_HN21_deg": 115.02,
+   "amide_H": {
+    "PHE95": {
+     "C-N-H_deg": 115.4,
+     "improper_C_CA_N_H_deg": 176.7
+    },
+    "TRP97": {
+     "C-N-H_deg": 113.8,
+     "improper_C_CA_N_H_deg": -167.8
+    },
+    "LEU120": {
+     "C-N-H_deg": 124.1,
+     "improper_C_CA_N_H_deg": 168.6
+    }
+   }
+  },
+  "eq02": {
+   "lig_rmsd_symmetry_corrected_A": 0.2828,
+   "ca_rmsd_A": 0.2016,
+   "d1_N1_Phe131CZ_A": 3.479,
+   "d2_N1_Asn67OD1_A": 7.544,
+   "zn_distances_A": {
+    "N2": 1.9733,
+    "H94NE2": 2.0199,
+    "H96NE2": 1.9982,
+    "H119ND1": 2.0846
+   },
+   "zn_distance_minus_r0_A": {
+    "N2": 0.0423,
+    "H94NE2": 0.0099,
+    "H96NE2": -0.0228,
+    "H119ND1": 0.0666
+   },
+   "N_Zn_N_deg": {
+    "N2-Zn-H94NE2": 98.54,
+    "N2-Zn-H96NE2": 118.29,
+    "N2-Zn-H119ND1": 119.46,
+    "H94NE2-Zn-H96NE2": 104.52,
+    "H94NE2-Zn-H119ND1": 115.51,
+    "H96NE2-Zn-H119ND1": 100.35
+   },
+   "Zn_O1_A": 4.131,
+   "Zn_O2_A": 3.154,
+   "S_N2_A": 1.609,
+   "C4_S_N2_deg": 106.05,
+   "tau_fold_deg": 125.02,
+   "Zn_N2_S_C4_deg": -122.01,
+   "N2_Thr199OG1_A": 2.785,
+   "N2_HN21_Thr199OG1_deg": 172.4,
+   "n2_signed_volume_Zn_H_S": 0.7495,
+   "Zn_N2_S_deg": 115.64,
+   "Zn_N2_HN21_deg": 106.1,
+   "S_N2_HN21_deg": 108.3,
+   "amide_H": {
+    "PHE95": {
+     "C-N-H_deg": 112.0,
+     "improper_C_CA_N_H_deg": 170.5
+    },
+    "TRP97": {
+     "C-N-H_deg": 118.0,
+     "improper_C_CA_N_H_deg": -166.5
+    },
+    "LEU120": {
+     "C-N-H_deg": 115.6,
+     "improper_C_CA_N_H_deg": 170.7
+    }
+   }
+  },
+  "eq03": {
+   "lig_rmsd_symmetry_corrected_A": 0.5852,
+   "ca_rmsd_A": 0.2958,
+   "d1_N1_Phe131CZ_A": 4.022,
+   "d2_N1_Asn67OD1_A": 7.732,
+   "zn_distances_A": {
+    "N2": 1.9466,
+    "H94NE2": 2.0017,
+    "H96NE2": 2.0481,
+    "H119ND1": 2.0188
+   },
+   "zn_distance_minus_r0_A": {
+    "N2": 0.0156,
+    "H94NE2": -0.0083,
+    "H96NE2": 0.0271,
+    "H119ND1": 0.0008
+   },
+   "N_Zn_N_deg": {
+    "N2-Zn-H94NE2": 105.99,
+    "N2-Zn-H96NE2": 113.16,
+    "N2-Zn-H119ND1": 118.34,
+    "H94NE2-Zn-H96NE2": 104.03,
+    "H94NE2-Zn-H119ND1": 116.81,
+    "H96NE2-Zn-H119ND1": 97.57
+   },
+   "Zn_O1_A": 4.11,
+   "Zn_O2_A": 3.129,
+   "S_N2_A": 1.5797,
+   "C4_S_N2_deg": 106.97,
+   "tau_fold_deg": 137.74,
+   "Zn_N2_S_C4_deg": -119.72,
+   "N2_Thr199OG1_A": 2.844,
+   "N2_HN21_Thr199OG1_deg": 165.2,
+   "n2_signed_volume_Zn_H_S": 0.7211,
+   "Zn_N2_S_deg": 115.07,
+   "Zn_N2_HN21_deg": 104.47,
+   "S_N2_HN21_deg": 113.17,
+   "amide_H": {
+    "PHE95": {
+     "C-N-H_deg": 123.1,
+     "improper_C_CA_N_H_deg": 173.7
+    },
+    "TRP97": {
+     "C-N-H_deg": 120.7,
+     "improper_C_CA_N_H_deg": -177.4
+    },
+    "LEU120": {
+     "C-N-H_deg": 117.1,
+     "improper_C_CA_N_H_deg": 171.7
+    }
+   }
+  },
+  "eq04": {
+   "lig_rmsd_symmetry_corrected_A": 0.7131,
+   "ca_rmsd_A": 0.3747,
+   "d1_N1_Phe131CZ_A": 3.847,
+   "d2_N1_Asn67OD1_A": 8.27,
+   "zn_distances_A": {
+    "N2": 1.8832,
+    "H94NE2": 2.0166,
+    "H96NE2": 2.0059,
+    "H119ND1": 2.1106
+   },
+   "zn_distance_minus_r0_A": {
+    "N2": -0.0478,
+    "H94NE2": 0.0066,
+    "H96NE2": -0.0151,
+    "H119ND1": 0.0926
+   },
+   "N_Zn_N_deg": {
+    "N2-Zn-H94NE2": 109.86,
+    "N2-Zn-H96NE2": 121.63,
+    "N2-Zn-H119ND1": 113.03,
+    "H94NE2-Zn-H96NE2": 103.7,
+    "H94NE2-Zn-H119ND1": 108.99,
+    "H96NE2-Zn-H119ND1": 98.54
+   },
+   "Zn_O1_A": 4.017,
+   "Zn_O2_A": 3.173,
+   "S_N2_A": 1.5739,
+   "C4_S_N2_deg": 114.49,
+   "tau_fold_deg": 144.94,
+   "Zn_N2_S_C4_deg": -124.62,
+   "N2_Thr199OG1_A": 3.08,
+   "N2_HN21_Thr199OG1_deg": 158.7,
+   "n2_signed_volume_Zn_H_S": 0.6586,
+   "Zn_N2_S_deg": 118.67,
+   "Zn_N2_HN21_deg": 107.47,
+   "S_N2_HN21_deg": 111.86,
+   "amide_H": {
+    "PHE95": {
+     "C-N-H_deg": 114.3,
+     "improper_C_CA_N_H_deg": -162.1
+    },
+    "TRP97": {
+     "C-N-H_deg": 125.0,
+     "improper_C_CA_N_H_deg": 179.4
+    },
+    "LEU120": {
+     "C-N-H_deg": 123.0,
+     "improper_C_CA_N_H_deg": 169.6
+    }
+   }
+  },
+  "eq05": {
+   "lig_rmsd_symmetry_corrected_A": 0.4113,
+   "ca_rmsd_A": 0.5174,
+   "d1_N1_Phe131CZ_A": 4.91,
+   "d2_N1_Asn67OD1_A": 6.876,
+   "zn_distances_A": {
+    "N2": 1.867,
+    "H94NE2": 1.9801,
+    "H96NE2": 2.089,
+    "H119ND1": 1.9837
+   },
+   "zn_distance_minus_r0_A": {
+    "N2": -0.064,
+    "H94NE2": -0.0299,
+    "H96NE2": 0.068,
+    "H119ND1": -0.0343
+   },
+   "N_Zn_N_deg": {
+    "N2-Zn-H94NE2": 104.2,
+    "N2-Zn-H96NE2": 112.44,
+    "N2-Zn-H119ND1": 121.26,
+    "H94NE2-Zn-H96NE2": 103.78,
+    "H94NE2-Zn-H119ND1": 119.97,
+    "H96NE2-Zn-H119ND1": 93.48
+   },
+   "Zn_O1_A": 4.004,
+   "Zn_O2_A": 3.008,
+   "S_N2_A": 1.5629,
+   "C4_S_N2_deg": 108.86,
+   "tau_fold_deg": 127.63,
+   "Zn_N2_S_C4_deg": -119.69,
+   "N2_Thr199OG1_A": 2.936,
+   "N2_HN21_Thr199OG1_deg": 166.0,
+   "n2_signed_volume_Zn_H_S": 0.6707,
+   "Zn_N2_S_deg": 114.19,
+   "Zn_N2_HN21_deg": 107.06,
+   "S_N2_HN21_deg": 115.93,
+   "amide_H": {
+    "PHE95": {
+     "C-N-H_deg": 114.8,
+     "improper_C_CA_N_H_deg": -173.1
+    },
+    "TRP97": {
+     "C-N-H_deg": 118.2,
+     "improper_C_CA_N_H_deg": -159.4
+    },
+    "LEU120": {
+     "C-N-H_deg": 123.7,
+     "improper_C_CA_N_H_deg": -176.0
+    }
+   }
+  },
+  "eq06": {
+   "lig_rmsd_symmetry_corrected_A": 0.241,
+   "ca_rmsd_A": 0.7377,
+   "d1_N1_Phe131CZ_A": 4.225,
+   "d2_N1_Asn67OD1_A": 7.147,
+   "zn_distances_A": {
+    "N2": 1.9607,
+    "H94NE2": 1.9811,
+    "H96NE2": 2.0325,
+    "H119ND1": 2.0759
+   },
+   "zn_distance_minus_r0_A": {
+    "N2": 0.0297,
+    "H94NE2": -0.0289,
+    "H96NE2": 0.0115,
+    "H119ND1": 0.0579
+   },
+   "N_Zn_N_deg": {
+    "N2-Zn-H94NE2": 107.44,
+    "N2-Zn-H96NE2": 119.21,
+    "N2-Zn-H119ND1": 116.64,
+    "H94NE2-Zn-H96NE2": 102.92,
+    "H94NE2-Zn-H119ND1": 111.71,
+    "H96NE2-Zn-H119ND1": 98.06
+   },
+   "Zn_O1_A": 3.988,
+   "Zn_O2_A": 2.949,
+   "S_N2_A": 1.5699,
+   "C4_S_N2_deg": 109.07,
+   "tau_fold_deg": 139.32,
+   "Zn_N2_S_C4_deg": -124.12,
+   "N2_Thr199OG1_A": 2.939,
+   "N2_HN21_Thr199OG1_deg": 164.1,
+   "n2_signed_volume_Zn_H_S": 0.6887,
+   "Zn_N2_S_deg": 112.1,
+   "Zn_N2_HN21_deg": 105.86,
+   "S_N2_HN21_deg": 117.57,
+   "amide_H": {
+    "PHE95": {
+     "C-N-H_deg": 115.9,
+     "improper_C_CA_N_H_deg": -173.6
+    },
+    "TRP97": {
+     "C-N-H_deg": 116.1,
+     "improper_C_CA_N_H_deg": -166.7
+    },
+    "LEU120": {
+     "C-N-H_deg": 117.2,
+     "improper_C_CA_N_H_deg": 178.2
+    }
+   }
+  },
+  "seg0001": {
+   "lig_rmsd_symmetry_corrected_A": 0.7128,
+   "ca_rmsd_A": 0.9005,
+   "d1_N1_Phe131CZ_A": 5.76,
+   "d2_N1_Asn67OD1_A": 7.298,
+   "zn_distances_A": {
+    "N2": 1.8584,
+    "H94NE2": 2.0353,
+    "H96NE2": 2.0196,
+    "H119ND1": 1.9781
+   },
+   "zn_distance_minus_r0_A": {
+    "N2": -0.0726,
+    "H94NE2": 0.0253,
+    "H96NE2": -0.0014,
+    "H119ND1": -0.0399
+   },
+   "N_Zn_N_deg": {
+    "N2-Zn-H94NE2": 99.32,
+    "N2-Zn-H96NE2": 113.44,
+    "N2-Zn-H119ND1": 120.92,
+    "H94NE2-Zn-H96NE2": 98.84,
+    "H94NE2-Zn-H119ND1": 119.55,
+    "H96NE2-Zn-H119ND1": 103.06
+   },
+   "Zn_O1_A": 3.82,
+   "Zn_O2_A": 3.039,
+   "S_N2_A": 1.5434,
+   "C4_S_N2_deg": 110.78,
+   "tau_fold_deg": 130.84,
+   "Zn_N2_S_C4_deg": -131.91,
+   "N2_Thr199OG1_A": 3.074,
+   "N2_HN21_Thr199OG1_deg": 169.9,
+   "n2_signed_volume_Zn_H_S": 0.6625,
+   "Zn_N2_S_deg": 115.78,
+   "Zn_N2_HN21_deg": 108.7,
+   "S_N2_HN21_deg": 113.45,
+   "amide_H": {
+    "PHE95": {
+     "C-N-H_deg": 114.9,
+     "improper_C_CA_N_H_deg": 172.8
+    },
+    "TRP97": {
+     "C-N-H_deg": 115.6,
+     "improper_C_CA_N_H_deg": -179.1
+    },
+    "LEU120": {
+     "C-N-H_deg": 114.6,
+     "improper_C_CA_N_H_deg": 177.2
+    }
+   }
+  }
+ }
+}

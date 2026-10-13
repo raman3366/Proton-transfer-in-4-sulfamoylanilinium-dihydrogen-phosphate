@@ -1,0 +1,111 @@
+{
+ "script": "md/ligand_engine_check.py",
+ "versions": {
+  "python": "3.12.14",
+  "numpy": "2.5.3",
+  "scipy": "1.18.1",
+  "matplotlib": "3.11.2",
+  "openmm": "8.6.1",
+  "parmed": "4.3.1",
+  "ambertools": "ambertools-26.0-cuda_None_nompi_py312h1ea3936_100",
+  "amberhome": "/root/cqc-sfa-tools/md",
+  "gaff2_dat": {
+   "path": "/root/cqc-sfa-tools/md/dat/leap/parm/gaff2.dat",
+   "title": "AMBER General Force Field for organic molecules (Version 2.2.30, Oct 2025)",
+   "sha256": "2244b58627a85693776d12a0155a292f72b65b4398a03b87958136ad7460c67f"
+  },
+  "openmm_platform": "Reference (double precision, one thread)"
+ },
+ "rows": [
+  {
+   "species": "anion",
+   "topology": "sfa_anion_gaff2.prmtop",
+   "environment": "vacuum",
+   "openmm_E_dft_geom": -58.25385345593507,
+   "sander_E_dft_geom": -58.25,
+   "openmm_dE": -9.193426587681657,
+   "sander_dE": -9.192999999999998,
+   "diff_absolute": -0.0038534559350722475,
+   "diff_dE": -0.0004265876816589298
+  },
+  {
+   "species": "anion",
+   "topology": "sfa_anion_gaff2.prmtop",
+   "environment": "OBC2",
+   "openmm_E_dft_geom": -141.32955378393143,
+   "sander_E_dft_geom": -141.32,
+   "openmm_dE": -5.807683434219655,
+   "sander_dE": -5.810000000000002,
+   "diff_absolute": -0.009553783931437465,
+   "diff_dE": 0.002316565780347446
+  },
+  {
+   "species": "anion",
+   "topology": "sfa_anion_repaired.prmtop",
+   "environment": "vacuum",
+   "openmm_E_dft_geom": -77.67485118629097,
+   "sander_E_dft_geom": -77.671,
+   "openmm_dE": -8.981204278939074,
+   "sander_dE": -8.980999999999995,
+   "diff_absolute": -0.003851186290958708,
+   "diff_dE": -0.0002042789390799271
+  },
+  {
+   "species": "anion",
+   "topology": "sfa_anion_repaired.prmtop",
+   "environment": "OBC2",
+   "openmm_E_dft_geom": -160.75055151428728,
+   "sander_E_dft_geom": -160.74,
+   "openmm_dE": -5.595461125477129,
+   "sander_dE": -5.599999999999994,
+   "diff_absolute": -0.010551514287271857,
+   "diff_dE": 0.004538874522864944
+  },
+  {
+   "species": "neutral",
+   "topology": "sfa_neutral_gaff2.prmtop",
+   "environment": "vacuum",
+   "openmm_E_dft_geom": -163.12715729396703,
+   "sander_E_dft_geom": -163.12,
+   "openmm_dE": -1.7284653345266463,
+   "sander_dE": -1.7299999999999898,
+   "diff_absolute": -0.007157293967026135,
+   "diff_dE": 0.0015346654733434661
+  },
+  {
+   "species": "neutral",
+   "topology": "sfa_neutral_gaff2.prmtop",
+   "environment": "OBC2",
+   "openmm_E_dft_geom": -190.24064345991752,
+   "sander_E_dft_geom": -190.23,
+   "openmm_dE": -1.5481565386371585,
+   "sander_dE": -1.5500000000000114,
+   "diff_absolute": -0.010643459917531573,
+   "diff_dE": 0.0018434613628528496
+  },
+  {
+   "species": "neutral",
+   "topology": "sfa_neutral_repaired.prmtop",
+   "environment": "vacuum",
+   "openmm_E_dft_geom": -174.16571941712036,
+   "sander_E_dft_geom": -174.16,
+   "openmm_dE": -1.8522541318245658,
+   "sander_dE": -1.8499999999999943,
+   "diff_absolute": -0.005719417120360504,
+   "diff_dE": -0.0022541318245714592
+  },
+  {
+   "species": "neutral",
+   "topology": "sfa_neutral_repaired.prmtop",
+   "environment": "OBC2",
+   "openmm_E_dft_geom": -201.27920558307085,
+   "sander_E_dft_geom": -201.27,
+   "openmm_dE": -1.6719453359351064,
+   "sander_dE": -1.6699999999999875,
+   "diff_absolute": -0.00920558307083752,
+   "diff_dE": -0.0019453359351189192
+  }
+ ],
+ "largest_difference_of_dE_kcal": 0.004538874522864944,
+ "note": "sander prints energies to four decimals. Implicit water: sander igb=5 and the OBC2 force that ParmEd builds for OpenMM use the same radii (those of the topology) and the same formula; differences of absolute energies come from the constants of the two programs."
+}

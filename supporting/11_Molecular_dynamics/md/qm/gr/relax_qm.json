@@ -1,0 +1,159 @@
+{
+ "what": "part B of gate G-R, relaxed references in quantum chemistry (md/qm/gr_queue.py relax): the ligand relaxed with zinc and imidazoles fixed, from X and from Rx; energies in Hartree, differences in kcal/mol",
+ "rule": "md/PLAN.md, 6 Oct 2026, 1:09 PM IST, point 1: a run counts as crossed only when it has converged with a signed volume at N2 of the sign opposite to its start; a run stopped at the change of sign (old rule) is not an end",
+ "written": "2026-10-06 03:48:27 PM IST",
+ "starts": {
+  "X": {
+   "state": "done",
+   "converged": true,
+   "n_steps": 55,
+   "signed_volume_N2": {
+    "start": 0.724,
+    "end": 0.6286,
+    "smallest": 0.4092,
+    "largest": 0.7248,
+    "changed_sign": false
+   },
+   "sign_first_changed_at_step": null,
+   "crossed": false,
+   "nitrogen_at_the_end": "pyramidal, configuration of the start",
+   "host": "cqc-md-gpu-01",
+   "seconds_per_step_mean": 212.2,
+   "started": "2026-10-06 11:57:19 AM IST",
+   "updated": "2026-10-06 03:11:51 PM IST",
+   "restarts": null,
+   "stopped_at_the_sign_change_by_the_old_rule": null,
+   "largest_shift_of_a_fixed_atom_A": 0.00011330479821580752,
+   "final": {
+    "e_scf": -3584.5258708069478,
+    "e_d3": -0.14557218480934841,
+    "e_total": -3584.671442991757,
+    "signed_volume": 0.6286,
+    "Zn_N2": 1.9571,
+    "N2_S": 1.6341,
+    "Zn_N2_S": 104.113,
+    "Zn_N2_H": 125.382,
+    "S_N2_H": 109.785,
+    "C4_S_N2": 106.423,
+    "Zn_N2_S_C4": -148.813,
+    "rmsd_ligand_heavy_from_start": 2.2949
+   },
+   "first": {
+    "e_scf": -3584.505518293693,
+    "e_d3": -0.14450544140473026,
+    "e_total": -3584.650023735098
+   },
+   "last": {
+    "step": 55,
+    "time": "2026-10-06 03:11:51 PM IST",
+    "seconds": 230.8,
+    "e_scf": -3584.5258708069478,
+    "e_d3": -0.14557218480934841,
+    "e_total": -3584.671442991757,
+    "grad_rms_ligand": 5.8769022210809776e-05,
+    "grad_max_ligand": 0.0003037595086079481,
+    "signed_volume": 0.6286,
+    "Zn_N2": 1.9571,
+    "N2_S": 1.6341,
+    "Zn_N2_S": 104.113,
+    "Zn_N2_H": 125.382,
+    "S_N2_H": 109.785,
+    "C4_S_N2": 106.423,
+    "Zn_N2_S_C4": -148.813,
+    "rmsd_ligand_heavy_from_start": 2.2949
+   },
+   "relaxation_so_far_kcal_mol": -13.4408,
+   "angle_sum_N2_last": 339.28
+  },
+  "Rx": {
+   "state": "running",
+   "converged": false,
+   "n_steps": 23,
+   "signed_volume_N2": {
+    "start": -0.6783,
+    "end": 0.2728,
+    "smallest": -0.6783,
+    "largest": 0.2728,
+    "changed_sign": true
+   },
+   "sign_first_changed_at_step": 16,
+   "crossed": null,
+   "nitrogen_at_the_end": null,
+   "host": "cqc-md-gpu-01",
+   "seconds_per_step_mean": 270.6,
+   "started": "2026-10-06 10:46:42 AM IST",
+   "updated": "2026-10-06 03:45:01 PM IST",
+   "restarts": [
+    {
+     "at_steps": 16,
+     "time": "2026-10-06 03:11:52 PM IST",
+     "frozen_atoms_put_back_by_at_most_A": 0.003186,
+     "convergence": {
+      "enforce": 0.1
+     }
+    }
+   ],
+   "stopped_at_the_sign_change_by_the_old_rule": {
+    "step": 16,
+    "time": "2026-10-06 11:57:16 AM IST",
+    "note": "stopped at the first change of sign of the signed volume at N2, unconverged, by the rule in force until the plan entry of 6 Oct 2026, 1:09 PM IST; continued from that geometry"
+   },
+   "largest_shift_of_a_fixed_atom_A": 0.004687699470888873,
+   "final": null,
+   "first": {
+    "e_scf": -3584.473751569397,
+    "e_d3": -0.15899051474285258,
+    "e_total": -3584.63274208414
+   },
+   "last": {
+    "step": 23,
+    "time": "2026-10-06 03:45:01 PM IST",
+    "seconds": 275.1,
+    "e_scf": -3584.51569676517,
+    "e_d3": -0.1478038751037951,
+    "e_total": -3584.663500640274,
+    "grad_rms_ligand": 0.0007373672900149291,
+    "grad_max_ligand": 0.0026077049357561277,
+    "signed_volume": 0.2728,
+    "Zn_N2": 1.9231,
+    "N2_S": 1.6265,
+    "Zn_N2_S": 117.863,
+    "Zn_N2_H": 128.578,
+    "S_N2_H": 110.095,
+    "angle_sum_N2": 356.536,
+    "C4_S_N2": 103.518,
+    "Zn_N2_S_C4": -80.07,
+    "rmsd_ligand_heavy_from_start": 1.4363,
+    "fixed_atoms_max_shift_A": 0.0,
+    "rmsd_ligand_heavy_from_X_run": 4.6966,
+    "e_total_minus_X_run_kcal_mol": 4.9839,
+    "X_run_at": {
+     "step": 55,
+     "converged": true
+    }
+   },
+   "relaxation_so_far_kcal_mol": -19.3013,
+   "angle_sum_N2_last": 356.536
+  }
+ },
+ "both_converged": false,
+ "configurations_kept": null,
+ "end_points": {
+  "geometries": {
+   "X": "qm_X.xyz",
+   "Rx": "qm_Rx_last.xyz"
+  },
+  "converged": {
+   "X": true,
+   "Rx": false
+  },
+  "rmsd_ligand_heavy_A": 4.6966,
+  "largest_distance_of_a_ligand_heavy_atom_A": 8.2166,
+  "Rx_minus_X_with_d3": 4.9839,
+  "Rx_minus_X_without_d3": 6.3843,
+  "Rx_minus_X_d3_part": -1.4004,
+  "note": "NOT both converged: the difference between the two runs as far as they are, not a result"
+ },
+ "Rx_minus_X_with_d3": null,
+ "Rx_minus_X_without_d3": null
+}

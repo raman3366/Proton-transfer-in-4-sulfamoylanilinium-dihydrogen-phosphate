@@ -1,0 +1,150 @@
+{
+ "note": "TEST OF THE PIPELINE with the restrained-zinc model (nonbonded Zn2+, four Zn-N distance restraints); NOT a result for the paper",
+ "what": "copies of the killed run folder after 'run_md.py --stage min --resume': the driver's recovery up to the point where it would repeat the cut-off segment (the repeat itself was not run)",
+ "snapshot_file": "/root/workspace/cqc-4-sulfamoylanilinium-dihydrogen-phosphate/md/test/results/X1_interrupt_snapshot.json",
+ "checked": "6 Oct 2026, 8:37:10 AM IST",
+ "copies": {
+  "driver_now": {
+   "folder": "/root/cqc-sfa-md/runs_test/resume_check/driver_now/X1",
+   "driver_sha256": "b0f3e2b23b3eedf5582a25572ef80b0c3c214edb9414e94273f13be1b7a74fcc",
+   "driver_of_the_run_sha256": "45e4cf2872beddbfc44696e178a6721d574965c8beb4ec5bb0d83814f6f3bc29",
+   "tests": [
+    {
+     "test": "exit code 0 and nothing run",
+     "value": {
+      "exit_code": 0,
+      "outcome": "stage complete",
+      "status": "incomplete"
+     },
+     "passed": true
+    },
+    {
+     "test": "the killed invocation is marked as one without an end",
+     "value": [
+      {
+       "pid": 4149915,
+       "ended": null,
+       "exit_code": null,
+       "outcome": "no end recorded (killed or crashed)"
+      }
+     ],
+     "passed": true
+    },
+    {
+     "test": "the lock of the dead process was taken and released",
+     "value": {
+      "lock_left_by_the_kill": "{\"pid\": 4149915, \"host\": \"arya\", \"started\": {\"utc\": \"2026-10-05T19:34:30Z\", \"ist\": \"6 Oct 2026, 1:04:30 AM IST\"}}",
+      "lock_now": false
+     },
+     "passed": true
+    },
+    {
+     "test": "the files of the cut-off step were removed",
+     "value": {
+      "removed": [
+       "full_seg0001.dcd",
+       "log_seg0001.csv",
+       "solute_seg0001.dcd"
+      ],
+      "still_there": []
+     },
+     "passed": true
+    },
+    {
+     "test": "the files of the complete steps present in the copy are unchanged (sha256)",
+     "value": "8 unchanged",
+     "passed": true
+    },
+    {
+     "test": "the driver names the step it would continue with",
+     "value": [
+      "[6 Oct 2026, 8:37:06 AM IST] WARNING: run_md.py has changed since this run began; both checksums are in the manifest.",
+      "[6 Oct 2026, 8:37:07 AM IST] NOTE: the protocol file has gained the block equilibration.hydration_check since this run began and is otherwise the same; the run keeps the protocol of its manifest (no hydration check).",
+      "[6 Oct 2026, 8:37:07 AM IST] NOTE: 24 file(s) of complete steps are not in this folder (moved away?), for example full_eq01.dcd; they are not needed to continue",
+      "[6 Oct 2026, 8:37:07 AM IST] steps complete up to eq06; continuing with seg0001",
+      "[6 Oct 2026, 8:37:07 AM IST]   removed the incomplete file full_seg0001.dcd",
+      "[6 Oct 2026, 8:37:07 AM IST]   removed the incomplete file log_seg0001.csv",
+      "[6 Oct 2026, 8:37:07 AM IST]   removed the incomplete file solute_seg0001.dcd"
+     ],
+     "passed": true
+    }
+   ],
+   "all_passed": true
+  },
+  "driver_of_the_run": {
+   "folder": "/root/cqc-sfa-md/runs_test/resume_check/driver_of_the_run/X1",
+   "driver_sha256": "45e4cf2872beddbfc44696e178a6721d574965c8beb4ec5bb0d83814f6f3bc29",
+   "driver_of_the_run_sha256": "45e4cf2872beddbfc44696e178a6721d574965c8beb4ec5bb0d83814f6f3bc29",
+   "tests": [
+    {
+     "test": "exit code 0 and nothing run",
+     "value": {
+      "exit_code": 0,
+      "outcome": "stage complete",
+      "status": "incomplete"
+     },
+     "passed": true
+    },
+    {
+     "test": "the killed invocation is marked as one without an end",
+     "value": [
+      {
+       "pid": 4149915,
+       "ended": null,
+       "exit_code": null,
+       "outcome": "no end recorded (killed or crashed)"
+      }
+     ],
+     "passed": true
+    },
+    {
+     "test": "the lock of the dead process was taken and released",
+     "value": {
+      "lock_left_by_the_kill": "{\"pid\": 4149915, \"host\": \"arya\", \"started\": {\"utc\": \"2026-10-05T19:34:30Z\", \"ist\": \"6 Oct 2026, 1:04:30 AM IST\"}}",
+      "lock_now": false
+     },
+     "passed": true
+    },
+    {
+     "test": "the files of the cut-off step were removed",
+     "value": {
+      "removed": [
+       "full_seg0001.dcd",
+       "log_seg0001.csv",
+       "solute_seg0001.dcd"
+      ],
+      "still_there": []
+     },
+     "passed": true
+    },
+    {
+     "test": "the files of the complete steps present in the copy are unchanged (sha256)",
+     "value": "8 unchanged",
+     "passed": true
+    },
+    {
+     "test": "the driver names the step it would continue with",
+     "value": [
+      "[6 Oct 2026, 8:36:55 AM IST] NOTE: 24 file(s) of complete steps are not in this folder (moved away?), for example full_eq01.dcd; they are not needed to continue",
+      "[6 Oct 2026, 8:36:55 AM IST] steps complete up to eq06; continuing with seg0001",
+      "[6 Oct 2026, 8:36:55 AM IST]   removed the incomplete file full_seg0001.dcd",
+      "[6 Oct 2026, 8:36:55 AM IST]   removed the incomplete file log_seg0001.csv",
+      "[6 Oct 2026, 8:36:55 AM IST]   removed the incomplete file solute_seg0001.dcd"
+     ],
+     "passed": true
+    }
+   ],
+   "all_passed": true
+  }
+ },
+ "software": {
+  "python": "3.12.14",
+  "numpy": "2.5.3",
+  "machine": "aarch64",
+  "host": "arya",
+  "openmm": "8.6.1",
+  "MDAnalysis": "2.10.0"
+ },
+ "script_sha256": "e0a258744a7b4edfc315d9814e06204f1457475ac258cf4ad14b5a9987335cbf",
+ "all_passed": true
+}

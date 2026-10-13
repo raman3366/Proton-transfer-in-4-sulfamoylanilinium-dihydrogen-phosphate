@@ -1,0 +1,14 @@
+- 2026-09-27 16:36  pre-optimisation at B3LYP/6-31g(d) (174 basis functions)
+- 2026-09-27 16:40  pre-optimisation converged in 16 steps, 4.9 min
+- 2026-09-27 16:40  optimisation started from preopt.xyz; solvent=none (gas phase)
+- 2026-09-27 16:46  optimisation converged in 8 steps, 5.3 min, E = -891.74572747 Ha
+- 2026-09-27 16:46  Hessian by parallel finite differences: 114 gradients, 3 workers x 2 threads
+- 2026-09-27 17:43  frequencies (finite-difference (gradients, step 0.005 Bohr, 3 workers x 2 threads)): 0 imaginary, lowest 47.0 cm-1, 57 min
+- 2026-09-27 17:44  FMO: HOMO -6.478 eV, LUMO -1.129 eV, gap 5.350 eV; fragment composition None / None
+- 2026-09-27 17:44  molden padded from 305 to 306 MOs for Multiwfn compatibility
+- 2026-09-27 17:49  cubes written (ESP 64^3 in 5.1 min)
+- 2026-09-28 02:26  Delta-SCF (dscf.json): I = 8.331 eV, A = -0.099 eV, eta = 4.215 eV (Koopmans I = 6.478, A = 1.129)
+- 2026-09-28 03:09  NLO (nlo.json): mu 7.575 D, alpha_iso 115.79 a.u., beta_tot 358.0 a.u. (3.093e-30 esu)
+- 2026-09-28 04:55  charges (Hirshfeld/ADCH/CM5): fragment sums sulfanilamide_gas_d3: Hirshfeld +0.000, ADCH +0.000, CM5 -0.000
+- 2026-09-28 04:55  charges (NPA/Hirshfeld/ADCH/CM5): fragment sums sulfanilamide_gas_d3: NPA -0.000, Hirshfeld +0.000, ADCH +0.000, CM5 -0.000
+- 2026-09-28 04:55  MEP surface: min -0.066877 a.u., max 0.074353 a.u.; 8 minima, 7 maxima

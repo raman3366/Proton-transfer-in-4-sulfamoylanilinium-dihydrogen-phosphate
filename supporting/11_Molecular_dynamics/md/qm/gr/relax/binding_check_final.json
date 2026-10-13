@@ -1,0 +1,148 @@
+{
+ "what": "binding check of the ligand terms at sulfur and of Zn-N2-S (md/qm/gr_mm.py binding)",
+ "rule": "md/PLAN.md, 6 Oct 2026, 3:02 AM IST, point 6, and 8:56 AM IST, point 4: at the force-field minimum of the small model (all atoms free, vacuum, final charges) C4-S-N2 within 2 deg, S-N2 within 0.02 A and Zn-N2-S within 3 deg of the quantum-chemical optimum of the same model (B3LYP/6-31G*, task qm_opt).  The values of 6RL9 are given beside and do not decide",
+ "consequence": "md/PLAN.md, 6 Oct 2026, 1:09 PM IST, point 3 (which replaces the consequence named at 8:56 AM, a re-tuning of the ligand terms at sulfur): the result is reported and the ligand terms are NOT re-tuned to this optimum, because the reference itself, B3LYP/6-31G* in vacuum without a dispersion term, is outside the same tolerances against the 1.0 A structure (`optimum_against_crystal`).  The like-for-like test of the ligand geometry is the validation run in the protein against 6RL9 (gate G-V: C4-S-N2 within 3 deg, tau_fold within 20 deg, ligand RMSD), which stands as defined",
+ "mm": "/root/workspace/cqc-4-sulfamoylanilinium-dihydrogen-phosphate/md/qm/gr/mm_2e_main.json",
+ "mm_label": "step 2e, RESP charges with the ligand pairs equal, Zn-N2-H at its value in start X",
+ "tolerances": {
+  "C4_S_N2": 2.0,
+  "S_N2": 0.02,
+  "Zn_N2_S": 3.0
+ },
+ "units": {
+  "C4_S_N2": "deg",
+  "S_N2": "A",
+  "Zn_N2_S": "deg"
+ },
+ "written": "2026-10-06 08:47:30 PM IST",
+ "force_field": {
+  "minimum_all_free": {
+   "C4_S_N2": 111.3422,
+   "S_N2": 1.572,
+   "Zn_N2_S": 109.9108
+  },
+  "minimum_with_zinc_and_imidazoles_fixed": {
+   "C4_S_N2": 111.2993,
+   "S_N2": 1.571,
+   "Zn_N2_S": 107.502
+  },
+  "ligand_heavy_rmsd_from_X_all_free": 1.1213
+ },
+ "crystal_6RL9": {
+  "C4_S_N2": 108.8,
+  "S_N2": 1.596,
+  "Zn_N2_S": 117.6
+ },
+ "start_X": {
+  "C4_S_N2": 108.7946,
+  "S_N2": 1.59633,
+  "Zn_N2_S": 117.5521,
+  "Zn_N2": 1.9314,
+  "Zn_N_His": [
+   2.0099,
+   2.0206,
+   2.0183
+  ],
+  "Zn_N2_H": 107.407,
+  "S_N2_H": 107.414,
+  "signed_volume": 0.724
+ },
+ "against_crystal_not_the_verdict": {
+  "C4_S_N2": {
+   "force_field": 111.3422,
+   "crystal": 108.8,
+   "difference": 2.5422,
+   "tolerance": 2.0,
+   "within": false
+  },
+  "S_N2": {
+   "force_field": 1.572,
+   "crystal": 1.596,
+   "difference": -0.024,
+   "tolerance": 0.02,
+   "within": false
+  },
+  "Zn_N2_S": {
+   "force_field": 109.9108,
+   "crystal": 117.6,
+   "difference": -7.6892,
+   "tolerance": 3.0,
+   "within": false
+  }
+ },
+ "quantum_chemical_optimum": {
+  "source": {
+   "kind": "fchk",
+   "file": "/root/workspace/cqc-4-sulfamoylanilinium-dihydrogen-phosphate/md/qm/mcpb/CA2_small_opt.fchk",
+   "sha256": "cd7b5ae7ff949e4353dead159f5f6475815b8bcfcb5a03b2697f56cbbf97fc8d",
+   "provisional": false
+  },
+  "C4_S_N2": 107.103,
+  "S_N2": 1.63533,
+  "Zn_N2_S": 107.7373,
+  "Zn_N2": 1.9665,
+  "Zn_N_His": [
+   2.0258,
+   2.084,
+   2.0423
+  ],
+  "Zn_N2_H": 122.756,
+  "S_N2_H": 109.083,
+  "signed_volume": 0.6323
+ },
+ "comparison": {
+  "C4_S_N2": {
+   "force_field": 111.3422,
+   "quantum_chemistry": 107.103,
+   "difference": 4.2392,
+   "tolerance": 2.0,
+   "passed": false
+  },
+  "S_N2": {
+   "force_field": 1.572,
+   "quantum_chemistry": 1.63533,
+   "difference": -0.0633,
+   "tolerance": 0.02,
+   "passed": false
+  },
+  "Zn_N2_S": {
+   "force_field": 109.9108,
+   "quantum_chemistry": 107.7373,
+   "difference": 2.1735,
+   "tolerance": 3.0,
+   "passed": true
+  }
+ },
+ "quantum_chemistry_against_crystal": {
+  "C4_S_N2": -1.697,
+  "S_N2": 0.0393,
+  "Zn_N2_S": -9.8627
+ },
+ "optimum_against_crystal": {
+  "C4_S_N2": {
+   "quantum_chemistry": 107.103,
+   "crystal": 108.8,
+   "difference": -1.697,
+   "tolerance": 2.0,
+   "within": true
+  },
+  "S_N2": {
+   "quantum_chemistry": 1.63533,
+   "crystal": 1.596,
+   "difference": 0.0393,
+   "tolerance": 0.02,
+   "within": false
+  },
+  "Zn_N2_S": {
+   "quantum_chemistry": 107.7373,
+   "crystal": 117.6,
+   "difference": -9.8627,
+   "tolerance": 3.0,
+   "within": false
+  }
+ },
+ "level_of_the_optimum": "B3LYP/6-31G*, vacuum, all atoms free, WITHOUT a dispersion term (the energies of gate G-R carry D3(BJ); this geometry does not)",
+ "verdict": "failed",
+ "passed": false,
+ "provisional": false
+}

@@ -1,0 +1,180 @@
+% manuscript.latex -- pandoc template for the four manuscripts (LuaLaTeX only).
+% Used by paper/_shared/tools/build.py, which passes the font paths:
+%   -V termes-dir=<dir with texgyretermes-*.otf>/   -V math-font-dir=<dir>/ -V math-font-file=<file.otf>
+%   -V fallback-regular=... -V fallback-italic=...  (luaotfload fallback chains, ';'-separated font specs)
+%   -V spacing=onehalf|double|single                -V linkcolor-rgb=0.12,0.23,0.58
+% Layout matches reference.docx: 12 pt, 1.5 spacing, A4 with 25 mm margins, ragged right, line numbers,
+% bold run-in-free headings, 10 pt captions "Fig. 1." / "Table 1.", booktabs tables at 10 pt, page numbers.
+\documentclass[12pt,a4paper]{article}
+\usepackage{iftex}
+\ifLuaTeX\else\errmessage{manuscript.latex needs lualatex}\fi
+% A character missing from every font is an error, not a silent blank (LuaTeX: > 2 means error).
+\tracinglostchars=3
+\usepackage[a4paper,margin=25mm,footskip=12mm]{geometry}
+\usepackage{amsmath}
+\usepackage{fontspec}
+\usepackage[warnings-off={mathtools-colon,mathtools-overbracket}]{unicode-math}
+$if(fallback-regular)$
+\directlua{
+  luaotfload.add_fallback("msfbregular", {$for(fallback-regular)$"$fallback-regular$"$sep$, $endfor$})
+  luaotfload.add_fallback("msfbitalic", {$for(fallback-italic)$"$fallback-italic$"$sep$, $endfor$})
+  luaotfload.add_fallback("msfbbold", {$for(fallback-bold)$"$fallback-bold$"$sep$, $endfor$})
+  luaotfload.add_fallback("msfbbolditalic", {$for(fallback-bolditalic)$"$fallback-bolditalic$"$sep$, $endfor$})
+}
+$endif$
+\setmainfont{texgyretermes}[
+  Path=$termes-dir$,
+  Extension=.otf,
+  UprightFont=*-regular,
+  BoldFont=*-bold,
+  ItalicFont=*-italic,
+  BoldItalicFont=*-bolditalic,
+$if(fallback-regular)$
+  UprightFeatures={RawFeature={fallback=msfbregular}},
+  ItalicFeatures={RawFeature={fallback=msfbitalic}},
+  BoldFeatures={RawFeature={fallback=msfbbold}},
+  BoldItalicFeatures={RawFeature={fallback=msfbbolditalic}},
+$endif$
+  Ligatures=TeX]
+\setmathfont{$math-font-file$}[Path=$math-font-dir$]
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{longtable,booktabs,array,calc}
+\usepackage{etoolbox}
+\usepackage{setspace}
+$if(spacing)$
+\$spacing$spacing
+$else$
+\onehalfspacing
+$endif$
+\usepackage{ragged2e}
+\usepackage[
+  font={footnotesize,$if(spacing)$$spacing$spacing$else$onehalfspacing$endif$},
+  labelfont=bf,labelsep=period,justification=raggedright,singlelinecheck=false,skip=6pt]{caption}
+\captionsetup[figure]{name=$if(figure-name)$$figure-name$$else$Fig.$endif$}
+\captionsetup[table]{name=Table,position=top}
+\newcounter{none} % pandoc: uncaptioned longtables use \LTcaptype{none}
+% tables: 10 pt, single spacing, a little air between rows. A table of 10 or more columns (crossref.lua puts
+% \densetable before it) prints at 8 pt with 4 pt column padding, so that its unbreakable cells (bond labels such
+% as N1–H1A···O5) fit their columns instead of printing over the next one.
+\newif\ifdensetable
+\newcommand{\densetable}{\global\densetabletrue}
+\AtBeginEnvironment{longtable}{\ifdensetable\scriptsize\setlength{\tabcolsep}{4pt}\else\footnotesize\fi
+  \setstretch{1.1}}
+\AtEndEnvironment{longtable}{\global\densetablefalse}
+% run and directory names (sfa_pair_pcm_d3_oform) may break after an underscore, without a hyphen
+\DeclareRobustCommand{\_}{\ifmmode\mbox{\textunderscore}\else\textunderscore\allowbreak\fi}
+\setlength{\LTpre}{12pt}
+\setlength{\LTpost}{12pt}
+% paragraphs: no indent, 6 pt after (as reference.docx)
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+\setlength{\emergencystretch}{3em}
+% cross-reference names are never split at a line end ("Ta-ble 1")
+\hyphenation{Table Tables Section Sections}
+% headings: the authors number them in the text ("# 2.1. ..."), LaTeX adds nothing
+\setcounter{secnumdepth}{-\maxdimen}
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{\z@}{-18pt plus -4pt minus -2pt}{6pt}{\normalfont\normalsize\bfseries\RaggedRight}}
+\renewcommand\subsection{\@startsection{subsection}{2}{\z@}{-12pt plus -3pt minus -2pt}{6pt}{\normalfont\normalsize\bfseries\RaggedRight}}
+\renewcommand\subsubsection{\@startsection{subsubsection}{3}{\z@}{-12pt plus -3pt minus -2pt}{6pt}{\normalfont\normalsize\bfseries\itshape\RaggedRight}}
+\renewcommand\paragraph{\@startsection{paragraph}{4}{\z@}{-6pt plus -2pt}{3pt}{\normalfont\normalsize\bfseries\itshape\RaggedRight}}
+% images: pandoc wraps images without explicit size in \pandocbounded (build.py always sets a width)
+\newsavebox\pandoc@box
+\newcommand*\pandocbounded[1]{%
+  \sbox\pandoc@box{#1}%
+  \Gscale@div\@tempa{\textheight}{\dimexpr\ht\pandoc@box+\dp\pandoc@box\relax}%
+  \Gscale@div\@tempb{\linewidth}{\wd\pandoc@box}%
+  \ifdim\@tempb\p@<\@tempa\p@\let\@tempa\@tempb\fi
+  \ifdim\@tempa\p@<\p@\scalebox{\@tempa}{\usebox\pandoc@box}%
+  \else\usebox{\pandoc@box}%
+  \fi}
+\def\fps@figure{!htbp}
+\makeatother
+\renewcommand{\topfraction}{0.9}
+\renewcommand{\bottomfraction}{0.8}
+\renewcommand{\textfraction}{0.07}
+\renewcommand{\floatpagefraction}{0.75}
+\setcounter{topnumber}{3}
+\setcounter{totalnumber}{4}
+\providecommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+% CSL (citeproc) bibliography support, as in pandoc's default template
+\NewDocumentCommand\citeproctext{}{}
+\NewDocumentCommand\citeproc{mm}{%
+  \begingroup\def\citeproctext{#2}\cite{#1}\endgroup}
+\makeatletter
+\let\@cite@ofmt\@firstofone
+\def\@biblabel#1{}
+\def\@cite#1#2{{#1\if@tempswa , #2\fi}}
+\makeatother
+\newlength{\cslhangindent}
+\setlength{\cslhangindent}{1.5em}
+\newlength{\csllabelwidth}
+\setlength{\csllabelwidth}{2.6em}
+\newenvironment{CSLReferences}[2]
+ {\begin{list}{}{%
+  \setlength{\itemindent}{0pt}
+  \setlength{\leftmargin}{0pt}
+  \setlength{\parsep}{0pt}
+  \ifodd #1
+   \setlength{\leftmargin}{\cslhangindent}
+   \setlength{\itemindent}{-1\cslhangindent}
+  \fi
+  \setlength{\itemsep}{3pt}}}
+ {\end{list}}
+\newcommand{\CSLBlock}[1]{\hfill\break\parbox[t]{\linewidth}{\strut\ignorespaces#1\strut}}
+\newcommand{\CSLLeftMargin}[1]{\parbox[t]{\csllabelwidth}{\strut#1\strut}}
+\newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{\RaggedRight\strut#1\strut}}
+\newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
+$if(highlighting-macros)$
+$highlighting-macros$
+$endif$
+% line numbers (continuous) in the left margin
+\usepackage{lineno}
+\renewcommand\linenumberfont{\normalfont\scriptsize\color{black!55}}
+\setlength\linenumbersep{8mm}
+$for(header-includes)$
+$header-includes$
+$endfor$
+\PassOptionsToPackage{hyphens}{url}
+\usepackage{hyperref}
+\hypersetup{
+$if(title-meta)$
+  pdftitle={$title-meta$},
+$endif$
+$if(keywords)$
+  pdfkeywords={$for(keywords)$$keywords$$sep$, $endfor$},
+$endif$
+  pdflang={en-GB},
+  colorlinks=true,
+  linkcolor={[rgb]{$if(linkcolor-rgb)$$linkcolor-rgb$$else$0.12,0.23,0.58$endif$}},
+  citecolor={[rgb]{$if(linkcolor-rgb)$$linkcolor-rgb$$else$0.12,0.23,0.58$endif$}},
+  urlcolor={[rgb]{$if(linkcolor-rgb)$$linkcolor-rgb$$else$0.12,0.23,0.58$endif$}},
+  bookmarksnumbered=false,
+  pdfcreator={LuaLaTeX via pandoc and build.py}}
+\usepackage{bookmark}
+\urlstyle{same}
+% allow DOIs to break after any character that is not a letter
+\makeatletter
+\g@addto@macro{\UrlBreaks}{\do\-\do\.\do\_\do\/\do\(\do\)\do\;}
+\makeatother
+\pagestyle{plain}
+
+\begin{document}
+\RaggedRight
+$if(no-linenumbers)$
+$else$
+\linenumbers
+$endif$
+$if(title)$
+{\raggedright\setstretch{1.2}\fontsize{16}{20}\selectfont\bfseries\hyphenpenalty=10000\exhyphenpenalty=10000 $title$\par}
+\vspace{6pt}
+$endif$
+$for(include-before)$
+$include-before$
+$endfor$
+$body$
+$for(include-after)$
+$include-after$
+$endfor$
+\end{document}

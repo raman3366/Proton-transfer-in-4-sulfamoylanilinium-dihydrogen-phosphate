@@ -1,0 +1,22 @@
+| Structure | *E* (Ha) | Steps | Imaginary frequencies | ZPE (Ha) | Result directory |
+|:-----|---:|---:|---:|---:|:-----|
+| Ion pair (M1), salt minimum, IEF-PCM (water) | −1536.110647 | 64 | 0 | 0.194718 | `sfa_pair_pcm_d3` |
+| Ion pair (M1), neutral (O5-protonated) minimum, IEF-PCM (water)^a^ | −1536.111511 | 70 | 0 | 0.192942 | `sfa_pair_pcm_d3_oform` |
+| Ion pair (M1) optimised in the gas phase: neutral adduct | −1536.055949 | 27 | – | – | `sfa_pair_gas_d3` |
+| Ion pair (M1), IEF-PCM (water), B3LYP without D3(BJ) | −1536.054660 | 68 | – | – | `sfa_pair_pcm_b3lyp` |
+| Ion pair (M1), IEF-PCM (water), def2-TZVP | −1536.289345 | 47 | – | – | `sfa_pair_pcm_d3_tz` |
+| Cation (M2), IEF-PCM (water) | −892.214069 | 7 | 0 | 0.158472 | `cation_pcm_d3` |
+| Cation (M2), gas phase | −892.080479 | 8 | 0 | 0.157487 | `cation_gas_d3` |
+| Dihydrogen phosphate (M3), IEF-PCM (water) | −643.872237 | 8 | 0 | 0.036550 | `h2po4_pcm_d3` |
+| Dihydrogen phosphate (M3), gas phase | −643.760920 | 8 | 0 | 0.036670 | `h2po4_gas_d3` |
+| Phosphoric acid (M6), IEF-PCM (water) | −644.318677 | 14 | – | – | `h3po4_pcm_d3` |
+| Phosphoric acid (M6), gas phase | −644.291727 | 8 | 0 | 0.048365 | `h3po4_gas_d3` |
+| Sulfanilamide (M4), IEF-PCM (water) | −891.776911 | 8 | – | – | `sulfanilamide_pcm_d3` |
+| Sulfanilamide (M4), gas phase | −891.745727 | 8 | 0 | 0.143722 | `sulfanilamide_gas_d3` |
+| Sulfanilamide (M4), IEF-PCM (water), def2-TZVP | −891.883658 | 10 | – | – | `sulfanilamide_pcm_d3_tz` |
+| Sulfonamidate (M5), IEF-PCM (water) | −891.294509 | 8 | – | – | `sulfonamidate_pcm_d3` |
+| Urea (M7), gas phase | −225.357325 | 7 | 0 | 0.063516 | `urea_gas_d3` |
+
+Table: Energies of the optimised structures. {#tbl:s-energies}
+
+Electronic energies (including the D3(BJ) term where used), the number of optimisation steps, and, where a Hessian was computed, the number of imaginary frequencies and the unscaled zero-point energy. Cartesian coordinates follow in Section S2. "–": no Hessian was computed; those structures are stationary points on the forces criterion only. ^a^ Neutral (O5-protonated) minimum of the IEF-PCM ion pair: the end point of scan chain B (Section S5), whose Hessian was computed separately.

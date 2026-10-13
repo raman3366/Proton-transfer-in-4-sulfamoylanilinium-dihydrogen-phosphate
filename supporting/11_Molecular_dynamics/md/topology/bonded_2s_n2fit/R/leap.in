@@ -1,0 +1,112 @@
+source leaprc.protein.ff14SB
+source leaprc.gaff2
+source leaprc.water.tip3p
+addAtomTypes {
+    { "M1" "Zn" "sp3" }
+    { "Y1" "N" "sp3" }
+    { "Y2" "N" "sp3" }
+    { "Y3" "N" "sp3" }
+    { "Y4" "N" "sp3" }
+}
+HD1 = loadmol2 /root/cqc-sfa-md/qm/gr/mcpb_2s/HD1.mol2
+HD2 = loadmol2 /root/cqc-sfa-md/qm/gr/mcpb_2s/HD2.mol2
+HE1 = loadmol2 /root/cqc-sfa-md/qm/gr/mcpb_2s/HE1.mol2
+ZN1 = loadmol2 /root/cqc-sfa-md/qm/gr/mcpb_2s/ZN1.mol2
+SN1 = loadmol2 /root/cqc-sfa-md/qm/gr/mcpb_2s/SN1.mol2
+set HD1 head HD1.1.N
+set HD1 tail HD1.1.C
+set HD1.1 connect0 HD1.1.N
+set HD1.1 connect1 HD1.1.C
+set HD2 head HD2.1.N
+set HD2 tail HD2.1.C
+set HD2.1 connect0 HD2.1.N
+set HD2.1 connect1 HD2.1.C
+set HE1 head HE1.1.N
+set HE1 tail HE1.1.C
+set HE1.1 connect0 HE1.1.N
+set HE1.1 connect1 HE1.1.C
+loadamberparams /root/cqc-sfa-md/qm/gr/mcpb_2s/sfa_anion_gaff2.frcmod
+loadamberparams /root/cqc-sfa-md/qm/gr/mcpb_2s/sfa_anion_repair.frcmod
+loadamberparams /root/cqc-sfa-md/qm/gr/mcpb_2s/CA2_mcpbpy.frcmod
+loadamberparams /root/cqc-sfa-md/systems/bonded_2s_n2fit/R/build/n2_terms.frcmod
+sys = loadpdb /root/cqc-sfa-md/systems/bonded_2s_n2fit/R/build/assembly.pdb
+bond sys.93.NE2 sys.260.ZN
+bond sys.95.NE2 sys.260.ZN
+bond sys.118.ND1 sys.260.ZN
+bond sys.260.ZN sys.261.N2
+check sys
+charge sys
+saveamberparm sys /root/cqc-sfa-md/systems/bonded_2s_n2fit/R/build/dry.prmtop /root/cqc-sfa-md/systems/bonded_2s_n2fit/R/build/dry.inpcrd
+solvateOct sys TIP3PBOX 10.0
+remove sys sys.1826
+remove sys sys.898
+remove sys sys.10114
+remove sys sys.3202
+remove sys sys.1845
+remove sys sys.3631
+remove sys sys.5116
+remove sys sys.6032
+remove sys sys.10946
+remove sys sys.9612
+remove sys sys.5737
+remove sys sys.9805
+remove sys sys.7804
+remove sys sys.6750
+remove sys sys.5036
+remove sys sys.10168
+remove sys sys.849
+remove sys sys.7680
+remove sys sys.4400
+remove sys sys.7166
+remove sys sys.10917
+remove sys sys.5956
+remove sys sys.10850
+remove sys sys.3550
+remove sys sys.10257
+remove sys sys.6338
+remove sys sys.4635
+remove sys sys.4457
+remove sys sys.3495
+remove sys sys.9388
+remove sys sys.1224
+remove sys sys.6461
+remove sys sys.10275
+remove sys sys.6813
+remove sys sys.8951
+remove sys sys.2336
+remove sys sys.3851
+remove sys sys.9679
+remove sys sys.10034
+remove sys sys.12388
+remove sys sys.4375
+remove sys sys.10829
+remove sys sys.2337
+remove sys sys.9606
+remove sys sys.1319
+remove sys sys.4395
+remove sys sys.11508
+remove sys sys.2349
+remove sys sys.11802
+remove sys sys.10465
+remove sys sys.7180
+remove sys sys.8687
+remove sys sys.11687
+remove sys sys.8666
+remove sys sys.7330
+remove sys sys.1253
+remove sys sys.3338
+remove sys sys.11544
+remove sys sys.11087
+remove sys sys.3710
+remove sys sys.8071
+remove sys sys.6057
+remove sys sys.7566
+remove sys sys.4797
+remove sys sys.6584
+remove sys sys.3540
+remove sys sys.8370
+ions = loadpdb /root/cqc-sfa-md/systems/bonded_2s_n2fit/R/build/ions.pdb
+sys = combine { sys ions }
+charge sys
+saveamberparm sys /root/cqc-sfa-md/systems/bonded_2s_n2fit/R/build/system_tleap.prmtop /root/cqc-sfa-md/systems/bonded_2s_n2fit/R/build/new/system.inpcrd
+quit

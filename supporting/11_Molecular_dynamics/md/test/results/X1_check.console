@@ -1,0 +1,11 @@
+passed  manifest status (a run that was cut off: 'running' is what a killed process leaves): status running, all_steps_complete False, test_only True (--equil-scale 0.05), TEST_ONLY file present
+passed  every complete step; frames and log rows as expected (file size, DCD header, record): 7 of 9 steps complete; production 0 solute frames, 0 full frames, 0 log rows; equilibration 8, 0, 8
+passed  the cut-off step: its files hold whole frames only: {'full_seg0001.dcd': {'bytes': 0, 'whole_frames': None, 'header_frames': None, 'bytes_beyond': None}, 'log_seg0001.csv': {'bytes': 672, 'rows': 5, 'last_time_ps': 50.0}, 'solute_seg0001.dcd': {'bytes': 246316, 'whole_frames': 5, 'header_frames': 5, 'bytes_beyond': 0}}
+passed  time axis: log times and DCD headers continue from step to step: 6 steps; none off
+passed  MDAnalysis reads the same numbers of frames: all files with a frame agree
+passed  sha256 and size of every file of every step equal the record: 25 files
+passed  each step started from the recorded state of the step before: 6 links
+passed  last solute frame of a step = its saved state (largest coordinate difference, A): {'eq04': 3.7e-06, 'eq05': 3.5e-06}
+passed  what the kill left behind: the lock of the dead process and the files of the cut-off step, nothing else: left: ['run_md.lock']; files without a record: ['full_seg0001.dcd', 'log_seg0001.csv', 'solute_seg0001.dcd']; checkpoints: none
+NOT CHECKED  solute atoms of each full frame against the solute frame of the same time: the run holds no all-atom frame (no step reached the 100 ps interval of the all-atom file)
+ALL PASSED (1 not checked); written to /root/workspace/cqc-4-sulfamoylanilinium-dihydrogen-phosphate/md/test/results/X1_check.json

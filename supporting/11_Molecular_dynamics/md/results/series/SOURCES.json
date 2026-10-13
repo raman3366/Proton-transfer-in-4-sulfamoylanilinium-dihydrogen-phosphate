@@ -1,0 +1,549 @@
+{
+ "what": "Sources of the compact time series of md/results/series/ (rule 6 of md/PLAN.md)",
+ "script": {
+  "name": "md/production/make_series.py",
+  "sha256": "0ae950aa7661e89827559443fbdd8c2b30b842fceacfb996644d80e4f942e7ff"
+ },
+ "written": "8 Oct 2026, 9:23 AM IST",
+ "runs_dir": "/root/cqc-sfa-md/runs",
+ "columns": [
+  {
+   "column": "d1_A",
+   "source_column": "d1_N1_F131CZ_A"
+  },
+  {
+   "column": "d2_A",
+   "source_column": "d2_N1_N67OD1_A"
+  },
+  {
+   "column": "lig_rmsd_A",
+   "source_column": "lig_rmsd_A"
+  },
+  {
+   "column": "state",
+   "source_column": "state"
+  },
+  {
+   "column": "n2_volume",
+   "source_column": "n2_volume"
+  },
+  {
+   "column": "n2_sign",
+   "source_column": "n2_sign"
+  },
+  {
+   "column": "hb_T199",
+   "source_column": "hb_N2H_T199OG1"
+  }
+ ],
+ "tolerance_between_the_two_programs": 0.001,
+ "largest_difference_between_the_two_programs": 0.0,
+ "runs": [
+  {
+   "run": "bonded_2e/X1",
+   "files_read": [
+    {
+     "file": "/root/cqc-sfa-md/runs/bonded_2e/X1/analysis/timeseries_equil_solute.csv",
+     "sha256": "1a0857aa0cce0317bd214c2d95832713aaa172bd7901456dee1b72f6a8107223",
+     "rows_used": 130,
+     "use": "written"
+    },
+    {
+     "file": "/root/cqc-sfa-md/runs/bonded_2e/X1/analysis_recheck/timeseries_equil_solute.csv",
+     "sha256": "1a0857aa0cce0317bd214c2d95832713aaa172bd7901456dee1b72f6a8107223",
+     "rows_used": 130,
+     "use": "compared"
+    },
+    {
+     "file": "/root/cqc-sfa-md/runs/bonded_2e/X1/analysis/timeseries_solute.csv",
+     "sha256": "89fae59cf60a28cae13c7d691aaa6cd1b23a02cee94d8d6b1dba9682bc1d657d",
+     "rows_used": 10000,
+     "use": "written"
+    },
+    {
+     "file": "/root/cqc-sfa-md/runs/bonded_2e/X1/analysis_recheck/timeseries_solute.csv",
+     "sha256": "89fae59cf60a28cae13c7d691aaa6cd1b23a02cee94d8d6b1dba9682bc1d657d",
+     "rows_used": 10000,
+     "use": "compared"
+    }
+   ],
+   "largest_difference_between_the_two_programs": {
+    "equilibration": 0.0,
+    "production": 0.0
+   },
+   "file": "bonded_2e_X1.csv.gz",
+   "rows": 10130,
+   "rows_equilibration": 130,
+   "rows_production": 10000,
+   "bytes": 147272,
+   "bytes_uncompressed": 454790,
+   "sha256": "1b64d6487d2d149463ce533b07b6a6d22a2af01eb8d6c4ce5868fa21186d559e",
+   "sha256_uncompressed": "b0f9b7c1a5f1d5b33b06ff8189771181c09d01fbae45b90fa69d801ec819a02e",
+   "stage_ends_ns": {
+    "eq4": -0.9,
+    "eq5": -0.5,
+    "eq6": 0.0
+   }
+  },
+  {
+   "run": "bonded_2e/X2",
+   "files_read": [
+    {
+     "file": "/root/cqc-sfa-md/runs/bonded_2e/X2/analysis/timeseries_equil_solute.csv",
+     "sha256": "ffff3bc69b864af6af7580e83fec8992689dbe63595516b6cb9a09ca3844c8a9",
+     "rows_used": 130,
+     "use": "written"
+    },
+    {
+     "file": "/root/cqc-sfa-md/runs/bonded_2e/X2/analysis_recheck/timeseries_equil_solute.csv",
+     "sha256": "ffff3bc69b864af6af7580e83fec8992689dbe63595516b6cb9a09ca3844c8a9",
+     "rows_used": 130,
+     "use": "compared"
+    },
+    {
+     "file": "/root/cqc-sfa-md/runs/bonded_2e/X2/analysis/timeseries_solute.csv",
+     "sha256": "c89d192c3b0cc9321292682bdd9f1dd946fa8ba4dffec24499bada92f1148b95",
+     "rows_used": 10000,
+     "use": "written"
+    },
+    {
+     "file": "/root/cqc-sfa-md/runs/bonded_2e/X2/analysis_recheck/timeseries_solute.csv",
+     "sha256": "c89d192c3b0cc9321292682bdd9f1dd946fa8ba4dffec24499bada92f1148b95",
+     "rows_used": 10000,
+     "use": "compared"
+    }
+   ],
+   "largest_difference_between_the_two_programs": {
+    "equilibration": 0.0,
+    "production": 0.0
+   },
+   "file": "bonded_2e_X2.csv.gz",
+   "rows": 10130,
+   "rows_equilibration": 130,
+   "rows_production": 10000,
+   "bytes": 147480,
+   "bytes_uncompressed": 454820,
+   "sha256": "4d1ea6521098cb2fb02d7fef6f1e4a5182a2d609404f10dea8b8544885258742",
+   "sha256_uncompressed": "6495b488219b16e838b618966e6fecd6b461b2d3ce569d8bf44d9835b7855f8c",
+   "stage_ends_ns": {
+    "eq4": -0.9,
+    "eq5": -0.5,
+    "eq6": 0.0
+   }
+  },
+  {
+   "run": "bonded_2e/X3",
+   "files_read": [
+    {
+     "file": "/root/cqc-sfa-md/runs/bonded_2e/X3/analysis/timeseries_equil_solute.csv",
+     "sha256": "492595c3fbc3d735b5f827b5c446e6a2b21bb6db045106d34bf69d7f764935b9",
+     "rows_used": 130,
+     "use": "written"
+    },
+    {
+     "file": "/root/cqc-sfa-md/runs/bonded_2e/X3/analysis_recheck/timeseries_equil_solute.csv",
+     "sha256": "492595c3fbc3d735b5f827b5c446e6a2b21bb6db045106d34bf69d7f764935b9",
+     "rows_used": 130,
+     "use": "compared"
+    },
+    {
+     "file": "/root/cqc-sfa-md/runs/bonded_2e/X3/analysis/timeseries_solute.csv",
+     "sha256": "eb099833e8f504c24298d193e6ff69dfe9d0d6cc53457863fd21d953639972d7",
+     "rows_used": 10000,
+     "use": "written"
+    },
+    {
+     "file": "/root/cqc-sfa-md/runs/bonded_2e/X3/analysis_recheck/timeseries_solute.csv",
+     "sha256": "eb099833e8f504c24298d193e6ff69dfe9d0d6cc53457863fd21d953639972d7",
+     "rows_used": 10000,
+     "use": "compared"
+    }
+   ],
+   "largest_difference_between_the_two_programs": {
+    "equilibration": 0.0,
+    "production": 0.0
+   },
+   "file": "bonded_2e_X3.csv.gz",
+   "rows": 10130,
+   "rows_equilibration": 130,
+   "rows_production": 10000,
+   "bytes": 147300,
+   "bytes_uncompressed": 454789,
+   "sha256": "ae1d6ad09f06b3b79b1f2ad8db3e718f108952efe8fc9978a97e3aad8d66a52e",
+   "sha256_uncompressed": "18faa80cbef0d9c2d977ab7a2e3f48c05ac8d7b53a7d765d9e37699619d4397c",
+   "stage_ends_ns": {
+    "eq4": -0.9,
+    "eq5": -0.5,
+    "eq6": 0.0
+   }
+  },
+  {
+   "run": "bonded_2e/N1",
+   "files_read": [
+    {
+     "file": "/root/cqc-sfa-md/runs/bonded_2e/N1/analysis/timeseries_equil_solute.csv",
+     "sha256": "f97b4846f172eba4e4c84f6cb46df4ac4deabfc98f08bdee8f46c98b96b2928c",
+     "rows_used": 130,
+     "use": "written"
+    },
+    {
+     "file": "/root/cqc-sfa-md/runs/bonded_2e/N1/analysis_recheck/timeseries_equil_solute.csv",
+     "sha256": "f97b4846f172eba4e4c84f6cb46df4ac4deabfc98f08bdee8f46c98b96b2928c",
+     "rows_used": 130,
+     "use": "compared"
+    },
+    {
+     "file": "/root/cqc-sfa-md/runs/bonded_2e/N1/analysis/timeseries_solute.csv",
+     "sha256": "2ed9692c2a7c5ef24b797d07a602568bb587bed93a17fe6844f89ec6bbd693bf",
+     "rows_used": 10000,
+     "use": "written"
+    },
+    {
+     "file": "/root/cqc-sfa-md/runs/bonded_2e/N1/analysis_recheck/timeseries_solute.csv",
+     "sha256": "2ed9692c2a7c5ef24b797d07a602568bb587bed93a17fe6844f89ec6bbd693bf",
+     "rows_used": 10000,
+     "use": "compared"
+    }
+   ],
+   "largest_difference_between_the_two_programs": {
+    "equilibration": 0.0,
+    "production": 0.0
+   },
+   "file": "bonded_2e_N1.csv.gz",
+   "rows": 10130,
+   "rows_equilibration": 130,
+   "rows_production": 10000,
+   "bytes": 146778,
+   "bytes_uncompressed": 454790,
+   "sha256": "cf43373e3ce5d6568750a46cc57a0c50a1e1e300608520498fc205bfec11b46c",
+   "sha256_uncompressed": "d5e702df585803cbccafa1f4e5c2f3e6b614c8fcd966f5d6185fe015fe26d5e6",
+   "stage_ends_ns": {
+    "eq4": -0.9,
+    "eq5": -0.5,
+    "eq6": 0.0
+   }
+  },
+  {
+   "run": "bonded_2e/N2",
+   "files_read": [
+    {
+     "file": "/root/cqc-sfa-md/runs/bonded_2e/N2/analysis/timeseries_equil_solute.csv",
+     "sha256": "62c133bd51715ce4fcc5e1177b2c5d97ed0acac45d8c34d829df2d79fb204819",
+     "rows_used": 130,
+     "use": "written"
+    },
+    {
+     "file": "/root/cqc-sfa-md/runs/bonded_2e/N2/analysis_recheck/timeseries_equil_solute.csv",
+     "sha256": "62c133bd51715ce4fcc5e1177b2c5d97ed0acac45d8c34d829df2d79fb204819",
+     "rows_used": 130,
+     "use": "compared"
+    },
+    {
+     "file": "/root/cqc-sfa-md/runs/bonded_2e/N2/analysis/timeseries_solute.csv",
+     "sha256": "7e0eff7ef65b4ae46b6f319d763e42b77f5b486b76b170ae55d73abbb08b1711",
+     "rows_used": 10000,
+     "use": "written"
+    },
+    {
+     "file": "/root/cqc-sfa-md/runs/bonded_2e/N2/analysis_recheck/timeseries_solute.csv",
+     "sha256": "7e0eff7ef65b4ae46b6f319d763e42b77f5b486b76b170ae55d73abbb08b1711",
+     "rows_used": 10000,
+     "use": "compared"
+    }
+   ],
+   "largest_difference_between_the_two_programs": {
+    "equilibration": 0.0,
+    "production": 0.0
+   },
+   "file": "bonded_2e_N2.csv.gz",
+   "rows": 10130,
+   "rows_equilibration": 130,
+   "rows_production": 10000,
+   "bytes": 147437,
+   "bytes_uncompressed": 454802,
+   "sha256": "2671367c5455a47d2c360074831f216b0d5ddbe95c6a4faefa69e60a83b532fa",
+   "sha256_uncompressed": "5641bdbc5e3b7c76699f2a80180175f8b76f7a343515ee62ad897dcc787e072f",
+   "stage_ends_ns": {
+    "eq4": -0.9,
+    "eq5": -0.5,
+    "eq6": 0.0
+   }
+  },
+  {
+   "run": "bonded_2e/N3",
+   "files_read": [
+    {
+     "file": "/root/cqc-sfa-md/runs/bonded_2e/N3/analysis/timeseries_equil_solute.csv",
+     "sha256": "c243f41b84e8fab19db79d560e01bd19fcf4179479f505034e7e8c40e84a0149",
+     "rows_used": 130,
+     "use": "written"
+    },
+    {
+     "file": "/root/cqc-sfa-md/runs/bonded_2e/N3/analysis_recheck/timeseries_equil_solute.csv",
+     "sha256": "c243f41b84e8fab19db79d560e01bd19fcf4179479f505034e7e8c40e84a0149",
+     "rows_used": 130,
+     "use": "compared"
+    },
+    {
+     "file": "/root/cqc-sfa-md/runs/bonded_2e/N3/analysis/timeseries_solute.csv",
+     "sha256": "ac154383447940b800834d0e198de8b361a2839dcd0aa690e6700f035c189e78",
+     "rows_used": 10000,
+     "use": "written"
+    },
+    {
+     "file": "/root/cqc-sfa-md/runs/bonded_2e/N3/analysis_recheck/timeseries_solute.csv",
+     "sha256": "ac154383447940b800834d0e198de8b361a2839dcd0aa690e6700f035c189e78",
+     "rows_used": 10000,
+     "use": "compared"
+    }
+   ],
+   "largest_difference_between_the_two_programs": {
+    "equilibration": 0.0,
+    "production": 0.0
+   },
+   "file": "bonded_2e_N3.csv.gz",
+   "rows": 10130,
+   "rows_equilibration": 130,
+   "rows_production": 10000,
+   "bytes": 147666,
+   "bytes_uncompressed": 454802,
+   "sha256": "6641fa0d0b5bd865bffe31090894311f98d78dd1ec6db885bbd1895b9ee3e52c",
+   "sha256_uncompressed": "c6c4beb926062649d20414bba94dba1be17fc24a6d9f72e2d4660cd48c61c911",
+   "stage_ends_ns": {
+    "eq4": -0.9,
+    "eq5": -0.5,
+    "eq6": 0.0
+   }
+  },
+  {
+   "run": "bonded_2e/R1",
+   "files_read": [
+    {
+     "file": "/root/cqc-sfa-md/runs/bonded_2e/R1/analysis/timeseries_equil_solute.csv",
+     "sha256": "50ab9ed4cac0f3cf6ab293aab10c0bf1d3c8466bb0573450e1de25347f10674f",
+     "rows_used": 130,
+     "use": "written"
+    },
+    {
+     "file": "/root/cqc-sfa-md/runs/bonded_2e/R1/analysis_recheck/timeseries_equil_solute.csv",
+     "sha256": "50ab9ed4cac0f3cf6ab293aab10c0bf1d3c8466bb0573450e1de25347f10674f",
+     "rows_used": 130,
+     "use": "compared"
+    },
+    {
+     "file": "/root/cqc-sfa-md/runs/bonded_2e/R1/analysis/timeseries_solute.csv",
+     "sha256": "6843c142695c719714b3f05cff4c120e3c94c42ce661de90890e82f27392e486",
+     "rows_used": 10000,
+     "use": "written"
+    },
+    {
+     "file": "/root/cqc-sfa-md/runs/bonded_2e/R1/analysis_recheck/timeseries_solute.csv",
+     "sha256": "6843c142695c719714b3f05cff4c120e3c94c42ce661de90890e82f27392e486",
+     "rows_used": 10000,
+     "use": "compared"
+    }
+   ],
+   "largest_difference_between_the_two_programs": {
+    "equilibration": 0.0,
+    "production": 0.0
+   },
+   "file": "bonded_2e_R1.csv.gz",
+   "rows": 10130,
+   "rows_equilibration": 130,
+   "rows_production": 10000,
+   "bytes": 146895,
+   "bytes_uncompressed": 454854,
+   "sha256": "cde547c081b824117a57eba767c3b0b62a6c18b69e6b1a1b581619dfb2d400e5",
+   "sha256_uncompressed": "5d963b4edc4d0ede386ad61b2b5d836813deb3db017ecfdbe2c3353429593b05",
+   "stage_ends_ns": {
+    "eq4": -0.9,
+    "eq5": -0.5,
+    "eq6": 0.0
+   }
+  },
+  {
+   "run": "bonded_2e/R2",
+   "files_read": [
+    {
+     "file": "/root/cqc-sfa-md/runs/bonded_2e/R2/analysis/timeseries_equil_solute.csv",
+     "sha256": "a4100e59aeb1a46fce34c9b5769da298a08c4417e082de396e80ad2e5dfc240b",
+     "rows_used": 130,
+     "use": "written"
+    },
+    {
+     "file": "/root/cqc-sfa-md/runs/bonded_2e/R2/analysis_recheck/timeseries_equil_solute.csv",
+     "sha256": "a4100e59aeb1a46fce34c9b5769da298a08c4417e082de396e80ad2e5dfc240b",
+     "rows_used": 130,
+     "use": "compared"
+    },
+    {
+     "file": "/root/cqc-sfa-md/runs/bonded_2e/R2/analysis/timeseries_solute.csv",
+     "sha256": "a0f8a9ea548aafdbf2d9e796ccf7e09b46cfbd090708e12436a9f8a17e6d22f3",
+     "rows_used": 10000,
+     "use": "written"
+    },
+    {
+     "file": "/root/cqc-sfa-md/runs/bonded_2e/R2/analysis_recheck/timeseries_solute.csv",
+     "sha256": "a0f8a9ea548aafdbf2d9e796ccf7e09b46cfbd090708e12436a9f8a17e6d22f3",
+     "rows_used": 10000,
+     "use": "compared"
+    }
+   ],
+   "largest_difference_between_the_two_programs": {
+    "equilibration": 0.0,
+    "production": 0.0
+   },
+   "file": "bonded_2e_R2.csv.gz",
+   "rows": 10130,
+   "rows_equilibration": 130,
+   "rows_production": 10000,
+   "bytes": 146941,
+   "bytes_uncompressed": 454879,
+   "sha256": "87b7f32d3f9dd1069c5dcbcf0cc80b595e58b6c98f28c92022ecd0cf1e623a23",
+   "sha256_uncompressed": "69c43419a33ca226c88a200bd7f454c79564d63e5945eb574234a93cdb2b231a",
+   "stage_ends_ns": {
+    "eq4": -0.9,
+    "eq5": -0.5,
+    "eq6": 0.0
+   }
+  },
+  {
+   "run": "bonded_2e/R3",
+   "files_read": [
+    {
+     "file": "/root/cqc-sfa-md/runs/bonded_2e/R3/analysis/timeseries_equil_solute.csv",
+     "sha256": "5a26c9fd8bdc4241463c1e69b4fabd618da408d5912a51444faab3dbe6c22f40",
+     "rows_used": 130,
+     "use": "written"
+    },
+    {
+     "file": "/root/cqc-sfa-md/runs/bonded_2e/R3/analysis_recheck/timeseries_equil_solute.csv",
+     "sha256": "5a26c9fd8bdc4241463c1e69b4fabd618da408d5912a51444faab3dbe6c22f40",
+     "rows_used": 130,
+     "use": "compared"
+    },
+    {
+     "file": "/root/cqc-sfa-md/runs/bonded_2e/R3/analysis/timeseries_solute.csv",
+     "sha256": "3f25434115af84647f4ba260dbde8743f58db8de699e01e695f2fe57b50aa358",
+     "rows_used": 10000,
+     "use": "written"
+    },
+    {
+     "file": "/root/cqc-sfa-md/runs/bonded_2e/R3/analysis_recheck/timeseries_solute.csv",
+     "sha256": "3f25434115af84647f4ba260dbde8743f58db8de699e01e695f2fe57b50aa358",
+     "rows_used": 10000,
+     "use": "compared"
+    }
+   ],
+   "largest_difference_between_the_two_programs": {
+    "equilibration": 0.0,
+    "production": 0.0
+   },
+   "file": "bonded_2e_R3.csv.gz",
+   "rows": 10130,
+   "rows_equilibration": 130,
+   "rows_production": 10000,
+   "bytes": 146724,
+   "bytes_uncompressed": 454820,
+   "sha256": "384230088319502b5f9d956631a37787f0e8def4442caf783522befba7d2b229",
+   "sha256_uncompressed": "35b73a2b714f420cdacefdd1044194b929dd9f97249473e7c02b7d21dc91f17c",
+   "stage_ends_ns": {
+    "eq4": -0.9,
+    "eq5": -0.5,
+    "eq6": 0.0
+   }
+  },
+  {
+   "run": "bonded_2s/R1",
+   "files_read": [
+    {
+     "file": "/root/cqc-sfa-md/runs/bonded_2s/R1/analysis/timeseries_equil_solute.csv",
+     "sha256": "4cc03628c9f85c8675d56eab8d530960c48def53c1566eee7f8986984da2bf36",
+     "rows_used": 130,
+     "use": "written"
+    },
+    {
+     "file": "/root/cqc-sfa-md/runs/bonded_2s/R1/analysis_recheck/timeseries_equil_solute.csv",
+     "sha256": "4cc03628c9f85c8675d56eab8d530960c48def53c1566eee7f8986984da2bf36",
+     "rows_used": 130,
+     "use": "compared"
+    },
+    {
+     "file": "/root/cqc-sfa-md/runs/bonded_2s/R1/analysis/timeseries_solute.csv",
+     "sha256": "993816586727e13b67c2ccf2b6c8b6fb05ec3ece7188eb430e2639e1e23b3576",
+     "rows_used": 10000,
+     "use": "written"
+    },
+    {
+     "file": "/root/cqc-sfa-md/runs/bonded_2s/R1/analysis_recheck/timeseries_solute.csv",
+     "sha256": "993816586727e13b67c2ccf2b6c8b6fb05ec3ece7188eb430e2639e1e23b3576",
+     "rows_used": 10000,
+     "use": "compared"
+    }
+   ],
+   "largest_difference_between_the_two_programs": {
+    "equilibration": 0.0,
+    "production": 0.0
+   },
+   "file": "bonded_2s_R1.csv.gz",
+   "rows": 10130,
+   "rows_equilibration": 130,
+   "rows_production": 10000,
+   "bytes": 149981,
+   "bytes_uncompressed": 454957,
+   "sha256": "58e83b554bf504afba2d17955a73b0664a8d96f3b64a27a23ce9ba59965a3c82",
+   "sha256_uncompressed": "cfb530127ff56928b8bd75ee0d256e42598ea44219f1c85970a869fd47b58ad8",
+   "stage_ends_ns": {
+    "eq4": -0.9,
+    "eq5": -0.5,
+    "eq6": 0.0
+   }
+  },
+  {
+   "run": "bonded_2e_n2fit/R1",
+   "files_read": [
+    {
+     "file": "/root/cqc-sfa-md/runs/bonded_2e_n2fit/R1/analysis/timeseries_equil_solute.csv",
+     "sha256": "8c385c00eb690a2b3f3c883fb068be98d6f65b0576322726cb6f5a119d925390",
+     "rows_used": 130,
+     "use": "written"
+    },
+    {
+     "file": "/root/cqc-sfa-md/runs/bonded_2e_n2fit/R1/analysis_recheck/timeseries_equil_solute.csv",
+     "sha256": "8c385c00eb690a2b3f3c883fb068be98d6f65b0576322726cb6f5a119d925390",
+     "rows_used": 130,
+     "use": "compared"
+    },
+    {
+     "file": "/root/cqc-sfa-md/runs/bonded_2e_n2fit/R1/analysis/timeseries_solute.csv",
+     "sha256": "91cd4edb0ed8e295956f431d2ba0c571e410c0d8052931e6fe43f0aa8d067d76",
+     "rows_used": 10000,
+     "use": "written"
+    },
+    {
+     "file": "/root/cqc-sfa-md/runs/bonded_2e_n2fit/R1/analysis_recheck/timeseries_solute.csv",
+     "sha256": "91cd4edb0ed8e295956f431d2ba0c571e410c0d8052931e6fe43f0aa8d067d76",
+     "rows_used": 10000,
+     "use": "compared"
+    }
+   ],
+   "largest_difference_between_the_two_programs": {
+    "equilibration": 0.0,
+    "production": 0.0
+   },
+   "file": "bonded_2e_n2fit_R1.csv.gz",
+   "rows": 10130,
+   "rows_equilibration": 130,
+   "rows_production": 10000,
+   "bytes": 155258,
+   "bytes_uncompressed": 456199,
+   "sha256": "3e82d17300052e2130488f0badeae5420ba1be7714f15cac539695c77b7845c8",
+   "sha256_uncompressed": "8f1b6a99ae56d6335e8b007a0618d3e11a9814be45e8dbfc7ce742bc9aee1fe2",
+   "stage_ends_ns": {
+    "eq4": -0.9,
+    "eq5": -0.5,
+    "eq6": 0.0
+   }
+  }
+ ]
+}

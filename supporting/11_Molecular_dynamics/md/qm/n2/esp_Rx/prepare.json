@@ -1,0 +1,82 @@
+{
+ "what": "input of the potential job of the large model with the ligand in the R-like placement (point Rx of gate G-R); written by md/qm/n2_charges.py prepare-esp; no energy",
+ "written": "2026-10-06 02:48:19 PM IST",
+ "source": {
+  "com": "md/qm/mcpb/CA2_large_mk.com",
+  "com_sha256": "f15ebea92458334321703aeda3cbcb6839f4a25145b4b76af43ce021765759ad",
+  "points": "md/qm/gr/points.json",
+  "points_sha256": "fbab11970eda09ceb67bafd8dfd8ffd2791b0ff11ddccf7d00221c937ac3bd54",
+  "config": "md/qm/config_prod.json",
+  "config_sha256": "54cde1d5667762246c83236f1538456d1bca81b62e0603fd69e88046667f9846"
+ },
+ "natoms": 101,
+ "ligand_atoms": "84-101",
+ "ligand_order": [
+  "C1",
+  "C2",
+  "C3",
+  "C4",
+  "C5",
+  "C6",
+  "N1",
+  "N2",
+  "O1",
+  "O2",
+  "S",
+  "H2",
+  "H3",
+  "H5",
+  "H6",
+  "HN11",
+  "HN12",
+  "HN21"
+ ],
+ "ligand_of_the_large_model_against_point_X_A": 0.0,
+ "zinc_large_against_small_A": 0.0,
+ "ligand_moved_rms_A": 4.243,
+ "closest_contacts_ligand_to_the_other_atoms_of_the_large_model": {
+  "X": {
+   "heavy_heavy": {
+    "d": 3.207,
+    "pair": "N2...HID93:NE2"
+   },
+   "heavy_h": {
+    "d": 2.619,
+    "pair": "O2...HID93:HE1"
+   },
+   "h_h": {
+    "d": 2.719,
+    "pair": "H3...HID93:HE1"
+   }
+  },
+  "Rx": {
+   "heavy_heavy": {
+    "d": 2.877,
+    "pair": "C3...HID93:CE1"
+   },
+   "heavy_h": {
+    "d": 2.716,
+    "pair": "C3...HID93:HE1"
+   },
+   "h_h": {
+    "d": 2.048,
+    "pair": "H5...HID95:HE1"
+   }
+  }
+ },
+ "settings_changed_against_config_prod": {
+  "indir": "md/qm/n2/esp_Rx/in",
+  "bulk": "/root/cqc-sfa-md/qm/n2/esp_Rx",
+  "outdir": "md/qm/n2/esp_Rx/results",
+  "threads": 16,
+  "jobs": [
+   "esp",
+   "write"
+  ]
+ },
+ "files": {
+  "CA2_large_mk.com": "2b9261f2bafc888caa3db85ca48d2cc44dc9d29b4c17bb4d6025fdcb141628d7",
+  "CA2_small_opt.com": "716738fb11c8ef271e591824ee5083978fcb4395fdd8bdeb6f947d59e53ab0cd"
+ },
+ "config_sha256": "e6727c134c9e1b9ff8e0ea126dda1fda2f9836bd5fcd179d532cc145734a92d8"
+}

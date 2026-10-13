@@ -1,0 +1,213 @@
+{
+ "what": "self-test of md/qm/resp_equiv.py on synthetic potentials (no quantum chemistry)",
+ "cases": {
+  "A_unsymmetric_truth": {
+   "n_points": 20357,
+   "n_equivalences_stage1_free": 0,
+   "n_equivalences_stage1_equal": 6,
+   "n_group_constraints": 17,
+   "free_without_restraint_returns_known": {
+    "largest_deviation": 7.000000000034756e-06
+   },
+   "equal_without_restraint": {
+    "pairs_largest_difference": 0.0,
+    "largest_deviation_from_pair_average_of_truth_ligand": 0.07798599999999989,
+    "largest_deviation_from_truth_other_atoms": 0.121183,
+    "site_charge": {
+     "free": 1.000002,
+     "equal": 0.999999,
+     "whole_model_free": 1.000003,
+     "whole_model_equal": 0.999997,
+     "passed": true
+    }
+   },
+   "stage1_against_own_constrained_least_squares": {
+    "equal_largest_difference": 4.963485505937726e-07,
+    "free_largest_difference": 4.855608962753277e-07
+   },
+   "relative_rms": {
+    "free": 0.0,
+    "equal": 0.00281
+   },
+   "passed": true,
+   "production_path_with_restraint": {
+    "all_checks_passed": true,
+    "checks": {
+     "free_fit_equals_resp2_chg_of_mcpb": {
+      "largest_difference": 0.0,
+      "passed": true
+     },
+     "pairs_equal_in_constrained_set": {
+      "largest_difference": 0.0,
+      "passed": true
+     },
+     "site_charge_kept": {
+      "free": 1.0,
+      "equal": 1.0,
+      "whole_model_free": 1.000001,
+      "whole_model_equal": 1.0,
+      "passed": true
+     },
+     "mapping_reproduces_mol2_of_mcpb": {
+      "largest_difference": 0.0,
+      "passed": true
+     },
+     "pairs_equal_in_SN1_mol2": {
+      "passed": true
+     }
+    },
+    "ligand": [
+     {
+      "atom": "C1",
+      "equal": 0.029394,
+      "free": 0.036436,
+      "averaged": 0.036436
+     },
+     {
+      "atom": "C2",
+      "equal": -0.175606,
+      "free": -0.175808,
+      "averaged": -0.172511
+     },
+     {
+      "atom": "C3",
+      "equal": -0.059369,
+      "free": -0.058552,
+      "averaged": -0.065876
+     },
+     {
+      "atom": "C4",
+      "equal": -0.183403,
+      "free": -0.196864,
+      "averaged": -0.196864
+     },
+     {
+      "atom": "C5",
+      "equal": -0.059369,
+      "free": -0.0732,
+      "averaged": -0.065876
+     },
+     {
+      "atom": "C6",
+      "equal": -0.175606,
+      "free": -0.169215,
+      "averaged": -0.172511
+     },
+     {
+      "atom": "N1",
+      "equal": -0.766239,
+      "free": -0.773688,
+      "averaged": -0.773688
+     },
+     {
+      "atom": "N2",
+      "equal": -1.186041,
+      "free": -1.208197,
+      "averaged": -1.208197
+     },
+     {
+      "atom": "O1",
+      "equal": -0.719129,
+      "free": -0.722562,
+      "averaged": -0.739764
+     },
+     {
+      "atom": "O2",
+      "equal": -0.719129,
+      "free": -0.756966,
+      "averaged": -0.739764
+     },
+     {
+      "atom": "S",
+      "equal": 1.387552,
+      "free": 1.441369,
+      "averaged": 1.441369
+     },
+     {
+      "atom": "H2",
+      "equal": 0.102025,
+      "free": 0.100642,
+      "averaged": 0.10019
+     },
+     {
+      "atom": "H3",
+      "equal": 0.136421,
+      "free": 0.138744,
+      "averaged": 0.141545
+     },
+     {
+      "atom": "H5",
+      "equal": 0.136421,
+      "free": 0.144347,
+      "averaged": 0.141545
+     },
+     {
+      "atom": "H6",
+      "equal": 0.102025,
+      "free": 0.099738,
+      "averaged": 0.10019
+     },
+     {
+      "atom": "HN11",
+      "equal": 0.345986,
+      "free": 0.347679,
+      "averaged": 0.347948
+     },
+     {
+      "atom": "HN12",
+      "equal": 0.345986,
+      "free": 0.348216,
+      "averaged": 0.347948
+     },
+     {
+      "atom": "HN21",
+      "equal": 0.507961,
+      "free": 0.502248,
+      "averaged": 0.502248
+     }
+    ],
+    "zinc": {
+     "equal": 1.837538,
+     "free": 1.878415
+    },
+    "largest_change_equal_minus_free": {
+     "ligand": 0.053817,
+     "other_atoms": 0.071126
+    },
+    "largest_difference_equal_minus_averaged": 0.071126,
+    "relative_rms": {
+     "free": 0.00231,
+     "equal": 0.00365
+    },
+    "second_run_gives_the_same_files": true
+   }
+  },
+  "B_symmetric_truth": {
+   "n_points": 20357,
+   "equal_without_restraint_returns_known": {
+    "largest_deviation": 7.000000000000062e-06
+   },
+   "free_without_restraint_returns_known": {
+    "largest_deviation": 5.999999999999062e-06
+   },
+   "relative_rms": {
+    "free": 0.0,
+    "equal": 0.0
+   },
+   "passed": true
+  }
+ },
+ "known_charges": {
+  "sum": 1.0,
+  "sum_symmetrised": 1.0,
+  "pair_differences": {
+   "O1-O2": 0.0436,
+   "C2-C6": 0.0,
+   "C3-C5": 0.0,
+   "H2-H6": 0.0,
+   "H3-H5": 0.0,
+   "HN11-HN12": 0.0
+  }
+ },
+ "all_passed": true
+}

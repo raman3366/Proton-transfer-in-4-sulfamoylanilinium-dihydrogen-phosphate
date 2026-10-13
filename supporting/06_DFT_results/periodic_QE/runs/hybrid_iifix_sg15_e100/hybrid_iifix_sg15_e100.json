@@ -1,0 +1,161 @@
+{
+ "tag": "hybrid_iifix_sg15_e100",
+ "start": "iifix",
+ "what": "PBE0-D3(BJ) SCF single point at the final geometry of relax_iifix",
+ "pseudopotentials": "SG15 ONCV v1.2 (norm-conserving, no NLCC)",
+ "pbe_companion": "pbe_iifix_sg15_e100",
+ "geometry_from": "/home/ubuntu/cqc-sfa/molecules/sfa/results/periodic_qe/runs/relax_iifix/relax_iifix.out",
+ "geometry_out_sha256": "ae3850a1c25ec91c2e9faf586296184b7648e016457fe93eb4a6e3358a7cb8f3",
+ "pbe_d3_relax_energy_Ry": -905.1446010242,
+ "relax_setting": {
+  "ecut_Ry": [
+   70,
+   560
+  ],
+  "k": "2x1x1"
+ },
+ "ecut_Ry": [
+  100,
+  400
+ ],
+ "k": "2x1x1",
+ "nq": [
+  1,
+  1,
+  1
+ ],
+ "ecutfock_Ry": 400,
+ "ace": true,
+ "conv_thr_Ry": 1e-06,
+ "exx_maxstep": 100,
+ "max_seconds": 7098,
+ "np": 14,
+ "utc_start": "2026-09-28T18:06:55+00:00",
+ "utc_end": "2026-09-28T18:17:43+00:00",
+ "converged": true,
+ "energy_Ry": -693.64906802,
+ "parts_before": 0,
+ "hybrid": {
+  "xc": "PBE0",
+  "exx_fraction": 0.25,
+  "ecutfock_Ry": 400.0,
+  "nq": [
+   1,
+   1,
+   1
+  ],
+  "exx_grid": {
+   "G_vectors": 484707,
+   "fft": [
+    60,
+    135,
+    128
+   ]
+  },
+  "ace": true,
+  "tqr": false,
+  "tqr_q_integration_warnings": [],
+  "first_scf_energy_Ry": -693.83374406,
+  "outer_loops": [
+   {
+    "mark": "",
+    "energy_Ry": -693.64797191,
+    "harris_foulkes_Ry": -693.64797236,
+    "dexx_Ry": 0.00511214,
+    "fock_energy_Ry": -41.21742819
+   },
+   {
+    "mark": "",
+    "energy_Ry": -693.64901185,
+    "harris_foulkes_Ry": -693.64901201,
+    "dexx_Ry": 0.00017831,
+    "fock_energy_Ry": -41.23411196
+   },
+   {
+    "mark": "",
+    "energy_Ry": -693.64906357,
+    "harris_foulkes_Ry": -693.64906367,
+    "dexx_Ry": 1.094e-05,
+    "fock_energy_Ry": -41.23730041
+   },
+   {
+    "mark": "",
+    "energy_Ry": -693.64906765,
+    "harris_foulkes_Ry": -693.64906768,
+    "dexx_Ry": 1.02e-06,
+    "fock_energy_Ry": -41.2381294
+   },
+   {
+    "mark": "!!",
+    "energy_Ry": -693.64906802,
+    "harris_foulkes_Ry": -693.64906804,
+    "dexx_Ry": 1e-07,
+    "fock_energy_Ry": -41.2382783
+   }
+  ],
+  "n_outer_loops_printed": 5,
+  "exx_converged": true,
+  "energy_Ry": -693.64906802,
+  "last_outer_energy_Ry": -693.64906802,
+  "last_dexx_Ry": 1e-07,
+  "stopped_early": false,
+  "inner_scf_iterations": [
+   10,
+   5,
+   4,
+   3,
+   2,
+   1
+  ],
+  "clocks_wall_s": {
+   "init_run": {
+    "wall_s": 1.51,
+    "calls": 1
+   },
+   "electrons": {
+    "wall_s": 92.93,
+    "calls": 6
+   },
+   "aceinit0": {
+    "wall_s": 0.0,
+    "calls": 1
+   },
+   "c_bands": {
+    "wall_s": 81.62,
+    "calls": 26
+   },
+   "h_psi": {
+    "wall_s": 60.34,
+    "calls": 136
+   },
+   "fftc": {
+    "wall_s": 439.87,
+    "calls": 101568
+   },
+   "fftcw": {
+    "wall_s": 4.71,
+    "calls": 1656
+   },
+   "exxinit": {
+    "wall_s": 11.71,
+    "calls": 6
+   },
+   "vexx": {
+    "wall_s": 536.88,
+    "calls": 6
+   },
+   "aceinit": {
+    "wall_s": 537.31,
+    "calls": 6
+   }
+  },
+  "timing_marks": [
+   34.7,
+   146.3,
+   253.7,
+   355.9,
+   456.0,
+   554.1
+  ]
+ }
+}

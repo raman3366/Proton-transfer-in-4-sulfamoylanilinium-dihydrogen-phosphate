@@ -1,0 +1,235 @@
+{
+  "provenance": {
+    "script": "fsp.py",
+    "argv": [
+      "sfa_pair_pcm_d3",
+      "--scan",
+      "molecules/sfa/results/sfa_pair_pcm_d3/scan",
+      "--label",
+      "fsp_scan"
+    ],
+    "case": "sfa_pair_pcm_d3",
+    "case_file": "molecules/sfa/cases/sfa_pair_pcm_d3.json",
+    "charge": 0,
+    "spin": 0,
+    "basis": "6-311++G(d,p)",
+    "grid_level": 4,
+    "environment": "IEF-PCM (water, eps = 78.3553, Lebedev order 29)",
+    "case_xc": "b3lyp",
+    "case_disp": "d3bj",
+    "density_fitting": true,
+    "pyscf_version": "2.14.0",
+    "threads": 12,
+    "host": "cqc-dft-01",
+    "finished": "2026-09-28T17:38:02",
+    "wall_min": 22.89
+  },
+  "geometries": [
+    {
+      "name": "end_N_d1.098",
+      "file": "molecules/sfa/results/sfa_pair_pcm_d3/scan/A_00_anchor.xyz",
+      "sha256": "f080c62c54c88244f428c87d8e29b815da49f6f7ecf4d921ef14f6cafe82deac"
+    },
+    {
+      "name": "top1_d1.250",
+      "file": "molecules/sfa/results/sfa_pair_pcm_d3/scan/A_02_d1.250.xyz",
+      "sha256": "d745336d96ed0d2e0ac6cbe8ecb87b6e3be034fcf356f82afd2498aef75fcaf2"
+    },
+    {
+      "name": "end_O_d1.631",
+      "file": "molecules/sfa/results/sfa_pair_pcm_d3/scan/B_00_anchor.xyz",
+      "sha256": "20009d2a50c60dca9c108bb2cf9bf8a1c8b432568cfa28c29ffd12fe3ca78272"
+    }
+  ],
+  "methods": {
+    "b3lyp-d3bj": "B3LYP-D3(BJ)",
+    "wb97x-d": "wB97X-D",
+    "m06-2x": "M06-2X",
+    "pbe0-d3bj": "PBE0-D3(BJ)",
+    "df-mp2": "DF-MP2 (FC)"
+  },
+  "energies": {
+    "b3lyp-d3bj": {
+      "end_N_d1.098": {
+        "E_Ha": -1536.110647225375,
+        "E_disp_Ha": -0.057134174553838644,
+        "wall_s": 97.7
+      },
+      "top1_d1.250": {
+        "E_Ha": -1536.1094945762088,
+        "E_disp_Ha": -0.057595800913151925,
+        "wall_s": 96.8
+      },
+      "end_O_d1.631": {
+        "E_Ha": -1536.111511209808,
+        "E_disp_Ha": -0.05754830558927489,
+        "wall_s": 83.6
+      }
+    },
+    "wb97x-d": {
+      "end_N_d1.098": {
+        "E_Ha": -1535.7566012962682,
+        "E_scf_Ha": -1535.7403108108404,
+        "E_disp_CHG_Ha": -0.016290485427758315,
+        "wall_s": 102.0
+      },
+      "top1_d1.250": {
+        "E_Ha": -1535.7550402766717,
+        "E_scf_Ha": -1535.7382499261957,
+        "E_disp_CHG_Ha": -0.01679035047595233,
+        "wall_s": 102.3
+      },
+      "end_O_d1.631": {
+        "E_Ha": -1535.7577421001176,
+        "E_scf_Ha": -1535.740662906289,
+        "E_disp_CHG_Ha": -0.017079193828639178,
+        "wall_s": 102.3
+      }
+    },
+    "m06-2x": {
+      "end_N_d1.098": {
+        "E_Ha": -1535.675236040883,
+        "wall_s": 132.1
+      },
+      "top1_d1.250": {
+        "E_Ha": -1535.6760535349608,
+        "wall_s": 142.3
+      },
+      "end_O_d1.631": {
+        "E_Ha": -1535.6791680573897,
+        "wall_s": 132.2
+      }
+    },
+    "pbe0-d3bj": {
+      "end_N_d1.098": {
+        "E_Ha": -1534.911531016639,
+        "E_disp_Ha": -0.029843527053221082,
+        "wall_s": 85.0
+      },
+      "top1_d1.250": {
+        "E_Ha": -1534.9116047301695,
+        "E_disp_Ha": -0.030292840144254343,
+        "wall_s": 90.2
+      },
+      "end_O_d1.631": {
+        "E_Ha": -1534.913561564862,
+        "E_disp_Ha": -0.030328322016054118,
+        "wall_s": 78.1
+      }
+    },
+    "df-mp2": {
+      "end_N_d1.098": {
+        "E_Ha": -1532.9599331868178,
+        "E_RHF_Ha": -1530.2804317055632,
+        "E_corr_Ha": -2.679501481254639,
+        "n_frozen": 24,
+        "aux_mp2": "{'S': 'aug-cc-pvtz-ri', 'P': 'aug-cc-pvtz-ri', 'N': 'aug-cc-pvtz-ri', 'H': 'aug-cc-pvtz-ri', 'O': 'aug-cc-pvtz-ri', 'C': 'aug-cc-pvtz-ri'}",
+        "wall_s": 38.7
+      },
+      "top1_d1.250": {
+        "E_Ha": -1532.9596205815517,
+        "E_RHF_Ha": -1530.275743917025,
+        "E_corr_Ha": -2.6838766645266263,
+        "n_frozen": 24,
+        "aux_mp2": "{'S': 'aug-cc-pvtz-ri', 'P': 'aug-cc-pvtz-ri', 'N': 'aug-cc-pvtz-ri', 'H': 'aug-cc-pvtz-ri', 'O': 'aug-cc-pvtz-ri', 'C': 'aug-cc-pvtz-ri'}",
+        "wall_s": 45.8
+      },
+      "end_O_d1.631": {
+        "E_Ha": -1532.962194446745,
+        "E_RHF_Ha": -1530.2832806145766,
+        "E_corr_Ha": -2.6789138321683765,
+        "n_frozen": 24,
+        "aux_mp2": "{'S': 'aug-cc-pvtz-ri', 'P': 'aug-cc-pvtz-ri', 'N': 'aug-cc-pvtz-ri', 'H': 'aug-cc-pvtz-ri', 'O': 'aug-cc-pvtz-ri', 'C': 'aug-cc-pvtz-ri'}",
+        "wall_s": 44.2
+      }
+    }
+  },
+  "relative": {
+    "b3lyp-d3bj": {
+      "vs_first_kcal": {
+        "end_N_d1.098": 0.0,
+        "top1_d1.250": 0.7232982719982822,
+        "end_O_d1.631": -0.5421584170669377
+      },
+      "vs_first_kJ": {
+        "end_N_d1.098": 0.0,
+        "top1_d1.250": 3.0262799697918408,
+        "end_O_d1.631": -2.268390816821447
+      },
+      "vs_lowest_kcal": {
+        "end_N_d1.098": 0.5421584170669377,
+        "top1_d1.250": 1.26545668906522,
+        "end_O_d1.631": 0.0
+      }
+    },
+    "wb97x-d": {
+      "vs_first_kcal": {
+        "end_N_d1.098": 0.0,
+        "top1_d1.250": 0.9795545858817486,
+        "end_O_d1.631": -0.7158652235158767
+      },
+      "vs_first_kJ": {
+        "end_N_d1.098": 0.0,
+        "top1_d1.250": 4.098456386992057,
+        "end_O_d1.631": -2.995180094944015
+      },
+      "vs_lowest_kcal": {
+        "end_N_d1.098": 0.7158652235158767,
+        "top1_d1.250": 1.6954198093976254,
+        "end_O_d1.631": 0.0
+      }
+    },
+    "m06-2x": {
+      "vs_first_kcal": {
+        "end_N_d1.098": 0.0,
+        "top1_d1.250": -0.5129852787988466,
+        "end_O_d1.631": -2.4673776098935765
+      },
+      "vs_first_kJ": {
+        "end_N_d1.098": 0.0,
+        "top1_d1.250": -2.1463304063177957,
+        "end_O_d1.631": -10.32350791894541
+      },
+      "vs_lowest_kcal": {
+        "end_N_d1.098": 2.4673776098935765,
+        "top1_d1.250": 1.9543923310947302,
+        "end_O_d1.631": 0.0
+      }
+    },
+    "pbe0-d3bj": {
+      "vs_first_kcal": {
+        "end_N_d1.098": 0.0,
+        "top1_d1.250": -0.04625593880257567,
+        "end_O_d1.631": -1.2741882473758168
+      },
+      "vs_first_kJ": {
+        "end_N_d1.098": 0.0,
+        "top1_d1.250": -0.19353484793405448,
+        "end_O_d1.631": -5.33120362658182
+      },
+      "vs_lowest_kcal": {
+        "end_N_d1.098": 1.2741882473758168,
+        "top1_d1.250": 1.2279323085732412,
+        "end_O_d1.631": 0.0
+      }
+    },
+    "df-mp2": {
+      "vs_first_kcal": {
+        "end_N_d1.098": 0.0,
+        "top1_d1.250": 0.1961627661109071,
+        "end_O_d1.631": -1.4189620274201793
+      },
+      "vs_first_kJ": {
+        "end_N_d1.098": 0.0,
+        "top1_d1.250": 0.8207450133405126,
+        "end_O_d1.631": -5.936937122237599
+      },
+      "vs_lowest_kcal": {
+        "end_N_d1.098": 1.4189620274201793,
+        "top1_d1.250": 1.6151247935310864,
+        "end_O_d1.631": 0.0
+      }
+    }
+  },
+  "notes": "Electronic energies; wB97X-D = libxc HYB_GGA_XC_WB97X_D + Chai-Head-Gordon D2-type dispersion (added here); DF-MP2 frozen core, PCM via PTE (reaction field frozen at RHF). Relative energies per method."
+}

@@ -1,0 +1,81 @@
+{
+  "provenance": {
+    "script": "fsp.py",
+    "argv": [
+      "sulfanilamide_pcm_d3",
+      "molecules/sfa/results/sulfanilamide_pcm_d3/opt.xyz",
+      "/tmp/claude-0/-root-workspace/0662f566-95fe-4239-a83c-3d1a6bdb371b/scratchpad/strainref/sfa_neutral__opt__Hrot.xyz",
+      "--names",
+      "opt,opt__Hrot",
+      "--methods",
+      "b3lyp-d3bj",
+      "--label",
+      "strainref",
+      "--outdir",
+      "/tmp/claude-0/-root-workspace/0662f566-95fe-4239-a83c-3d1a6bdb371b/scratchpad/strainref/out",
+      "--threads",
+      "3"
+    ],
+    "case": "sulfanilamide_pcm_d3",
+    "case_file": "molecules/sfa/cases/sulfanilamide_pcm_d3.json",
+    "charge": 0,
+    "spin": 0,
+    "basis": "6-311++G(d,p)",
+    "grid_level": 4,
+    "environment": "IEF-PCM (water, eps = 78.3553, Lebedev order 29)",
+    "case_xc": "b3lyp",
+    "case_disp": "d3bj",
+    "density_fitting": true,
+    "pyscf_version": "2.14.0",
+    "threads": 3,
+    "host": "arya",
+    "finished": "2026-09-29T02:33:18",
+    "wall_min": 6.92
+  },
+  "geometries": [
+    {
+      "name": "opt",
+      "file": "molecules/sfa/results/sulfanilamide_pcm_d3/opt.xyz",
+      "sha256": "ec161459e7f119de584ac468230bf18bb3d1718d349dde9d70c7d13e4e6500f2"
+    },
+    {
+      "name": "opt__Hrot",
+      "file": "/tmp/claude-0/-root-workspace/0662f566-95fe-4239-a83c-3d1a6bdb371b/scratchpad/strainref/sfa_neutral__opt__Hrot.xyz",
+      "sha256": "a05bafada0d20b801f7c0aeb0faf279bd3c210c3fe90f1c60e7bdab20f015d98"
+    }
+  ],
+  "methods": {
+    "b3lyp-d3bj": "B3LYP-D3(BJ)"
+  },
+  "energies": {
+    "b3lyp-d3bj": {
+      "opt": {
+        "E_Ha": -891.7769114633063,
+        "E_disp_Ha": -0.03938814575185996,
+        "wall_s": 194.9
+      },
+      "opt__Hrot": {
+        "E_Ha": -891.772102059082,
+        "E_disp_Ha": -0.038977211972464454,
+        "wall_s": 220.3
+      }
+    }
+  },
+  "relative": {
+    "b3lyp-d3bj": {
+      "vs_first_kcal": {
+        "opt": 0.0,
+        "opt__Hrot": 3.017946715019408
+      },
+      "vs_first_kJ": {
+        "opt": 0.0,
+        "opt__Hrot": 12.627089054602372
+      },
+      "vs_lowest_kcal": {
+        "opt": 0.0,
+        "opt__Hrot": 3.017946715019408
+      }
+    }
+  },
+  "notes": "Electronic energies; wB97X-D = libxc HYB_GGA_XC_WB97X_D + Chai-Head-Gordon D2-type dispersion (added here); DF-MP2 frozen core, PCM via PTE (reaction field frozen at RHF). Relative energies per method."
+}

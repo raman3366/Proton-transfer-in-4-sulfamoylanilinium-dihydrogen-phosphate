@@ -1,0 +1,4071 @@
+{
+ "what": "Health of the runs from the driver's manifest and state logs. Written by md/production/collect_results.py.",
+ "written": "8 Oct 2026, 6:39 AM IST",
+ "final_verification": {
+  "file": "/root/cqc-sfa-md/status/final_verification.json",
+  "sha256": "2f7eafb0280871be82338a0f53c49828b6605ac0b10df7ea966c765352527689",
+  "ist": "8 Oct 2026, 4:12 AM IST",
+  "at": "the end of the work",
+  "why": "the queue reports all 33 tasks done, idle for 24 min",
+  "verified": true,
+  "not_verified_because": [],
+  "checked": "final pull; the driver's sha256 records; sha256 on the machine against the Pi",
+  "tries": 1,
+  "driver_checksums": {
+   "runs": 16,
+   "steps": 333,
+   "files_ok": 1284,
+   "bytes_hashed": 13400725764,
+   "missing": [],
+   "bad": [],
+   "ok": true
+  },
+  "pi_against_machine": {
+   "files": 3128,
+   "same": 3128,
+   "differ": [],
+   "missing": [],
+   "not_hashed": 0,
+   "live_state_not_compared": [
+    "status/deadman.json",
+    "status/heartbeat.json",
+    "status/queue.json"
+   ],
+   "ok": true
+  },
+  "left_on_machine": {
+   "unfinished": 0,
+   "busy": 0,
+   "too_large": [],
+   "scratch_big": [],
+   "tasks_running": []
+  }
+ },
+ "runs": [
+  {
+   "run": "bonded_2e/X1",
+   "manifest": "/root/cqc-sfa-md/runs/bonded_2e/X1/manifest.json",
+   "manifest_sha256": "8ec7a55d27c8e3562f8d9459301b6fc1275dfb1ffbd5212add6fd1dbcbdb23c9",
+   "driver": {
+    "status": "complete",
+    "all_steps_complete": true,
+    "test_only": false,
+    "equil_scale": 1.0,
+    "run_id": "X1",
+    "run_seed": 154924513,
+    "system_dir": "/root/cqc-sfa-md/systems/bonded_2e/X",
+    "n_atoms": 40902,
+    "n_water_molecules": 12247,
+    "crystal_water_O_listed_in_selections": 215,
+    "script_sha256": "6d797f080ff7567923469dabd86af71ca34183f5c482c14d55bf8038eb9d1822",
+    "protocol_sha256": "decda42f5340d06f5f695b4c56b59a7bb796e5872b3a8af1c1a5b426f9c09d9a",
+    "inputs_sha256": {
+     "system.prmtop": "a6c57a7c20aaea633317173b691837de56301feeed6f5cf38d687e91c9085aad",
+     "system.inpcrd": "27acb79e664525a7f2c7d7f245d7e8bb4092fb0b2a2f67b1d1ee6c6cd0220d19"
+    },
+    "n_invocations": 1,
+    "invocations": [
+     {
+      "started_ist": "6 Oct 2026, 10:14:24 PM IST",
+      "ended_ist": "7 Oct 2026, 12:56:09 AM IST",
+      "exit_code": 0,
+      "outcome": "stage complete",
+      "host": "cqc-md-gpu-01"
+     }
+    ],
+    "platform": "CUDA",
+    "gpu": "NVIDIA L40S",
+    "precision": "mixed",
+    "openmm": "8.6.1",
+    "minimisation_energy_change_kj_per_mol": -214652.577,
+    "equilibration": {
+     "complete": true,
+     "n_stages": 6,
+     "n_stages_complete": 6,
+     "n_extension_steps": 0,
+     "n_extension_steps_complete": 0,
+     "completed_ps": 2000.0
+    },
+    "production": {
+     "target_ns": 100.0,
+     "segment_ns": 5.0,
+     "n_segments_target": 20,
+     "n_segments_complete": 20,
+     "completed_ns": 100.0,
+     "complete": true,
+     "frames_solute": 10000,
+     "frames_full": 1000,
+     "wall_s": 9415.0,
+     "ns_per_day": 917.69
+    }
+   },
+   "build": {
+    "model": "bonded_2e",
+    "model_kind": "bonded",
+    "parameter_set": "2e",
+    "start": "X",
+    "status_note": "PRODUCTION system (md/PLAN.md, entry of 6 Oct 2026, 9:15 PM IST; md/PRODUCTION.md). Zinc set 2e: MCPB.py step 2e, empirical zinc constants. RESP charges with the equal ligand atoms made equal. Terms at N2 AS BUILT: gates G-R and G-R2 on these terms failed and are reported; they are used by the user's decision of 6 Oct 2026. Whether 2s or 2e is the primary set is decided by gate G-Z and the validation run X0 of each (md/PRODUCTION.md).",
+    "terms_at_N2": {
+     "source": "written by the builder: the terms AS BUILT BEFORE GATE G-R (Zn-N2-S, S-N2-H and H-N2-S-C4 as in the frcmod of MCPB.py; Zn-N2-H at its angle in start X with the force constant of that frcmod)",
+     "given_file": null,
+     "first_line_of_the_file": null,
+     "validated_by_gate_GR": false,
+     "sha256": "113e3a2ebdbe99a4389e2ed497b20caaf0e64aebcbc8d547cf39823e9ee2cd00",
+     "class_of_this_set": "the terms as built: the three angles at N2 and the series on H-N2-S-C4",
+     "entries_beyond_the_terms_as_built": []
+    },
+    "composition": {
+     "atoms": 40902,
+     "residues": 12575,
+     "protein_atoms": 4075,
+     "protein_residues_with_ACE": 259,
+     "zinc_atoms": 1,
+     "ligand_atoms": 18,
+     "solute_atoms": 4094,
+     "water_molecules": 12247,
+     "crystal_water_molecules": 215,
+     "added_water_molecules": 12032,
+     "Na+": 34,
+     "Cl-": 33,
+     "plan_atoms": 25600,
+     "atoms_over_plan_percent": 59.8
+    },
+    "geometry_as_built": {
+     "lig_rmsd_A": {
+      "identity": 0.0,
+      "ring_flip": 1.4538,
+      "oxygen_swap": 1.0435,
+      "ring_flip+oxygen_swap": 1.7895
+     },
+     "lig_rmsd_symmetry_corrected_A": 0.0,
+     "d1_N1_Phe131CZ_A": 3.8966,
+     "d2_N1_Asn67OD1_A": 7.7443,
+     "N1_Asn67ND2_A": 6.5511,
+     "Zn_N2_A": 1.9314,
+     "Zn_His94NE2_A": 2.0099,
+     "Zn_His96NE2_A": 2.0206,
+     "Zn_His119ND1_A": 2.0183,
+     "Zn_O1_A": 4.0509,
+     "Zn_O2_A": 2.9856,
+     "N2_Thr199OG1_A": 2.861,
+     "HN21_Thr199OG1_A": 1.8671,
+     "N2_HN21_Thr199OG1_deg": 163.6901,
+     "tau_fold_deg": 132.0561,
+     "C4_S_N2_deg": 108.7946,
+     "S_N2_A": 1.5963,
+     "S_N2_Zn_deg": 117.5521,
+     "Zn_N2_S_C4_deg": -117.0299,
+     "N_Zn_N_deg": {
+      "N2-Zn-H94NE2": 108.92,
+      "N2-Zn-H96NE2": 114.2796,
+      "N2-Zn-H119ND1": 116.8328,
+      "H94NE2-Zn-H96NE2": 103.8187,
+      "H94NE2-Zn-H119ND1": 113.5907,
+      "H96NE2-Zn-H119ND1": 98.4086
+     }
+    },
+    "script_sha256": "a9b8ef8d699dfce68abfddcd21186ebdb939900d67b4c549b92692bf39d38d70"
+   },
+   "hydration_check": {
+    "requested": true,
+    "applies": false,
+    "skipped": true,
+    "settings": {
+     "after_step": "eq03",
+     "site_atoms": [
+      "C1",
+      "C2",
+      "C3",
+      "C4",
+      "C5",
+      "C6"
+     ],
+     "water_cutoff_A": 2.5,
+     "applies_if_ligand_mean_distance_above_A": 2.0,
+     "max_extensions": 4
+    },
+    "reference_guard": {
+     "n_ca": 258,
+     "ca_fit_rmsd_of_system_inpcrd_on_reference_pdb_A": 0.0,
+     "n_ca_residue_names_that_differ": 0,
+     "ca_residue_names_that_differ_first_5": []
+    },
+    "counts": [
+     {
+      "step": "eq03",
+      "time_end_ps": 700.0,
+      "n_water_O": 0,
+      "nearest_water_O_A": 3.263,
+      "ligand_mean_distance_from_site_A": 0.259,
+      "applies": false,
+      "decision": "go on"
+     }
+    ],
+    "n_extensions": 0,
+    "final_decision": "go on: check skipped: the ligand itself is at the site",
+    "site_without_water_when_the_solute_was_released": false
+   },
+   "equilibration_stages": [
+    {
+     "tag": "eq01",
+     "name": "heat",
+     "ensemble": "NVT",
+     "timestep_fs": 2.0,
+     "length_ps": 100.0,
+     "time_start_ps": 0.0,
+     "time_end_ps": 100.0,
+     "restraint_atoms": "solute_heavy",
+     "restraint_k_kj_per_mol_nm2": 1000.0,
+     "n_restrained_atoms": 2074,
+     "log_rows": 10,
+     "log_mean_temperature_K": 185.2522,
+     "log_mean_density_g_per_cm3": 0.912352,
+     "log_non_finite": 0
+    },
+    {
+     "tag": "eq02",
+     "name": "density",
+     "ensemble": "NPT",
+     "timestep_fs": 2.0,
+     "length_ps": 300.0,
+     "time_start_ps": 100.0,
+     "time_end_ps": 400.0,
+     "restraint_atoms": "solute_heavy",
+     "restraint_k_kj_per_mol_nm2": 1000.0,
+     "n_restrained_atoms": 2074,
+     "log_rows": 30,
+     "log_mean_temperature_K": 299.7816666666667,
+     "log_mean_density_g_per_cm3": 1.0226345666666667,
+     "log_non_finite": 0
+    },
+    {
+     "tag": "eq03",
+     "name": "loosen",
+     "ensemble": "NPT",
+     "timestep_fs": 2.0,
+     "length_ps": 300.0,
+     "time_start_ps": 400.0,
+     "time_end_ps": 700.0,
+     "restraint_atoms": "solute_heavy",
+     "restraint_k_kj_per_mol_nm2": 250.0,
+     "n_restrained_atoms": 2074,
+     "log_rows": 30,
+     "log_mean_temperature_K": 300.8923666666667,
+     "log_mean_density_g_per_cm3": 1.0274478,
+     "log_non_finite": 0
+    },
+    {
+     "tag": "eq04",
+     "name": "release_side_chains_zinc_ligand",
+     "ensemble": "NPT",
+     "timestep_fs": 4.0,
+     "length_ps": 400.0,
+     "time_start_ps": 700.0,
+     "time_end_ps": 1100.0,
+     "restraint_atoms": "protein_backbone",
+     "restraint_k_kj_per_mol_nm2": 250.0,
+     "n_restrained_atoms": 1034,
+     "log_rows": 40,
+     "log_mean_temperature_K": 300.81084999999996,
+     "log_mean_density_g_per_cm3": 1.02607625,
+     "log_non_finite": 0
+    },
+    {
+     "tag": "eq05",
+     "name": "loosen_backbone",
+     "ensemble": "NPT",
+     "timestep_fs": 4.0,
+     "length_ps": 400.0,
+     "time_start_ps": 1100.0,
+     "time_end_ps": 1500.0,
+     "restraint_atoms": "protein_backbone",
+     "restraint_k_kj_per_mol_nm2": 50.0,
+     "n_restrained_atoms": 1034,
+     "log_rows": 40,
+     "log_mean_temperature_K": 300.799175,
+     "log_mean_density_g_per_cm3": 1.02598025,
+     "log_non_finite": 0
+    },
+    {
+     "tag": "eq06",
+     "name": "free",
+     "ensemble": "NPT",
+     "timestep_fs": 4.0,
+     "length_ps": 500.0,
+     "time_start_ps": 1500.0,
+     "time_end_ps": 2000.0,
+     "restraint_atoms": "none",
+     "restraint_k_kj_per_mol_nm2": 0.0,
+     "n_restrained_atoms": 0,
+     "log_rows": 50,
+     "log_mean_temperature_K": 300.88698,
+     "log_mean_density_g_per_cm3": 1.0257451,
+     "log_non_finite": 0
+    }
+   ],
+   "production_state_log": {
+    "files": "log_segNNNN.csv of the run folder, one row per 10 ps",
+    "rows": 10000,
+    "non_finite_values": 0,
+    "timestep_fs": [
+     4.0
+    ],
+    "thermostat_K": [
+     300.0
+    ],
+    "precision": "means and standard deviations are written as computed (no rounding here: a number rounded here and again when it is printed can come out one unit of the last digit off)",
+    "temperature_K": {
+     "mean": 300.9921789,
+     "sd": 1.4650880529493062,
+     "min": 295.15,
+     "max": 307.288,
+     "mean_first_half": 301.00282880000003,
+     "mean_last_half": 300.981529,
+     "segment_means_min": 300.884768,
+     "segment_means_max": 301.084928
+    },
+    "density_g_per_cm3": {
+     "mean": 1.0255101462,
+     "sd": 0.0023467143872711823,
+     "min": 1.016407,
+     "max": 1.034362,
+     "mean_first_half": 1.025506754,
+     "mean_last_half": 1.0255135384,
+     "segment_means_min": 1.025378092,
+     "segment_means_max": 1.0257118680000001
+    }
+   },
+   "trajectory_checksums": {
+    "what": "sha256 of every DCD file as the first program read it (summary.json, inputs_sha256) against the driver's record in the manifest",
+    "n_dcd_files_read": 52,
+    "n_equal_to_the_driver_record": 52,
+    "not_equal_or_not_recorded": []
+   },
+   "driver_log": {
+    "file": "/root/cqc-sfa-md/runs/bonded_2e/X1/run_md.log",
+    "lines": 58,
+    "lines_with_warning_error_or_failure": [],
+    "last_line": "[7 Oct 2026, 12:56:09 AM IST] DONE X1"
+   },
+   "sensitivity_marker": null
+  },
+  {
+   "run": "bonded_2e/X2",
+   "manifest": "/root/cqc-sfa-md/runs/bonded_2e/X2/manifest.json",
+   "manifest_sha256": "b24d5f7067b2aed33a0c908b0e5025124b2eabe2f4ad7204e7859d78250dc0b4",
+   "driver": {
+    "status": "complete",
+    "all_steps_complete": true,
+    "test_only": false,
+    "equil_scale": 1.0,
+    "run_id": "X2",
+    "run_seed": 53958591,
+    "system_dir": "/root/cqc-sfa-md/systems/bonded_2e/X",
+    "n_atoms": 40902,
+    "n_water_molecules": 12247,
+    "crystal_water_O_listed_in_selections": 215,
+    "script_sha256": "6d797f080ff7567923469dabd86af71ca34183f5c482c14d55bf8038eb9d1822",
+    "protocol_sha256": "decda42f5340d06f5f695b4c56b59a7bb796e5872b3a8af1c1a5b426f9c09d9a",
+    "inputs_sha256": {
+     "system.prmtop": "a6c57a7c20aaea633317173b691837de56301feeed6f5cf38d687e91c9085aad",
+     "system.inpcrd": "27acb79e664525a7f2c7d7f245d7e8bb4092fb0b2a2f67b1d1ee6c6cd0220d19"
+    },
+    "n_invocations": 1,
+    "invocations": [
+     {
+      "started_ist": "7 Oct 2026, 6:19:09 AM IST",
+      "ended_ist": "7 Oct 2026, 9:01:10 AM IST",
+      "exit_code": 0,
+      "outcome": "stage complete",
+      "host": "cqc-md-gpu-01"
+     }
+    ],
+    "platform": "CUDA",
+    "gpu": "NVIDIA L40S",
+    "precision": "mixed",
+    "openmm": "8.6.1",
+    "minimisation_energy_change_kj_per_mol": -212123.473,
+    "equilibration": {
+     "complete": true,
+     "n_stages": 6,
+     "n_stages_complete": 6,
+     "n_extension_steps": 0,
+     "n_extension_steps_complete": 0,
+     "completed_ps": 2000.0
+    },
+    "production": {
+     "target_ns": 100.0,
+     "segment_ns": 5.0,
+     "n_segments_target": 20,
+     "n_segments_complete": 20,
+     "completed_ns": 100.0,
+     "complete": true,
+     "frames_solute": 10000,
+     "frames_full": 1000,
+     "wall_s": 9438.8,
+     "ns_per_day": 915.37
+    }
+   },
+   "build": {
+    "model": "bonded_2e",
+    "model_kind": "bonded",
+    "parameter_set": "2e",
+    "start": "X",
+    "status_note": "PRODUCTION system (md/PLAN.md, entry of 6 Oct 2026, 9:15 PM IST; md/PRODUCTION.md). Zinc set 2e: MCPB.py step 2e, empirical zinc constants. RESP charges with the equal ligand atoms made equal. Terms at N2 AS BUILT: gates G-R and G-R2 on these terms failed and are reported; they are used by the user's decision of 6 Oct 2026. Whether 2s or 2e is the primary set is decided by gate G-Z and the validation run X0 of each (md/PRODUCTION.md).",
+    "terms_at_N2": {
+     "source": "written by the builder: the terms AS BUILT BEFORE GATE G-R (Zn-N2-S, S-N2-H and H-N2-S-C4 as in the frcmod of MCPB.py; Zn-N2-H at its angle in start X with the force constant of that frcmod)",
+     "given_file": null,
+     "first_line_of_the_file": null,
+     "validated_by_gate_GR": false,
+     "sha256": "113e3a2ebdbe99a4389e2ed497b20caaf0e64aebcbc8d547cf39823e9ee2cd00",
+     "class_of_this_set": "the terms as built: the three angles at N2 and the series on H-N2-S-C4",
+     "entries_beyond_the_terms_as_built": []
+    },
+    "composition": {
+     "atoms": 40902,
+     "residues": 12575,
+     "protein_atoms": 4075,
+     "protein_residues_with_ACE": 259,
+     "zinc_atoms": 1,
+     "ligand_atoms": 18,
+     "solute_atoms": 4094,
+     "water_molecules": 12247,
+     "crystal_water_molecules": 215,
+     "added_water_molecules": 12032,
+     "Na+": 34,
+     "Cl-": 33,
+     "plan_atoms": 25600,
+     "atoms_over_plan_percent": 59.8
+    },
+    "geometry_as_built": {
+     "lig_rmsd_A": {
+      "identity": 0.0,
+      "ring_flip": 1.4538,
+      "oxygen_swap": 1.0435,
+      "ring_flip+oxygen_swap": 1.7895
+     },
+     "lig_rmsd_symmetry_corrected_A": 0.0,
+     "d1_N1_Phe131CZ_A": 3.8966,
+     "d2_N1_Asn67OD1_A": 7.7443,
+     "N1_Asn67ND2_A": 6.5511,
+     "Zn_N2_A": 1.9314,
+     "Zn_His94NE2_A": 2.0099,
+     "Zn_His96NE2_A": 2.0206,
+     "Zn_His119ND1_A": 2.0183,
+     "Zn_O1_A": 4.0509,
+     "Zn_O2_A": 2.9856,
+     "N2_Thr199OG1_A": 2.861,
+     "HN21_Thr199OG1_A": 1.8671,
+     "N2_HN21_Thr199OG1_deg": 163.6901,
+     "tau_fold_deg": 132.0561,
+     "C4_S_N2_deg": 108.7946,
+     "S_N2_A": 1.5963,
+     "S_N2_Zn_deg": 117.5521,
+     "Zn_N2_S_C4_deg": -117.0299,
+     "N_Zn_N_deg": {
+      "N2-Zn-H94NE2": 108.92,
+      "N2-Zn-H96NE2": 114.2796,
+      "N2-Zn-H119ND1": 116.8328,
+      "H94NE2-Zn-H96NE2": 103.8187,
+      "H94NE2-Zn-H119ND1": 113.5907,
+      "H96NE2-Zn-H119ND1": 98.4086
+     }
+    },
+    "script_sha256": "a9b8ef8d699dfce68abfddcd21186ebdb939900d67b4c549b92692bf39d38d70"
+   },
+   "hydration_check": {
+    "requested": true,
+    "applies": false,
+    "skipped": true,
+    "settings": {
+     "after_step": "eq03",
+     "site_atoms": [
+      "C1",
+      "C2",
+      "C3",
+      "C4",
+      "C5",
+      "C6"
+     ],
+     "water_cutoff_A": 2.5,
+     "applies_if_ligand_mean_distance_above_A": 2.0,
+     "max_extensions": 4
+    },
+    "reference_guard": {
+     "n_ca": 258,
+     "ca_fit_rmsd_of_system_inpcrd_on_reference_pdb_A": 0.0,
+     "n_ca_residue_names_that_differ": 0,
+     "ca_residue_names_that_differ_first_5": []
+    },
+    "counts": [
+     {
+      "step": "eq03",
+      "time_end_ps": 700.0,
+      "n_water_O": 0,
+      "nearest_water_O_A": 3.203,
+      "ligand_mean_distance_from_site_A": 0.29,
+      "applies": false,
+      "decision": "go on"
+     }
+    ],
+    "n_extensions": 0,
+    "final_decision": "go on: check skipped: the ligand itself is at the site",
+    "site_without_water_when_the_solute_was_released": false
+   },
+   "equilibration_stages": [
+    {
+     "tag": "eq01",
+     "name": "heat",
+     "ensemble": "NVT",
+     "timestep_fs": 2.0,
+     "length_ps": 100.0,
+     "time_start_ps": 0.0,
+     "time_end_ps": 100.0,
+     "restraint_atoms": "solute_heavy",
+     "restraint_k_kj_per_mol_nm2": 1000.0,
+     "n_restrained_atoms": 2074,
+     "log_rows": 10,
+     "log_mean_temperature_K": 185.7502,
+     "log_mean_density_g_per_cm3": 0.912352,
+     "log_non_finite": 0
+    },
+    {
+     "tag": "eq02",
+     "name": "density",
+     "ensemble": "NPT",
+     "timestep_fs": 2.0,
+     "length_ps": 300.0,
+     "time_start_ps": 100.0,
+     "time_end_ps": 400.0,
+     "restraint_atoms": "solute_heavy",
+     "restraint_k_kj_per_mol_nm2": 1000.0,
+     "n_restrained_atoms": 2074,
+     "log_rows": 30,
+     "log_mean_temperature_K": 300.3582333333333,
+     "log_mean_density_g_per_cm3": 1.0219110999999999,
+     "log_non_finite": 0
+    },
+    {
+     "tag": "eq03",
+     "name": "loosen",
+     "ensemble": "NPT",
+     "timestep_fs": 2.0,
+     "length_ps": 300.0,
+     "time_start_ps": 400.0,
+     "time_end_ps": 700.0,
+     "restraint_atoms": "solute_heavy",
+     "restraint_k_kj_per_mol_nm2": 250.0,
+     "n_restrained_atoms": 2074,
+     "log_rows": 30,
+     "log_mean_temperature_K": 300.3607666666667,
+     "log_mean_density_g_per_cm3": 1.0265658333333334,
+     "log_non_finite": 0
+    },
+    {
+     "tag": "eq04",
+     "name": "release_side_chains_zinc_ligand",
+     "ensemble": "NPT",
+     "timestep_fs": 4.0,
+     "length_ps": 400.0,
+     "time_start_ps": 700.0,
+     "time_end_ps": 1100.0,
+     "restraint_atoms": "protein_backbone",
+     "restraint_k_kj_per_mol_nm2": 250.0,
+     "n_restrained_atoms": 1034,
+     "log_rows": 40,
+     "log_mean_temperature_K": 300.730675,
+     "log_mean_density_g_per_cm3": 1.0260075,
+     "log_non_finite": 0
+    },
+    {
+     "tag": "eq05",
+     "name": "loosen_backbone",
+     "ensemble": "NPT",
+     "timestep_fs": 4.0,
+     "length_ps": 400.0,
+     "time_start_ps": 1100.0,
+     "time_end_ps": 1500.0,
+     "restraint_atoms": "protein_backbone",
+     "restraint_k_kj_per_mol_nm2": 50.0,
+     "n_restrained_atoms": 1034,
+     "log_rows": 40,
+     "log_mean_temperature_K": 300.792275,
+     "log_mean_density_g_per_cm3": 1.02596325,
+     "log_non_finite": 0
+    },
+    {
+     "tag": "eq06",
+     "name": "free",
+     "ensemble": "NPT",
+     "timestep_fs": 4.0,
+     "length_ps": 500.0,
+     "time_start_ps": 1500.0,
+     "time_end_ps": 2000.0,
+     "restraint_atoms": "none",
+     "restraint_k_kj_per_mol_nm2": 0.0,
+     "n_restrained_atoms": 0,
+     "log_rows": 50,
+     "log_mean_temperature_K": 300.96734,
+     "log_mean_density_g_per_cm3": 1.0251717,
+     "log_non_finite": 0
+    }
+   ],
+   "production_state_log": {
+    "files": "log_segNNNN.csv of the run folder, one row per 10 ps",
+    "rows": 10000,
+    "non_finite_values": 0,
+    "timestep_fs": [
+     4.0
+    ],
+    "thermostat_K": [
+     300.0
+    ],
+    "precision": "means and standard deviations are written as computed (no rounding here: a number rounded here and again when it is printed can come out one unit of the last digit off)",
+    "temperature_K": {
+     "mean": 300.962665,
+     "sd": 1.483784544863236,
+     "min": 295.689,
+     "max": 306.368,
+     "mean_first_half": 300.972364,
+     "mean_last_half": 300.952966,
+     "segment_means_min": 300.753624,
+     "segment_means_max": 301.056152
+    },
+    "density_g_per_cm3": {
+     "mean": 1.0253222129,
+     "sd": 0.00233944229267866,
+     "min": 1.016927,
+     "max": 1.036006,
+     "mean_first_half": 1.0252951935999999,
+     "mean_last_half": 1.0253492322,
+     "segment_means_min": 1.0251856339999998,
+     "segment_means_max": 1.025455716
+    }
+   },
+   "trajectory_checksums": {
+    "what": "sha256 of every DCD file as the first program read it (summary.json, inputs_sha256) against the driver's record in the manifest",
+    "n_dcd_files_read": 52,
+    "n_equal_to_the_driver_record": 52,
+    "not_equal_or_not_recorded": []
+   },
+   "driver_log": {
+    "file": "/root/cqc-sfa-md/runs/bonded_2e/X2/run_md.log",
+    "lines": 58,
+    "lines_with_warning_error_or_failure": [],
+    "last_line": "[7 Oct 2026, 9:01:10 AM IST] DONE X2"
+   },
+   "sensitivity_marker": null
+  },
+  {
+   "run": "bonded_2e/X3",
+   "manifest": "/root/cqc-sfa-md/runs/bonded_2e/X3/manifest.json",
+   "manifest_sha256": "21d1dee9e0884e312a7629320abda38e6fcf66e9b6eecfdc841652b9cc78d2fa",
+   "driver": {
+    "status": "complete",
+    "all_steps_complete": true,
+    "test_only": false,
+    "equil_scale": 1.0,
+    "run_id": "X3",
+    "run_seed": 1185198819,
+    "system_dir": "/root/cqc-sfa-md/systems/bonded_2e/X",
+    "n_atoms": 40902,
+    "n_water_molecules": 12247,
+    "crystal_water_O_listed_in_selections": 215,
+    "script_sha256": "6d797f080ff7567923469dabd86af71ca34183f5c482c14d55bf8038eb9d1822",
+    "protocol_sha256": "decda42f5340d06f5f695b4c56b59a7bb796e5872b3a8af1c1a5b426f9c09d9a",
+    "inputs_sha256": {
+     "system.prmtop": "a6c57a7c20aaea633317173b691837de56301feeed6f5cf38d687e91c9085aad",
+     "system.inpcrd": "27acb79e664525a7f2c7d7f245d7e8bb4092fb0b2a2f67b1d1ee6c6cd0220d19"
+    },
+    "n_invocations": 1,
+    "invocations": [
+     {
+      "started_ist": "7 Oct 2026, 2:22:56 PM IST",
+      "ended_ist": "7 Oct 2026, 5:04:48 PM IST",
+      "exit_code": 0,
+      "outcome": "stage complete",
+      "host": "cqc-md-gpu-01"
+     }
+    ],
+    "platform": "CUDA",
+    "gpu": "NVIDIA L40S",
+    "precision": "mixed",
+    "openmm": "8.6.1",
+    "minimisation_energy_change_kj_per_mol": -214225.175,
+    "equilibration": {
+     "complete": true,
+     "n_stages": 6,
+     "n_stages_complete": 6,
+     "n_extension_steps": 0,
+     "n_extension_steps_complete": 0,
+     "completed_ps": 2000.0
+    },
+    "production": {
+     "target_ns": 100.0,
+     "segment_ns": 5.0,
+     "n_segments_target": 20,
+     "n_segments_complete": 20,
+     "completed_ns": 100.0,
+     "complete": true,
+     "frames_solute": 10000,
+     "frames_full": 1000,
+     "wall_s": 9421.9,
+     "ns_per_day": 917.01
+    }
+   },
+   "build": {
+    "model": "bonded_2e",
+    "model_kind": "bonded",
+    "parameter_set": "2e",
+    "start": "X",
+    "status_note": "PRODUCTION system (md/PLAN.md, entry of 6 Oct 2026, 9:15 PM IST; md/PRODUCTION.md). Zinc set 2e: MCPB.py step 2e, empirical zinc constants. RESP charges with the equal ligand atoms made equal. Terms at N2 AS BUILT: gates G-R and G-R2 on these terms failed and are reported; they are used by the user's decision of 6 Oct 2026. Whether 2s or 2e is the primary set is decided by gate G-Z and the validation run X0 of each (md/PRODUCTION.md).",
+    "terms_at_N2": {
+     "source": "written by the builder: the terms AS BUILT BEFORE GATE G-R (Zn-N2-S, S-N2-H and H-N2-S-C4 as in the frcmod of MCPB.py; Zn-N2-H at its angle in start X with the force constant of that frcmod)",
+     "given_file": null,
+     "first_line_of_the_file": null,
+     "validated_by_gate_GR": false,
+     "sha256": "113e3a2ebdbe99a4389e2ed497b20caaf0e64aebcbc8d547cf39823e9ee2cd00",
+     "class_of_this_set": "the terms as built: the three angles at N2 and the series on H-N2-S-C4",
+     "entries_beyond_the_terms_as_built": []
+    },
+    "composition": {
+     "atoms": 40902,
+     "residues": 12575,
+     "protein_atoms": 4075,
+     "protein_residues_with_ACE": 259,
+     "zinc_atoms": 1,
+     "ligand_atoms": 18,
+     "solute_atoms": 4094,
+     "water_molecules": 12247,
+     "crystal_water_molecules": 215,
+     "added_water_molecules": 12032,
+     "Na+": 34,
+     "Cl-": 33,
+     "plan_atoms": 25600,
+     "atoms_over_plan_percent": 59.8
+    },
+    "geometry_as_built": {
+     "lig_rmsd_A": {
+      "identity": 0.0,
+      "ring_flip": 1.4538,
+      "oxygen_swap": 1.0435,
+      "ring_flip+oxygen_swap": 1.7895
+     },
+     "lig_rmsd_symmetry_corrected_A": 0.0,
+     "d1_N1_Phe131CZ_A": 3.8966,
+     "d2_N1_Asn67OD1_A": 7.7443,
+     "N1_Asn67ND2_A": 6.5511,
+     "Zn_N2_A": 1.9314,
+     "Zn_His94NE2_A": 2.0099,
+     "Zn_His96NE2_A": 2.0206,
+     "Zn_His119ND1_A": 2.0183,
+     "Zn_O1_A": 4.0509,
+     "Zn_O2_A": 2.9856,
+     "N2_Thr199OG1_A": 2.861,
+     "HN21_Thr199OG1_A": 1.8671,
+     "N2_HN21_Thr199OG1_deg": 163.6901,
+     "tau_fold_deg": 132.0561,
+     "C4_S_N2_deg": 108.7946,
+     "S_N2_A": 1.5963,
+     "S_N2_Zn_deg": 117.5521,
+     "Zn_N2_S_C4_deg": -117.0299,
+     "N_Zn_N_deg": {
+      "N2-Zn-H94NE2": 108.92,
+      "N2-Zn-H96NE2": 114.2796,
+      "N2-Zn-H119ND1": 116.8328,
+      "H94NE2-Zn-H96NE2": 103.8187,
+      "H94NE2-Zn-H119ND1": 113.5907,
+      "H96NE2-Zn-H119ND1": 98.4086
+     }
+    },
+    "script_sha256": "a9b8ef8d699dfce68abfddcd21186ebdb939900d67b4c549b92692bf39d38d70"
+   },
+   "hydration_check": {
+    "requested": true,
+    "applies": false,
+    "skipped": true,
+    "settings": {
+     "after_step": "eq03",
+     "site_atoms": [
+      "C1",
+      "C2",
+      "C3",
+      "C4",
+      "C5",
+      "C6"
+     ],
+     "water_cutoff_A": 2.5,
+     "applies_if_ligand_mean_distance_above_A": 2.0,
+     "max_extensions": 4
+    },
+    "reference_guard": {
+     "n_ca": 258,
+     "ca_fit_rmsd_of_system_inpcrd_on_reference_pdb_A": 0.0,
+     "n_ca_residue_names_that_differ": 0,
+     "ca_residue_names_that_differ_first_5": []
+    },
+    "counts": [
+     {
+      "step": "eq03",
+      "time_end_ps": 700.0,
+      "n_water_O": 0,
+      "nearest_water_O_A": 3.259,
+      "ligand_mean_distance_from_site_A": 0.335,
+      "applies": false,
+      "decision": "go on"
+     }
+    ],
+    "n_extensions": 0,
+    "final_decision": "go on: check skipped: the ligand itself is at the site",
+    "site_without_water_when_the_solute_was_released": false
+   },
+   "equilibration_stages": [
+    {
+     "tag": "eq01",
+     "name": "heat",
+     "ensemble": "NVT",
+     "timestep_fs": 2.0,
+     "length_ps": 100.0,
+     "time_start_ps": 0.0,
+     "time_end_ps": 100.0,
+     "restraint_atoms": "solute_heavy",
+     "restraint_k_kj_per_mol_nm2": 1000.0,
+     "n_restrained_atoms": 2074,
+     "log_rows": 10,
+     "log_mean_temperature_K": 185.50560000000002,
+     "log_mean_density_g_per_cm3": 0.912352,
+     "log_non_finite": 0
+    },
+    {
+     "tag": "eq02",
+     "name": "density",
+     "ensemble": "NPT",
+     "timestep_fs": 2.0,
+     "length_ps": 300.0,
+     "time_start_ps": 100.0,
+     "time_end_ps": 400.0,
+     "restraint_atoms": "solute_heavy",
+     "restraint_k_kj_per_mol_nm2": 1000.0,
+     "n_restrained_atoms": 2074,
+     "log_rows": 30,
+     "log_mean_temperature_K": 300.6579333333333,
+     "log_mean_density_g_per_cm3": 1.0205647666666666,
+     "log_non_finite": 0
+    },
+    {
+     "tag": "eq03",
+     "name": "loosen",
+     "ensemble": "NPT",
+     "timestep_fs": 2.0,
+     "length_ps": 300.0,
+     "time_start_ps": 400.0,
+     "time_end_ps": 700.0,
+     "restraint_atoms": "solute_heavy",
+     "restraint_k_kj_per_mol_nm2": 250.0,
+     "n_restrained_atoms": 2074,
+     "log_rows": 30,
+     "log_mean_temperature_K": 300.0222333333333,
+     "log_mean_density_g_per_cm3": 1.0264976333333333,
+     "log_non_finite": 0
+    },
+    {
+     "tag": "eq04",
+     "name": "release_side_chains_zinc_ligand",
+     "ensemble": "NPT",
+     "timestep_fs": 4.0,
+     "length_ps": 400.0,
+     "time_start_ps": 700.0,
+     "time_end_ps": 1100.0,
+     "restraint_atoms": "protein_backbone",
+     "restraint_k_kj_per_mol_nm2": 250.0,
+     "n_restrained_atoms": 1034,
+     "log_rows": 40,
+     "log_mean_temperature_K": 300.84232499999996,
+     "log_mean_density_g_per_cm3": 1.0258837,
+     "log_non_finite": 0
+    },
+    {
+     "tag": "eq05",
+     "name": "loosen_backbone",
+     "ensemble": "NPT",
+     "timestep_fs": 4.0,
+     "length_ps": 400.0,
+     "time_start_ps": 1100.0,
+     "time_end_ps": 1500.0,
+     "restraint_atoms": "protein_backbone",
+     "restraint_k_kj_per_mol_nm2": 50.0,
+     "n_restrained_atoms": 1034,
+     "log_rows": 40,
+     "log_mean_temperature_K": 300.763725,
+     "log_mean_density_g_per_cm3": 1.02571195,
+     "log_non_finite": 0
+    },
+    {
+     "tag": "eq06",
+     "name": "free",
+     "ensemble": "NPT",
+     "timestep_fs": 4.0,
+     "length_ps": 500.0,
+     "time_start_ps": 1500.0,
+     "time_end_ps": 2000.0,
+     "restraint_atoms": "none",
+     "restraint_k_kj_per_mol_nm2": 0.0,
+     "n_restrained_atoms": 0,
+     "log_rows": 50,
+     "log_mean_temperature_K": 300.72268,
+     "log_mean_density_g_per_cm3": 1.02494154,
+     "log_non_finite": 0
+    }
+   ],
+   "production_state_log": {
+    "files": "log_segNNNN.csv of the run folder, one row per 10 ps",
+    "rows": 10000,
+    "non_finite_values": 0,
+    "timestep_fs": [
+     4.0
+    ],
+    "thermostat_K": [
+     300.0
+    ],
+    "precision": "means and standard deviations are written as computed (no rounding here: a number rounded here and again when it is printed can come out one unit of the last digit off)",
+    "temperature_K": {
+     "mean": 300.9967306,
+     "sd": 1.4841519075295628,
+     "min": 295.928,
+     "max": 305.966,
+     "mean_first_half": 300.9919436,
+     "mean_last_half": 301.0015176,
+     "segment_means_min": 300.884358,
+     "segment_means_max": 301.152954
+    },
+    "density_g_per_cm3": {
+     "mean": 1.0252999497000002,
+     "sd": 0.0023183620744762694,
+     "min": 1.016868,
+     "max": 1.033965,
+     "mean_first_half": 1.025417738,
+     "mean_last_half": 1.0251821614,
+     "segment_means_min": 1.024947046,
+     "segment_means_max": 1.0256691880000002
+    }
+   },
+   "trajectory_checksums": {
+    "what": "sha256 of every DCD file as the first program read it (summary.json, inputs_sha256) against the driver's record in the manifest",
+    "n_dcd_files_read": 52,
+    "n_equal_to_the_driver_record": 52,
+    "not_equal_or_not_recorded": []
+   },
+   "driver_log": {
+    "file": "/root/cqc-sfa-md/runs/bonded_2e/X3/run_md.log",
+    "lines": 58,
+    "lines_with_warning_error_or_failure": [],
+    "last_line": "[7 Oct 2026, 5:04:48 PM IST] DONE X3"
+   },
+   "sensitivity_marker": null
+  },
+  {
+   "run": "bonded_2e/N1",
+   "manifest": "/root/cqc-sfa-md/runs/bonded_2e/N1/manifest.json",
+   "manifest_sha256": "3c15ec9af760b2dd6fc24fa57f9da8bbb63b5d46d9aec67638afebbdeec441b3",
+   "driver": {
+    "status": "complete",
+    "all_steps_complete": true,
+    "test_only": false,
+    "equil_scale": 1.0,
+    "run_id": "N1",
+    "run_seed": 1748298788,
+    "system_dir": "/root/cqc-sfa-md/systems/bonded_2e/N",
+    "n_atoms": 40911,
+    "n_water_molecules": 12250,
+    "crystal_water_O_listed_in_selections": 215,
+    "script_sha256": "6d797f080ff7567923469dabd86af71ca34183f5c482c14d55bf8038eb9d1822",
+    "protocol_sha256": "decda42f5340d06f5f695b4c56b59a7bb796e5872b3a8af1c1a5b426f9c09d9a",
+    "inputs_sha256": {
+     "system.prmtop": "98e46802e34ae08c96b5ca4cb187a061bed3c89202ffeeafaa512be43a7e4f16",
+     "system.inpcrd": "9ce16b4c588d2235467e12ebbf6591fec5faa5e1b599437ff5bc8b948f532725"
+    },
+    "n_invocations": 1,
+    "invocations": [
+     {
+      "started_ist": "7 Oct 2026, 12:56:12 AM IST",
+      "ended_ist": "7 Oct 2026, 3:37:51 AM IST",
+      "exit_code": 0,
+      "outcome": "stage complete",
+      "host": "cqc-md-gpu-01"
+     }
+    ],
+    "platform": "CUDA",
+    "gpu": "NVIDIA L40S",
+    "precision": "mixed",
+    "openmm": "8.6.1",
+    "minimisation_energy_change_kj_per_mol": -213204.291,
+    "equilibration": {
+     "complete": true,
+     "n_stages": 6,
+     "n_stages_complete": 6,
+     "n_extension_steps": 0,
+     "n_extension_steps_complete": 0,
+     "completed_ps": 2000.0
+    },
+    "production": {
+     "target_ns": 100.0,
+     "segment_ns": 5.0,
+     "n_segments_target": 20,
+     "n_segments_complete": 20,
+     "completed_ns": 100.0,
+     "complete": true,
+     "frames_solute": 10000,
+     "frames_full": 1000,
+     "wall_s": 9412.5,
+     "ns_per_day": 917.93
+    }
+   },
+   "build": {
+    "model": "bonded_2e",
+    "model_kind": "bonded",
+    "parameter_set": "2e",
+    "start": "N",
+    "status_note": "PRODUCTION system (md/PLAN.md, entry of 6 Oct 2026, 9:15 PM IST; md/PRODUCTION.md). Zinc set 2e: MCPB.py step 2e, empirical zinc constants. RESP charges with the equal ligand atoms made equal. Terms at N2 AS BUILT: gates G-R and G-R2 on these terms failed and are reported; they are used by the user's decision of 6 Oct 2026. Whether 2s or 2e is the primary set is decided by gate G-Z and the validation run X0 of each (md/PRODUCTION.md).",
+    "terms_at_N2": {
+     "source": "written by the builder: the terms AS BUILT BEFORE GATE G-R (Zn-N2-S, S-N2-H and H-N2-S-C4 as in the frcmod of MCPB.py; Zn-N2-H at its angle in start X with the force constant of that frcmod)",
+     "given_file": null,
+     "first_line_of_the_file": null,
+     "validated_by_gate_GR": false,
+     "sha256": "113e3a2ebdbe99a4389e2ed497b20caaf0e64aebcbc8d547cf39823e9ee2cd00",
+     "class_of_this_set": "the terms as built: the three angles at N2 and the series on H-N2-S-C4",
+     "entries_beyond_the_terms_as_built": []
+    },
+    "composition": {
+     "atoms": 40911,
+     "residues": 12578,
+     "protein_atoms": 4075,
+     "protein_residues_with_ACE": 259,
+     "zinc_atoms": 1,
+     "ligand_atoms": 18,
+     "solute_atoms": 4094,
+     "water_molecules": 12250,
+     "crystal_water_molecules": 215,
+     "added_water_molecules": 12035,
+     "Na+": 34,
+     "Cl-": 33,
+     "plan_atoms": 25600,
+     "atoms_over_plan_percent": 59.8
+    },
+    "geometry_as_built": {
+     "lig_rmsd_A": {
+      "identity": 0.6104,
+      "ring_flip": 1.5647,
+      "oxygen_swap": 1.2196,
+      "ring_flip+oxygen_swap": 1.8876
+     },
+     "lig_rmsd_symmetry_corrected_A": 0.6104,
+     "d1_N1_Phe131CZ_A": 3.3561,
+     "d2_N1_Asn67OD1_A": 7.7255,
+     "N1_Asn67ND2_A": 6.5574,
+     "Zn_N2_A": 2.2071,
+     "Zn_His94NE2_A": 2.0099,
+     "Zn_His96NE2_A": 2.0206,
+     "Zn_His119ND1_A": 2.0183,
+     "Zn_O1_A": 4.2404,
+     "Zn_O2_A": 2.7751,
+     "N2_Thr199OG1_A": 2.5522,
+     "HN21_Thr199OG1_A": 1.6214,
+     "N2_HN21_Thr199OG1_deg": 149.1132,
+     "tau_fold_deg": 148.6317,
+     "C4_S_N2_deg": 109.4825,
+     "S_N2_A": 1.6775,
+     "S_N2_Zn_deg": 105.9075,
+     "Zn_N2_S_C4_deg": -107.4902,
+     "N_Zn_N_deg": {
+      "N2-Zn-H94NE2": 117.2809,
+      "N2-Zn-H96NE2": 111.6119,
+      "N2-Zn-H119ND1": 110.2917,
+      "H94NE2-Zn-H96NE2": 103.8187,
+      "H94NE2-Zn-H119ND1": 113.5907,
+      "H96NE2-Zn-H119ND1": 98.4086
+     }
+    },
+    "script_sha256": "a9b8ef8d699dfce68abfddcd21186ebdb939900d67b4c549b92692bf39d38d70"
+   },
+   "hydration_check": {
+    "requested": true,
+    "applies": false,
+    "skipped": true,
+    "settings": {
+     "after_step": "eq03",
+     "site_atoms": [
+      "C1",
+      "C2",
+      "C3",
+      "C4",
+      "C5",
+      "C6"
+     ],
+     "water_cutoff_A": 2.5,
+     "applies_if_ligand_mean_distance_above_A": 2.0,
+     "max_extensions": 4
+    },
+    "reference_guard": {
+     "n_ca": 258,
+     "ca_fit_rmsd_of_system_inpcrd_on_reference_pdb_A": 0.0,
+     "n_ca_residue_names_that_differ": 0,
+     "ca_residue_names_that_differ_first_5": []
+    },
+    "counts": [
+     {
+      "step": "eq03",
+      "time_end_ps": 700.0,
+      "n_water_O": 0,
+      "nearest_water_O_A": 3.057,
+      "ligand_mean_distance_from_site_A": 0.451,
+      "applies": false,
+      "decision": "go on"
+     }
+    ],
+    "n_extensions": 0,
+    "final_decision": "go on: check skipped: the ligand itself is at the site",
+    "site_without_water_when_the_solute_was_released": false
+   },
+   "equilibration_stages": [
+    {
+     "tag": "eq01",
+     "name": "heat",
+     "ensemble": "NVT",
+     "timestep_fs": 2.0,
+     "length_ps": 100.0,
+     "time_start_ps": 0.0,
+     "time_end_ps": 100.0,
+     "restraint_atoms": "solute_heavy",
+     "restraint_k_kj_per_mol_nm2": 1000.0,
+     "n_restrained_atoms": 2074,
+     "log_rows": 10,
+     "log_mean_temperature_K": 186.0155,
+     "log_mean_density_g_per_cm3": 0.912596,
+     "log_non_finite": 0
+    },
+    {
+     "tag": "eq02",
+     "name": "density",
+     "ensemble": "NPT",
+     "timestep_fs": 2.0,
+     "length_ps": 300.0,
+     "time_start_ps": 100.0,
+     "time_end_ps": 400.0,
+     "restraint_atoms": "solute_heavy",
+     "restraint_k_kj_per_mol_nm2": 1000.0,
+     "n_restrained_atoms": 2074,
+     "log_rows": 30,
+     "log_mean_temperature_K": 300.66996666666665,
+     "log_mean_density_g_per_cm3": 1.0230954666666667,
+     "log_non_finite": 0
+    },
+    {
+     "tag": "eq03",
+     "name": "loosen",
+     "ensemble": "NPT",
+     "timestep_fs": 2.0,
+     "length_ps": 300.0,
+     "time_start_ps": 400.0,
+     "time_end_ps": 700.0,
+     "restraint_atoms": "solute_heavy",
+     "restraint_k_kj_per_mol_nm2": 250.0,
+     "n_restrained_atoms": 2074,
+     "log_rows": 30,
+     "log_mean_temperature_K": 300.43423333333334,
+     "log_mean_density_g_per_cm3": 1.0256139333333334,
+     "log_non_finite": 0
+    },
+    {
+     "tag": "eq04",
+     "name": "release_side_chains_zinc_ligand",
+     "ensemble": "NPT",
+     "timestep_fs": 4.0,
+     "length_ps": 400.0,
+     "time_start_ps": 700.0,
+     "time_end_ps": 1100.0,
+     "restraint_atoms": "protein_backbone",
+     "restraint_k_kj_per_mol_nm2": 250.0,
+     "n_restrained_atoms": 1034,
+     "log_rows": 40,
+     "log_mean_temperature_K": 301.194575,
+     "log_mean_density_g_per_cm3": 1.026413975,
+     "log_non_finite": 0
+    },
+    {
+     "tag": "eq05",
+     "name": "loosen_backbone",
+     "ensemble": "NPT",
+     "timestep_fs": 4.0,
+     "length_ps": 400.0,
+     "time_start_ps": 1100.0,
+     "time_end_ps": 1500.0,
+     "restraint_atoms": "protein_backbone",
+     "restraint_k_kj_per_mol_nm2": 50.0,
+     "n_restrained_atoms": 1034,
+     "log_rows": 40,
+     "log_mean_temperature_K": 300.652325,
+     "log_mean_density_g_per_cm3": 1.025665825,
+     "log_non_finite": 0
+    },
+    {
+     "tag": "eq06",
+     "name": "free",
+     "ensemble": "NPT",
+     "timestep_fs": 4.0,
+     "length_ps": 500.0,
+     "time_start_ps": 1500.0,
+     "time_end_ps": 2000.0,
+     "restraint_atoms": "none",
+     "restraint_k_kj_per_mol_nm2": 0.0,
+     "n_restrained_atoms": 0,
+     "log_rows": 50,
+     "log_mean_temperature_K": 300.74312,
+     "log_mean_density_g_per_cm3": 1.02598082,
+     "log_non_finite": 0
+    }
+   ],
+   "production_state_log": {
+    "files": "log_segNNNN.csv of the run folder, one row per 10 ps",
+    "rows": 10000,
+    "non_finite_values": 0,
+    "timestep_fs": [
+     4.0
+    ],
+    "thermostat_K": [
+     300.0
+    ],
+    "precision": "means and standard deviations are written as computed (no rounding here: a number rounded here and again when it is printed can come out one unit of the last digit off)",
+    "temperature_K": {
+     "mean": 300.9687869,
+     "sd": 1.4787229676610798,
+     "min": 295.183,
+     "max": 307.153,
+     "mean_first_half": 300.9808752,
+     "mean_last_half": 300.9566986,
+     "segment_means_min": 300.881806,
+     "segment_means_max": 301.07136599999995
+    },
+    "density_g_per_cm3": {
+     "mean": 1.0254741571000001,
+     "sd": 0.0023643893647239214,
+     "min": 1.015923,
+     "max": 1.034537,
+     "mean_first_half": 1.025484585,
+     "mean_last_half": 1.0254637292,
+     "segment_means_min": 1.0250846100000002,
+     "segment_means_max": 1.025773854
+    }
+   },
+   "trajectory_checksums": {
+    "what": "sha256 of every DCD file as the first program read it (summary.json, inputs_sha256) against the driver's record in the manifest",
+    "n_dcd_files_read": 52,
+    "n_equal_to_the_driver_record": 52,
+    "not_equal_or_not_recorded": []
+   },
+   "driver_log": {
+    "file": "/root/cqc-sfa-md/runs/bonded_2e/N1/run_md.log",
+    "lines": 58,
+    "lines_with_warning_error_or_failure": [],
+    "last_line": "[7 Oct 2026, 3:37:51 AM IST] DONE N1"
+   },
+   "sensitivity_marker": null
+  },
+  {
+   "run": "bonded_2e/N2",
+   "manifest": "/root/cqc-sfa-md/runs/bonded_2e/N2/manifest.json",
+   "manifest_sha256": "abcc1b9f86d22f9ea47ce06620f1faa3a56603c3f12a3d3fd066216baaded949",
+   "driver": {
+    "status": "complete",
+    "all_steps_complete": true,
+    "test_only": false,
+    "equil_scale": 1.0,
+    "run_id": "N2",
+    "run_seed": 1311670507,
+    "system_dir": "/root/cqc-sfa-md/systems/bonded_2e/N",
+    "n_atoms": 40911,
+    "n_water_molecules": 12250,
+    "crystal_water_O_listed_in_selections": 215,
+    "script_sha256": "6d797f080ff7567923469dabd86af71ca34183f5c482c14d55bf8038eb9d1822",
+    "protocol_sha256": "decda42f5340d06f5f695b4c56b59a7bb796e5872b3a8af1c1a5b426f9c09d9a",
+    "inputs_sha256": {
+     "system.prmtop": "98e46802e34ae08c96b5ca4cb187a061bed3c89202ffeeafaa512be43a7e4f16",
+     "system.inpcrd": "9ce16b4c588d2235467e12ebbf6591fec5faa5e1b599437ff5bc8b948f532725"
+    },
+    "n_invocations": 1,
+    "invocations": [
+     {
+      "started_ist": "7 Oct 2026, 9:01:15 AM IST",
+      "ended_ist": "7 Oct 2026, 11:43:03 AM IST",
+      "exit_code": 0,
+      "outcome": "stage complete",
+      "host": "cqc-md-gpu-01"
+     }
+    ],
+    "platform": "CUDA",
+    "gpu": "NVIDIA L40S",
+    "precision": "mixed",
+    "openmm": "8.6.1",
+    "minimisation_energy_change_kj_per_mol": -212652.087,
+    "equilibration": {
+     "complete": true,
+     "n_stages": 6,
+     "n_stages_complete": 6,
+     "n_extension_steps": 0,
+     "n_extension_steps_complete": 0,
+     "completed_ps": 2000.0
+    },
+    "production": {
+     "target_ns": 100.0,
+     "segment_ns": 5.0,
+     "n_segments_target": 20,
+     "n_segments_complete": 20,
+     "completed_ns": 100.0,
+     "complete": true,
+     "frames_solute": 10000,
+     "frames_full": 1000,
+     "wall_s": 9423.5,
+     "ns_per_day": 916.86
+    }
+   },
+   "build": {
+    "model": "bonded_2e",
+    "model_kind": "bonded",
+    "parameter_set": "2e",
+    "start": "N",
+    "status_note": "PRODUCTION system (md/PLAN.md, entry of 6 Oct 2026, 9:15 PM IST; md/PRODUCTION.md). Zinc set 2e: MCPB.py step 2e, empirical zinc constants. RESP charges with the equal ligand atoms made equal. Terms at N2 AS BUILT: gates G-R and G-R2 on these terms failed and are reported; they are used by the user's decision of 6 Oct 2026. Whether 2s or 2e is the primary set is decided by gate G-Z and the validation run X0 of each (md/PRODUCTION.md).",
+    "terms_at_N2": {
+     "source": "written by the builder: the terms AS BUILT BEFORE GATE G-R (Zn-N2-S, S-N2-H and H-N2-S-C4 as in the frcmod of MCPB.py; Zn-N2-H at its angle in start X with the force constant of that frcmod)",
+     "given_file": null,
+     "first_line_of_the_file": null,
+     "validated_by_gate_GR": false,
+     "sha256": "113e3a2ebdbe99a4389e2ed497b20caaf0e64aebcbc8d547cf39823e9ee2cd00",
+     "class_of_this_set": "the terms as built: the three angles at N2 and the series on H-N2-S-C4",
+     "entries_beyond_the_terms_as_built": []
+    },
+    "composition": {
+     "atoms": 40911,
+     "residues": 12578,
+     "protein_atoms": 4075,
+     "protein_residues_with_ACE": 259,
+     "zinc_atoms": 1,
+     "ligand_atoms": 18,
+     "solute_atoms": 4094,
+     "water_molecules": 12250,
+     "crystal_water_molecules": 215,
+     "added_water_molecules": 12035,
+     "Na+": 34,
+     "Cl-": 33,
+     "plan_atoms": 25600,
+     "atoms_over_plan_percent": 59.8
+    },
+    "geometry_as_built": {
+     "lig_rmsd_A": {
+      "identity": 0.6104,
+      "ring_flip": 1.5647,
+      "oxygen_swap": 1.2196,
+      "ring_flip+oxygen_swap": 1.8876
+     },
+     "lig_rmsd_symmetry_corrected_A": 0.6104,
+     "d1_N1_Phe131CZ_A": 3.3561,
+     "d2_N1_Asn67OD1_A": 7.7255,
+     "N1_Asn67ND2_A": 6.5574,
+     "Zn_N2_A": 2.2071,
+     "Zn_His94NE2_A": 2.0099,
+     "Zn_His96NE2_A": 2.0206,
+     "Zn_His119ND1_A": 2.0183,
+     "Zn_O1_A": 4.2404,
+     "Zn_O2_A": 2.7751,
+     "N2_Thr199OG1_A": 2.5522,
+     "HN21_Thr199OG1_A": 1.6214,
+     "N2_HN21_Thr199OG1_deg": 149.1132,
+     "tau_fold_deg": 148.6317,
+     "C4_S_N2_deg": 109.4825,
+     "S_N2_A": 1.6775,
+     "S_N2_Zn_deg": 105.9075,
+     "Zn_N2_S_C4_deg": -107.4902,
+     "N_Zn_N_deg": {
+      "N2-Zn-H94NE2": 117.2809,
+      "N2-Zn-H96NE2": 111.6119,
+      "N2-Zn-H119ND1": 110.2917,
+      "H94NE2-Zn-H96NE2": 103.8187,
+      "H94NE2-Zn-H119ND1": 113.5907,
+      "H96NE2-Zn-H119ND1": 98.4086
+     }
+    },
+    "script_sha256": "a9b8ef8d699dfce68abfddcd21186ebdb939900d67b4c549b92692bf39d38d70"
+   },
+   "hydration_check": {
+    "requested": true,
+    "applies": false,
+    "skipped": true,
+    "settings": {
+     "after_step": "eq03",
+     "site_atoms": [
+      "C1",
+      "C2",
+      "C3",
+      "C4",
+      "C5",
+      "C6"
+     ],
+     "water_cutoff_A": 2.5,
+     "applies_if_ligand_mean_distance_above_A": 2.0,
+     "max_extensions": 4
+    },
+    "reference_guard": {
+     "n_ca": 258,
+     "ca_fit_rmsd_of_system_inpcrd_on_reference_pdb_A": 0.0,
+     "n_ca_residue_names_that_differ": 0,
+     "ca_residue_names_that_differ_first_5": []
+    },
+    "counts": [
+     {
+      "step": "eq03",
+      "time_end_ps": 700.0,
+      "n_water_O": 0,
+      "nearest_water_O_A": 3.319,
+      "ligand_mean_distance_from_site_A": 0.237,
+      "applies": false,
+      "decision": "go on"
+     }
+    ],
+    "n_extensions": 0,
+    "final_decision": "go on: check skipped: the ligand itself is at the site",
+    "site_without_water_when_the_solute_was_released": false
+   },
+   "equilibration_stages": [
+    {
+     "tag": "eq01",
+     "name": "heat",
+     "ensemble": "NVT",
+     "timestep_fs": 2.0,
+     "length_ps": 100.0,
+     "time_start_ps": 0.0,
+     "time_end_ps": 100.0,
+     "restraint_atoms": "solute_heavy",
+     "restraint_k_kj_per_mol_nm2": 1000.0,
+     "n_restrained_atoms": 2074,
+     "log_rows": 10,
+     "log_mean_temperature_K": 185.67839999999998,
+     "log_mean_density_g_per_cm3": 0.912596,
+     "log_non_finite": 0
+    },
+    {
+     "tag": "eq02",
+     "name": "density",
+     "ensemble": "NPT",
+     "timestep_fs": 2.0,
+     "length_ps": 300.0,
+     "time_start_ps": 100.0,
+     "time_end_ps": 400.0,
+     "restraint_atoms": "solute_heavy",
+     "restraint_k_kj_per_mol_nm2": 1000.0,
+     "n_restrained_atoms": 2074,
+     "log_rows": 30,
+     "log_mean_temperature_K": 300.9210333333333,
+     "log_mean_density_g_per_cm3": 1.0226225333333334,
+     "log_non_finite": 0
+    },
+    {
+     "tag": "eq03",
+     "name": "loosen",
+     "ensemble": "NPT",
+     "timestep_fs": 2.0,
+     "length_ps": 300.0,
+     "time_start_ps": 400.0,
+     "time_end_ps": 700.0,
+     "restraint_atoms": "solute_heavy",
+     "restraint_k_kj_per_mol_nm2": 250.0,
+     "n_restrained_atoms": 2074,
+     "log_rows": 30,
+     "log_mean_temperature_K": 300.21590000000003,
+     "log_mean_density_g_per_cm3": 1.0260341,
+     "log_non_finite": 0
+    },
+    {
+     "tag": "eq04",
+     "name": "release_side_chains_zinc_ligand",
+     "ensemble": "NPT",
+     "timestep_fs": 4.0,
+     "length_ps": 400.0,
+     "time_start_ps": 700.0,
+     "time_end_ps": 1100.0,
+     "restraint_atoms": "protein_backbone",
+     "restraint_k_kj_per_mol_nm2": 250.0,
+     "n_restrained_atoms": 1034,
+     "log_rows": 40,
+     "log_mean_temperature_K": 301.032775,
+     "log_mean_density_g_per_cm3": 1.025910575,
+     "log_non_finite": 0
+    },
+    {
+     "tag": "eq05",
+     "name": "loosen_backbone",
+     "ensemble": "NPT",
+     "timestep_fs": 4.0,
+     "length_ps": 400.0,
+     "time_start_ps": 1100.0,
+     "time_end_ps": 1500.0,
+     "restraint_atoms": "protein_backbone",
+     "restraint_k_kj_per_mol_nm2": 50.0,
+     "n_restrained_atoms": 1034,
+     "log_rows": 40,
+     "log_mean_temperature_K": 300.71867499999996,
+     "log_mean_density_g_per_cm3": 1.02615765,
+     "log_non_finite": 0
+    },
+    {
+     "tag": "eq06",
+     "name": "free",
+     "ensemble": "NPT",
+     "timestep_fs": 4.0,
+     "length_ps": 500.0,
+     "time_start_ps": 1500.0,
+     "time_end_ps": 2000.0,
+     "restraint_atoms": "none",
+     "restraint_k_kj_per_mol_nm2": 0.0,
+     "n_restrained_atoms": 0,
+     "log_rows": 50,
+     "log_mean_temperature_K": 300.70524,
+     "log_mean_density_g_per_cm3": 1.02587938,
+     "log_non_finite": 0
+    }
+   ],
+   "production_state_log": {
+    "files": "log_segNNNN.csv of the run folder, one row per 10 ps",
+    "rows": 10000,
+    "non_finite_values": 0,
+    "timestep_fs": [
+     4.0
+    ],
+    "thermostat_K": [
+     300.0
+    ],
+    "precision": "means and standard deviations are written as computed (no rounding here: a number rounded here and again when it is printed can come out one unit of the last digit off)",
+    "temperature_K": {
+     "mean": 300.9651602,
+     "sd": 1.4669112657335344,
+     "min": 293.438,
+     "max": 307.336,
+     "mean_first_half": 300.991809,
+     "mean_last_half": 300.9385114,
+     "segment_means_min": 300.80111200000005,
+     "segment_means_max": 301.0671
+    },
+    "density_g_per_cm3": {
+     "mean": 1.0254734202,
+     "sd": 0.002352541857657789,
+     "min": 1.016454,
+     "max": 1.035693,
+     "mean_first_half": 1.0254756088,
+     "mean_last_half": 1.0254712315999999,
+     "segment_means_min": 1.0251629539999998,
+     "segment_means_max": 1.0258265899999999
+    }
+   },
+   "trajectory_checksums": {
+    "what": "sha256 of every DCD file as the first program read it (summary.json, inputs_sha256) against the driver's record in the manifest",
+    "n_dcd_files_read": 52,
+    "n_equal_to_the_driver_record": 52,
+    "not_equal_or_not_recorded": []
+   },
+   "driver_log": {
+    "file": "/root/cqc-sfa-md/runs/bonded_2e/N2/run_md.log",
+    "lines": 58,
+    "lines_with_warning_error_or_failure": [],
+    "last_line": "[7 Oct 2026, 11:43:03 AM IST] DONE N2"
+   },
+   "sensitivity_marker": null
+  },
+  {
+   "run": "bonded_2e/N3",
+   "manifest": "/root/cqc-sfa-md/runs/bonded_2e/N3/manifest.json",
+   "manifest_sha256": "ba78754742090c38baebe7e4251002d7ae8dc8f591f62d999f0fecffe82a4b8e",
+   "driver": {
+    "status": "complete",
+    "all_steps_complete": true,
+    "test_only": false,
+    "equil_scale": 1.0,
+    "run_id": "N3",
+    "run_seed": 1184357353,
+    "system_dir": "/root/cqc-sfa-md/systems/bonded_2e/N",
+    "n_atoms": 40911,
+    "n_water_molecules": 12250,
+    "crystal_water_O_listed_in_selections": 215,
+    "script_sha256": "6d797f080ff7567923469dabd86af71ca34183f5c482c14d55bf8038eb9d1822",
+    "protocol_sha256": "decda42f5340d06f5f695b4c56b59a7bb796e5872b3a8af1c1a5b426f9c09d9a",
+    "inputs_sha256": {
+     "system.prmtop": "98e46802e34ae08c96b5ca4cb187a061bed3c89202ffeeafaa512be43a7e4f16",
+     "system.inpcrd": "9ce16b4c588d2235467e12ebbf6591fec5faa5e1b599437ff5bc8b948f532725"
+    },
+    "n_invocations": 1,
+    "invocations": [
+     {
+      "started_ist": "7 Oct 2026, 5:04:52 PM IST",
+      "ended_ist": "7 Oct 2026, 7:46:40 PM IST",
+      "exit_code": 0,
+      "outcome": "stage complete",
+      "host": "cqc-md-gpu-01"
+     }
+    ],
+    "platform": "CUDA",
+    "gpu": "NVIDIA L40S",
+    "precision": "mixed",
+    "openmm": "8.6.1",
+    "minimisation_energy_change_kj_per_mol": -213199.217,
+    "equilibration": {
+     "complete": true,
+     "n_stages": 6,
+     "n_stages_complete": 6,
+     "n_extension_steps": 0,
+     "n_extension_steps_complete": 0,
+     "completed_ps": 2000.0
+    },
+    "production": {
+     "target_ns": 100.0,
+     "segment_ns": 5.0,
+     "n_segments_target": 20,
+     "n_segments_complete": 20,
+     "completed_ns": 100.0,
+     "complete": true,
+     "frames_solute": 10000,
+     "frames_full": 1000,
+     "wall_s": 9423.5,
+     "ns_per_day": 916.86
+    }
+   },
+   "build": {
+    "model": "bonded_2e",
+    "model_kind": "bonded",
+    "parameter_set": "2e",
+    "start": "N",
+    "status_note": "PRODUCTION system (md/PLAN.md, entry of 6 Oct 2026, 9:15 PM IST; md/PRODUCTION.md). Zinc set 2e: MCPB.py step 2e, empirical zinc constants. RESP charges with the equal ligand atoms made equal. Terms at N2 AS BUILT: gates G-R and G-R2 on these terms failed and are reported; they are used by the user's decision of 6 Oct 2026. Whether 2s or 2e is the primary set is decided by gate G-Z and the validation run X0 of each (md/PRODUCTION.md).",
+    "terms_at_N2": {
+     "source": "written by the builder: the terms AS BUILT BEFORE GATE G-R (Zn-N2-S, S-N2-H and H-N2-S-C4 as in the frcmod of MCPB.py; Zn-N2-H at its angle in start X with the force constant of that frcmod)",
+     "given_file": null,
+     "first_line_of_the_file": null,
+     "validated_by_gate_GR": false,
+     "sha256": "113e3a2ebdbe99a4389e2ed497b20caaf0e64aebcbc8d547cf39823e9ee2cd00",
+     "class_of_this_set": "the terms as built: the three angles at N2 and the series on H-N2-S-C4",
+     "entries_beyond_the_terms_as_built": []
+    },
+    "composition": {
+     "atoms": 40911,
+     "residues": 12578,
+     "protein_atoms": 4075,
+     "protein_residues_with_ACE": 259,
+     "zinc_atoms": 1,
+     "ligand_atoms": 18,
+     "solute_atoms": 4094,
+     "water_molecules": 12250,
+     "crystal_water_molecules": 215,
+     "added_water_molecules": 12035,
+     "Na+": 34,
+     "Cl-": 33,
+     "plan_atoms": 25600,
+     "atoms_over_plan_percent": 59.8
+    },
+    "geometry_as_built": {
+     "lig_rmsd_A": {
+      "identity": 0.6104,
+      "ring_flip": 1.5647,
+      "oxygen_swap": 1.2196,
+      "ring_flip+oxygen_swap": 1.8876
+     },
+     "lig_rmsd_symmetry_corrected_A": 0.6104,
+     "d1_N1_Phe131CZ_A": 3.3561,
+     "d2_N1_Asn67OD1_A": 7.7255,
+     "N1_Asn67ND2_A": 6.5574,
+     "Zn_N2_A": 2.2071,
+     "Zn_His94NE2_A": 2.0099,
+     "Zn_His96NE2_A": 2.0206,
+     "Zn_His119ND1_A": 2.0183,
+     "Zn_O1_A": 4.2404,
+     "Zn_O2_A": 2.7751,
+     "N2_Thr199OG1_A": 2.5522,
+     "HN21_Thr199OG1_A": 1.6214,
+     "N2_HN21_Thr199OG1_deg": 149.1132,
+     "tau_fold_deg": 148.6317,
+     "C4_S_N2_deg": 109.4825,
+     "S_N2_A": 1.6775,
+     "S_N2_Zn_deg": 105.9075,
+     "Zn_N2_S_C4_deg": -107.4902,
+     "N_Zn_N_deg": {
+      "N2-Zn-H94NE2": 117.2809,
+      "N2-Zn-H96NE2": 111.6119,
+      "N2-Zn-H119ND1": 110.2917,
+      "H94NE2-Zn-H96NE2": 103.8187,
+      "H94NE2-Zn-H119ND1": 113.5907,
+      "H96NE2-Zn-H119ND1": 98.4086
+     }
+    },
+    "script_sha256": "a9b8ef8d699dfce68abfddcd21186ebdb939900d67b4c549b92692bf39d38d70"
+   },
+   "hydration_check": {
+    "requested": true,
+    "applies": false,
+    "skipped": true,
+    "settings": {
+     "after_step": "eq03",
+     "site_atoms": [
+      "C1",
+      "C2",
+      "C3",
+      "C4",
+      "C5",
+      "C6"
+     ],
+     "water_cutoff_A": 2.5,
+     "applies_if_ligand_mean_distance_above_A": 2.0,
+     "max_extensions": 4
+    },
+    "reference_guard": {
+     "n_ca": 258,
+     "ca_fit_rmsd_of_system_inpcrd_on_reference_pdb_A": 0.0,
+     "n_ca_residue_names_that_differ": 0,
+     "ca_residue_names_that_differ_first_5": []
+    },
+    "counts": [
+     {
+      "step": "eq03",
+      "time_end_ps": 700.0,
+      "n_water_O": 0,
+      "nearest_water_O_A": 2.846,
+      "ligand_mean_distance_from_site_A": 1.07,
+      "applies": false,
+      "decision": "go on"
+     }
+    ],
+    "n_extensions": 0,
+    "final_decision": "go on: check skipped: the ligand itself is at the site",
+    "site_without_water_when_the_solute_was_released": false
+   },
+   "equilibration_stages": [
+    {
+     "tag": "eq01",
+     "name": "heat",
+     "ensemble": "NVT",
+     "timestep_fs": 2.0,
+     "length_ps": 100.0,
+     "time_start_ps": 0.0,
+     "time_end_ps": 100.0,
+     "restraint_atoms": "solute_heavy",
+     "restraint_k_kj_per_mol_nm2": 1000.0,
+     "n_restrained_atoms": 2074,
+     "log_rows": 10,
+     "log_mean_temperature_K": 185.7461,
+     "log_mean_density_g_per_cm3": 0.912596,
+     "log_non_finite": 0
+    },
+    {
+     "tag": "eq02",
+     "name": "density",
+     "ensemble": "NPT",
+     "timestep_fs": 2.0,
+     "length_ps": 300.0,
+     "time_start_ps": 100.0,
+     "time_end_ps": 400.0,
+     "restraint_atoms": "solute_heavy",
+     "restraint_k_kj_per_mol_nm2": 1000.0,
+     "n_restrained_atoms": 2074,
+     "log_rows": 30,
+     "log_mean_temperature_K": 300.3278,
+     "log_mean_density_g_per_cm3": 1.0230178666666667,
+     "log_non_finite": 0
+    },
+    {
+     "tag": "eq03",
+     "name": "loosen",
+     "ensemble": "NPT",
+     "timestep_fs": 2.0,
+     "length_ps": 300.0,
+     "time_start_ps": 400.0,
+     "time_end_ps": 700.0,
+     "restraint_atoms": "solute_heavy",
+     "restraint_k_kj_per_mol_nm2": 250.0,
+     "n_restrained_atoms": 2074,
+     "log_rows": 30,
+     "log_mean_temperature_K": 300.75506666666666,
+     "log_mean_density_g_per_cm3": 1.0264060333333334,
+     "log_non_finite": 0
+    },
+    {
+     "tag": "eq04",
+     "name": "release_side_chains_zinc_ligand",
+     "ensemble": "NPT",
+     "timestep_fs": 4.0,
+     "length_ps": 400.0,
+     "time_start_ps": 700.0,
+     "time_end_ps": 1100.0,
+     "restraint_atoms": "protein_backbone",
+     "restraint_k_kj_per_mol_nm2": 250.0,
+     "n_restrained_atoms": 1034,
+     "log_rows": 40,
+     "log_mean_temperature_K": 300.604925,
+     "log_mean_density_g_per_cm3": 1.02634215,
+     "log_non_finite": 0
+    },
+    {
+     "tag": "eq05",
+     "name": "loosen_backbone",
+     "ensemble": "NPT",
+     "timestep_fs": 4.0,
+     "length_ps": 400.0,
+     "time_start_ps": 1100.0,
+     "time_end_ps": 1500.0,
+     "restraint_atoms": "protein_backbone",
+     "restraint_k_kj_per_mol_nm2": 50.0,
+     "n_restrained_atoms": 1034,
+     "log_rows": 40,
+     "log_mean_temperature_K": 300.99812499999996,
+     "log_mean_density_g_per_cm3": 1.0252379,
+     "log_non_finite": 0
+    },
+    {
+     "tag": "eq06",
+     "name": "free",
+     "ensemble": "NPT",
+     "timestep_fs": 4.0,
+     "length_ps": 500.0,
+     "time_start_ps": 1500.0,
+     "time_end_ps": 2000.0,
+     "restraint_atoms": "none",
+     "restraint_k_kj_per_mol_nm2": 0.0,
+     "n_restrained_atoms": 0,
+     "log_rows": 50,
+     "log_mean_temperature_K": 300.9241,
+     "log_mean_density_g_per_cm3": 1.0260137,
+     "log_non_finite": 0
+    }
+   ],
+   "production_state_log": {
+    "files": "log_segNNNN.csv of the run folder, one row per 10 ps",
+    "rows": 10000,
+    "non_finite_values": 0,
+    "timestep_fs": [
+     4.0
+    ],
+    "thermostat_K": [
+     300.0
+    ],
+    "precision": "means and standard deviations are written as computed (no rounding here: a number rounded here and again when it is printed can come out one unit of the last digit off)",
+    "temperature_K": {
+     "mean": 300.96580159999996,
+     "sd": 1.4677659815643092,
+     "min": 295.682,
+     "max": 306.057,
+     "mean_first_half": 300.9776736,
+     "mean_last_half": 300.9539296,
+     "segment_means_min": 300.87851400000005,
+     "segment_means_max": 301.114716
+    },
+    "density_g_per_cm3": {
+     "mean": 1.0254108364,
+     "sd": 0.002361856120688778,
+     "min": 1.015751,
+     "max": 1.033496,
+     "mean_first_half": 1.0253500724,
+     "mean_last_half": 1.0254716004,
+     "segment_means_min": 1.025165866,
+     "segment_means_max": 1.025671736
+    }
+   },
+   "trajectory_checksums": {
+    "what": "sha256 of every DCD file as the first program read it (summary.json, inputs_sha256) against the driver's record in the manifest",
+    "n_dcd_files_read": 52,
+    "n_equal_to_the_driver_record": 52,
+    "not_equal_or_not_recorded": []
+   },
+   "driver_log": {
+    "file": "/root/cqc-sfa-md/runs/bonded_2e/N3/run_md.log",
+    "lines": 58,
+    "lines_with_warning_error_or_failure": [],
+    "last_line": "[7 Oct 2026, 7:46:40 PM IST] DONE N3"
+   },
+   "sensitivity_marker": null
+  },
+  {
+   "run": "bonded_2e/R1",
+   "manifest": "/root/cqc-sfa-md/runs/bonded_2e/R1/manifest.json",
+   "manifest_sha256": "c2967c9051055622234b175ecbc44442415d8c3bb0a7d7956e798bc9fef6bebb",
+   "driver": {
+    "status": "complete",
+    "all_steps_complete": true,
+    "test_only": false,
+    "equil_scale": 1.0,
+    "run_id": "R1",
+    "run_seed": 1402141901,
+    "system_dir": "/root/cqc-sfa-md/systems/bonded_2e/R",
+    "n_atoms": 40857,
+    "n_water_molecules": 12232,
+    "crystal_water_O_listed_in_selections": 211,
+    "script_sha256": "6d797f080ff7567923469dabd86af71ca34183f5c482c14d55bf8038eb9d1822",
+    "protocol_sha256": "decda42f5340d06f5f695b4c56b59a7bb796e5872b3a8af1c1a5b426f9c09d9a",
+    "inputs_sha256": {
+     "system.prmtop": "7ff894cfda73a2bb8bb68cc3b1198328b7f78a413fb15768de0b82f02395d732",
+     "system.inpcrd": "fe5bc95b9f90444fc2dcd9aa1ba619e991dea0ebe500716b2ced28ee1ec4e360"
+    },
+    "n_invocations": 1,
+    "invocations": [
+     {
+      "started_ist": "7 Oct 2026, 3:37:55 AM IST",
+      "ended_ist": "7 Oct 2026, 6:19:05 AM IST",
+      "exit_code": 0,
+      "outcome": "stage complete",
+      "host": "cqc-md-gpu-01"
+     }
+    ],
+    "platform": "CUDA",
+    "gpu": "NVIDIA L40S",
+    "precision": "mixed",
+    "openmm": "8.6.1",
+    "minimisation_energy_change_kj_per_mol": -214737.857,
+    "equilibration": {
+     "complete": true,
+     "n_stages": 6,
+     "n_stages_complete": 6,
+     "n_extension_steps": 1,
+     "n_extension_steps_complete": 1,
+     "completed_ps": 2500.0
+    },
+    "production": {
+     "target_ns": 100.0,
+     "segment_ns": 5.0,
+     "n_segments_target": 20,
+     "n_segments_complete": 20,
+     "completed_ns": 100.0,
+     "complete": true,
+     "frames_solute": 10000,
+     "frames_full": 1000,
+     "wall_s": 9298.3,
+     "ns_per_day": 929.2
+    }
+   },
+   "build": {
+    "model": "bonded_2e",
+    "model_kind": "bonded",
+    "parameter_set": "2e",
+    "start": "R",
+    "status_note": "PRODUCTION system (md/PLAN.md, entry of 6 Oct 2026, 9:15 PM IST; md/PRODUCTION.md). Zinc set 2e: MCPB.py step 2e, empirical zinc constants. RESP charges with the equal ligand atoms made equal. Terms at N2 AS BUILT: gates G-R and G-R2 on these terms failed and are reported; they are used by the user's decision of 6 Oct 2026. Whether 2s or 2e is the primary set is decided by gate G-Z and the validation run X0 of each (md/PRODUCTION.md).",
+    "terms_at_N2": {
+     "source": "written by the builder: the terms AS BUILT BEFORE GATE G-R (Zn-N2-S, S-N2-H and H-N2-S-C4 as in the frcmod of MCPB.py; Zn-N2-H at its angle in start X with the force constant of that frcmod)",
+     "given_file": null,
+     "first_line_of_the_file": null,
+     "validated_by_gate_GR": false,
+     "sha256": "113e3a2ebdbe99a4389e2ed497b20caaf0e64aebcbc8d547cf39823e9ee2cd00",
+     "class_of_this_set": "the terms as built: the three angles at N2 and the series on H-N2-S-C4",
+     "entries_beyond_the_terms_as_built": []
+    },
+    "composition": {
+     "atoms": 40857,
+     "residues": 12560,
+     "protein_atoms": 4075,
+     "protein_residues_with_ACE": 259,
+     "zinc_atoms": 1,
+     "ligand_atoms": 18,
+     "solute_atoms": 4094,
+     "water_molecules": 12232,
+     "crystal_water_molecules": 211,
+     "added_water_molecules": 12021,
+     "Na+": 34,
+     "Cl-": 33,
+     "plan_atoms": 25600,
+     "atoms_over_plan_percent": 59.6
+    },
+    "geometry_as_built": {
+     "lig_rmsd_A": {
+      "identity": 3.5732,
+      "ring_flip": 3.7623,
+      "oxygen_swap": 3.6906,
+      "ring_flip+oxygen_swap": 3.8739
+     },
+     "lig_rmsd_symmetry_corrected_A": 3.5732,
+     "d1_N1_Phe131CZ_A": 9.5849,
+     "d2_N1_Asn67OD1_A": 2.5968,
+     "N1_Asn67ND2_A": 3.3102,
+     "Zn_N2_A": 2.2351,
+     "Zn_His94NE2_A": 2.0099,
+     "Zn_His96NE2_A": 2.0206,
+     "Zn_His119ND1_A": 2.0183,
+     "Zn_O1_A": 4.5299,
+     "Zn_O2_A": 3.9068,
+     "N2_Thr199OG1_A": 2.5852,
+     "HN21_Thr199OG1_A": 1.7171,
+     "N2_HN21_Thr199OG1_deg": 140.2053,
+     "tau_fold_deg": 142.7445,
+     "C4_S_N2_deg": 109.4319,
+     "S_N2_A": 1.6773,
+     "S_N2_Zn_deg": 119.5286,
+     "Zn_N2_S_C4_deg": -32.1244,
+     "N_Zn_N_deg": {
+      "N2-Zn-H94NE2": 116.3377,
+      "N2-Zn-H96NE2": 112.5686,
+      "N2-Zn-H119ND1": 110.4993,
+      "H94NE2-Zn-H96NE2": 103.8187,
+      "H94NE2-Zn-H119ND1": 113.5907,
+      "H96NE2-Zn-H119ND1": 98.4086
+     }
+    },
+    "script_sha256": "a9b8ef8d699dfce68abfddcd21186ebdb939900d67b4c549b92692bf39d38d70"
+   },
+   "hydration_check": {
+    "requested": true,
+    "applies": true,
+    "skipped": false,
+    "settings": {
+     "after_step": "eq03",
+     "site_atoms": [
+      "C1",
+      "C2",
+      "C3",
+      "C4",
+      "C5",
+      "C6"
+     ],
+     "water_cutoff_A": 2.5,
+     "applies_if_ligand_mean_distance_above_A": 2.0,
+     "max_extensions": 4
+    },
+    "reference_guard": {
+     "n_ca": 258,
+     "ca_fit_rmsd_of_system_inpcrd_on_reference_pdb_A": 0.0,
+     "n_ca_residue_names_that_differ": 0,
+     "ca_residue_names_that_differ_first_5": []
+    },
+    "counts": [
+     {
+      "step": "eq03",
+      "time_end_ps": 700.0,
+      "n_water_O": 0,
+      "nearest_water_O_A": 3.293,
+      "ligand_mean_distance_from_site_A": 3.628,
+      "applies": true,
+      "decision": "extend"
+     },
+     {
+      "step": "eq03x1",
+      "time_end_ps": 1200.0,
+      "n_water_O": 2,
+      "nearest_water_O_A": 0.745,
+      "ligand_mean_distance_from_site_A": 3.851,
+      "applies": true,
+      "decision": "go on"
+     }
+    ],
+    "n_extensions": 1,
+    "final_decision": "go on: 2 water oxygens at the site",
+    "site_without_water_when_the_solute_was_released": false
+   },
+   "equilibration_stages": [
+    {
+     "tag": "eq01",
+     "name": "heat",
+     "ensemble": "NVT",
+     "timestep_fs": 2.0,
+     "length_ps": 100.0,
+     "time_start_ps": 0.0,
+     "time_end_ps": 100.0,
+     "restraint_atoms": "solute_heavy",
+     "restraint_k_kj_per_mol_nm2": 1000.0,
+     "n_restrained_atoms": 2074,
+     "log_rows": 10,
+     "log_mean_temperature_K": 185.9511,
+     "log_mean_density_g_per_cm3": 0.911839,
+     "log_non_finite": 0
+    },
+    {
+     "tag": "eq02",
+     "name": "density",
+     "ensemble": "NPT",
+     "timestep_fs": 2.0,
+     "length_ps": 300.0,
+     "time_start_ps": 100.0,
+     "time_end_ps": 400.0,
+     "restraint_atoms": "solute_heavy",
+     "restraint_k_kj_per_mol_nm2": 1000.0,
+     "n_restrained_atoms": 2074,
+     "log_rows": 30,
+     "log_mean_temperature_K": 300.0248333333333,
+     "log_mean_density_g_per_cm3": 1.0220163666666666,
+     "log_non_finite": 0
+    },
+    {
+     "tag": "eq03",
+     "name": "loosen",
+     "ensemble": "NPT",
+     "timestep_fs": 2.0,
+     "length_ps": 300.0,
+     "time_start_ps": 400.0,
+     "time_end_ps": 700.0,
+     "restraint_atoms": "solute_heavy",
+     "restraint_k_kj_per_mol_nm2": 250.0,
+     "n_restrained_atoms": 2074,
+     "log_rows": 30,
+     "log_mean_temperature_K": 299.8771666666667,
+     "log_mean_density_g_per_cm3": 1.0257844,
+     "log_non_finite": 0
+    },
+    {
+     "tag": "eq03x1",
+     "name": "loosen, extension 1 of at most 4",
+     "ensemble": "NPT",
+     "timestep_fs": 2.0,
+     "length_ps": 500.0,
+     "time_start_ps": 700.0,
+     "time_end_ps": 1200.0,
+     "restraint_atoms": "solute_heavy",
+     "restraint_k_kj_per_mol_nm2": 250.0,
+     "n_restrained_atoms": 2074,
+     "log_rows": 50,
+     "log_mean_temperature_K": 300.0368,
+     "log_mean_density_g_per_cm3": 1.02570528,
+     "log_non_finite": 0
+    },
+    {
+     "tag": "eq04",
+     "name": "release_side_chains_zinc_ligand",
+     "ensemble": "NPT",
+     "timestep_fs": 4.0,
+     "length_ps": 400.0,
+     "time_start_ps": 1200.0,
+     "time_end_ps": 1600.0,
+     "restraint_atoms": "protein_backbone",
+     "restraint_k_kj_per_mol_nm2": 250.0,
+     "n_restrained_atoms": 1034,
+     "log_rows": 40,
+     "log_mean_temperature_K": 301.1352,
+     "log_mean_density_g_per_cm3": 1.026199025,
+     "log_non_finite": 0
+    },
+    {
+     "tag": "eq05",
+     "name": "loosen_backbone",
+     "ensemble": "NPT",
+     "timestep_fs": 4.0,
+     "length_ps": 400.0,
+     "time_start_ps": 1600.0,
+     "time_end_ps": 2000.0,
+     "restraint_atoms": "protein_backbone",
+     "restraint_k_kj_per_mol_nm2": 50.0,
+     "n_restrained_atoms": 1034,
+     "log_rows": 40,
+     "log_mean_temperature_K": 300.52755,
+     "log_mean_density_g_per_cm3": 1.026713075,
+     "log_non_finite": 0
+    },
+    {
+     "tag": "eq06",
+     "name": "free",
+     "ensemble": "NPT",
+     "timestep_fs": 4.0,
+     "length_ps": 500.0,
+     "time_start_ps": 2000.0,
+     "time_end_ps": 2500.0,
+     "restraint_atoms": "none",
+     "restraint_k_kj_per_mol_nm2": 0.0,
+     "n_restrained_atoms": 0,
+     "log_rows": 50,
+     "log_mean_temperature_K": 300.8165,
+     "log_mean_density_g_per_cm3": 1.02526364,
+     "log_non_finite": 0
+    }
+   ],
+   "production_state_log": {
+    "files": "log_segNNNN.csv of the run folder, one row per 10 ps",
+    "rows": 10000,
+    "non_finite_values": 0,
+    "timestep_fs": [
+     4.0
+    ],
+    "thermostat_K": [
+     300.0
+    ],
+    "precision": "means and standard deviations are written as computed (no rounding here: a number rounded here and again when it is printed can come out one unit of the last digit off)",
+    "temperature_K": {
+     "mean": 300.9654148,
+     "sd": 1.4733591382079794,
+     "min": 295.68,
+     "max": 306.946,
+     "mean_first_half": 300.9644116,
+     "mean_last_half": 300.96641800000003,
+     "segment_means_min": 300.869844,
+     "segment_means_max": 301.050394
+    },
+    "density_g_per_cm3": {
+     "mean": 1.0254893289,
+     "sd": 0.0023447631225615912,
+     "min": 1.015702,
+     "max": 1.034753,
+     "mean_first_half": 1.0255180302,
+     "mean_last_half": 1.0254606276,
+     "segment_means_min": 1.02516682,
+     "segment_means_max": 1.025958576
+    }
+   },
+   "trajectory_checksums": {
+    "what": "sha256 of every DCD file as the first program read it (summary.json, inputs_sha256) against the driver's record in the manifest",
+    "n_dcd_files_read": 54,
+    "n_equal_to_the_driver_record": 54,
+    "not_equal_or_not_recorded": []
+   },
+   "driver_log": {
+    "file": "/root/cqc-sfa-md/runs/bonded_2e/R1/run_md.log",
+    "lines": 61,
+    "lines_with_warning_error_or_failure": [],
+    "last_line": "[7 Oct 2026, 6:19:05 AM IST] DONE R1"
+   },
+   "sensitivity_marker": null
+  },
+  {
+   "run": "bonded_2e/R2",
+   "manifest": "/root/cqc-sfa-md/runs/bonded_2e/R2/manifest.json",
+   "manifest_sha256": "3f5ff7ea012c686dcf855812af9b2fbc9be59e44e0b055a86e0111c82cd42c9a",
+   "driver": {
+    "status": "complete",
+    "all_steps_complete": true,
+    "test_only": false,
+    "equil_scale": 1.0,
+    "run_id": "R2",
+    "run_seed": 134715106,
+    "system_dir": "/root/cqc-sfa-md/systems/bonded_2e/R",
+    "n_atoms": 40857,
+    "n_water_molecules": 12232,
+    "crystal_water_O_listed_in_selections": 211,
+    "script_sha256": "6d797f080ff7567923469dabd86af71ca34183f5c482c14d55bf8038eb9d1822",
+    "protocol_sha256": "decda42f5340d06f5f695b4c56b59a7bb796e5872b3a8af1c1a5b426f9c09d9a",
+    "inputs_sha256": {
+     "system.prmtop": "7ff894cfda73a2bb8bb68cc3b1198328b7f78a413fb15768de0b82f02395d732",
+     "system.inpcrd": "fe5bc95b9f90444fc2dcd9aa1ba619e991dea0ebe500716b2ced28ee1ec4e360"
+    },
+    "n_invocations": 1,
+    "invocations": [
+     {
+      "started_ist": "7 Oct 2026, 11:43:06 AM IST",
+      "ended_ist": "7 Oct 2026, 2:22:52 PM IST",
+      "exit_code": 0,
+      "outcome": "stage complete",
+      "host": "cqc-md-gpu-01"
+     }
+    ],
+    "platform": "CUDA",
+    "gpu": "NVIDIA L40S",
+    "precision": "mixed",
+    "openmm": "8.6.1",
+    "minimisation_energy_change_kj_per_mol": -216439.091,
+    "equilibration": {
+     "complete": true,
+     "n_stages": 6,
+     "n_stages_complete": 6,
+     "n_extension_steps": 0,
+     "n_extension_steps_complete": 0,
+     "completed_ps": 2000.0
+    },
+    "production": {
+     "target_ns": 100.0,
+     "segment_ns": 5.0,
+     "n_segments_target": 20,
+     "n_segments_complete": 20,
+     "completed_ns": 100.0,
+     "complete": true,
+     "frames_solute": 10000,
+     "frames_full": 1000,
+     "wall_s": 9297.7,
+     "ns_per_day": 929.26
+    }
+   },
+   "build": {
+    "model": "bonded_2e",
+    "model_kind": "bonded",
+    "parameter_set": "2e",
+    "start": "R",
+    "status_note": "PRODUCTION system (md/PLAN.md, entry of 6 Oct 2026, 9:15 PM IST; md/PRODUCTION.md). Zinc set 2e: MCPB.py step 2e, empirical zinc constants. RESP charges with the equal ligand atoms made equal. Terms at N2 AS BUILT: gates G-R and G-R2 on these terms failed and are reported; they are used by the user's decision of 6 Oct 2026. Whether 2s or 2e is the primary set is decided by gate G-Z and the validation run X0 of each (md/PRODUCTION.md).",
+    "terms_at_N2": {
+     "source": "written by the builder: the terms AS BUILT BEFORE GATE G-R (Zn-N2-S, S-N2-H and H-N2-S-C4 as in the frcmod of MCPB.py; Zn-N2-H at its angle in start X with the force constant of that frcmod)",
+     "given_file": null,
+     "first_line_of_the_file": null,
+     "validated_by_gate_GR": false,
+     "sha256": "113e3a2ebdbe99a4389e2ed497b20caaf0e64aebcbc8d547cf39823e9ee2cd00",
+     "class_of_this_set": "the terms as built: the three angles at N2 and the series on H-N2-S-C4",
+     "entries_beyond_the_terms_as_built": []
+    },
+    "composition": {
+     "atoms": 40857,
+     "residues": 12560,
+     "protein_atoms": 4075,
+     "protein_residues_with_ACE": 259,
+     "zinc_atoms": 1,
+     "ligand_atoms": 18,
+     "solute_atoms": 4094,
+     "water_molecules": 12232,
+     "crystal_water_molecules": 211,
+     "added_water_molecules": 12021,
+     "Na+": 34,
+     "Cl-": 33,
+     "plan_atoms": 25600,
+     "atoms_over_plan_percent": 59.6
+    },
+    "geometry_as_built": {
+     "lig_rmsd_A": {
+      "identity": 3.5732,
+      "ring_flip": 3.7623,
+      "oxygen_swap": 3.6906,
+      "ring_flip+oxygen_swap": 3.8739
+     },
+     "lig_rmsd_symmetry_corrected_A": 3.5732,
+     "d1_N1_Phe131CZ_A": 9.5849,
+     "d2_N1_Asn67OD1_A": 2.5968,
+     "N1_Asn67ND2_A": 3.3102,
+     "Zn_N2_A": 2.2351,
+     "Zn_His94NE2_A": 2.0099,
+     "Zn_His96NE2_A": 2.0206,
+     "Zn_His119ND1_A": 2.0183,
+     "Zn_O1_A": 4.5299,
+     "Zn_O2_A": 3.9068,
+     "N2_Thr199OG1_A": 2.5852,
+     "HN21_Thr199OG1_A": 1.7171,
+     "N2_HN21_Thr199OG1_deg": 140.2053,
+     "tau_fold_deg": 142.7445,
+     "C4_S_N2_deg": 109.4319,
+     "S_N2_A": 1.6773,
+     "S_N2_Zn_deg": 119.5286,
+     "Zn_N2_S_C4_deg": -32.1244,
+     "N_Zn_N_deg": {
+      "N2-Zn-H94NE2": 116.3377,
+      "N2-Zn-H96NE2": 112.5686,
+      "N2-Zn-H119ND1": 110.4993,
+      "H94NE2-Zn-H96NE2": 103.8187,
+      "H94NE2-Zn-H119ND1": 113.5907,
+      "H96NE2-Zn-H119ND1": 98.4086
+     }
+    },
+    "script_sha256": "a9b8ef8d699dfce68abfddcd21186ebdb939900d67b4c549b92692bf39d38d70"
+   },
+   "hydration_check": {
+    "requested": true,
+    "applies": true,
+    "skipped": false,
+    "settings": {
+     "after_step": "eq03",
+     "site_atoms": [
+      "C1",
+      "C2",
+      "C3",
+      "C4",
+      "C5",
+      "C6"
+     ],
+     "water_cutoff_A": 2.5,
+     "applies_if_ligand_mean_distance_above_A": 2.0,
+     "max_extensions": 4
+    },
+    "reference_guard": {
+     "n_ca": 258,
+     "ca_fit_rmsd_of_system_inpcrd_on_reference_pdb_A": 0.0,
+     "n_ca_residue_names_that_differ": 0,
+     "ca_residue_names_that_differ_first_5": []
+    },
+    "counts": [
+     {
+      "step": "eq03",
+      "time_end_ps": 700.0,
+      "n_water_O": 2,
+      "nearest_water_O_A": 0.885,
+      "ligand_mean_distance_from_site_A": 3.886,
+      "applies": true,
+      "decision": "go on"
+     }
+    ],
+    "n_extensions": 0,
+    "final_decision": "go on: 2 water oxygens at the site",
+    "site_without_water_when_the_solute_was_released": false
+   },
+   "equilibration_stages": [
+    {
+     "tag": "eq01",
+     "name": "heat",
+     "ensemble": "NVT",
+     "timestep_fs": 2.0,
+     "length_ps": 100.0,
+     "time_start_ps": 0.0,
+     "time_end_ps": 100.0,
+     "restraint_atoms": "solute_heavy",
+     "restraint_k_kj_per_mol_nm2": 1000.0,
+     "n_restrained_atoms": 2074,
+     "log_rows": 10,
+     "log_mean_temperature_K": 185.4257,
+     "log_mean_density_g_per_cm3": 0.911839,
+     "log_non_finite": 0
+    },
+    {
+     "tag": "eq02",
+     "name": "density",
+     "ensemble": "NPT",
+     "timestep_fs": 2.0,
+     "length_ps": 300.0,
+     "time_start_ps": 100.0,
+     "time_end_ps": 400.0,
+     "restraint_atoms": "solute_heavy",
+     "restraint_k_kj_per_mol_nm2": 1000.0,
+     "n_restrained_atoms": 2074,
+     "log_rows": 30,
+     "log_mean_temperature_K": 300.4890666666667,
+     "log_mean_density_g_per_cm3": 1.0224626333333333,
+     "log_non_finite": 0
+    },
+    {
+     "tag": "eq03",
+     "name": "loosen",
+     "ensemble": "NPT",
+     "timestep_fs": 2.0,
+     "length_ps": 300.0,
+     "time_start_ps": 400.0,
+     "time_end_ps": 700.0,
+     "restraint_atoms": "solute_heavy",
+     "restraint_k_kj_per_mol_nm2": 250.0,
+     "n_restrained_atoms": 2074,
+     "log_rows": 30,
+     "log_mean_temperature_K": 300.50280000000004,
+     "log_mean_density_g_per_cm3": 1.0262202333333332,
+     "log_non_finite": 0
+    },
+    {
+     "tag": "eq04",
+     "name": "release_side_chains_zinc_ligand",
+     "ensemble": "NPT",
+     "timestep_fs": 4.0,
+     "length_ps": 400.0,
+     "time_start_ps": 700.0,
+     "time_end_ps": 1100.0,
+     "restraint_atoms": "protein_backbone",
+     "restraint_k_kj_per_mol_nm2": 250.0,
+     "n_restrained_atoms": 1034,
+     "log_rows": 40,
+     "log_mean_temperature_K": 301.096225,
+     "log_mean_density_g_per_cm3": 1.0279398,
+     "log_non_finite": 0
+    },
+    {
+     "tag": "eq05",
+     "name": "loosen_backbone",
+     "ensemble": "NPT",
+     "timestep_fs": 4.0,
+     "length_ps": 400.0,
+     "time_start_ps": 1100.0,
+     "time_end_ps": 1500.0,
+     "restraint_atoms": "protein_backbone",
+     "restraint_k_kj_per_mol_nm2": 50.0,
+     "n_restrained_atoms": 1034,
+     "log_rows": 40,
+     "log_mean_temperature_K": 300.68874999999997,
+     "log_mean_density_g_per_cm3": 1.025566325,
+     "log_non_finite": 0
+    },
+    {
+     "tag": "eq06",
+     "name": "free",
+     "ensemble": "NPT",
+     "timestep_fs": 4.0,
+     "length_ps": 500.0,
+     "time_start_ps": 1500.0,
+     "time_end_ps": 2000.0,
+     "restraint_atoms": "none",
+     "restraint_k_kj_per_mol_nm2": 0.0,
+     "n_restrained_atoms": 0,
+     "log_rows": 50,
+     "log_mean_temperature_K": 301.29778,
+     "log_mean_density_g_per_cm3": 1.02600288,
+     "log_non_finite": 0
+    }
+   ],
+   "production_state_log": {
+    "files": "log_segNNNN.csv of the run folder, one row per 10 ps",
+    "rows": 10000,
+    "non_finite_values": 0,
+    "timestep_fs": [
+     4.0
+    ],
+    "thermostat_K": [
+     300.0
+    ],
+    "precision": "means and standard deviations are written as computed (no rounding here: a number rounded here and again when it is printed can come out one unit of the last digit off)",
+    "temperature_K": {
+     "mean": 300.9885734,
+     "sd": 1.45919568749789,
+     "min": 295.774,
+     "max": 306.173,
+     "mean_first_half": 300.99802200000005,
+     "mean_last_half": 300.9791248,
+     "segment_means_min": 300.87772600000005,
+     "segment_means_max": 301.1014
+    },
+    "density_g_per_cm3": {
+     "mean": 1.0255420723,
+     "sd": 0.0023423376198303926,
+     "min": 1.017095,
+     "max": 1.034083,
+     "mean_first_half": 1.02561249,
+     "mean_last_half": 1.0254716546,
+     "segment_means_min": 1.025199304,
+     "segment_means_max": 1.02586879
+    }
+   },
+   "trajectory_checksums": {
+    "what": "sha256 of every DCD file as the first program read it (summary.json, inputs_sha256) against the driver's record in the manifest",
+    "n_dcd_files_read": 52,
+    "n_equal_to_the_driver_record": 52,
+    "not_equal_or_not_recorded": []
+   },
+   "driver_log": {
+    "file": "/root/cqc-sfa-md/runs/bonded_2e/R2/run_md.log",
+    "lines": 58,
+    "lines_with_warning_error_or_failure": [],
+    "last_line": "[7 Oct 2026, 2:22:52 PM IST] DONE R2"
+   },
+   "sensitivity_marker": null
+  },
+  {
+   "run": "bonded_2e/R3",
+   "manifest": "/root/cqc-sfa-md/runs/bonded_2e/R3/manifest.json",
+   "manifest_sha256": "4548651ddb4b19d2b349e68576331ccdb78885592d477b77d48e3053bb181f98",
+   "driver": {
+    "status": "complete",
+    "all_steps_complete": true,
+    "test_only": false,
+    "equil_scale": 1.0,
+    "run_id": "R3",
+    "run_seed": 2063603613,
+    "system_dir": "/root/cqc-sfa-md/systems/bonded_2e/R",
+    "n_atoms": 40857,
+    "n_water_molecules": 12232,
+    "crystal_water_O_listed_in_selections": 211,
+    "script_sha256": "6d797f080ff7567923469dabd86af71ca34183f5c482c14d55bf8038eb9d1822",
+    "protocol_sha256": "decda42f5340d06f5f695b4c56b59a7bb796e5872b3a8af1c1a5b426f9c09d9a",
+    "inputs_sha256": {
+     "system.prmtop": "7ff894cfda73a2bb8bb68cc3b1198328b7f78a413fb15768de0b82f02395d732",
+     "system.inpcrd": "fe5bc95b9f90444fc2dcd9aa1ba619e991dea0ebe500716b2ced28ee1ec4e360"
+    },
+    "n_invocations": 1,
+    "invocations": [
+     {
+      "started_ist": "7 Oct 2026, 7:46:46 PM IST",
+      "ended_ist": "7 Oct 2026, 10:26:17 PM IST",
+      "exit_code": 0,
+      "outcome": "stage complete",
+      "host": "cqc-md-gpu-01"
+     }
+    ],
+    "platform": "CUDA",
+    "gpu": "NVIDIA L40S",
+    "precision": "mixed",
+    "openmm": "8.6.1",
+    "minimisation_energy_change_kj_per_mol": -215282.749,
+    "equilibration": {
+     "complete": true,
+     "n_stages": 6,
+     "n_stages_complete": 6,
+     "n_extension_steps": 0,
+     "n_extension_steps_complete": 0,
+     "completed_ps": 2000.0
+    },
+    "production": {
+     "target_ns": 100.0,
+     "segment_ns": 5.0,
+     "n_segments_target": 20,
+     "n_segments_complete": 20,
+     "completed_ns": 100.0,
+     "complete": true,
+     "frames_solute": 10000,
+     "frames_full": 1000,
+     "wall_s": 9285.9,
+     "ns_per_day": 930.45
+    }
+   },
+   "build": {
+    "model": "bonded_2e",
+    "model_kind": "bonded",
+    "parameter_set": "2e",
+    "start": "R",
+    "status_note": "PRODUCTION system (md/PLAN.md, entry of 6 Oct 2026, 9:15 PM IST; md/PRODUCTION.md). Zinc set 2e: MCPB.py step 2e, empirical zinc constants. RESP charges with the equal ligand atoms made equal. Terms at N2 AS BUILT: gates G-R and G-R2 on these terms failed and are reported; they are used by the user's decision of 6 Oct 2026. Whether 2s or 2e is the primary set is decided by gate G-Z and the validation run X0 of each (md/PRODUCTION.md).",
+    "terms_at_N2": {
+     "source": "written by the builder: the terms AS BUILT BEFORE GATE G-R (Zn-N2-S, S-N2-H and H-N2-S-C4 as in the frcmod of MCPB.py; Zn-N2-H at its angle in start X with the force constant of that frcmod)",
+     "given_file": null,
+     "first_line_of_the_file": null,
+     "validated_by_gate_GR": false,
+     "sha256": "113e3a2ebdbe99a4389e2ed497b20caaf0e64aebcbc8d547cf39823e9ee2cd00",
+     "class_of_this_set": "the terms as built: the three angles at N2 and the series on H-N2-S-C4",
+     "entries_beyond_the_terms_as_built": []
+    },
+    "composition": {
+     "atoms": 40857,
+     "residues": 12560,
+     "protein_atoms": 4075,
+     "protein_residues_with_ACE": 259,
+     "zinc_atoms": 1,
+     "ligand_atoms": 18,
+     "solute_atoms": 4094,
+     "water_molecules": 12232,
+     "crystal_water_molecules": 211,
+     "added_water_molecules": 12021,
+     "Na+": 34,
+     "Cl-": 33,
+     "plan_atoms": 25600,
+     "atoms_over_plan_percent": 59.6
+    },
+    "geometry_as_built": {
+     "lig_rmsd_A": {
+      "identity": 3.5732,
+      "ring_flip": 3.7623,
+      "oxygen_swap": 3.6906,
+      "ring_flip+oxygen_swap": 3.8739
+     },
+     "lig_rmsd_symmetry_corrected_A": 3.5732,
+     "d1_N1_Phe131CZ_A": 9.5849,
+     "d2_N1_Asn67OD1_A": 2.5968,
+     "N1_Asn67ND2_A": 3.3102,
+     "Zn_N2_A": 2.2351,
+     "Zn_His94NE2_A": 2.0099,
+     "Zn_His96NE2_A": 2.0206,
+     "Zn_His119ND1_A": 2.0183,
+     "Zn_O1_A": 4.5299,
+     "Zn_O2_A": 3.9068,
+     "N2_Thr199OG1_A": 2.5852,
+     "HN21_Thr199OG1_A": 1.7171,
+     "N2_HN21_Thr199OG1_deg": 140.2053,
+     "tau_fold_deg": 142.7445,
+     "C4_S_N2_deg": 109.4319,
+     "S_N2_A": 1.6773,
+     "S_N2_Zn_deg": 119.5286,
+     "Zn_N2_S_C4_deg": -32.1244,
+     "N_Zn_N_deg": {
+      "N2-Zn-H94NE2": 116.3377,
+      "N2-Zn-H96NE2": 112.5686,
+      "N2-Zn-H119ND1": 110.4993,
+      "H94NE2-Zn-H96NE2": 103.8187,
+      "H94NE2-Zn-H119ND1": 113.5907,
+      "H96NE2-Zn-H119ND1": 98.4086
+     }
+    },
+    "script_sha256": "a9b8ef8d699dfce68abfddcd21186ebdb939900d67b4c549b92692bf39d38d70"
+   },
+   "hydration_check": {
+    "requested": true,
+    "applies": true,
+    "skipped": false,
+    "settings": {
+     "after_step": "eq03",
+     "site_atoms": [
+      "C1",
+      "C2",
+      "C3",
+      "C4",
+      "C5",
+      "C6"
+     ],
+     "water_cutoff_A": 2.5,
+     "applies_if_ligand_mean_distance_above_A": 2.0,
+     "max_extensions": 4
+    },
+    "reference_guard": {
+     "n_ca": 258,
+     "ca_fit_rmsd_of_system_inpcrd_on_reference_pdb_A": 0.0,
+     "n_ca_residue_names_that_differ": 0,
+     "ca_residue_names_that_differ_first_5": []
+    },
+    "counts": [
+     {
+      "step": "eq03",
+      "time_end_ps": 700.0,
+      "n_water_O": 1,
+      "nearest_water_O_A": 2.312,
+      "ligand_mean_distance_from_site_A": 3.719,
+      "applies": true,
+      "decision": "go on"
+     }
+    ],
+    "n_extensions": 0,
+    "final_decision": "go on: 1 water oxygen at the site",
+    "site_without_water_when_the_solute_was_released": false
+   },
+   "equilibration_stages": [
+    {
+     "tag": "eq01",
+     "name": "heat",
+     "ensemble": "NVT",
+     "timestep_fs": 2.0,
+     "length_ps": 100.0,
+     "time_start_ps": 0.0,
+     "time_end_ps": 100.0,
+     "restraint_atoms": "solute_heavy",
+     "restraint_k_kj_per_mol_nm2": 1000.0,
+     "n_restrained_atoms": 2074,
+     "log_rows": 10,
+     "log_mean_temperature_K": 186.0908,
+     "log_mean_density_g_per_cm3": 0.911839,
+     "log_non_finite": 0
+    },
+    {
+     "tag": "eq02",
+     "name": "density",
+     "ensemble": "NPT",
+     "timestep_fs": 2.0,
+     "length_ps": 300.0,
+     "time_start_ps": 100.0,
+     "time_end_ps": 400.0,
+     "restraint_atoms": "solute_heavy",
+     "restraint_k_kj_per_mol_nm2": 1000.0,
+     "n_restrained_atoms": 2074,
+     "log_rows": 30,
+     "log_mean_temperature_K": 300.7448333333333,
+     "log_mean_density_g_per_cm3": 1.0236123000000001,
+     "log_non_finite": 0
+    },
+    {
+     "tag": "eq03",
+     "name": "loosen",
+     "ensemble": "NPT",
+     "timestep_fs": 2.0,
+     "length_ps": 300.0,
+     "time_start_ps": 400.0,
+     "time_end_ps": 700.0,
+     "restraint_atoms": "solute_heavy",
+     "restraint_k_kj_per_mol_nm2": 250.0,
+     "n_restrained_atoms": 2074,
+     "log_rows": 30,
+     "log_mean_temperature_K": 300.42083333333335,
+     "log_mean_density_g_per_cm3": 1.0265835,
+     "log_non_finite": 0
+    },
+    {
+     "tag": "eq04",
+     "name": "release_side_chains_zinc_ligand",
+     "ensemble": "NPT",
+     "timestep_fs": 4.0,
+     "length_ps": 400.0,
+     "time_start_ps": 700.0,
+     "time_end_ps": 1100.0,
+     "restraint_atoms": "protein_backbone",
+     "restraint_k_kj_per_mol_nm2": 250.0,
+     "n_restrained_atoms": 1034,
+     "log_rows": 40,
+     "log_mean_temperature_K": 301.29975,
+     "log_mean_density_g_per_cm3": 1.0264674,
+     "log_non_finite": 0
+    },
+    {
+     "tag": "eq05",
+     "name": "loosen_backbone",
+     "ensemble": "NPT",
+     "timestep_fs": 4.0,
+     "length_ps": 400.0,
+     "time_start_ps": 1100.0,
+     "time_end_ps": 1500.0,
+     "restraint_atoms": "protein_backbone",
+     "restraint_k_kj_per_mol_nm2": 50.0,
+     "n_restrained_atoms": 1034,
+     "log_rows": 40,
+     "log_mean_temperature_K": 301.14985,
+     "log_mean_density_g_per_cm3": 1.0263672,
+     "log_non_finite": 0
+    },
+    {
+     "tag": "eq06",
+     "name": "free",
+     "ensemble": "NPT",
+     "timestep_fs": 4.0,
+     "length_ps": 500.0,
+     "time_start_ps": 1500.0,
+     "time_end_ps": 2000.0,
+     "restraint_atoms": "none",
+     "restraint_k_kj_per_mol_nm2": 0.0,
+     "n_restrained_atoms": 0,
+     "log_rows": 50,
+     "log_mean_temperature_K": 300.51626,
+     "log_mean_density_g_per_cm3": 1.0263130200000001,
+     "log_non_finite": 0
+    }
+   ],
+   "production_state_log": {
+    "files": "log_segNNNN.csv of the run folder, one row per 10 ps",
+    "rows": 10000,
+    "non_finite_values": 0,
+    "timestep_fs": [
+     4.0
+    ],
+    "thermostat_K": [
+     300.0
+    ],
+    "precision": "means and standard deviations are written as computed (no rounding here: a number rounded here and again when it is printed can come out one unit of the last digit off)",
+    "temperature_K": {
+     "mean": 300.96524900000003,
+     "sd": 1.4709286170983957,
+     "min": 295.394,
+     "max": 306.552,
+     "mean_first_half": 300.9486276,
+     "mean_last_half": 300.9818704,
+     "segment_means_min": 300.88185200000004,
+     "segment_means_max": 301.054822
+    },
+    "density_g_per_cm3": {
+     "mean": 1.0254333578,
+     "sd": 0.002377122735362893,
+     "min": 1.015468,
+     "max": 1.034013,
+     "mean_first_half": 1.0254992112,
+     "mean_last_half": 1.0253675044,
+     "segment_means_min": 1.0252234960000002,
+     "segment_means_max": 1.0257671499999998
+    }
+   },
+   "trajectory_checksums": {
+    "what": "sha256 of every DCD file as the first program read it (summary.json, inputs_sha256) against the driver's record in the manifest",
+    "n_dcd_files_read": 52,
+    "n_equal_to_the_driver_record": 52,
+    "not_equal_or_not_recorded": []
+   },
+   "driver_log": {
+    "file": "/root/cqc-sfa-md/runs/bonded_2e/R3/run_md.log",
+    "lines": 58,
+    "lines_with_warning_error_or_failure": [],
+    "last_line": "[7 Oct 2026, 10:26:17 PM IST] DONE R3"
+   },
+   "sensitivity_marker": null
+  },
+  {
+   "run": "bonded_2s/R1",
+   "manifest": "/root/cqc-sfa-md/runs/bonded_2s/R1/manifest.json",
+   "manifest_sha256": "71f5ae6a61b26a558a24d6ac1727778b60ad89938259c0cd0b3eb7bb81d62e61",
+   "driver": {
+    "status": "complete",
+    "all_steps_complete": true,
+    "test_only": false,
+    "equil_scale": 1.0,
+    "run_id": "R1",
+    "run_seed": 1402141901,
+    "system_dir": "/root/cqc-sfa-md/systems/bonded_2s/R",
+    "n_atoms": 40857,
+    "n_water_molecules": 12232,
+    "crystal_water_O_listed_in_selections": 211,
+    "script_sha256": "6d797f080ff7567923469dabd86af71ca34183f5c482c14d55bf8038eb9d1822",
+    "protocol_sha256": "decda42f5340d06f5f695b4c56b59a7bb796e5872b3a8af1c1a5b426f9c09d9a",
+    "inputs_sha256": {
+     "system.prmtop": "7cd9f3d1da06d2703f5a567801ba0cc3c6ac4802370e3d68adbe24e28bcc7296",
+     "system.inpcrd": "fe5bc95b9f90444fc2dcd9aa1ba619e991dea0ebe500716b2ced28ee1ec4e360"
+    },
+    "n_invocations": 1,
+    "invocations": [
+     {
+      "started_ist": "7 Oct 2026, 10:26:21 PM IST",
+      "ended_ist": "8 Oct 2026, 1:06:04 AM IST",
+      "exit_code": 0,
+      "outcome": "stage complete",
+      "host": "cqc-md-gpu-01"
+     }
+    ],
+    "platform": "CUDA",
+    "gpu": "NVIDIA L40S",
+    "precision": "mixed",
+    "openmm": "8.6.1",
+    "minimisation_energy_change_kj_per_mol": -216673.834,
+    "equilibration": {
+     "complete": true,
+     "n_stages": 6,
+     "n_stages_complete": 6,
+     "n_extension_steps": 0,
+     "n_extension_steps_complete": 0,
+     "completed_ps": 2000.0
+    },
+    "production": {
+     "target_ns": 100.0,
+     "segment_ns": 5.0,
+     "n_segments_target": 20,
+     "n_segments_complete": 20,
+     "completed_ns": 100.0,
+     "complete": true,
+     "frames_solute": 10000,
+     "frames_full": 1000,
+     "wall_s": 9294.5,
+     "ns_per_day": 929.58
+    }
+   },
+   "build": {
+    "model": "bonded_2s",
+    "model_kind": "bonded",
+    "parameter_set": "2s",
+    "start": "R",
+    "status_note": "PRODUCTION system (md/PLAN.md, entry of 6 Oct 2026, 9:15 PM IST; md/PRODUCTION.md). Zinc set 2s: MCPB.py step 2s, Seminario's method on the partial Hessian of the optimised small model. RESP charges with the equal ligand atoms made equal. Terms at N2 AS BUILT, the same file as in set 2e: gates G-R and G-R2 on these terms failed and are reported; they are used by the user's decision of 6 Oct 2026. Whether 2s or 2e is the primary set is decided by gate G-Z and the validation run X0 of each (md/PRODUCTION.md).",
+    "terms_at_N2": {
+     "source": "given with --n2-frcmod",
+     "given_file": "md/topology/bonded_2e/R/n2_terms.frcmod",
+     "first_line_of_the_file": "Terms at N2 AS BUILT BEFORE GATE G-R (md/build_topology.py): Zn-N2-H at its value in start X, not the 120 deg of CA2_mcpbpy.frcmod",
+     "validated_by_gate_GR": "not known to the builder: the file was given",
+     "sha256": "113e3a2ebdbe99a4389e2ed497b20caaf0e64aebcbc8d547cf39823e9ee2cd00",
+     "class_of_this_set": "the terms as built: the three angles at N2 and the series on H-N2-S-C4",
+     "entries_beyond_the_terms_as_built": []
+    },
+    "composition": {
+     "atoms": 40857,
+     "residues": 12560,
+     "protein_atoms": 4075,
+     "protein_residues_with_ACE": 259,
+     "zinc_atoms": 1,
+     "ligand_atoms": 18,
+     "solute_atoms": 4094,
+     "water_molecules": 12232,
+     "crystal_water_molecules": 211,
+     "added_water_molecules": 12021,
+     "Na+": 34,
+     "Cl-": 33,
+     "plan_atoms": 25600,
+     "atoms_over_plan_percent": 59.6
+    },
+    "geometry_as_built": {
+     "lig_rmsd_A": {
+      "identity": 3.5732,
+      "ring_flip": 3.7623,
+      "oxygen_swap": 3.6906,
+      "ring_flip+oxygen_swap": 3.8739
+     },
+     "lig_rmsd_symmetry_corrected_A": 3.5732,
+     "d1_N1_Phe131CZ_A": 9.5849,
+     "d2_N1_Asn67OD1_A": 2.5968,
+     "N1_Asn67ND2_A": 3.3102,
+     "Zn_N2_A": 2.2351,
+     "Zn_His94NE2_A": 2.0099,
+     "Zn_His96NE2_A": 2.0206,
+     "Zn_His119ND1_A": 2.0183,
+     "Zn_O1_A": 4.5299,
+     "Zn_O2_A": 3.9068,
+     "N2_Thr199OG1_A": 2.5852,
+     "HN21_Thr199OG1_A": 1.7171,
+     "N2_HN21_Thr199OG1_deg": 140.2053,
+     "tau_fold_deg": 142.7445,
+     "C4_S_N2_deg": 109.4319,
+     "S_N2_A": 1.6773,
+     "S_N2_Zn_deg": 119.5286,
+     "Zn_N2_S_C4_deg": -32.1244,
+     "N_Zn_N_deg": {
+      "N2-Zn-H94NE2": 116.3377,
+      "N2-Zn-H96NE2": 112.5686,
+      "N2-Zn-H119ND1": 110.4993,
+      "H94NE2-Zn-H96NE2": 103.8187,
+      "H94NE2-Zn-H119ND1": 113.5907,
+      "H96NE2-Zn-H119ND1": 98.4086
+     }
+    },
+    "script_sha256": "a9b8ef8d699dfce68abfddcd21186ebdb939900d67b4c549b92692bf39d38d70"
+   },
+   "hydration_check": {
+    "requested": true,
+    "applies": true,
+    "skipped": false,
+    "settings": {
+     "after_step": "eq03",
+     "site_atoms": [
+      "C1",
+      "C2",
+      "C3",
+      "C4",
+      "C5",
+      "C6"
+     ],
+     "water_cutoff_A": 2.5,
+     "applies_if_ligand_mean_distance_above_A": 2.0,
+     "max_extensions": 4
+    },
+    "reference_guard": {
+     "n_ca": 258,
+     "ca_fit_rmsd_of_system_inpcrd_on_reference_pdb_A": 0.0,
+     "n_ca_residue_names_that_differ": 0,
+     "ca_residue_names_that_differ_first_5": []
+    },
+    "counts": [
+     {
+      "step": "eq03",
+      "time_end_ps": 700.0,
+      "n_water_O": 1,
+      "nearest_water_O_A": 2.429,
+      "ligand_mean_distance_from_site_A": 3.76,
+      "applies": true,
+      "decision": "go on"
+     }
+    ],
+    "n_extensions": 0,
+    "final_decision": "go on: 1 water oxygen at the site",
+    "site_without_water_when_the_solute_was_released": false
+   },
+   "equilibration_stages": [
+    {
+     "tag": "eq01",
+     "name": "heat",
+     "ensemble": "NVT",
+     "timestep_fs": 2.0,
+     "length_ps": 100.0,
+     "time_start_ps": 0.0,
+     "time_end_ps": 100.0,
+     "restraint_atoms": "solute_heavy",
+     "restraint_k_kj_per_mol_nm2": 1000.0,
+     "n_restrained_atoms": 2074,
+     "log_rows": 10,
+     "log_mean_temperature_K": 185.86090000000002,
+     "log_mean_density_g_per_cm3": 0.911839,
+     "log_non_finite": 0
+    },
+    {
+     "tag": "eq02",
+     "name": "density",
+     "ensemble": "NPT",
+     "timestep_fs": 2.0,
+     "length_ps": 300.0,
+     "time_start_ps": 100.0,
+     "time_end_ps": 400.0,
+     "restraint_atoms": "solute_heavy",
+     "restraint_k_kj_per_mol_nm2": 1000.0,
+     "n_restrained_atoms": 2074,
+     "log_rows": 30,
+     "log_mean_temperature_K": 300.2634,
+     "log_mean_density_g_per_cm3": 1.0231392666666668,
+     "log_non_finite": 0
+    },
+    {
+     "tag": "eq03",
+     "name": "loosen",
+     "ensemble": "NPT",
+     "timestep_fs": 2.0,
+     "length_ps": 300.0,
+     "time_start_ps": 400.0,
+     "time_end_ps": 700.0,
+     "restraint_atoms": "solute_heavy",
+     "restraint_k_kj_per_mol_nm2": 250.0,
+     "n_restrained_atoms": 2074,
+     "log_rows": 30,
+     "log_mean_temperature_K": 300.5735,
+     "log_mean_density_g_per_cm3": 1.0259425,
+     "log_non_finite": 0
+    },
+    {
+     "tag": "eq04",
+     "name": "release_side_chains_zinc_ligand",
+     "ensemble": "NPT",
+     "timestep_fs": 4.0,
+     "length_ps": 400.0,
+     "time_start_ps": 700.0,
+     "time_end_ps": 1100.0,
+     "restraint_atoms": "protein_backbone",
+     "restraint_k_kj_per_mol_nm2": 250.0,
+     "n_restrained_atoms": 1034,
+     "log_rows": 40,
+     "log_mean_temperature_K": 300.754825,
+     "log_mean_density_g_per_cm3": 1.025966575,
+     "log_non_finite": 0
+    },
+    {
+     "tag": "eq05",
+     "name": "loosen_backbone",
+     "ensemble": "NPT",
+     "timestep_fs": 4.0,
+     "length_ps": 400.0,
+     "time_start_ps": 1100.0,
+     "time_end_ps": 1500.0,
+     "restraint_atoms": "protein_backbone",
+     "restraint_k_kj_per_mol_nm2": 50.0,
+     "n_restrained_atoms": 1034,
+     "log_rows": 40,
+     "log_mean_temperature_K": 301.041625,
+     "log_mean_density_g_per_cm3": 1.02618085,
+     "log_non_finite": 0
+    },
+    {
+     "tag": "eq06",
+     "name": "free",
+     "ensemble": "NPT",
+     "timestep_fs": 4.0,
+     "length_ps": 500.0,
+     "time_start_ps": 1500.0,
+     "time_end_ps": 2000.0,
+     "restraint_atoms": "none",
+     "restraint_k_kj_per_mol_nm2": 0.0,
+     "n_restrained_atoms": 0,
+     "log_rows": 50,
+     "log_mean_temperature_K": 300.97928,
+     "log_mean_density_g_per_cm3": 1.02558294,
+     "log_non_finite": 0
+    }
+   ],
+   "production_state_log": {
+    "files": "log_segNNNN.csv of the run folder, one row per 10 ps",
+    "rows": 10000,
+    "non_finite_values": 0,
+    "timestep_fs": [
+     4.0
+    ],
+    "thermostat_K": [
+     300.0
+    ],
+    "precision": "means and standard deviations are written as computed (no rounding here: a number rounded here and again when it is printed can come out one unit of the last digit off)",
+    "temperature_K": {
+     "mean": 300.9917115,
+     "sd": 1.4791675770066588,
+     "min": 295.104,
+     "max": 305.972,
+     "mean_first_half": 300.9889144,
+     "mean_last_half": 300.9945086,
+     "segment_means_min": 300.86661599999996,
+     "segment_means_max": 301.084844
+    },
+    "density_g_per_cm3": {
+     "mean": 1.0253758666,
+     "sd": 0.0024257002053436946,
+     "min": 1.016112,
+     "max": 1.034313,
+     "mean_first_half": 1.0253603152,
+     "mean_last_half": 1.0253914179999999,
+     "segment_means_min": 1.025153288,
+     "segment_means_max": 1.0256218080000001
+    }
+   },
+   "trajectory_checksums": {
+    "what": "sha256 of every DCD file as the first program read it (summary.json, inputs_sha256) against the driver's record in the manifest",
+    "n_dcd_files_read": 52,
+    "n_equal_to_the_driver_record": 52,
+    "not_equal_or_not_recorded": []
+   },
+   "driver_log": {
+    "file": "/root/cqc-sfa-md/runs/bonded_2s/R1/run_md.log",
+    "lines": 58,
+    "lines_with_warning_error_or_failure": [],
+    "last_line": "[8 Oct 2026, 1:06:04 AM IST] DONE R1"
+   },
+   "sensitivity_marker": "SENSITIVITY RUN of the rotated start, not one of the nine runs and in no count of rule 3 (md/PLAN.md, entry of 6 Oct 2026, 9:15 PM IST, point 3, md/PRODUCTION.md). Zinc set 2s, Seminario (MCPB.py step 2s), in place of the primary set 2e. Terms at N2 as built. Set 2s passed gate G-Z but did NOT pass gate G-V in its validation run X0: part d of GV3, an oxygen within 2.6 A of the zinc in 3 of 50 all-atom frames (6 per cent, at most 5 allowed; a sulfonyl oxygen each time; 13 of 500 solute frames), so it is not the primary set and this run only shows how the result depends on the zinc terms. Start R, 100 ns, run id R1, so the same seeds as run R1 of the primary set."
+  },
+  {
+   "run": "bonded_2e_n2fit/R1",
+   "manifest": "/root/cqc-sfa-md/runs/bonded_2e_n2fit/R1/manifest.json",
+   "manifest_sha256": "8367e99ee03f9155245e7df3efce0bba12975233e1d937a87c6b1dad2b613162",
+   "driver": {
+    "status": "complete",
+    "all_steps_complete": true,
+    "test_only": false,
+    "equil_scale": 1.0,
+    "run_id": "R1",
+    "run_seed": 1402141901,
+    "system_dir": "/root/cqc-sfa-md/systems/bonded_2e_n2fit/R",
+    "n_atoms": 40857,
+    "n_water_molecules": 12232,
+    "crystal_water_O_listed_in_selections": 211,
+    "script_sha256": "6d797f080ff7567923469dabd86af71ca34183f5c482c14d55bf8038eb9d1822",
+    "protocol_sha256": "decda42f5340d06f5f695b4c56b59a7bb796e5872b3a8af1c1a5b426f9c09d9a",
+    "inputs_sha256": {
+     "system.prmtop": "d4999d63b48ef7c43faebb5b108b45bd87d6b9cc7cc6d6f69c22fddc296d8673",
+     "system.inpcrd": "fe5bc95b9f90444fc2dcd9aa1ba619e991dea0ebe500716b2ced28ee1ec4e360"
+    },
+    "n_invocations": 1,
+    "invocations": [
+     {
+      "started_ist": "8 Oct 2026, 1:06:07 AM IST",
+      "ended_ist": "8 Oct 2026, 3:45:58 AM IST",
+      "exit_code": 0,
+      "outcome": "stage complete",
+      "host": "cqc-md-gpu-01"
+     }
+    ],
+    "platform": "CUDA",
+    "gpu": "NVIDIA L40S",
+    "precision": "mixed",
+    "openmm": "8.6.1",
+    "minimisation_energy_change_kj_per_mol": -214374.257,
+    "equilibration": {
+     "complete": true,
+     "n_stages": 6,
+     "n_stages_complete": 6,
+     "n_extension_steps": 0,
+     "n_extension_steps_complete": 0,
+     "completed_ps": 2000.0
+    },
+    "production": {
+     "target_ns": 100.0,
+     "segment_ns": 5.0,
+     "n_segments_target": 20,
+     "n_segments_complete": 20,
+     "completed_ns": 100.0,
+     "complete": true,
+     "frames_solute": 10000,
+     "frames_full": 1000,
+     "wall_s": 9309.7,
+     "ns_per_day": 928.07
+    }
+   },
+   "build": {
+    "model": "bonded_2e_n2fit",
+    "model_kind": "bonded",
+    "parameter_set": "2e",
+    "start": "R",
+    "status_note": "SENSITIVITY system, start R only (md/PLAN.md, entry of 6 Oct 2026, 9:15 PM IST, point 3; md/PRODUCTION.md). The terms at N2 are those of md/qm/n2/n2_terms_new_charges_as_built.frcmod, a candidate that gate G-R2 did NOT ACCEPT; it is used only for the one bracketing sensitivity run of the plan and enters no count of rule 3. Zinc terms and charges as in the set named in the folder.",
+    "terms_at_N2": {
+     "source": "given with --n2-frcmod",
+     "given_file": "md/qm/n2/n2_terms_new_charges_as_built.frcmod",
+     "first_line_of_the_file": "terms at N2, gate G-R2 (md/N2.md): candidate L5_ridge0.01, charges as built; NOT ACCEPTED and not expected to pass the gate (leave-one-out 1.29 against 1.0): a record, not for a run; written by md/qm/n2_deliver.py 2026-10-06 06:36:23 PM IST",
+     "validated_by_gate_GR": "not known to the builder: the file was given",
+     "sha256": "2244a06c6e760ca079ffdd525eac9314dba9c3989e7b116d23e5545101cb7f29",
+     "class_of_this_set": "a variant: the three angles at N2, torsions about N2-S and about Zn-N2, one improper at N2",
+     "entries_beyond_the_terms_as_built": [
+      "DIHE M1-Y4-sy-ca",
+      "DIHE Y1-M1-Y4-sy",
+      "DIHE Y2-M1-Y4-sy",
+      "DIHE Y3-M1-Y4-sy",
+      "DIHE Y1-M1-Y4-hn",
+      "DIHE Y2-M1-Y4-hn",
+      "DIHE Y3-M1-Y4-hn",
+      "IMPROPER M1-hn-Y4-sy"
+     ]
+    },
+    "composition": {
+     "atoms": 40857,
+     "residues": 12560,
+     "protein_atoms": 4075,
+     "protein_residues_with_ACE": 259,
+     "zinc_atoms": 1,
+     "ligand_atoms": 18,
+     "solute_atoms": 4094,
+     "water_molecules": 12232,
+     "crystal_water_molecules": 211,
+     "added_water_molecules": 12021,
+     "Na+": 34,
+     "Cl-": 33,
+     "plan_atoms": 25600,
+     "atoms_over_plan_percent": 59.6
+    },
+    "geometry_as_built": {
+     "lig_rmsd_A": {
+      "identity": 3.5732,
+      "ring_flip": 3.7623,
+      "oxygen_swap": 3.6906,
+      "ring_flip+oxygen_swap": 3.8739
+     },
+     "lig_rmsd_symmetry_corrected_A": 3.5732,
+     "d1_N1_Phe131CZ_A": 9.5849,
+     "d2_N1_Asn67OD1_A": 2.5968,
+     "N1_Asn67ND2_A": 3.3102,
+     "Zn_N2_A": 2.2351,
+     "Zn_His94NE2_A": 2.0099,
+     "Zn_His96NE2_A": 2.0206,
+     "Zn_His119ND1_A": 2.0183,
+     "Zn_O1_A": 4.5299,
+     "Zn_O2_A": 3.9068,
+     "N2_Thr199OG1_A": 2.5852,
+     "HN21_Thr199OG1_A": 1.7171,
+     "N2_HN21_Thr199OG1_deg": 140.2053,
+     "tau_fold_deg": 142.7445,
+     "C4_S_N2_deg": 109.4319,
+     "S_N2_A": 1.6773,
+     "S_N2_Zn_deg": 119.5286,
+     "Zn_N2_S_C4_deg": -32.1244,
+     "N_Zn_N_deg": {
+      "N2-Zn-H94NE2": 116.3377,
+      "N2-Zn-H96NE2": 112.5686,
+      "N2-Zn-H119ND1": 110.4993,
+      "H94NE2-Zn-H96NE2": 103.8187,
+      "H94NE2-Zn-H119ND1": 113.5907,
+      "H96NE2-Zn-H119ND1": 98.4086
+     }
+    },
+    "script_sha256": "a9b8ef8d699dfce68abfddcd21186ebdb939900d67b4c549b92692bf39d38d70"
+   },
+   "hydration_check": {
+    "requested": true,
+    "applies": true,
+    "skipped": false,
+    "settings": {
+     "after_step": "eq03",
+     "site_atoms": [
+      "C1",
+      "C2",
+      "C3",
+      "C4",
+      "C5",
+      "C6"
+     ],
+     "water_cutoff_A": 2.5,
+     "applies_if_ligand_mean_distance_above_A": 2.0,
+     "max_extensions": 4
+    },
+    "reference_guard": {
+     "n_ca": 258,
+     "ca_fit_rmsd_of_system_inpcrd_on_reference_pdb_A": 0.0,
+     "n_ca_residue_names_that_differ": 0,
+     "ca_residue_names_that_differ_first_5": []
+    },
+    "counts": [
+     {
+      "step": "eq03",
+      "time_end_ps": 700.0,
+      "n_water_O": 1,
+      "nearest_water_O_A": 2.493,
+      "ligand_mean_distance_from_site_A": 3.14,
+      "applies": true,
+      "decision": "go on"
+     }
+    ],
+    "n_extensions": 0,
+    "final_decision": "go on: 1 water oxygen at the site",
+    "site_without_water_when_the_solute_was_released": false
+   },
+   "equilibration_stages": [
+    {
+     "tag": "eq01",
+     "name": "heat",
+     "ensemble": "NVT",
+     "timestep_fs": 2.0,
+     "length_ps": 100.0,
+     "time_start_ps": 0.0,
+     "time_end_ps": 100.0,
+     "restraint_atoms": "solute_heavy",
+     "restraint_k_kj_per_mol_nm2": 1000.0,
+     "n_restrained_atoms": 2074,
+     "log_rows": 10,
+     "log_mean_temperature_K": 185.95829999999998,
+     "log_mean_density_g_per_cm3": 0.911839,
+     "log_non_finite": 0
+    },
+    {
+     "tag": "eq02",
+     "name": "density",
+     "ensemble": "NPT",
+     "timestep_fs": 2.0,
+     "length_ps": 300.0,
+     "time_start_ps": 100.0,
+     "time_end_ps": 400.0,
+     "restraint_atoms": "solute_heavy",
+     "restraint_k_kj_per_mol_nm2": 1000.0,
+     "n_restrained_atoms": 2074,
+     "log_rows": 30,
+     "log_mean_temperature_K": 300.53976666666665,
+     "log_mean_density_g_per_cm3": 1.0238021666666666,
+     "log_non_finite": 0
+    },
+    {
+     "tag": "eq03",
+     "name": "loosen",
+     "ensemble": "NPT",
+     "timestep_fs": 2.0,
+     "length_ps": 300.0,
+     "time_start_ps": 400.0,
+     "time_end_ps": 700.0,
+     "restraint_atoms": "solute_heavy",
+     "restraint_k_kj_per_mol_nm2": 250.0,
+     "n_restrained_atoms": 2074,
+     "log_rows": 30,
+     "log_mean_temperature_K": 300.33386666666667,
+     "log_mean_density_g_per_cm3": 1.0261557333333333,
+     "log_non_finite": 0
+    },
+    {
+     "tag": "eq04",
+     "name": "release_side_chains_zinc_ligand",
+     "ensemble": "NPT",
+     "timestep_fs": 4.0,
+     "length_ps": 400.0,
+     "time_start_ps": 700.0,
+     "time_end_ps": 1100.0,
+     "restraint_atoms": "protein_backbone",
+     "restraint_k_kj_per_mol_nm2": 250.0,
+     "n_restrained_atoms": 1034,
+     "log_rows": 40,
+     "log_mean_temperature_K": 300.48265000000004,
+     "log_mean_density_g_per_cm3": 1.026011375,
+     "log_non_finite": 0
+    },
+    {
+     "tag": "eq05",
+     "name": "loosen_backbone",
+     "ensemble": "NPT",
+     "timestep_fs": 4.0,
+     "length_ps": 400.0,
+     "time_start_ps": 1100.0,
+     "time_end_ps": 1500.0,
+     "restraint_atoms": "protein_backbone",
+     "restraint_k_kj_per_mol_nm2": 50.0,
+     "n_restrained_atoms": 1034,
+     "log_rows": 40,
+     "log_mean_temperature_K": 301.1095,
+     "log_mean_density_g_per_cm3": 1.026031325,
+     "log_non_finite": 0
+    },
+    {
+     "tag": "eq06",
+     "name": "free",
+     "ensemble": "NPT",
+     "timestep_fs": 4.0,
+     "length_ps": 500.0,
+     "time_start_ps": 1500.0,
+     "time_end_ps": 2000.0,
+     "restraint_atoms": "none",
+     "restraint_k_kj_per_mol_nm2": 0.0,
+     "n_restrained_atoms": 0,
+     "log_rows": 50,
+     "log_mean_temperature_K": 300.90736,
+     "log_mean_density_g_per_cm3": 1.0251127,
+     "log_non_finite": 0
+    }
+   ],
+   "production_state_log": {
+    "files": "log_segNNNN.csv of the run folder, one row per 10 ps",
+    "rows": 10000,
+    "non_finite_values": 0,
+    "timestep_fs": [
+     4.0
+    ],
+    "thermostat_K": [
+     300.0
+    ],
+    "precision": "means and standard deviations are written as computed (no rounding here: a number rounded here and again when it is printed can come out one unit of the last digit off)",
+    "temperature_K": {
+     "mean": 300.96741000000003,
+     "sd": 1.4645272604154558,
+     "min": 295.959,
+     "max": 306.359,
+     "mean_first_half": 300.9856574,
+     "mean_last_half": 300.9491626,
+     "segment_means_min": 300.76903,
+     "segment_means_max": 301.139876
+    },
+    "density_g_per_cm3": {
+     "mean": 1.0255464358,
+     "sd": 0.0023689569706683913,
+     "min": 1.01579,
+     "max": 1.034151,
+     "mean_first_half": 1.0254888811999998,
+     "mean_last_half": 1.0256039903999998,
+     "segment_means_min": 1.025288186,
+     "segment_means_max": 1.025826166
+    }
+   },
+   "trajectory_checksums": {
+    "what": "sha256 of every DCD file as the first program read it (summary.json, inputs_sha256) against the driver's record in the manifest",
+    "n_dcd_files_read": 52,
+    "n_equal_to_the_driver_record": 52,
+    "not_equal_or_not_recorded": []
+   },
+   "driver_log": {
+    "file": "/root/cqc-sfa-md/runs/bonded_2e_n2fit/R1/run_md.log",
+    "lines": 58,
+    "lines_with_warning_error_or_failure": [],
+    "last_line": "[8 Oct 2026, 3:45:58 AM IST] DONE R1"
+   },
+   "sensitivity_marker": "SENSITIVITY RUN of the rotated start, not one of the nine runs and in no count of rule 3 (md/PLAN.md, entry of 6 Oct 2026, 9:15 PM IST, point 3, md/PRODUCTION.md). Zinc set 2e as in the nine runs. Terms at N2 from md/qm/n2/n2_terms_new_charges_as_built.frcmod, the candidate that gate G-R2 did NOT ACCEPT (md/N2.md). It is used only to bracket the terms as built. Start R, 100 ns, run id R1, so the same seeds as run R1 of the primary set."
+  },
+  {
+   "run": "bonded_2e/X0",
+   "manifest": "/root/cqc-sfa-md/runs/bonded_2e/X0/manifest.json",
+   "manifest_sha256": "c467bcfec57c321f913dc38002809546181b8ad5182db82f5c87c81d6b98c45d",
+   "driver": {
+    "status": "complete",
+    "all_steps_complete": true,
+    "test_only": false,
+    "equil_scale": 1.0,
+    "run_id": "X0",
+    "run_seed": 1793718340,
+    "system_dir": "/root/cqc-sfa-md/systems/bonded_2e/X",
+    "n_atoms": 40902,
+    "n_water_molecules": 12247,
+    "crystal_water_O_listed_in_selections": 215,
+    "script_sha256": "6d797f080ff7567923469dabd86af71ca34183f5c482c14d55bf8038eb9d1822",
+    "protocol_sha256": "decda42f5340d06f5f695b4c56b59a7bb796e5872b3a8af1c1a5b426f9c09d9a",
+    "inputs_sha256": {
+     "system.prmtop": "a6c57a7c20aaea633317173b691837de56301feeed6f5cf38d687e91c9085aad",
+     "system.inpcrd": "27acb79e664525a7f2c7d7f245d7e8bb4092fb0b2a2f67b1d1ee6c6cd0220d19"
+    },
+    "n_invocations": 1,
+    "invocations": [
+     {
+      "started_ist": "6 Oct 2026, 9:49:30 PM IST",
+      "ended_ist": "6 Oct 2026, 10:01:50 PM IST",
+      "exit_code": 0,
+      "outcome": "stage complete",
+      "host": "cqc-md-gpu-01"
+     }
+    ],
+    "platform": "CUDA",
+    "gpu": "NVIDIA L40S",
+    "precision": "mixed",
+    "openmm": "8.6.1",
+    "minimisation_energy_change_kj_per_mol": -215031.958,
+    "equilibration": {
+     "complete": true,
+     "n_stages": 6,
+     "n_stages_complete": 6,
+     "n_extension_steps": 0,
+     "n_extension_steps_complete": 0,
+     "completed_ps": 2000.0
+    },
+    "production": {
+     "target_ns": 5.0,
+     "segment_ns": 5.0,
+     "n_segments_target": 1,
+     "n_segments_complete": 1,
+     "completed_ns": 5.0,
+     "complete": true,
+     "frames_solute": 500,
+     "frames_full": 50,
+     "wall_s": 467.0,
+     "ns_per_day": 925.03
+    }
+   },
+   "build": {
+    "model": "bonded_2e",
+    "model_kind": "bonded",
+    "parameter_set": "2e",
+    "start": "X",
+    "status_note": "PRODUCTION system (md/PLAN.md, entry of 6 Oct 2026, 9:15 PM IST; md/PRODUCTION.md). Zinc set 2e: MCPB.py step 2e, empirical zinc constants. RESP charges with the equal ligand atoms made equal. Terms at N2 AS BUILT: gates G-R and G-R2 on these terms failed and are reported; they are used by the user's decision of 6 Oct 2026. Whether 2s or 2e is the primary set is decided by gate G-Z and the validation run X0 of each (md/PRODUCTION.md).",
+    "terms_at_N2": {
+     "source": "written by the builder: the terms AS BUILT BEFORE GATE G-R (Zn-N2-S, S-N2-H and H-N2-S-C4 as in the frcmod of MCPB.py; Zn-N2-H at its angle in start X with the force constant of that frcmod)",
+     "given_file": null,
+     "first_line_of_the_file": null,
+     "validated_by_gate_GR": false,
+     "sha256": "113e3a2ebdbe99a4389e2ed497b20caaf0e64aebcbc8d547cf39823e9ee2cd00",
+     "class_of_this_set": "the terms as built: the three angles at N2 and the series on H-N2-S-C4",
+     "entries_beyond_the_terms_as_built": []
+    },
+    "composition": {
+     "atoms": 40902,
+     "residues": 12575,
+     "protein_atoms": 4075,
+     "protein_residues_with_ACE": 259,
+     "zinc_atoms": 1,
+     "ligand_atoms": 18,
+     "solute_atoms": 4094,
+     "water_molecules": 12247,
+     "crystal_water_molecules": 215,
+     "added_water_molecules": 12032,
+     "Na+": 34,
+     "Cl-": 33,
+     "plan_atoms": 25600,
+     "atoms_over_plan_percent": 59.8
+    },
+    "geometry_as_built": {
+     "lig_rmsd_A": {
+      "identity": 0.0,
+      "ring_flip": 1.4538,
+      "oxygen_swap": 1.0435,
+      "ring_flip+oxygen_swap": 1.7895
+     },
+     "lig_rmsd_symmetry_corrected_A": 0.0,
+     "d1_N1_Phe131CZ_A": 3.8966,
+     "d2_N1_Asn67OD1_A": 7.7443,
+     "N1_Asn67ND2_A": 6.5511,
+     "Zn_N2_A": 1.9314,
+     "Zn_His94NE2_A": 2.0099,
+     "Zn_His96NE2_A": 2.0206,
+     "Zn_His119ND1_A": 2.0183,
+     "Zn_O1_A": 4.0509,
+     "Zn_O2_A": 2.9856,
+     "N2_Thr199OG1_A": 2.861,
+     "HN21_Thr199OG1_A": 1.8671,
+     "N2_HN21_Thr199OG1_deg": 163.6901,
+     "tau_fold_deg": 132.0561,
+     "C4_S_N2_deg": 108.7946,
+     "S_N2_A": 1.5963,
+     "S_N2_Zn_deg": 117.5521,
+     "Zn_N2_S_C4_deg": -117.0299,
+     "N_Zn_N_deg": {
+      "N2-Zn-H94NE2": 108.92,
+      "N2-Zn-H96NE2": 114.2796,
+      "N2-Zn-H119ND1": 116.8328,
+      "H94NE2-Zn-H96NE2": 103.8187,
+      "H94NE2-Zn-H119ND1": 113.5907,
+      "H96NE2-Zn-H119ND1": 98.4086
+     }
+    },
+    "script_sha256": "a9b8ef8d699dfce68abfddcd21186ebdb939900d67b4c549b92692bf39d38d70"
+   },
+   "hydration_check": {
+    "requested": true,
+    "applies": false,
+    "skipped": true,
+    "settings": {
+     "after_step": "eq03",
+     "site_atoms": [
+      "C1",
+      "C2",
+      "C3",
+      "C4",
+      "C5",
+      "C6"
+     ],
+     "water_cutoff_A": 2.5,
+     "applies_if_ligand_mean_distance_above_A": 2.0,
+     "max_extensions": 4
+    },
+    "reference_guard": {
+     "n_ca": 258,
+     "ca_fit_rmsd_of_system_inpcrd_on_reference_pdb_A": 0.0,
+     "n_ca_residue_names_that_differ": 0,
+     "ca_residue_names_that_differ_first_5": []
+    },
+    "counts": [
+     {
+      "step": "eq03",
+      "time_end_ps": 700.0,
+      "n_water_O": 0,
+      "nearest_water_O_A": 3.186,
+      "ligand_mean_distance_from_site_A": 0.228,
+      "applies": false,
+      "decision": "go on"
+     }
+    ],
+    "n_extensions": 0,
+    "final_decision": "go on: check skipped: the ligand itself is at the site",
+    "site_without_water_when_the_solute_was_released": false
+   },
+   "equilibration_stages": [
+    {
+     "tag": "eq01",
+     "name": "heat",
+     "ensemble": "NVT",
+     "timestep_fs": 2.0,
+     "length_ps": 100.0,
+     "time_start_ps": 0.0,
+     "time_end_ps": 100.0,
+     "restraint_atoms": "solute_heavy",
+     "restraint_k_kj_per_mol_nm2": 1000.0,
+     "n_restrained_atoms": 2074,
+     "log_rows": 10,
+     "log_mean_temperature_K": 186.01069999999999,
+     "log_mean_density_g_per_cm3": 0.912352,
+     "log_non_finite": 0
+    },
+    {
+     "tag": "eq02",
+     "name": "density",
+     "ensemble": "NPT",
+     "timestep_fs": 2.0,
+     "length_ps": 300.0,
+     "time_start_ps": 100.0,
+     "time_end_ps": 400.0,
+     "restraint_atoms": "solute_heavy",
+     "restraint_k_kj_per_mol_nm2": 1000.0,
+     "n_restrained_atoms": 2074,
+     "log_rows": 30,
+     "log_mean_temperature_K": 300.1518,
+     "log_mean_density_g_per_cm3": 1.0211514666666666,
+     "log_non_finite": 0
+    },
+    {
+     "tag": "eq03",
+     "name": "loosen",
+     "ensemble": "NPT",
+     "timestep_fs": 2.0,
+     "length_ps": 300.0,
+     "time_start_ps": 400.0,
+     "time_end_ps": 700.0,
+     "restraint_atoms": "solute_heavy",
+     "restraint_k_kj_per_mol_nm2": 250.0,
+     "n_restrained_atoms": 2074,
+     "log_rows": 30,
+     "log_mean_temperature_K": 300.55826666666667,
+     "log_mean_density_g_per_cm3": 1.0268259333333334,
+     "log_non_finite": 0
+    },
+    {
+     "tag": "eq04",
+     "name": "release_side_chains_zinc_ligand",
+     "ensemble": "NPT",
+     "timestep_fs": 4.0,
+     "length_ps": 400.0,
+     "time_start_ps": 700.0,
+     "time_end_ps": 1100.0,
+     "restraint_atoms": "protein_backbone",
+     "restraint_k_kj_per_mol_nm2": 250.0,
+     "n_restrained_atoms": 1034,
+     "log_rows": 40,
+     "log_mean_temperature_K": 300.992175,
+     "log_mean_density_g_per_cm3": 1.0258995,
+     "log_non_finite": 0
+    },
+    {
+     "tag": "eq05",
+     "name": "loosen_backbone",
+     "ensemble": "NPT",
+     "timestep_fs": 4.0,
+     "length_ps": 400.0,
+     "time_start_ps": 1100.0,
+     "time_end_ps": 1500.0,
+     "restraint_atoms": "protein_backbone",
+     "restraint_k_kj_per_mol_nm2": 50.0,
+     "n_restrained_atoms": 1034,
+     "log_rows": 40,
+     "log_mean_temperature_K": 300.808175,
+     "log_mean_density_g_per_cm3": 1.025827175,
+     "log_non_finite": 0
+    },
+    {
+     "tag": "eq06",
+     "name": "free",
+     "ensemble": "NPT",
+     "timestep_fs": 4.0,
+     "length_ps": 500.0,
+     "time_start_ps": 1500.0,
+     "time_end_ps": 2000.0,
+     "restraint_atoms": "none",
+     "restraint_k_kj_per_mol_nm2": 0.0,
+     "n_restrained_atoms": 0,
+     "log_rows": 50,
+     "log_mean_temperature_K": 301.16358,
+     "log_mean_density_g_per_cm3": 1.02570078,
+     "log_non_finite": 0
+    }
+   ],
+   "production_state_log": {
+    "files": "log_segNNNN.csv of the run folder, one row per 10 ps",
+    "rows": 500,
+    "non_finite_values": 0,
+    "timestep_fs": [
+     4.0
+    ],
+    "thermostat_K": [
+     300.0
+    ],
+    "precision": "means and standard deviations are written as computed (no rounding here: a number rounded here and again when it is printed can come out one unit of the last digit off)",
+    "temperature_K": {
+     "mean": 300.954306,
+     "sd": 1.4145026024592517,
+     "min": 295.975,
+     "max": 304.837,
+     "mean_first_half": 301.028192,
+     "mean_last_half": 300.88041999999996,
+     "segment_means_min": 300.954306,
+     "segment_means_max": 300.954306
+    },
+    "density_g_per_cm3": {
+     "mean": 1.02523402,
+     "sd": 0.002317352014606324,
+     "min": 1.017703,
+     "max": 1.031925,
+     "mean_first_half": 1.0250956679999998,
+     "mean_last_half": 1.025372372,
+     "segment_means_min": 1.02523402,
+     "segment_means_max": 1.02523402
+    }
+   },
+   "trajectory_checksums": {
+    "what": "sha256 of every DCD file as the first program read it (summary.json, inputs_sha256) against the driver's record in the manifest",
+    "n_dcd_files_read": 14,
+    "n_equal_to_the_driver_record": 14,
+    "not_equal_or_not_recorded": []
+   },
+   "driver_log": {
+    "file": "/root/cqc-sfa-md/runs/bonded_2e/X0/run_md.log",
+    "lines": 20,
+    "lines_with_warning_error_or_failure": [],
+    "last_line": "[6 Oct 2026, 10:01:50 PM IST] DONE X0"
+   },
+   "sensitivity_marker": null
+  },
+  {
+   "run": "bonded_2s/X0",
+   "manifest": "/root/cqc-sfa-md/runs/bonded_2s/X0/manifest.json",
+   "manifest_sha256": "a5d15d1bcf40aadfcd7feca8a02a453203e0127fe6ce44dff5e437cfb9ab0c59",
+   "driver": {
+    "status": "complete",
+    "all_steps_complete": true,
+    "test_only": false,
+    "equil_scale": 1.0,
+    "run_id": "X0",
+    "run_seed": 1793718340,
+    "system_dir": "/root/cqc-sfa-md/systems/bonded_2s/X",
+    "n_atoms": 40902,
+    "n_water_molecules": 12247,
+    "crystal_water_O_listed_in_selections": 215,
+    "script_sha256": "6d797f080ff7567923469dabd86af71ca34183f5c482c14d55bf8038eb9d1822",
+    "protocol_sha256": "decda42f5340d06f5f695b4c56b59a7bb796e5872b3a8af1c1a5b426f9c09d9a",
+    "inputs_sha256": {
+     "system.prmtop": "5c1e5543950f05d4db0a707f6e739657ff506c7b1166047e50af3fdc9674b319",
+     "system.inpcrd": "27acb79e664525a7f2c7d7f245d7e8bb4092fb0b2a2f67b1d1ee6c6cd0220d19"
+    },
+    "n_invocations": 1,
+    "invocations": [
+     {
+      "started_ist": "6 Oct 2026, 9:37:14 PM IST",
+      "ended_ist": "6 Oct 2026, 9:49:27 PM IST",
+      "exit_code": 0,
+      "outcome": "stage complete",
+      "host": "cqc-md-gpu-01"
+     }
+    ],
+    "platform": "CUDA",
+    "gpu": "NVIDIA L40S",
+    "precision": "mixed",
+    "openmm": "8.6.1",
+    "minimisation_energy_change_kj_per_mol": -213903.34,
+    "equilibration": {
+     "complete": true,
+     "n_stages": 6,
+     "n_stages_complete": 6,
+     "n_extension_steps": 0,
+     "n_extension_steps_complete": 0,
+     "completed_ps": 2000.0
+    },
+    "production": {
+     "target_ns": 5.0,
+     "segment_ns": 5.0,
+     "n_segments_target": 1,
+     "n_segments_complete": 1,
+     "completed_ns": 5.0,
+     "complete": true,
+     "frames_solute": 500,
+     "frames_full": 50,
+     "wall_s": 464.4,
+     "ns_per_day": 930.15
+    }
+   },
+   "build": {
+    "model": "bonded_2s",
+    "model_kind": "bonded",
+    "parameter_set": "2s",
+    "start": "X",
+    "status_note": "PRODUCTION system (md/PLAN.md, entry of 6 Oct 2026, 9:15 PM IST; md/PRODUCTION.md). Zinc set 2s: MCPB.py step 2s, Seminario's method on the partial Hessian of the optimised small model. RESP charges with the equal ligand atoms made equal. Terms at N2 AS BUILT, the same file as in set 2e: gates G-R and G-R2 on these terms failed and are reported; they are used by the user's decision of 6 Oct 2026. Whether 2s or 2e is the primary set is decided by gate G-Z and the validation run X0 of each (md/PRODUCTION.md).",
+    "terms_at_N2": {
+     "source": "given with --n2-frcmod",
+     "given_file": "md/topology/bonded_2e/X/n2_terms.frcmod",
+     "first_line_of_the_file": "Terms at N2 AS BUILT BEFORE GATE G-R (md/build_topology.py): Zn-N2-H at its value in start X, not the 120 deg of CA2_mcpbpy.frcmod",
+     "validated_by_gate_GR": "not known to the builder: the file was given",
+     "sha256": "113e3a2ebdbe99a4389e2ed497b20caaf0e64aebcbc8d547cf39823e9ee2cd00",
+     "class_of_this_set": "the terms as built: the three angles at N2 and the series on H-N2-S-C4",
+     "entries_beyond_the_terms_as_built": []
+    },
+    "composition": {
+     "atoms": 40902,
+     "residues": 12575,
+     "protein_atoms": 4075,
+     "protein_residues_with_ACE": 259,
+     "zinc_atoms": 1,
+     "ligand_atoms": 18,
+     "solute_atoms": 4094,
+     "water_molecules": 12247,
+     "crystal_water_molecules": 215,
+     "added_water_molecules": 12032,
+     "Na+": 34,
+     "Cl-": 33,
+     "plan_atoms": 25600,
+     "atoms_over_plan_percent": 59.8
+    },
+    "geometry_as_built": {
+     "lig_rmsd_A": {
+      "identity": 0.0,
+      "ring_flip": 1.4538,
+      "oxygen_swap": 1.0435,
+      "ring_flip+oxygen_swap": 1.7895
+     },
+     "lig_rmsd_symmetry_corrected_A": 0.0,
+     "d1_N1_Phe131CZ_A": 3.8966,
+     "d2_N1_Asn67OD1_A": 7.7443,
+     "N1_Asn67ND2_A": 6.5511,
+     "Zn_N2_A": 1.9314,
+     "Zn_His94NE2_A": 2.0099,
+     "Zn_His96NE2_A": 2.0206,
+     "Zn_His119ND1_A": 2.0183,
+     "Zn_O1_A": 4.0509,
+     "Zn_O2_A": 2.9856,
+     "N2_Thr199OG1_A": 2.861,
+     "HN21_Thr199OG1_A": 1.8671,
+     "N2_HN21_Thr199OG1_deg": 163.6901,
+     "tau_fold_deg": 132.0561,
+     "C4_S_N2_deg": 108.7946,
+     "S_N2_A": 1.5963,
+     "S_N2_Zn_deg": 117.5521,
+     "Zn_N2_S_C4_deg": -117.0299,
+     "N_Zn_N_deg": {
+      "N2-Zn-H94NE2": 108.92,
+      "N2-Zn-H96NE2": 114.2796,
+      "N2-Zn-H119ND1": 116.8328,
+      "H94NE2-Zn-H96NE2": 103.8187,
+      "H94NE2-Zn-H119ND1": 113.5907,
+      "H96NE2-Zn-H119ND1": 98.4086
+     }
+    },
+    "script_sha256": "a9b8ef8d699dfce68abfddcd21186ebdb939900d67b4c549b92692bf39d38d70"
+   },
+   "hydration_check": {
+    "requested": true,
+    "applies": false,
+    "skipped": true,
+    "settings": {
+     "after_step": "eq03",
+     "site_atoms": [
+      "C1",
+      "C2",
+      "C3",
+      "C4",
+      "C5",
+      "C6"
+     ],
+     "water_cutoff_A": 2.5,
+     "applies_if_ligand_mean_distance_above_A": 2.0,
+     "max_extensions": 4
+    },
+    "reference_guard": {
+     "n_ca": 258,
+     "ca_fit_rmsd_of_system_inpcrd_on_reference_pdb_A": 0.0,
+     "n_ca_residue_names_that_differ": 0,
+     "ca_residue_names_that_differ_first_5": []
+    },
+    "counts": [
+     {
+      "step": "eq03",
+      "time_end_ps": 700.0,
+      "n_water_O": 0,
+      "nearest_water_O_A": 3.103,
+      "ligand_mean_distance_from_site_A": 0.282,
+      "applies": false,
+      "decision": "go on"
+     }
+    ],
+    "n_extensions": 0,
+    "final_decision": "go on: check skipped: the ligand itself is at the site",
+    "site_without_water_when_the_solute_was_released": false
+   },
+   "equilibration_stages": [
+    {
+     "tag": "eq01",
+     "name": "heat",
+     "ensemble": "NVT",
+     "timestep_fs": 2.0,
+     "length_ps": 100.0,
+     "time_start_ps": 0.0,
+     "time_end_ps": 100.0,
+     "restraint_atoms": "solute_heavy",
+     "restraint_k_kj_per_mol_nm2": 1000.0,
+     "n_restrained_atoms": 2074,
+     "log_rows": 10,
+     "log_mean_temperature_K": 185.7221,
+     "log_mean_density_g_per_cm3": 0.912352,
+     "log_non_finite": 0
+    },
+    {
+     "tag": "eq02",
+     "name": "density",
+     "ensemble": "NPT",
+     "timestep_fs": 2.0,
+     "length_ps": 300.0,
+     "time_start_ps": 100.0,
+     "time_end_ps": 400.0,
+     "restraint_atoms": "solute_heavy",
+     "restraint_k_kj_per_mol_nm2": 1000.0,
+     "n_restrained_atoms": 2074,
+     "log_rows": 30,
+     "log_mean_temperature_K": 300.638,
+     "log_mean_density_g_per_cm3": 1.0208301666666666,
+     "log_non_finite": 0
+    },
+    {
+     "tag": "eq03",
+     "name": "loosen",
+     "ensemble": "NPT",
+     "timestep_fs": 2.0,
+     "length_ps": 300.0,
+     "time_start_ps": 400.0,
+     "time_end_ps": 700.0,
+     "restraint_atoms": "solute_heavy",
+     "restraint_k_kj_per_mol_nm2": 250.0,
+     "n_restrained_atoms": 2074,
+     "log_rows": 30,
+     "log_mean_temperature_K": 300.16226666666665,
+     "log_mean_density_g_per_cm3": 1.0265935333333334,
+     "log_non_finite": 0
+    },
+    {
+     "tag": "eq04",
+     "name": "release_side_chains_zinc_ligand",
+     "ensemble": "NPT",
+     "timestep_fs": 4.0,
+     "length_ps": 400.0,
+     "time_start_ps": 700.0,
+     "time_end_ps": 1100.0,
+     "restraint_atoms": "protein_backbone",
+     "restraint_k_kj_per_mol_nm2": 250.0,
+     "n_restrained_atoms": 1034,
+     "log_rows": 40,
+     "log_mean_temperature_K": 301.224725,
+     "log_mean_density_g_per_cm3": 1.0266868,
+     "log_non_finite": 0
+    },
+    {
+     "tag": "eq05",
+     "name": "loosen_backbone",
+     "ensemble": "NPT",
+     "timestep_fs": 4.0,
+     "length_ps": 400.0,
+     "time_start_ps": 1100.0,
+     "time_end_ps": 1500.0,
+     "restraint_atoms": "protein_backbone",
+     "restraint_k_kj_per_mol_nm2": 50.0,
+     "n_restrained_atoms": 1034,
+     "log_rows": 40,
+     "log_mean_temperature_K": 300.536375,
+     "log_mean_density_g_per_cm3": 1.0266132000000001,
+     "log_non_finite": 0
+    },
+    {
+     "tag": "eq06",
+     "name": "free",
+     "ensemble": "NPT",
+     "timestep_fs": 4.0,
+     "length_ps": 500.0,
+     "time_start_ps": 1500.0,
+     "time_end_ps": 2000.0,
+     "restraint_atoms": "none",
+     "restraint_k_kj_per_mol_nm2": 0.0,
+     "n_restrained_atoms": 0,
+     "log_rows": 50,
+     "log_mean_temperature_K": 300.74024000000003,
+     "log_mean_density_g_per_cm3": 1.02565858,
+     "log_non_finite": 0
+    }
+   ],
+   "production_state_log": {
+    "files": "log_segNNNN.csv of the run folder, one row per 10 ps",
+    "rows": 500,
+    "non_finite_values": 0,
+    "timestep_fs": [
+     4.0
+    ],
+    "thermostat_K": [
+     300.0
+    ],
+    "precision": "means and standard deviations are written as computed (no rounding here: a number rounded here and again when it is printed can come out one unit of the last digit off)",
+    "temperature_K": {
+     "mean": 301.06505599999997,
+     "sd": 1.5596954269548904,
+     "min": 296.816,
+     "max": 305.693,
+     "mean_first_half": 301.032864,
+     "mean_last_half": 301.09724800000004,
+     "segment_means_min": 301.06505599999997,
+     "segment_means_max": 301.06505599999997
+    },
+    "density_g_per_cm3": {
+     "mean": 1.02547886,
+     "sd": 0.002308170524116447,
+     "min": 1.018816,
+     "max": 1.031607,
+     "mean_first_half": 1.025577628,
+     "mean_last_half": 1.025380092,
+     "segment_means_min": 1.02547886,
+     "segment_means_max": 1.02547886
+    }
+   },
+   "trajectory_checksums": {
+    "what": "sha256 of every DCD file as the first program read it (summary.json, inputs_sha256) against the driver's record in the manifest",
+    "n_dcd_files_read": 14,
+    "n_equal_to_the_driver_record": 14,
+    "not_equal_or_not_recorded": []
+   },
+   "driver_log": {
+    "file": "/root/cqc-sfa-md/runs/bonded_2s/X0/run_md.log",
+    "lines": 20,
+    "lines_with_warning_error_or_failure": [],
+    "last_line": "[6 Oct 2026, 9:49:27 PM IST] DONE X0"
+   },
+   "sensitivity_marker": null
+  }
+ ]
+}

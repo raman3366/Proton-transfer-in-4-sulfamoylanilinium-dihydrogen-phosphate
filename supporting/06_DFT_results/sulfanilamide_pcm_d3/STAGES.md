@@ -1,0 +1,41 @@
+- 2026-09-27 19:09  pre-optimisation at B3LYP/6-31g(d) (174 basis functions)
+- 2026-09-27 19:26  pre-optimisation converged in 19 steps, 17.1 min
+- 2026-09-27 19:26  optimisation started from preopt.xyz; solvent=water
+- 2026-09-27 19:41  optimisation converged in 8 steps, 14.4 min, E = -891.77691146 Ha
+- 2026-09-27 19:42  FMO: HOMO -6.168 eV, LUMO -0.996 eV, gap 5.172 eV; fragment composition None / None
+- 2026-09-27 19:42  molden padded from 305 to 306 MOs for Multiwfn compatibility
+- 2026-09-27 19:47  cubes written (ESP 64^3 in 5.5 min)
+- 2026-09-28 01:56  Delta-SCF (dscf.json): I = 5.982 eV, A = 1.227 eV, eta = 2.378 eV (Koopmans I = 6.168, A = 0.996)
+- 2026-09-28 03:02  NLO (nlo.json): mu 10.964 D, alpha_iso 166.13 a.u., beta_tot 1807.7 a.u. (1.562e-29 esu)
+- 2026-09-28 04:53  QTAIM: 39 CPs {'(3,-3)': 19, '(3,-1)': 19, '(3,+1)': 1, '(3,+3)': 0}, Poincare-Hopf OK; no H-bond BCPs
+- 2026-09-28 04:53  charges (Hirshfeld/ADCH/CM5): fragment sums sulfanilamide_pcm_d3: Hirshfeld -0.000, ADCH +0.000, CM5 +0.000
+- 2026-09-28 04:53  charges (NPA/Hirshfeld/ADCH/CM5): fragment sums sulfanilamide_pcm_d3: NPA -0.000, Hirshfeld -0.000, ADCH +0.000, CM5 +0.000
+- 2026-09-28 04:53  MEP surface: min -0.090809 a.u., max 0.093905 a.u.; 6 minima, 6 maxima
+- 2026-09-28 04:53  DOS/PDOS (Hirshfeld): HOMO sulfanilamide_pcm_d3 100%; LUMO sulfanilamide_pcm_d3 100%
+- 2026-09-28 10:25  TD-DFT (tddft_camb3lyp_noneq.json): S1 4.819 eV (257 nm, f 0.028); first bright 257 nm; all converged
+- 2026-09-28 11:45  TD-DFT (tddft_camb3lyp_eq.json): S1 4.770 eV (260 nm, f 0.066); first bright 260 nm; all converged
+- 2026-09-28 12:18  TD-DFT (tddft_b3lyp_noneq.json): S1 4.585 eV (270 nm, f 0.028); first bright 270 nm; all converged
+- 2026-09-28 17:56  functional check (dock_strain.json): B3LYP-D3(BJ) +3.33, +3.35, +4.82, +5.07, +5.02, +4.75, +4.54, +3.88, +3.56, +5.15, +3.91, +17.87, +19.14, +18.83, +9.79, +8.14, +11.76, +8.40, +16.16, +16.24 kcal/mol vs opt
+- 2026-09-29 05:14  torsion scan (ref): converged, 2 steps, E = -891.77691136
+- 2026-09-29 05:28  torsion scan (tau09000): converged, 7 steps, E = -891.77689226
+- 2026-09-29 05:32  torsion scan (tau10560): converged, 10 steps, E = -891.77661730
+- 2026-09-29 06:20  torsion scan (tau18000): converged, 12 steps, E = -891.77390264
+- 2026-09-29 06:31  torsion scan (tau14000): converged, 17 steps, E = -891.77519429
+- 2026-09-29 06:34  torsion scan (tau17000): converged, 18 steps, E = -891.77403218
+- 2026-09-29 06:37  torsion scan (tau16000): converged, 18 steps, E = -891.77431938
+- 2026-09-29 06:40  torsion scan (tau15000): converged, 20 steps, E = -891.77471392
+- 2026-09-29 06:44  torsion scan (tau14700): converged, 21 steps, E = -891.77486225
+- 2026-09-29 06:47  torsion scan (tau10770): converged, 11 steps, E = -891.77654501
+- 2026-09-29 06:56  torsion scan (tau13000): converged, 18 steps, E = -891.77568163
+- 2026-09-29 06:58  torsion scan (tau11000): converged, 11 steps, E = -891.77647188
+- 2026-09-29 06:59  torsion scan (tau13210): converged, 18 steps, E = -891.77558007
+- 2026-09-29 07:05  torsion scan (tau10000): converged, 10 steps, E = -891.77678074
+- 2026-09-29 07:18  torsion scan (tau11130): converged, 17 steps, E = -891.77646313
+- 2026-09-29 07:20  torsion scan (tau12000): converged, 17 steps, E = -891.77611465
+- 2026-09-29 07:29  torsion scan (tau15600): converged, 11 steps, E = -891.77447674
+- 2026-09-29 07:32  torsion scan (tau16250): converged, 12 steps, E = -891.77420161
+- 2026-09-29 07:42  torsion scan (tau14410): converged, 18 steps, E = -891.77500387
+- 2026-09-29 07:43  torsion scan (tau12920): converged, 12 steps, E = -891.77571084
+- 2026-09-29 07:46  torsion scan (tau14630): converged, 19 steps, E = -891.77489700
+- 2026-09-29 07:49  torsion scan (tau12460): converged, 17 steps, E = -891.77593191
+- 2026-09-29 07:59  torsion scan (tau15000_C5): converged, 20 steps, E = -891.77470658

@@ -1,0 +1,11 @@
+- 2026-09-27 17:54  pre-optimisation at B3LYP/6-31g(d) (80 basis functions)
+- 2026-09-27 17:55  pre-optimisation converged in 21 steps, 1.2 min
+- 2026-09-27 17:55  optimisation started from preopt.xyz; solvent=none (gas phase)
+- 2026-09-27 17:56  optimisation converged in 8 steps, 0.7 min, E = -644.29172690 Ha
+- 2026-09-27 17:56  Hessian by parallel finite differences: 48 gradients, 3 workers x 2 threads
+- 2026-09-27 17:59  frequencies (finite-difference (gradients, step 0.005 Bohr, 3 workers x 2 threads)): 0 imaginary, lowest 169.0 cm-1, 3 min
+- 2026-09-27 17:59  FMO: HOMO -8.698 eV, LUMO -0.988 eV, gap 7.710 eV; fragment composition None / None
+- 2026-09-27 18:00  cubes written (ESP 64^3 in 1.0 min)
+- 2026-09-28 04:55  charges (Hirshfeld/ADCH/CM5): fragment sums h3po4_gas_d3: Hirshfeld -0.000, ADCH -0.000, CM5 -0.000
+- 2026-09-28 04:55  charges (NPA/Hirshfeld/ADCH/CM5): fragment sums h3po4_gas_d3: NPA -0.000, Hirshfeld -0.000, ADCH -0.000, CM5 -0.000
+- 2026-09-28 04:56  MEP surface: min -0.061882 a.u., max 0.094982 a.u.; 4 minima, 4 maxima

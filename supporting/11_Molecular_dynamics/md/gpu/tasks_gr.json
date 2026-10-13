@@ -1,0 +1,135 @@
+{
+ "comment": "Gate G-R on the rented machine (md/GR.md, sections 7 and 8; md/PLAN.md, entries of 6 Oct 2026, 5:00 and 8:56 AM IST). gr_check_x: point X again from the atomic guess, against the Pi's energy. gr_points: the single points that the Pi has not finished, with the Pi's own queue program (md/qm/gr_queue.py) and the machine's configuration (md/qm/gr/queue_vm.json): finished points are skipped, the others are computed in the order of md/qm/gr/points.json; its success test asks for every point of the list as it is NOW, so points added to the list are computed by the next attempt. gr_relax_Rx, gr_relax_X: the relaxed references of part B (the ligand relaxed with zinc and imidazoles fixed, B3LYP-D3(BJ)/6-31G*, geomeTRIC), one after the other, after the single points; each is done when it has converged or when the configuration at N2 has crossed to the other one (state crossed: stopped there, reported). 7 CPUs and 7 threads, not 8: the runner counts one CPU for the GPU task, and 16 (qm_opt, qm_hess) + 1 + 8 would be 25 of 24, so a task with 8 would wait for every GPU task and, once running, keep every GPU task waiting. To restart a task of this file with new code or new points: touch /root/cqc-sfa-md/qm/gr/STOP (the SCF or the optimisation stops at its next cycle or step and keeps its orbitals or its geometry; the runner starts the task again after 20 to 30 s and the command removes the file). To end one: queue.py cancel ID. gr_binding, gr_binding_final: the binding check as soon as the optimisation of the small model has ended (qm_opt), and again when the file of MCPB.py step 2s exists (qm_write); exit code 1 of the check (failed) is a result, not a failure of the task.",
+ "env": {
+  "REPO": "/root/workspace/cqc-4-sulfamoylanilinium-dihydrogen-phosphate",
+  "MD": "/root/workspace/cqc-4-sulfamoylanilinium-dihydrogen-phosphate/md",
+  "QMPY": "/root/cqc-sfa-tools/env/bin/python",
+  "GR_BULK": "/root/cqc-sfa-md/qm/gr",
+  "GR_SMALL": "/root/workspace/cqc-4-sulfamoylanilinium-dihydrogen-phosphate/md/qm/gr"
+ },
+ "tasks": [
+  {
+   "id": "gr_check_x",
+   "title": "(g0) gate G-R, machine against Pi: point X again from the atomic guess, in its own folder; the two energies must agree within 1e-7 Hartree",
+   "cwd": "$REPO",
+   "resources": "cpu:7",
+   "done_marker": "$GR_SMALL/check_vm/agreement.json",
+   "command": [
+    "export OMP_NUM_THREADS=7 OPENBLAS_NUM_THREADS=7 MKL_NUM_THREADS=7",
+    "\"$QMPY\" \"$MD/qm/gr_queue.py\" point \"$GR_SMALL/queue_vm_check.json\" X",
+    "\"$QMPY\" - <<'EOF'",
+    "import json, os, sys",
+    "small = os.environ['GR_SMALL']",
+    "pi = json.load(open(os.path.join(small, 'qm', 'X.json')))",
+    "vm = json.load(open(os.path.join(small, 'check_vm', 'qm', 'X.json')))",
+    "d = vm['e_tot'] - pi['e_tot']",
+    "out = {'point': 'X', 'xyz_sha256_equal': pi['xyz_sha256'] == vm['xyz_sha256'],",
+    "       'pi': {k: pi[k] for k in ('e_tot', 'host', 'threads', 'scf_cycles', 'wall_seconds', 'guess', 'grid_points', 'versions')},",
+    "       'machine': {k: vm[k] for k in ('e_tot', 'host', 'threads', 'scf_cycles', 'wall_seconds', 'guess', 'grid_points', 'versions', 'cycle_times', 'started', 'finished')},",
+    "       'difference_hartree': d, 'difference_kcal_mol': d * 627.5094740631, 'tolerance_hartree': 1e-7,",
+    "       'agree': bool(abs(d) < 1e-7 and pi['xyz_sha256'] == vm['xyz_sha256'] and vm['converged'] and pi['host'] != vm['host'])}",
+    "print(f\"X: Pi {pi['e_tot']:.12f} ({pi['host']}), machine {vm['e_tot']:.12f} ({vm['host']}), difference {d:.3e} Hartree; \"",
+    "      f\"machine: {vm['scf_cycles']} cycles from the atomic guess, {vm['wall_seconds']:.0f} s with {vm['threads']} threads\")",
+    "name = os.path.join(small, 'check_vm', 'agreement.json' if out['agree'] else 'agreement_FAILED.json')",
+    "json.dump(out, open(name + '.tmp', 'w'), indent=1)",
+    "os.replace(name + '.tmp', name)",
+    "sys.exit(0 if out['agree'] else 1)",
+    "EOF"
+   ]
+  },
+  {
+   "id": "gr_points",
+   "title": "(g1) gate G-R: the single points the Pi has not finished (md/qm/gr/queue_vm.json; d2 and Nx before the turns about N2-S), table and gate numbers after every point",
+   "cwd": "$REPO",
+   "resources": "cpu:7",
+   "depends_on": [
+    "gr_check_x"
+   ],
+   "max_attempts": 12,
+   "retry_delay_s": 20,
+   "stop_grace_s": 30,
+   "command": [
+    "rm -f \"$GR_BULK/STOP\"",
+    "\"$QMPY\" \"$MD/qm/gr_queue.py\" run \"$GR_SMALL/queue_vm.json\""
+   ],
+   "success_test": "python3 \"$MD/gpu/queue.py\" json \"$GR_BULK/status.json\" state=finished host=cqc-md-gpu-01 && \"$QMPY\" \"$MD/qm/gr_queue.py\" complete \"$GR_SMALL/queue_vm.json\""
+  },
+  {
+   "id": "gr_relax_Rx",
+   "title": "(g2) gate G-R part B: the ligand relaxed from Rx with zinc and imidazoles fixed, B3LYP-D3(BJ)/6-31G*, geomeTRIC; the signed volume at N2 is recorded at every step, and the run stops if it changes sign",
+   "cwd": "$REPO",
+   "resources": "cpu:7",
+   "depends_on": [
+    "gr_points"
+   ],
+   "max_attempts": 8,
+   "retry_delay_s": 30,
+   "stop_grace_s": 30,
+   "command": [
+    "rm -f \"$GR_BULK/STOP\"",
+    "\"$QMPY\" \"$MD/qm/gr_queue.py\" relax \"$GR_SMALL/queue_vm.json\" Rx"
+   ],
+   "success_test": "python3 \"$MD/gpu/queue.py\" json \"$GR_SMALL/relax/qm_Rx.json\" state=done || python3 \"$MD/gpu/queue.py\" json \"$GR_SMALL/relax/qm_Rx.json\" state=crossed"
+  },
+  {
+   "id": "gr_relax_X",
+   "title": "(g3) gate G-R part B: the ligand relaxed from X with zinc and imidazoles fixed, B3LYP-D3(BJ)/6-31G*, geomeTRIC; the signed volume at N2 is recorded at every step, and the run stops if it changes sign",
+   "cwd": "$REPO",
+   "resources": "cpu:7",
+   "depends_on": [
+    "gr_relax_Rx"
+   ],
+   "max_attempts": 8,
+   "retry_delay_s": 30,
+   "stop_grace_s": 30,
+   "command": [
+    "rm -f \"$GR_BULK/STOP\"",
+    "\"$QMPY\" \"$MD/qm/gr_queue.py\" relax \"$GR_SMALL/queue_vm.json\" X"
+   ],
+   "success_test": "python3 \"$MD/gpu/queue.py\" json \"$GR_SMALL/relax/qm_X.json\" state=done || python3 \"$MD/gpu/queue.py\" json \"$GR_SMALL/relax/qm_X.json\" state=crossed"
+  },
+  {
+   "id": "gr_binding",
+   "title": "(g4) binding check of gate G-R: force-field minimum of the small model against its quantum-chemical optimum (provisional: the geometry of the finished optimisation); one line into the log of the gate, then the gate tables again",
+   "cwd": "$REPO",
+   "resources": "cpu:1",
+   "depends_on": [
+    "qm_opt"
+   ],
+   "env": {
+    "MDPY": "/root/cqc-sfa-tools/md/bin/python"
+   },
+   "command": [
+    "rc=0",
+    "LINE=$(\"$MDPY\" \"$MD/qm/gr_mm.py\" binding --mm \"$GR_SMALL/mm_2e_main.json\" --out \"$GR_SMALL/binding_check.json\" --fchk \"$MD/qm/mcpb/CA2_small_opt.fchk\" --opt-geometry /root/cqc-sfa-md/qm/prod/opt_final.npy) || rc=$?",
+    "echo \"$LINE\"",
+    "echo \"$(TZ=Asia/Kolkata date '+%Y-%m-%d %I:%M:%S %p IST')  $LINE\" >> \"$GR_BULK/queue.log\"",
+    "[ \"$rc\" -le 1 ] || { echo \"binding check: exit code $rc (2: no optimum yet)\"; exit 1; }",
+    "\"$MDPY\" \"$MD/qm/gr_fit.py\" gate --mm \"$GR_SMALL/mm_2e_main.json\" --qm \"$GR_SMALL/qm\" --out \"$GR_SMALL\" --side \"$GR_SMALL\" --name gr"
+   ],
+   "success_test": "python3 \"$MD/gpu/queue.py\" json \"$GR_SMALL/binding_check.json\" 'verdict!=pending'"
+  },
+  {
+   "id": "gr_binding_final",
+   "title": "(g5) binding check of gate G-R: force-field minimum of the small model against its quantum-chemical optimum (final: CA2_small_opt.fchk); one line into the log of the gate, then the gate tables again",
+   "cwd": "$REPO",
+   "resources": "cpu:1",
+   "depends_on": [
+    "qm_write",
+    "gr_binding"
+   ],
+   "env": {
+    "MDPY": "/root/cqc-sfa-tools/md/bin/python"
+   },
+   "command": [
+    "rc=0",
+    "LINE=$(\"$MDPY\" \"$MD/qm/gr_mm.py\" binding --mm \"$GR_SMALL/mm_2e_main.json\" --out \"$GR_SMALL/binding_check.json\" --fchk \"$MD/qm/mcpb/CA2_small_opt.fchk\" --opt-geometry /root/cqc-sfa-md/qm/prod/opt_final.npy) || rc=$?",
+    "echo \"$LINE\"",
+    "echo \"$(TZ=Asia/Kolkata date '+%Y-%m-%d %I:%M:%S %p IST')  $LINE\" >> \"$GR_BULK/queue.log\"",
+    "[ \"$rc\" -le 1 ] || { echo \"binding check: exit code $rc (2: no optimum yet)\"; exit 1; }",
+    "\"$MDPY\" \"$MD/qm/gr_fit.py\" gate --mm \"$GR_SMALL/mm_2e_main.json\" --qm \"$GR_SMALL/qm\" --out \"$GR_SMALL\" --side \"$GR_SMALL\" --name gr"
+   ],
+   "success_test": "python3 \"$MD/gpu/queue.py\" json \"$GR_SMALL/binding_check.json\" provisional=false"
+  }
+ ]
+}
