@@ -41,3 +41,7 @@ The extended preparation run passed with zero errors: 11,079 inventory records; 
 ## Publication completion
 
 The final staged-tree review, Git commit and remote verification are completed after the inventory and validation pass. The commit identity is available from Git history; it is not embedded into a self-referential file checksum.
+
+## Change after release v1.0.0 (13 October 2026)
+
+Four text sources were removed from the current tree (listed in [DATA_GAPS.md](DATA_GAPS.md)). Their four rows were taken out of `metadata/handover_import.csv`, the inventory was regenerated, and this record and DATA_GAPS.md were amended; no other file changed. The counts above describe release v1.0.0. On the changed tree, `tools/test_repository_tools.py` passed, `tools/validate_repository.py` (standard-library mode, without `--extended`) passed with zero errors on 11,075 inventory records and 10,284 imported records, `tools/check_results.py` passed, and `tools/prepare_workspace.py project` restores 10,138 original relative paths (10,142 before). No scientific calculation was run.
